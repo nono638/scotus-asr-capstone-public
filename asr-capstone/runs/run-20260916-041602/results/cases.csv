@@ -1,0 +1,4 @@
+docket,engine,model,audio_minutes,reference_words,hypothesis_words,words_per_minute,speaking_rate_ok,runtime_seconds,speed_x_realtime,omission_basis,omitted_spans,omitted_words,seconds_lost,longest_span_words,longest_span_seconds,spans_with_odd_timing,wer_standard,wer_lowercase_nopunct,wer_verbatim,warnings
+09-834,whisper-large-v3,large-v3,55.9,9891,9731,176.9,True,169.0,19.93,lowercase_nopunct,0,0,0.0,0,0.0,0,8.723,10.753,18.916,
+24-316,whisper-large-v3,large-v3,86.2,16946,15817,196.6,True,263.9,19.6,lowercase_nopunct,0,0,0.0,0,0.0,0,6.441,6.912,18.057,
+24-109,whisper-large-v3,large-v3,150.1,24646,23612,164.2,False,524.5,17.16,lowercase_nopunct,0,0,0.0,0,0.0,0,5.168,5.546,13.767,"Speaking rate is 164 words per minute, outside the expected 165 to 197. Check that the audio and the transcript are the same argument."

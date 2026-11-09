@@ -1,0 +1,9 @@
+model,term,cases,leaderboard,standard_before,standard_after,standard_change,lowercase_nopunct_before,lowercase_nopunct_after,lowercase_nopunct_change,verbatim_before,verbatim_after,verbatim_change
+whisper-large-v3,OT2013,70,7.843,7.858,7.202,-0.656,8.37,7.66,-0.71,13.984,13.645,-0.339
+whisper-large-v3,OT2015,69,7.859,7.889,7.196,-0.693,8.239,7.456,-0.783,14.123,13.698,-0.425
+whisper-large-v3,OT2019,58,5.977,6.006,5.652,-0.354,6.194,5.816,-0.378,14.403,14.206,-0.197
+whisper-large-v3,OT2020,57,6.177,6.24,5.73,-0.51,6.358,5.864,-0.494,14.956,14.724,-0.232
+whisper-large-v3,OT2021,62,5.867,5.889,5.513,-0.376,6.012,5.638,-0.374,14.268,14.119,-0.149
+whisper-large-v3,OT2022,57,6.224,6.261,5.853,-0.408,6.302,5.935,-0.367,14.859,14.706,-0.153
+whisper-large-v3,OT2023,60,6.246,6.296,5.9,-0.396,6.399,5.975,-0.424,14.891,14.696,-0.195
+whisper-large-v3,OT2025,58,6.16,6.212,5.814,-0.398,6.297,5.933,-0.364,14.691,14.502,-0.189

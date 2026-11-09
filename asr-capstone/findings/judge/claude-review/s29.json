@@ -1,0 +1,125 @@
+{
+ "case": "s29",
+ "own": {
+  "meaning": "garbled",
+  "severity": 2,
+  "noticeable": "yes",
+  "follow_up": "no change",
+  "stakes": "maybe",
+  "reason": "The engine misheard 'dividend' as 'didn't', giving 'rewarding shareholders with didn't payout', which is broken English and loses that the reward was a dividend.",
+  "rule_right": "partly",
+  "rule_reason": "The engine's text does contain a negative word the reference lacks, but it is a misheard 'dividend', not a real 'did not'; nothing is denied.",
+  "more_plausible": "reference",
+  "plausible_how_clear": "Very clear: 'rewarding shareholders with dividend payout' is standard earnings-call wording and 'with didn't payout' is not grammatical.",
+  "my_misses": [
+   {
+    "reference": "dividend",
+    "engine": "didn't",
+    "severity": 2,
+    "note": "Dividend lost; a skimming reader might read it as 'didn't pay out'."
+   },
+   {
+    "reference": "Operationally",
+    "engine": "Occasionally",
+    "severity": 2,
+    "note": "'Occasionally ... delivered a record' undercuts the claim of a record quarter."
+   },
+   {
+    "reference": "high brent",
+    "engine": "high brand",
+    "severity": 2,
+    "note": "Brent crude oil price lost; 'brand' means nothing here."
+   },
+   {
+    "reference": "Rs. 10,938 crores ... Rs. 4189 crores",
+    "engine": "10 ,938 crores ... 4 ,189 crores",
+    "severity": 0,
+    "note": "Currency 'Rs.' dropped; crores still makes it clear. Numbers match."
+   },
+   {
+    "reference": "Hindustan Zinc ... FACOR",
+    "engine": "InSan Zinc ... FECOS",
+    "severity": 0,
+    "note": "Names written differently; does not count."
+   }
+  ]
+ },
+ "review": {
+  "labelled/line": {
+   "verdict": "disagree",
+   "why": "'Rewarding shareholders with didn't payout' is broken English, not a statement that no payout was made, so 'opposite', severity 4 and 'negation added' are wrong; Gemma's own blind answers call it 'grammatically incorrect' and 'nonsensical'."
+  },
+  "labelled/minute": {
+   "verdict": "disagree",
+   "why": "Same mistake; the surrounding words 'rewarding shareholders' make clear a payout happened, so no investor would read it as a cut dividend. A garble, severity about 2."
+  },
+  "labelled/whole": {
+   "verdict": "disagree",
+   "why": "Same mistake again: treats a misheard 'dividend' as a real 'did not'."
+  },
+  "rule/minute": {
+   "verdict": "partly",
+   "why": "A negative word does appear only in the engine's text, so the rule fired on something real, but it is not a true negation, which Gemma should have said."
+  },
+  "blind/order1": {
+   "verdict": "agree",
+   "why": "Picked 'dividend' for the right reason."
+  },
+  "blind/order2": {
+   "verdict": "agree",
+   "why": "Picked 'dividend' again after the swap; consistent."
+  },
+  "rank/minute": {
+   "verdict": "agree",
+   "why": "'dividend' first, 'digital' (still a payout) second and 'didn't' (could be misread as no payout) last is a sensible order, though 'digital' is not 'nonsensical' as Gemma says."
+  },
+  "misses": [
+   {
+    "reference": "brent",
+    "engine": "brand",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "too high",
+    "note": "Brent crude price lost to a meaningless 'brand'; 2."
+   },
+   {
+    "reference": "Operationally, Hindustan Zinc",
+    "engine": "Occasionally, InSan Zinc",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "too high",
+    "note": "'Operationally' to 'Occasionally' is a real change (2), but Gemma folds in the company name, which the instructions said to leave out, and scores it 4."
+   },
+   {
+    "reference": "FACOR",
+    "engine": "FECOS",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "A name written differently; should have been left out, not scored 3."
+   },
+   {
+    "reference": "dividend payout",
+    "engine": "didn't payout",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "too high",
+    "note": "A garble that loses the word dividend; 2, not a reversal (4)."
+   },
+   {
+    "reference": "or YOY",
+    "engine": "YYY",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "'YYY' is plainly a garbled 'YOY'; 0-1."
+   }
+  ],
+  "overlooked": []
+ },
+ "worth_a_listen": {
+  "yes": false,
+  "why": "From the text it is clearly 'dividend'; the open question (flip or garble) is answered by the text: it is a garble."
+ },
+ "summary": "Gemma's blind and rank answers were right, but in every labelled answer it treated a misheard 'dividend' as a real 'did not', scoring a garble as a full reversal; its misses list scored name spellings and garbles at 3-4."
+}

@@ -1,0 +1,1 @@
+{"case": "r151", "own": {"reason": "The engine writes \"you bounce the wall\" for \"you bounce the ball\"; the ball the game is played with is lost and the step no longer makes sense.", "meaning": "changed", "severity": 2, "follow_up": "changes meaning", "reference_doubt": "no"}}

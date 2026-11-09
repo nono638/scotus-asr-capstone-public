@@ -1,0 +1,5 @@
+This case was REARGUED. The Oct 15, 2025 reargument audio is served at
+  https://www.supremecourt.gov/media/audio/mp3files/24-109_2.mp3
+NOT at .../24-109.mp3, which is the March 24, 2025 FIRST argument (OT2024).
+Audio URLs cannot be built from the docket number alone - scrape the link
+from the term's argument_audio index page.

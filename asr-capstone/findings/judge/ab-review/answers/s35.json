@@ -1,0 +1,175 @@
+{
+ "case": "s35",
+ "X": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 4,
+    "follow_up": "content lost, gap shows",
+    "reason": "The speech recognition engine failed to transcribe the entire clause present in the reference transcript."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 4,
+    "follow_up": "content lost, gap shows",
+    "reason": "The speech recognition engine failed to transcribe the entire sentence spoken by the interviewer at the marked location."
+   },
+   "whole": {
+    "meaning": "changed",
+    "severity": 4,
+    "follow_up": "content lost, gap shows",
+    "reason": "The speech recognition engine failed to transcribe the entire sentence spoken by the interviewer at the designated spot."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The engine completely omits the interviewer's statement, which provides the context and the topic for the speaker's subsequent response."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The engine completely omitted the interviewer's entire sentence at the marked spot."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "Version A provides a coherent follow-up statement from the interviewer that logically connects to the speaker's response about seeing that others have problems."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "Version B provides a coherent conversational bridge between the interviewer's previous statement and the speaker's response 'yes it does'."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Qwen3": 1,
+    "Parakeet": 3,
+    "Whisper": 2
+   },
+   "reason": "Engine 1 correctly captures the full sentence, Engine 3 captures the meaning but alters the grammar slightly, and Engine 2 fails to provide the text at the marked spot."
+  },
+  "misses": [
+   {
+    "reference": "are all police department cause they're all",
+    "engine": "those are all police departments, because they're all",
+    "severity": 1,
+    "what": "added 'those' and changed 'department' to plural"
+   },
+   {
+    "reference": "He was, uh-uh, tee teen teen director? Teens, he did teens. Cause they",
+    "engine": "He was uh teaming teen director, teens. He did teens, 'cause they",
+    "severity": 2,
+    "what": "misheard 'tee teen teen' as 'teaming teen'"
+   },
+   {
+    "reference": "he took the keen teens to Keystone",
+    "engine": "he took the king teen to Keystone",
+    "severity": 2,
+    "what": "misheard 'keen teens' as 'king teen'"
+   },
+   {
+    "reference": "I met him at From number eleven, mm-hm.",
+    "engine": "I met him. But um",
+    "severity": 3,
+    "what": "omitted the location 'at From number eleven'"
+   },
+   {
+    "reference": "It's people with issues or problems that super exceed yours.",
+    "engine": "It's people with issues or problems that it super exceeds yours.",
+    "severity": 1,
+    "what": "added unnecessary pronoun 'it'"
+   },
+   {
+    "reference": "And if you in a position to help",
+    "engine": "And you're in a position to help",
+    "severity": 2,
+    "what": "changed AAE grammar 'if you in' to standard 'you're in'"
+   },
+   {
+    "reference": "this is the marriage of both your worlds.",
+    "engine": "this is the marriage of both your world.",
+    "severity": 0,
+    "what": "changed plural 'worlds' to singular 'world'"
+   }
+  ]
+ },
+ "Y": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "content lost, gap shows",
+    "reason": "The engine completely omits the entire clause present in the reference."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "content lost, gap shows",
+    "reason": "The engine completely omitted the entire sentence present in the reference at the marked location."
+   },
+   "whole": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "content lost, gap shows",
+    "reason": "The engine completely omitted the interviewer's sentence at the marked place."
+   }
+  },
+  "noticeable": "no",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The engine completely omits a full sentence of the interviewer's dialogue, which contains the core thematic connection between the previous topic and the speaker's response."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The engine completely omitted the entire sentence present in the reference at the marked location."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "In Version A, the interviewer provides a comment ('cause it gives you a very different perspective') that directly prompts and relates to the speaker's response ('yes it does seeing that you're not the only one...'). In Version B, there is no prompt, making the speaker's sudden 'yes it does' nonsensical."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "Version B provides a phrase ('cause it gives you a very different perspective') that logically connects the interviewer's previous statement about programs ending to the speaker's response about seeing that others have greater problems. Version A has a sudden jump in the conversation that lacks a clear transition."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Qwen3": 1,
+    "Parakeet": 3,
+    "Whisper": 2
+   },
+   "reason": "Engine 1 is the most accurate as it includes the word 'Because' which is present in the reference, while Engine 3 misses the word 'a' and Engine 2 misses the entire phrase."
+  },
+  "misses": [
+   {
+    "reference": "the keen teens",
+    "engine": "the king teen",
+    "severity": 2,
+    "what": "the word 'king' instead of 'keen'"
+   },
+   {
+    "reference": "that super exceed yours",
+    "engine": "that it super exceeds yours",
+    "severity": 1,
+    "what": "added 'it' before 'super exceeds'"
+   },
+   {
+    "reference": "if you in a position",
+    "engine": "and you're in a position",
+    "severity": 1,
+    "what": "added 'you're' instead of 'you'"
+   },
+   {
+    "reference": "both your worlds",
+    "engine": "both your world",
+    "severity": 0,
+    "what": "changed 'worlds' to 'world'"
+   }
+  ]
+ }
+}

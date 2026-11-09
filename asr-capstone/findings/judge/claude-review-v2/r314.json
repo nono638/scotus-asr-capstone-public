@@ -1,0 +1,1 @@
+{"case": "r314", "own": {"reason": "The engine wrote \"she tries\" for \"she try\", adding the third-person s; the meaning is the same.", "meaning": "same", "severity": 0, "follow_up": "meaning kept", "reference_doubt": "no", "misspoke": "no"}}

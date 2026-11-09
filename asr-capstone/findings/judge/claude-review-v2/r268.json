@@ -1,0 +1,1 @@
+{"case": "r268", "own": {"reason": "The engine writes Paycell's quarterly revenue as 190 million TL instead of 119 million TL. That is a wrong figure.", "meaning": "changed", "severity": 3, "follow_up": "different quantity", "reference_doubt": "no"}}

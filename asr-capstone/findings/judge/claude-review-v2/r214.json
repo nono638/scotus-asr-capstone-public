@@ -1,0 +1,1 @@
+{"case": "r214", "own": {"reason": "The engine has \"I got spend it for a date\" for \"suspended for a day\", so the length of the suspension is lost here, though \"not more than a day\" comes later.", "meaning": "garbled", "severity": 2, "follow_up": "garble", "reference_doubt": "no"}}

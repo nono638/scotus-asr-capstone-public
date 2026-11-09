@@ -1,0 +1,1 @@
+{"case": "r132", "own": {"reason": "The engine writes \"48\" for the Ferrari \"488\", so the car being compared is named wrongly; it is a model name, not an amount.", "meaning": "changed", "severity": 2, "follow_up": "not a number", "reference_doubt": "no"}}

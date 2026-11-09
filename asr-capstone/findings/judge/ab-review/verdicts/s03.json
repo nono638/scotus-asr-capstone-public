@@ -1,0 +1,15 @@
+{"case": "s03",
+ "parts": {
+  "meaning/line": {"X": "right", "Y": "right", "better": "tie", "why": "Both say opposite, severity 4, negation lost for shouldn't -> should."},
+  "meaning/minute": {"X": "right", "Y": "right", "better": "tie", "why": "Both correct."},
+  "meaning/whole": {"X": "right", "Y": "right", "better": "tie", "why": "Both correct; X's reason spells out the reversal of the program's aim, Y's is thinner but not wrong."},
+  "noticeable": {"X": "wrong", "Y": "right", "better": "Y", "why": "In the engine's text a mentoring program for young men says they 'should go to the streets', which a careful reader would find jarring; X says no, Y says yes."},
+  "stakes": {"X": "right", "Y": "right", "better": "tie", "why": "Both say yes: the program's purpose is reversed."},
+  "rule": {"X": "right", "Y": "right", "better": "tie", "why": "Both confirm the evidence."},
+  "blind": {"X": "right", "Y": "right", "better": "tie", "why": "Both pick the reference in both orders with the mentoring-program reason."},
+  "rank": {"X": "right", "Y": "partly", "better": "X", "why": "Qwen3 and Parakeet both keep 'shouldn't'; X ties them. Y drops Parakeet to 2 for 'So one', a slip that does not touch the meaning at the spot."},
+  "misses": {"X": {"real_and_matter": 1, "trivial": 2, "not_real": 1, "important_missed": 3},
+             "Y": {"real_and_matter": 3, "trivial": 3, "not_real": 0, "important_missed": 1},
+             "better": "Y", "why": "Y also catches the dropped plans (pursue IT, start Big Brother) and the dropped 'from eighteen to twenty five you have the chance to be a mentor'. X finds only the reversal plus trivia, and its scholarship item claims a lost 'target group' that the reference does not have. Neither names 'we will try' -> 'you will try' (who gives the scholarship)."}
+ },
+ "overall": {"better": "Y", "why": "Y is right on noticeable and its misses list covers the two real omissions X skipped; X's only edge is the rank."}}

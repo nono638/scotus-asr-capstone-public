@@ -1,0 +1,14 @@
+{"case": "s37",
+ "parts": {
+  "meaning/line": {"X": "right", "Y": "right", "better": "tie", "why": "Control with identical text: both say same, 0, no change."},
+  "meaning/minute": {"X": "right", "Y": "right", "better": "tie", "why": "Both: same, 0, no change."},
+  "meaning/whole": {"X": "right", "Y": "right", "better": "tie", "why": "Both: same, 0, no change."},
+  "noticeable": {"X": "wrong", "Y": "right", "better": "Y", "why": "Nothing is wrong, so nothing could be noticed. X says yes, Y says no."},
+  "stakes": {"X": "right", "Y": "right", "better": "tie", "why": "Both say no stakes."},
+  "rule": {"X": "right", "Y": "right", "better": "tie", "why": "Both say the rule is wrong; Y also names the wrong evidence ('can')."},
+  "blind": {"X": "wrong", "Y": "right", "better": "Y", "why": "The two versions are identical. Y says can't tell in both orders. X says they are identical but still picks Version A both times, so its pick just follows the position."},
+  "misses": {"X": {"real_and_matter": 0, "trivial": 0, "not_real": 0, "important_missed": 0},
+             "Y": {"real_and_matter": 0, "trivial": 0, "not_real": 0, "important_missed": 0},
+             "better": "tie", "why": "Both give an empty list, which is right."}
+ },
+ "overall": {"better": "Y", "why": "Y gets every part of the copy control right; X calls an identical text noticeably wrong and picks a side in the blind test anyway."}}

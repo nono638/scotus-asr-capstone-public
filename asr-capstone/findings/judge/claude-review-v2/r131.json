@@ -1,0 +1,1 @@
+{"case": "r131", "own": {"reason": "The reference has the dialect \"I ain't feel like\" meaning \"I didn't feel like\"; the engine writes \"didn't\", which means the same.", "meaning": "same", "severity": 0, "follow_up": "meaning kept", "reference_doubt": "no"}}

@@ -1,0 +1,173 @@
+{
+ "case": "s02",
+ "X": {
+  "meaning": {
+   "line": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation lost",
+    "reason": "The speech recognition engine missed the negation 'n't' in the word 'didn't'."
+   },
+   "minute": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation lost",
+    "reason": "The speech recognition engine missed the negation 'n't' in the word 'didn't'."
+   },
+   "whole": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation lost",
+    "reason": "The engine missed the negation 'n't' in 'didn't', changing the meaning from not having a ball to having one."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The error changes the fact from not having a real football to having one, which contradicts the rest of the sentence explaining how they made one out of paper."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The checker correctly identified that the reference contains a negation ('DIDN'T') while the engine does not ('did')."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "The context clearly describes making a makeshift ball out of paper and plastic, which contradicts the statement 'did actually have a real football' in Version B."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "The context of the sentence explains that they made a makeshift ball out of paper and plastic, which only makes sense if they didn't have a real football."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Parakeet": 4,
+    "Qwen3": 4,
+    "Canary": 1,
+    "Granite": 2,
+    "Whisper": 3
+   },
+   "reason": "Engine 3 is the most accurate as it correctly captures the negation 'didn't', while Engines 1 and 2 fail by changing the meaning to 'did', and Engines 4 and 5 introduce minor errors in the preceding text."
+  },
+  "misses": [
+   {
+    "reference": "WE JUST",
+    "engine": "we're just trying to adjust",
+    "severity": 3,
+    "what": "added significant new meaning/action"
+   },
+   {
+    "reference": "MY OTHER BROTHER",
+    "engine": "my elder brother",
+    "severity": 1,
+    "what": "different descriptor for brother"
+   },
+   {
+    "reference": "WE DIDN'T ACTUALLY HAVE A A REAL FOOTBALL",
+    "engine": "we did actually have a real football",
+    "severity": 4,
+    "what": "reversed meaning regarding having a real ball"
+   },
+   {
+    "reference": "CIRCLICAL IN SHAPE",
+    "engine": "spectral in shape",
+    "severity": 3,
+    "what": "wrong word describing the shape"
+   },
+   {
+    "reference": "WAS NEVER WAS NEVER CATCH US PLAYING BALL",
+    "engine": "must never catch us playing football",
+    "severity": 3,
+    "what": "changed meaning of the father's actions"
+   }
+  ]
+ },
+ "Y": {
+  "meaning": {
+   "line": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation lost",
+    "reason": "The engine omitted the negation 'n't' from the word 'DIDN'T', changing the sentence from a negative to an affirmative statement."
+   },
+   "minute": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation lost",
+    "reason": "The engine missed the negation 'n't' in the word 'didn't', changing the sentence from a negative to a positive."
+   },
+   "whole": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation lost",
+    "reason": "The engine missed the negation 'n't' in the word 'didn't', changing the meaning from not having a real football to having one."
+   }
+  },
+  "noticeable": "no",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The difference changes the meaning from the speakers lacking a real football to them possessing one, which contradicts the subsequent explanation that they had to make one out of paper and plastic."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The evidence correctly identifies that the reference contains a negation ('DIDN'T') while the engine does not ('did')."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "In Version A, the speaker says they 'didn't actually have a real football', which is logically consistent with the next sentence where they explain they 'made something out of paper out of plastic'. Version B's use of 'did' contradicts the explanation that follows."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "engine",
+    "sure": 3,
+    "reason": "In Version B, the word 'didn't' creates a logical contradiction with the subsequent explanation that they 'made something out of paper out of plastic' to serve as a football. Version A's use of 'did' correctly introduces the fact that they had a makeshift ball."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Parakeet": 3,
+    "Qwen3": 3,
+    "Canary": 1,
+    "Granite": 1,
+    "Whisper": 1
+   },
+   "reason": "Engines 3, 4, and 5 correctly identified the negation 'didn't' present in the reference, while Engines 1 and 2 incorrectly omitted it, reversing the meaning of the sentence."
+  },
+  "misses": [
+   {
+    "reference": "CIRCLICAL IN SHAPE",
+    "engine": "spectral in shape",
+    "severity": 2,
+    "what": "the description of the ball's shape"
+   },
+   {
+    "reference": "WE DIDN'T ACTUALLY HAVE A A REAL FOOTBALL",
+    "engine": "we did actually have a real football",
+    "severity": 3,
+    "what": "the existence of a real football"
+   },
+   {
+    "reference": "MY OTHER BROTHER",
+    "engine": "elder brother",
+    "severity": 2,
+    "what": "the identity of the brother"
+   },
+   {
+    "reference": "WAS NEVER CATCH US PLAYING BALL",
+    "engine": "must never catch us playing football",
+    "severity": 2,
+    "what": "the frequency/nature of being caught"
+   },
+   {
+    "reference": "WE JUST SO THERE WAS THIS DAY",
+    "engine": "we're just trying to adjust. So there was this day",
+    "severity": 2,
+    "what": "the end of the first sentence segment"
+   }
+  ]
+ }
+}

@@ -1,0 +1,181 @@
+{
+ "case": "s19",
+ "X": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 4,
+    "follow_up": "content lost, gap shows",
+    "reason": "The speech recognition engine hallucinated a speaker name instead of transcribing the actual words spoken."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 4,
+    "follow_up": "content lost, gap shows",
+    "reason": "The speech recognition engine failed to transcribe the actual words spoken by the Justice and instead inserted a speaker name."
+   },
+   "whole": {
+    "meaning": "changed",
+    "severity": 4,
+    "follow_up": "content lost, gap shows",
+    "reason": "The engine incorrectly attributed the previous speaker's name (Justice Sotomayor) to the spot where the actual question was being asked."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The engine replaces the substantive question being asked by the Justice with a speaker label, completely erasing the legal inquiry regarding the government employer."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The engine completely missed the substantive phrase spoken by Justice Ginsburg and instead hallucinated a speaker name."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "Version A provides a grammatically and contextually coherent phrase describing a government-mandated mechanism, whereas Version B inserts a justice's name in a way that makes no sense in the sentence structure."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "In Version A, the phrase 'would that justice sotomayor employer' is nonsensical, whereas Version B provides a grammatically coherent question regarding whether arbitration counts as a government-established mechanism."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Parakeet": 2,
+    "Whisper": 3,
+    "Qwen3": 1
+   },
+   "reason": "Engine 3 is the most accurate as it preserves the full meaning of the clause, whereas Engine 1 omits 'a' and Engine 2 introduces an incorrect speaker and omits the text entirely."
+  },
+  "misses": [
+   {
+    "reference": "MR. ORTIZ: A lawsuit",
+    "engine": "MR. Pursuing a lawsuit",
+    "severity": 3,
+    "what": "The engine removes the subject 'A lawsuit' and replaces it with a speaker fragment, losing the start of the sentence."
+   },
+   {
+    "reference": "JUSTICE GINSBURG",
+    "engine": "JUSTICE SOTOMAYOR",
+    "severity": 3,
+    "what": "Incorrectly identifies the Justice speaking."
+   },
+   {
+    "reference": "Would that count also, because it is a mechanism set up by a government",
+    "engine": "employer?",
+    "severity": 4,
+    "what": "The engine omits the entire substantive question, leaving only a fragment of the previous thought."
+   },
+   {
+    "reference": "MR. ORTIZ: Yes, Your Honor, that is the case.",
+    "engine": "Yes, Your Honor. That is the case.",
+    "severity": 0,
+    "what": "Missing speaker name."
+   },
+   {
+    "reference": "JUSTICE GINSBURG",
+    "engine": "JUSTICE SOTOMAYOR",
+    "severity": 3,
+    "what": "Incorrectly identifies the Justice speaking."
+   },
+   {
+    "reference": "It is Petitioner's view that it would not qualify",
+    "engine": "It is a petitioner's view that would not qualify",
+    "severity": 2,
+    "what": "Missing the word 'it', slightly altering the grammatical structure."
+   },
+   {
+    "reference": "JUSTICE SCALIA: If -- if lawsuits",
+    "engine": "You know, if lawsuits",
+    "severity": 3,
+    "what": "Replaces the speaker and changes the introductory phrase."
+   }
+  ]
+ },
+ "Y": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "content lost, gap shows",
+    "reason": "The engine replaces a substantive clause of the question with a speaker identification label."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 4,
+    "follow_up": "content lost, gap shows",
+    "reason": "The engine completely replaces the substantive question asked by the Justice with a speaker label ('JUSTICE SOTOMAYOR.')."
+   },
+   "whole": {
+    "meaning": "changed",
+    "severity": 4,
+    "follow_up": "content lost, gap shows",
+    "reason": "The engine completely replaces the actual words of the question with an incorrect speaker name (JUSTICE SOTOMAYOR) and fails to transcribe the content of the question."
+   }
+  },
+  "noticeable": "no",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The engine replaces the substantive content of Justice Ginsburg's question regarding the legal mechanism of the employer with a speaker label, completely erasing the legal inquiry being posed."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The engine completely replaced the actual spoken words with a speaker name, which is a significant omission of the reference text."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "Version A provides a coherent continuation of Justice Ginsburg's question regarding whether arbitration counts as petitioning because of the government's role as an employer. Version B inserts 'justice sotomayor' into the middle of a sentence, which is grammatically nonsensical and contextually irrelevant."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "Version A contains a nonsensical fragment ('would that justice sotomayor employer') that lacks grammatical coherence, whereas Version B provides a coherent legal question regarding whether arbitration counts as a petitioning activity because it is a government-mandated mechanism."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Parakeet": 1,
+    "Whisper": 3,
+    "Qwen3": 2
+   },
+   "reason": "Engine 1 is the most accurate, Engine 3 introduces an incorrect contraction ('it's' instead of 'it is'), and Engine 2 fails to provide the text entirely."
+  },
+  "misses": [
+   {
+    "reference": "JUSTICE GINSBURG",
+    "engine": "JUSTICE SOTOMAYOR",
+    "severity": 3,
+    "what": "Incorrect speaker attribution for the second question"
+   },
+   {
+    "reference": "JUSTICE GINSBURG",
+    "engine": "JUSTICE SOTOMAYOR",
+    "severity": 3,
+    "what": "Incorrect speaker attribution for the third question"
+   },
+   {
+    "reference": "JUSTICE SCALIA",
+    "engine": "You know",
+    "severity": 3,
+    "what": "Incorrect speaker attribution for the final statement"
+   },
+   {
+    "reference": "MR. ORTIZ",
+    "engine": "MR.",
+    "severity": 2,
+    "what": "Incorrect speaker attribution for the first response"
+   },
+   {
+    "reference": "Yes, Your Honor",
+    "engine": "Your Honor",
+    "severity": 1,
+    "what": "Missing the word 'Yes' in the response to the arbitration question"
+   }
+  ]
+ }
+}

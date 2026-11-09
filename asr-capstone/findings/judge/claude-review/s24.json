@@ -1,0 +1,141 @@
+{
+ "case": "s24",
+ "own": {
+  "meaning": "reworded",
+  "severity": 0,
+  "noticeable": "no",
+  "follow_up": "same thing",
+  "stakes": "no",
+  "reason": "'E-commerce site' and 'e-commerce website' mean the same thing.",
+  "rule_right": "no",
+  "rule_reason": "'site' is a short form of 'website', not a different content word.",
+  "more_plausible": "cant tell",
+  "plausible_how_clear": "Both fit equally well from the text; the speaker uses 'website' elsewhere, so the reference is a little more likely, but that is a weak clue.",
+  "my_misses": [
+   {
+    "reference": "I'VE DEVELOPED OVER TWENTY OR SO ECOMMERCE WEBSITES",
+    "engine": "we looked over 20 or so e-commerce sites",
+    "severity": 2,
+    "note": "The speaker's claim that he built over twenty sites becomes 'we looked over' twenty sites."
+   },
+   {
+    "reference": "EVERY MOM AND POP SHOP UM PERS UM WANTS",
+    "engine": "every moment, a pop shop wants",
+    "severity": 2,
+    "note": "'Mom and pop shop' (small family business) garbled to 'every moment, a pop shop'."
+   },
+   {
+    "reference": "WEBSITE",
+    "engine": "site",
+    "severity": 0,
+    "note": "Same meaning."
+   },
+   {
+    "reference": "MAKES THEIR WORK ACTUALLY EASY",
+    "engine": "Makes your work actually easy",
+    "severity": 0,
+    "note": "Their/your in a repeat; no real change."
+   },
+   {
+    "reference": "INTEGRATE A PAYMENT METHOD",
+    "engine": "integrated payments method",
+    "severity": 0,
+    "note": "Small slip."
+   }
+  ]
+ },
+ "review": {
+  "labelled/line": {
+   "verdict": "agree",
+   "why": "Reworded, severity 0, no stakes: right."
+  },
+  "labelled/minute": {
+   "verdict": "agree",
+   "why": "'same' versus 'reworded' makes no difference here; right."
+  },
+  "labelled/whole": {
+   "verdict": "agree",
+   "why": "Right, and consistent with the minute."
+  },
+  "rule/minute": {
+   "verdict": "disagree",
+   "why": "Gemma says the rule is right while calling 'site' a synonym; a synonym is not a different content word, so the rule's label is wrong."
+  },
+  "blind/order1": {
+   "verdict": "partly",
+   "why": "Picked 'website' (the reference), but 'sure 3' because 'site' is 'truncated' is overconfident; 'e-commerce site' is just as natural."
+  },
+  "blind/order2": {
+   "verdict": "agree",
+   "why": "Same pick after the swap, with 'sure 2' and an admission that both are possible, which is honest."
+  },
+  "rank/minute": {
+   "verdict": "disagree",
+   "why": "At the spot all five engines keep the meaning ('website' or 'site'), so all should tie; Gemma ranked on the surroundings, and even then inconsistently: it marked Engine 3 down for 'person' but gave Engine 4, which also says 'person', first place."
+  },
+  "misses": [
+   {
+    "reference": "IT FOR PEOPLE",
+    "engine": "FOR PEOPLE",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "yes",
+    "note": "A dropped 'it'; severity 1 (a slip) is acceptable, 0 would be better."
+   },
+   {
+    "reference": "WEBSITES LIKE I'VE DEVELOPED",
+    "engine": "SITES LIKE WE LOOKED",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "yes",
+    "note": "Good catch: 'I've developed over twenty' becomes 'we looked over 20', which changes who did what."
+   },
+   {
+    "reference": "EVERY MOM AND POP SHOP",
+    "engine": "EVERY MOMENT A POP SHOP",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "too high",
+    "note": "A garble, but a reader still gets 'a shop wants an e-commerce site'; 2."
+   },
+   {
+    "reference": "EVERYDAY EVERY MOM AND POP SHOP UM PERS WANTS",
+    "engine": "EVERY DAY EVERY MOMENT A POP SHOP WANTS",
+    "is_real": "partly",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "Misquotes the reference ('EVERY DAY', not 'EVERYDAY'), counts the same garble twice, and 'pers' is a broken-off word, so dropping it loses nothing."
+   },
+   {
+    "reference": "INTEGRATE A PAYMENT METHOD",
+    "engine": "INTEGRATED PAYMENTS METHOD",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "yes",
+    "note": "A slip; 1 is fine."
+   },
+   {
+    "reference": "AS WELL BECAUSE",
+    "engine": "ALSO BECAUSE",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "yes",
+    "note": "Synonym; 0 is right."
+   },
+   {
+    "reference": "JUST DO THAT UPLOAD",
+    "engine": "JUST DO UPLOAD",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "yes",
+    "note": "A slip; 1 is fine."
+   }
+  ],
+  "overlooked": []
+ },
+ "worth_a_listen": {
+  "yes": false,
+  "why": "Website and site mean the same; nothing to settle."
+ },
+ "summary": "Gemma judged the spot correctly as harmless and its misses list was mostly accurate, but it still backed the rule, and its ranking judged the surroundings instead of the spot, inconsistently."
+}

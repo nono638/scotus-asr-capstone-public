@@ -1,0 +1,197 @@
+{
+ "case": "s08",
+ "X": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 2,
+    "follow_up": "continues the talk",
+    "reason": "The engine added extra words ('like that') that were not present in the reference transcript."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 1,
+    "follow_up": "continues the talk",
+    "reason": "The engine added extra words that were not present in the reference transcript."
+   },
+   "whole": {
+    "meaning": "changed",
+    "severity": 1,
+    "follow_up": "cant tell",
+    "reason": "The engine added extra words that were not in the reference transcript."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "no",
+   "reason": "The addition of 'like that' slightly alters the end of the sentence but does not change the core information being conveyed."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The engine added 'like that.' which does not exist in the reference and corresponds to a period of silence according to the checker."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "engine",
+    "sure": 3,
+    "reason": "In the context of the conversation, Speaker B is responding to Speaker A's description of the film's setting, and 'like that' provides a natural linguistic bridge to 'maybe it was'."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "engine",
+    "sure": 3,
+    "reason": "In the context of the conversation about a film set in a village with fishing people, 'like that maybe it was' is a natural conversational filler, whereas Version B's abrupt transition is less likely given the flow of the dialogue."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Qwen3": 3,
+    "Canary": 3,
+    "Parakeet": 5,
+    "Granite": 4,
+    "Whisper": 1
+   },
+   "reason": "Engine 5 is the best because it contains no hallucinated words in the empty slot, while Engine 3 adds 'like that', Engine 4 truncates the phrase, and Engines 1 and 2 include extra punctuation/structure that deviates from the reference flow."
+  },
+  "misses": [
+   {
+    "reference": "I LI",
+    "engine": "I like it",
+    "severity": 1,
+    "what": "added words"
+   },
+   {
+    "reference": "THE FILM WAS",
+    "engine": "it was",
+    "severity": 2,
+    "what": "replaced subject"
+   },
+   {
+    "reference": "AH NO I THOUGHT I WAS",
+    "engine": "",
+    "severity": 3,
+    "what": "omitted speaker B response"
+   },
+   {
+    "reference": "OR SOMETHING",
+    "engine": "or something like that",
+    "severity": 0,
+    "what": "added words"
+   },
+   {
+    "reference": "MAYBE IT WAS",
+    "engine": "",
+    "severity": 3,
+    "what": "omitted speaker B response"
+   },
+   {
+    "reference": "WELL THEY ARE PRETTY GOOD AT AT CHANGING THE ACCENT THEY KNOW HOW TO DO UH UH A POSH ACCENT FROM LONDON OR A COCKNEY ACCENT OR A",
+    "engine": "well, they are pretty good at at changing the accent. They know how to do uh uh a Porsche accent from London or a cogniz accent or uh",
+    "severity": 2,
+    "what": "wrong words (posh to porsche, cockney to cogniz)"
+   },
+   {
+    "reference": "YES YES",
+    "engine": "",
+    "severity": 3,
+    "what": "omitted speaker A response"
+   },
+   {
+    "reference": "OR AN IRISH ACCENT THEY ARE PRETTY GOOD AT MAKING THE TRANSITIONS",
+    "engine": "an Irish accent. They are pretty good in making the transition",
+    "severity": 1,
+    "what": "changed preposition and plurality"
+   },
+   {
+    "reference": "YES",
+    "engine": "",
+    "severity": 3,
+    "what": "omitted speaker A response"
+   },
+   {
+    "reference": "ALL THE TIMES",
+    "engine": "all the time",
+    "severity": 0,
+    "what": "changed plurality"
+   },
+   {
+    "reference": "THEY CAN THEY CAN DO FILMS THERE AND TALKING IF THEY WANT LIKE ENGLISH AND IF THEY",
+    "engine": "that they can do films there and talking if they want like English, and if they",
+    "severity": 1,
+    "what": "added word"
+   }
+  ]
+ },
+ "Y": {
+  "meaning": {
+   "line": {
+    "meaning": "reworded",
+    "severity": 1,
+    "follow_up": "continues the talk",
+    "reason": "The engine adds the phrase 'like that.' where the reference has no words."
+   },
+   "minute": {
+    "meaning": "same",
+    "severity": 1,
+    "follow_up": "continues the talk",
+    "reason": "The engine added the phrase 'like that.' to the end of the sentence, whereas the reference ends the sentence after 'something'."
+   },
+   "whole": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "continues the talk",
+    "reason": "The engine added the phrase 'like that.' to the end of the sentence, whereas the reference transcript contains no words at that position."
+   }
+  },
+  "noticeable": "no",
+  "stakes": {
+   "stakes": "no",
+   "reason": "The addition of 'like that' at the end of Speaker A's sentence does not change the fundamental meaning of the conversation or the topic being discussed."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The engine added the phrase 'like that.' where the reference indicates silence, which matches the evidence of 0% speech and low decibel levels."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "engine",
+    "sure": 3,
+    "reason": "In Version B, the phrase 'like that' provides a necessary linguistic bridge to connect the previous speaker's 'or something' to the following thought 'maybe it was'. Version A is grammatically incomplete and lacks the natural conversational filler used in this context."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "engine",
+    "sure": 2,
+    "reason": "In Version A, the phrase 'like that' provides a natural conversational filler that connects the previous speaker's description of 'fishing people' to the current thought. Version B's omission makes the transition from 'or something' to 'maybe it was' feel slightly more abrupt, though both are grammatically possible."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Qwen3": 1,
+    "Canary": 1,
+    "Parakeet": 3,
+    "Granite": 1,
+    "Whisper": 2
+   },
+   "reason": "Engines 1, 2, and 4 correctly identify that there is no text at the mark, while Engine 3 adds hallucinated words and Engine 5 truncates the sentence."
+  },
+  "misses": [
+   {
+    "reference": "A POSH ACCENT",
+    "engine": "a Porsche accent",
+    "severity": 2,
+    "what": "the type of accent (posh vs Porsche)"
+   },
+   {
+    "reference": "A COCKNEY ACCENT",
+    "engine": "a cogniz accent",
+    "severity": 2,
+    "what": "the type of accent (cockney vs cogniz)"
+   },
+   {
+    "reference": "MAKING THE TRANSITIONS",
+    "engine": "in making the transition",
+    "severity": 1,
+    "what": "the phrase regarding transitions"
+   }
+  ]
+ }
+}

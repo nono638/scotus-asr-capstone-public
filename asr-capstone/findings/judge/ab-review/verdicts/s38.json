@@ -1,0 +1,14 @@
+{"case": "s38",
+ "parts": {
+  "meaning/line": {"X": "right", "Y": "right", "better": "tie", "why": "Control with identical text: both say same, 0, same thing."},
+  "meaning/minute": {"X": "partly", "Y": "right", "better": "Y", "why": "Both say same/0, but X's reason invents a detail, 'the engine omitted the comma after reads'; both texts have 'reads,'."},
+  "meaning/whole": {"X": "right", "Y": "right", "better": "tie", "why": "Both: same, 0, same thing."},
+  "noticeable": {"X": "right", "Y": "wrong", "better": "X", "why": "There is nothing to notice. X says no, Y says yes."},
+  "stakes": {"X": "partly", "Y": "right", "better": "Y", "why": "Both say no, but X's reason again invents a punctuation difference that is not there."},
+  "rule": {"X": "right", "Y": "right", "better": "tie", "why": "Both say the rule is wrong; X names the claimed 'leads'."},
+  "blind": {"X": "right", "Y": "wrong", "better": "X", "why": "The two versions are identical. X says can't tell in both orders. Y says they are identical but picks Version A both times."},
+  "misses": {"X": {"real_and_matter": 0, "trivial": 0, "not_real": 0, "important_missed": 0},
+             "Y": {"real_and_matter": 0, "trivial": 0, "not_real": 0, "important_missed": 0},
+             "better": "tie", "why": "Both give an empty list, which is right."}
+ },
+ "overall": {"better": "X", "why": "On the copy control, X gets noticeable and blind right; Y calls an identical text noticeably wrong and picks a side anyway. X's invented comma is a smaller fault."}}

@@ -1,0 +1,13 @@
+{"case": "s28",
+ "parts": {
+  "meaning/line": {"X": "right", "Y": "right", "better": "tie", "why": "Both: changed, severity 3, different quantity."},
+  "meaning/minute": {"X": "right", "Y": "right", "better": "tie", "why": "Same answer from both."},
+  "meaning/whole": {"X": "right", "Y": "right", "better": "tie", "why": "Same answer from both."},
+  "noticeable": {"X": "partly", "Y": "right", "better": "Y", "why": "'last 15 years? last fifteen years fifty fifty' hints that something was corrected, so yes or maybe fits. X says no."},
+  "stakes": {"X": "right", "Y": "right", "better": "tie", "why": "Both say yes; the timeframe of the question changes, though the 'fifty fifty' that follows softens it."},
+  "rule": {"X": "right", "Y": "right", "better": "tie", "why": "All 4 others wrote 50 or fifty; the evidence holds."},
+  "blind": {"X": "partly", "Y": "partly", "better": "tie", "why": "Both flip with the order, and both misread the exchange in order 1."},
+  "rank": {"X": "right", "Y": "partly", "better": "X", "why": "At the spot four engines have 50/fifty and Canary has 15. X ties the four and puts Canary below. Y ranks the four correct engines 1 to 4 over words outside the spot."},
+  "misses": {"X": {"real_and_matter": 1, "trivial": 1, "not_real": 0, "important_missed": 1}, "Y": {"real_and_matter": 1, "trivial": 2, "not_real": 0, "important_missed": 1}, "better": "X", "why": "Both find 'be going'->'be good' and the dropped 'we', and both miss the case itself (fifty->15). Y also lists Braxton/Brixton, a name it was told to leave out."}
+ },
+ "overall": {"better": "X", "why": "X keeps rank to the spot and has the tidier miss list; Y only wins on noticeable."}}

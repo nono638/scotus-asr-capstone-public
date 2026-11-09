@@ -1,0 +1,121 @@
+{
+ "case": "s14",
+ "own": {
+  "meaning": "changed",
+  "severity": 2,
+  "noticeable": "maybe",
+  "follow_up": "meaning changed",
+  "stakes": "yes",
+  "reason": "The speaker said \"He work for Home Depot\" (he works there now, with no -s on the verb) and Qwen3 wrote \"he worked for Home Depot\", which says the father used to work there.",
+  "rule_right": "yes",
+  "rule_reason": "The reference has \"He work\", Qwen3 has \"he worked\" (made past tense), and no engine kept the bare verb (Whisper wrote \"works\", Parakeet \"worked\"), as the evidence says.",
+  "more_plausible": "reference",
+  "plausible_how_clear": "Fairly clear: the question is \"what does your dad do?\" in the present, and the speaker drops endings elsewhere; a reader with only the engine text might notice the tense mismatch. But a final -d is hard to hear, so the text cannot rule out \"worked\".",
+  "my_misses": [
+   {
+    "reference": "He work for Home Depot",
+    "engine": "he worked for Home Depot",
+    "severity": 2,
+    "what": "present job becomes a past job"
+   },
+   {
+    "reference": "Or do they live there after like once they go there?",
+    "engine": "or do they live there after? Yeah. Once they go there.",
+    "severity": 1,
+    "what": "part of the interviewer's question is moved into the child's answer"
+   },
+   {
+    "reference": "just to try something new and / something different / Yeah, and see something new",
+    "engine": "Just to try something new, yeah, and see something new.",
+    "severity": 0,
+    "what": "the interviewer's \"something different\" is dropped"
+   }
+  ]
+ },
+ "review": {
+  "labelled/line": {
+   "verdict": "agree",
+   "why": "Right: the engine added \"-ed\", turning a present job into a past one; severity 2 and \"meaning changed\" fit. \"Noticeable: yes\" is a little strong; \"what does your dad do? he worked for Home Depot\" could pass, so \"maybe\" is fairer."
+  },
+  "labelled/minute": {
+   "verdict": "partly",
+   "why": "The verdicts match mine, but its stakes_how calls the feature \"zero copula\", which is wrong (there is no missing \"is\"; it is a verb without -s), and \"noticeable: yes\" is overstated."
+  },
+  "labelled/whole": {
+   "verdict": "partly",
+   "why": "Same reading, but it drops to severity 1 and stakes \"maybe\" while keeping \"meaning changed\" and \"noticeable: yes\", which do not fit together; I judged only from the minute."
+  },
+  "rule/minute": {
+   "verdict": "partly",
+   "why": "\"Yes\" is the right verdict, but the reason again says \"zero copula\", a wrong description of what is in the text."
+  },
+  "blind/order1": {
+   "verdict": "agree",
+   "why": "Picked the reference (B, \"he work\"); the reason about verbs without -s in this corpus is fair, though it missed the stronger clue that the question was \"what does your dad do\" in the present."
+  },
+  "blind/order2": {
+   "verdict": "partly",
+   "why": "Picked the reference again (now A), so no order effect, but \"sure 3\" is high when a final \"-d\" is easy to miss, and \"zero copula\" is wrong again."
+  },
+  "rank/minute": {
+   "verdict": "agree",
+   "why": "Whisper's \"he works\" keeps the present meaning and the two \"worked\" engines tie behind it; the reason says Whisper kept \"work\" when it wrote \"works\", a small slip."
+  },
+  "misses": [
+   {
+    "reference": "in they life",
+    "engine": "in their life",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "Same meaning, standard spelling of the possessive; 0, not 2."
+   },
+   {
+    "reference": "after like once they go there",
+    "engine": "after? Yeah. Once they go there",
+    "is_real": "partly",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "The engine moved \"once they go there\" after an added \"Yeah\"; nothing was removed, so \"removed speaker's affirmation\" is wrong. 1 at most, not 3."
+   },
+   {
+    "reference": "He work for Home Depot",
+    "engine": "he worked for Home Depot",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "yes",
+    "note": "The flagged change; 2 is fair."
+   },
+   {
+    "reference": "I'm'a I'm'a",
+    "engine": "I'm gonna I'm gonna",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "Same words written differently; 0, and the prompt said to leave out such spellings."
+   },
+   {
+    "reference": "I just wanna get",
+    "engine": "I just want to get",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "\"wanna\" and \"want to\" are the same; 0."
+   },
+   {
+    "reference": "I don't wanna be here",
+    "engine": "I don't want to be here",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "Same as above; 0."
+   }
+  ],
+  "overlooked": []
+ },
+ "worth_a_listen": {
+  "yes": true,
+  "why": "Whether the girl said \"work\" or \"worked\" is one sound; the reference says \"work\", two engines heard \"worked\" and one \"works\", and it decides whether the father still works there."
+ },
+ "summary": "Gemma got the main call right (present job made past, severity 2) and picked the reference in both blind orders, but it kept calling the feature \"zero copula\" and padded the misses list with spelling-only items (\"wanna\", \"I'm'a\", \"they/their\") at severity 1-2."
+}

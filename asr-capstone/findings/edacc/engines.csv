@@ -1,0 +1,7 @@
+engine,recordings,wer_standard,wer_lowercase_nopunct,wer_verbatim,swapped_pct,dropped_pct,added_pct,audio_hours,hours_taken,speed_x_realtime,standard_reference_tokens,run
+Qwen3-ASR-1.7B-hf,40,11.82,14.96,96.22,4.42,5.25,2.15,18.24,2.64,6.9,157504,run-edacc-qwen3
+parakeet-tdt-0.6b-v3,40,13.54,15.51,96.5,5.16,6.51,1.88,18.24,0.55,32.9,157504,run-edacc-parakeet-reread
+whisper-large-v3,40,14.72,17.7,98.68,4.41,8.5,1.81,18.24,0.9,20.4,157504,run-edacc-whisper
+canary-1b-v2,40,16.65,20.59,96.46,5.46,9.49,1.71,18.24,0.9,20.4,157504,run-edacc-canary
+company,40,18.01,20.92,21.27,7.3,8.88,1.83,18.24,,,157504,D:\asr-corpora\edacc\unpacked\edacc_v1.0\test\company.ctm
+granite-speech-4.1-2b,40,18.61,22.44,96.44,5.37,11.55,1.7,18.24,3.74,4.9,157504,run-edacc-granite

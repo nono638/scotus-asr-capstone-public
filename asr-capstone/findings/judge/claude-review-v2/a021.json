@@ -1,0 +1,1 @@
+{"case": "a021", "own": {"reason": "The engine has 'do you need more stores' where the reference has 'more tools'; the question is about store network and density, so 'stores' is clearly right.", "meaning": "changed", "severity": 2, "follow_up": "changes meaning", "reference_doubt": "yes", "misspoke": "no"}}

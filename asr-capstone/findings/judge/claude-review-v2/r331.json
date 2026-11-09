@@ -1,0 +1,1 @@
+{"case": "r331", "own": {"reason": "The engine has capex deployed \"in the following month\" where the reference has \"in the following mode\"; the engine's word is a real word with a different sense, and arguably the more sensible one.", "meaning": "changed", "severity": 2, "follow_up": "changes meaning", "reference_doubt": "maybe", "misspoke": "no"}}

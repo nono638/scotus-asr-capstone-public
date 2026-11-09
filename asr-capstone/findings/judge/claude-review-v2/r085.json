@@ -1,0 +1,1 @@
+{"case": "r085", "own": {"reason": "The engine writes \"seven cents\" where the reference has \"$0.07\". Same amount, written out in words.", "meaning": "same", "severity": 0, "follow_up": "same thing", "reference_doubt": "no"}}

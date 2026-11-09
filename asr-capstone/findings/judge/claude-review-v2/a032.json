@@ -1,0 +1,1 @@
+{"case": "a032", "own": {"reason": "The engine has 'you'd come in if you could' where the reference has 'couldn't'; in a game where you run bases and come in, 'could' is the only sensible reading, so the reference looks wrong.", "meaning": "opposite", "severity": 3, "follow_up": "negation lost", "reference_doubt": "yes", "misspoke": "no"}}

@@ -1,0 +1,118 @@
+{
+ "case": "s11",
+ "own": {
+  "meaning": "same",
+  "severity": 0,
+  "noticeable": "no",
+  "follow_up": "only the stumble lost",
+  "stakes": "no",
+  "reason": "The speaker said \"I I haven't seen\" and Canary wrote \"I haven't seen\": only the stutter is gone, the words and meaning are the same.",
+  "rule_right": "yes",
+  "rule_reason": "The reference has \"I I\" and Canary has one \"I\"; Qwen3, Parakeet and Granite (Engines 4, 3, 1) did keep both, as the evidence says.",
+  "more_plausible": "reference",
+  "plausible_how_clear": "Weak from text alone: a doubled \"I\" is a normal stutter in casual talk, and three of five engines kept it, but nothing in the sense decides it.",
+  "my_misses": [
+   {
+    "reference": "ZURG TELLS BUZZ LIKE YOU KNOW THAT I AM YOUR FATHER",
+    "engine": "Sora tells Boss like you that I am your father",
+    "severity": 1,
+    "what": "the two character names become other words (\"Sora\", \"Boss\") and \"know\" is lost, so \"like you that I am your father\" reads oddly"
+   },
+   {
+    "reference": "THE EVIL EMPEROR ZURG",
+    "engine": "the evil emperor sort",
+    "severity": 1,
+    "what": "name becomes the word \"sort\""
+   },
+   {
+    "reference": "YEAH I REMEMBER",
+    "engine": "yeah, remember",
+    "severity": 1,
+    "what": "\"I\" dropped and the other speaker's reply runs into the first speaker's sentence"
+   },
+   {
+    "reference": "AND BUZZ",
+    "engine": "Boss",
+    "severity": 1,
+    "what": "name becomes \"Boss\" (at the edge)"
+   }
+  ]
+ },
+ "review": {
+  "labelled/line": {
+   "verdict": "agree",
+   "why": "Same words, only the stutter \"I I\" lost; severity 0 and \"only the stumble lost\" are right."
+  },
+  "labelled/minute": {
+   "verdict": "agree",
+   "why": "Same answer as the line view, and the description is accurate."
+  },
+  "labelled/whole": {
+   "verdict": "agree",
+   "why": "Same answer again; nothing in the minute text suggests the full transcript would change it (I could not see the full transcript)."
+  },
+  "rule/minute": {
+   "verdict": "agree",
+   "why": "The reference has \"I I\", Canary has \"I\", and the other three engines did keep the repeat, so the rule is right."
+  },
+  "blind/order1": {
+   "verdict": "partly",
+   "why": "It picked the reference (A, \"i i\") with a sensible reason about stutters, but it also picked A in order 2, where A was the engine's version, so the right answer here looks like a lean toward the first version."
+  },
+  "blind/order2": {
+   "verdict": "disagree",
+   "why": "It picked A (the single \"i\") and called \"i i\" a likely \"transcription error\", the opposite of its own reason in order 1; it chose by position, not by sense."
+  },
+  "rank/minute": {
+   "verdict": "disagree",
+   "why": "All five engines keep the meaning (\"I haven't seen the Star Wars movie\"), so they should tie; Gemma ranked on keeping the stutter, marked Granite down for \"the extra comma\" though the prompt says to ignore punctuation, and gave ranks 1,1,2,4,4."
+  },
+  "misses": [
+   {
+    "reference": "ZURG",
+    "engine": "sort",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "A misheard character name; the prompt says to leave out names written differently. Severity 3 is far too high; 1 at most."
+   },
+   {
+    "reference": "ZURG TELLS BUZZ",
+    "engine": "Sora tells Boss",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "The same two name errors counted again (overlaps the first and fourth items); a reader can still tell a character said \"I am your father\"."
+   },
+   {
+    "reference": "LIKE YOU KNOW THAT I AM YOUR FATHER",
+    "engine": "like you that I am your father",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "\"you know\" is filler here; losing \"know\" makes the phrase read oddly but the quote \"I am your father\" survives. 1, not 2."
+   },
+   {
+    "reference": "BUZZ",
+    "engine": "Boss",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "Name error, partly at the edge of the minute, and a third count of the same kind of slip."
+   }
+  ],
+  "overlooked": [
+   {
+    "reference": "YEAH I REMEMBER",
+    "engine": "yeah, remember",
+    "severity": 0,
+    "note": "\"I\" dropped and the listener's reply runs into the speaker's sentence; minor, nothing important was missed."
+   }
+  ]
+ },
+ "worth_a_listen": {
+  "yes": false,
+  "why": "Only a stutter is at stake and three engines agree it was there; listening would not change any conclusion."
+ },
+ "summary": "Gemma judged the spot correctly (same meaning, severity 0, rule right), but in the blind test it picked Version A both times whichever text A held, its ranking punished punctuation and a lost stutter, and its misses list gave severity 3 to character names written wrongly."
+}

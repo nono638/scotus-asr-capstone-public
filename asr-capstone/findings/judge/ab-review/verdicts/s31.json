@@ -1,0 +1,15 @@
+{"case": "s31",
+ "parts": {
+  "meaning/line": {"X": "right", "Y": "wrong", "better": "X", "why": "'you scared' to 'you're scared' only adds the standard verb; the meaning is the same. X says reworded, severity 0, meaning kept. Y says changed, severity 2, meaning changed."},
+  "meaning/minute": {"X": "right", "Y": "wrong", "better": "X", "why": "X: same/0/meaning kept (acceptable, same words plus a contraction). Y again says changed and meaning changed, which the text does not support."},
+  "meaning/whole": {"X": "right", "Y": "right", "better": "tie", "why": "Both: same, 0, meaning kept."},
+  "noticeable": {"X": "wrong", "Y": "wrong", "better": "tie", "why": "Both say yes, but 'when you're scared' reads as perfectly normal English; a reader with only the engine text would notice nothing."},
+  "stakes": {"X": "right", "Y": "right", "better": "tie", "why": "Both say yes because the zero copula a CORAAL researcher would study is erased; that is a fair answer for this corpus."},
+  "rule": {"X": "right", "Y": "right", "better": "tie", "why": "Both agree the rule is right: 'are' was added to 'you scared'."},
+  "blind": {"X": "right", "Y": "right", "better": "tie", "why": "Both pick the reference in both orders, using the earlier 'when you in fear' as the clue."},
+  "rank": {"X": "partly", "Y": "partly", "better": "tie", "why": "Both tie Qwen3 and Whisper (same text) at 1 and put Parakeet ('you scare') below, which is defensible, but both reasons say Engine 1 'fails to capture the grammatical structure' when it is the one that kept the zero copula; its slip is 'scare' for 'scared'."},
+  "misses": {"X": {"real_and_matter": 1, "trivial": 1, "not_real": 1, "important_missed": 0},
+             "Y": {"real_and_matter": 1, "trivial": 3, "not_real": 1, "important_missed": 0},
+             "better": "X", "why": "Both catch 'they're just being scared' to 'just been scared'. Both list the cut-off 'beginning in the' at the edge as a loss. Y pads the list with 'or or', 'they/their' and the contractions. X calls 'you in fear' a tense change at severity 2, which is overstated."}
+ },
+ "overall": {"better": "X", "why": "X correctly treats the added contraction as a change in form only at line and minute size, while Y calls it a meaning change; the rest is mostly level."}}

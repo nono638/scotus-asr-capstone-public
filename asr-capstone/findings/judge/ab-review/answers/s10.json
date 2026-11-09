@@ -1,0 +1,127 @@
+{
+ "case": "s10",
+ "X": {
+  "meaning": {
+   "line": {
+    "meaning": "reworded",
+    "severity": 1,
+    "follow_up": "continues the talk",
+    "reason": "The engine repeats the speaker's name and affiliation multiple times at the marked place, whereas the reference has no text."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 2,
+    "follow_up": "unrelated",
+    "reason": "The engine repeats the name and company of the caller multiple times, whereas the reference has no text at that specific location."
+   },
+   "whole": {
+    "meaning": "changed",
+    "severity": 2,
+    "follow_up": "cant tell",
+    "reason": "The engine repeats the name of the questioner multiple times, whereas the reference has no text at that specific mark."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "no",
+   "reason": "The engine's repetition of the speaker's name and affiliation is redundant and does not introduce new or conflicting information that would alter the understanding of the call."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The engine repeats a phrase that was just spoken, which aligns with the evidence of 0% speech and low decibel levels at that specific mark."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "Version A contains no text at the mark, whereas Version B repeats the name of the person being introduced. In an earnings call, the moderator (Speaker 3) would typically acknowledge the caller by name or simply transition, but repeating the name and part of the affiliation as seen in Version B is characteristic of a transcription error or a stutter, while Version A's silence is more natural for a simple transition to 'hi'. However, looking at the flow, Speaker 3 is acknowledging the caller. Version B's repetition is nonsensical and looks like a transcription glitch."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "Version A contains a repetitive, garbled repetition of the name 'fernando alíviar with bank of america', which sounds like a transcription error or an echo. Version B is cleaner and follows the natural flow of the speaker acknowledging the caller and moving to the greeting."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Whisper": 3,
+    "Parakeet": 1,
+    "Qwen3": 1
+   },
+   "reason": "Engine 2 and Engine 3 are tied for first place because they correctly identify that there is no text at the marked location, whereas Engine 1 introduces unnecessary and incorrect words."
+  },
+  "misses": [
+   {
+    "reference": "what explains the solid volume growth in So, in terms of this, can you comment what was the volume growth between alcoholic and non-alcoholic beverages",
+    "engine": "what explains the solid volume growth you would see in the water? water. And in line with this, can you comment on the volume growth between alcoholic and non -alcoholic beverages",
+    "severity": 3,
+    "what": "the question regarding volume growth content"
+   },
+   {
+    "reference": "And I have a, another question.",
+    "engine": "And I have another question I'll bring.",
+    "severity": 2,
+    "what": "the end of the final question"
+   }
+  ]
+ },
+ "Y": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "unrelated",
+    "reason": "The speech recognition engine hallucinated a first name and repeated the speaker's name and affiliation multiple times."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "unrelated",
+    "reason": "The speech recognition engine hallucinated a repetitive loop of the analyst's name and affiliation instead of capturing the transition to the next speaker."
+   },
+   "whole": {
+    "meaning": "changed",
+    "severity": 2,
+    "follow_up": "unrelated",
+    "reason": "The speech recognition engine hallucinated a repetition of the speaker's name and misidentified the name 'Fernando Olivier' as 'Fernando Alíviar'."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The engine repeats the name of the analyst and introduces a stuttering, nonsensical repetition of the bank's name where the reference simply transitions to the speaker's greeting."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The engine contains a repetitive hallucination of the previous speaker's name that does not exist in the reference transcript."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "Version B contains a repetitive, nonsensical loop of the previous speaker's introduction, whereas Version A provides a natural transition with a simple greeting."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "Version A contains a repetitive and nonsensical stuttering of the name 'fernando alíviar' that does not fit the natural flow of an operator introducing a caller, whereas Version B correctly transitions from the introduction to the caller's greeting."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Whisper": 3,
+    "Parakeet": 1,
+    "Qwen3": 1
+   },
+   "reason": "Engine 2 and Engine 3 are tied for first because they correctly omit the hallucinated text, whereas Engine 1 introduces repetitive and incorrect content that alters the transcript's meaning."
+  },
+  "misses": [
+   {
+    "reference": "I made… The first one is related to Chile. Uh, in your opinion, what explains the solid volume growth in So, in terms of this, can you comment what was the volume growth between alcoholic and non-alcoholic beverages, and how you expect them to behave the remaining of the year? And I have a, another question.",
+    "engine": "if I may. The first one is related to Chile. In your opinion, what explains the solid volume growth you would see in the water? water. And in line with this, can you comment on the volume growth between alcoholic and non -alcoholic beverages, and how do you expect them to behave the remaining of the year? And I have another question I'll bring.",
+    "severity": 4,
+    "what": "The engine completely changes the topic from discussing volume growth in Chile/beverages to a nonsensical phrase about 'growth you would see in the water' and adds 'I'll bring' at the end."
+   }
+  ]
+ }
+}

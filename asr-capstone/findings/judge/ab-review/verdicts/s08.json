@@ -1,0 +1,15 @@
+{"case": "s08",
+ "parts": {
+  "meaning/line": {"X": "wrong", "Y": "right", "better": "Y", "why": "'or something like that' says the same as 'or something'. Y: reworded, 1, continues the talk. X: changed, severity 2 (a wrong detail), which overstates a filler."},
+  "meaning/minute": {"X": "partly", "Y": "right", "better": "Y", "why": "X keeps 'changed' though its severity drops to 1; Y says same, 1."},
+  "meaning/whole": {"X": "partly", "Y": "right", "better": "Y", "why": "X: changed, 1, cant tell. Y: same, 0, continues the talk, which fits."},
+  "noticeable": {"X": "wrong", "Y": "right", "better": "Y", "why": "Nothing reads wrong in 'fishing people or something like that. Maybe it was'; Y says no, X says yes."},
+  "stakes": {"X": "right", "Y": "right", "better": "tie", "why": "Both say no for the right reason."},
+  "rule": {"X": "right", "Y": "right", "better": "tie", "why": "Both confirm the extra words with nothing in the reference."},
+  "blind": {"X": "wrong", "Y": "wrong", "better": "tie", "why": "Both pick the engine's 'like that' in both orders."},
+  "rank": {"X": "partly", "Y": "right", "better": "Y", "why": "Y ties the three engines with nothing at the spot first, puts Whisper next for dropping 'maybe it was', and Parakeet last. X also puts Parakeet last, but ranks Whisper first and drops Qwen3 and Canary for 'extra punctuation/structure', which the rank should ignore."},
+  "misses": {"X": {"real_and_matter": 2, "trivial": 7, "not_real": 2, "important_missed": 0},
+             "Y": {"real_and_matter": 2, "trivial": 1, "not_real": 0, "important_missed": 0},
+             "better": "Y", "why": "Both catch posh -> Porsche and cockney -> cogniz. X also notes B's dropped 'ah no I thought I was', but pads its list with backchannel 'yes' items scored 3, and lists 'MAYBE IT WAS' and 'THE FILM WAS' as missing when the engine has both."}
+ },
+ "overall": {"better": "Y", "why": "Y reads the extra filler correctly as harmless and unnoticeable, ranks sensibly and keeps a clean list; X over-reads the filler and fills its list with false or minor items."}}

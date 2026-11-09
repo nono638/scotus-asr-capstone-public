@@ -1,0 +1,7 @@
+model,term,cases,standard_before,standard_after,standard_change,lowercase_nopunct_before,lowercase_nopunct_after,lowercase_nopunct_change,verbatim_before,verbatim_after,verbatim_change
+parakeet-tdt-0.6b-v3,OT2010,77,8.315,7.838,-0.477,10.8,10.374,-0.426,18.907,18.677,-0.23
+parakeet-tdt-0.6b-v3,OT2013,70,9.554,8.89,-0.664,11.791,11.108,-0.683,17.722,17.392,-0.33
+parakeet-tdt-0.6b-v3,OT2020,57,6.283,5.7,-0.583,8.729,8.191,-0.538,17.397,17.045,-0.352
+parakeet-tdt-0.6b-v3,OT2021,62,6.256,5.846,-0.41,8.332,7.923,-0.409,17.435,17.196,-0.239
+parakeet-tdt-0.6b-v3,OT2023,60,6.594,6.178,-0.416,8.849,8.402,-0.447,17.595,17.306,-0.289
+parakeet-tdt-0.6b-v3,OT2025,58,6.75,6.31,-0.44,8.96,8.556,-0.404,17.676,17.383,-0.293

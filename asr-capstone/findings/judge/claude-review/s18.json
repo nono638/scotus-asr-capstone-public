@@ -1,0 +1,77 @@
+{
+ "case": "s18",
+ "own": {
+  "meaning": "changed",
+  "severity": 4,
+  "noticeable": "yes",
+  "follow_up": "content lost, gap shows",
+  "stakes": "yes",
+  "reason": "Parakeet left out the company's whole answer (construction finished in Q1 2022, the unit at design capacity in the first half of the year), so the analyst's question about the testing period gets no answer.",
+  "rule_right": "yes",
+  "rule_reason": "Thirty-three words are missing, and Whisper (Engine 3) and Qwen3 (Engine 2) wrote them, as the evidence says.",
+  "more_plausible": "reference",
+  "plausible_how_clear": "Clear: on an earnings call a question is followed by an answer, and the engine's \"Thank you. Thank you.\" straight into the next question shows the answer is gone.",
+  "my_misses": [
+   {
+    "reference": "speaking. Construction, um, is going to be finished pretty soon in Q1 2022, so we would expect the unit to ramp up, uh, to the design capacity in the first half of the year.",
+    "engine": "",
+    "severity": 4,
+    "what": "the whole answer, with its dates, is left out"
+   }
+  ]
+ },
+ "review": {
+  "labelled/line": {
+   "verdict": "agree",
+   "why": "The whole answer, with the Q1 2022 and first-half dates, is missing; severity 4 and stakes yes are right."
+  },
+  "labelled/minute": {
+   "verdict": "agree",
+   "why": "Accurate: the analyst's question goes unanswered in the engine's text."
+  },
+  "labelled/whole": {
+   "verdict": "agree",
+   "why": "Same, and its note that it looks as if no one answered is exactly the risk; I judged only from the minute."
+  },
+  "rule/minute": {
+   "verdict": "agree",
+   "why": "Thirty-three words missing, Whisper and Qwen3 wrote them; the rule is right."
+  },
+  "blind/order1": {
+   "verdict": "agree",
+   "why": "Picked the reference (A) for the right reason: a question on an earnings call gets an answer."
+  },
+  "blind/order2": {
+   "verdict": "agree",
+   "why": "Picked the reference again (now B) with the same reason; no order effect."
+  },
+  "rank/minute": {
+   "verdict": "partly",
+   "why": "Parakeet last is right, but Qwen3 and Whisper carry the same answer and should tie; Gemma put Qwen3 first only because it wrote the speaker's name (\"Pavel Danis speaking\"), which is not meaning."
+  },
+  "misses": [
+   {
+    "reference": "speaking. Construction, is going to be finished pretty soon in Q1 2022, so we would expect the unit to ramp up, to the design capacity in the first half of the year. Thank you.",
+    "engine": "",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "yes",
+    "note": "The real skip, severity 4 fair; small quoting slip: the trailing \"Thank you\" is not missing from the engine, which writes it twice."
+   },
+   {
+    "reference": "from the line of calling from CIB",
+    "engine": "from the line of Andrei Gromadin calling from Spir CIB",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "The reference transcribers left the analyst's name out; the engine wrote a name. Names written differently should be left out; 0."
+   }
+  ],
+  "overlooked": []
+ },
+ "worth_a_listen": {
+  "yes": true,
+  "why": "A 10-second answer with forward guidance vanished from Parakeet; confirming the audio is clear there makes this a strong example for the write-up."
+ },
+ "summary": "Gemma was right on almost everything here: a whole answer with dates was lost and it said so in every view; its only slips were ranking Qwen3 above Whisper for writing a name and rating the analyst's name as a severity-2 miss."
+}

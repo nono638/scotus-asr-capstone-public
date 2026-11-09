@@ -1,0 +1,1 @@
+{"case": "r257", "own": {"reason": "The engine writes \"farmer\" for \"pharma\", a different real word. In a passage about drug delivery a reader would probably guess drug companies are meant, but the text names the wrong party.", "meaning": "changed", "severity": 2, "follow_up": "changes meaning", "reference_doubt": "no"}}

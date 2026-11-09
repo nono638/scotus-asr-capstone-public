@@ -1,0 +1,1 @@
+{"case": "r197", "own": {"reason": "The engine writes \"docs\" for \"docks\". It sounds the same, but \"docs\" reads as documents, not the seized port property the lawyer gives as an example.", "meaning": "changed", "severity": 2, "follow_up": "changes meaning", "reference_doubt": "no"}}

@@ -1,0 +1,104 @@
+{
+ "case": "s28",
+ "own": {
+  "meaning": "changed",
+  "severity": 2,
+  "noticeable": "maybe",
+  "follow_up": "different quantity",
+  "stakes": "no",
+  "reason": "The question was about the best invention of the last fifty years, and the engine wrote fifteen, which also spoils the little back-and-forth where the other person misheard fifteen and was corrected to fifty.",
+  "rule_right": "yes",
+  "rule_reason": "Fifty and 15 are different numbers, and all four other engines wrote fifty.",
+  "more_plausible": "reference",
+  "plausible_how_clear": "Fairly clear: the reply 'last fifteen years?' followed by 'fifty' reads as a mishearing being corrected, which only works if fifty was asked first.",
+  "my_misses": [
+   {
+    "reference": "FIFTY",
+    "engine": "15",
+    "severity": 2,
+    "note": "Time frame changed; 'fifty fifty' right after lets a reader half-recover it."
+   },
+   {
+    "reference": "WILL YOU BE GOING",
+    "engine": "will you be good",
+    "severity": 2,
+    "note": "Question about attending becomes a different question."
+   },
+   {
+    "reference": "ALL RIGHT",
+    "engine": "",
+    "severity": 0,
+    "note": "Dropped filler."
+   }
+  ]
+ },
+ "review": {
+  "labelled/line": {
+   "verdict": "partly",
+   "why": "A different quantity, yes, and 3 matches the scale's wording for numbers, but the line itself shows 'last fifteen years fifty fifty' right after, so a reader recovers fifty; stakes 'yes' and a 'significant factual discrepancy' are too strong for a light icebreaker question."
+  },
+  "labelled/minute": {
+   "verdict": "partly",
+   "why": "Same as the line: right kind of error, overstated stakes."
+  },
+  "labelled/whole": {
+   "verdict": "partly",
+   "why": "Same; 'significant factual error' overstates it."
+  },
+  "rule/minute": {
+   "verdict": "agree",
+   "why": "Fifty and 15 differ, and all four other engines wrote fifty."
+  },
+  "blind/order1": {
+   "verdict": "disagree",
+   "why": "Picked '15' (the engine) at 'sure 3' and called the reference's flow 'makes no sense'; asking about fifty, being misheard as fifteen and repeating fifty is the natural reading. Its own reading is possible but not at 'sure 3'."
+  },
+  "blind/order2": {
+   "verdict": "agree",
+   "why": "Picked 'fifty' with the opposite argument from order 1; it chose slot A both times at 'sure 3', so its two answers contradict each other."
+  },
+  "rank/minute": {
+   "verdict": "partly",
+   "why": "Putting the '15' engine last is right, but the four 'fifty/50' engines should tie at 1; Gemma ranked them on words after the spot ('50 50 or', 'be')."
+  },
+  "misses": [
+   {
+    "reference": "BRAXTON",
+    "engine": "Brixton",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "A place name written differently (and 'Brixton' is the real London district, so the reference is probably wrong); should have been left out."
+   },
+   {
+    "reference": "WILL YOU BE GOING",
+    "engine": "will you be good",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "too high",
+    "note": "A real catch: the question changes; but in a chat about an event, 2 rather than 3."
+   },
+   {
+    "reference": "WE DO SO MUCH WITH IT",
+    "engine": "do so much with it",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "yes",
+    "note": "A dropped 'we'; 1 is acceptable."
+   }
+  ],
+  "overlooked": [
+   {
+    "reference": "FIFTY",
+    "engine": "15",
+    "severity": 2,
+    "note": "Gemma's misses list leaves out the flagged number change itself."
+   }
+  ]
+ },
+ "worth_a_listen": {
+  "yes": false,
+  "why": "The back-and-forth ('last fifteen years?' then 'fifty') makes the reference fairly clear; a listen would only confirm it."
+ },
+ "summary": "Gemma spotted that the number changed but overstated what was at stake, left the change out of its own misses list, and in the blind test picked by position and invented a 'fifteen then corrected' story at full confidence."
+}

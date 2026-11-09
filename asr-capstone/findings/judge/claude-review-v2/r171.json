@@ -1,0 +1,1 @@
+{"case": "r171", "own": {"reason": "The engine writes 'spend it' for 'suspended', giving 'I got spend it for a date', which is nonsense. That she was suspended can only be guessed from later lines.", "meaning": "garbled", "severity": 2, "follow_up": "garble", "reference_doubt": "no"}}

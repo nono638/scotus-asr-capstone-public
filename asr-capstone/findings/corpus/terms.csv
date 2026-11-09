@@ -1,0 +1,6 @@
+term,arguments,audio_hours,median_minutes,shortest_minutes,longest_minutes,record_words
+OT2010,77,76.3,60,41,81,779535
+OT2017,61,61.1,60,45,88,657442
+OT2021,62,86.7,82,44,130,901003
+OT2025,58,86.0,83,36,159,931212
+all four,258,310.1,62,36,159,3269192

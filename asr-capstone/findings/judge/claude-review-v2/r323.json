@@ -1,0 +1,1 @@
+{"case": "r323", "own": {"reason": "The engine wrote \"move\" for \"movie\"; \"enough for a move\" makes no sense, though the next sentence about a movie in the making lets a reader recover it.", "meaning": "garbled", "severity": 1, "follow_up": "garble", "reference_doubt": "no", "misspoke": "no"}}

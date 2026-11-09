@@ -1,0 +1,109 @@
+# The same corpus, the same scoring, and the only model here that times its
+# own words.
+#
+# IBM Granite Speech 4.1 2B Plus, released 28 April 2026 alongside the
+# granite-speech-4.1-2b already in this study. They are siblings from one
+# release, not an old model and a new one.
+#
+#   python -m scotus_asr.cli run --config config/granite-plus.yaml --term 2017
+#
+# Model card, and the source for every setting below:
+# https://huggingface.co/ibm-granite/granite-speech-4.1-2b-plus
+#
+# ---------------------------------------------------------------------------
+# Read this before reading any score from this model.
+#
+# IBM say plainly: "Unlike the base mode, the plus model doesn't provide
+# punctuation and capitalization", and they recommend the base 4.1-2b "for
+# applications where accuracy is the primary concern with support for
+# punctuated, capitalized transcripts".
+#
+# This project scores three ways. Two of them - `standard`, the Whisper
+# benchmark rule, and `lowercase_nopunct` - delete punctuation and case before
+# comparing, so this model competes fairly there. The third, `verbatim`, counts
+# punctuation and capitals as part of the record, which is what a certified
+# transcript is judged against. On that rule this model cannot do well, and its
+# score there measures IBM's design decision rather than how well it heard the
+# argument.
+#
+# The figure is still reported. Suppressing it would be worse than explaining
+# it, and the size of the gap is itself the kind of finding this project is
+# about: a model can be excellent at the benchmark task and structurally unable
+# to produce a certifiable record.
+# ---------------------------------------------------------------------------
+
+paths:
+  sample_dir: "{scotus_corpus}/cases"
+  runs_dir: "{scotus_corpus}/runs"
+
+asr:
+  engine: granite-plus
+
+  model: granite-speech-4.1-2b-plus
+  device: cuda
+
+  # bfloat16, which is what IBM publish the weights in and what their own
+  # example runs. Not a tuning choice.
+  compute_type: bfloat16
+  language: en
+
+  # True, and for the first time it means the model's own timings rather than
+  # the forced aligner's.
+  #
+  # This is the main reason the model is in the study. Qwen3, Canary, Voxtral
+  # and the base Granite all borrow their timings from
+  # Qwen3-ForcedAligner-0.6B-hf, and tools/archive/aligner_control.py measured that the
+  # aligner roughly doubles the silence it reports - 2.00x when fed Parakeet's
+  # own words. Four of this project's seven silence results rest on that one
+  # component. This model gives an independent reading of the same recordings.
+  word_timestamps: true
+
+  # The prompt is a constant in the engine rather than a setting here, because
+  # it decides what the model produces rather than how fast it produces it.
+  # It is IBM's timestamp-mode wording, copied exactly, and it is written into
+  # every run's config_used.yaml by settings_used().
+  #
+  # Chunk length is 120 seconds, and it was measured before the run rather
+  # than read off the model card. IBM document that timestamp mode "works well
+  # with audio segments up to 3.5 minutes", which is 210 seconds.
+  #
+  # The rule at the top of model-usage-notes.md is that a documented maximum is
+  # not a quality threshold. The base Granite publishes no limit at all and
+  # falls apart between 60 and 80 seconds, which cost this project seven hours
+  # of machine time and an error rate that looked like a finding about IBM and
+  # was a finding about a setting.
+  #
+  # So tools/chunk_sweep.py ran 52 probes at 30, 60, 120 and 210 seconds across
+  # ten OT2017 arguments, including every passage the base model looped on.
+  # None looped, at any length. 120 was chosen over 210 because 210 sits
+  # exactly at the edge of what IBM say they tested, and because a chunk this
+  # model quietly truncates would read downstream as speech it could not hear -
+  # which is the measurement this project makes.
+  #
+  # See the note on CHUNK_SECONDS in granite_plus_engine.py for the figures.
+  #
+  # Decoding temperatures are ignored by this engine, and that is a departure
+  # from every other model here worth explaining rather than hiding.
+  #
+  # The usual remedy for a repetition loop in this project is to decode the
+  # chunk again with sampling turned on. That was tried on this model first and
+  # it does not work. Two chunks of 16-285 looped, and both went through all
+  # six temperatures without once coming back clean - 885 words at 728 a
+  # minute, and 817 at 436, each kept as the least repetitive of six bad tries.
+  #
+  # The measurements say why. This loop is decided by where the window starts,
+  # not by unlucky sampling: the chunk beginning at 2464s loops, and the same
+  # audio beginning at 2469s is clean. Splitting the chunk moves the boundary;
+  # raising the temperature never does.
+  #
+  # So a looping chunk is halved and each half decoded on its own, up to three
+  # times - 120 to 60 to 30 to 15 seconds. Both failing chunks recover that
+  # way, one at the first split and one only at the third.
+  temperatures: [0.0]
+
+  # The genuinely Whisper-only settings - beam size, best_of, and the rest -
+  # are ignored rather than faked, as in voxtral.yaml.
+
+scoring:
+  omission_min_words: 25
+  omission_merge_gap: 2

@@ -1,0 +1,41 @@
+paths:
+  capstone_dir: D:\Dropbox\NotWork\CUNYSPS\2026\Fall 2026\asr-capstone
+  sample_dir: D:\scotus-corpus\cases
+  runs_dir: D:\scotus-corpus\runs
+asr:
+  engine: faster-whisper
+  model: large-v3
+  device: cuda
+  compute_type: float16
+  language: en
+  beam_size: 5
+  word_timestamps: true
+  condition_on_previous_text: false
+  vad_filter: false
+  temperatures:
+  - 0.0
+  - 0.2
+  - 0.4
+  - 0.6
+  - 0.8
+  - 1.0
+  compression_ratio_threshold: 2.4
+  log_prob_threshold: -1.0
+  no_speech_threshold: 0.6
+scoring:
+  omission_min_words: 25
+  omission_merge_gap: 2
+  words_per_minute_min: 145.0
+  words_per_minute_max: 210.0
+ocr:
+  layout_engine: embedded
+  text_engine: glm-ocr
+  text_model: zai-org/GLM-OCR
+  render_dpi: 200
+  upscale: 1.0
+  expected_lines_per_page: 25
+  gutter_width_fraction: 0.12
+run:
+  max_attempts: 3
+  retry_backoff_seconds: 5.0
+  flush_every_row: true

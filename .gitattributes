@@ -1,0 +1,25 @@
+# Settle line endings explicitly rather than leaving them to each machine's git
+# config. Without this, the same file can look entirely rewritten on the other
+# laptop just because of invisible end-of-line characters.
+#
+# Stored as LF inside the repository, checked out as the platform prefers.
+* text=auto
+
+# Windows tools are fussier about these, so force CRLF on checkout.
+*.ps1 text eol=crlf
+*.bat text eol=crlf
+*.cmd text eol=crlf
+
+# Never touched. Declaring them stops git from trying to diff them as text,
+# and from corrupting them if it guessed wrong.
+*.pdf  binary
+*.mp3  binary
+*.wav  binary
+*.flac binary
+*.png  binary
+*.jpg  binary
+*.ipynb binary
+
+# Notebooks are JSON, so git can merge them in principle, but the output cells
+# make the diffs unreadable. Treating them as binary means conflicts get
+# resolved by picking one whole file, which is what you would do anyway.

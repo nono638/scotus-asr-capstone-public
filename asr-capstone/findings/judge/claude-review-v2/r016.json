@@ -1,0 +1,1 @@
+{"case": "r016", "own": {"reason": "The engine writes \"We are seeing\" for \"we've seen\"; it is the same verb in a slightly different tense, and the meaning stays the same.", "meaning": "reworded", "severity": 0, "follow_up": "same thing", "reference_doubt": "no"}}

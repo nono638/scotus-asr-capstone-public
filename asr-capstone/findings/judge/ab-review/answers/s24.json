@@ -1,0 +1,173 @@
+{
+ "case": "s24",
+ "X": {
+  "meaning": {
+   "line": {
+    "meaning": "reworded",
+    "severity": 0,
+    "follow_up": "same thing",
+    "reason": "The engine used a synonym for the word in the reference."
+   },
+   "minute": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "same thing",
+    "reason": "The engine used a synonym for the word in the reference."
+   },
+   "whole": {
+    "meaning": "reworded",
+    "severity": 0,
+    "follow_up": "same thing",
+    "reason": "The engine used a synonym for the word in the reference."
+   }
+  },
+  "noticeable": "no",
+  "stakes": {
+   "stakes": "no",
+   "reason": "The term 'site' is a common and perfectly acceptable synonym for 'website' in this context."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The engine replaced the word 'WEBSITE' with the synonym 'site'."
+  },
+  "blind": {
+   "order1 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "The context of the sentence is discussing the desire for an 'ecommerce website', making 'website' the more natural and complete term compared to the truncated 'site'."
+   },
+   "order2 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 2,
+    "reason": "In the context of 'wants an ecommerce...', 'website' is a more natural and complete noun to follow the adjective 'ecommerce' than the clipped 'site', although both are semantically possible."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Parakeet": 1,
+    "Canary": 1,
+    "Whisper": 3,
+    "Qwen3": 1,
+    "Granite": 4
+   },
+   "reason": "Engines 1, 2, and 4 perfectly preserve the meaning and subject of the reference, while Engine 3 changes the subject to 'person' and 'your work', and Engine 5 introduces nonsensical word substitutions like 'every moment'."
+  },
+  "misses": [
+   {
+    "reference": "IT FOR PEOPLE",
+    "engine": "FOR PEOPLE",
+    "severity": 1,
+    "what": "missing word 'it'"
+   },
+   {
+    "reference": "WEBSITES LIKE I'VE DEVELOPED",
+    "engine": "SITES LIKE WE LOOKED",
+    "severity": 3,
+    "what": "changed 'developed' to 'looked'"
+   },
+   {
+    "reference": "EVERY MOM AND POP SHOP",
+    "engine": "EVERY MOMENT A POP SHOP",
+    "severity": 3,
+    "what": "changed 'mom and pop shop' to 'moment a pop shop'"
+   },
+   {
+    "reference": "EVERYDAY EVERY MOM AND POP SHOP UM PERS WANTS",
+    "engine": "EVERY DAY EVERY MOMENT A POP SHOP WANTS",
+    "severity": 2,
+    "what": "removed 'pers' (people/person)"
+   },
+   {
+    "reference": "INTEGRATE A PAYMENT METHOD",
+    "engine": "INTEGRATED PAYMENTS METHOD",
+    "severity": 1,
+    "what": "tense and plural change"
+   },
+   {
+    "reference": "AS WELL BECAUSE",
+    "engine": "ALSO BECAUSE",
+    "severity": 0,
+    "what": "synonym change"
+   },
+   {
+    "reference": "JUST DO THAT UPLOAD",
+    "engine": "JUST DO UPLOAD",
+    "severity": 1,
+    "what": "missing word 'that'"
+   }
+  ]
+ },
+ "Y": {
+  "meaning": {
+   "line": {
+    "meaning": "reworded",
+    "severity": 0,
+    "follow_up": "same thing",
+    "reason": "The engine uses the word 'site' instead of 'website'."
+   },
+   "minute": {
+    "meaning": "reworded",
+    "severity": 0,
+    "follow_up": "same thing",
+    "reason": "The engine uses the word 'site' instead of 'website', which are synonymous in this context."
+   },
+   "whole": {
+    "meaning": "reworded",
+    "severity": 0,
+    "follow_up": "same thing",
+    "reason": "The engine uses the word 'site' instead of 'website', which are synonymous in this context."
+   }
+  },
+  "noticeable": "no",
+  "stakes": {
+   "stakes": "no",
+   "reason": "The terms 'website' and 'site' are synonymous in this context, so the substitution does not change the meaning of the sentence."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The evidence correctly identifies that the engine used the word 'site' instead of the reference word 'WEBSITE'."
+  },
+  "blind": {
+   "order1 (reference shown as B)": {
+    "picked": "engine",
+    "sure": 2,
+    "reason": "Both 'site' and 'website' are perfectly natural and semantically identical in this context, as the speaker is discussing e-commerce. However, 'site' is a very common shorthand for 'website' in casual speech."
+   },
+   "order2 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 2,
+    "reason": "Both 'website' and 'site' are perfectly natural and interchangeable in this context, as the speaker is discussing e-commerce. However, 'website' is used later in the same sentence, making it a slightly more likely word for the speaker to repeat."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Parakeet": 1,
+    "Canary": 1,
+    "Whisper": 3,
+    "Qwen3": 1,
+    "Granite": 2
+   },
+   "reason": "Engines 1, 2, and 4 are the most accurate as they match the reference word exactly, while Engine 3 missed a word and Engine 5 substituted a synonym."
+  },
+  "misses": [
+   {
+    "reference": "EVERY MOM AND POP SHOP",
+    "engine": "every moment, a pop shop",
+    "severity": 3,
+    "what": "the phrase 'every mom and pop shop'"
+   },
+   {
+    "reference": "I'VE DEVELOPED OVER TWENTY",
+    "engine": "we looked over 20",
+    "severity": 2,
+    "what": "the phrase 'i've developed over twenty'"
+   },
+   {
+    "reference": "INTEGRATE A PAYMENT METHOD",
+    "engine": "integrated payments method",
+    "severity": 1,
+    "what": "the phrase 'integrate a payment method'"
+   }
+  ]
+ }
+}

@@ -1,0 +1,28 @@
+# CORAAL, the Corpus of Regional African American Language, in place of the
+# Supreme Court. Given after a model's own file, so one file serves every model:
+#
+#   python -m scotus_asr.cli run --config config/qwen3.yaml --config config/corpora/coraal.yaml
+#
+# What the corpus is, how it is downloaded and how its reference is read are in
+# scotus_asr/corpora/coraal.py; the scouting notes in asr-capstone/datasets/coraal.md.
+# `run` downloads and unpacks it on first use (all eight components, 32.6 GB).
+
+corpus:
+  name: coraal
+  root: "{asr_corpora}/coraal"
+  # A component code - ROC (Rochester, 2016), PRV (Princeville, 2004), DCB
+  # (Washington DC, 2016), ATL (Atlanta, 2017), DCA (Washington DC, 1968), DTA
+  # (Detroit, 1966), LES (Lower East Side, 2008) or VLD (Valdosta, 2017) - or
+  # empty for all eight.
+  split: ""
+
+paths:
+  # Runs go beside the corpus, never among the Supreme Court runs.
+  runs_dir: "{asr_corpora}/coraal/runs"
+
+scoring:
+  # Interviews have long listening stretches for the interviewer and pause rows
+  # left out of the reference, so they run slower than argument. Wide on purpose,
+  # as for EdAcc, until the real spread has been measured.
+  words_per_minute_min: 60
+  words_per_minute_max: 260

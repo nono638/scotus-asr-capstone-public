@@ -1,0 +1,141 @@
+rules_version = '2';
+
+// Firestore rules for the public site's accounts and ratings (hosting/SETUP.md).
+// Paste the whole file into the Firebase console: Firestore Database > Rules > Publish.
+//
+// NOT YET TESTED AGAINST A REAL FIRESTORE. They were written and read against the
+// data model below, and the pages' test mode copies the same checks, but nothing
+// here has been run by Firebase itself. SETUP.md step 9 has a short list of things
+// to try once the project exists.
+//
+// The data model (no email address is ever stored here; only Firebase
+// Authentication holds it):
+//
+//   config/public          {open_to_public: bool}            anyone may read
+//   config/access          {admins: [uid], allowlist: [uid]}  only admins may read
+//   users/{uid}            {displayName, background?, updated}
+//   ratings/{uid}__{case}  one person's answer about one case (validRating below)
+//   stats/counts           {n: {case: number of ratings}, last: case}
+//
+// The two config documents are made by hand in the console, which ignores these
+// rules; no page can write them.
+//
+// The gate: ratings can only be saved by uids in config/access.allowlist until
+// config/public.open_to_public is true. Flip it only after CUNY's HRPP has said yes
+// (going-public.md, section 3).
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    function signedIn() { return request.auth != null; }
+    function me() { return request.auth.uid; }
+    function verified() { return request.auth.token.email_verified == true; }
+    function access() { return get(/databases/$(database)/documents/config/access).data; }
+    function isAdmin() { return signedIn() && me() in access().admins; }
+    function isOpen() {
+      return get(/databases/$(database)/documents/config/public).data.open_to_public == true;
+    }
+    // Who may save a rating: signed in, email checked, and either the gate is open
+    // or they are on the allowlist.
+    function mayRate() { return signedIn() && verified() && (isOpen() || me() in access().allowlist); }
+
+    // ---- config: read-only from the pages -------------------------------------
+    match /config/public {
+      allow read: if true;
+      allow write: if false;
+    }
+    match /config/access {
+      allow read: if isAdmin();
+      allow write: if false;
+    }
+
+    // ---- profiles: each person sees and changes only their own -----------------
+    function validProfile(d) {
+      return d.keys().hasOnly(['displayName', 'background', 'updated'])
+        && d.keys().hasAll(['displayName', 'updated'])
+        && d.displayName is string && d.displayName.size() >= 1 && d.displayName.size() <= 40
+        && (!('background' in d) || d.background in ['court_reporter', 'transcriber', 'linguist', 'other'])
+        && d.updated == request.time;
+    }
+    match /users/{uid} {
+      allow read: if signedIn() && me() == uid;
+      allow create, update: if signedIn() && me() == uid && validProfile(request.resource.data);
+      allow delete: if signedIn() && me() == uid;
+    }
+
+    // ---- ratings ---------------------------------------------------------------
+    // Every field is required and checked; nothing else may be added.
+    function validLicence(d) {
+      return (d.corpus == 'scotus' && d.licence == 'CC BY 4.0')
+        || (d.corpus == 'edacc' && d.licence == 'CC BY-SA 4.0')
+        || (d.corpus == 'coraal' && d.licence == 'CC BY-NC-SA 4.0');
+    }
+    function validRating(d) {
+      return d.keys().hasOnly(['uid', 'case', 'corpus', 'licence', 'guidelines', 'came_from', 'features',
+                               'who_right', 'record_right', 'corrected', 'feedback', 'played', 'created', 'updated'])
+        && d.keys().hasAll(['uid', 'case', 'corpus', 'licence', 'guidelines', 'came_from', 'features',
+                            'who_right', 'record_right', 'corrected', 'feedback', 'played', 'created', 'updated'])
+        && d.uid == me()
+        && d.case is string && d.case.matches('[a-z][0-9]{5,6}')
+        && validLicence(d)
+        && d.guidelines == '0.2'
+        && d.came_from in ['queue', 'card', 'data', 'mine', 'link']
+        && d.features is list && d.features.size() <= 10
+        && d.features.hasOnly(['overlap', 'stumble', 'name', 'number', 'written', 'soundalike', 'small', 'oneside', 'none', 'cant_tell'])
+        && d.who_right in ['record', 'engine', 'both', 'neither', 'cant_tell']
+        && d.record_right in ['yes', 'no', 'unsure']
+        && d.corrected is string && d.corrected.size() <= 2000
+        && d.feedback is string && d.feedback.size() <= 2000
+        && d.played is list && d.played.size() <= 3 && d.played.hasOnly(['short', 'long', 'word'])
+        && d.created is timestamp
+        && d.updated == request.time;
+    }
+    match /ratings/{rid} {
+      // The document's name starts with its owner's uid, so a person can ask for
+      // their own rating of a case before it exists.
+      allow get: if signedIn() && (rid.split('__')[0] == me() || isAdmin());
+      // Lists must ask for where('uid', '==', <own uid>); the admin may list them all.
+      allow list: if signedIn() && (resource.data.uid == me() || isAdmin());
+      allow create: if mayRate()
+        && rid == me() + '__' + request.resource.data.case
+        && validRating(request.resource.data)
+        && request.resource.data.created == request.time;
+      allow update: if mayRate()
+        && resource.data.uid == me()
+        && validRating(request.resource.data)
+        && request.resource.data.case == resource.data.case
+        && request.resource.data.created == resource.data.created;
+      // Anyone may delete their own ratings, gate or no gate.
+      allow delete: if signedIn() && resource.data.uid == me();
+    }
+
+    // ---- how many people rated each case, for "fewest ratings first" -----------
+    // One number goes up by one when a person's first rating of that case is
+    // written in the same batch, or down by one when they delete it. `last` names
+    // the case being changed.
+    function ratingOf(c) { return /databases/$(database)/documents/ratings/$(me() + '__' + c); }
+    function oldCount(c) {
+      return resource == null ? 0 : (c in resource.data.n ? resource.data.n[c] : 0);
+    }
+    function countsWrite() {
+      let d = request.resource.data;
+      let c = d.last;
+      let changed = resource == null ? d.n.keys().toSet() : d.n.diff(resource.data.n).affectedKeys();
+      return d.keys().hasOnly(['n', 'last'])
+        && c is string && d.n is map
+        && changed == [c].toSet()
+        && ((d.n[c] == oldCount(c) + 1 && !exists(ratingOf(c)) && existsAfter(ratingOf(c)))
+            || (d.n[c] == oldCount(c) - 1 && exists(ratingOf(c)) && !existsAfter(ratingOf(c))));
+    }
+    match /stats/counts {
+      allow read: if signedIn();
+      allow create, update: if signedIn() && countsWrite();
+      allow delete: if false;
+    }
+
+    // Everything else is closed.
+    match /{path=**} {
+      allow read, write: if false;
+    }
+  }
+}

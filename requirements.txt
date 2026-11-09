@@ -1,0 +1,79 @@
+# Shared dependencies for the Fall 2026 coursework and the ASR capstone.
+#
+# PyTorch is deliberately NOT listed here. The personal laptop needs the CUDA build
+# and the work laptop needs the processor-only build, and they come from different
+# package indexes, so no single pinned line works on both. setup.ps1 detects which
+# machine it is on and installs the right one before reading this file.
+#
+# Install with setup.ps1, not by hand. See README-setup.md.
+
+# --- numbers and plotting ---
+numpy
+pandas
+matplotlib
+
+# --- audio loading and features ---
+soundfile
+librosa
+
+# --- speech models ---
+transformers
+accelerate           # needed for device_map= when loading the larger models
+huggingface-hub
+faster-whisper        # Whisper via CTranslate2; much faster than the reference code
+mistral-common        # Voxtral's tokenizer and its transcription request builder.
+                      # transformers loads the Voxtral weights on its own, but
+                      # apply_transcription_request raises ImportError without
+                      # this, so the model is unusable rather than merely slower.
+
+# --- scoring transcripts against a reference ---
+jiwer                 # word error rate and the alignment behind it
+
+# --- reading the transcript PDFs ---
+pymupdf               # text and page images out of PDFs
+pillow
+
+# --- downloading the corpus ---
+beautifulsoup4        # reads the Court's argument listing pages (corpus/listing.py)
+
+# --- notebooks, since assignments are delivered as executed notebooks ---
+jupyter
+nbconvert
+ipykernel
+
+# --- alignment and scoring extras ---
+whisper-normalizer     # the text normalizer from the Whisper paper, so numbers
+                       # stay comparable to published benchmark scores
+
+# --- statistics ---
+statsmodels            # the logistic regression of which words go wrong
+                       # (tools/error_model.py), with clustered standard errors
+
+# --- OCR ---
+# Nothing to install. The layout engine reads the boxes out of the PDF's own text
+# layer, which needs only PyMuPDF, and the text engine is a language model.
+#
+# `surya-ocr` used to be listed here and was never actually used - the pipeline
+# chose the embedded layer instead, for the reason written up in
+# `ocr/embedded_engine.py`: Surya pulls `torch` from ordinary PyPI, which would
+# silently replace this machine's CUDA build with a processor-only one and take
+# the card away from the speech models with no error anywhere.
+#
+# It also broke `setup.ps1` outright. Surya pins an old Pillow that has no wheel
+# for Python 3.14, so every rebuild tried to compile it from source and failed -
+# which meant the documented way to set up the other laptop did not work.
+
+# --- odds and ends ---
+pyyaml
+
+# --- tests ---
+pytest
+# Drives the Edge browser already on the laptop to check the website and the
+# listening bench: clips play at each length, the highlighted word follows the
+# audio, the charts' switches work (tools/check_page.py). Launched with
+# channel="msedge", so it downloads no browser of its own.
+playwright
+
+# --- papers ---
+markdown               # turns the midterm draft into a web page that Edge prints as a
+                       # PDF (asr-capstone/midterm/make_pdf.py)

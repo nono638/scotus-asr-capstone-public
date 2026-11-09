@@ -1,0 +1,40 @@
+{
+ "case": "s32",
+ "own": {
+  "meaning": "reworded",
+  "severity": 1,
+  "noticeable": "no",
+  "follow_up": "meaning kept",
+  "stakes": "maybe",
+  "reason": "The speaker said \"what they not doing\" with no \"are\"; the engine wrote \"what they're not doing\", which means the same but replaces the speaker's grammar with standard English.",
+  "rule_right": "yes",
+  "rule_reason": "Reference \"they not\", engine \"they're not\": an \"are\" was added; Qwen3 wrote \"they not\" and Whisper \"they not not\", so both did keep the dropped \"are\".",
+  "more_plausible": "reference",
+  "plausible_how_clear": "Fairly clear: the speaker leaves out \"is\" elsewhere in the same minute (\"she doing it cause she got to\"), and Qwen3 and Whisper both heard \"they not\".",
+  "my_misses": [
+   {"reference": "this woman done did for me", "engine": "this woman didn't do it for me", "severity": 4},
+   {"reference": "I just grow to appreciate it", "engine": "I just wrote to appreciate it", "severity": 1},
+   {"reference": "nah slim", "engine": "nah, stuff", "severity": 1},
+   {"reference": "they not doing for you", "engine": "they're not doing for you", "severity": 1}
+  ]
+ },
+ "review": {
+  "labelled/line": {"verdict": "disagree", "why": "\"what they not doing\" and \"what they're not doing\" mean the same, so \"changed\", \"meaning changed\" and severity 2 are wrong, and nobody reading \"they're not doing\" would notice anything."},
+  "labelled/minute": {"verdict": "disagree", "why": "The same mistakes as the line view: the stakes_how even says the edit only standardises the grammar, which is \"meaning kept\", not \"meaning changed\"."},
+  "labelled/whole": {"verdict": "agree", "why": "same / 0 / not noticeable / meaning kept is a fair reading; stakes could be \"maybe\" for a dialect researcher, but nothing else is wrong."},
+  "rule/minute": {"verdict": "agree", "why": "Copied both sides exactly and rightly confirmed an added \"are\"."},
+  "blind/order1": {"verdict": "agree", "why": "Picked A, the reference; the clue it cites (\"don't nobody gotta do shit\") is double negation, not a dropped \"are\", but the speaker's dialect is a fair general clue."},
+  "blind/order2": {"verdict": "agree", "why": "Picked B, the reference again, with a sound reason; consistent across both orders."},
+  "rank/minute": {"verdict": "partly", "why": "Whisper's \"they not not going\" rightly comes last, but Qwen3's \"they not\" and Parakeet's \"they're not\" mean exactly the same, and the request was to rank on meaning, so they should share first place."}
+  ,"misses": [
+   {"reference": "this woman done did for me", "engine": "this woman didn't do it for me", "is_real": "yes", "matters": "yes", "severity_fair": "yes", "note": "Checked: the engine text really says \"this woman didn't do it for me\". The speaker is praising his mother (\"she did so much shit for me\"), and the engine says she did not; the best catch in this case."},
+   {"reference": "I just grow to appreciate it", "engine": "I just wrote to appreciate it", "is_real": "yes", "matters": "no", "severity_fair": "too high", "note": "A misheard word that makes nonsense; a reader guesses \"grew\". 1, not 3."},
+   {"reference": "nah slim", "engine": "nah, stuff", "is_real": "yes", "matters": "no", "severity_fair": "too high", "note": "\"slim\" is a DC word for a friend, addressed to the interviewer; losing it changes no meaning. 1, not 3."},
+   {"reference": "what they not doing", "engine": "what they're not doing", "is_real": "yes", "matters": "no", "severity_fair": "yes", "note": "The flagged spot; same meaning. Note that here Gemma rates it 0, while its line and minute answers rated it 2 and \"changed\"."},
+   {"reference": "in a s in a different kind of way", "engine": "in a sp in a different way", "is_real": "yes", "matters": "no", "severity_fair": "too high", "note": "A false start and \"kind of\" dropped; nothing changes. 0, should not be listed."}
+  ],
+  "overlooked": []
+ },
+ "worth_a_listen": {"yes": true, "why": "The flagged spot is minor, but the same minute has Parakeet turning \"this woman done did for me\" into \"this woman didn't do it for me\", a reversal worth confirming by ear and a strong example for the report."},
+ "summary": "Gemma's misses list found the real reversal in this minute (\"done did\" written as \"didn't do it\") and its rule and blind answers were right, but in the line and minute views it again called a meaning-neutral grammar edit \"changed\" and \"noticeable\", and rated several harmless slips at 3."
+}

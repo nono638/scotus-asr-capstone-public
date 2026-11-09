@@ -1,0 +1,32 @@
+{
+ "case": "s40",
+ "own": {
+  "meaning": "opposite",
+  "severity": 3,
+  "noticeable": "yes",
+  "follow_up": "negation added",
+  "stakes": "maybe",
+  "reason": "Control: the engine text says hospitals \"can't check a box\" where the lawyer said they can, which reverses one of the two survey options; the clause is plainly wrong next to \"two options\" and \"55 percent checked the box\", so a reader can repair it.",
+  "rule_right": "yes",
+  "rule_reason": "The texts match the evidence: reference \"can\", engine \"can't\", a negative on one side only.",
+  "more_plausible": "reference",
+  "plausible_how_clear": "Very clear: \"they gave them two options ... you can either ... or you can\" and \"55 percent checked the box\" only work with \"can\".",
+  "my_misses": [
+   {"reference": "or you can check a box", "engine": "or you can't check a box", "severity": 3}
+  ]
+ },
+ "review": {
+  "labelled/line": {"verdict": "agree", "why": "opposite / negation added / stakes yes are correct; severity 4 is one above my 3 (the next sentences repair it) but fair for a reversed clause."},
+  "labelled/minute": {"verdict": "agree", "why": "Correct and the reason is accurate."},
+  "labelled/whole": {"verdict": "agree", "why": "Correct."},
+  "rule/minute": {"verdict": "agree", "why": "Copied \"can\" and \"can't\" correctly and confirmed the added negative."},
+  "blind/order1": {"verdict": "agree", "why": "Picked A, the reference, citing \"two options\" and \"55 percent checked the box\": the right clues."},
+  "blind/order2": {"verdict": "agree", "why": "Picked B, the reference again, for the same reason; consistent across both orders."}
+  ,"misses": [
+   {"reference": "or you can check a box", "engine": "or you can't check a box", "is_real": "yes", "matters": "yes", "severity_fair": "yes", "note": "The planted negative; 4 is fair (I gave 3 because the next sentence shows the box was checked)."}
+  ],
+  "overlooked": []
+ },
+ "worth_a_listen": {"yes": false, "why": "Control case; the \"can't\" was put in by hand."},
+ "summary": "Gemma passed this control in every request, including both blind orders."
+}

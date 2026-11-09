@@ -1,0 +1,110 @@
+{
+ "case": "s22",
+ "own": {
+  "meaning": "garbled",
+  "severity": 2,
+  "noticeable": "yes",
+  "follow_up": "garble",
+  "stakes": "no",
+  "reason": "The speaker saw fields with sheep and one house, but the engine wrote 'just cheap and a single house', which makes no sense and loses the sheep.",
+  "rule_right": "yes",
+  "rule_reason": "'sheep' and 'cheap' are different words and the engine's word breaks the sentence; the count fits the rank list, where three of the four other engines wrote 'sheep'.",
+  "more_plausible": "reference",
+  "plausible_how_clear": "Very clear: 'just sheep and a single house' describes Scottish countryside; 'just cheap and a single house' is not a sensible phrase.",
+  "my_misses": [
+   {
+    "reference": "SHEEP",
+    "engine": "cheap",
+    "severity": 2,
+    "note": "Sheep lost; the phrase stops making sense."
+   },
+   {
+    "reference": "FOR CHOICE IT'S LIKE YOU'RE IN THE COUNTRYSIDE AND STUFF",
+    "engine": "That's kind for choice. That's very cute in the countryside and stuff",
+    "severity": 2,
+    "note": "Garbled: 'that's kind' and 'very cute' are invented; the point that the UK has choice in shops and countryside comes out muddled."
+   },
+   {
+    "reference": "STOCK COUNTRYSIDE",
+    "engine": "stark countryside",
+    "severity": 0,
+    "note": "The reference's 'stock' is probably the error; 'stark countryside' makes sense and three of five engines wrote it."
+   },
+   {
+    "reference": "YEAH BUT YEAH BUT THE DAY",
+    "engine": "Yeah, yeah, yeah. The day",
+    "severity": 1,
+    "note": "The 'but' that sets up the contrast is gone."
+   }
+  ]
+ },
+ "review": {
+  "labelled/line": {
+   "verdict": "partly",
+   "why": "Severity 2 is fair, but 'cheap' makes the sentence nonsense rather than a real change of meaning ('garble'), 'homophone' is wrong (sheep and cheap only sound alike), and stakes 'yes' is too strong for a casual chat."
+  },
+  "labelled/minute": {
+   "verdict": "partly",
+   "why": "Severity, noticeable and stakes are right; reading 'cheap' as a change 'from animals to cost' gives the garble more sense than it has."
+  },
+  "labelled/whole": {
+   "verdict": "partly",
+   "why": "Same as the minute: right size, but labelled a change of meaning rather than a garble."
+  },
+  "rule/minute": {
+   "verdict": "agree",
+   "why": "A real different word, and the count of other engines fits the rank list."
+  },
+  "blind/order1": {
+   "verdict": "agree",
+   "why": "Picked 'sheep' for a clear reason about a countryside view."
+  },
+  "blind/order2": {
+   "verdict": "agree",
+   "why": "Picked 'sheep' again in the swapped order; consistent and well argued."
+  },
+  "rank/minute": {
+   "verdict": "partly",
+   "why": "Last place for the two 'cheap' engines is right, but Engines 2 and 4 were marked down for 'stark' instead of 'stock', which is outside the spot (and 'stark' is probably what was said); the three 'sheep' engines should tie at 1."
+  },
+  "misses": [
+   {
+    "reference": "FOR CHOICE IT'S LIKE YOU'RE IN THE COUNTRYSIDE",
+    "engine": "That's kind for choice. That's very cute in the countryside",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "too high",
+    "note": "A real garble, but it muddles a passing remark rather than stating a wrong fact; 2, not 3."
+   },
+   {
+    "reference": "STOCK COUNTRYSIDE JUST SHEEP",
+    "engine": "stark countryside, just cheap",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "too high",
+    "note": "Sheep to cheap is a garbled detail (2), not a wrong fact (3); it also folds in 'stock/stark', where the reference is probably wrong."
+   },
+   {
+    "reference": "DO YOU REMEMBER I TOLD YOU",
+    "engine": "remember, I told you",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "Dropping 'do you' from a question changes nothing; 0."
+   }
+  ],
+  "overlooked": [
+   {
+    "reference": "YEAH BUT YEAH BUT THE DAY",
+    "engine": "Yeah, yeah, yeah. The day",
+    "severity": 1,
+    "note": "Minor: the 'but' that sets up the contrast is lost."
+   }
+  ]
+ },
+ "worth_a_listen": {
+  "yes": false,
+  "why": "The text makes it plain the speaker said 'sheep'."
+ },
+ "summary": "Gemma got the size of the error and both blind picks right, but called a plain garble a change of meaning, misused 'homophone', marked engines down for 'stark' outside the spot, and scored its misses a step too high."
+}

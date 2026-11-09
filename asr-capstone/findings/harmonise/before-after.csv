@@ -1,0 +1,8 @@
+model,leaderboard,standard_before,standard_after,standard_change,lowercase_nopunct_before,lowercase_nopunct_after,lowercase_nopunct_change,verbatim_before,verbatim_after,verbatim_change
+Whisper,6.098,6.111,5.713,-0.398,6.234,5.865,-0.369,14.167,14.005,-0.162
+Qwen3,4.46,4.685,4.235,-0.45,5.042,4.721,-0.321,15.312,14.975,-0.337
+Voxtral,6.24,6.353,5.91,-0.443,6.39,5.982,-0.408,14.348,14.178,-0.17
+Canary,7.129,7.191,6.683,-0.508,7.423,6.979,-0.444,16.473,16.124,-0.349
+Parakeet,6.208,6.222,5.771,-0.451,8.689,8.266,-0.423,17.451,17.176,-0.275
+Granite,8.226,8.298,7.763,-0.535,8.408,7.912,-0.496,17.357,17.14,-0.217
+Granite Plus,6.654,6.88,6.272,-0.608,8.061,7.627,-0.434,29.379,28.915,-0.464

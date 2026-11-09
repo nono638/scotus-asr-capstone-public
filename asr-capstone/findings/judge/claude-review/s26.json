@@ -1,0 +1,107 @@
+{
+ "case": "s26",
+ "own": {
+  "meaning": "changed",
+  "severity": 3,
+  "noticeable": "maybe",
+  "follow_up": "changes meaning",
+  "stakes": "yes",
+  "reason": "The speaker said she 'got down' and walked home, but the engine has her swearing 'Goddamn them', putting a curse and anger at the rioters into her mouth.",
+  "rule_right": "yes",
+  "rule_reason": "'Got down' and 'Goddamn them' are different words with very different meanings.",
+  "more_plausible": "reference",
+  "plausible_how_clear": "Fairly clear: 'we made it home. Got down, came all the way down Eleventh Street' is a plain route description; after 'Goddamn them' the next words 'came all the way down' have no subject, which hints the engine is wrong.",
+  "my_misses": [
+   {
+    "reference": "Got down",
+    "engine": "Goddamn them",
+    "severity": 3,
+    "note": "Invented curse aimed at 'them'."
+   },
+   {
+    "reference": "people talked about you know, Doctor King",
+    "engine": "people talked about you know the King",
+    "severity": 2,
+    "note": "Martin Luther King becomes an unclear 'the King'."
+   }
+  ]
+ },
+ "review": {
+  "labelled/line": {
+   "verdict": "agree",
+   "why": "Changed, severity 3, stakes yes: an invented curse aimed at 'them' is a serious misquote."
+  },
+  "labelled/minute": {
+   "verdict": "agree",
+   "why": "Same, and the reason is accurate."
+  },
+  "labelled/whole": {
+   "verdict": "agree",
+   "why": "Same, consistent."
+  },
+  "rule/minute": {
+   "verdict": "agree",
+   "why": "A real different content word."
+  },
+  "blind/order1": {
+   "verdict": "disagree",
+   "why": "Picked 'goddamn them' (the engine) at 'sure 3', saying 'got down' 'makes little sense', though 'got down, came all the way down Eleventh Street' is a plain route description."
+  },
+  "blind/order2": {
+   "verdict": "agree",
+   "why": "Picked 'got down' with a good reason (the curse is a non-sequitur there), but chose slot A both times at 'sure 3', so its two answers contradict each other."
+  },
+  "rank/minute": {
+   "verdict": "agree",
+   "why": "The two 'got down' engines tie at 1 and the 'Goddamn them' engine is last."
+  },
+  "misses": [
+   {
+    "reference": "I had never seen",
+    "engine": "something I had never seen",
+    "is_real": "partly",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "This is the engine's window starting one word earlier; the instructions say to ignore the edges."
+   },
+   {
+    "reference": "Doctor King",
+    "engine": "the King",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "yes",
+    "note": "A good catch: Martin Luther King becomes an unclear 'the King'."
+   },
+   {
+    "reference": "I started to see",
+    "engine": "I start to see",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "yes",
+    "note": "A slip; 1 is fine."
+   },
+   {
+    "reference": "their own s neighborhoods",
+    "engine": "their own neighborhoods",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "yes",
+    "note": "A fragment removed; 0 is right."
+   },
+   {
+    "reference": "Got down",
+    "engine": "Goddamn them",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "too high",
+    "note": "She still made it home, so the point is not lost; 3, as Gemma itself said in all three labelled answers."
+   }
+  ],
+  "overlooked": []
+ },
+ "worth_a_listen": {
+  "yes": true,
+  "why": "A clear showcase of an invented word: the engine puts a curse in a woman's mouth while she recalls the 1968 riots. Worth confirming 'got down' by ear before using it."
+ },
+ "summary": "Gemma judged this one well in the labelled, rule, rank and misses answers; it went wrong only in the blind test, where it picked whichever version came first and argued for the curse at full confidence."
+}

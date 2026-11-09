@@ -1,0 +1,169 @@
+{
+ "case": "s29",
+ "X": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 4,
+    "follow_up": "negation added",
+    "reason": "The engine replaces the noun 'dividend' with the contraction 'didn't', which changes the grammatical structure and the meaning of the sentence."
+   },
+   "minute": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation added",
+    "reason": "The engine incorrectly transcribed 'dividend' as 'didn't', which changes the context of the shareholder reward from a payment to a negation."
+   },
+   "whole": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation added",
+    "reason": "The engine misheard the word 'dividend' as 'didn't', which changes the meaning of the sentence from describing a payout to describing a failure to pay."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The engine's text suggests a failure to pay dividends ('didn't payout'), which is a significant negative signal for investors compared to the actual 'dividend payout' mentioned in the reference."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The evidence correctly identifies that the engine used a negative word ('didn't') while the reference used a positive word ('dividend')."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "Version A uses 'dividend', which makes perfect sense in the context of rewarding shareholders, whereas Version B uses 'didn't', which is grammatically incorrect and nonsensical in that sentence."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "In the context of an earnings call discussing rewarding shareholders, 'dividend payout' makes perfect sense, whereas 'didn't payout' is grammatically awkward and contradicts the statement about rewarding shareholders."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Parakeet": 2,
+    "Whisper": 3,
+    "Qwen3": 1
+   },
+   "reason": "Engine 3 is the only engine that correctly identifies the word 'dividend' as used in the reference."
+  },
+  "misses": [
+   {
+    "reference": "high brent",
+    "engine": "high brand",
+    "severity": 2,
+    "what": "high brent"
+   },
+   {
+    "reference": "Hindustan Zinc",
+    "engine": "InSan Zinc",
+    "severity": 2,
+    "what": "Hindustan Zinc"
+   },
+   {
+    "reference": "dividend payout",
+    "engine": "didn't payout",
+    "severity": 3,
+    "what": "dividend payout"
+   },
+   {
+    "reference": "up 42% or YOY",
+    "engine": "up 42% YYY",
+    "severity": 2,
+    "what": "up 42% or YOY"
+   },
+   {
+    "reference": "at FACOR",
+    "engine": "at FECOS",
+    "severity": 2,
+    "what": "at FACOR"
+   }
+  ]
+ },
+ "Y": {
+  "meaning": {
+   "line": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation added",
+    "reason": "The speech recognition engine misheard the word 'dividend' as the contraction 'didn't', which introduces an incorrect negation."
+   },
+   "minute": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation added",
+    "reason": "The speech recognition engine misheard the word 'dividend' as the negative contraction 'didn't'."
+   },
+   "whole": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation added",
+    "reason": "The speech recognition engine misheard the word 'dividend' as the negation 'didn't'."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The error changes a positive statement about rewarding shareholders with a dividend into a statement that they didn't receive a payout, which is a critical piece of financial information."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The checker correctly identified that the engine replaced the word 'dividend' with the negative word 'didn't'."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "The context of rewarding shareholders with a 'dividend payout' is standard financial terminology, whereas 'didn't payout' is grammatically incorrect and contradicts the subsequent mention of a record EBITDA and positive financial performance."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "In the context of rewarding shareholders and discussing financial performance, 'dividend payout' is a standard financial term, whereas 'didn't payout' is grammatically and contextually nonsensical."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Parakeet": 2,
+    "Whisper": 3,
+    "Qwen3": 1
+   },
+   "reason": "Engine 3 perfectly preserves the original meaning, while Engine 1 introduces a nonsensical word and Engine 2 introduces a word that contradicts the context of rewarding shareholders."
+  },
+  "misses": [
+   {
+    "reference": "brent",
+    "engine": "brand",
+    "severity": 3,
+    "what": "wrong commodity name"
+   },
+   {
+    "reference": "Operationally, Hindustan Zinc",
+    "engine": "Occasionally, InSan Zinc",
+    "severity": 4,
+    "what": "changed operational context and company name"
+   },
+   {
+    "reference": "FACOR",
+    "engine": "FECOS",
+    "severity": 3,
+    "what": "wrong company/subsidiary name"
+   },
+   {
+    "reference": "dividend payout",
+    "engine": "didn't payout",
+    "severity": 4,
+    "what": "reverses meaning regarding dividends"
+   },
+   {
+    "reference": "or YOY",
+    "engine": "YYY",
+    "severity": 2,
+    "what": "incorrect acronym for year-over-year"
+   }
+  ]
+ }
+}

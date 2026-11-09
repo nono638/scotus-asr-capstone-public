@@ -1,0 +1,9 @@
+docket,engine,model,audio_minutes,reference_words,hypothesis_words,words_per_minute,speaking_rate_ok,runtime_seconds,speed_x_realtime,omission_basis,omitted_spans,omitted_words,seconds_lost,longest_span_words,longest_span_seconds,spans_with_odd_timing,wer_standard,wer_lowercase_nopunct,wer_verbatim,warnings
+25-466,whisper-large-v3,large-v3,70.93,13268,12374,187.1,True,209.3,20.34,lowercase_nopunct,0,0,0.0,0,0.0,0,7.392,7.22,15.029,
+25-406,whisper-large-v3,large-v3,84.53,16074,15442,190.2,True,276.0,18.37,lowercase_nopunct,0,0,0.0,0,0.0,0,4.926,4.837,13.587,
+25-429,whisper-large-v3,large-v3,89.55,16158,15195,180.4,True,276.9,19.4,lowercase_nopunct,0,0,0.0,0,0.0,0,5.283,5.457,14.154,
+25-112,whisper-large-v3,large-v3,120.45,23154,21684,192.2,True,398.2,18.15,lowercase_nopunct,0,0,0.0,0,0.0,0,5.922,6.195,14.943,
+24-1068,whisper-large-v3,large-v3,74.25,13319,12914,179.4,True,236.6,18.83,lowercase_nopunct,0,0,0.0,0,0.0,0,4.593,4.537,11.893,
+24-856,whisper-large-v3,large-v3,117.27,20086,18808,171.3,True,346.0,20.33,lowercase_nopunct,1,26,0.0,26,0.0,1,6.392,6.452,16.877,
+25-1083,whisper-large-v3,large-v3,106.41,18972,17646,178.3,True,3206.8,1.99,lowercase_nopunct,0,0,0.0,0,0.0,0,6.924,6.947,17.51,
+24-889,whisper-large-v3,large-v3,60.34,10230,9546,169.5,True,2250.1,1.61,lowercase_nopunct,0,0,0.0,0,0.0,0,7.543,7.569,16.862,

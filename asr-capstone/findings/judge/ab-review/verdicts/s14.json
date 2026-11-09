@@ -1,0 +1,15 @@
+{"case": "s14",
+ "parts": {
+  "meaning/line": {"X": "right", "Y": "right", "better": "tie", "why": "Both: changed, 2, meaning changed. 'He work' (present, answering 'what does your dad do') becomes past 'he worked', which suggests he no longer works there."},
+  "meaning/minute": {"X": "right", "Y": "right", "better": "tie", "why": "Same answer in both, and it fits."},
+  "meaning/whole": {"X": "partly", "Y": "right", "better": "Y", "why": "X drops to severity 1, a slip a reader would read past. But the past tense changes a fact about the father's job, so 2 fits better. Y keeps 2."},
+  "noticeable": {"X": "partly", "Y": "partly", "better": "tie", "why": "'What does your dad do?' answered with 'he worked for Home Depot' is a little off but readable. 'Maybe' fits best; X says yes, Y says no, each one step away."},
+  "stakes": {"X": "partly", "Y": "right", "better": "Y", "why": "Both say yes. X's reason calls the feature 'zero copula', which it is not: there is no missing 'is', only a verb without -s. Y describes it correctly."},
+  "rule": {"X": "partly", "Y": "right", "better": "Y", "why": "Both confirm the rule, which is right. X again brings in 'zero copula', which misdescribes the reference. Y's reason is accurate."},
+  "blind": {"X": "right", "Y": "right", "better": "tie", "why": "Both pick the reference in both orders. Y's reasons use the context better (the question is about the dad's job now), but both get it right."},
+  "rank": {"X": "right", "Y": "right", "better": "tie", "why": "Both put Whisper ('he works', present tense kept) first and tie the two 'worked' engines. Correct."},
+  "misses": {"X": {"real_and_matter": 1, "trivial": 5, "not_real": 0, "important_missed": 0},
+             "Y": {"real_and_matter": 1, "trivial": 2, "not_real": 1, "important_missed": 0},
+             "better": "X", "why": "Both find the case (he work to he worked), the only change that matters. The rest are spelling-level standardisations (they/their, I'm'a, wanna). X rates the 'once they go there' reshuffle severity 3, which is too high. Y says 'once they go there' was left out, but the engine still has it a few words later."}
+ },
+ "overall": {"better": "Y", "why": "A close case. Y describes the grammar correctly throughout and keeps a fitting severity for the whole. X twice calls it 'zero copula' and underrates the whole. X's misses list is cleaner but adds nothing that matters."}}

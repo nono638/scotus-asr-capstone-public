@@ -1,0 +1,13 @@
+{"case": "s27",
+ "parts": {
+  "meaning/line": {"X": "right", "Y": "right", "better": "tie", "why": "Both: changed, severity 3, different quantity."},
+  "meaning/minute": {"X": "right", "Y": "right", "better": "tie", "why": "Same answer from both. Y's 'added a zero' is loose wording but true to the figure."},
+  "meaning/whole": {"X": "right", "Y": "right", "better": "tie", "why": "Same answer from both."},
+  "noticeable": {"X": "wrong", "Y": "right", "better": "Y", "why": "The engine's text says 'span of six hours' a moment earlier and then 'nine to five sixty hours', which jars; a careful reader would likely notice. X says no."},
+  "stakes": {"X": "right", "Y": "right", "better": "tie", "why": "Both say yes: six vs sixty hours is the core of the anecdote."},
+  "rule": {"X": "right", "Y": "right", "better": "tie", "why": "All 4 other engines wrote six; the evidence holds."},
+  "blind": {"X": "wrong", "Y": "partly", "better": "Y", "why": "X picks 'sixty' in both orders, ignoring the 'span of six hours' just before. Y flips but at least picks 'six' once."},
+  "rank": {"X": "right", "Y": "partly", "better": "X", "why": "At the spot all four other engines wrote six. X ranks them equal and Parakeet last. Y spreads them out over words outside the spot ('old brain', 9-5)."},
+  "misses": {"X": {"real_and_matter": 2, "trivial": 3, "not_real": 0, "important_missed": 1}, "Y": {"real_and_matter": 2, "trivial": 5, "not_real": 0, "important_missed": 1}, "better": "X", "why": "Both find gig->week and gig->gift, and both miss the case itself (six->sixty). Y adds more trivia (month/months, he/you, the edge words 'a boy') at inflated severity 3."}
+ },
+ "overall": {"better": "tie", "why": "Y is better on noticeable and the blind test (X is wrong in both orders there); X is better on rank and misses."}}

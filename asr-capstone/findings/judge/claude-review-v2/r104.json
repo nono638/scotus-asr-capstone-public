@@ -1,0 +1,1 @@
+{"case": "r104", "own": {"reason": "The speaker repeats a word in \"online, online commerce\"; the engine puts the repeat on the other word, \"online commerce. commerce.\" Both say online commerce.", "meaning": "same", "severity": 0, "follow_up": "same thing", "reference_doubt": "no"}}

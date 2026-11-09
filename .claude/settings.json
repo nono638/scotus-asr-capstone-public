@@ -1,0 +1,6 @@
+{
+  "outputStyle": "Plain English",
+  "modelSettings": {
+    "claude-fable-5-1": { "effortLevel": "high" }
+  }
+}

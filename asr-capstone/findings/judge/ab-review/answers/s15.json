@@ -1,0 +1,145 @@
+{
+ "case": "s15",
+ "X": {
+  "meaning": {
+   "line": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "only the stumble lost",
+    "reason": "The engine omitted the speaker's repetition/restart of the word 'we'."
+   },
+   "minute": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "only the stumble lost",
+    "reason": "The engine omitted the speaker's verbal stumble/repetition."
+   },
+   "whole": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "only the stumble lost",
+    "reason": "The engine omitted the speaker's repetition of the word 'we'."
+   }
+  },
+  "noticeable": "no",
+  "stakes": {
+   "stakes": "no",
+   "reason": "The omission of the repetition does not change the substance of the legal argument being made."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The checker correctly identified that the reference contains a repeated word ('we -- we') that the engine simplified to a single 'we'."
+  },
+  "blind": {
+   "order1 (reference shown as B)": {
+    "picked": "engine",
+    "sure": 3,
+    "reason": "In oral arguments, speakers often repeat words due to hesitation, but 'we ask' is a standard way to begin a sentence, whereas 'we we ask' is a redundant stutter that is less likely to be the intended transcript of a formal legal argument compared to the cleaner version A."
+   },
+   "order2 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 2,
+    "reason": "In oral arguments, speakers often repeat words like 'we' when starting a new thought or correcting themselves, making 'we we' a very common occurrence in transcripts."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Whisper": 2,
+    "Parakeet": 1,
+    "Qwen3": 1
+   },
+   "reason": "Engine 2 and Engine 3 are tied for first because they correctly capture the repetition of 'we' present in the reference, whereas Engine 1 omits the stutter."
+  },
+  "misses": [
+   {
+    "reference": "the -- that the seller",
+    "engine": "the seller Miller",
+    "severity": 3,
+    "what": "The engine hallucinated the name 'Miller' into the subject description."
+   },
+   {
+    "reference": "creating such a thing",
+    "engine": "creating such a board",
+    "severity": 2,
+    "what": "Changed 'thing' to 'board', altering the description of the proposed entity."
+   },
+   {
+    "reference": "if we can view the -",
+    "engine": "if we can view the level...",
+    "severity": 3,
+    "what": "The engine replaced a broken sentence/interruption with a different, nonsensical word 'level'."
+   }
+  ]
+ },
+ "Y": {
+  "meaning": {
+   "line": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "only the stumble lost",
+    "reason": "The engine omits the speaker's repetition/stumble ('-- we')."
+   },
+   "minute": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "only the stumble lost",
+    "reason": "The engine omits the repetition/stumble 'we --' present in the reference."
+   },
+   "whole": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "only the stumble lost",
+    "reason": "The engine missed the speaker's repetition/stumble of the word 'we'."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "no",
+   "reason": "The omission of the repetition 'we -- we' does not change the meaning or the legal substance of the attorney's argument."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The engine omitted the repeated word and the dash present in the reference."
+  },
+  "blind": {
+   "order1 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 2,
+    "reason": "In oral arguments, speakers often repeat words due to hesitation or emphasis. Version B's repetition of 'we we' is a very common feature of spontaneous speech, whereas Version A's single 'we' is grammatically correct but less characteristic of the stuttering/repetition pattern seen throughout the rest of the transcript (e.g., 'is there is there', 'that the that the', 'it would it would')."
+   },
+   "order2 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "In oral arguments, speakers frequently stutter or repeat words (e.g., 'we we'). Version A captures this natural disfluency, whereas Version B provides a cleaned-up version. Given the context of a transcript, the repetition is highly likely to have occurred."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Whisper": 3,
+    "Parakeet": 1,
+    "Qwen3": 1
+   },
+   "reason": "Engine 2 and Engine 3 are the most accurate because they correctly capture the repetition of the word 'we' present in the reference transcript."
+  },
+  "misses": [
+   {
+    "reference": "the seller",
+    "engine": "the seller Miller",
+    "severity": 2,
+    "what": "the addition of 'Miller' to the subject"
+   },
+   {
+    "reference": "such a thing",
+    "engine": "such a board",
+    "severity": 1,
+    "what": "the description of the office"
+   },
+   {
+    "reference": "view the -",
+    "engine": "view the level...",
+    "severity": 2,
+    "what": "the end of the phrase regarding viewing"
+   }
+  ]
+ }
+}

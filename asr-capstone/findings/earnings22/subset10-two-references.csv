@@ -1,0 +1,241 @@
+who,call,reference,rule,errors,sub,del,ins,ref_words
+Whisper,4481952,verbatim,standard,1108,395,483,230,9853
+Whisper,4481952,verbatim,lowercase_nopunct,1409,381,839,189,10090
+Whisper,4481952,verbatim,verbatim,2553,1532,823,198,9998
+Whisper,4481952,clean,standard,910,333,104,473,9231
+Whisper,4481952,clean,lowercase_nopunct,826,285,89,452,9096
+Whisper,4481952,clean,verbatim,1729,1104,88,537,8915
+Whisper,4482383,verbatim,standard,1022,376,465,181,9810
+Whisper,4482383,verbatim,lowercase_nopunct,941,306,527,108,9737
+Whisper,4482383,verbatim,verbatim,2027,1272,519,236,9522
+Whisper,4482383,clean,standard,753,328,74,351,9249
+Whisper,4482383,clean,lowercase_nopunct,573,229,65,279,9105
+Whisper,4482383,clean,verbatim,1431,947,58,426,8882
+Whisper,4479944,verbatim,standard,1415,751,183,481,10896
+Whisper,4479944,verbatim,lowercase_nopunct,1138,534,270,334,11004
+Whisper,4479944,verbatim,verbatim,2558,1803,210,545,10611
+Whisper,4479944,clean,standard,1352,557,124,671,10647
+Whisper,4479944,clean,lowercase_nopunct,1019,389,137,493,10715
+Whisper,4479944,clean,verbatim,2384,1615,90,679,10360
+Whisper,4482613,verbatim,standard,1188,645,292,251,9210
+Whisper,4482613,verbatim,lowercase_nopunct,1248,578,528,142,9487
+Whisper,4482613,verbatim,verbatim,2280,1543,479,258,9274
+Whisper,4482613,clean,standard,1003,586,121,296,8994
+Whisper,4482613,clean,lowercase_nopunct,799,502,112,185,9038
+Whisper,4482613,clean,verbatim,1585,1166,98,321,8823
+Whisper,4453225,verbatim,standard,1607,510,868,229,11339
+Whisper,4453225,verbatim,lowercase_nopunct,1977,527,1281,169,11448
+Whisper,4453225,verbatim,verbatim,3381,1916,1247,218,11316
+Whisper,4453225,clean,standard,772,312,88,372,10416
+Whisper,4453225,clean,lowercase_nopunct,690,291,85,314,10128
+Whisper,4453225,clean,verbatim,1594,1124,80,390,9982
+Whisper,4469088,verbatim,standard,1614,392,1051,171,11508
+Whisper,4469088,verbatim,lowercase_nopunct,2215,448,1650,117,11846
+Whisper,4469088,verbatim,verbatim,3679,1930,1619,130,11763
+Whisper,4469088,clean,standard,758,238,67,453,10242
+Whisper,4469088,clean,lowercase_nopunct,729,225,65,439,9937
+Whisper,4469088,clean,verbatim,1697,1158,60,479,9856
+Whisper,4470684,verbatim,standard,1020,362,433,225,10930
+Whisper,4470684,verbatim,lowercase_nopunct,1425,271,1081,73,11566
+Whisper,4470684,verbatim,verbatim,2710,1477,1056,177,11387
+Whisper,4470684,clean,standard,704,301,114,289,10547
+Whisper,4470684,clean,lowercase_nopunct,454,189,102,163,10504
+Whisper,4470684,clean,verbatim,1522,1099,93,330,10257
+Whisper,4483937,verbatim,standard,706,265,302,139,8729
+Whisper,4483937,verbatim,lowercase_nopunct,1114,272,771,71,9127
+Whisper,4483937,verbatim,verbatim,2367,1490,759,118,9056
+Whisper,4483937,clean,standard,488,201,78,209,8435
+Whisper,4483937,clean,lowercase_nopunct,440,154,77,209,8297
+Whisper,4483937,clean,verbatim,1297,953,68,276,8204
+Whisper,4474506,verbatim,standard,1197,323,623,251,11627
+Whisper,4474506,verbatim,lowercase_nopunct,1432,290,965,177,11751
+Whisper,4474506,verbatim,verbatim,2738,1530,924,284,11538
+Whisper,4474506,clean,standard,1020,250,159,611,10803
+Whisper,4474506,clean,lowercase_nopunct,873,188,153,532,10605
+Whisper,4474506,clean,verbatim,1991,1156,131,704,10319
+Whisper,4485192,verbatim,standard,826,266,423,137,9983
+Whisper,4485192,verbatim,lowercase_nopunct,849,235,512,102,9909
+Whisper,4485192,verbatim,verbatim,1747,1099,514,134,9805
+Whisper,4485192,clean,standard,529,206,38,285,9450
+Whisper,4485192,clean,lowercase_nopunct,435,152,30,253,9282
+Whisper,4485192,clean,verbatim,1170,791,34,345,9094
+Qwen3,4481952,verbatim,standard,812,335,268,209,9853
+Qwen3,4481952,verbatim,lowercase_nopunct,1250,373,671,206,10089
+Qwen3,4481952,verbatim,verbatim,2223,1367,664,192,9960
+Qwen3,4481952,clean,standard,972,265,72,635,9231
+Qwen3,4481952,clean,lowercase_nopunct,944,270,63,611,9098
+Qwen3,4481952,clean,verbatim,1506,823,64,619,8913
+Qwen3,4482383,verbatim,standard,715,327,209,179,9810
+Qwen3,4482383,verbatim,lowercase_nopunct,832,362,303,167,9734
+Qwen3,4482383,verbatim,verbatim,1669,1169,300,200,9508
+Qwen3,4482383,clean,standard,912,251,65,596,9249
+Qwen3,4482383,clean,lowercase_nopunct,873,270,53,550,9106
+Qwen3,4482383,clean,verbatim,1374,739,55,580,8885
+Qwen3,4479944,verbatim,standard,1347,544,194,609,10896
+Qwen3,4479944,verbatim,lowercase_nopunct,1322,579,202,541,11013
+Qwen3,4479944,verbatim,verbatim,2107,1322,190,595,10609
+Qwen3,4479944,clean,standard,1293,415,107,771,10647
+Qwen3,4479944,clean,lowercase_nopunct,1229,438,78,713,10716
+Qwen3,4479944,clean,verbatim,2105,1228,102,775,10353
+Qwen3,4482613,verbatim,standard,956,514,211,231,9210
+Qwen3,4482613,verbatim,lowercase_nopunct,1217,608,412,197,9486
+Qwen3,4482613,verbatim,verbatim,2103,1491,390,222,9272
+Qwen3,4482613,clean,standard,895,461,99,335,8994
+Qwen3,4482613,clean,lowercase_nopunct,909,516,75,318,9036
+Qwen3,4482613,clean,verbatim,1455,1028,74,353,8821
+Qwen3,4453225,verbatim,standard,1129,493,425,211,11339
+Qwen3,4453225,verbatim,lowercase_nopunct,1636,603,854,179,11448
+Qwen3,4453225,verbatim,verbatim,3185,2149,840,196,11315
+Qwen3,4453225,clean,standard,1201,332,80,789,10416
+Qwen3,4453225,clean,lowercase_nopunct,1195,384,72,739,10127
+Qwen3,4453225,clean,verbatim,1866,1033,70,763,9983
+Qwen3,4469088,verbatim,standard,974,374,367,233,11508
+Qwen3,4469088,verbatim,lowercase_nopunct,1641,503,969,169,11839
+Qwen3,4469088,verbatim,verbatim,3438,2309,945,184,11759
+Qwen3,4469088,clean,standard,1490,246,56,1188,10242
+Qwen3,4469088,clean,lowercase_nopunct,1486,281,48,1157,9930
+Qwen3,4469088,clean,verbatim,2281,1046,48,1187,9856
+Qwen3,4470684,verbatim,standard,585,253,224,108,10930
+Qwen3,4470684,verbatim,lowercase_nopunct,1260,302,881,77,11568
+Qwen3,4470684,verbatim,verbatim,2465,1490,887,88,11384
+Qwen3,4470684,clean,standard,709,220,111,378,10547
+Qwen3,4470684,clean,lowercase_nopunct,684,235,90,359,10502
+Qwen3,4470684,clean,verbatim,1523,1045,88,390,10253
+Qwen3,4483937,verbatim,standard,522,194,198,130,8729
+Qwen3,4483937,verbatim,lowercase_nopunct,1100,252,734,114,9126
+Qwen3,4483937,verbatim,verbatim,2037,1190,731,116,9043
+Qwen3,4483937,clean,standard,455,127,51,277,8435
+Qwen3,4483937,clean,lowercase_nopunct,446,141,46,259,8296
+Qwen3,4483937,clean,verbatim,931,619,47,265,8202
+Qwen3,4474506,verbatim,standard,829,288,304,237,11627
+Qwen3,4474506,verbatim,lowercase_nopunct,1120,272,682,166,11741
+Qwen3,4474506,verbatim,verbatim,2553,1649,667,237,11524
+Qwen3,4474506,clean,standard,1340,261,161,918,10803
+Qwen3,4474506,clean,lowercase_nopunct,1196,221,161,814,10592
+Qwen3,4474506,clean,verbatim,2019,990,133,896,10321
+Qwen3,4485192,verbatim,standard,537,227,162,148,9983
+Qwen3,4485192,verbatim,lowercase_nopunct,643,243,281,119,9919
+Qwen3,4485192,verbatim,verbatim,1623,1194,294,135,9778
+Qwen3,4485192,clean,standard,750,173,29,548,9450
+Qwen3,4485192,clean,lowercase_nopunct,718,199,24,495,9293
+Qwen3,4485192,clean,verbatim,1227,655,29,543,9099
+Parakeet,4481952,verbatim,standard,707,326,188,193,9853
+Parakeet,4481952,verbatim,lowercase_nopunct,825,399,202,224,10085
+Parakeet,4481952,verbatim,verbatim,2227,1813,199,215,9956
+Parakeet,4481952,clean,standard,1059,288,72,699,9231
+Parakeet,4481952,clean,lowercase_nopunct,1450,302,56,1092,9087
+Parakeet,4481952,clean,verbatim,2186,1024,55,1107,8911
+Parakeet,4482383,verbatim,standard,798,421,219,158,9810
+Parakeet,4482383,verbatim,lowercase_nopunct,710,404,188,118,9752
+Parakeet,4482383,verbatim,verbatim,1785,1435,184,166,9488
+Parakeet,4482383,clean,standard,975,311,82,582,9249
+Parakeet,4482383,clean,lowercase_nopunct,1021,316,72,633,9122
+Parakeet,4482383,clean,verbatim,1611,886,63,662,8867
+Parakeet,4479944,verbatim,standard,1450,645,222,583,10896
+Parakeet,4479944,verbatim,lowercase_nopunct,1856,680,203,973,10992
+Parakeet,4479944,verbatim,verbatim,2669,1475,183,1011,10610
+Parakeet,4479944,clean,standard,1334,478,123,733,10647
+Parakeet,4479944,clean,lowercase_nopunct,1730,481,94,1155,10700
+Parakeet,4479944,clean,verbatim,2598,1333,87,1178,10357
+Parakeet,4482613,verbatim,standard,1160,707,263,190,9210
+Parakeet,4482613,verbatim,lowercase_nopunct,1267,789,244,234,9491
+Parakeet,4482613,verbatim,verbatim,2367,1901,218,248,9273
+Parakeet,4482613,clean,standard,1081,658,140,283,8994
+Parakeet,4482613,clean,lowercase_nopunct,1360,698,106,556,9036
+Parakeet,4482613,clean,verbatim,1966,1287,100,579,8818
+Parakeet,4453225,verbatim,standard,1084,518,356,210,11339
+Parakeet,4453225,verbatim,lowercase_nopunct,1270,606,478,186,11443
+Parakeet,4453225,verbatim,verbatim,3182,2503,470,209,11310
+Parakeet,4453225,clean,standard,1253,326,75,852,10416
+Parakeet,4453225,clean,lowercase_nopunct,1557,378,67,1112,10123
+Parakeet,4453225,clean,verbatim,2356,1163,58,1135,9974
+Parakeet,4469088,verbatim,standard,1072,495,300,277,11508
+Parakeet,4469088,verbatim,lowercase_nopunct,1159,633,261,265,11839
+Parakeet,4469088,verbatim,verbatim,4081,3552,252,277,11758
+Parakeet,4469088,clean,standard,1696,307,73,1316,10242
+Parakeet,4469088,clean,lowercase_nopunct,2443,388,71,1984,9931
+Parakeet,4469088,clean,verbatim,3624,1567,66,1991,9855
+Parakeet,4470684,verbatim,standard,659,287,233,139,10930
+Parakeet,4470684,verbatim,lowercase_nopunct,817,343,336,138,11564
+Parakeet,4470684,verbatim,verbatim,2631,2115,345,171,11379
+Parakeet,4470684,clean,standard,770,251,115,404,10547
+Parakeet,4470684,clean,lowercase_nopunct,1316,281,81,954,10498
+Parakeet,4470684,clean,verbatim,2324,1243,77,1004,10251
+Parakeet,4483937,verbatim,standard,570,244,225,101,8729
+Parakeet,4483937,verbatim,lowercase_nopunct,677,280,294,103,9113
+Parakeet,4483937,verbatim,verbatim,1974,1575,296,103,9034
+Parakeet,4483937,clean,standard,500,182,74,244,8435
+Parakeet,4483937,clean,lowercase_nopunct,937,210,43,684,8284
+Parakeet,4483937,clean,verbatim,1456,727,42,687,8191
+Parakeet,4474506,verbatim,standard,1058,390,232,436,11627
+Parakeet,4474506,verbatim,lowercase_nopunct,1244,518,251,475,11742
+Parakeet,4474506,verbatim,verbatim,3129,2340,234,555,11525
+Parakeet,4474506,clean,standard,1715,319,184,1212,10803
+Parakeet,4474506,clean,lowercase_nopunct,2220,491,171,1558,10593
+Parakeet,4474506,clean,verbatim,3195,1420,129,1646,10315
+Parakeet,4485192,verbatim,standard,531,245,203,83,9983
+Parakeet,4485192,verbatim,lowercase_nopunct,517,239,198,80,9899
+Parakeet,4485192,verbatim,verbatim,1559,1278,201,80,9779
+Parakeet,4485192,clean,standard,753,200,70,483,9450
+Parakeet,4485192,clean,lowercase_nopunct,815,198,50,567,9268
+Parakeet,4485192,clean,verbatim,1346,711,45,590,9097
+Clean transcriber,4481952,verbatim,standard,1140,270,746,124,9853
+Clean transcriber,4481952,verbatim,lowercase_nopunct,1567,301,1140,126,10086
+Clean transcriber,4481952,verbatim,verbatim,2322,1059,1149,114,9938
+Clean transcriber,4481952,clean,standard,0,0,0,0,9231
+Clean transcriber,4481952,clean,lowercase_nopunct,0,0,0,0,9105
+Clean transcriber,4481952,clean,verbatim,0,0,0,0,8915
+Clean transcriber,4482383,verbatim,standard,952,287,613,52,9810
+Clean transcriber,4482383,verbatim,lowercase_nopunct,1015,277,687,51,9783
+Clean transcriber,4482383,verbatim,verbatim,1692,941,688,63,9508
+Clean transcriber,4482383,clean,standard,0,0,0,0,9249
+Clean transcriber,4482383,clean,lowercase_nopunct,0,0,0,0,9154
+Clean transcriber,4482383,clean,verbatim,0,0,0,0,8895
+Clean transcriber,4479944,verbatim,standard,1091,510,415,166,10896
+Clean transcriber,4479944,verbatim,lowercase_nopunct,1067,513,423,131,11009
+Clean transcriber,4479944,verbatim,verbatim,1834,1260,416,158,10602
+Clean transcriber,4479944,clean,standard,0,0,0,0,10647
+Clean transcriber,4479944,clean,lowercase_nopunct,0,0,0,0,10729
+Clean transcriber,4479944,clean,verbatim,0,0,0,0,10362
+Clean transcriber,4482613,verbatim,standard,735,285,333,117,9210
+Clean transcriber,4482613,verbatim,lowercase_nopunct,991,356,550,85,9492
+Clean transcriber,4482613,verbatim,verbatim,1658,1043,532,83,9267
+Clean transcriber,4482613,clean,standard,0,0,0,0,8994
+Clean transcriber,4482613,clean,lowercase_nopunct,0,0,0,0,9060
+Clean transcriber,4482613,clean,verbatim,0,0,0,0,8836
+Clean transcriber,4453225,verbatim,standard,1604,421,1053,130,11339
+Clean transcriber,4453225,verbatim,lowercase_nopunct,2099,497,1471,131,11453
+Clean transcriber,4453225,verbatim,verbatim,3377,1781,1466,130,11300
+Clean transcriber,4453225,clean,standard,0,0,0,0,10416
+Clean transcriber,4453225,clean,lowercase_nopunct,0,0,0,0,10134
+Clean transcriber,4453225,clean,verbatim,0,0,0,0,9983
+Clean transcriber,4469088,verbatim,standard,1684,260,1345,79,11508
+Clean transcriber,4469088,verbatim,lowercase_nopunct,2400,351,1978,71,11844
+Clean transcriber,4469088,verbatim,verbatim,3636,1602,1966,68,11750
+Clean transcriber,4469088,clean,standard,0,0,0,0,10242
+Clean transcriber,4469088,clean,lowercase_nopunct,0,0,0,0,9940
+Clean transcriber,4469088,clean,verbatim,0,0,0,0,9859
+Clean transcriber,4470684,verbatim,standard,685,174,447,64,10930
+Clean transcriber,4470684,verbatim,lowercase_nopunct,1363,208,1113,42,11574
+Clean transcriber,4470684,verbatim,verbatim,2562,1390,1138,34,11350
+Clean transcriber,4470684,clean,standard,0,0,0,0,10547
+Clean transcriber,4470684,clean,lowercase_nopunct,0,0,0,0,10514
+Clean transcriber,4470684,clean,verbatim,0,0,0,0,10259
+Clean transcriber,4483937,verbatim,standard,538,140,346,52,8729
+Clean transcriber,4483937,verbatim,lowercase_nopunct,1110,180,881,49,9128
+Clean transcriber,4483937,verbatim,verbatim,1942,1009,883,50,9037
+Clean transcriber,4483937,clean,standard,0,0,0,0,8435
+Clean transcriber,4483937,clean,lowercase_nopunct,0,0,0,0,8299
+Clean transcriber,4483937,clean,verbatim,0,0,0,0,8205
+Clean transcriber,4474506,verbatim,standard,1305,211,959,135,11627
+Clean transcriber,4474506,verbatim,lowercase_nopunct,1706,268,1303,135,11752
+Clean transcriber,4474506,verbatim,verbatim,2618,1195,1309,114,11512
+Clean transcriber,4474506,clean,standard,0,0,0,0,10803
+Clean transcriber,4474506,clean,lowercase_nopunct,0,0,0,0,10609
+Clean transcriber,4474506,clean,verbatim,0,0,0,0,10325
+Clean transcriber,4485192,verbatim,standard,756,135,577,44,9983
+Clean transcriber,4485192,verbatim,lowercase_nopunct,885,166,676,43,9919
+Clean transcriber,4485192,verbatim,verbatim,1620,889,701,30,9768
+Clean transcriber,4485192,clean,standard,0,0,0,0,9450
+Clean transcriber,4485192,clean,lowercase_nopunct,0,0,0,0,9293
+Clean transcriber,4485192,clean,verbatim,0,0,0,0,9102

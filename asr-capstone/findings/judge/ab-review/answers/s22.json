@@ -1,0 +1,149 @@
+{
+ "case": "s22",
+ "X": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "changes meaning",
+    "reason": "The engine misidentifies the word 'SHEEP' as 'cheap', which changes the noun from an animal to an adjective."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 2,
+    "follow_up": "changes meaning",
+    "reason": "The engine misheard the word 'SHEEP' as 'cheap', which changes the context of the scenery being described."
+   },
+   "whole": {
+    "meaning": "changed",
+    "severity": 2,
+    "follow_up": "changes meaning",
+    "reason": "The engine misheard the word 'sheep' as 'cheap'."
+   }
+  },
+  "noticeable": "no",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The error replaces 'sheep' with 'cheap', which changes the meaning of the sentence from describing animals in the countryside to an nonsensical description of the landscape."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The evidence correctly identifies that the engine replaced the word 'SHEEP' with 'cheap'."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "The speaker is describing a scenic train ride through the countryside, where seeing 'sheep' and a single house is a common and logical observation, whereas 'cheap' does not make sense in the context of describing visual elements of the landscape."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "The speaker is describing a scenic train ride through the countryside. 'Sheep' makes much more sense in the context of a beautiful landscape with a single house in the middle of nowhere than 'cheap'."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Qwen3": 1,
+    "Canary": 1,
+    "Granite": 3,
+    "Whisper": 1,
+    "Parakeet": 3
+   },
+   "reason": "Engines 1, 2, and 4 correctly identified 'sheep', while Engines 3 and 5 incorrectly changed the meaning to 'cheap'."
+  },
+  "misses": [
+   {
+    "reference": "FOR CHOICE IT'S LIKE YOU'RE IN THE COUNTRYSIDE",
+    "engine": "That's kind for choice. That's very cute in the countryside",
+    "severity": 2,
+    "what": "the description of the countryside/choice"
+   },
+   {
+    "reference": "LOOKING AT STOCK COUNTRYSIDE",
+    "engine": "looking at stark countryside",
+    "severity": 2,
+    "what": "the description of the landscape (stock vs stark)"
+   },
+   {
+    "reference": "JUST SHEEP",
+    "engine": "just cheap",
+    "severity": 2,
+    "what": "the animals in the countryside (sheep vs cheap)"
+   }
+  ]
+ },
+ "Y": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 2,
+    "follow_up": "changes meaning",
+    "reason": "The engine misheard the word 'sheep' as the homophone 'cheap'."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 2,
+    "follow_up": "changes meaning",
+    "reason": "The engine misheard the word 'sheep' as 'cheap', which changes the subject of the description from animals to cost."
+   },
+   "whole": {
+    "meaning": "changed",
+    "severity": 2,
+    "follow_up": "changes meaning",
+    "reason": "The engine misheard the word 'sheep' as 'cheap', which changes the context of the scene being described."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "no",
+   "reason": "While it changes the imagery of the landscape, it doesn't fundamentally alter the conversation's topic or the speaker's intent."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The checker correctly identified that the engine replaced the word 'SHEEP' with 'cheap'."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "The context describes a scenic train ride through the countryside, making 'sheep' a much more logical observation than 'cheap'."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "In the context of looking at the countryside, 'sheep' makes much more sense than 'cheap' when describing a landscape with a single house in the middle of nowhere."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Qwen3": 1,
+    "Canary": 2,
+    "Granite": 4,
+    "Whisper": 2,
+    "Parakeet": 4
+   },
+   "reason": "Engine 1 is the most accurate to the reference, Engines 2 and 4 are tied because they both misinterpret 'stock' as 'stark' but preserve the correct word 'sheep', and Engines 3 and 5 are tied for last because they change 'sheep' to 'cheap', which alters the meaning."
+  },
+  "misses": [
+   {
+    "reference": "FOR CHOICE IT'S LIKE YOU'RE IN THE COUNTRYSIDE",
+    "engine": "That's kind for choice. That's very cute in the countryside",
+    "severity": 3,
+    "what": "Changed meaning of the sentence regarding being in the countryside"
+   },
+   {
+    "reference": "STOCK COUNTRYSIDE JUST SHEEP",
+    "engine": "stark countryside, just cheap",
+    "severity": 3,
+    "what": "Changed 'sheep' to 'cheap'"
+   },
+   {
+    "reference": "DO YOU REMEMBER I TOLD YOU",
+    "engine": "remember, I told you",
+    "severity": 1,
+    "what": "Missing 'do you'"
+   }
+  ]
+ }
+}

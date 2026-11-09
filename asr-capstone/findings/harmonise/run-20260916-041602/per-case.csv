@@ -1,0 +1,4 @@
+model,docket,term,standard_before_wer,standard_before_errors,standard_before_words,standard_after_wer,standard_after_errors,standard_after_words,lowercase_nopunct_before_wer,lowercase_nopunct_before_errors,lowercase_nopunct_before_words,lowercase_nopunct_after_wer,lowercase_nopunct_after_errors,lowercase_nopunct_after_words,verbatim_before_wer,verbatim_before_errors,verbatim_before_words,verbatim_after_wer,verbatim_after_errors,verbatim_after_words
+whisper-large-v3,09-834,OT2010,8.7229,864,9905,8.5292,842,9872,10.7531,1038,9653,10.4635,1009,9643,18.9162,1871,9891,18.9378,1872,9885
+whisper-large-v3,24-316,OT2024,6.4407,1102,17110,6.1167,1044,17068,6.9120,1142,16522,6.5300,1077,16493,18.0574,3060,16946,17.9557,3039,16925
+whisper-large-v3,24-109,OT2025,5.1683,1299,25134,4.9840,1245,24980,5.5462,1344,24233,5.3576,1296,24190,13.7669,3393,24646,13.6129,3350,24609

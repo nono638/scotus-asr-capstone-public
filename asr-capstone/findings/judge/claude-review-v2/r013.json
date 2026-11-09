@@ -1,0 +1,1 @@
+{"case": "r013", "own": {"reason": "The engine writes 200 million for 300 million in cost-of-goods savings. That is a wrong figure, and the reference's 300 matches 2.4 billion total minus 2.1 billion from OpEx.", "meaning": "changed", "severity": 3, "follow_up": "different quantity", "reference_doubt": "no"}}

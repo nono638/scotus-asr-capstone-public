@@ -1,0 +1,91 @@
+{
+ "case": "s37",
+ "X": {
+  "meaning": {
+   "line": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "no change",
+    "reason": "The engine's text is identical to the reference at the marked place."
+   },
+   "minute": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "no change",
+    "reason": "The engine's text is identical to the reference at the marked place."
+   },
+   "whole": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "no change",
+    "reason": "The engine's text is identical to the reference transcript at the marked place."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "no",
+   "reason": "The engine's text is identical to the reference text at the marked location, so there is no risk of being misled."
+  },
+  "rule": {
+   "rule_right": "no",
+   "reason": "The engine correctly transcribed the contraction 'can't' as it appears in the reference."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "Both versions are identical at the marked location, containing the word 'can't'."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "engine",
+    "sure": 3,
+    "reason": "Both versions are identical at the marked location, containing the word 'can't'."
+   }
+  },
+  "misses": []
+ },
+ "Y": {
+  "meaning": {
+   "line": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "no change",
+    "reason": "The engine's text is identical to the reference text."
+   },
+   "minute": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "no change",
+    "reason": "The engine correctly transcribed the word 'can't'."
+   },
+   "whole": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "no change",
+    "reason": "The engine correctly transcribed the word 'can't'."
+   }
+  },
+  "noticeable": "no",
+  "stakes": {
+   "stakes": "no",
+   "reason": "The error is non-existent as the text is identical at the spot."
+  },
+  "rule": {
+   "rule_right": "no",
+   "reason": "The checker incorrectly claimed the engine said 'can' when the engine actually said 'can't'."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "cant tell",
+    "sure": 3,
+    "reason": "Both versions are identical, including the text within the brackets."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "cant tell",
+    "sure": 3,
+    "reason": "Both versions are identical at the marked spot and throughout the entire text provided."
+   }
+  },
+  "misses": []
+ }
+}

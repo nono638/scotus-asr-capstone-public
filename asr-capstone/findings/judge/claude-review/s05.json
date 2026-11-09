@@ -1,0 +1,37 @@
+{
+ "case": "s05",
+ "own": {
+  "meaning": "opposite",
+  "severity": 2,
+  "noticeable": "no",
+  "follow_up": "negation lost",
+  "stakes": "maybe",
+  "reason": "The reference says it was an expiry they \"weren't\" going to have in 2023 and the engine says \"were\"; the words are opposite, but the point (they refinanced a near-term maturity and pushed it into the future) reads the same, and the engine's version actually reads more sensibly.",
+  "rule_right": "partly",
+  "rule_reason": "The two texts really differ by a negative, but the evidence (\"1 of 2 others right\") shows the engines split, and the sense of the sentence favours \"were\", so this may be a reference slip or a misspoken word rather than an engine error.",
+  "more_plausible": "engine",
+  "plausible_how_clear": "Leaning, not certain: \"an expiry that we were going to have in 2023. Now we kick that off into the future\" describes a refinancing; \"weren't\" only works if the speaker misspoke. Only listening can settle it.",
+  "my_misses": [
+   {"reference": "an expiry that we weren't gonna have in 2023", "engine": "an expiry that we were going to have in 2023", "severity": 2},
+   {"reference": "the results that are delivering allows to pursue", "engine": "the results that Ecopetrol are delivering allow us to pursue", "severity": 0}
+  ]
+ },
+ "review": {
+  "labelled/line": {"verdict": "partly", "why": "\"Opposite\" and \"negation lost\" are literally right, but severity 4 and \"noticeable: yes\" are wrong: \"It was an expiry that we were going to have in 2023\" reads perfectly naturally, and it does not lose the speaker's point."},
+  "labelled/minute": {"verdict": "disagree", "why": "Its stakes note gets the finance backwards: it says the engine is \"falsely claiming they had an expiry in 2023 that they actually removed\", but an expiry they were going to have in 2023 and then pushed into the future is exactly the refinancing story; severity 4 and \"noticeable: yes\" don't hold."},
+  "labelled/whole": {"verdict": "disagree", "why": "It claims \"were going to have\" in 2023 \"contradicts the point of the refinancing\", when it describes it; I can only check against the minute text, but nothing there supports severity 4."},
+  "rule/minute": {"verdict": "partly", "why": "Copied the words correctly, but a flat \"yes\" ignores that the sentence makes better sense with \"were\" and that the other engines split, so the rule may be catching a reference slip."},
+  "blind/order1": {"verdict": "partly", "why": "It picked the engine's \"were\" (not the reference) with a sound reason that matches my own reading, but \"sure: 3\" is overconfident, and order 2 shows the pick was really driven by position."},
+  "blind/order2": {"verdict": "disagree", "why": "It picked A again, now the \"weren't\" version, with sure 3 and a reason that flatly contradicts its order-1 reason; it simply took the first slot both times."},
+  "rank/minute": {"verdict": "agree", "why": "Taking the reference as given, as the prompt says, Engine 2 (\"weren't\") first and the two \"were\" engines tied is consistent."},
+  "misses": [
+   {"reference": "we're operating in", "engine": "we're operating in", "is_real": "no", "matters": "no", "severity_fair": "yes", "note": "Misquotes the reference, which has \"that operating in\"; Gemma lists it as \"no difference\", which isn't a miss at all."},
+   {"reference": "of our… of the near term", "engine": "of our, if you will, of the near term", "is_real": "yes", "matters": "no", "severity_fair": "too high", "note": "Filler phrase; 0."},
+   {"reference": "we weren't gonna have", "engine": "we were going to have", "is_real": "yes", "matters": "yes", "severity_fair": "too high", "note": "Real, but the speaker's point survives and the reference itself is doubtful; 2 at most."},
+   {"reference": "results that are delivering allows to pursue", "engine": "results that Ecopetrol are delivering allow us to pursue", "is_real": "yes", "matters": "no", "severity_fair": "too high", "note": "The engine fills a gap the reference left (the prompt warns the reference can lack words); 0."}
+  ],
+  "overlooked": []
+ },
+ "worth_a_listen": {"yes": true, "why": "The most doubtful case in this set: the sense favours the engine's \"were\", the engines split, and only the audio can say whether the reference or the engine is wrong."},
+ "summary": "Gemma treated this as a clean, severe negation loss and misread the refinancing so that its stakes reasons point the wrong way; in the blind test it picked the first slot both times with full confidence and opposite reasons."
+}

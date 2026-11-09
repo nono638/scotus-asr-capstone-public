@@ -1,0 +1,15 @@
+{"case": "s20",
+ "parts": {
+  "meaning/line": {"X": "partly", "Y": "partly", "better": "Y", "why": "Both say changed, content lost, which is right: Speaker B's short reaction 'that's that's a very very good English' is gone. But it is a passing remark, not the point of the talk, so about 2 fits. X's 4 ('reverses or loses the point') is far off; Y's 3 is closer."},
+  "meaning/minute": {"X": "partly", "Y": "partly", "better": "tie", "why": "Both give 4, which overstates a dropped one-line reaction before a topic change."},
+  "meaning/whole": {"X": "partly", "Y": "partly", "better": "Y", "why": "Same issue: X 4, Y 3. Both are too high, and Y is less so."},
+  "noticeable": {"X": "wrong", "Y": "wrong", "better": "tie", "why": "With no speaker names, '...dislike English like math. So, is there any food you not tried' reads as one smooth topic change. Nobody could tell a short reply was lost. Both say yes."},
+  "stakes": {"X": "partly", "Y": "partly", "better": "tie", "why": "Both say yes and call it a significant loss. A passing compliment going missing would hardly mislead anyone; 'no' or 'maybe' fits."},
+  "rule": {"X": "right", "Y": "right", "better": "tie", "why": "Both confirm a whole turn left out, which is right."},
+  "blind": {"X": "partly", "Y": "partly", "better": "tie", "why": "Both pick Version A in both orders: the engine in order 1 and the reference in order 2. X is 'sure' (3) both times while contradicting itself."},
+  "rank": {"X": "right", "Y": "partly", "better": "X", "why": "Both put Whisper ('that's that's a very good') first and the two blanks last. X puts Qwen3 ('very very good thing') above Granite ('a very good idea'), which is fair. Y ties them, also fair, but says Whisper has 'the exact words', when Whisper drops 'very' and 'English'."},
+  "misses": {"X": {"real_and_matter": 1, "trivial": 8, "not_real": 0, "important_missed": 1},
+             "Y": {"real_and_matter": 1, "trivial": 2, "not_real": 0, "important_missed": 1},
+             "better": "Y", "why": "Both find the one real change ('like mad' became 'like math'), and both leave out Speaker B's dropped turn, which is the case. X pads its list with repeats and 'mathematics' shortened to 'math', which the task said to leave out, and rates 'mad'/'math' at 4. Y's list is short and rates it at 2."}
+ },
+ "overall": {"better": "Y", "why": "Both overrate a small dropped remark and wrongly call it noticeable. Y's severities are closer and its misses list is cleaner. X has only the slightly better rank reason."}}

@@ -1,0 +1,1 @@
+{"case": "r267", "own": {"reason": "The engine drops completive 'done' in 'I done gave you good grades', leaving a plain past 'I gave'. The giving is still finished; only the emphasis on 'already' is lost.", "meaning": "reworded", "severity": 1, "follow_up": "meaning kept", "reference_doubt": "no"}}

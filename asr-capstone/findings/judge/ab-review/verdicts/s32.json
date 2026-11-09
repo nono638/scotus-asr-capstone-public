@@ -1,0 +1,15 @@
+{"case": "s32",
+ "parts": {
+  "meaning/line": {"X": "wrong", "Y": "right", "better": "Y", "why": "'they not doing' and 'they're not doing' mean the same. Y: same/0/meaning kept. X: changed/2/meaning changed."},
+  "meaning/minute": {"X": "wrong", "Y": "right", "better": "Y", "why": "Same split as the line answer; X's own reason only describes a change of grammar, not of meaning."},
+  "meaning/whole": {"X": "right", "Y": "right", "better": "tie", "why": "Both: same, 0, meaning kept."},
+  "noticeable": {"X": "wrong", "Y": "right", "better": "Y", "why": "'what they're not doing for you' is normal English; nothing would look wrong. X says yes, Y says no."},
+  "stakes": {"X": "right", "Y": "right", "better": "tie", "why": "Both say yes because the zero copula is erased for a CORAAL researcher."},
+  "rule": {"X": "right", "Y": "right", "better": "tie", "why": "Both say the rule is right; 'are' was added."},
+  "blind": {"X": "right", "Y": "right", "better": "tie", "why": "Both pick the reference in both orders, sure 3, citing the speaker's other AAE grammar."},
+  "rank": {"X": "right", "Y": "right", "better": "tie", "why": "Both give Qwen3 1 (exact), Parakeet 2 (contraction), Whisper 3 ('they not not going'). That is reasonable; a tie of Qwen3 and Parakeet would also have been fine."},
+  "misses": {"X": {"real_and_matter": 3, "trivial": 2, "not_real": 0, "important_missed": 0},
+             "Y": {"real_and_matter": 3, "trivial": 1, "not_real": 0, "important_missed": 0},
+             "better": "tie", "why": "Both find 'done did' to 'didn't do it' (a reversal), 'grow' to 'wrote' and 'slim' to 'stuff'. X rates the reversal 4, which is right, but rates 'slim' to 'stuff' 3 and adds a stutter item. Y's list is tighter, but it rates the reversal only 3."}
+ },
+ "overall": {"better": "Y", "why": "Y correctly treats the contraction as a change in form that changes no meaning and nobody would notice; X calls it a meaning change and noticeable."}}

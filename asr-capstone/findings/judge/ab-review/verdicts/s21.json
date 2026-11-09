@@ -1,0 +1,13 @@
+{"case": "s21",
+ "parts": {
+  "meaning/line": {"X": "right", "Y": "right", "better": "tie", "why": "Both call 'online' -> 'on the line' a rewording at severity 0, which fits; Y calls 'online' a contraction, a loose word but harmless."},
+  "meaning/minute": {"X": "right", "Y": "right", "better": "tie", "why": "Reworded (X) or same (Y) at severity 0; both fine for a host introducing the next caller."},
+  "meaning/whole": {"X": "right", "Y": "right", "better": "tie", "why": "Both say same, severity 0, with sensible reasons."},
+  "noticeable": {"X": "wrong", "Y": "right", "better": "Y", "why": "'next one on the line should be Julien' reads naturally on a call; nothing would look wrong. X says yes."},
+  "stakes": {"X": "right", "Y": "right", "better": "tie", "why": "Both say no; the two phrasings mean the same here."},
+  "rule": {"X": "partly", "Y": "partly", "better": "tie", "why": "The words do differ, but the label 'different content word' overstates a rewording with no meaning change (and Whisper's 'on' is not plainly 'right'); both accept it fully."},
+  "blind": {"X": "right", "Y": "partly", "better": "X", "why": "X picks 'on the line' in both orders with a sensible reason (either is plausible, and the reference may be the odd one). Y's pick flips with the order."},
+  "rank": {"X": "wrong", "Y": "right", "better": "Y", "why": "Parakeet wrote exactly the reference's 'online'; X ranks it below Qwen3 and claims it 'adds extra words', which is false. Y puts Parakeet first, Qwen3 second, Whisper's bare 'on' last."},
+  "misses": {"X": {"real_and_matter": 2, "trivial": 2, "not_real": 0, "important_missed": 1}, "Y": {"real_and_matter": 2, "trivial": 5, "not_real": 0, "important_missed": 1}, "better": "X", "why": "Both find challenging->changing and performer->pro forma (where the reference is the one that is wrong). Variant/variance/varying are mishearings of a name (Varian), so trivial. Y adds Dan/Ben, Johan/Joran and 'pre prepared', all trivial. Neither notes the engine adds the caller's name where the reference has a gap."}
+ },
+ "overall": {"better": "Y", "why": "X's two clear mistakes (calling the slip noticeable, and ranking the exact-match engine second with a false reason) outweigh Y's flip in the blind test; X's tighter miss list is a smaller gain."}}

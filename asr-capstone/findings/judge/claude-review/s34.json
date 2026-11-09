@@ -1,0 +1,40 @@
+{
+ "case": "s34",
+ "own": {
+  "meaning": "changed",
+  "severity": 1,
+  "noticeable": "no",
+  "follow_up": "continues the talk",
+  "stakes": "no",
+  "reason": "The engine wrote \"Really?\" where the reference has nothing; it fits the talk perfectly (one person says socks are uncomfortable, the other asks \"Really?\", the first says \"Yeah\"), so it is harmless either way.",
+  "rule_right": "partly",
+  "rule_reason": "The text side is right (nothing in the reference, a word in the engine), but four of the five engines wrote \"Really\" here, which suggests a quiet real word from the other speaker that the hand transcript left out; the silence figure cannot be checked from text.",
+  "more_plausible": "cant tell",
+  "plausible_how_clear": "Not clear from text; \"uncomfortable / Really? / Yeah\" reads very naturally, and four engines agreeing leans towards the engine, while the reference transcript is loose in this stretch (\"WHAT'S THE STOP NO\").",
+  "my_misses": [
+   {"reference": "UM NOT SOCKS IS OKAY", "engine": "um but socks is okay", "severity": 2},
+   {"reference": "", "engine": "Really?", "severity": 1},
+   {"reference": "WHAT'S THE STOP NO", "engine": "It's just like, you know... ... ...", "severity": 1},
+   {"reference": "", "engine": "Don't...", "severity": 1},
+   {"reference": "I WOULD STILL SLEEP", "engine": "i will still sleep", "severity": 0}
+  ]
+ },
+ "review": {
+  "labelled/line": {"verdict": "disagree", "why": "\"it's just uncomfortable / Really? / Yeah.\" is a natural exchange, so \"unrelated\" and \"noticeable: yes\" are wrong, and severity 2 with stakes \"maybe\" is too heavy for one harmless word that may even have been said."},
+  "labelled/minute": {"verdict": "disagree", "why": "Same answers, and the reason says the reference \"has a silence/gap\" there; the reference just has no words, it marks no silence, and \"was never spoken\" is more than the text can show."},
+  "labelled/whole": {"verdict": "disagree", "why": "Same mistakes again (\"unrelated\", noticeable, severity 2); judged against the minute text, nothing supports calling \"Really?\" unrelated to talk about uncomfortable socks."},
+  "rule/minute": {"verdict": "partly", "why": "From the two texts alone \"yes\" is defensible (nothing in the reference, a word in the engine), but the reason simply repeats the checker's silence claim, which the text cannot confirm, and Gemma's own blind answers say the word fits naturally."},
+  "blind/order1": {"verdict": "partly", "why": "Picked B, the engine's \"really\", consistently with order 2, which is reasonable since four of five engines wrote it; but it reads \"really\" as the same speaker's intensifier, not as the question the engines wrote, and sure 2 is a bit high when the text gives no real clue."},
+  "blind/order2": {"verdict": "partly", "why": "Picked A, again the engine's version, so the choice is consistent and not about position; same weak \"intensifier\" reason, and it contradicts Gemma's labelled answers that \"Really?\" is unrelated and never spoken."},
+  "rank/minute": {"verdict": "disagree", "why": "It ranked on words outside the spot (\"Don't die\"): at the spot the reference has nothing, and only Engine 1 (Parakeet) wrote nothing there, so it matches best, while the four engines that wrote \"Really\" are equal; Gemma ranked Parakeet last."}
+  ,"misses": [
+   {"reference": "UM NOT SOCKS IS OKAY", "engine": "um but socks is okay", "is_real": "yes", "matters": "yes", "severity_fair": "yes", "note": "\"not socks is okay\" and \"but socks is okay\" point different ways on whether socks are fine; 2 is fair, though the reference line is itself unclear."},
+   {"reference": "I WOULD STILL SLEEP", "engine": "i will still sleep", "is_real": "yes", "matters": "no", "severity_fair": "yes", "note": "A slip a reader reads past."},
+   {"reference": "WHEN AT THE END OF THE DUVET", "engine": "when the end of the duvet", "is_real": "yes", "matters": "no", "severity_fair": "too high", "note": "One small word dropped from a muddled phrase; 0 or 1."},
+   {"reference": "YEAH WHAT'S THE STOP NO", "engine": "Really? Yeah. It's just like, you know... ... ... I'm tired. Don't", "is_real": "yes", "matters": "yes", "severity_fair": "too high", "note": "The texts do differ as stated, but the reference words here are already a muddle and the engine's are filler, so little meaning is lost; 1 to 2, not 3. \"I'm tired\" is in both, so it is not a difference."}
+  ],
+  "overlooked": []
+ },
+ "worth_a_listen": {"yes": true, "why": "Four of five engines (Granite, Qwen3, Whisper, Canary) wrote \"Really\" at a spot the hand transcript leaves empty and the checker calls silent; a listen would show whether the other speaker said it quietly, which would make the reference, not the engines, wrong."},
+ "summary": "Gemma accepted the checker's \"invented word\" story in every labelled view, calling \"Really?\" unrelated and noticeable when it fits the talk naturally and four of five engines wrote it; yet in the blind pair it twice judged \"really\" the more likely wording. It also ranked the engines on words outside the spot, putting the only engine that matches the reference there last."
+}

@@ -1,0 +1,64 @@
+# The same corpus, the same scoring, a third model.
+#
+# This one tests whether size explains what Parakeet showed. Parakeet TDT is 0.6
+# billion parameters against Whisper's 1.55, so its heavier tidying of disfluent
+# speech could have been capacity rather than training. Qwen3-ASR-1.7B is larger
+# than Whisper, so if the tidying persists it is not about size.
+#
+#   python -m scotus_asr.cli run --config config/qwen3.yaml --term 2017
+#
+# Results land in their own run folder and are named after the engine, so the
+# other two models' numbers are not overwritten and all three sit side by side.
+
+paths:
+  sample_dir: "{scotus_corpus}/cases"
+  runs_dir: "{scotus_corpus}/runs"
+
+asr:
+  engine: qwen3-asr
+  # The -hf suffix is not optional. Qwen/Qwen3-ASR-1.7B without it carries the
+  # Qwen team's own format and the transformers classes will not load it. The
+  # same trap stopped Canary-Qwen-2.5B, whose repository holds a NeMo training
+  # config rather than a transformers one - that model cannot run here at all
+  # without the NeMo toolkit.
+  model: Qwen3-ASR-1.7B-hf
+  device: cuda
+  compute_type: float16
+  language: en
+
+  # A second model comes with this one. Qwen3-ASR produces text and no timings;
+  # word timings come from Qwen3-ForcedAligner-0.6B-hf, which takes the audio and
+  # the transcript and says where each word sits. Without it this project loses
+  # the silence measure and the ability to locate a dropped passage, so it is
+  # part of the engine rather than an option.
+  #
+  # The aligner also sets the chunk size: it handles five minutes at a time, so
+  # the audio is cut just under that. See qwen3_engine.py.
+  word_timestamps: true
+
+  # Decoding temperatures, and they are not Whisper's any more.
+  #
+  # This list used to be ignored here, on the view that temperature was a
+  # Whisper setting. That was wrong, and it made the comparison unfair.
+  # Detecting a repetition loop and re-decoding it hotter is a decoder-level
+  # technique - Whisper ships it, but nothing about it is Whisper-specific -
+  # and leaving it to Whisper alone meant Whisper was quietly allowed to retry
+  # its worst segments while this model was scored on its first attempt.
+  #
+  # The first value is used normally. The rest are only reached when a chunk
+  # comes back looking like a loop, which is measured three ways: over 250 words
+  # a minute (nobody speaks that fast; the loop that prompted this ran at 341)
+  # or a compression ratio over 4.0. See `asr/base.py` for where those numbers
+  # come from.
+  #
+  # Note the threshold is 4.0 and not Whisper's 2.4. 2.4 is calibrated for
+  # Whisper's 30-second segments, and these chunks are far longer - longer
+  # natural prose compresses better whatever it says. Scored at 2.4, 71% of
+  # the finished Qwen3 run and 92% of Parakeet's would be flagged, and every
+  # one of them reads as ordinary argument.
+  temperatures: [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
+
+  # Still Whisper's, still ignored here rather than faked:
+  #
+  #   beam_size, compression_ratio_threshold, log_prob_threshold,
+  #   no_speech_threshold, condition_on_previous_text, vad_filter

@@ -1,0 +1,1 @@
+{"case": "r077", "own": {"reason": "The engine has \"as long as we can\" where the reference has \"as we cannot\", turning a negative into a positive. The engine's \"we can continue as long as we can\" fits the speaker's upbeat point far better than the reference's broken sentence.", "meaning": "opposite", "severity": 3, "follow_up": "negation lost", "reference_doubt": "yes"}}

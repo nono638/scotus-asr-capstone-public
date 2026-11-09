@@ -1,0 +1,1 @@
+{"case": "r098", "own": {"reason": "The engine adds the dropped \"is\", writing \"She's smart\" for \"She smart\". A dropped \"is\" carries no meaning, so nothing changes.", "meaning": "same", "severity": 0, "follow_up": "meaning kept", "reference_doubt": "no"}}

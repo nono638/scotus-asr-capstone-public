@@ -1,0 +1,16 @@
+engine,run,rule,cases,wer_before,wer_after,change,cases_worse
+Qwen3-ASR-1.7B-hf,run-20260921-051927,standard,61,5.7368,4.8976,-0.8392,0
+Qwen3-ASR-1.7B-hf,run-20260921-051927,lowercase_nopunct,61,6.0914,5.2509,-0.8405,0
+Qwen3-ASR-1.7B-hf,run-20260921-051927,verbatim,61,16.612,15.8832,-0.7288,0
+Voxtral-Mini-3B-2507,run-20260922-002324,standard,61,7.4131,6.6238,-0.7892,0
+Voxtral-Mini-3B-2507,run-20260922-002324,lowercase_nopunct,61,7.4723,6.685,-0.7873,0
+Voxtral-Mini-3B-2507,run-20260922-002324,verbatim,61,16.5846,15.8915,-0.6932,0
+canary-1b-v2,run-20260921-033436,standard,61,7.2202,7.2228,0.0026,9
+canary-1b-v2,run-20260921-033436,lowercase_nopunct,61,7.4465,7.4495,0.003,9
+canary-1b-v2,run-20260921-033436,verbatim,61,16.4921,16.4948,0.0027,9
+granite-speech-4.1-2b,run-20260923-011250,standard,61,8.409,8.3969,-0.0121,7
+granite-speech-4.1-2b,run-20260923-011250,lowercase_nopunct,61,8.5202,8.5074,-0.0128,7
+granite-speech-4.1-2b,run-20260923-011250,verbatim,61,17.4584,17.4469,-0.0116,7
+parakeet-tdt-0.6b-v3,run-20260924-064733,standard,61,7.4214,7.4224,0.0011,2
+parakeet-tdt-0.6b-v3,run-20260924-064733,lowercase_nopunct,61,9.8444,9.8454,0.001,2
+parakeet-tdt-0.6b-v3,run-20260924-064733,verbatim,61,18.4873,18.4883,0.001,2

@@ -1,0 +1,1 @@
+{"case": "r310", "own": {"reason": "The engine wrote \"She's scared\" for \"She scared\"; adding the copula keeps the meaning. The speaker is the interviewer, and one other engine also heard \"She's\".", "meaning": "same", "severity": 0, "follow_up": "meaning kept", "reference_doubt": "maybe", "misspoke": "no"}}

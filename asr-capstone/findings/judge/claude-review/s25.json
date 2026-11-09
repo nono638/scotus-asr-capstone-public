@@ -1,0 +1,205 @@
+{
+ "case": "s25",
+ "own": {
+  "meaning": "changed",
+  "severity": 3,
+  "noticeable": "no",
+  "follow_up": "changes meaning",
+  "stakes": "yes",
+  "reason": "The speaker said modern life is 'still slave(ry)' to him, and the engine wrote 'still slick', which drops the slavery comparison that is the point of the passage.",
+  "rule_right": "yes",
+  "rule_reason": "'slave' and 'slick' are different content words with different meanings.",
+  "more_plausible": "reference",
+  "plausible_how_clear": "Fairly clear: the lines just before say 'we still in slavery' and 'it just modern slavery', so 'still slave to me' carries on the thought; 'slick' could just about be read as 'sly', which is why it might slip past a reader.",
+  "my_misses": [
+   {
+    "reference": "It just modern slavery",
+    "engine": "it just bothers me",
+    "severity": 3,
+    "note": "The key claim 'modern slavery' is replaced by 'it just bothers me'."
+   },
+   {
+    "reference": "it's still slave To me",
+    "engine": "it's still slick to me",
+    "severity": 3,
+    "note": "Slavery comparison lost."
+   },
+   {
+    "reference": "I just stay su",
+    "engine": "i just stay sad",
+    "severity": 2,
+    "note": "An unfinished word becomes a claim that he stays sad."
+   },
+   {
+    "reference": "like at work",
+    "engine": "like it works",
+    "severity": 2,
+    "note": "Loses that he is talking about his job."
+   },
+   {
+    "reference": "that we're we I mean, we still in slavery",
+    "engine": "I work with me and we still in slavery",
+    "severity": 1,
+    "note": "Garbled lead-in; the slavery line itself survives."
+   },
+   {
+    "reference": "they be like, man you crazy",
+    "engine": "they were like man you crazy",
+    "severity": 1,
+    "note": "Habitual 'be' (they always say) rewritten as one past event."
+   },
+   {
+    "reference": "I be the first to",
+    "engine": "I'd be first",
+    "severity": 1,
+    "note": "Habitual 'be' changed to 'would'."
+   },
+   {
+    "reference": "That's the way I look at it",
+    "engine": "that's why i look at it",
+    "severity": 1,
+    "note": "Small slip."
+   },
+   {
+    "reference": "you gonna have the white guys",
+    "engine": "you can have the white guys",
+    "severity": 1,
+    "note": "Prediction becomes possibility."
+   }
+  ]
+ },
+ "review": {
+  "labelled/line": {
+   "verdict": "partly",
+   "why": "Right that 'slick' is a different word that drops the slavery comparison, but severity 4 is high and 'noticeable: yes' is doubtful: 'it's still slick to me' reads as natural speech, as Gemma's own blind answer shows."
+  },
+  "labelled/minute": {
+   "verdict": "partly",
+   "why": "Its reason says the error 'completely' erases the point, but the engine still has 'we still in slavery' a few words earlier; 3 fits better, and a reader would likely not notice."
+  },
+  "labelled/whole": {
+   "verdict": "partly",
+   "why": "Same as the minute; 'completely erases the core argument' overstates it, given 'we still in slavery' survives."
+  },
+  "rule/minute": {
+   "verdict": "agree",
+   "why": "A real different content word."
+  },
+  "blind/order1": {
+   "verdict": "disagree",
+   "why": "Picked 'slick' (the engine) at 'sure 3', calling it 'a common idiomatic way' and 'slave' awkward, in a passage that has just said 'modern slavery' twice."
+  },
+  "blind/order2": {
+   "verdict": "agree",
+   "why": "Picked 'slave' with the right reason, but it chose slot A both times at 'sure 3', so its two answers contradict each other."
+  },
+  "rank/minute": {
+   "verdict": "agree",
+   "why": "The two 'slave' engines tie at 1 and the 'slick' engine is last."
+  },
+  "misses": [
+   {
+    "reference": "you take me and her",
+    "engine": "you take me her",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "A dropped 'and'; 0."
+   },
+   {
+    "reference": "they woah",
+    "engine": "oh",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "An exclamation either way; 0."
+   },
+   {
+    "reference": "what she what he with her for",
+    "engine": "she what he with her for",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "A dropped repeat; the instructions said to leave out repeats."
+   },
+   {
+    "reference": "you gonna have",
+    "engine": "you can have",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "too high",
+    "note": "A prediction becomes a possibility; 1."
+   },
+   {
+    "reference": "I be the first to I tell my guy",
+    "engine": "I'd be first I tell my guy",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "too high",
+    "note": "Habitual 'be' becomes 'would'; a small grammar edit, 1."
+   },
+   {
+    "reference": "we're we I mean, we still in slavery",
+    "engine": "I work with me and we still in slavery",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "too high",
+    "note": "Only the lead-in is garbled; the claim 'we still in slavery' survives, so 1, not 4."
+   },
+   {
+    "reference": "It just modern slavery",
+    "engine": "it just bothers me",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "too high",
+    "note": "A real and important catch; 3 fits better than 4 because the slavery claim survives a line earlier."
+   },
+   {
+    "reference": "it's still slave To me",
+    "engine": "it's still slick to me",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "yes",
+    "note": "3 is fair (though it does not match the 4 Gemma gave in the labelled answers)."
+   },
+   {
+    "reference": "That's the way I look at it",
+    "engine": "that's why i look at it",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "yes",
+    "note": "A slip; 1 is fine."
+   },
+   {
+    "reference": "I just stay su Uh, the way I say stuff is Now they they listen",
+    "engine": "i just stay sad the way i say stuff and then they listen",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "too high",
+    "note": "An unfinished word becomes 'sad', an invented feeling; 2."
+   },
+   {
+    "reference": "but they be like",
+    "engine": "but they were like",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "yes",
+    "note": "Habitual 'be' flattened to a single past event; 2 is fair for a corpus that keeps dialect grammar."
+   },
+   {
+    "reference": "at work",
+    "engine": "it works",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "too high",
+    "note": "Loses that he means his job; 2."
+   }
+  ],
+  "overlooked": []
+ },
+ "worth_a_listen": {
+  "yes": true,
+  "why": "A strong showcase case (slavery comparison turned into 'slick', 'modern slavery' into 'bothers me'), and the reference's own 'still slave to me' is odd, so the exact words are worth hearing before quoting it."
+ },
+ "summary": "Gemma's misses list for this minute was thorough and found every real change, but scored most items one or more steps too high; on the spot it was right about the change but overstated how much was lost, and its blind test flipped by position, at one point preferring 'slick'."
+}

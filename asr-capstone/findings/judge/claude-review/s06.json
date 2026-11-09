@@ -1,0 +1,38 @@
+{
+ "case": "s06",
+ "own": {
+  "meaning": "same",
+  "severity": 1,
+  "noticeable": "no",
+  "follow_up": "stock phrase",
+  "stakes": "no",
+  "reason": "The engine wrote an extra \"Thank you.\" between the Chief Justice's \"Thank you, counsel.\" and \"Mr. Stewart.\", over near-silence; it adds no meaning.",
+  "rule_right": "yes",
+  "rule_reason": "The reference has nothing at the spot and the engine has \"Thank you.\"; the silence figures (2% speech) can't be checked from text but fit a hand-off pause.",
+  "more_plausible": "reference",
+  "plausible_how_clear": "Fairly clear but not certain: \"Thank you, counsel. Mr. Stewart.\" is the Chief Justice's usual hand-off, and a third \"thank you\" right after two others is odd, though not impossible.",
+  "my_misses": [
+   {"reference": "", "engine": "Thank you.", "severity": 1},
+   {"reference": "and Petitioner is trying to do that by urging the Court", "engine": "and petitioner is trying to do that by urging. victims and petitioners trying to do that by urging the court", "severity": 1},
+   {"reference": "determine their loss is because", "engine": "determine their losses because", "severity": 0}
+  ]
+ },
+ "review": {
+  "labelled/line": {"verdict": "agree", "why": "Same, 0, not noticeable, stock phrase, no stakes: all fair; \"likely due to a loop\" is a guess but harmless."},
+  "labelled/minute": {"verdict": "agree", "why": "Fair, and it correctly notes Justice Jackson's \"Thank you\" just before."},
+  "labelled/whole": {"verdict": "agree", "why": "Same sound answer; judged against the minute text only."},
+  "rule/minute": {"verdict": "agree", "why": "Copied both sides correctly and confirmed the extra words."},
+  "blind/order1": {"verdict": "disagree", "why": "Picked A, the version with the extra \"thank you\", with sure 3, arguing for a \"thank you mr stewart\" hand-off that isn't in either version and calling \"thank you counsel mr stewart\" less natural, which is the Chief Justice's standard wording."},
+  "blind/order2": {"verdict": "partly", "why": "Right pick (A, the reference) with a sound reason, but it picked A in order 1 too with the opposite reason, so this is a position pick that happened to land right."},
+  "rank/minute": {"verdict": "partly", "why": "Tying Engines 1 and 3 at the spot is defensible, but the reason then prefers Engine 1 over a question mark and misses that Engine 1 (Whisper) drops \"Mr. Stewart.\" altogether, losing who is called next."},
+  "misses": [
+   {"reference": "the victims and determine their loss is because", "engine": "those victims and determine their losses because", "is_real": "yes", "matters": "no", "severity_fair": "yes", "note": "Trivial wording; 1 is acceptable."},
+   {"reference": "Petitioner is trying to do that by urging the Court to adopt the narrow,est possible conception of victim. And then, second, Petitioner is", "engine": "victims and petitioners trying to do that by urging. victims and petitioners trying to do that by urging the court to adopt the narrowest possible conception of victim and then second", "is_real": "partly", "matters": "no", "severity_fair": "too high", "note": "There is a real repeated stretch, but Gemma misquotes the engine (it first says \"petitioner is trying to do that by urging.\", not \"victims and petitioners\") and the argument comes through intact after the repeat; 1, not 4."}
+  ],
+  "overlooked": [
+   {"reference": "", "engine": "Thank you.", "severity": 1, "note": "The flagged insertion itself is missing from Gemma's misses list."}
+  ]
+ },
+ "worth_a_listen": {"yes": false, "why": "Harmless either way: a stray \"thank you\" at a hand-off changes nothing."},
+ "summary": "Gemma judged the harmless extra \"Thank you\" correctly in the labelled requests, but in the blind test it picked the first slot both times with opposite reasons, and its misses list left out the flagged words while rating a repeated stretch at 4."
+}

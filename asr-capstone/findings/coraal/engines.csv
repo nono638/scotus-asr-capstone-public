@@ -1,0 +1,4 @@
+engine,recordings,wer_standard,wer_lowercase_nopunct,wer_verbatim,swapped_pct,dropped_pct,added_pct,audio_hours,hours_taken,speed_x_realtime,standard_reference_tokens,run
+parakeet-tdt-0.6b-v3,51,14.03,15.06,27.05,5.11,7.63,1.29,27.15,0.69,39.4,270746,run-coraal-parakeet-reread
+Qwen3-ASR-1.7B-hf,51,14.39,16.74,29.26,4.37,8.6,1.43,27.15,3.76,7.2,270746,run-coraal-qwen3
+whisper-large-v3,51,17.85,20.75,34.75,4.86,11.45,1.54,27.15,1.32,20.6,270746,run-coraal-whisper

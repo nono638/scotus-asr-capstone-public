@@ -1,0 +1,1 @@
+{"case": "r213", "own": {"reason": "The engine drops the false start \"some\" before \"something\"; nothing is lost.", "meaning": "same", "severity": 0, "follow_up": "same thing", "reference_doubt": "no"}}

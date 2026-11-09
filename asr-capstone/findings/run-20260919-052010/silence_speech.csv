@@ -1,0 +1,11 @@
+docket,engine,silence_start,silence_seconds,speech_seconds,speech_share,holds_speech,start_clock
+17-530,parakeet-parakeet-tdt-0.6b-v3,95.76,2.48,0.38,0.153,True,0:01:35
+17-530,parakeet-parakeet-tdt-0.6b-v3,305.68,2.56,1.57,0.613,True,0:05:05
+17-530,parakeet-parakeet-tdt-0.6b-v3,682.24,5.12,4.83,0.943,True,0:11:22
+17-530,parakeet-parakeet-tdt-0.6b-v3,775.2,2.16,0.74,0.343,True,0:12:55
+17-530,parakeet-parakeet-tdt-0.6b-v3,796.48,2.24,0.48,0.214,True,0:13:16
+17-530,parakeet-parakeet-tdt-0.6b-v3,1445.28,2.16,1.42,0.657,True,0:24:05
+17-530,parakeet-parakeet-tdt-0.6b-v3,1552.0,2.64,0.0,0.0,False,0:25:52
+17-530,parakeet-parakeet-tdt-0.6b-v3,1966.08,3.2,2.69,0.841,True,0:32:46
+17-530,parakeet-parakeet-tdt-0.6b-v3,2258.56,4.08,1.71,0.419,True,0:37:38
+17-530,parakeet-parakeet-tdt-0.6b-v3,2377.28,3.76,0.0,0.0,False,0:39:37

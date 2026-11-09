@@ -1,0 +1,169 @@
+{
+ "case": "s03",
+ "X": {
+  "meaning": {
+   "line": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation lost",
+    "reason": "The engine removed the negation 'not' from the word 'shouldn't', changing the meaning of the sentence."
+   },
+   "minute": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation lost",
+    "reason": "The engine removed the negation 'n't' from the word 'shouldn't', changing the meaning of the sentence."
+   },
+   "whole": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation lost",
+    "reason": "The engine missed the negation 'n't' in the word 'shouldn't', changing the speaker's intent from preventing young men from going to the streets to encouraging it."
+   }
+  },
+  "noticeable": "no",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The difference changes the meaning of the program's mission from preventing young men from joining gangs/street life to encouraging them to do so."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The engine omitted the negation 'n't' present in the reference transcript."
+  },
+  "blind": {
+   "order1 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "The speaker is describing a nonprofit mentoring program designed to support young black men. It is logically consistent that the program aims to prevent them from 'going to the streets' (engaging in street life/crime), making 'shouldn't' the correct word for the context of a mentorship program."
+   },
+   "order2 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "The context of the speaker describing a nonprofit mentoring program for young black men implies a preventative or positive message. Version A's use of 'shouldn't' makes sense in the context of discouraging involvement with 'the streets,' whereas Version B's 'should' would imply the program encourages street involvement, which contradicts the purpose of a mentoring program."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Qwen3": 1,
+    "Parakeet": 1,
+    "Whisper": 3
+   },
+   "reason": "Engine 1 and Engine 2 are tied for first place because they correctly identify the word 'shouldn't', whereas Engine 3 changes the meaning to the opposite by using 'should'."
+  },
+  "misses": [
+   {
+    "reference": "all young black men shouldn't go to the streets",
+    "engine": "all young black men should go to the streets",
+    "severity": 4,
+    "what": "the meaning of the program's mission regarding the streets"
+   },
+   {
+    "reference": "six to twenty-five",
+    "engine": "6 to 25",
+    "severity": 0,
+    "what": "the age range for the program"
+   },
+   {
+    "reference": "mentoring program",
+    "engine": "mentor program",
+    "severity": 1,
+    "what": "the description of the program type"
+   },
+   {
+    "reference": "we will try to do uh, a scholarship. For the For all",
+    "engine": "you will try to do a scholarship for all",
+    "severity": 2,
+    "what": "the loss of the scholarship's target group"
+   }
+  ]
+ },
+ "Y": {
+  "meaning": {
+   "line": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation lost",
+    "reason": "The speech recognition engine failed to recognize the negative contraction 'shouldn't', turning a negation into an affirmation."
+   },
+   "minute": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation lost",
+    "reason": "The speech recognition engine failed to recognize the negative contraction 'shouldn't', turning a negative command into a positive one."
+   },
+   "whole": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation lost",
+    "reason": "The speech recognition engine failed to recognize the negation 'n't' in 'shouldn't'."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The error reverses the entire purpose of the non-profit program, changing it from a preventative measure to an endorsement of street life."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The checker correctly identified that the reference contains a negation ('shouldn't') while the engine does not ('should')."
+  },
+  "blind": {
+   "order1 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "The context of a nonprofit mentoring program for young black men implies a goal of preventing them from going to the streets, making 'shouldn't' the only logically coherent choice."
+   },
+   "order2 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "The context of a nonprofit mentoring program for young black men implies a preventative mission to keep them away from 'the streets', making 'shouldn't' the only logically coherent choice."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Qwen3": 1,
+    "Parakeet": 2,
+    "Whisper": 3
+   },
+   "reason": "Engine 1 correctly preserves the negative meaning of the speaker's intent, whereas Engine 2 introduces a nonsensical 'So one' and Engine 3 incorrectly changes the meaning to the opposite by removing the negation."
+  },
+  "misses": [
+   {
+    "reference": "I want to I'm going to pursue IT. And I'm'a start a, uh, a non-profit program called Big Brother.",
+    "engine": "",
+    "severity": 3,
+    "what": "The engine omitted the speaker's specific career plans and the name of the program."
+   },
+   {
+    "reference": "showing that all young black men shouldn't go to the streets",
+    "engine": "It's one that all young black men should go to the streets",
+    "severity": 4,
+    "what": "The engine reversed the meaning from 'shouldn't' to 'should'."
+   },
+   {
+    "reference": "they first answer. Or they first try.",
+    "engine": "They first answer. First try.",
+    "severity": 2,
+    "what": "The engine removed the conjunction 'Or'."
+   },
+   {
+    "reference": "mentoring program",
+    "engine": "mentor program",
+    "severity": 1,
+    "what": "Changed 'mentoring' to 'mentor'."
+   },
+   {
+    "reference": "you would be in the mentoring program from six to eighteen ages six to eighteen, then from eighteen to twenty five you have the chance to be a mentor.",
+    "engine": "You'll be in the mentor program from 6 to 18. From ages 6 to 18. Then from 18",
+    "severity": 3,
+    "what": "The engine omitted the second half of the age range and the information about becoming a mentor."
+   },
+   {
+    "reference": "And one And once you in college we will try to do uh, a scholarship. For the For all",
+    "engine": "And once you're in college, you will try to do a scholarship for all",
+    "severity": 1,
+    "what": "The engine smoothed the grammar and removed the fragmented ending."
+   }
+  ]
+ }
+}

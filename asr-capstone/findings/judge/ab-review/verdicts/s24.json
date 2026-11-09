@@ -1,0 +1,13 @@
+{"case": "s24",
+ "parts": {
+  "meaning/line": {"X": "right", "Y": "right", "better": "tie", "why": "Both: reworded, severity 0; 'site' for 'website' changes nothing."},
+  "meaning/minute": {"X": "right", "Y": "right", "better": "tie", "why": "Same (X) or reworded (Y), severity 0."},
+  "meaning/whole": {"X": "right", "Y": "right", "better": "tie", "why": "Both reworded, severity 0."},
+  "noticeable": {"X": "right", "Y": "right", "better": "tie", "why": "Both say no."},
+  "stakes": {"X": "right", "Y": "right", "better": "tie", "why": "Both say no."},
+  "rule": {"X": "partly", "Y": "partly", "better": "tie", "why": "The word differs, but 'different content word' overstates a synonym. Both say yes; X even calls it a synonym in the same breath."},
+  "blind": {"X": "right", "Y": "partly", "better": "X", "why": "X picks 'website' in both orders. Y's pick flips with the order."},
+  "rank": {"X": "partly", "Y": "partly", "better": "Y", "why": "At the spot the four 'website' engines are equal and Granite's 'site' means the same. X ranks Whisper and Granite down for words outside the spot ('person', 'every moment'). Y ranks Granite 2 for the synonym (closer to the task) but still puts Whisper 3 for a word near the spot."},
+  "misses": {"X": {"real_and_matter": 2, "trivial": 5, "not_real": 0, "important_missed": 0}, "Y": {"real_and_matter": 2, "trivial": 1, "not_real": 0, "important_missed": 0}, "better": "Y", "why": "Both find 'mom and pop shop' -> 'moment, a pop shop' and 'I've developed' -> 'we looked'. X pads the list with a dropped 'it', 'that', the 'pers' false start and 'as well'->'also'."}
+ },
+ "overall": {"better": "Y", "why": "Y's miss list is clean and its rank is closer to the spot; X only wins the blind test."}}

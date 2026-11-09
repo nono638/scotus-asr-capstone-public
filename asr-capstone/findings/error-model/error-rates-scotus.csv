@@ -1,0 +1,23 @@
+condition,value,words,error_pct
+engine,Canary,656926,6.32
+engine,Granite,656926,7.43
+engine,Granite Plus,656926,4.83
+engine,Parakeet,656926,5.07
+engine,Qwen3,656926,3.6
+engine,Voxtral,656926,5.58
+engine,Whisper,656926,5.15
+word_type,content,1895145,3.76
+word_type,function,2484643,6.1
+word_type,legal,5544,26.89
+word_type,name,119693,16.43
+word_type,number,93457,5.71
+turn,0,102382,28.96
+turn,1-3,487718,17.06
+turn,4-10,862953,5.63
+turn,far,3145429,2.8
+near_dash,0,4064361,2.68
+near_dash,1,534121,26.31
+disfluency_near,0,4379067,4.32
+disfluency_near,1,219415,27.39
+role,advocate,2812264,4.62
+role,justice,1786218,6.69

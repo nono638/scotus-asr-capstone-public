@@ -1,0 +1,1 @@
+{"case": "a005", "own": {"reason": "The engine leaves out 'just' in 'I think it's just very interesting'; the sentence means the same without it, and all five engines missed it.", "meaning": "reworded", "severity": 0, "follow_up": "same meaning, other words", "reference_doubt": "maybe", "misspoke": "no"}}

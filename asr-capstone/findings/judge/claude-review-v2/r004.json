@@ -1,0 +1,1 @@
+{"case": "r004", "own": {"reason": "The engine writes \"is going to take me like hey\" for \"is going to text me\"; the sentence no longer makes sense and the detail that the supervisor texted is lost.", "meaning": "garbled", "severity": 2, "follow_up": "garble", "reference_doubt": "no"}}

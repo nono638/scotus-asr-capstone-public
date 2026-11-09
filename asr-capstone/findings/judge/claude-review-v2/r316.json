@@ -1,0 +1,1 @@
+{"case": "r316", "own": {"reason": "The engine wrote \"they're gone\" for \"they gone\"; adding the copula keeps the meaning.", "meaning": "same", "severity": 0, "follow_up": "meaning kept", "reference_doubt": "no", "misspoke": "no"}}

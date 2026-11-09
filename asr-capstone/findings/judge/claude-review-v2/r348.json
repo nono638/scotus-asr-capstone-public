@@ -1,0 +1,1 @@
+{"case": "r348", "own": {"reason": "The engine wrote \"or didn't you just\" for \"or do you think it just\" in the interviewer's broken-off question, adding a negative to a question that is garbled anyway.", "meaning": "garbled", "severity": 1, "follow_up": "negation added", "reference_doubt": "no", "misspoke": "no"}}

@@ -1,0 +1,2 @@
+docket,engine,model,audio_minutes,reference_words,hypothesis_words,words_per_minute,speaking_rate_ok,runtime_seconds,speed_x_realtime,omission_basis,omitted_spans,omitted_words,seconds_lost,longest_span_words,longest_span_seconds,spans_with_odd_timing,wer_standard,wer_lowercase_nopunct,wer_verbatim,warnings
+17-530,parakeet-parakeet-tdt-0.6b-v3,parakeet-tdt-0.6b-v3,49.29,9105,8906,184.7,True,91.2,32.41,lowercase_nopunct,0,0,0.0,0,0.0,0,4.741,7.942,15.091,

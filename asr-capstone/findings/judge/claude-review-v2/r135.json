@@ -1,0 +1,1 @@
+{"case": "r135", "own": {"reason": "The reference has the dialect \"We ain't have much money\" meaning \"didn't have\"; the engine writes \"didn't\", which means the same.", "meaning": "same", "severity": 0, "follow_up": "meaning kept", "reference_doubt": "no"}}

@@ -1,0 +1,128 @@
+{
+ "case": "s17",
+ "own": {
+  "meaning": "changed",
+  "severity": 3,
+  "noticeable": "maybe",
+  "follow_up": "content lost, gap hidden",
+  "stakes": "yes",
+  "reason": "Whisper left out \"in the world. It's not about that. Cause money don't make you happy at night. It it don't.\" and joined the rest into \"It's having all the money is it's not all that\", losing the speaker's clearest line that money does not make you happy.",
+  "rule_right": "yes",
+  "rule_reason": "Nineteen words are missing in Whisper, Qwen3 (Engine 1) wrote nearly all of them and Parakeet (Engine 2) most of them, as the evidence says.",
+  "more_plausible": "reference",
+  "plausible_how_clear": "Fairly clear: \"I got all the money in the world\" is a set phrase, and \"I got all the money it's having all the money\" does not hang together; the speaker's general point survives later, so it is not certain from sense alone.",
+  "my_misses": [
+   {
+    "reference": "in the world. It's not about that. Cause money don't make you happy at night. It it don't.",
+    "engine": "It's",
+    "severity": 3,
+    "what": "a whole sentence of the speaker's argument is dropped and the join reads \"It's having all the money\""
+   },
+   {
+    "reference": "that's not your reality",
+    "engine": "that's not not your reality",
+    "severity": 1,
+    "what": "a doubled \"not\" that literally reverses the sentence, though a reader would take it as a slip"
+   },
+   {
+    "reference": "go out here and buy whatever you want",
+    "engine": "go in and buy whatever you want",
+    "severity": 0,
+    "what": "\"out here\" becomes \"in\""
+   }
+  ]
+ },
+ "review": {
+  "labelled/line": {
+   "verdict": "partly",
+   "why": "It is right that the money-and-happiness sentence is lost, but severity 4 (\"removes the entire core argument\") is too strong, because the speaker makes the same point several more times (\"it's not gonna make you happy\")."
+  },
+  "labelled/minute": {
+   "verdict": "partly",
+   "why": "The description (\"replacing a complete thought with a single, disconnected word\") is accurate, but with the whole minute in view severity 4 is too high; the point survives, a quotable sentence is lost. 3 fits."
+  },
+  "labelled/whole": {
+   "verdict": "agree",
+   "why": "Severity 3, content lost, stakes yes match my reading; \"gap shows\" is fair since \"It's having all the money is it's\" reads as broken. I judged only from the minute."
+  },
+  "rule/minute": {
+   "verdict": "agree",
+   "why": "Nineteen words are missing in Whisper and the other two engines wrote most of them; the rule is right."
+  },
+  "blind/order1": {
+   "verdict": "partly",
+   "why": "It picked the reference (A), but it picked A again in order 2 when A was the engine's version, so the right pick here looks positional."
+  },
+  "blind/order2": {
+   "verdict": "disagree",
+   "why": "It picked the engine's broken \"i got all the money it's having all the money\" with \"sure 3\" and called the speaker's real sentence a \"grammatically disjointed insertion\", the reverse of what it said in order 1."
+  },
+  "rank/minute": {
+   "verdict": "agree",
+   "why": "Qwen3 (all the words), then Parakeet (\"and all\" for \"in the world\"), then Whisper (skipped) is a fair order; the first two could tie."
+  },
+  "misses": [
+   {
+    "reference": "that was on that was on the label",
+    "engine": "that was on a label",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "\"the\" to \"a\" plus a dropped repeat; 0."
+   },
+   {
+    "reference": "Rap about what rap about about you",
+    "engine": "Rap about you",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "The reference is a restart; the engine kept the meant words. 0, not 2."
+   },
+   {
+    "reference": "how you gonna go out here",
+    "engine": "how you going to go out here",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "yes",
+    "note": "Rated 0, but the prompt said to leave such spellings out."
+   },
+   {
+    "reference": "It's not all about, I got all the money in the world. It's not about that. Cause money don't make you happy at night. It it don't. Having all the money it's it's not all that.",
+    "engine": "It's not all about I got all the money. It's having all the money is it's not all that",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "yes",
+    "note": "The flagged skip; 3 is fair and the description is accurate."
+   },
+   {
+    "reference": "Hermes",
+    "engine": "armes",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "A brand name written differently; the prompt said to leave names out. 0."
+   },
+   {
+    "reference": "it's not gonna t externally",
+    "engine": "it's not going to externally",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "A cut-off sound and \"gonna\"; 0."
+   }
+  ],
+  "overlooked": [
+   {
+    "reference": "that's not your reality",
+    "engine": "that's not not your reality",
+    "severity": 1,
+    "note": "A doubled \"not\" that literally says the opposite; a reader would probably read it as a slip, but it belongs on the list more than \"gonna\" does."
+   }
+  ]
+ },
+ "worth_a_listen": {
+  "yes": true,
+  "why": "Nineteen words of a strong quote (\"money don't make you happy at night\") are missing from Whisper; worth confirming the audio is clear there, as the other engines suggest."
+ },
+ "summary": "Gemma found the skip and described it well, but it rated it 4 although the point is repeated later, flipped its blind pick between orders (calling the real sentence a disjointed insertion in order 2), and filled its misses list with \"gonna\", a brand name and a restart."
+}

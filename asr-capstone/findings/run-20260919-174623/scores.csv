@@ -1,0 +1,4 @@
+docket,engine,model,normalizer,wer,wer_percent,hits,substitutions,deletions,insertions,reference_tokens,hypothesis_tokens,deletion_rate
+17-530,qwen3-asr-Qwen3-ASR-1.7B-hf,Qwen3-ASR-1.7B-hf,standard,0.050233264619724424,5.023,8924,94,199,170,9217,9188,0.021591
+17-530,qwen3-asr-Qwen3-ASR-1.7B-hf,Qwen3-ASR-1.7B-hf,lowercase_nopunct,0.05391498881431767,5.391,8621,129,190,163,8940,8913,0.021253
+17-530,qwen3-asr-Qwen3-ASR-1.7B-hf,Qwen3-ASR-1.7B-hf,verbatim,0.21208127402526084,21.208,7352,1383,370,178,9105,8913,0.040637

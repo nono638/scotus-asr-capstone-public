@@ -1,0 +1,16 @@
+corpus,model,mcfadden_r2_beyond_recording
+OT2010,engine,0.0021
+OT2010,conditions,0.1632
+OT2010,both,0.1656
+OT2017,engine,0.0032
+OT2017,conditions,0.2396
+OT2017,both,0.2435
+OT2021,engine,0.0039
+OT2021,conditions,0.2426
+OT2021,both,0.2473
+OT2025,engine,0.0039
+OT2025,conditions,0.2341
+OT2025,both,0.2388
+all-four,engine,0.0031
+all-four,conditions,0.2191
+all-four,both,0.2228

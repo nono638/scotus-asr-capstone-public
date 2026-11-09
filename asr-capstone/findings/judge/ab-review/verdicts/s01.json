@@ -1,0 +1,15 @@
+{"case": "s01",
+ "parts": {
+  "meaning/line": {"X": "right", "Y": "right", "better": "tie", "why": "Both say opposite, severity 4, negation lost, which fits can't -> can."},
+  "meaning/minute": {"X": "right", "Y": "right", "better": "tie", "why": "Same answers as the line view, both correct."},
+  "meaning/whole": {"X": "right", "Y": "right", "better": "tie", "why": "Both correct; the minute shows the point is that the condition is off limits, so losing the negative reverses it."},
+  "noticeable": {"X": "right", "Y": "right", "better": "tie", "why": "Both say yes; 'It can include who you get pregnant with. That's just no.' reads as self-contradictory."},
+  "stakes": {"X": "right", "Y": "right", "better": "tie", "why": "Both say yes with a fair account; Y's 'government can regulate pregnancy' is a slight stretch but in the right direction."},
+  "rule": {"X": "right", "Y": "right", "better": "tie", "why": "Both confirm the rule's can't/can evidence."},
+  "blind": {"X": "right", "Y": "right", "better": "tie", "why": "Both pick the reference in both orders, sure 3, with sound reasons tied to 'that's just no'."},
+  "rank": {"X": "right", "Y": "right", "better": "tie", "why": "Both rank Qwen3 and Whisper 1 and Parakeet last, which is right at the spot."},
+  "misses": {"X": {"real_and_matter": 1, "trivial": 2, "not_real": 0, "important_missed": 0},
+             "Y": {"real_and_matter": 1, "trivial": 2, "not_real": 0, "important_missed": 0},
+             "better": "tie", "why": "Both find can't -> can and add two harmless items ('it just violates' / 'standards', and the 'well, well, yeah, that no' jumble)."}
+ },
+ "overall": {"better": "tie", "why": "The two sets give the same verdicts on every part with equally sound reasons."}}

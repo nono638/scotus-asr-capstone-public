@@ -1,0 +1,70 @@
+status,config,run,terms,note
+done,config/parakeet.yaml,run-scotus250-parakeet,2010,77 of 77 on the night of 16 Oct 2026; about 50x real time
+done,config/qwen3.yaml,run-scotus250-qwen3,2010,75 overnight 16 Oct; last 2 and scoring on 17 Oct
+done,config/parakeet.yaml,run-scotus250-parakeet,2021,62 of 62 on 17 Oct 2026 (9 in the smoke test); about 46x real time. One term at a time so each new term ends up with all three engines
+done,config/corpus.yaml,run-scotus250-whisper,2021,62 of 62 on 17 Oct 2026; about 22x real time. Whisper's 2010 is in run-20260918-035220 and is not redone
+done,config/qwen3.yaml,run-scotus250-qwen3,2021,62 of 62 on 17-18 Oct 2026; about 9x real time
+done,config/parakeet.yaml,run-scotus250-parakeet,2025,58 of 58 on 18 Oct 2026; about 36x real time (slower than earlier terms; the card sat mostly idle)
+done,config/corpus.yaml,run-scotus250-whisper,2025,58 of 58 on 18 Oct 2026; about 20x real time
+done,config/qwen3.yaml,run-scotus250-qwen3,2025,58 of 58 on 18 Oct 2026; about 7.7x real time (5.8-8.6)
+done,config/parakeet.yaml config/corpora/edacc.yaml config/corpora/edacc-dev.yaml,run-edacc-parakeet,,"EdAcc dev, 36 recordings: doubles EdAcc to 76 (queued 18 Oct 2026)"
+done,config/corpus.yaml config/corpora/edacc.yaml config/corpora/edacc-dev.yaml,run-edacc-whisper,,
+done,config/qwen3.yaml config/corpora/edacc.yaml config/corpora/edacc-dev.yaml,run-edacc-qwen3,,
+done,config/canary.yaml config/corpora/edacc.yaml config/corpora/edacc-dev.yaml,run-edacc-canary,,
+done,config/granite.yaml config/corpora/edacc.yaml config/corpora/edacc-dev.yaml,run-edacc-granite,,
+done,config/parakeet.yaml config/corpora/coraal.yaml,run-coraal-parakeet,,"CORAAL Rochester + Princeville: 51 interviews, 27 hours (queued 19 Oct 2026)"
+done,config/corpus.yaml config/corpora/coraal.yaml,run-coraal-whisper,,
+done,config/qwen3.yaml config/corpora/coraal.yaml,run-coraal-qwen3,,2 of 51 already done by the trial on 19 Oct
+done,config/parakeet.yaml,run-scotus250-parakeet,2020,"argued by telephone: justices one at a time, almost no crosstalk"
+done,config/corpus.yaml,run-scotus250-whisper,2020,
+done,config/qwen3.yaml,run-scotus250-qwen3,2020,57 of 57 on 20 Oct 2026; about 8.2x real time (7.2-9.0)
+done,config/parakeet.yaml,run-scotus250-parakeet,2013,"70 of 70 on 20 Oct 2026, about 36x; the rest spread across the years, so coverage stays even however far it gets; records rebuilt with the fixed extractor and re-scored 21 Oct (old files in superseded/); rescore_harmonised run 21 Oct 04:25 with the OT2023 row (matches)"
+done,config/corpus.yaml,run-scotus250-whisper,2013,"70 of 70 on 20 Oct 2026, about 20x; records rebuilt with the fixed extractor and re-scored 21 Oct (old files in superseded/); rescore_harmonised run 21 Oct 01:50 (matches)"
+done,config/qwen3.yaml,run-scotus250-qwen3,2013,"70 of 70 on 20-21 Oct 2026, about 7.5x (6.0-8.7; 4.2-6.2 while the TTS program shared the card); fixed records from the start; rescore_harmonised run 21 Oct 01:50 (matches)"
+done,config/parakeet.yaml,run-scotus250-parakeet,2023,"60 of 60 on 21 Oct 2026, about 33x (30-37); rescore_harmonised run 21 Oct 04:25 (matches)"
+done,config/corpus.yaml,run-scotus250-whisper,2023,"60 of 60 on 21 Oct 2026, about 19.5x; 22-1008 failed 3 times in faster-whisper word timing at the last half-second, re-run 09:37-09:47 beside the Qwen3 row with the fixed engine (d0b1e8d, word_timing_crash_ignored_at 4212.18), 12297 words, 7.2% WER; rescore_harmonised run 21 Oct 10:00 (matches)"
+done,config/qwen3.yaml,run-scotus250-qwen3,2023,"60 of 60 on 21 Oct 2026, about 7.0x (6.3-7.4 alone; 5.2 beside the 22-1008 Whisper re-run); card held to 70-104 W by a software power cap; rescore_harmonised run 21 Oct 22:15 (matches)"
+done,config/parakeet.yaml,run-scotus250-parakeet-reread,2015,"OT2015 (queued 25 Oct 2026): 69 arguments. Parakeet 69 of 69 on 25 Oct 2026 21:51-23:58; median 33.5x (28.9-39.9)"
+done,config/corpus.yaml,run-scotus250-whisper,2015,"OT2015. Whisper 69 of 69 on 25-26 Oct 2026 23:58-03:45; median 18.6x (16.0-21.6)"
+done,config/qwen3.yaml,run-scotus250-qwen3,2015,"OT2015. Qwen3 69 of 69 on 26 Oct 2026 03:45-12:05; median 8.9x (6.4-10.9); standard WER 5.58% after harmonising"
+done,config/parakeet.yaml,run-scotus250-parakeet-reread,2019,"OT2019 (queued 25 Oct 2026): 58 arguments. Parakeet 58 of 58 on 26 Oct 2026 12:05-13:32; median 44.1x (34.5-49.8); 18-1323 chunk at 2044 s kept a loop (see overnight-log 26 Oct 13:40)"
+done,config/corpus.yaml,run-scotus250-whisper,2019,"OT2019 (queued 25 Oct 2026): 58 arguments. Whisper 58 of 58 on 26 Oct 2026 13:32-16:25; median 22.0x (19.3-25.3); 18-1323 clean at 5.62%"
+done,config/qwen3.yaml,run-scotus250-qwen3,2019,"OT2019 (queued 25 Oct 2026): 58 arguments. Qwen3 58 of 58 on 26 Oct 2026 16:25-00:00; median 8.4x (6.1-9.7); standard WER 4.19% after harmonising; 18-1323 clean at 4.24%"
+hold,config/parakeet.yaml,run-scotus250-parakeet-reread,2011,
+hold,config/corpus.yaml,run-scotus250-whisper,2011,
+hold,config/qwen3.yaml,run-scotus250-qwen3,2011,
+done,config/parakeet.yaml,run-scotus250-parakeet-reread,2022,"OT2022: 57 arguments. Parakeet 57 of 57 on 27 Oct 2026 00:00-02:43, the first full run with the per-frame cap (3392e30, max_pieces_per_frame 10); median 32.8x (29.7-38.3); no loop-guard warnings; standard WER 5.06% after harmonising"
+done,config/corpus.yaml,run-scotus250-whisper,2022,"OT2022: 57 arguments. Whisper 57 of 57 on 27 Oct 2026 02:43-07:12; median 19.8x (18.3-21.9); standard WER 5.85% after harmonising"
+done,config/qwen3.yaml,run-scotus250-qwen3,2022,"OT2022: 57 arguments. Qwen3 57 of 57 on 27 Oct 2026 07:12-19:20; median 7.3x (5.5-8.4); peak 14.76 GB reserved, 16.08 used; standard WER 4.18% after harmonising; 21-1086 chunk 22 kept a loop (overnight-log 27 Oct 08:05)"
+hold,config/parakeet.yaml,run-scotus250-parakeet-reread,2016,
+hold,config/corpus.yaml,run-scotus250-whisper,2016,
+hold,config/qwen3.yaml,run-scotus250-qwen3,2016,
+hold,config/parakeet.yaml,run-scotus250-parakeet-reread,2024,
+hold,config/corpus.yaml,run-scotus250-whisper,2024,
+hold,config/qwen3.yaml,run-scotus250-qwen3,2024,
+hold,config/parakeet.yaml,run-scotus250-parakeet-reread,2012,
+hold,config/corpus.yaml,run-scotus250-whisper,2012,
+hold,config/qwen3.yaml,run-scotus250-qwen3,2012,
+hold,config/parakeet.yaml,run-scotus250-parakeet-reread,2018,
+hold,config/corpus.yaml,run-scotus250-whisper,2018,
+hold,config/qwen3.yaml,run-scotus250-qwen3,2018,
+hold,config/parakeet.yaml,run-scotus250-parakeet-reread,2014,
+hold,config/corpus.yaml,run-scotus250-whisper,2014,
+hold,config/qwen3.yaml,run-scotus250-qwen3,2014,
+hold,config/canary.yaml,run-scotus250-canary,2010 2021 2025,backfill only if a result calls for it (decided 16 Oct 2026)
+hold,config/voxtral.yaml,run-scotus250-voxtral,2010 2021 2025,backfill only if a result calls for it
+hold,config/granite.yaml,run-scotus250-granite,2010 2021 2025,backfill only if a result calls for it
+hold,config/granite-plus.yaml,run-scotus250-granite-plus,2010 2021 2025,1.6x real time: about half of all the machine time on its own
+done,config/parakeet.yaml config/corpora/coraal.yaml,run-coraal-parakeet,,"CORAAL Washington DC (DCB) added 22 Oct 2026: 63 interviews, 46 hours. Same run as ROC + PRV, which are skipped as done"
+done,config/corpus.yaml config/corpora/coraal.yaml,run-coraal-whisper,,CORAAL DCB
+done,config/qwen3.yaml config/corpora/coraal.yaml,run-coraal-qwen3,,CORAAL DCB
+done,config/parakeet.yaml config/corpora/earnings22.yaml,run-earnings22-parakeet,,"Earnings-22 (queued 22 Oct 2026): 125 earnings calls, 120 hours, 27 countries; verbatim references. Parakeet 125 of 125 on 22 Oct 2026 08:13-11:09, median 40.8x (31.7-68.3)"
+done,config/corpus.yaml config/corpora/earnings22.yaml,run-earnings22-whisper,,"Earnings-22. Whisper 125 of 125 on 22 Oct 2026 11:09-16:15, median 23.8x (18.9-31.2)"
+done,config/qwen3.yaml config/corpora/earnings22.yaml,run-earnings22-qwen3,,"Earnings-22. Qwen3 125 of 125 on 22-23 Oct 2026 16:15-08:08 (one restart), median 8.5x (3.2-12.6); median WER 9.96%"
+done,config/parakeet.yaml config/corpora/coraal.yaml,run-coraal-parakeet-reread,,"CORAAL's other five parts (ATL, DCA, DTA, LES, VLD) queued 23 Oct 2026: 157 interviews, 88 hours. Same runs as ROC + PRV + DCB, which are skipped as done"
+done,config/corpus.yaml config/corpora/coraal.yaml,run-coraal-whisper,,"CORAAL ATL, DCA, DTA, LES, VLD"
+done,config/qwen3.yaml config/corpora/coraal.yaml,run-coraal-qwen3,,"CORAAL ATL, DCA, DTA, LES, VLD"
+done,config/parakeet.yaml config/reruns/parakeet-capped-scotus.yaml,run-scotus250-parakeet-capped,,"Parakeet re-run with the per-frame cap (3392e30), queued 26 Oct 2026: the 53 Supreme Court arguments with a frame over 10 pieces or halved by the loop check. New folder; the -reread runs are kept for comparison. 53 of 53 on 27 Oct 2026 19:20-21:32, median 33.1x (25.7-37.9), peak 2.63 GB; no loop-guard warnings; standard WER after harmonising 18-1323 10.59 -> 5.81, 13-1339 8.25 -> 7.24, the other 51 within 0.2 points (median change 0.00)"
+done,config/parakeet.yaml config/corpora/edacc.yaml config/reruns/parakeet-capped-edacc.yaml,run-edacc-parakeet-capped,,"Parakeet capped re-run: 2 EdAcc recordings (one test, one dev). 2 of 2 on 27 Oct 2026 21:32-21:33; WER a little lower than -reread (C32_P2 18.57 -> 18.41, C47_P2 8.54 -> 8.29 standard)"
+done,config/parakeet.yaml config/corpora/coraal.yaml config/reruns/parakeet-capped-coraal.yaml,run-coraal-parakeet-capped,,"Parakeet capped re-run: 10 CORAAL interviews. 10 of 10 on 27 Oct 2026 21:33-21:45, 17.7-44.2x; same loop-guard warnings as -reread (fast speech, kept); standard WER DTA_se1_ag4_f_03_1 20.92 -> 20.25, DCA_se1_ag4_m_01_1 13.37 -> 13.22, the other 8 unchanged"
+done,config/parakeet.yaml config/corpora/earnings22.yaml config/reruns/parakeet-capped-earnings22.yaml,run-earnings22-parakeet-capped,,"Parakeet capped re-run: 2 Earnings-22 calls. 2 of 2 on 27 Oct 2026 21:45-21:51, 24.3x and 39.3x; standard WER 4481766 33.10 -> 32.90, 4481904 17.90 -> 17.87"

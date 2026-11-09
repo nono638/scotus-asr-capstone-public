@@ -1,0 +1,1 @@
+{"case": "r272", "own": {"reason": "The engine writes 'accept' for 'except' in the quoted statute. The provision is an exception for the state's right of recovery, and 'accept' turns it into acceptance, so a legal reader is misled unless they spot the homophone.", "meaning": "changed", "severity": 2, "follow_up": "changes meaning", "reference_doubt": "no"}}

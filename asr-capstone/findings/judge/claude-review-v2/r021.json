@@ -1,0 +1,1 @@
+{"case": "r021", "own": {"reason": "The engine writes \"Route 1, bus 97\" for \"route one box ninety-seven\"; a rural mailing address becomes what reads like a bus number.", "meaning": "changed", "severity": 2, "follow_up": "changes meaning", "reference_doubt": "no"}}

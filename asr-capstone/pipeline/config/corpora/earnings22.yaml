@@ -1,0 +1,25 @@
+# Earnings-22, Rev's corpus of company earnings calls with accented English, in place
+# of the Supreme Court. Given after a model's own file, so one file serves every model:
+#
+#   python -m scotus_asr.cli run --config config/qwen3.yaml --config config/corpora/earnings22.yaml
+#
+# What the corpus is, how it is downloaded and how its reference is read are in
+# scotus_asr/corpora/earnings22.py; the scouting notes in asr-capstone/datasets/earnings22.md.
+# `run` downloads it on first use (125 calls, 1.9 GB of MP3).
+
+corpus:
+  name: earnings22
+  root: "{asr_corpora}/earnings22"
+  # Empty for all 125 calls; subset10 for the ten with a second, cleaned-up
+  # reference; or a region from metadata.csv (English, Asian, Spanish/Portuguese, ...).
+  split: ""
+
+paths:
+  # Runs go beside the corpus, never among the Supreme Court runs.
+  runs_dir: "{asr_corpora}/earnings22/runs"
+
+scoring:
+  # Prepared remarks are read quickly and the question-and-answer part is slower;
+  # wide on purpose, as for EdAcc and CORAAL, until the real spread is measured.
+  words_per_minute_min: 60
+  words_per_minute_max: 260

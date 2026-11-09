@@ -1,0 +1,175 @@
+{
+ "case": "s21",
+ "X": {
+  "meaning": {
+   "line": {
+    "meaning": "reworded",
+    "severity": 0,
+    "follow_up": "same thing",
+    "reason": "The engine interprets 'online' as 'on the line', which in this context refers to a person being on a telephone line."
+   },
+   "minute": {
+    "meaning": "reworded",
+    "severity": 0,
+    "follow_up": "same thing",
+    "reason": "The engine expands the single word 'online' into the phrase 'on the line'."
+   },
+   "whole": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "same thing",
+    "reason": "The engine uses the phrase 'on the line' instead of 'online'. In the context of a conference call, both terms are synonymous and refer to the caller's connection."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "no",
+   "reason": "The difference between 'online' and 'on the line' is a minor variation in phrasing that does not change the meaning of the sentence regarding a participant joining the call."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The engine's text 'on the line' is a phonetic expansion of the reference's 'online', which matches the evidence provided."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "engine",
+    "sure": 3,
+    "reason": "In the context of a conference call, the speaker is referring to a participant who is waiting to join the call. 'On the line' is the standard idiomatic expression used in this setting to refer to someone on a telephone or conference line, whereas 'online' is less common for referring to a specific person's connection status in this context."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "engine",
+    "sure": 3,
+    "reason": "In the context of an earnings call, the moderator is introducing the next participant. 'On the line' is the standard way to refer to a person calling in via telephone, whereas 'online' would be less common for a specific individual being introduced in this manner."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Qwen3": 1,
+    "Parakeet": 2,
+    "Whisper": 3
+   },
+   "reason": "Engine 1 captures the correct meaning of the reference, while Engine 2 adds extra words and Engine 3 misses the core word."
+  },
+  "misses": [
+   {
+    "reference": "challenging environments",
+    "engine": "changing environments",
+    "severity": 2,
+    "what": "challenging environments vs changing environments"
+   },
+   {
+    "reference": "variant side",
+    "engine": "variance side",
+    "severity": 2,
+    "what": "variant side vs variance side"
+   },
+   {
+    "reference": "performer basis",
+    "engine": "pro forma basis",
+    "severity": 2,
+    "what": "performer basis vs pro forma basis"
+   },
+   {
+    "reference": "for varying",
+    "engine": "for variant",
+    "severity": 1,
+    "what": "for varying for the full fiscal year vs for variant for the full fiscal year"
+   }
+  ]
+ },
+ "Y": {
+  "meaning": {
+   "line": {
+    "meaning": "reworded",
+    "severity": 0,
+    "follow_up": "same thing",
+    "reason": "The engine expanded the contraction 'online' into the phrase 'on the line', which conveys the same meaning."
+   },
+   "minute": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "same thing",
+    "reason": "The engine expanded the contraction/shorthand 'online' into the phrase 'on the line', which conveys the same meaning in this context."
+   },
+   "whole": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "same thing",
+    "reason": "The engine correctly identified the idiom 'on the line' which is synonymous with the reference's 'online' in the context of a conference call."
+   }
+  },
+  "noticeable": "no",
+  "stakes": {
+   "stakes": "no",
+   "reason": "The phrase 'on the line' and 'online' are used interchangeably in the context of a conference call to refer to being connected to the call."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The reference uses the single word 'online' while the engine expands it to the phrase 'on the line'."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "engine",
+    "sure": 3,
+    "reason": "In the context of a conference call, 'on the line' is the standard idiomatic expression used to refer to participants joining via telephone."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "In the context of a conference call, 'next one online' is a standard way to refer to a participant joining via the internet, whereas 'on the line' is redundant given the context of being 'live'."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Qwen3": 2,
+    "Parakeet": 1,
+    "Whisper": 3
+   },
+   "reason": "Engine 2 is the best because it correctly identifies the word 'online' used in the reference, while Engine 1 changes the meaning to 'on the line' and Engine 3 omits the word entirely."
+  },
+  "misses": [
+   {
+    "reference": "challenging",
+    "engine": "changing",
+    "severity": 2,
+    "what": "different adjective describing the environment"
+   },
+   {
+    "reference": "on a performer basis",
+    "engine": "on a pro forma basis",
+    "severity": 3,
+    "what": "incorrect financial terminology"
+   },
+   {
+    "reference": "on the variant side",
+    "engine": "on the variance side",
+    "severity": 2,
+    "what": "different word used for the topic"
+   },
+   {
+    "reference": "for varying",
+    "engine": "for variant",
+    "severity": 2,
+    "what": "different word used in guidance context"
+   },
+   {
+    "reference": "Dan",
+    "engine": "Ben",
+    "severity": 1,
+    "what": "different name used in greeting"
+   },
+   {
+    "reference": "Johan",
+    "engine": "Joran",
+    "severity": 0,
+    "what": "different spelling of name"
+   },
+   {
+    "reference": "pre prepared remark",
+    "engine": "prepared remarks",
+    "severity": 0,
+    "what": "slight difference in phrasing"
+   }
+  ]
+ }
+}

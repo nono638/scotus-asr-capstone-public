@@ -1,0 +1,13 @@
+{"case": "s25",
+ "parts": {
+  "meaning/line": {"X": "right", "Y": "right", "better": "tie", "why": "Both: changed. X gives severity 4, Y 2; 'slick' does lose the slavery point in that line, so either is defensible."},
+  "meaning/minute": {"X": "right", "Y": "right", "better": "tie", "why": "Changed, severity 4 (X) or 3 (Y); both reasons fit."},
+  "meaning/whole": {"X": "right", "Y": "right", "better": "tie", "why": "Both: changed, severity 3-4, tied to the modern-slavery point."},
+  "noticeable": {"X": "partly", "Y": "partly", "better": "tie", "why": "'it's still slick to me' passes as slang (Gemma itself chose it in the blind test), so maybe fits better than both sets' yes."},
+  "stakes": {"X": "right", "Y": "right", "better": "tie", "why": "Both say yes: a researcher quoting the line would lose the speaker's point. Y's 'nonsensical' is a small overstatement."},
+  "rule": {"X": "right", "Y": "right", "better": "tie", "why": "Qwen3 and Parakeet both wrote 'slave'; the evidence holds."},
+  "blind": {"X": "partly", "Y": "partly", "better": "tie", "why": "Both flip: they pick 'slick' when it is shown as A and 'slave' when it is shown as B. X is 'sure 3' on the wrong pick."},
+  "rank": {"X": "right", "Y": "right", "better": "tie", "why": "Identical: the two 'slave' engines tied first, Whisper last."},
+  "misses": {"X": {"real_and_matter": 8, "trivial": 4, "not_real": 0, "important_missed": 0}, "Y": {"real_and_matter": 5, "trivial": 0, "not_real": 0, "important_missed": 3}, "better": "X", "why": "Both find modern slavery->bothers me, slave->slick, stay su->stay sad, be like->were like and at work->it works. Only X also catches the invented 'I work with me', 'I be'->'I'd be' (an African American English edit) and gonna->can. X's extra trivia ('and', 'what', woah/oh, the way/why) costs little."}
+ },
+ "overall": {"better": "X", "why": "The two sets match on every part except misses, where X catches three more real changes, including a rewritten 'be'."}}

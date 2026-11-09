@@ -1,0 +1,10 @@
+llm,step,compared_with,model,docket,fixed,broken,added_before,added_after
+gemma4:31b,1,0,Qwen3,16-658,3,0,174,114
+gemma4:31b,2,1,Qwen3,16-658,17,121,114,63
+gemma4:31b,3,1,Qwen3,16-658,23,56,114,87
+gemma4:31b,1,0,Qwen3,16-534,14,6,189,75
+gemma4:31b,2,1,Qwen3,16-534,17,248,75,40
+gemma4:31b,3,1,Qwen3,16-534,27,136,75,48
+gemma4:31b,1,0,Qwen3,16-1067,35,32,184,85
+gemma4:31b,2,1,Qwen3,16-1067,40,241,85,35
+gemma4:31b,3,1,Qwen3,16-1067,71,124,85,48

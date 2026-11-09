@@ -1,0 +1,63 @@
+  <h1>Rate clips</h1>
+  <p class="lede">Listen to a short clip, look at the highlighted words, and say what you hear. Your answers check the AI judge that sorted these errors.</p>
+  <p class="column">Each clip is a place where a speech engine and the record (the reference transcript) disagree. Play the shorter clip first, and the longer one only if you are unsure. Tick every question that is true of the highlighted words, then say who got it right. What the AI judge said stays hidden until you have saved your answer.</p>
+  <p class="notice" id="who-note" hidden></p>
+  <p class="notice gate" id="gate" hidden></p>
+
+  <div class="rate-tools">
+    <span class="terms" role="group" aria-label="Which clips" id="modes"></span>
+    <label>Data set <select id="corpus">
+      <option value="all">All three with audio</option>
+      <option value="scotus">Supreme Court</option>
+      <option value="edacc">EdAcc</option>
+      <option value="coraal">CORAAL</option>
+    </select></label>
+    <button type="button" class="btn" id="skip">Skip to the next clip</button>
+    <span class="hint" id="queue-note" style="margin: 0"></span>
+  </div>
+
+  <section class="rate-case" id="case" aria-live="polite"></section>
+
+  <form class="questions" id="questions" autocomplete="off">
+    <fieldset id="q-features">
+      <legend>What is true of the highlighted words?</legend>
+      <p class="hint">Tick every one that is true. If none is, tick "None of these".</p>
+      <div class="choices" id="features"></div>
+    </fieldset>
+    <fieldset>
+      <legend>Who got it right?</legend>
+      <div class="choices" id="who"></div>
+    </fieldset>
+    <fieldset>
+      <legend>Is the record right here?</legend>
+      <div class="choices" id="record"></div>
+    </fieldset>
+    <fieldset>
+      <legend>If the record is wrong: what was said? <small>(optional)</small></legend>
+      <p class="hint" id="correct-hint">Type the highlighted words as you hear them. Leave out anything bleeped, and don't fill in names or places.</p>
+      <textarea id="corrected" maxlength="2000" aria-label="Corrected transcript"></textarea>
+    </fieldset>
+    <fieldset>
+      <legend>Anything else? <small>(optional)</small></legend>
+      <p class="hint">A problem with the clip, a question that didn't fit, or anything you noticed.</p>
+      <textarea id="feedback" maxlength="2000" aria-label="Feedback"></textarea>
+    </fieldset>
+    <div class="row-buttons" id="save-row">
+      <button type="submit" class="primary" id="save-next">Save and go to the next clip</button>
+      <button type="button" class="btn" id="save">Save</button>
+      <a id="signin-to-save" hidden></a>
+    </div>
+    <p class="say" id="say" role="status"></p>
+  </form>
+  <div class="judge-said" id="judge" hidden></div>
+
+  <section class="column">
+    <h2>Your ratings</h2>
+    <p class="hint">Open one to listen again or change your answer.</p>
+    <ul class="mine" id="mine"></ul>
+  </section>
+
+  <section class="column">
+    <h2>What you agree to</h2>
+    <p id="contrib"></p>
+  </section>

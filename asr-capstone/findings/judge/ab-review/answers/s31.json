@@ -1,0 +1,157 @@
+{
+ "case": "s31",
+ "X": {
+  "meaning": {
+   "line": {
+    "meaning": "reworded",
+    "severity": 0,
+    "follow_up": "meaning kept",
+    "reason": "The engine added the contraction 're"
+   },
+   "minute": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "meaning kept",
+    "reason": "The engine added the contraction 're' to the word 'you', changing 'you scared' to 'you're scared'."
+   },
+   "whole": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "meaning kept",
+    "reason": "The engine added the contraction '-re' to the word 'you', changing the AAE feature of zero copula ('you scared') to standard English ('you're scared')."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The engine's addition of the copula 're' obscures the speaker's use of zero copula, which is a key feature of African American English being studied in this corpus."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The engine added the contraction 'you're' (you are) while the reference correctly preserves the speaker's zero copula."
+  },
+  "blind": {
+   "order1 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 2,
+    "reason": "The speaker is using African American Vernacular English (AAVE), which frequently features zero copula (omitting 'is' or 'are'). 'You scared' is a grammatically consistent construction within this dialect, whereas 'you're scared' is more standard English. Given the context of the rest of the transcript (e.g., 'when you in fear'), 'you scared' is highly likely."
+   },
+   "order2 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 2,
+    "reason": "The speaker is using African American Vernacular English (AAVE), which frequently features zero copula (omitting 'is' or 'are'). 'When you in fear' is established in the previous clause, making 'when you scared' more consistent with the speaker's dialect than the standard 'you're scared'."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Parakeet": 3,
+    "Qwen3": 1,
+    "Whisper": 1
+   },
+   "reason": "Engine 1 fails to capture the specific grammatical structure of the reference, while Engines 2 and 3 correctly identify the words, despite the addition of a contraction."
+  },
+  "misses": [
+   {
+    "reference": "they're just being scared",
+    "engine": "just been scared",
+    "severity": 2,
+    "what": "verb tense/aspect change (they're just being scared vs just been scared)"
+   },
+   {
+    "reference": "when you in fear",
+    "engine": "when you're in fear",
+    "severity": 2,
+    "what": "verb tense/aspect change (when you in fear vs when you're in fear)"
+   },
+   {
+    "reference": "beginning of the summertime",
+    "engine": "beginning in the",
+    "severity": 1,
+    "what": "loss of time/season detail (beginning of the summertime vs beginning in the)"
+   }
+  ]
+ },
+ "Y": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 2,
+    "follow_up": "meaning changed",
+    "reason": "The engine inserted the verb 'are' (as 're) which was not present in the original speech."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 1,
+    "follow_up": "meaning changed",
+    "reason": "The engine added the verb 'are' (contracted to 're) to a phrase that originally lacked it."
+   },
+   "whole": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "meaning kept",
+    "reason": "The engine added a standard contraction ('re) to the speaker's AAE grammar, but the meaning remains identical."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The engine adds the copula 're', which obscures the specific African American English grammatical feature (zero copula) being studied in the corpus."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The reference uses the AAE zero copula 'you scared', while the engine incorrectly inserted the contraction 'you're'."
+  },
+  "blind": {
+   "order1 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "The speaker's dialect in this corpus (CORAAL) frequently features zero copula, making 'when you scared' more consistent with the established sociolinguistic pattern of the transcript than the standard 'you're scared'."
+   },
+   "order2 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "The speaker uses African American Vernacular English (AAVE) features throughout the transcript, such as 'when you in fear', making the omission of the copula in 'when you scared' more consistent with the established dialectal pattern."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Parakeet": 2,
+    "Qwen3": 1,
+    "Whisper": 1
+   },
+   "reason": "Engine 1 fails to capture the specific grammatical feature of the reference (the zero copula in 'you scared'), while Engines 2 and 3 both correctly preserve the meaning, though they both add an unnecessary 're"
+  },
+  "misses": [
+   {
+    "reference": "it's like you feel more safe. Other than getting dropped off at your house or or your neighborhood wondering like, what's gonna happen if I get out the car. Like s stuff like that.",
+    "engine": "it's like you feel more safe. Other than getting dropped off at your house or your neighborhood, wondering like what's gonna happen if I get out the car, stuff like that.",
+    "severity": 1,
+    "what": "omitted 'or' and 's'"
+   },
+   {
+    "reference": "When you in fear or when you scared",
+    "engine": "when you're in fear or when you're scared",
+    "severity": 1,
+    "what": "added 're to 'you'"
+   },
+   {
+    "reference": "all they life",
+    "engine": "all their life",
+    "severity": 1,
+    "what": "changed 'they' to 'their'"
+   },
+   {
+    "reference": "just they're just being scared.",
+    "engine": "just. just been scared.",
+    "severity": 3,
+    "what": "changed 'they're just being' to 'just been'"
+   },
+   {
+    "reference": "I say beginning of the summertime.",
+    "engine": "I say beginning in the",
+    "severity": 3,
+    "what": "truncated sentence and changed 'of the summertime' to 'in the'"
+   }
+  ]
+ }
+}

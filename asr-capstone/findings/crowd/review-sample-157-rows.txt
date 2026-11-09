@@ -1,0 +1,499 @@
+
+===== record has it: other words on one side only  (2239 in all) =====
+  16-1027 0:48:43 JUSTICE SOTOMAYOR near-dash
+    OFFICIAL: court - That's right. And they didn't make - -- [[which]] is the court we're reviewing - -- they didn't make
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+  16-1140 0:39:39 MR. KLEIN near-dash
+    OFFICIAL: the first kind of statute, and the author's verbatim statements [[about this]] - Well, if it's the first kind of statute, then
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=is | Parakeet=- | Granite=- | Granite Plus=-
+  16-1150 0:31:28 JUSTICE GORSUCH near-dash
+    OFFICIAL: somehow takes back their all-purpose consolidation. All-purpose consolidation - Why [[not?]] Why doesn't it? So - Now, that's where I get
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=not | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+  16-1276 0:08:15 JUSTICE SOTOMAYOR 
+    OFFICIAL: They would not be - To read it the government's [[way?]] They would not be so rendered, Justice Sotomayor, and let
+    MODELS:   Whisper=reading | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+  16-1276 0:48:04 MR. MICHEL near-dash
+    OFFICIAL: deficiency argument has a serious procedural deficiency of its own, [[in which]] - It's not making an invalidity argument. It's -- it's
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+  16-1348 0:20:11 CHIEF JUSTICE ROBERTS near-dash
+    OFFICIAL: me be clear what I mean when - Yeah, I [[think so.]] -- when I say acquittal. What I mean by an
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+  16-1371 0:23:48 JUSTICE BREYER near-dash
+    OFFICIAL: things in the trunk - That's impossible. Okay, let's see [[what]] - -- you have an expectation of privacy in that
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=what | Granite=- | Granite Plus=-
+  16-1435 0:33:47 MR. ROGAN near-dash
+    OFFICIAL: clear indication -- and I think what you're getting at, [[Your Honor]] - How about a shirt with the text of the
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=what | Parakeet=- | Granite=- | Granite Plus=-
+  16-402 1:12:13 MR. DREEBEN near-dash
+    OFFICIAL: are extremely sensitive with -- Yeah, but if - -- [[dialed phone numbers.]] -- I understand what you're saying, you're basically saying, well,
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+  16-712 0:08:58 JUSTICE KENNEDY 
+    OFFICIAL: Stern, so that's quite distinguished. Let me ask you this, [[it's a]] basic question -- patent lawyers would probably know the answer.
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+  16-980 1:02:57 MR. SMITH near-dash
+    OFFICIAL: percent are going to be located presumably in some -- [[in]] one of the other ways. So we're talking about a
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=under | Granite=- | Granite Plus=-
+  17-21 0:59:37 MS. KARLAN near-dash
+    OFFICIAL: probable cause is not an absolute bar in cases where [[retaliate]] -- retaliation is proven. Thank you. Thank you, counsel. The
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=retaliat
+
+===== record has it: second speaker  (1661 in all) =====
+  16-1011 0:22:15 JUSTICE KAGAN crosses-turn
+    OFFICIAL: any sense, and we're asking the Court to reject it. [[Mr. Tripp,]] may I ask about your theory for getting to that
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+  16-111 0:32:32 JUSTICE GORSUCH crosses-turn
+    OFFICIAL: our freezer, and I'm sure it no longer tastes great. [[Yeah.]] But I think the point is when you cross that
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+  16-1144 0:10:54 MR. HELLMAN crosses-turn
+    OFFICIAL: are obvious reasons to search for a limiting interpretation here. [[Yes.]] I guess the question is why your limiting interpretation? And
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+  16-1215 0:49:48 JUSTICE GORSUCH near-dash crosses-turn
+    OFFICIAL: get their money back. What if it's a false - [[Following up on - sorry.]] What if it's a false statement about an asset, but
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+  16-1432 0:15:21 JUSTICE GINSBURG near-dash crosses-turn
+    OFFICIAL: to redesignate the ex-spouse either in the divorce decree - [[He]] - Itself. Excuse me. He had -- he had already
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+  16-424 0:14:30 MS. AMUNSON near-dash crosses-turn
+    OFFICIAL: law, it -- it would be valid. I don't - [[If]] - How can you say there's no power to impose
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+  16-476 0:28:53 CHIEF JUSTICE ROBERTS near-dash crosses-turn
+    OFFICIAL: a word maybe I'm not supposed to, but maybe - [[Well]] - -- it's a National League of Cities problem. But
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+  17-130 0:34:23 JUSTICE BREYER near-dash crosses-turn
+    OFFICIAL: office. That's the -- that's the, sort of, import - [[The]] problem I have - -- of the -- in your
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=the
+  17-269 0:19:53 MR. PURCELL near-dash crosses-turn
+    OFFICIAL: substantial public need is not creating that difference for me. [[Okay. Well]] - It's -- it's not defining what type of public
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=okay | Parakeet=- | Granite=- | Granite Plus=-
+  17-333 0:20:13 JUSTICE GORSUCH near-dash crosses-turn
+    OFFICIAL: of the election in the Eighth District. It was - [[Counsel]] - Presumably, it wouldn't satisfy the first part of your
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=presumably | Granite=- | Granite Plus=-
+  17-43 0:09:05 JUSTICE BREYER near-dash crosses-turn
+    OFFICIAL: a judge in Kansas. Kansas. In Kansas. Right. And - [[Yeah.]] And I think that this language - All right. Where
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=yeah
+  17-586 0:27:29 JUSTICE SOTOMAYOR near-dash crosses-turn
+    OFFICIAL: impermissible intent on the part of the state legislature. So [[how - But,]] Mr. Kneedler, in -- in your briefs, you acknowledge two
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+
+===== record has it: repeated word  (1590 in all) =====
+  16-1011 0:05:06 JUSTICE GORSUCH near-dash
+    OFFICIAL: the domestic act of infringement. And - Well, let's -- [[let's]] just segregate out again the -- the royalties, put those
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=let us
+  16-1067 0:24:34 JUSTICE SOTOMAYOR near-dash
+    OFFICIAL: So it doesn't say all of the judgment. It -- [[it]] doesn't say the judgment shall be applied to satisfy the
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=says
+  16-1144 0:05:16 MR. HELLMAN near-dash
+    OFFICIAL: certainly not the line the government is offering, but -- [[but]] - It's not the line the government's offering - Is
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=. | Parakeet=- | Granite=- | Granite Plus=-
+  16-1161 0:18:53 JUSTICE GORSUCH near-dash
+    OFFICIAL: to litigation? Because the -- the standards given in -- [[in]] the lower court here was, well, a little bit of
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=in
+  16-1495 0:15:34 MR. HEYTENS near-dash
+    OFFICIAL: Justice Alito. This would be revolutionary, wouldn't it? I -- [[I]] would agree with that, Justice Alito. If there are no
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+  16-476 0:34:25 MR. CLEMENT near-dash
+    OFFICIAL: first four prohibitions in 3702(1) plainly do. They tell -- [[tell]] the states, you can't operate, advertise, sponsor, or promote sports
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=tell
+  16-6795 0:31:06 MR. KELLER near-dash
+    OFFICIAL: law is not enough to have an exercise of -- [[of]] judicial power. Here this can be revised outside the traditional
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=of | Parakeet=- | Granite=- | Granite Plus=-
+  16-961 0:05:51 MR. VLADECK near-dash
+    OFFICIAL: amendments in context. And if you'll indulge me, I'll - [[I'll]] try to do so. The purpose of the 1983 amendments,
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+  17-130 0:52:02 MR. METLITSKY near-dash
+    OFFICIAL: -- have you come across anything like that? There -- [[there]] are lots of statutes dealing with how people are appointed
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=there
+  17-155 0:40:23 MS. KOVNER near-dash
+    OFFICIAL: reason why the judge would have accepted this plea - [[plea]] agreement, which was for a below-guidelines sentence, even if the
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+  17-312 0:00:40 JUSTICE GINSBURG near-dash
+    OFFICIAL: claims were accordingly moot. On your first point, you -- [[you]] didn't mention the collateral-order doctrine. What about that? I mean,
+    MODELS:   Whisper=- | Qwen3=you | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+  17-43 0:20:57 MR. SHANMUGAM near-dash
+    OFFICIAL: that statute. What the government is attempting to do -- [[do]] through these various arguments is to create a regime under
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+
+===== record has it: different words  (1049 in all) =====
+  16-1215 0:03:44 MR. GARRE 
+    OFFICIAL: financial condition. "Relating to" is a much broader term of [[breadth]] or at least can be used in that way. I
+    MODELS:   Whisper=breath | Qwen3=breath | Voxtral=breath | Canary=breadth | Parakeet=breath | Granite=breath | Granite Plus=breath
+  16-1348 0:14:27 MR. FISHER 
+    OFFICIAL: states that have had our rule for decades, and there [[have]] been no change in the way severance has - Why?
+    MODELS:   Whisper=is | Qwen3=is | Voxtral=is | Canary=has | Parakeet=is | Granite=is | Granite Plus=is
+  16-1435 0:06:05 MR. BREEMER 
+    OFFICIAL: right to vote -- as far as I understand it, [[the]] right to vote free of intimidation, but there's not a
+    MODELS:   Whisper=a | Qwen3=a | Voxtral=a | Canary=a | Parakeet=the | Granite=a | Granite Plus=a
+  16-1466 0:50:24 MR. FREDERICK 
+    OFFICIAL: the contract are all raising matters of public concern. You [[could]] look at them. They are talking about who gets assignments
+    MODELS:   Whisper=can | Qwen3=can | Voxtral=can | Canary=can | Parakeet=can | Granite=can | Granite Plus=can
+  16-1466 0:16:12 MR. MESSENGER 
+    OFFICIAL: reason for reversing it, and many individuals' Fourth Amendment rights [[were]] being violated. And so, in that instance, the prevalence of
+    MODELS:   Whisper=are | Qwen3=are | Voxtral=are | Canary=are | Parakeet=are | Granite=are | Granite Plus=are
+  16-1519 0:55:48 MR. GEYSER 
+    OFFICIAL: judges. It's interesting that the judges themselves disagree. Judge Higginson [[in]] his concurrence cited different articles and studies showing the --
+    MODELS:   Whisper=and | Qwen3=in | Voxtral=and | Canary=and | Parakeet=and | Granite=and | Granite Plus=and
+  16-285 0:32:46 JUSTICE BREYER 
+    OFFICIAL: joint claim. They want to say: Our employer violated the [[dah-dah-dah]] because they did not pay us enough. Okay? They're not
+    MODELS:   Whisper=da da da | Qwen3=da da da | Voxtral=da da da | Canary=da da da | Parakeet=da da da | Granite=da da da | Granite Plus=da da
+  16-499 0:17:34 JUSTICE GINSBURG 
+    OFFICIAL: mere banking regulations. What -- what about another limitation that [[has]] been suggested, extraterritoriality, that's what this Court has declared. As
+    MODELS:   Whisper=is | Qwen3=is | Voxtral=is | Canary=has | Parakeet=is | Granite=is | Granite Plus=is
+  16-534 0:34:45 MR. STRAUSS 
+    OFFICIAL: in Helmerich, the case involving the Venezuelan seizure of oil [[rigs,]] that the Court is not going to assume that Congress
+    MODELS:   Whisper=rings | Qwen3=rings | Voxtral=rings | Canary=rings | Parakeet=rings | Granite=rigs | Granite Plus=rings
+  16-712 0:41:11 MR. STEWART 
+    OFFICIAL: had functional similarities to a court of appeals granting rehearing [[en]] banc because the full court doesn't like the initial panel
+    MODELS:   Whisper=on | Qwen3=on | Voxtral=on | Canary=on | Parakeet=on | Granite=on | Granite Plus=on
+  17-459 0:06:17 JUSTICE GINSBURG near-dash crosses-turn
+    OFFICIAL: actually serve the document that is identified in Section 1229(a). [[How]] -- how does the -- the logistical problem -- at
+    MODELS:   Whisper=a | Qwen3=a | Voxtral=a | Canary=a | Parakeet=a | Granite=a | Granite Plus=and
+  17-586 0:35:39 CHIEF JUSTICE ROBERTS 
+    OFFICIAL: the governor three days - Three days. -- to call [[an]] election. And, I mean, if you were the governor, would
+    MODELS:   Whisper=the | Qwen3=the | Voxtral=the | Canary=the | Parakeet=the | Granite=the | Granite Plus=the
+
+===== record has it: spelling or spacing  (443 in all) =====
+  16-1140 0:21:22 JUSTICE GINSBURG near-dash
+    OFFICIAL: services, and it would apply to the natal care -- [[every]] -- everyone. Like on food, you have to list all
+    MODELS:   Whisper=- | Qwen3=every | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+  16-1215 0:51:33 JUSTICE GORSUCH near-dash
+    OFFICIAL: appear on a balance statement but might appear on an [[in]] -- income statement? I understood there to be a little
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+  16-1348 0:05:10 JUSTICE ALITO 
+    OFFICIAL: done, and the second trial involves the same offense under [[Ashe,]] this rule should be the same? Well, for two reasons,
+    MODELS:   Whisper=ash | Qwen3=ash | Voxtral=ash | Canary=ash | Parakeet=ash | Granite=ash | Granite Plus=ash
+  16-1454 0:50:54 MR. CHESLER 
+    OFFICIAL: demand tells the trier of fact nothing about whether it's [[anticompetitive.]] One needs to determine if excess profits are being extracted,
+    MODELS:   Whisper=competitive | Qwen3=competitive | Voxtral=competitive | Canary=competitive | Parakeet=competitive | Granite=competitive | Granite Plus=competitive
+  16-1519 0:52:35 JUSTICE SOTOMAYOR near-dash
+    OFFICIAL: specified attorneys' fees, putting the victim whole, proximate causation, Congress [[in]] - instead chose very specific categories here. And we --
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+  16-460 0:31:47 MS. ALIKHAN 
+    OFFICIAL: saying: state court, regardless of how you feel about your [[statutes]] of limitations, as -- to encourage federal claims to be
+    MODELS:   Whisper=statute | Qwen3=statute | Voxtral=statute | Canary=statute | Parakeet=statutes | Granite=statute | Granite Plus=statute
+  16-712 0:56:28 MR. STEWART 
+    OFFICIAL: decisions. We've cited formal rule-making as an example, which in [[rule-making,]] of course, can be triggered by a petition from a
+    MODELS:   Whisper=rulemaking | Qwen3=rulemaking | Voxtral=rulemaking | Canary=rulemaking | Parakeet=rulemaking | Granite=rulemaking | Granite Plus=rule making
+  16-969 0:29:36 MR. BOND near-dash
+    OFFICIAL: in a district court infringement case and then brings an [[I]] -- IPR proceeding, there's no stay of the district court
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=i
+  17-21 0:30:01 MR. DVORETZKY 
+    OFFICIAL: Lozman. There -- there was one comment by one city [[councilperson]] expressing frustration, followed by five or six pages of transcript
+    MODELS:   Whisper=person | Qwen3=person | Voxtral=person | Canary=person | Parakeet=person | Granite=person | Granite Plus=councilperson
+  17-432 0:38:22 MR. FREDERICK 
+    OFFICIAL: filed outside the statute of limitations. Your Honor, respectfully, the [[Smyth]] case was filed inside the statute of limitations. And so
+    MODELS:   Whisper=smythe | Qwen3=smythe | Voxtral=smythe | Canary=smythe | Parakeet=smythe | Granite=smise | Granite Plus=smythe
+  17-459 0:53:16 MR. ZIMMER 
+    OFFICIAL: and, in fact, specifically it required that that be provided [[upfront.]] And, again, the government also notes that the -- the
+    MODELS:   Whisper=front | Qwen3=front | Voxtral=front | Canary=upfront | Parakeet=front | Granite=front | Granite Plus=front
+  17-494 0:19:34 MR. STEWART near-dash
+    OFFICIAL: imposed by the state, conceivably could be hauled into -- [[to]] court to answer for the - Mr. -- Mr. Stewart,
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=to
+
+===== record has it: name  (253 in all) =====
+  15-1204_OT2017 0:40:35 MR. ARULANANTHAM 
+    OFFICIAL: I had a client in 2006; seven years detention in [[Casas-Castrillon,]] another case that came, I think, another year later. The
+    MODELS:   Whisper=castrillon | Qwen3=is | Voxtral=is | Canary=is | Parakeet=is | Granite=is | Granite Plus=is
+  16-1067 0:11:54 MR. BANNER 
+    OFFICIAL: defendant." That would have been it. That would have adopted [[Respondents']] view of the statute, but that sentence got deleted from
+    MODELS:   Whisper=is | Qwen3=is | Voxtral=is | Canary=is | Parakeet=respondents | Granite=is | Granite Plus=is
+  16-1495 0:34:27 MS. CORKRAN 
+    OFFICIAL: the Kansas Bureau of Investigation and said: Here are Officer [[Vogt's]] compelled statements, you should initiate a criminal investigation, it was
+    MODELS:   Whisper=votes | Qwen3=votes | Voxtral=votes | Canary=votes | Parakeet=votes | Granite=votes | Granite Plus=votes
+  16-424 0:12:37 MS. AMUNSON 
+    OFFICIAL: Rule 11. Rule 11 says, no, where you have a [[Blackledge-Menna]] claim, you don't have to preserve it by way of
+    MODELS:   Whisper=mena | Qwen3=mena | Voxtral=mena | Canary=menna | Parakeet=mena | Granite=mena | Granite Plus=mena
+  16-498 0:23:20 MR. GANT 
+    OFFICIAL: it has - because there were -- the Court in [[Patchak]] I addressed standing and sovereign immunity, which at least have
+    MODELS:   Whisper=patrick | Qwen3=patrick | Voxtral=patrick | Canary=pachik | Parakeet=patrick | Granite=patrick | Granite Plus=patrick
+  16-8255 0:00:00 CHIEF JUSTICE ROBERTS 
+    OFFICIAL:  [[We'll hear]] argument next in Case 16-8255, McCoy versus Louisiana. Mr. Waxman.
+    MODELS:   Whisper=your | Qwen3=your | Voxtral=your | Canary=your | Parakeet=your | Granite=your | Granite Plus=your
+  16-8255 1:00:26 MR. WAXMAN near-dash
+    OFFICIAL: 1. That is not what distinguishes those crimes. As to [[Cronic,]] as -- as we've said, we don't think -- I
+    MODELS:   Whisper=chronic | Qwen3=chronic | Voxtral=chronic | Canary=chronic | Parakeet=chronic | Granite=chronic | Granite Plus=chronic
+  16-8255 0:41:38 MS. MURRILL 
+    OFFICIAL: within the class of cases that have been evaluated as [[Cronic,]] to complete failure of adversarial testing - Well, why --
+    MODELS:   Whisper=chronic | Qwen3=chronic | Voxtral=chronic | Canary=chronic | Parakeet=chronic | Granite=chronic | Granite Plus=chronic
+  17-130 0:59:05 MR. PERRY 
+    OFFICIAL: although, of course, in -- in Freytag and CFTC versus [[Schor,]] the Court put some gloss on that in the context
+    MODELS:   Whisper=shore | Qwen3=shore | Voxtral=shore | Canary=shore | Parakeet=shore | Granite=shore | Granite Plus=shore
+  17-21 0:40:16 JUSTICE BREYER 
+    OFFICIAL: riot cases, et cetera, one, they say start with the [[Mt.]] Healthy framework. Two, you have Iqbal. Three, you have qualified
+    MODELS:   Whisper=mount | Qwen3=mount | Voxtral=mount | Canary=mount | Parakeet=mount | Granite=mount | Granite Plus=mount
+  17-43 0:52:36 MR. TRIPP 
+    OFFICIAL: case is in being sure that the Court not adopt [[Petitioner's]] very extreme rule where, as -- as long as there
+    MODELS:   Whisper=petitioner is | Qwen3=petitioners | Voxtral=petitioners | Canary=petitioners | Parakeet=petitioners | Granite=petitioners | Granite Plus=petitioners
+  17-5716 0:50:58 MR. FISHER 
+    OFFICIAL: legal arguments, even there, as the Third Circuit said in [[Winebarger,]] the guideline has some effect on the ultimate sentence, at
+    MODELS:   Whisper=or | Qwen3=weinberger | Voxtral=weinberger | Canary=weinberger | Parakeet=weinberger | Granite=weinberger | Granite Plus=weinberger
+
+===== record has it: number or citation  (251 in all) =====
+  15-1439 0:05:00 JUSTICE SOTOMAYOR 
+    OFFICIAL: that it covers all covered class actions as defined in [[p(f)(2). P(f)(2)]] defines covered class actions only as those that have 50
+    MODELS:   Whisper=pf 2 | Qwen3=pf 2 | Voxtral=pf 2 | Canary=pf 2 | Parakeet=pf 2 | Granite=pef 2 | Granite Plus=pf 2
+  16-402 0:52:24 JUSTICE GORSUCH 
+    OFFICIAL: also get this property right subject to having a non-Article [[III]] judge decide the case, or quartering of troops in your
+    MODELS:   Whisper=3 | Qwen3=3 | Voxtral=3 | Canary=3 | Parakeet=iii | Granite=3 | Granite Plus=3
+  16-498 0:00:19 MR. GANT 
+    OFFICIAL: of this Court's separation-of-powers jurisprudence as well as with Article [[III]] itself. With Section 2(b), Congress directed the federal courts to
+    MODELS:   Whisper=3 | Qwen3=3 | Voxtral=3 | Canary=3 | Parakeet=iii | Granite=3 | Granite Plus=3
+  16-498 0:28:46 MS. O'CONNELL 
+    OFFICIAL: of that uncertainty stems from this Court's decision in Patchak [[I,]] which interpreted the laws enacted by Congress up to that
+    MODELS:   Whisper=one | Qwen3=one | Voxtral=i | Canary=one | Parakeet=one | Granite=one | Granite Plus=one
+  16-6855 0:13:23 MR. OLIVE 
+    OFFICIAL: then is looked through, or has been for years, until [[two,]] about two years ago, by the appellate court. So how
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+  16-6855 0:27:40 MS. WARREN 
+    OFFICIAL: the Court: A federal habeas court must apply 28 U.S.C. [[2254(d)'s]] standard to the last state court merits decision whether that
+    MODELS:   Whisper=d | Qwen3=d | Voxtral=d | Canary=d | Parakeet=d | Granite=d | Granite Plus=-
+  16-9493 0:38:14 MR. ELLIS near-dash
+    OFFICIAL: option? -- I -- I think there is. Okay. Number [[one, I think in]] - So what's the third option? So the third option
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=option
+  16-969 0:08:58 JUSTICE GINSBURG near-dash crosses-turn
+    OFFICIAL: -- what -- what? Nine out of the 16 claims. [[Nine]] -- okay. Nine out of 16. So that's -- so
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=yeah
+  16-980 0:37:09 MR. SMITH near-dash
+    OFFICIAL: to these confirmation notices. And what it shows is in [[19]] -- in -- in 2011, they sent out 1.5 million
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=9
+  17-459 0:02:07 JUSTICE GINSBURG 
+    OFFICIAL: is written notice that specifies the required information. And if [[any one]] on the list, any one is left out, then it's
+    MODELS:   Whisper=anyone | Qwen3=anyone | Voxtral=anyone | Canary=anyone | Parakeet=anyone | Granite=anyone | Granite Plus=anyone
+  17-494 0:54:15 MR. ISAACSON 
+    OFFICIAL: selling products that have only a $10 sales value. So [[$10]] times 200 is $2,000. The compliance cost of -- of
+    MODELS:   Whisper=10 | Qwen3=10 | Voxtral=10 | Canary=10 | Parakeet=10 | Granite=10 | Granite Plus=10
+  17-586 0:22:34 MR. KNEEDLER near-dash
+    OFFICIAL: to be taken to institute the election. This was only [[45]] -- about 45 days away from the district court's opinion.
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=45
+
+===== record has it: word ending  (157 in all) =====
+  16-1432 0:14:41 MR. UNIKOWSKY 
+    OFFICIAL: an impairment of his reliance interests when, really, the reliance [[interests]] came to play when the state - Does anyone pay
+    MODELS:   Whisper=interest | Qwen3=interest | Voxtral=interest | Canary=interest | Parakeet=interest | Granite=interest | Granite Plus=interest
+  16-460 0:47:23 MR. UNIKOWSKY 
+    OFFICIAL: for rehearing and the entire 90-day period. And the word [["tolled"]] is never used that way. Not in a case, not
+    MODELS:   Whisper=toll | Qwen3=toll | Voxtral=toll | Canary=toll | Parakeet=toll | Granite=toll | Granite Plus=toll
+  16-499 0:41:44 MR. CLEMENT 
+    OFFICIAL: established - Well, I - -- that the United States [[signs]] some of the treaties and the idea -- I mean,
+    MODELS:   Whisper=signed | Qwen3=signed | Voxtral=signed | Canary=signed | Parakeet=signed | Granite=signed | Granite Plus=signed
+  16-499 0:03:38 CHIEF JUSTICE ROBERTS 
+    OFFICIAL: a forum for someone like the French ambassador in the [[Longchamps]] Affair, but I'm wondering if extending it to corporate liability
+    MODELS:   Whisper=longchamp | Qwen3=longchamp | Voxtral=longchamp | Canary=longchamp | Parakeet=longchamp | Granite=longchamps | Granite Plus=longchamp
+  16-6795 0:40:33 MR. KELLER 
+    OFFICIAL: 1995 Petitioner himself denied having any health problems, such as [[drugs,]] alcohol or - Counsel, he did - -- mental health
+    MODELS:   Whisper=drug | Qwen3=drug | Voxtral=drug | Canary=drugs | Parakeet=drug | Granite=drug | Granite Plus=drug
+  16-9493 0:49:15 MR. ELLIS 
+    OFFICIAL: identified that in Molina-Martinez as a way to mitigate the [[costs.]] It's really about the third prong because the third prong
+    MODELS:   Whisper=cost | Qwen3=cost | Voxtral=cost | Canary=cost | Parakeet=cost | Granite=cost | Granite Plus=costs
+  16-969 0:57:16 JUSTICE SOTOMAYOR 
+    OFFICIAL: -- meanings produces a substantive effect. You talked about canceled [[claims.]] How about settled claims? Say, in the middle of the
+    MODELS:   Whisper=claim | Qwen3=claim | Voxtral=claim | Canary=claim | Parakeet=claim | Granite=claim | Granite Plus=claims
+  17-2 0:41:49 MR. ROSENKRANZ 
+    OFFICIAL: sends the robot instructions. And, by the way, the computer [[scientists']] amicus brief spells this out in great detail. Okay. What
+    MODELS:   Whisper=scientist | Qwen3=scientist | Voxtral=scientist | Canary=scientist | Parakeet=scientist | Granite=scientist | Granite Plus=scientist
+  17-269 0:36:02 MR. KEDEM 
+    OFFICIAL: that's obviously not at here. And quintessentially, we're talking about [[obstructions.]] And what is your view of the state's right under
+    MODELS:   Whisper=obstruction | Qwen3=obstructions | Voxtral=obstruction | Canary=obstruction | Parakeet=obstruction | Granite=obstruction | Granite Plus=obstruction
+  17-312 0:56:20 MR. KEDEM 
+    OFFICIAL: has its own interests that continues even after the individual [[litigant's]] is over. Respondents have said that it's just a prediction
+    MODELS:   Whisper=litigants | Qwen3=litigants | Voxtral=litigants | Canary=litigants | Parakeet=litigants | Granite=litigants | Granite Plus=litigants
+  17-459 0:37:45 MR. LIU 
+    OFFICIAL: only people who had access to it were what we [[called]] legacy INS officials, people who had access to the account
+    MODELS:   Whisper=call | Qwen3=call | Voxtral=call | Canary=call | Parakeet=call | Granite=call | Granite Plus=call
+  17-5716 0:38:57 MR. FEIGIN 
+    OFFICIAL: there are a couple of reasons, Your Honor. I just [[wanted]] to be clear that we're talking about a case that's
+    MODELS:   Whisper=want | Qwen3=want | Voxtral=want | Canary=want | Parakeet=want | Granite=want | Granite Plus=want
+
+===== record has it: short reply  (146 in all) =====
+  16-1011 0:14:19 MR. CLEMENT 
+    OFFICIAL: same to me. Well, two things, Your Honor: One is, [[well,]] I think Congress made it about as clear as it
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=but | Granite=- | Granite Plus=-
+  16-1150 0:48:47 MR. KATYAL near-dash
+    OFFICIAL: Well, I think actually - you know, I don't -- [[I'm]] not sure that you - you should get into that
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=know | Granite Plus=-
+  16-1215 0:14:37 JUSTICE GORSUCH 
+    OFFICIAL: tax - Why isn't it exactly like the genuine Vermeer? [[All]] right? The law firm's chasing the client and -- and
+    MODELS:   Whisper=- | Qwen3=all | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+  16-1519 0:42:40 JUSTICE ALITO near-dash
+    OFFICIAL: similar way. Well, there's a big difference between necessary -- [[well,]] how would you determine whether the scope of an internal
+    MODELS:   Whisper=- | Qwen3=or | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+  16-424 0:49:54 JUSTICE SOTOMAYOR near-dash
+    OFFICIAL: but if I could get to the second - All [[right.]] In - in -- in a bunch of different cases,
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+  16-8255 0:54:29 MS. MURRILL near-dash
+    OFFICIAL: of it. There's some creep in his arguments over time, [[I]] -- the words are there on the page, but I
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+  16-969 0:50:34 JUSTICE GORSUCH near-dash
+    OFFICIAL: of making things go faster. If the Board -- No, [[I]] -- no, surely, not necessarily efficient from the -- the
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=i
+  17-312 0:02:41 JUSTICE BREYER 
+    OFFICIAL: their hands and get the attention of their counsel. All [[right.]] Suppose it didn't. I mean, that's the question you're being
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+  17-387 0:39:44 MR. MILLER near-dash
+    OFFICIAL: I mean, no, it would not. Okay. But -- but [[I]] -- as I've been explaining, the in rem theory, you
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+  17-459 0:43:44 MR. LIU near-dash
+    OFFICIAL: they have to? You see that? And -- and -- [[right.]] Because it's not just a rubber stamp job. Well, and,
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+  17-5639 0:58:18 JUSTICE KAGAN 
+    OFFICIAL: say minimally, you mean more than just check the box, [[right?]] Yeah, absolutely. I mean, there has to be something --
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+  17-965 0:41:45 MR. KATYAL near-dash
+    OFFICIAL: for aliens who are not present in the country? Because [[I]] - Those very same arguments would not succeed. Well -
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=i | Granite=- | Granite Plus=-
+
+===== record has it: filler  (41 in all) =====
+  15-1439 0:20:17 JUSTICE BREYER near-dash crosses-turn
+    OFFICIAL: do what my friend on the other side says - [[Uh-huh.]] -- which is to say that by bringing a state
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+  15-1439 0:28:23 JUSTICE BREYER crosses-turn
+    OFFICIAL: which is a phrase that doesn't have its own definition. [[Ah.]] And to figure out what that means, you look at
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+  16-1144 0:27:45 JUSTICE BREYER near-dash crosses-turn
+    OFFICIAL: in trouble here? Because it seems like paying cash - [[Uh-huh.]] -- can sometimes be a problem. That was part of
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+  16-1454 0:38:58 JUSTICE BREYER crosses-turn
+    OFFICIAL: effect at the first stage with respect to that product. [[Uh-huh.]] And what I'm here to tell you is, with respect
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+  16-402 0:35:50 JUSTICE GORSUCH near-dash crosses-turn
+    OFFICIAL: And I think conversion is the -- the closest - [[Uh-huh.]] -- sort of tort analog to what we have here.
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+  16-402 1:13:45 MR. DREEBEN near-dash crosses-turn
+    OFFICIAL: say it's the means that the government is using -- [[Uh-huh.]] -- we must be concerned about, not the information it
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+  16-6795 0:14:04 JUSTICE KAGAN crosses-turn
+    OFFICIAL: doesn't involve a Richie Rich client or something like that. [[Uh-huh.]] But the -- but the attorney, the reasonable attorney still
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+  16-969 0:11:01 MR. CASTANIAS crosses-turn
+    OFFICIAL: your statutory argument works, given your position on canceled claims? [[Uh-huh.]] If I understand your position on canceled claims, it's that
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+  17-965 0:12:26 GENERAL FRANCISCO near-dash crosses-turn
+    OFFICIAL: a President gets elected who is a vehement anti-Semite - [[Uh-huh.]] -- and says all kinds of denigrating comments about Jews
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+  17-965 0:26:05 GENERAL FRANCISCO crosses-turn
+    OFFICIAL: "extreme hardship." Uh-huh. So "undue" must be less than "extreme." [[Uh-huh.]] Okay? So I'm -- then they have a list: people
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+  17-965 0:18:35 GENERAL FRANCISCO near-dash crosses-turn
+    OFFICIAL: I think -- I'm summarizing in an incomplete way - [[Uh-huh.]] -- but that the President is the head of the
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+  17-965 0:26:02 GENERAL FRANCISCO crosses-turn
+    OFFICIAL: "hardship" appears in the immigration laws, it says "extreme hardship." [[Uh-huh.]] So "undue" must be less than "extreme." Uh-huh. Okay? So
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=-
+
+===== record has it: spoken punctuation  (1 in all) =====
+  17-965 0:53:15 MR. KATYAL 
+    OFFICIAL: a religious -- it raises an inference of religious gerrymander, [[of]] "the burden imposed falls almost exclusively on those with religious
+    MODELS:   Whisper=quote | Qwen3=quote | Voxtral=of | Canary=quote | Parakeet=quote | Granite=quote | Granite Plus=quote
+
+===== machines add words  (1337 in all) =====
+  15-1204_OT2017 0:32:45 JUSTICE GORSUCH 
+    OFFICIAL: of jurisdictional tangles I'm snarled up in. One is 1252(b)(9), [[]] which as you'll recall, indicates Congress's intent to strip courts
+    MODELS:   Whisper=b 9 | Qwen3=b 9 | Voxtral=b 9 | Canary=b 9 | Parakeet=b 9 | Granite=b 9 | Granite Plus=b 9
+  15-1439 0:58:27 MR. GOLDSTEIN 
+    OFFICIAL: the case that it would be completely unnecessary because (c) [[]] controls. I do think that probably in the -- a
+    MODELS:   Whisper=c | Qwen3=c | Voxtral=c | Canary=c | Parakeet=c | Granite=c | Granite Plus=c
+  15-1439 1:00:11 JUSTICE KAGAN 
+    OFFICIAL: really ought to be in federal court, but under (c), [[]] now they have to be dismissed. That's right. I will
+    MODELS:   Whisper=c | Qwen3=c | Voxtral=c | Canary=c | Parakeet=c | Granite=c | Granite Plus=c
+  15-1509 0:18:24 MR. CROSS 
+    OFFICIAL: whether or not there was any due diligence. I'm suggesting [[]] it was for the appellate court, through the exercise of
+    MODELS:   Whisper=that | Qwen3=- | Voxtral=that | Canary=that | Parakeet=that | Granite=that | Granite Plus=that
+  16-1150 0:16:38 JUSTICE GORSUCH 
+    OFFICIAL: but, counsel, that's what it says I think in (b)(1) [[]] with respect to general verdicts. But then (b)(2) with respect
+    MODELS:   Whisper=b one | Qwen3=b one | Voxtral=b one | Canary=b one | Parakeet=b one | Granite=b one | Granite Plus=b one
+  16-1348 0:13:50 MR. FISHER 
+    OFFICIAL: get a verdict out of the jury on some counts. [[]] What the Court said there is that when we can
+    MODELS:   Whisper=and | Qwen3=and | Voxtral=- | Canary=and | Parakeet=and | Granite=and | Granite Plus=and
+  16-534 0:30:11 MR. STRAUSS 
+    OFFICIAL: But what I think you don't get out of (g)(1) [[]] is anything about immunity because it even applies to separate
+    MODELS:   Whisper=g one | Qwen3=g one | Voxtral=g one | Canary=g one | Parakeet=g one | Granite=g one | Granite Plus=g one
+  16-534 0:39:26 MR. TRIPP near-dash
+    OFFICIAL: he was talking about were interpreted in (a)(7), not (b)(3). [[]] And so -- but as we understand it, the statute
+    MODELS:   Whisper=b 3 | Qwen3=b 3 | Voxtral=b 3 | Canary=b 3 | Parakeet=b 3 | Granite=b 3 | Granite Plus=b 3
+  16-969 0:04:57 MR. CASTANIAS 
+    OFFICIAL: and this was not addressed in Cuozzo -- that 318(a) [[]] by its terms, by its text, requires a final written
+    MODELS:   Whisper=a | Qwen3=a | Voxtral=a | Canary=a | Parakeet=a | Granite=a | Granite Plus=-
+  16-969 0:56:09 MR. CASTANIAS 
+    OFFICIAL: point is that education can come from an appealable and [[]] estopping decision. Now, the broader points, Justice Breyer, you, in
+    MODELS:   Whisper=a | Qwen3=a | Voxtral=a | Canary=a | Parakeet=a | Granite=a | Granite Plus=a
+  17-130 0:46:08 MR. METLITSKY 
+    OFFICIAL: if it doesn't engage in plenary review, because subsection (c) [[]] says that every decision is going to be deemed the
+    MODELS:   Whisper=c | Qwen3=c | Voxtral=c | Canary=c | Parakeet=c | Granite=c | Granite Plus=-
+  17-312 0:55:34 MR. KEDEM 
+    OFFICIAL: worth pausing to just acknowledge the breadth of Respondents' argument. [[]] Respondents' argument is that every single decision to use restraints
+    MODELS:   Whisper=respondent | Qwen3=respondent | Voxtral=respondent | Canary=respondent | Parakeet=- | Granite=respondent | Granite Plus=respondent
+
+===== hard passage: split  (874 in all) =====
+  16-111 0:08:51 JUSTICE KAGAN near-dash
+    OFFICIAL: cakes, you know? Some - But you have a -- [[you have a]] view that a cake can be speech because it --
+    MODELS:   Whisper=- | Qwen3=you have a | Voxtral=- | Canary=- | Parakeet=you have a | Granite=- | Granite Plus=you have a
+  16-1371 0:51:30 JUSTICE KAGAN near-dash
+    OFFICIAL: I'm saying how about if he didn't? What if he [[was an -- what if he]] thought he was an authorized driver? So I think -
+    MODELS:   Whisper=- | Qwen3=was an what if he | Voxtral=- | Canary=- | Parakeet=was an what if he | Granite=- | Granite Plus=was an what if he
+  16-299 0:54:06 MS. KOVNER 
+    OFFICIAL: that national rules are generally going to go to the [[courts of appeals.]] But we do have confusion just in this case. I
+    MODELS:   Whisper=courts | Qwen3=- | Voxtral=courts of appeals | Canary=courts | Parakeet=court | Granite=- | Granite Plus=court of appeals
+  16-460 0:47:53 MR. UNIKOWSKY 
+    OFFICIAL: in fact, I -- I actually think that the 46 [[U.S.C. 53911]] statute, which Justice Kagan mentioned, is very good for us.
+    MODELS:   Whisper=u s c 911 | Qwen3=u s c 53911 | Voxtral=usc 53 911 | Canary=usc 53911 | Parakeet=usc 53911 | Granite=usc 539 11 | Granite Plus=usc 53 911
+  16-658 0:26:31 MR. STEWART near-dash
+    OFFICIAL: an error in my concessions. So there was -- we [[made -- we -- we]] made a mistake in describing that the Petitioner had filed
+    MODELS:   Whisper=made | Qwen3=may we we | Voxtral=made | Canary=may we | Parakeet=made | Granite=may have | Granite Plus=may we we
+  16-961 0:27:00 JUSTICE SOTOMAYOR 
+    OFFICIAL: - I'm sorry. Except that unlike those other agencies, territories, [[this D.C.]] court, and military organizations are explicitly -- Congress explicitly authorized
+    MODELS:   Whisper=the d c | Qwen3=this dc | Voxtral=the dc | Canary=the dc | Parakeet=the d c | Granite=this dc | Granite Plus=the dc
+  16-969 0:31:26 JUSTICE ALITO near-dash
+    OFFICIAL: on a ground permitted within IPR. You think that's - [[you think that is]] a serious interpretation of this challenge -- they challenged it
+    MODELS:   Whisper=- | Qwen3=you think that is | Voxtral=- | Canary=you think that is | Parakeet=you think that is | Granite=- | Granite Plus=-
+  17-130 0:16:06 JUSTICE BREYER 
+    OFFICIAL: we know Congress didn't mean to - All right. So [[maybe that's]] what you mean. -- limit it beyond the department head.
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=- | Canary=maybe that is | Parakeet=maybe that is | Granite=- | Granite Plus=-
+  17-269 0:36:47 MR. KEDEM near-dash
+    OFFICIAL: the nuisance and -- and diminish it. So where - [[Not as a general - -- where]] do you - where do you get your rule from?
+    MODELS:   Whisper=- | Qwen3=not as a where | Voxtral=- | Canary=not as a general where | Parakeet=- | Granite=not as a general where | Granite Plus=-
+  17-269 0:07:31 JUSTICE ALITO near-dash
+    OFFICIAL: we had not participated. We - Could you say -- [[could you say]] again what -- what you think the standard is? The
+    MODELS:   Whisper=- | Qwen3=could you say | Voxtral=- | Canary=- | Parakeet=could you say | Granite=- | Granite Plus=could you say
+  17-459 0:07:50 MR. ZIMMER near-dash
+    OFFICIAL: to why. So this is not an insurmountable problem. And [[it's not]] something -- and, in fact, it's not even a problem
+    MODELS:   Whisper=- | Qwen3=it is not | Voxtral=- | Canary=- | Parakeet=it is not | Granite=- | Granite Plus=it is not
+  17-530 0:39:56 MS. KOVNER near-dash
+    OFFICIAL: broader meaning of the term "money." And then the -- [[and then the]] exceptions that Congress added to the statute are really incompatible
+    MODELS:   Whisper=- | Qwen3=and then the | Voxtral=- | Canary=- | Parakeet=and then the | Granite=- | Granite Plus=and then the
+
+===== hard passage: nobody  (773 in all) =====
+  15-1485 0:07:58 MR. KIM 
+    OFFICIAL: you want, the host wasn't even there. The person who [[supposedly gave them]] the authority over the house - Okay. Nobody's there. That's
+    MODELS:   Whisper=to give me | Qwen3=is supposed to | Voxtral=to give me | Canary=supposedly gave him | Parakeet=supposedly gave him | Granite=supposedly gave me | Granite Plus=to give him
+  16-1161 0:35:18 JUSTICE ALITO near-dash
+    OFFICIAL: Wisconsin and, no, it really doesn't matter whether I vote. [[Well, Mr. Smith]] - No, but you're going to take these -- the
+    MODELS:   Whisper=- | Qwen3=well mister smith | Voxtral=- | Canary=- | Parakeet=- | Granite=- | Granite Plus=well mister president
+  16-1371 0:18:36 JUSTICE GORSUCH near-dash
+    OFFICIAL: objective expectation of privacy in spaces that are - Mr. [[Loeb - So your]] argument - -- if I can -- if I can
+    MODELS:   Whisper=lowe | Qwen3=lopatin so here | Voxtral=loebitz | Canary=- | Parakeet=lobitz | Granite=lobo | Granite Plus=logan so you
+  16-1371 0:52:42 MR. FEIGIN near-dash
+    OFFICIAL: a little bit back - So we've now - -- [[to the Chief Justice's]] -- -- criminalized a contract - Well, Your Honor -
+    MODELS:   Whisper=- | Qwen3=- | Voxtral=to the chief justice now | Canary=- | Parakeet=phone so we have now | Granite=- | Granite Plus=to what you just said
+  16-1371 0:32:27 MR. FEIGIN near-dash
+    OFFICIAL: For example, if you think about Minnesota against Carter where [[this Court held]] - So every criminal defendant where their suitcase has been
+    MODELS:   Whisper=this court held | Qwen3=the | Voxtral=this sort of | Canary=the | Parakeet=the school is | Granite=the | Granite Plus=the
+  16-460 0:23:33 MS. ALIKHAN near-dash
+    OFFICIAL: which is why - Not a closer case - -- [[I think the 30 days]] -- -- but a case where there's no argument the
+    MODELS:   Whisper=period not a closer case | Qwen3=i think the 30 day | Voxtral=- | Canary=- | Parakeet=i think the 30 day | Granite=- | Granite Plus=-
+  16-498 0:22:02 JUSTICE BREYER near-dash
+    OFFICIAL: a distinction between the land being into trust and - [[Okay. Okay. Okay. Okay,]] I've got it. -- there are - Got it, got
+    MODELS:   Whisper=okay okay okay and | Qwen3=and | Voxtral=- | Canary=- | Parakeet=- | Granite=the property | Granite Plus=and there there are
+  16-499 0:37:38 JUSTICE BREYER 
+    OFFICIAL: - I just want to be sure I get an [[answer to the second]] part. And -- and -- and what I would tell
+    MODELS:   Whisper=answer to the 2nd | Qwen3=- | Voxtral=answer | Canary=answer | Parakeet=2nd | Granite=- | Granite Plus=in some way in
+  16-9493 0:30:06 MR. ELLIS 
+    OFFICIAL: an area much like sentencing itself that lends itself to [[bright-line rules.]] What is your -- what is your best guidance as
+    MODELS:   Whisper=right line rules | Qwen3=right | Voxtral=right line rules | Canary=right law | Parakeet=the right language | Granite=- | Granite Plus=the right
+  17-333 0:43:58 MR. SULLIVAN near-dash
+    OFFICIAL: happens, both controlled by Republican party. So it's a much [[different - But we]] haven't - Counsel, you've made -- just to clear up,
+    MODELS:   Whisper=different question also | Qwen3=0 so | Voxtral=bigger problem | Canary=more . so | Parakeet=more | Granite=different | Granite Plus=to think about
+  17-43 0:19:00 MR. SHANMUGAM 
+    OFFICIAL: Court should somehow sever the invalid applications of the orders [[from valid ones.]] But there was no invalid application. The only intercepts that
+    MODELS:   Whisper=from valid | Qwen3=from the statute | Voxtral=from valid | Canary=- | Parakeet=for the government | Granite=- | Granite Plus=as it
+  17-965 0:04:10 GENERAL FRANCISCO near-dash
+    OFFICIAL: in the INA, but to go to the statutes that [[Your Honor was - But -- it]] might, but - Right, but - -- on the very
+    MODELS:   Whisper=your honor was but | Qwen3=your honor was | Voxtral=you are | Canary=you are referring to | Parakeet=you are honored to be | Granite=you are on | Granite Plus=you are on are listed

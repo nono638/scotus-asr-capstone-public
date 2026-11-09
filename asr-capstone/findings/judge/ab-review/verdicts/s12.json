@@ -1,0 +1,15 @@
+{"case": "s12",
+ "parts": {
+  "meaning/line": {"X": "partly", "Y": "partly", "better": "tie", "why": "Both say changed / meaning changed, which is defensible: present habitual 'we be' becomes past habitual 'we'd be'. But severity 3 (a wrong fact) is too high for a tense shift in a habit that is kept. Y's reason is more exact ('past habitual'). X's is correct but thinner."},
+  "meaning/minute": {"X": "right", "Y": "partly", "better": "X", "why": "X gives severity 2, which fits a wrong detail. Y stays at 3."},
+  "meaning/whole": {"X": "right", "Y": "right", "better": "tie", "why": "Both say changed at severity 2, with accurate reasons."},
+  "noticeable": {"X": "wrong", "Y": "right", "better": "Y", "why": "'My mom and I we'd be walking' reads as normal English. A reader with only the engine's text would not notice. Y says no; X says yes."},
+  "stakes": {"X": "right", "Y": "right", "better": "tie", "why": "Both say yes: a researcher quoting the habitual 'be' would lose it. X overstates it as 'fundamentally' changing the tense, but the verdict holds."},
+  "rule": {"X": "right", "Y": "right", "better": "tie", "why": "Both confirm the label; the texts match the evidence ('we be' vs 'we'd be')."},
+  "blind": {"X": "right", "Y": "right", "better": "tie", "why": "Both pick the reference in both orders, sure 3, for the right reason."},
+  "rank": {"X": "partly", "Y": "right", "better": "Y", "why": "Parakeet and Qwen3 both keep 'we be', so they should tie. Y ties them. X puts Qwen3 second over punctuation, which the task says to ignore."},
+  "misses": {"X": {"real_and_matter": 5, "trivial": 5, "not_real": 0, "important_missed": 0},
+             "Y": {"real_and_matter": 2, "trivial": 1, "not_real": 1, "important_missed": 3},
+             "better": "X", "why": "X catches 'you been missing' turned into 'I been missing', 'up the street' lost, 'go in there' garbled, the '45 five' number and the case itself, plus some harmless items. Y invents a loss at 'we'll be like', which the engine has word for word. It misses the you/I swap, 'up the street' and 'go in there'."}
+ },
+ "overall": {"better": "X", "why": "A close case. Y is better on noticeable and rank, but X's misses list is far more complete and has nothing invented, while Y's misses three real changes and makes one up."}}

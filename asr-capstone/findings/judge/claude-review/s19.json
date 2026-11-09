@@ -1,0 +1,135 @@
+{
+ "case": "s19",
+ "own": {
+  "meaning": "garbled",
+  "severity": 4,
+  "noticeable": "yes",
+  "follow_up": "content lost, gap shows",
+  "stakes": "yes",
+  "reason": "Whisper replaced Justice Ginsburg's question \"Would that count also, because it is a mechanism set up by a government employer?\" with a made-up speaker label \"JUSTICE SOTOMAYOR.\" followed by \"employer?\", so the question is lost and the wrong justice is named.",
+  "rule_right": "yes",
+  "rule_reason": "The twelve words are missing and Qwen3 and Parakeet (Engines 3 and 1) wrote all of them; the rule does not mention that Whisper put a false speaker label in their place (and also lost \"Would that\"), but what it says is right.",
+  "more_plausible": "reference",
+  "plausible_how_clear": "Very clear: \"would that justice sotomayor employer\" is not a sentence, and the answer \"It would qualify\" needs a question.",
+  "my_misses": [
+   {
+    "reference": "Would that count also, because it is a mechanism set up by a government employer?",
+    "engine": "JUSTICE SOTOMAYOR. employer?",
+    "severity": 4,
+    "what": "the question is replaced by a false speaker label"
+   },
+   {
+    "reference": "JUSTICE GINSBURG: What about the --",
+    "engine": "JUSTICE SOTOMAYOR. What about the —",
+    "severity": 3,
+    "what": "the question is credited to the wrong justice"
+   },
+   {
+    "reference": "It is Petitioner's view that it would not qualify",
+    "engine": "It is a petitioner's view that would not qualify",
+    "severity": 1,
+    "what": "\"Petitioner's view\" (the party's position) becomes \"a petitioner's view\""
+   },
+   {
+    "reference": "MR. ORTIZ: A lawsuit, pursuing a lawsuit",
+    "engine": "MR. Pursuing a lawsuit",
+    "severity": 0,
+    "what": "a stray \"MR.\" label, the restart dropped"
+   }
+  ]
+ },
+ "review": {
+  "labelled/line": {
+   "verdict": "agree",
+   "why": "Right: a made-up speaker label stands where the question was; severity 4 and stakes yes fit. I would call the meaning \"garbled\" rather than \"changed\", a minor point."
+  },
+  "labelled/minute": {
+   "verdict": "agree",
+   "why": "Accurate description: the Justice's question about a government employer is erased."
+  },
+  "labelled/whole": {
+   "verdict": "partly",
+   "why": "Verdicts are right, but the reason calls Sotomayor \"the previous speaker\"; in the minute the previous Justice speaking is Ginsburg, and \"Sotomayor\" appears only as the engine's own wrong label. I could not see the full transcript."
+  },
+  "rule/minute": {
+   "verdict": "agree",
+   "why": "The twelve words are missing and Gemma correctly notes that a speaker name was put in their place."
+  },
+  "blind/order1": {
+   "verdict": "agree",
+   "why": "Picked the reference (A); \"would that justice sotomayor employer\" is plainly not a sentence."
+  },
+  "blind/order2": {
+   "verdict": "agree",
+   "why": "Picked the reference again (now B) with the same reason; no order effect."
+  },
+  "rank/minute": {
+   "verdict": "disagree",
+   "why": "It put Parakeet (Engine 1) second for omitting \"a\", but Parakeet wrote \"because it is a mechanism set up by a government\" word for word; that slip is invented. Parakeet and Qwen3 should tie first."
+  },
+  "misses": [
+   {
+    "reference": "MR. ORTIZ: A lawsuit",
+    "engine": "MR. Pursuing a lawsuit",
+    "is_real": "partly",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "The reference is a restart (\"A lawsuit, pursuing a lawsuit\"); the engine kept \"pursuing a lawsuit\", so no content is lost. 0, not 3."
+   },
+   {
+    "reference": "JUSTICE GINSBURG",
+    "engine": "JUSTICE SOTOMAYOR",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "yes",
+    "note": "The earlier question \"What about the --\" is credited to the wrong Justice; in a court record who asked matters. 3 is fair."
+   },
+   {
+    "reference": "Would that count also, because it is a mechanism set up by a government",
+    "engine": "employer?",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "yes",
+    "note": "The flagged loss; 4 fair. Its engine side leaves out the inserted \"JUSTICE SOTOMAYOR.\", which is covered by the fifth item."
+   },
+   {
+    "reference": "MR. ORTIZ: Yes, Your Honor, that is the case.",
+    "engine": "Yes, Your Honor. That is the case.",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "yes",
+    "note": "Only a missing speaker name; 0 is fair but it did not need listing."
+   },
+   {
+    "reference": "JUSTICE GINSBURG",
+    "engine": "JUSTICE SOTOMAYOR",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "yes",
+    "note": "The second false label, at the spot itself; real, though it overlaps the third item."
+   },
+   {
+    "reference": "It is Petitioner's view that it would not qualify",
+    "engine": "It is a petitioner's view that would not qualify",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "Meaning is the same; 1 at most."
+   },
+   {
+    "reference": "JUSTICE SCALIA: If -- if lawsuits",
+    "engine": "You know, if lawsuits",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "The engine writes no speaker names (the prompt says so) and \"you know\" is filler; 0, not 3."
+   }
+  ],
+  "overlooked": []
+ },
+ "worth_a_listen": {
+  "yes": true,
+  "why": "Whisper wrote \"JUSTICE SOTOMAYOR.\" over 3.6 s of speech that two engines heard word for word; a clear and striking invented-label example worth confirming by ear."
+ },
+ "summary": "Gemma got the spot right in every view (question lost, wrong Justice named), but its ranking invented a missing \"a\" in Parakeet's text, and its misses list rated a speaker-label difference and a restart at severity 3."
+}

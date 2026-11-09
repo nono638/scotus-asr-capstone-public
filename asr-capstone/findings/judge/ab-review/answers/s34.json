@@ -1,0 +1,149 @@
+{
+ "case": "s34",
+ "X": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 2,
+    "follow_up": "continues the talk",
+    "reason": "The engine adds the word 'Really?' where the reference indicates there is no speech."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 2,
+    "follow_up": "continues the talk",
+    "reason": "The engine adds the word 'Really?' at the marked place, whereas the reference contains no words."
+   },
+   "whole": {
+    "meaning": "changed",
+    "severity": 2,
+    "follow_up": "unrelated",
+    "reason": "The engine adds the word 'Really?' at the marked place, whereas the reference indicates there was no speech there."
+   }
+  },
+  "noticeable": "no",
+  "stakes": {
+   "stakes": "maybe",
+   "reason": "The engine adds a conversational interjection ('Really?') that does not exist in the original audio/reference, potentially misrepresenting the flow of the conversation or implying a reaction that wasn't made."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The engine includes a word 'Really?' that is absent from the reference, which aligns with the evidence of silence/low decibels."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "engine",
+    "sure": 3,
+    "reason": "Version B includes the word 'really', which acts as a natural intensifier for the preceding adjective 'uncomfortable' and fits the conversational flow of the speaker's hesitation and repetition."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "engine",
+    "sure": 2,
+    "reason": "In Version A, the word 'really' acts as an intensifier for 'uncomfortable', which is a very natural way to end a sentence in casual conversation. Version B's omission makes the sentence end abruptly, though it is still grammatically possible."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Parakeet": 1,
+    "Granite": 2,
+    "Qwen3": 2,
+    "Whisper": 2,
+    "Canary": 2
+   },
+   "reason": "Only Engine 1 correctly identifies that there is no text at the marked location, matching the reference transcript."
+  },
+  "misses": [
+   {
+    "reference": "NOT SOCKS IS OKAY",
+    "engine": "but socks is okay",
+    "severity": 2,
+    "what": "the speaker's response to wearing socks"
+   },
+   {
+    "reference": "YEAH WHAT'S THE STOP NO",
+    "engine": "Really? Yeah. It's just like, you know...",
+    "severity": 2,
+    "what": "the speaker's reaction to the discomfort"
+   }
+  ]
+ },
+ "Y": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 2,
+    "follow_up": "unrelated",
+    "reason": "The engine inserted a completely new word/question that does not exist in the reference transcript."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 2,
+    "follow_up": "unrelated",
+    "reason": "The engine hallucinated the word 'Really?' where the reference has a silence/gap."
+   },
+   "whole": {
+    "meaning": "changed",
+    "severity": 2,
+    "follow_up": "unrelated",
+    "reason": "The engine hallucinated the word 'Really?' which was not present in the original transcript."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "maybe",
+   "reason": "The engine adds a question ('Really?') that was never spoken, which could misrepresent the flow of the conversation."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The engine inserted a word that does not exist in the reference, which aligns with the checker's finding of a hallucination during a period of silence."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "engine",
+    "sure": 2,
+    "reason": "The word 'really' fits naturally as an intensifier for 'uncomfortable' in the context of the speaker's explanation."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "engine",
+    "sure": 2,
+    "reason": "The word 'really' fits naturally as an intensifier in the context of describing how uncomfortable wearing socks is."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Parakeet": 5,
+    "Granite": 1,
+    "Qwen3": 3,
+    "Whisper": 4,
+    "Canary": 2
+   },
+   "reason": "Engine 2 is the most accurate as it preserves the flow and meaning of the transition, while Engine 1 introduces significant hallucinations like 'Don't die'."
+  },
+  "misses": [
+   {
+    "reference": "NOT SOCKS IS OKAY",
+    "engine": "but socks is okay",
+    "severity": 2,
+    "what": "changed 'not' to 'but'"
+   },
+   {
+    "reference": "I WOULD STILL SLEEP",
+    "engine": "i will still sleep",
+    "severity": 1,
+    "what": "changed tense from would to will"
+   },
+   {
+    "reference": "WHEN AT THE END OF THE DUVET",
+    "engine": "when the end of the duvet",
+    "severity": 2,
+    "what": "missing 'at'"
+   },
+   {
+    "reference": "YEAH WHAT'S THE STOP NO",
+    "engine": "Really? Yeah. It's just like, you know... ... ... I'm tired. Don't",
+    "severity": 3,
+    "what": "engine added filler and hallucinated 'Really? It's just like, you know' and changed 'stop no' to 'don't'"
+   }
+  ]
+ }
+}

@@ -1,0 +1,2 @@
+model,term,cases,leaderboard,standard_before,standard_after,standard_change,lowercase_nopunct_before,lowercase_nopunct_after,lowercase_nopunct_change,verbatim_before,verbatim_after,verbatim_change
+parakeet-tdt-0.6b-v3,OT2017,61,6.208,6.222,5.771,-0.451,8.689,8.266,-0.423,17.451,17.176,-0.275

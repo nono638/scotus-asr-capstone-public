@@ -1,0 +1,21 @@
+# Settings for running against the downloaded corpus rather than the six-case
+# sample.
+#
+# The corpus lives outside the repository on purpose: thirty-odd gigabytes of
+# audio, and only the 5090 laptop has a use for it. Nothing in the pipeline
+# depends on where it sits: {scotus_corpus} below is filled in from
+# asr-capstone/local-paths.yaml, which each laptop keeps for itself.
+#
+# Everything not listed here falls back to the defaults built into config.py -
+# not to default.yaml. test_config_agreement.py checks the two say the same, so
+# the deliberate choices documented in default.yaml (silence filtering off, no
+# conditioning on previous text) still apply.
+#
+#   python -m scotus_asr.cli run --config config/corpus.yaml --term 2017
+
+paths:
+  # Holds manifest.json and one folder per case, exactly like sample/ does.
+  sample_dir: "{scotus_corpus}/cases"
+  # Run output stays with the corpus rather than in the repository, because a
+  # full run writes a word-timed JSON per case and that is gigabytes.
+  runs_dir: "{scotus_corpus}/runs"

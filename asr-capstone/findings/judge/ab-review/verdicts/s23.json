@@ -1,0 +1,13 @@
+{"case": "s23",
+ "parts": {
+  "meaning/line": {"X": "right", "Y": "right", "better": "tie", "why": "Both: changed, severity 2. Y's reason explains it a little better."},
+  "meaning/minute": {"X": "right", "Y": "right", "better": "tie", "why": "Same answer from both."},
+  "meaning/whole": {"X": "right", "Y": "right", "better": "tie", "why": "Severity 1 (X) or 2 (Y); either is defensible for reads->leads."},
+  "noticeable": {"X": "right", "Y": "right", "better": "tie", "why": "'the way 35 leads' reads oddly; both say yes."},
+  "stakes": {"X": "right", "Y": "partly", "better": "X", "why": "A lawyer would most likely see 'leads' as a slip for 'reads'; maybe fits. Y says yes and claims it changes the meaning to 'how it directs', which overstates it."},
+  "rule": {"X": "right", "Y": "right", "better": "tie", "why": "Both other engines wrote 'reads'; the label and evidence are right."},
+  "blind": {"X": "right", "Y": "right", "better": "tie", "why": "Both pick 'reads' in both orders."},
+  "rank": {"X": "partly", "Y": "right", "better": "Y", "why": "Qwen3 and Parakeet both wrote 'reads'. X drops Qwen3 to 2nd over a repeated 'and', a small slip the instructions say to ignore. Y ties them."},
+  "misses": {"X": {"real_and_matter": 3, "trivial": 1, "not_real": 0, "important_missed": 0}, "Y": {"real_and_matter": 3, "trivial": 0, "not_real": 0, "important_missed": 0}, "better": "tie", "why": "Both find affirmed->approved, reads->leads and the dropped 'after the sentence' correction. X also lists the edge word 'trial' (trivial). The difference is small."}
+ },
+ "overall": {"better": "tie", "why": "X has the better stakes answer and Y the better rank; everything else matches."}}

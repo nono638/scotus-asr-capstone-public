@@ -1,0 +1,222 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>/*TITLE*/</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Public+Sans:wght@400;500;600;700&family=Courier+Prime:wght@400;700&display=swap">
+<style>
+/*TOKENS*/
+/*SITECSS*/
+</style>
+
+<!-- One data set's page. Every data set uses this template, filled with its own
+     data by tools/build_site.py: the big picture, who wrote the "true"
+     transcript, the failures by what they do to a reader, then the numbers. -->
+<div class="wrap">
+  <nav class="site-nav" id="nav" aria-label="Pages"></nav>
+  <header>
+    <h1 id="title"></h1>
+    <p class="lede" id="lede"></p>
+    <p class="go-source"><a id="home-link" class="source-button" target="_blank" rel="noopener"></a></p>
+  </header>
+
+  <section id="big">
+    <h2 class="column">The big picture</h2>
+    <div class="facts" id="facts"></div>
+    <div class="big-grid">
+      <div>
+        <h3>Error rate by engine</h3>
+        <p class="hint">Errors over every reference word, in percent, on the benchmark rule (case, punctuation and fillers ignored). Lower is better.</p>
+        <div id="rates"></div>
+      </div>
+      <div>
+        <h3>What the rules found, per hour of audio</h3>
+        <p class="hint" id="classes-hint"></p>
+        <div id="classes"></div>
+      </div>
+    </div>
+  </section>
+
+  <section id="truth" class="truth">
+    <h2>Who wrote the “true” transcript</h2>
+    <p id="truth-by"></p>
+    <p id="truth-doubt"></p>
+    <ul id="truth-links"></ul>
+    <p class="truth-small"><b>Licence:</b> <span id="truth-licence"></span></p>
+    <p class="truth-small"><b>Cite as:</b> <span id="truth-cite"></span></p>
+  </section>
+
+  <section id="wrong">
+    <h2 class="column">Where it goes wrong</h2>
+    <p class="column" id="wrong-intro"></p>
+    <ul class="kinds-index" id="kinds-index"></ul>
+    <div id="kinds"></div>
+    <p class="compare-key column">Each card plays a shorter and a longer stretch, both cut between sentences; the longer one also shows more of the text. The word being spoken lights up; click a word to play from it. A yellow highlight marks an engine's word that differs from the record; the highlighted words in the record are the ones in question.</p>
+  </section>
+
+  <section id="whole">
+    <h2 class="column">Every recording, start to finish</h2>
+    <p class="column" id="whole-text"></p>
+  </section>
+
+  <section id="scores">
+    <h2 class="column">Error rates by part</h2>
+    <p class="column" id="scores-intro"></p>
+    <div id="scores-table" style="max-width: 52rem; margin-top: 14px"></div>
+    <p class="source" id="scores-source"></p>
+  </section>
+
+  <div id="extras"></div>
+
+  <section id="done">
+    <h2 class="column">How much is done</h2>
+    <p class="column" id="done-intro"></p>
+    <div class="coverage" id="coverage"></div>
+    <p class="key" id="coverage-key"></p>
+    <p class="source">Counted from the transcripts in each run folder when the page was built.</p>
+  </section>
+
+  <footer><p id="credit"></p><div id="credits"></div><p id="built"></p></footer>
+</div>
+
+<script>
+/*LISTEN*/
+</script>
+<script>
+/*COMPARE*/
+</script>
+<script>
+/*CHART*/
+</script>
+<script>
+/*TABLE*/
+/*CREDITS*/
+</script>
+<script>
+/*CARDS*/
+</script>
+<script>
+/*SITEJS*/
+</script>
+<script>
+const D = /*DATA*/{};
+const engineColour = e => `var(--${e.toLowerCase()}, var(--accent))`;
+
+siteNav($("#nav"), D.pages, D.file);
+$("#title").textContent = D.title;
+$("#lede").textContent = D.lede;
+$("#home-link").href = D.source.home[1];
+$("#home-link").textContent = `Go to the data set: ${D.source.home[0]}`;
+
+// ---- the big picture ----------------------------------------------------------
+D.facts.forEach(f => $("#facts").append(el("div", {}, el("b", {}, f.n), f.what)));
+Chart.plain($("#rates"), {
+  rows: D.big.rates.slice().sort((a, b) => a.rate - b.rate).map(r => ({ label: r.engine, value: r.rate, colour: engineColour(r.engine) })),
+  fmt: v => v.toFixed(1) + "%",
+});
+const share = D.big.opposite;
+$("#classes-hint").textContent = "Counted by the Python rules, before any judge or ear has looked, so these are upper bounds." +
+  (share.n ? ` Of the ${share.n} “not” cases Claude Sonnet has judged here, it says ${share.share}% really reverse the meaning.` : "");
+Table.sortable($("#classes"), { columns: withFormats(D.big.classes.columns), rows: D.big.classes.rows, sort: D.big.classes.sort });
+
+// ---- who wrote the reference ------------------------------------------------------
+$("#truth-by").textContent = D.source.by;
+if (D.referenceDoubt) $("#truth-doubt").textContent = D.referenceDoubt; else $("#truth-doubt").remove();
+[[D.source.home[0], D.source.home[1]], ...D.source.links].forEach(([label, url]) =>
+  $("#truth-links").append(el("li", {}, el("a", { href: url, target: "_blank", rel: "noopener" }, label))));
+$("#truth-licence").textContent = D.source.licence;
+$("#truth-cite").textContent = D.source.cite;
+
+// ---- where it goes wrong -------------------------------------------------------
+$("#wrong-intro").textContent = D.wrongIntro;
+if (D.compareKey) $(".compare-key").textContent = D.compareKey;
+D.failures.forEach(k => {
+  $("#kinds-index").append(el("li", {}, el("a", { href: "#" + k.kind }, k.title, el("small", {}, k.cards.length ? `${k.cards.length}` : "none yet"))));
+  const s = el("section", { class: "kind-section", id: k.kind });
+  s.append(el("h3", {}, k.title), el("p", { class: "why" }, k.why));
+  if (k.tally) s.append(el("p", { class: "column" }, k.tally));
+  if (k.empty) s.append(el("p", { class: "kind-empty" }, k.empty));
+  if (k.rates) {
+    s.append(el("p", { class: "column" }, k.rates.intro));
+    const box = el("div", { class: "kind-counts", style: "max-width: 56rem" });
+    s.append(box);
+    Table.sortable(box, { columns: withFormats(k.rates.columns), rows: k.rates.rows, sort: k.rates.sort });
+  }
+  if (k.cards.length) cardGrid(s, k.cards, 4);
+  $("#kinds").append(s);
+});
+
+// ---- whole recordings ------------------------------------------------------------
+const whole = EXPLORERS[D.corpus];
+const wholeText = $("#whole-text");
+if (whole) {
+  wholeText.append(`Every ${D.name} recording in the study, with the record and each engine's transcript side by side and every case the rules found highlighted before you reach it. Some recordings have their audio there; the page says which. `,
+    el("a", { href: whole, target: "_blank", rel: "noopener" }, `Open the ${D.name} recordings`), ".");
+} else {
+  wholeText.textContent = "Not built yet.";
+}
+
+// ---- error rates by part -----------------------------------------------------------
+const S = D.scores;
+$("#scores-intro").textContent = S.intro;
+$("#scores-source").textContent = S.source;
+Table.sortable($("#scores-table"), {
+  columns: [{ key: "engine", label: "Engine" },
+    ...S.parts.map(p => ({ key: p.key, label: p.label, num: true, fmt: S.digits === 2 ? pct2 : pct }))],
+  rows: S.rows, sort: { key: S.parts[S.parts.length - 1].key, dir: 1 },
+});
+
+// ---- the extras a data set asks for ---------------------------------------------
+const EXTRAS = {
+  // The error model: what around a word raises the odds it is missed.
+  odds(box) {
+    const O = D.odds;
+    box.innerHTML = `<section id="error-model">
+      <h2 class="column">What makes a word go wrong</h2>
+      <p class="column">A model of every record word, for every engine: was it written? The odds of a miss go up this many times when&hellip;</p>
+      <div class="switch-row"><div class="switch" id="odds-switch" role="group" aria-label="Part"></div></div>
+      <p class="column" id="odds-fit"></p>
+      <div id="odds" style="max-width: 52rem; margin-top: 14px"></div>
+      ${O.refit ? `<p class="column">${esc(O.refit)}</p>` : ""}
+      <p class="source">${esc(O.source)}</p></section>`;
+    const bars = Chart.bars($("#odds"), {
+      rows: O.rows, mode: O.modes[0][0], max: 20,
+      value: (r, m) => O.values[m][r.key],
+      tip: (r, m) => { const d = O.values[m][r.key]; return `<b>${esc(r.label)}</b><br>${d.v.toFixed(2)} times the odds of a miss<br>95% interval ${d.lo.toFixed(2)} to ${d.hi.toFixed(2)}`; },
+    });
+    function fit(m) {
+      const f = O.fit[m];
+      $("#odds-fit").textContent = f ? `What is going on around a word explains about ${Math.round(f.conditions / f.engine)} times as much as which engine wrote it (McFadden pseudo R² ${f.conditions.toFixed(3)} against ${f.engine.toFixed(4)}).` : "";
+    }
+    if (O.modes.length > 1) switchOf($("#odds-switch"), O.modes, O.modes[0][0], m => { bars.setMode(m); fit(m); });
+    else $("#odds-switch").parentElement.remove();
+    fit(O.modes[0][0]);
+  },
+};
+D.extras.forEach(name => { const box = el("div"); $("#extras").append(box); EXTRAS[name](box); });
+
+// ---- how much is done ------------------------------------------------------------
+const C = D.coverage;
+$("#done-intro").textContent = C.intro;
+C.cells.forEach(r => {
+  const full = C.engines.every(e => r.done[e] === r.n);
+  const cell = el("div", { class: "term-cell", title: C.engines.map(e => `${e} ${r.done[e]}`).join(", ") + ` of ${r.n}` });
+  cell.append(el("span", { class: "year" }, r.label),
+    el("span", { class: "n" }, `${r.n} ${C.unit}${r.note ? ", " + r.note : ""}${full ? ", all done" : ""}`));
+  C.engines.forEach(e => {
+    const m = el("div", { class: "meter", role: "img", "aria-label": `${e}: ${r.done[e]} of ${r.n}` });
+    const fill = el("i");
+    fill.style.width = (100 * r.done[e] / r.n) + "%";
+    fill.style.setProperty("--c", engineColour(e));
+    m.append(fill);
+    cell.append(m);
+  });
+  $("#coverage").append(cell);
+});
+C.engines.forEach(e => { const s = el("span", {}, e); s.style.setProperty("--c", engineColour(e)); $("#coverage-key").append(s); });
+$("#coverage-key").prepend("Bars, top to bottom: ");
+
+$("#credit").textContent = D.credit;
+Credits.list($("#credits"), D.credits);
+$("#built").textContent = `Built ${D.built} by tools/build_site.py from the files in findings/. Every number on this page comes from the file named beside it.`;
+</script>

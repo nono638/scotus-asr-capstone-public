@@ -1,0 +1,145 @@
+{
+ "case": "s01",
+ "X": {
+  "meaning": {
+   "line": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation lost",
+    "reason": "The engine removes the negation 'not' from the word 'can't', changing the meaning of the sentence."
+   },
+   "minute": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation lost",
+    "reason": "The engine removes the negation 'not' from the word 'can't', changing 'can't include' to 'can include'."
+   },
+   "whole": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation lost",
+    "reason": "The engine incorrectly transcribed the negation, changing 'can't' to 'can'."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The difference between 'can't' and 'can' fundamentally reverses the legal argument regarding the scope of permissible conditions in supervised release."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The reference contains the contraction 'can't' (negative) while the engine contains 'can' (positive), which matches the checker's evidence."
+  },
+  "blind": {
+   "order1 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "The context involves discussing the limits of government authority in supervised release conditions. Saying the conditions 'can' include who you get pregnant with makes no sense in the context of arguing that such conditions are not plausible or are unconstitutional; 'can't' fits the argument that such an intrusive condition is an overreach."
+   },
+   "order2 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "The speaker is arguing that certain conditions of supervised release are unreasonable or unconstitutional. Saying a condition 'can' include who you get pregnant with, followed by 'that's just no', is logically inconsistent, whereas 'can't' fits the context of arguing against the validity of such a condition."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Qwen3": 1,
+    "Whisper": 1,
+    "Parakeet": 3
+   },
+   "reason": "Engine 1 and Engine 2 correctly capture the negative meaning of the reference, while Engine 3 incorrectly changes it to a positive."
+  },
+  "misses": [
+   {
+    "reference": "It can't include who you get pregnant with",
+    "engine": "It can include who you get pregnant with",
+    "severity": 4,
+    "what": "negation of the condition's content"
+   },
+   {
+    "reference": "Just violates the Constitution",
+    "engine": "it just violates the Constitution",
+    "severity": 1,
+    "what": "the phrase for the broader standard"
+   },
+   {
+    "reference": "well, yeah, no, we really need to do that",
+    "engine": "well, well, yeah, that no, we really need to do that",
+    "severity": 1,
+    "what": "the government's response/denial"
+   }
+  ]
+ },
+ "Y": {
+  "meaning": {
+   "line": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation lost",
+    "reason": "The engine failed to recognize the negation 'not' in the contraction 'can't'."
+   },
+   "minute": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation lost",
+    "reason": "The speech recognition engine failed to recognize the contraction 'can't', removing the negation."
+   },
+   "whole": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation lost",
+    "reason": "The engine missed the negation 'not' in the word 'can't'."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The error reverses the core argument of the attorney, changing a claim about an unconstitutional restriction to a claim that the government can regulate pregnancy."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The checker correctly identified that the reference contains a negation ('can't') while the engine does not ('can')."
+  },
+  "blind": {
+   "order1 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "The context of the sentence describes a condition that is so extreme it is 'just no', which logically follows the contraction 'can't' (cannot) rather than 'can'."
+   },
+   "order2 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "The context of the sentence 'it [can't] include who you get pregnant with that's just no' makes logical sense, whereas 'it can include' followed by 'that's just no' is contradictory."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Qwen3": 1,
+    "Whisper": 1,
+    "Parakeet": 3
+   },
+   "reason": "Engine 1 and Engine 2 correctly preserve the negative meaning of the reference, while Engine 3 incorrectly changes the meaning to the opposite by removing the negation."
+  },
+  "misses": [
+   {
+    "reference": "It can't include",
+    "engine": "It can include",
+    "severity": 4,
+    "what": "Reversed the meaning regarding the condition's content"
+   },
+   {
+    "reference": "broader standard",
+    "engine": "broader standards",
+    "severity": 0,
+    "what": "Pluralization change"
+   },
+   {
+    "reference": "well, yeah, no, we really need to do that",
+    "engine": "well, well, yeah, that no, we really need to do that",
+    "severity": 1,
+    "what": "Added/jumbled filler words"
+   }
+  ]
+ }
+}

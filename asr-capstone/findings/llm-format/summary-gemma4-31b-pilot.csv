@@ -1,0 +1,31 @@
+llm,model,step,rule,wer,cases
+gemma4:31b,Canary,0,lowercase_nopunct,8.797,3
+gemma4:31b,Canary,0,standard,8.742,3
+gemma4:31b,Canary,0,verbatim,18.982,3
+gemma4:31b,Granite,0,lowercase_nopunct,10.182,3
+gemma4:31b,Granite,0,standard,10.516,3
+gemma4:31b,Granite,0,verbatim,20.008,3
+gemma4:31b,Granite Plus,0,lowercase_nopunct,9.835,3
+gemma4:31b,Granite Plus,0,standard,8.514,3
+gemma4:31b,Granite Plus,0,verbatim,31.62,3
+gemma4:31b,Parakeet,0,lowercase_nopunct,10.765,3
+gemma4:31b,Parakeet,0,standard,8.149,3
+gemma4:31b,Parakeet,0,verbatim,19.886,3
+gemma4:31b,Qwen3,0,lowercase_nopunct,6.443,3
+gemma4:31b,Qwen3,0,standard,6.332,3
+gemma4:31b,Qwen3,0,verbatim,17.499,3
+gemma4:31b,Qwen3,1,lowercase_nopunct,5.237,3
+gemma4:31b,Qwen3,1,standard,5.126,3
+gemma4:31b,Qwen3,1,verbatim,14.196,3
+gemma4:31b,Qwen3,2,lowercase_nopunct,6.879,3
+gemma4:31b,Qwen3,2,standard,6.798,3
+gemma4:31b,Qwen3,2,verbatim,16.599,3
+gemma4:31b,Qwen3,3,lowercase_nopunct,5.798,3
+gemma4:31b,Qwen3,3,standard,5.576,3
+gemma4:31b,Qwen3,3,verbatim,14.415,3
+gemma4:31b,Voxtral,0,lowercase_nopunct,8.782,3
+gemma4:31b,Voxtral,0,standard,8.883,3
+gemma4:31b,Voxtral,0,verbatim,19.63,3
+gemma4:31b,Whisper,0,lowercase_nopunct,7.765,3
+gemma4:31b,Whisper,0,standard,7.881,3
+gemma4:31b,Whisper,0,verbatim,17.306,3

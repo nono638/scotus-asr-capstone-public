@@ -1,0 +1,253 @@
+docket,engine,kind,text,page,line,audio_seconds,audio_clock,model_was_silent,silence_seconds
+15-1204_OT2017,granite-speech-4.1-2b-plus,laughter,(Laughter.),27,4,1428.75,0:23:48,False,0.0
+15-1204_OT2017,granite-speech-4.1-2b-plus,end,"(Whereupon, at 12:05 p.m. the case was",70,20,3654.64,1:00:54,False,0.0
+15-1439,granite-speech-4.1-2b-plus,laughter,(Laughter.),12,13,487.3,0:08:07,False,0.0
+15-1439,granite-speech-4.1-2b-plus,laughter,(Laughter.),43,16,2067.07,0:34:27,False,0.0
+15-1439,granite-speech-4.1-2b-plus,laughter,(Laughter.),47,21,2288.22,0:38:08,False,0.0
+15-1439,granite-speech-4.1-2b-plus,laughter,(Laughter.),77,18,3636.89,1:00:36,False,0.0
+15-1485,granite-speech-4.1-2b-plus,laughter,(Laughter.),11,12,338.5,0:05:38,False,0.0
+15-1485,granite-speech-4.1-2b-plus,laughter,(Laughter.),30,10,1365.95,0:22:45,False,0.0
+15-1485,granite-speech-4.1-2b-plus,laughter,(Laughter.),58,23,2956.6,0:49:16,False,0.0
+15-1485,granite-speech-4.1-2b-plus,laughter,(Laughter.),60,6,3014.02,0:50:14,True,2.6
+15-1485,granite-speech-4.1-2b-plus,end,"(Whereupon, at 10:59 a.m., the case",66,11,3347.25,0:55:47,False,0.0
+15-1498_OT2017,granite-speech-4.1-2b-plus,laughter,(Laughter.),30,13,1512.92,0:25:12,False,0.0
+15-1498_OT2017,granite-speech-4.1-2b-plus,laughter,(Laughter).,40,21,2142.04,0:35:42,False,0.0
+15-1498_OT2017,granite-speech-4.1-2b-plus,laughter,(Laughter.),42,23,2259.5,0:37:39,False,0.0
+15-1498_OT2017,granite-speech-4.1-2b-plus,end,"(Whereupon, 12:08 p.m. the case was",63,2,3491.56,0:58:11,False,0.0
+15-1509,granite-speech-4.1-2b-plus,laughter,(Laughter.),46,15,2263.33,0:37:43,False,0.0
+15-1509,granite-speech-4.1-2b-plus,laughter,(Laughter.),70,6,3520.32,0:58:40,False,0.0
+15-1509,granite-speech-4.1-2b-plus,end,"(Whereupon, at 11:03 a.m., the case",71,18,3592.5,0:59:52,True,2.1
+16-1011,granite-speech-4.1-2b-plus,laughter,(Laughter.),13,18,568.27,0:09:28,False,0.0
+16-1011,granite-speech-4.1-2b-plus,laughter,(Laughter.),55,20,2978.75,0:49:38,False,0.0
+16-1011,granite-speech-4.1-2b-plus,laughter,(Laughter.),65,19,3540.35,0:59:00,False,0.0
+16-1011,granite-speech-4.1-2b-plus,end,"(Whereupon, at 11:57 a.m., the case",68,7,3682.27,1:01:22,False,0.0
+16-1027,granite-speech-4.1-2b-plus,laughter,(Laughter.),19,2,816.73,0:13:36,True,2.3
+16-1027,granite-speech-4.1-2b-plus,laughter,(Laughter.),25,1,1189.75,0:19:49,False,0.0
+16-1027,granite-speech-4.1-2b-plus,laughter,(Laughter.),38,25,1854.74,0:30:54,False,0.0
+16-1027,granite-speech-4.1-2b-plus,laughter,(Laughter.),40,12,1927.45,0:32:07,False,0.0
+16-1027,granite-speech-4.1-2b-plus,laughter,(Laughter.),54,25,2734.55,0:45:34,False,0.0
+16-1027,granite-speech-4.1-2b-plus,end,"(Whereupon, at 12:03 p.m., the case",65,20,3314.42,0:55:14,False,0.0
+16-1067,granite-speech-4.1-2b-plus,laughter,(Laughter.),45,1,2301.1,0:38:21,False,0.0
+16-1067,granite-speech-4.1-2b-plus,laughter,(Laughter.),52,17,2728.0,0:45:28,True,2.2
+16-1067,granite-speech-4.1-2b-plus,laughter,(Laughter.),53,1,2743.3,0:45:43,False,0.0
+16-1067,granite-speech-4.1-2b-plus,laughter,(Laughter.),53,9,2753.56,0:45:53,False,0.0
+16-1067,granite-speech-4.1-2b-plus,laughter,(Laughter.),53,13,2760.99,0:46:00,True,3.0
+16-1067,granite-speech-4.1-2b-plus,laughter,(Laughter.),53,16,2766.96,0:46:06,True,2.5
+16-1067,granite-speech-4.1-2b-plus,laughter,(Laughter.),54,2,2785.44,0:46:25,False,0.0
+16-1067,granite-speech-4.1-2b-plus,end,"(Whereupon, at 10:57 a.m., the case",60,10,3181.43,0:53:01,True,3.2
+16-111,granite-speech-4.1-2b-plus,laughter,(Laughter.),13,22,480.34,0:08:00,True,2.9
+16-111,granite-speech-4.1-2b-plus,laughter,(Laughter.),23,4,1028.25,0:17:08,True,2.9
+16-111,granite-speech-4.1-2b-plus,laughter,(Laughter.),36,14,1713.75,0:28:33,False,0.0
+16-111,granite-speech-4.1-2b-plus,laughter,(Laughter.),38,14,1789.23,0:29:49,True,2.2
+16-111,granite-speech-4.1-2b-plus,laughter,(Laughter.),42,11,1947.27,0:32:27,False,0.0
+16-111,granite-speech-4.1-2b-plus,laughter,(Laughter.),68,6,3151.5,0:52:31,False,0.0
+16-111,granite-speech-4.1-2b-plus,laughter,(Laughter.),80,18,3855.2,1:04:15,False,0.0
+16-111,granite-speech-4.1-2b-plus,laughter,(Laughter.),81,18,3904.6,1:05:04,False,0.0
+16-111,granite-speech-4.1-2b-plus,end,"(Whereupon, 11:31 a.m., the case was",106,6,5257.4,1:27:37,True,2.9
+16-1140,granite-speech-4.1-2b-plus,laughter,(Laughter.),53,21,2794.78,0:46:34,False,0.0
+16-1140,granite-speech-4.1-2b-plus,laughter,(Laughter.),61,3,3175.68,0:52:55,False,0.0
+16-1140,granite-speech-4.1-2b-plus,end,"(Whereupon, at 11:10 a.m., the case in",69,4,3609.4,1:00:09,False,0.0
+16-1144,granite-speech-4.1-2b-plus,laughter,(Laughter.),19,10,857.13,0:14:17,False,0.0
+16-1144,granite-speech-4.1-2b-plus,laughter,(Laughter.),19,16,861.18,0:14:21,False,0.0
+16-1144,granite-speech-4.1-2b-plus,laughter,(Laughter.),19,23,873.24,0:14:33,True,2.3
+16-1144,granite-speech-4.1-2b-plus,laughter,(Laughter.),29,5,1392.22,0:23:12,False,0.0
+16-1144,granite-speech-4.1-2b-plus,laughter,(Laughter.),30,15,1471.65,0:24:31,False,0.0
+16-1144,granite-speech-4.1-2b-plus,laughter,(Laughter.),33,24,1630.7,0:27:10,False,0.0
+16-1144,granite-speech-4.1-2b-plus,laughter,(Laughter.),35,9,1680.88,0:28:00,False,0.0
+16-1150,granite-speech-4.1-2b-plus,laughter,(Laughter.),60,7,3110.0,0:51:50,False,0.0
+16-1150,granite-speech-4.1-2b-plus,end,"(Whereupon, at 11:03 a.m., the case",68,6,3531.3,0:58:51,False,0.0
+16-1161,granite-speech-4.1-2b-plus,laughter,(Laughter.),7,4,160.79,0:02:40,False,0.0
+16-1161,granite-speech-4.1-2b-plus,laughter,(Laughter.),14,15,623.64,0:10:23,False,0.0
+16-1161,granite-speech-4.1-2b-plus,laughter,(Laughter.),42,7,2175.36,0:36:15,False,0.0
+16-1161,granite-speech-4.1-2b-plus,laughter,(Laughter.),45,21,2397.77,0:39:57,False,0.0
+16-1161,granite-speech-4.1-2b-plus,laughter,(Laughter.),46,4,2409.54,0:40:09,False,0.0
+16-1161,granite-speech-4.1-2b-plus,laughter,(Laughter.),63,3,3298.84,0:54:58,False,0.0
+16-1161,granite-speech-4.1-2b-plus,end,"(Whereupon, at 11:03 a.m., the hearing",66,18,3490.69,0:58:10,False,0.0
+16-1215,granite-speech-4.1-2b-plus,laughter,(Laughter.),10,19,382.99,0:06:22,False,0.0
+16-1215,granite-speech-4.1-2b-plus,laughter,(Laughter.),12,4,445.42,0:07:25,False,0.0
+16-1215,granite-speech-4.1-2b-plus,laughter,(Laughter.),20,1,849.09,0:14:09,False,0.0
+16-1215,granite-speech-4.1-2b-plus,laughter,(Laughter.),42,17,2102.57,0:35:02,False,0.0
+16-1215,granite-speech-4.1-2b-plus,end,"(Whereupon, at 12:15 p.m., the case",68,20,3445.38,0:57:25,False,0.0
+16-1220,granite-speech-4.1-2b-plus,laughter,(Laughter.),47,5,2183.19,0:36:23,False,0.0
+16-1220,granite-speech-4.1-2b-plus,laughter,(Laughter.),63,11,3097.86,0:51:37,True,2.1
+16-1220,granite-speech-4.1-2b-plus,laughter,(Laughter.),63,14,3102.36,0:51:42,True,3.2
+16-1276,granite-speech-4.1-2b-plus,laughter,(Laughter.),44,21,2262.4,0:37:42,False,0.0
+16-1276,granite-speech-4.1-2b-plus,laughter,(Laughter.),61,14,3075.91,0:51:15,True,2.6
+16-1276,granite-speech-4.1-2b-plus,end,"(Whereupon, at 12:07 p.m., the case",66,13,3348.63,0:55:48,False,0.0
+16-1348,granite-speech-4.1-2b-plus,laughter,(Laughter.),15,6,553.12,0:09:13,False,0.0
+16-1348,granite-speech-4.1-2b-plus,laughter,(Laughter.),68,23,3207.66,0:53:27,False,0.0
+16-1348,granite-speech-4.1-2b-plus,laughter,(Laughter.),74,20,3465.57,0:57:45,False,0.0
+16-1348,granite-speech-4.1-2b-plus,end,"(Whereupon, at 11:05 a.m., the case in",77,1,3577.16,0:59:37,True,2.0
+16-1362,granite-speech-4.1-2b-plus,laughter,(Laughter.),16,9,702.38,0:11:42,True,2.2
+16-1362,granite-speech-4.1-2b-plus,laughter,(Laughter.),17,19,775.45,0:12:55,False,0.0
+16-1362,granite-speech-4.1-2b-plus,laughter,(Laughter.),38,24,1911.27,0:31:51,True,2.1
+16-1371,granite-speech-4.1-2b-plus,laughter,(Laughter.),17,17,715.68,0:11:55,False,0.0
+16-1371,granite-speech-4.1-2b-plus,laughter,(Laughter.),23,6,1046.13,0:17:26,False,0.0
+16-1371,granite-speech-4.1-2b-plus,laughter,(Laughter.),37,5,1836.65,0:30:36,False,0.0
+16-1371,granite-speech-4.1-2b-plus,laughter,(Laughter.),41,25,2105.7,0:35:05,False,0.0
+16-1371,granite-speech-4.1-2b-plus,laughter,(Laughter.),62,13,3173.57,0:52:53,False,0.0
+16-1371,granite-speech-4.1-2b-plus,laughter,(Laughter.),65,20,3327.62,0:55:27,False,0.0
+16-1371,granite-speech-4.1-2b-plus,end,"(Whereupon, at 11:06 a.m., the case",73,8,3712.82,1:01:52,False,0.0
+16-1432,granite-speech-4.1-2b-plus,laughter,(Laughter.),25,2,968.73,0:16:08,True,2.3
+16-1432,granite-speech-4.1-2b-plus,laughter,(Laughter.),34,2,1383.11,0:23:03,True,2.6
+16-1432,granite-speech-4.1-2b-plus,laughter,(Laughter.),34,5,1387.41,0:23:07,True,2.2
+16-1432,granite-speech-4.1-2b-plus,laughter,(Laughter.),43,6,1949.7,0:32:29,False,0.0
+16-1432,granite-speech-4.1-2b-plus,laughter,(Laughter.),50,18,2368.34,0:39:28,True,2.3
+16-1432,granite-speech-4.1-2b-plus,laughter,(Laughter.),57,16,2759.31,0:45:59,False,0.0
+16-1432,granite-speech-4.1-2b-plus,laughter,(Laughter.),57,23,2766.19,0:46:06,False,0.0
+16-1432,granite-speech-4.1-2b-plus,laughter,(Laughter.),58,6,2771.1,0:46:11,False,0.0
+16-1432,granite-speech-4.1-2b-plus,end,"(Whereupon, 11:06 a.m., the hearing",74,19,3639.6,1:00:39,False,0.0
+16-1435,granite-speech-4.1-2b-plus,laughter,(Laughter.),7,21,197.42,0:03:17,False,0.0
+16-1435,granite-speech-4.1-2b-plus,laughter,(Laughter.),41,12,2039.73,0:33:59,True,2.4
+16-1435,granite-speech-4.1-2b-plus,laughter,(Laughter.),42,19,2085.32,0:34:45,False,0.0
+16-1435,granite-speech-4.1-2b-plus,laughter,(Laughter.),66,19,3373.45,0:56:13,True,2.2
+16-1435,granite-speech-4.1-2b-plus,end,"(Whereupon, at 11:06 a.m., the case in",71,24,3696.18,1:01:36,True,2.1
+16-1454,granite-speech-4.1-2b-plus,laughter,(Laughter.),57,11,3009.65,0:50:09,False,0.0
+16-1454,granite-speech-4.1-2b-plus,laughter,(Laughter.),59,2,3095.59,0:51:35,False,0.0
+16-1454,granite-speech-4.1-2b-plus,laughter,(Laughter.),59,21,3126.01,0:52:06,False,0.0
+16-1454,granite-speech-4.1-2b-plus,end,"(Whereupon, at 12:12 p.m., the case in",71,12,3709.77,1:01:49,False,0.0
+16-1466,granite-speech-4.1-2b-plus,laughter,(Laughter.),41,2,1955.13,0:32:35,False,0.0
+16-1466,granite-speech-4.1-2b-plus,laughter,(Laughter.),56,25,2890.08,0:48:10,False,0.0
+16-1466,granite-speech-4.1-2b-plus,laughter,(Laughter.),61,9,3129.52,0:52:09,False,0.0
+16-1466,granite-speech-4.1-2b-plus,end,"(Whereupon, at 11:08 a.m., the case",72,22,3735.68,1:02:15,False,0.0
+16-1495,granite-speech-4.1-2b-plus,laughter,(Laughter.),42,23,1871.18,0:31:11,False,0.0
+16-1495,granite-speech-4.1-2b-plus,laughter,(Laughter.),48,17,2149.44,0:35:49,False,0.0
+16-1495,granite-speech-4.1-2b-plus,end,"(Whereupon, at 12:04 p.m., the case in",75,11,3504.31,0:58:24,False,0.0
+16-1519,granite-speech-4.1-2b-plus,laughter,(Laughter.),35,16,1670.73,0:27:50,True,2.1
+16-1519,granite-speech-4.1-2b-plus,end,"(Whereupon, at 11:05 a.m., the case",70,3,3473.75,0:57:53,False,0.0
+16-285,granite-speech-4.1-2b-plus,laughter,(Laughter.),61,11,3215.59,0:53:35,False,0.0
+16-285,granite-speech-4.1-2b-plus,laughter,(Laughter.),63,24,3344.28,0:55:44,False,0.0
+16-285,granite-speech-4.1-2b-plus,end,"(Whereupon, at 11:09 a.m., the case",72,3,3777.47,1:02:57,True,2.1
+16-299,granite-speech-4.1-2b-plus,end,"(Whereupon, at 11:02 a.m., the case",64,23,3452.8,0:57:32,True,2.9
+16-402,granite-speech-4.1-2b-plus,laughter,(Laughter.),28,6,1455.31,0:24:15,False,0.0
+16-402,granite-speech-4.1-2b-plus,laughter,(Laughter.),44,11,2354.62,0:39:14,False,0.0
+16-402,granite-speech-4.1-2b-plus,laughter,(Laughter.),54,14,2958.85,0:49:18,False,0.0
+16-402,granite-speech-4.1-2b-plus,laughter,(Laughter.),56,23,3053.58,0:50:53,False,0.0
+16-402,granite-speech-4.1-2b-plus,laughter,(Laughter.),68,4,3613.06,1:00:13,False,0.0
+16-402,granite-speech-4.1-2b-plus,laughter,(Laughter.),79,5,4237.1,1:10:37,False,0.0
+16-402,granite-speech-4.1-2b-plus,laughter,(Laughter.),92,3,4856.33,1:20:56,False,0.0
+16-402,granite-speech-4.1-2b-plus,end,"(Whereupon, at 11:27 a.m., the case in",93,11,4917.28,1:21:57,True,4.1
+16-424,granite-speech-4.1-2b-plus,laughter,(Laughter.),30,14,1546.28,0:25:46,True,2.1
+16-424,granite-speech-4.1-2b-plus,end,"(Whereupon, at 12:00 noon, the case",67,13,3559.65,0:59:19,True,3.7
+16-460,granite-speech-4.1-2b-plus,laughter,(Laughter.),52,12,2377.15,0:39:37,False,0.0
+16-460,granite-speech-4.1-2b-plus,end,"(Whereupon, at 10:56 a.m., the case was",67,22,3145.98,0:52:25,True,2.7
+16-476,granite-speech-4.1-2b-plus,laughter,(Laughter.),13,3,450.44,0:07:30,False,0.0
+16-476,granite-speech-4.1-2b-plus,laughter,(Laughter.),13,24,508.63,0:08:28,False,0.0
+16-476,granite-speech-4.1-2b-plus,laughter,(Laughter.),50,15,2506.4,0:41:46,False,0.0
+16-476,granite-speech-4.1-2b-plus,laughter,(Laughter.),69,13,3451.64,0:57:31,False,0.0
+16-476,granite-speech-4.1-2b-plus,end,"(Whereupon, at 11:09 a.m., the case in",75,24,3817.12,1:03:37,False,0.0
+16-498,granite-speech-4.1-2b-plus,laughter,(Laughter.),29,23,1437.64,0:23:57,False,0.0
+16-498,granite-speech-4.1-2b-plus,laughter,(Laughter.),30,1,1440.95,0:24:00,False,0.0
+16-498,granite-speech-4.1-2b-plus,laughter,(Laughter.),33,20,1618.2,0:26:58,False,0.0
+16-498,granite-speech-4.1-2b-plus,laughter,(Laughter.),61,6,3040.64,0:50:40,False,0.0
+16-498,granite-speech-4.1-2b-plus,end,"(Whereupon, at 11:06 a.m., the case",76,14,3772.66,1:02:52,False,0.0
+16-499,granite-speech-4.1-2b-plus,laughter,(Laughter.),46,17,2178.51,0:36:18,False,0.0
+16-499,granite-speech-4.1-2b-plus,laughter,(Laughter.),48,1,2257.11,0:37:37,True,2.3
+16-499,granite-speech-4.1-2b-plus,end,"(Whereupon, at 12:03 p.m., the case",74,4,3619.16,1:00:19,False,0.0
+16-534,granite-speech-4.1-2b-plus,end,"(Whereupon, at 11:56 a.m., the case in",50,8,2715.33,0:45:15,False,0.0
+16-658,granite-speech-4.1-2b-plus,end,"(Whereupon, at 10:51 a.m., the case",51,3,2751.25,0:45:51,False,0.0
+16-6795,granite-speech-4.1-2b-plus,laughter,(Laughter.),19,20,859.12,0:14:19,False,0.0
+16-6795,granite-speech-4.1-2b-plus,laughter,(Laughter.),20,1,868.71,0:14:28,True,2.1
+16-6795,granite-speech-4.1-2b-plus,laughter,(Laughter.),30,9,1436.4,0:23:56,False,0.0
+16-6795,granite-speech-4.1-2b-plus,laughter,(Laughter.),38,19,1914.08,0:31:54,False,0.0
+16-6795,granite-speech-4.1-2b-plus,laughter,(Laughter.),40,16,2013.58,0:33:33,False,0.0
+16-6795,granite-speech-4.1-2b-plus,laughter,(Laughter.),44,9,2200.01,0:36:40,False,0.0
+16-6795,granite-speech-4.1-2b-plus,laughter,(Laughter.),55,11,2812.2,0:46:52,False,0.0
+16-6795,granite-speech-4.1-2b-plus,laughter,(Laughter.),58,16,2966.96,0:49:26,False,0.0
+16-6795,granite-speech-4.1-2b-plus,end,"(Whereupon, at 11:03 a.m., the case",69,7,3542.7,0:59:02,True,2.0
+16-6855,granite-speech-4.1-2b-plus,laughter,(Laughter.),35,11,1895.0,0:31:35,False,0.0
+16-6855,granite-speech-4.1-2b-plus,laughter,(Laughter.),36,12,1952.64,0:32:32,False,0.0
+16-6855,granite-speech-4.1-2b-plus,laughter,(Laughter.),63,11,3478.56,0:57:58,False,0.0
+16-6855,granite-speech-4.1-2b-plus,laughter,(Laughter.),63,19,3486.43,0:58:06,True,2.1
+16-6855,granite-speech-4.1-2b-plus,end,"(Whereupon, at 12:02 p.m., the case",63,22,3487.72,0:58:07,True,2.1
+16-712,granite-speech-4.1-2b-plus,laughter,(Laughter.),32,4,1713.8,0:28:33,False,0.0
+16-712,granite-speech-4.1-2b-plus,laughter,(Laughter.),48,13,2491.24,0:41:31,False,0.0
+16-712,granite-speech-4.1-2b-plus,laughter,(Laughter.),48,19,2499.32,0:41:39,False,0.0
+16-712,granite-speech-4.1-2b-plus,end,"(Whereupon, at 11:07 a.m., the case was",71,19,3744.47,1:02:24,False,0.0
+16-784,granite-speech-4.1-2b-plus,laughter,(Laughter.),59,4,2987.12,0:49:47,False,0.0
+16-784,granite-speech-4.1-2b-plus,end,"(Whereupon, 11:02 a.m., the case was",69,23,3537.22,0:58:57,False,0.0
+16-8255,granite-speech-4.1-2b-plus,laughter,(Laughter.),8,8,249.3,0:04:09,False,0.0
+16-8255,granite-speech-4.1-2b-plus,laughter,(Laughter.),48,24,2681.72,0:44:41,False,0.0
+16-8255,granite-speech-4.1-2b-plus,end,"(Whereupon, at 12:04 p.m., the case",64,13,3657.9,1:00:57,False,0.0
+16-9493,granite-speech-4.1-2b-plus,laughter,(Laughter.),27,3,1540.36,0:25:40,True,3.1
+16-9493,granite-speech-4.1-2b-plus,laughter,(Laughter.),27,7,1545.63,0:25:45,False,0.0
+16-9493,granite-speech-4.1-2b-plus,laughter,(Laughter.),29,1,1643.98,0:27:23,True,2.2
+16-9493,granite-speech-4.1-2b-plus,laughter,(Laughter.),29,6,1648.11,0:27:28,True,2.2
+16-9493,granite-speech-4.1-2b-plus,laughter,(Laughter.),33,6,1842.51,0:30:42,False,0.0
+16-9493,granite-speech-4.1-2b-plus,laughter,(Laughter.),46,24,2538.12,0:42:18,False,0.0
+16-9493,granite-speech-4.1-2b-plus,end,"(Whereupon, at 11:11 a.m., the case",58,24,3188.56,0:53:08,True,4.4
+16-961,granite-speech-4.1-2b-plus,laughter,(Laughter.),5,7,11.79,0:00:11,True,2.9
+16-961,granite-speech-4.1-2b-plus,laughter,(Laughter.),28,17,1338.83,0:22:18,True,2.0
+16-961,granite-speech-4.1-2b-plus,laughter,(Laughter.),28,20,1342.1,0:22:22,True,2.0
+16-961,granite-speech-4.1-2b-plus,laughter,(Laughter.),31,19,1494.64,0:24:54,True,2.7
+16-961,granite-speech-4.1-2b-plus,laughter,(Laughter.),58,19,2904.92,0:48:24,False,0.0
+16-961,granite-speech-4.1-2b-plus,laughter,(Laughter.),64,19,3204.88,0:53:24,False,0.0
+16-961,granite-speech-4.1-2b-plus,end,"(Whereupon, at 12:10 p.m., the case",79,5,3937.95,1:05:37,False,0.0
+16-969,granite-speech-4.1-2b-plus,laughter,(Laughter.),7,22,197.98,0:03:17,False,0.0
+16-969,granite-speech-4.1-2b-plus,laughter,(Laughter.),41,2,2024.43,0:33:44,False,0.0
+16-969,granite-speech-4.1-2b-plus,laughter,(Laughter.),73,5,3576.56,0:59:36,False,0.0
+16-969,granite-speech-4.1-2b-plus,laughter,(Laughter.),73,8,3578.06,0:59:38,False,0.0
+16-969,granite-speech-4.1-2b-plus,end,"(Whereupon, at 12:09 p.m., the case",73,12,3579.92,0:59:39,False,0.0
+16-980,granite-speech-4.1-2b-plus,laughter,(Laughter.),62,21,3116.06,0:51:56,False,0.0
+16-980,granite-speech-4.1-2b-plus,end,"(Whereupon, at 11:10 a.m., the case",81,22,3981.1,1:06:21,False,0.0
+17-130,granite-speech-4.1-2b-plus,laughter,(Laughter.),18,21,852.77,0:14:12,False,0.0
+17-130,granite-speech-4.1-2b-plus,laughter,(Laughter.),19,15,879.04,0:14:39,False,0.0
+17-130,granite-speech-4.1-2b-plus,laughter,(Laughter.),19,23,895.67,0:14:55,False,0.0
+17-130,granite-speech-4.1-2b-plus,laughter,(Laughter.),22,21,1046.76,0:17:26,False,0.0
+17-130,granite-speech-4.1-2b-plus,end,"(Whereupon, at 11:03 a.m., the case",70,15,3598.95,0:59:58,False,0.0
+17-155,granite-speech-4.1-2b-plus,laughter,(Laughter.),34,11,1875.1,0:31:15,True,2.0
+17-155,granite-speech-4.1-2b-plus,laughter,(Laughter.),34,21,1884.36,0:31:24,False,0.0
+17-155,granite-speech-4.1-2b-plus,laughter,(Laughter.),34,25,1889.57,0:31:29,False,0.0
+17-155,granite-speech-4.1-2b-plus,laughter,(Laughter.),35,6,1903.2,0:31:43,False,0.0
+17-155,granite-speech-4.1-2b-plus,end,"(Whereupon, at 11:03 a.m., the case",59,6,3143.46,0:52:23,True,2.2
+17-2,granite-speech-4.1-2b-plus,laughter,(Laughter.),46,23,2493.68,0:41:33,False,0.0
+17-2,granite-speech-4.1-2b-plus,laughter,(Laughter.),56,5,3057.83,0:50:57,False,0.0
+17-2,granite-speech-4.1-2b-plus,laughter,(Laughter.),60,16,3325.85,0:55:25,False,0.0
+17-2,granite-speech-4.1-2b-plus,end,"(Whereupon, at 11:22 a.m., the case",65,17,3630.68,1:00:30,False,0.0
+17-21,granite-speech-4.1-2b-plus,laughter,(Laughter.),13,11,575.56,0:09:35,False,0.0
+17-21,granite-speech-4.1-2b-plus,laughter,(Laughter.),32,11,1670.6,0:27:50,False,0.0
+17-21,granite-speech-4.1-2b-plus,laughter,(Laughter.),32,24,1708.12,0:28:28,False,0.0
+17-21,granite-speech-4.1-2b-plus,laughter,(Laughter.),45,10,2463.44,0:41:03,False,0.0
+17-21,granite-speech-4.1-2b-plus,laughter,(Laughter.),60,9,3265.27,0:54:25,False,0.0
+17-21,granite-speech-4.1-2b-plus,end,"(Whereupon, at 12:23 p.m., the case",66,3,3582.9,0:59:42,False,0.0
+17-269,granite-speech-4.1-2b-plus,laughter,(Laughter.),32,7,1351.02,0:22:31,False,0.0
+17-269,granite-speech-4.1-2b-plus,end,"(Whereupon, at 12:08 p.m., the case",78,9,3689.7,1:01:29,True,2.2
+17-312,granite-speech-4.1-2b-plus,end,"(Whereupon, at 11:07 a.m., the case",73,18,3695.76,1:01:35,False,0.0
+17-333,granite-speech-4.1-2b-plus,laughter,(Laughter.),14,17,562.37,0:09:22,True,3.0
+17-333,granite-speech-4.1-2b-plus,laughter,(Laughter.),40,23,1970.53,0:32:50,False,0.0
+17-333,granite-speech-4.1-2b-plus,laughter,(Laughter.),44,6,2172.71,0:36:12,False,0.0
+17-333,granite-speech-4.1-2b-plus,laughter,(Laughter.),49,16,2439.27,0:40:39,True,3.0
+17-333,granite-speech-4.1-2b-plus,laughter,(Laughter.),50,10,2475.47,0:41:15,False,0.0
+17-333,granite-speech-4.1-2b-plus,laughter,(Laughter.),50,14,2478.8,0:41:18,False,0.0
+17-333,granite-speech-4.1-2b-plus,laughter,(Laughter.),59,3,2945.37,0:49:05,False,0.0
+17-333,granite-speech-4.1-2b-plus,end,"(Whereupon, at 11:06 a.m., the hearing",73,18,3757.16,1:02:37,False,0.0
+17-387,granite-speech-4.1-2b-plus,laughter,(Laughter.),9,22,332.77,0:05:32,False,0.0
+17-387,granite-speech-4.1-2b-plus,laughter,(Laughter.),32,17,1638.01,0:27:18,False,0.0
+17-387,granite-speech-4.1-2b-plus,laughter,(Laughter.),46,11,2403.15,0:40:03,False,0.0
+17-387,granite-speech-4.1-2b-plus,laughter,(Laughter.),48,22,2518.89,0:41:58,False,0.0
+17-387,granite-speech-4.1-2b-plus,laughter,(Laughter.),49,3,2525.52,0:42:05,False,0.0
+17-387,granite-speech-4.1-2b-plus,laughter,(Laughter.),55,20,2927.65,0:48:47,False,0.0
+17-387,granite-speech-4.1-2b-plus,end,"(Whereupon, at 11:07 a.m., the case",62,19,3330.75,0:55:30,False,0.0
+17-43,granite-speech-4.1-2b-plus,laughter,(Laughter.),30,20,1461.2,0:24:21,False,0.0
+17-43,granite-speech-4.1-2b-plus,end,"(Whereupon, at 12:11 p.m., the case",69,3,3528.0,0:58:48,False,0.0
+17-432,granite-speech-4.1-2b-plus,end,"(Whereupon, at 12:06 p.m., the case",63,2,3430.3,0:57:10,False,0.0
+17-459,granite-speech-4.1-2b-plus,laughter,(Laughter.),27,17,1134.98,0:18:54,False,0.0
+17-459,granite-speech-4.1-2b-plus,laughter,(Laughter.),52,6,2375.22,0:39:35,False,0.0
+17-459,granite-speech-4.1-2b-plus,end,"(Whereupon, at 11:59 a.m., the case",69,8,3286.56,0:54:46,False,0.0
+17-494,granite-speech-4.1-2b-plus,laughter,(Laughter.),16,10,729.11,0:12:09,False,0.0
+17-494,granite-speech-4.1-2b-plus,laughter,(Laughter.),38,9,2057.18,0:34:17,False,0.0
+17-494,granite-speech-4.1-2b-plus,end,"(Whereupon, at 11:16 a.m., the case",63,5,3608.16,1:00:08,False,0.0
+17-530,granite-speech-4.1-2b-plus,laughter,(Laughter.),54,5,2716.07,0:45:16,False,0.0
+17-5639,granite-speech-4.1-2b-plus,laughter,(Laughter.),66,20,3492.4,0:58:12,False,0.0
+17-5639,granite-speech-4.1-2b-plus,end,"(Whereupon, at 1:59 p.m., the case was",67,12,3514.48,0:58:34,False,0.0
+17-5716,granite-speech-4.1-2b-plus,laughter,(Laughter.),42,17,2221.86,0:37:01,False,0.0
+17-5716,granite-speech-4.1-2b-plus,end,"(Whereupon, at 12:05 p.m., the hearing",67,24,3631.73,1:00:31,True,3.5
+17-586,granite-speech-4.1-2b-plus,laughter,(Laughter.),26,14,1196.05,0:19:56,False,0.0
+17-586,granite-speech-4.1-2b-plus,laughter,(Laughter.),40,19,1997.91,0:33:17,False,0.0
+17-586,granite-speech-4.1-2b-plus,laughter,(Laughter.),50,9,2500.43,0:41:40,False,0.0
+17-965,granite-speech-4.1-2b-plus,laughter,(Laughter.),19,8,867.6,0:14:27,False,0.0
+17-965,granite-speech-4.1-2b-plus,laughter,(Laughter.),35,11,1650.74,0:27:30,False,0.0
+17-965,granite-speech-4.1-2b-plus,laughter,(Laughter.),43,3,1998.44,0:33:18,False,0.0
+17-965,granite-speech-4.1-2b-plus,laughter,(Laughter.),76,7,3657.19,1:00:57,False,0.0
+17-965,granite-speech-4.1-2b-plus,laughter,(Laughter.),76,10,3659.53,1:00:59,True,2.2
+17-965,granite-speech-4.1-2b-plus,end,"(Whereupon, at 11:09 a.m., the case",83,6,4011.74,1:06:51,False,0.0

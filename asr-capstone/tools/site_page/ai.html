@@ -1,0 +1,81 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>/*TITLE*/</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Public+Sans:wght@400;500;600;700&family=Courier+Prime:wght@400;700&display=swap">
+<style>
+/*TOKENS*/
+/*SITECSS*/
+.ai-list { max-width: var(--measure); padding-left: 1.2em; }
+.ai-list li { margin-top: 8px; }
+</style>
+
+<!-- How AI was used in this project. The counts are filled in by tools/build_site.py
+     (ai_use()); the rest is written here by hand. -->
+<div class="wrap">
+  <nav class="site-nav" id="nav" aria-label="Pages"></nav>
+  <h1>How AI was used</h1>
+  <p class="lede">This site was built with a lot of help from AI. Here is where, as plainly as I can put it, so you can judge the results with that in mind.</p>
+
+  <section class="column">
+    <h2>The speech engines are AI</h2>
+    <p>Every transcript on this site that isn't the official record was written by an AI speech-recognition model. Seven were tried, all open models, all run on my own laptop's graphics card (an NVIDIA RTX 5090). No audio was sent to an online service to be transcribed.</p>
+    <ul class="ai-list" id="engines"></ul>
+    <p>Three of them (Qwen3, Whisper and Parakeet) ran on every data set, and most of this site shows those. All seven ran on the Supreme Court's 2017 term.</p>
+  </section>
+
+  <section class="column">
+    <h2>AI judges labelled the errors</h2>
+    <p>Python rules find the places where an engine's text differs from the record in a way that might matter, such as a lost “not”. The rules can't tell whether the meaning really changed, so a language model reads each case and says: same meaning, reworded, changed, opposite, or garbled, and how much it matters, from 0 to 4.</p>
+    <ul class="ai-list">
+      <li id="sonnet"></li>
+      <li><b>Qwen 3.8 27B</b>, an open model, runs on the same laptop as a second judge, to check Sonnet. It is still reading the cases, so its answers are not shown on these pages yet.</li>
+      <li>Before choosing, Claude Haiku 5.5, Gemma 4 26B and Gemma 4 31B were also tried on the same 40 test cases. Gemma 4 31B was also tried in one experiment on tidying the engines' transcripts.</li>
+    </ul>
+    <p><b>The judges' labels are preliminary.</b> They decide which cases become cards and how the cards are sorted. A person has not checked all of them, and nobody has yet listened to all the clips. Read “Sonnet: opposite” as one AI model's opinion of two pieces of text, not as a finding.</p>
+  </section>
+
+  <section class="column">
+    <h2>An AI assistant wrote most of the code</h2>
+    <p>Claude Code, Anthropic's coding assistant, did most of the hands-on work, under my direction:</p>
+    <ul class="ai-list">
+      <li>wrote most of the code: the pipeline that runs the engines and scores them, the searches that find the errors, the judges' prompts, this website and the whole-recording pages;</li>
+      <li>ran the analyses and wrote up the tables;</li>
+      <li>picked the clearest cases for the cards and wrote their one-line explanations, from the text, not by ear (the cards marked “explained by Claude”);</li>
+      <li>searched for published research and summarised it;</li>
+      <li>audited the work for bugs, and fixed the ones it found (the fixes changed some numbers, which is why some earlier figures moved);</li>
+      <li>wrote much of the wording on these pages, including this one.</li>
+    </ul>
+    <p id="commits"></p>
+  </section>
+
+  <section class="column">
+    <h2>What I did</h2>
+    <p>I'm a court reporter, and have been for 15 years. I chose the questions and the design of the study: which data sets, which engines, what counts as an error worth showing, and how to score a machine transcript against a record. I directed the work, checked the results, and decided what this site and the paper claim.</p>
+  </section>
+
+  <section class="column">
+    <h2>What this means for you</h2>
+    <ul class="ai-list">
+      <li>The error rates are computed by code from the files named beside them, and re-run whenever a bug is fixed. Code can still be wrong: an AI bug audit on 5 November found several bugs. Most are fixed; the rest are listed in the project's notes.</li>
+      <li>The labels and the order of the cards come from an AI judge and are not checked by a person.</li>
+      <li>Play the clip before you trust a card. The record and the engines are both shown so you can judge for yourself.</li>
+    </ul>
+  </section>
+
+  <footer><p id="built"></p></footer>
+</div>
+
+<script>
+/*SITEJS*/
+</script>
+<script>
+const D = /*DATA*/{};
+siteNav($("#nav"), D.pages, "ai.html");
+D.engines.forEach(e => $("#engines").append(el("li", {}, el("b", {}, e.name), ` (${e.maker})`)));
+$("#sonnet").append(el("b", {}, "Claude Sonnet 5.5"),
+  `, Anthropic's model, through Anthropic's API. It read all ${D.cases.toLocaleString()} cases the searches found and labelled every one. It was asked again on every case whose text changed when the transcripts were repaired in November.`);
+$("#commits").textContent = `Of the ${D.commits.total} saved changes (git commits) in the project's history, ${D.commits.claude} list Claude as a co-author.`;
+$("#built").textContent = `Built ${D.built} by tools/build_site.py.`;
+</script>

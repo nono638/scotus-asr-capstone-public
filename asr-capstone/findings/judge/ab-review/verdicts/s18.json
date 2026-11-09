@@ -1,0 +1,15 @@
+{"case": "s18",
+ "parts": {
+  "meaning/line": {"X": "right", "Y": "right", "better": "tie", "why": "Both: changed, 4, content lost. The whole answer (construction done in Q1 2022, ramp-up in the first half) is gone, so 4 fits."},
+  "meaning/minute": {"X": "right", "Y": "right", "better": "tie", "why": "Same answer in both. X's reason is more concrete: only the end of the question and the next introduction are left."},
+  "meaning/whole": {"X": "right", "Y": "right", "better": "tie", "why": "Same answer in both."},
+  "noticeable": {"X": "wrong", "Y": "right", "better": "Y", "why": "The engine's text asks 'how long will the testing period be? Thank you. Thank you. The next question...', so a direct question gets no answer. A careful reader would notice. Y says yes; X says no."},
+  "stakes": {"X": "right", "Y": "right", "better": "tie", "why": "Both say yes: an investor loses the timeline. Correct."},
+  "rule": {"X": "right", "Y": "right", "better": "tie", "why": "Both confirm the long skip."},
+  "blind": {"X": "right", "Y": "right", "better": "tie", "why": "Both pick the reference in both orders, sure 3, because a question needs an answer."},
+  "rank": {"X": "right", "Y": "partly", "better": "X", "why": "Qwen3 and Whisper both keep the full answer, and Qwen3's added speaker name changes nothing at the spot, so they tie. X ties them, though its reason oddly praises the added name. Y puts Whisper second just for not having the name."},
+  "misses": {"X": {"real_and_matter": 1, "trivial": 1, "not_real": 0, "important_missed": 0},
+             "Y": {"real_and_matter": 1, "trivial": 1, "not_real": 0, "important_missed": 0},
+             "better": "tie", "why": "Both list the missing answer (the case) at severity 4, and the caller and firm name ('Spir CIB' or 'Andrei Gromadin'), which is a name. Nothing else in the minute matters."}
+ },
+ "overall": {"better": "tie", "why": "Identical apart from one slip each: X misjudges noticeable, and Y splits two engines that both keep the meaning."}}

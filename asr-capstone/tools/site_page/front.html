@@ -1,0 +1,127 @@
+<meta charset="utf-8">
+<title>Where Speech Recognition Goes Wrong</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Public+Sans:wght@400;500;600;700&family=Courier+Prime:wght@400;700&display=swap">
+<style>
+/*TOKENS*/
+/*SITECSS*/
+</style>
+
+<!-- The front page: a reversal from each data set, the five kinds across every
+     data set, a door to each data set's page, and how far the work has got.
+     Filled by tools/build_site.py. -->
+<div class="wrap">
+  <nav class="site-nav" id="nav" aria-label="Pages"></nav>
+  <p class="about" style="margin-top: 18px">A capstone on speech recognition and the court record (CUNY SPS, DATA 698, fall 2026). Unfinished, and rebuilt from the findings as the work goes.</p>
+  <h1>The transcript reads smoothly, and says something else.</h1>
+  <p class="lede" id="lede"></p>
+
+  <section>
+    <h2 class="column">The four data sets</h2>
+    <p class="column">Each has a page of results, and a page where you can play whole recordings with every error marked.</p>
+    <div class="datasets" id="datasets"></div>
+    <div class="across">
+      <a class="source-button" href="compare.html">The big picture: all four data sets side by side</a>
+      <a class="source-button" href="data.html">Search the data: every error found, in one table</a>
+    </div>
+  </section>
+
+  <section>
+    <h2 class="column">Says the opposite</h2>
+    <p class="column">One case from each data set where an engine wrote a sentence that reads smoothly and reverses what the speaker said. An AI judge, Claude Sonnet, picked them out; none is checked by ear yet.</p>
+    <div class="cards" id="opposite"></div>
+  </section>
+
+  <section>
+    <h2 class="column">Five ways it goes wrong</h2>
+    <p class="column">Not the dull ones. Every engine spells some names its own way, leaves out speaker labels and writes "Court" in lower case; those count in the error rates, but they say little about how speech recognition fails. These do. The rates are what the rules found per hour, averaged over Qwen3, Whisper and Parakeet, before any judge has looked.</p>
+    <div class="kind-grid" id="kinds"></div>
+    <p class="source">From <code>findings/failures/&lt;kind&gt;/counts.csv</code>. <a href="compare.html">Compare the data sets</a> for the full tables.</p>
+  </section>
+
+  <section class="column" id="ai">
+    <h2>Made with a lot of help from AI</h2>
+    <p id="ai-text"></p>
+    <p><a href="ai.html">How AI was used, in full</a></p>
+  </section>
+
+  <section class="column">
+    <h2>How much is done</h2>
+    <p id="queue-lede"></p>
+    <div id="queue" style="margin-top: 14px"></div>
+    <p class="source">From <code>pipeline/overnight-queue.csv</code> and each run's ledger.</p>
+  </section>
+
+  <section class="column">
+    <h2>The tool</h2>
+    <p>The same bench, made for anyone: bring your own recordings and a transcript you trust, choose engines, get the same scores and the same kinds of failure. Models run on your own machine; the site only shows finished results.</p>
+    <ol class="roadmap" id="roadmap"></ol>
+    <p class="source">From <code>app-roadmap.md</code>.</p>
+  </section>
+
+  <footer><p id="credit"></p><p id="built"></p></footer>
+</div>
+
+<script>
+/*LISTEN*/
+</script>
+<script>
+/*COMPARE*/
+</script>
+<script>
+/*TABLE*/
+</script>
+<script>
+/*CARDS*/
+</script>
+<script>
+/*SITEJS*/
+</script>
+<script>
+const D = /*DATA*/{};
+// A link from another page can name a page of this site, as #go-data (the
+// whole-recording pages use it, since they cannot link inside this one). claude.ai
+// passes only letters, digits and hyphens from a link to the page.
+const go = location.hash.match(/^#go-([a-z0-9]+)$/);
+if (go && [...D.pages.map(p => p.file), "compare.html", "data.html", "ai.html"].includes(go[1] + ".html")) location.replace(go[1] + ".html");
+siteNav($("#nav"), D.pages, "index.html");
+$("#lede").textContent = D.lede;
+$("#ai-text").textContent = `The speech engines are AI models, run on my own laptop. An AI judge, Claude Sonnet, read all ${D.ai.cases.toLocaleString()} cases the searches found and labelled them; a second, Qwen 3.8, is still reading them, so its answers are not shown yet. Claude Code, Anthropic's coding assistant, wrote most of the code and this website, ran the analyses and checked the work for bugs (${D.ai.commits.claude} of the project's ${D.ai.commits.total} commits name it as co-author). I chose the questions and the design, checked the results, and decided what is claimed. The judges' labels are preliminary, not all checked by a person, and nobody has yet listened to all the clips.`;
+
+const pageOf = Object.fromEntries(D.pages.map(p => [p.name, p.file]));
+D.opposite.forEach(c => Cards.failure($("#opposite"), { ...c, hear: hearLink(c) }));
+
+D.kinds.forEach(k => {
+  const ul = el("ul");
+  k.perDataset.forEach(d => ul.append(el("li", {},
+    el("a", { href: `${d.file}#${k.kind}` }, d.name), el("span", {}, d.text))));
+  $("#kinds").append(el("div", {}, el("b", {}, k.title), k.why, ul));
+});
+
+D.datasets.forEach(d => {
+  const card = el("div", { class: "dataset-card" });
+  card.append(el("b", {}, el("a", { href: d.file }, d.name)), el("span", {}, d.span), el("p", {}, d.headline),
+    el("a", { class: "go", href: d.file }, `Results: the ${d.name} page`));
+  if (EXPLORERS[d.corpus]) card.append(el("a", { class: "go", href: EXPLORERS[d.corpus], target: "_blank", rel: "noopener" },
+    d.corpus === "earnings22" ? "Every call, as text (no audio licence) ↗" : "Play whole recordings, errors marked ↗"));
+  card.append(el("a", { class: "go", href: d.home[1], target: "_blank", rel: "noopener" }, `The data set's own site ↗`));
+  $("#datasets").append(card);
+});
+
+const q = D.queue;
+$("#queue-lede").textContent = q.todo
+  ? `${q.done} runs done and ${q.todo} waiting: about ${q.hours} hours of GPU time, roughly ${Math.round(q.hours / 12)} nights.`
+  : `${q.done} runs done; nothing is waiting in the queue right now.`;
+if (q.rows.length) Table.sortable($("#queue"), {
+  columns: [{ key: "engine", label: "Next up" }, { key: "terms", label: "Term" },
+    { key: "done", label: "Done", num: true, fmt: (v, r) => `${v} of ${r.total}` },
+    { key: "hours", label: "Hours left", num: true, fmt: v => v === null ? "–" : v.toFixed(1) }],
+  rows: q.rows,
+});
+D.roadmap.forEach(r => $("#roadmap").append(el("li", { class: r.done ? "done" : "" },
+  el("span", { class: "state" }, r.done ? "Done" : "To do"), `${r.n}. ${r.title}`)));
+$("#credit").textContent = D.credit;
+$("#credit").append(" ", el("a", { href: "data.html" }, "Full credits and licences are on the data page."));
+$("#built").textContent = `Built ${D.built} by tools/build_site.py from the files in findings/.`;
+</script>

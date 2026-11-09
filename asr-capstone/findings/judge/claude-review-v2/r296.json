@@ -1,0 +1,1 @@
+{"case": "r296", "own": {"reason": "The engine writes 'he talked' for 'he talk'. The verb without -s is present tense (Lyfe Jennings' songs talk about this), and the engine moves it into the past.", "meaning": "changed", "severity": 1, "follow_up": "meaning changed", "reference_doubt": "no"}}

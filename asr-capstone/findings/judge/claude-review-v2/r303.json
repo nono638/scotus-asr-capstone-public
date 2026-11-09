@@ -1,0 +1,1 @@
+{"case": "r303", "own": {"reason": "The engine adds \"not\" in \"I'm not saying\", but the reference already has the negative in \"not that I'm saying\", so the sense is the same. The speaker may well have said a doubled \"not\" that the reference left out.", "meaning": "reworded", "severity": 0, "follow_up": "no change", "reference_doubt": "maybe", "misspoke": "no"}}

@@ -1,0 +1,15 @@
+{"case": "s04",
+ "parts": {
+  "meaning/line": {"X": "right", "Y": "right", "better": "tie", "why": "Both say opposite, severity 4, negation lost for ISN'T -> is."},
+  "meaning/minute": {"X": "right", "Y": "right", "better": "tie", "why": "Both correct."},
+  "meaning/whole": {"X": "right", "Y": "right", "better": "tie", "why": "Both correct; Y's reason says what the reversal is, X's only names the dropped n't."},
+  "noticeable": {"X": "right", "Y": "right", "better": "tie", "why": "Both say yes; the engine's text has Counter Strike as a role play game right after arguing such shooters are not, then 'just a tactical shooter'."},
+  "stakes": {"X": "right", "Y": "right", "better": "tie", "why": "Both say yes, the point is reversed."},
+  "rule": {"X": "right", "Y": "right", "better": "tie", "why": "Both confirm the evidence."},
+  "blind": {"X": "right", "Y": "right", "better": "tie", "why": "Both pick the reference in both orders with the same sound reason."},
+  "rank": {"X": "partly", "Y": "right", "better": "Y", "why": "Granite, Whisper and Parakeet all keep 'isn't'; Y ties them at 1 and puts Qwen3 and Canary last. X puts the right engines ahead too but splits them on dialogue after the spot, which the rank should ignore."},
+  "misses": {"X": {"real_and_matter": 5, "trivial": 3, "not_real": 0, "important_missed": 0},
+             "Y": {"real_and_matter": 3, "trivial": 1, "not_real": 0, "important_missed": 1},
+             "better": "X", "why": "X catches a second meaning change, 'IT'S NOT ROLEPLAY' written as 'it's not pre-made' (with 'they're premade' dropped), which Y misses. Both get role/wrong, isn't/is and the added 'just a tactical shooter'; X pads with a few filler items."}
+ },
+ "overall": {"better": "X", "why": "Equal on the judgement parts; X's minute list finds the second reversal Y misses, which outweighs Y's cleaner rank."}}

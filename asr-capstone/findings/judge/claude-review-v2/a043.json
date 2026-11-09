@@ -1,0 +1,1 @@
+{"case": "a043", "own": {"reason": "The engine has 'I'm over here' where the reference has 'I don't d[o] over there'; the girl probably said a reduced 'I'on'' (I don't), which sounds like 'I'm', so the engine loses the negation that she doesn't go over there.", "meaning": "opposite", "severity": 3, "follow_up": "negation lost", "reference_doubt": "no", "misspoke": "no"}}

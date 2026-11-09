@@ -1,0 +1,1 @@
+{"case": "r078", "own": {"reason": "The engine adds the \"are\" the speaker dropped, writing \"you're gonna\" for \"you gonna\". A dropped \"are\" carries no meaning, so nothing changes.", "meaning": "same", "severity": 0, "follow_up": "meaning kept", "reference_doubt": "no"}}

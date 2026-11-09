@@ -1,0 +1,1 @@
+{"case": "r277", "own": {"reason": "The engine splits 'intrastate' into 'interest state', which is not a real term. The reader loses which of the contextual arguments (the intrastate one) is being named.", "meaning": "garbled", "severity": 2, "follow_up": "garble", "reference_doubt": "no"}}

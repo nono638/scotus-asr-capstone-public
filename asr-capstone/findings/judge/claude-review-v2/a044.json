@@ -1,0 +1,1 @@
+{"case": "a044", "own": {"reason": "The engine has 'clinical material is produced in increasing volume' where the reference has 'isn't'; the speaker is describing a strong, growing pipeline, so 'is' makes clearly more sense and the reference looks wrong.", "meaning": "opposite", "severity": 3, "follow_up": "negation lost", "reference_doubt": "yes", "misspoke": "no"}}

@@ -1,0 +1,1 @@
+{"case": "r190", "own": {"reason": "The engine writes 'plant gas' for 'Plan Gas', the name of Argentina's gas incentive programme. A reader would take it as gas from a plant and miss what drove production.", "meaning": "changed", "severity": 2, "follow_up": "changes meaning", "reference_doubt": "no"}}

@@ -1,0 +1,97 @@
+{
+ "case": "s13",
+ "own": {
+  "meaning": "same",
+  "severity": 0,
+  "noticeable": "no",
+  "follow_up": "only the stumble lost",
+  "stakes": "no",
+  "reason": "The speaker said \"stole the the cigarettes\" and Qwen3 wrote \"stole the cigarettes\": only the repeated \"the\" is gone.",
+  "rule_right": "yes",
+  "rule_reason": "The reference has \"THE THE\" and Qwen3 has one \"the\"; only Parakeet (Engine 2) kept the repeat, as the evidence says.",
+  "more_plausible": "reference",
+  "plausible_how_clear": "Not clear from text: this speaker stumbles a lot (\"UH UH\", \"ON A THE ROOF\"), which makes a doubled \"the\" believable, but a single \"the\" is just as natural; only one of five engines kept it.",
+  "my_misses": [
+   {
+    "reference": "I THINK THEY WERE JUST CURIOUS",
+    "engine": "I think they are just curious",
+    "severity": 0,
+    "what": "past tense becomes present; same point"
+   },
+   {
+    "reference": "OH OKAY JUST CURIOUS",
+    "engine": "Ah, okay.",
+    "severity": 0,
+    "what": "the listener's echo \"just curious\" is dropped"
+   },
+   {
+    "reference": "I THINK THEY HAVE SOME EX",
+    "engine": "I think they have some.",
+    "severity": 0,
+    "what": "cut-off word dropped"
+   }
+  ]
+ },
+ "review": {
+  "labelled/line": {
+   "verdict": "agree",
+   "why": "Only the repeated \"the\" is lost; severity 0 and \"only the stumble lost\" are right."
+  },
+  "labelled/minute": {
+   "verdict": "agree",
+   "why": "Same answer, accurately described."
+  },
+  "labelled/whole": {
+   "verdict": "agree",
+   "why": "Same answer; nothing in the minute suggests the full transcript would change it (I could not see it)."
+  },
+  "rule/minute": {
+   "verdict": "agree",
+   "why": "Reference \"THE THE\", engine \"the\", only Parakeet kept the repeat; the rule is right."
+  },
+  "blind/order1": {
+   "verdict": "disagree",
+   "why": "It picked the engine's single \"the\" with \"sure 3\", calling \"the the\" a likely \"transcription error\", though the speaker stumbles all through this passage (\"UH UH\", \"ON A THE ROOF\")."
+  },
+  "blind/order2": {
+   "verdict": "partly",
+   "why": "It picked the reference here, but with the opposite reason from order 1 (now repeats are \"very common\"); it picked Version A both times, so the choice followed position."
+  },
+  "rank/minute": {
+   "verdict": "agree",
+   "why": "The four single-\"the\" engines keep the meaning equally, and Parakeet's added \"smoke\" (\"They just smoke stole the the cigarettes\") does garble the line, so putting it last is fair; \"changes the meaning\" overstates it a little."
+  },
+  "misses": [
+   {
+    "reference": "THEY WERE JUST CURIOUS",
+    "engine": "they are just curious",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "yes",
+    "note": "A tense change with the same point; 1 is acceptable, 0 would also do."
+   },
+   {
+    "reference": "THEY JUST UH UH STOLE THE THE CIGARETTES AND THEY TOOK IT UH UH ON A THE ROOF",
+    "engine": "They just stole the cigarettes and took it on the roof",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "yes",
+    "note": "Only fillers and repeats removed; correctly 0, though the prompt said to leave these out."
+   },
+   {
+    "reference": "THE KIOSK AND UH IF THEY BRING CIGARETTES OR SOMETHING THE S",
+    "engine": "kiosk, and if they bring cigarettes or something,",
+    "is_real": "partly",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "The only difference is the cut-off \"THE S\" at the very end of the minute, which the prompt said to ignore; both texts stop mid-sentence. Severity 3 for this is invented."
+   }
+  ],
+  "overlooked": []
+ },
+ "worth_a_listen": {
+  "yes": false,
+  "why": "A repeated \"the\" carries no meaning; listening would not change anything."
+ },
+ "summary": "Gemma judged the spot correctly, but in the blind test it picked Version A both times with opposite reasons, and its misses list gave severity 3 to the cut-off end of the minute, which is not a real difference."
+}

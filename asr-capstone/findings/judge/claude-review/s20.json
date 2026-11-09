@@ -1,0 +1,152 @@
+{
+ "case": "s20",
+ "own": {
+  "meaning": "changed",
+  "severity": 1,
+  "noticeable": "no",
+  "follow_up": "little lost",
+  "stakes": "no",
+  "reason": "Canary left out the listener's short reply \"That's that's a very very good English\", a passing comment before the topic changes to food.",
+  "rule_right": "partly",
+  "rule_reason": "The turn really is missing, but the counts do not match what the other engines show at the spot (Whisper wrote five of the words, not seven; Qwen3 wrote \"good thing\", not \"good English\"), and \"9 words\" is more than the turn's seven or eight.",
+  "more_plausible": "reference",
+  "plausible_how_clear": "Weak: three of five engines heard something there, so a reply was probably said, but \"mm\" alone before a new question is just as natural, and the exact words are unsure (\"good English\" / \"good thing\" / \"good idea\").",
+  "my_misses": [
+   {
+    "reference": "MM THAT'S THAT'S A VERY VERY GOOD ENGLISH",
+    "engine": "",
+    "severity": 1,
+    "what": "the listener's short reply is left out"
+   },
+   {
+    "reference": "DISLIKE ENGLISH LIKE MAD",
+    "engine": "dislike English like math",
+    "severity": 1,
+    "what": "\"like mad\" (very much) becomes \"like math\", which reads as nonsense"
+   },
+   {
+    "reference": "YOU WOULD LOVE TO PREPARE IT",
+    "engine": "you love to prepare it",
+    "severity": 0,
+    "what": "\"would love\" becomes \"love\""
+   }
+  ]
+ },
+ "review": {
+  "labelled/line": {
+   "verdict": "disagree",
+   "why": "Severity 4 (\"reverses or loses the point\") for a dropped \"that's a very very good English\" is far too high; the engine's text reads on smoothly, so \"noticeable: yes\" and \"gap shows\" are wrong, and \"little lost\" was the fitting option."
+  },
+  "labelled/minute": {
+   "verdict": "disagree",
+   "why": "Same over-rating; calling a short reaction \"a significant piece of dialogue\" does not fit a minute that moves straight on to food."
+  },
+  "labelled/whole": {
+   "verdict": "disagree",
+   "why": "Same answer again; I judged only from the minute, but nothing there makes this reply important."
+  },
+  "rule/minute": {
+   "verdict": "partly",
+   "why": "The turn really is missing, but Gemma did not check the evidence, whose counts (Whisper 7 words, 9 words in all) do not match the texts shown (Whisper wrote five)."
+  },
+  "blind/order1": {
+   "verdict": "disagree",
+   "why": "It picked the engine's empty version (A) with \"sure 3\", calling the reply a non-sequitur, then in order 2 picked A again (now the reference) with the opposite reason."
+  },
+  "blind/order2": {
+   "verdict": "partly",
+   "why": "Right pick (the reference) but with a reason that contradicts order 1 and \"sure 3\" both times; position decided, not sense."
+  },
+  "rank/minute": {
+   "verdict": "agree",
+   "why": "The engines that wrote a reply rank above the two that wrote nothing, and Whisper's \"that's that's a very good\" is closest in words; Qwen3 and Whisper could fairly tie."
+  },
+  "misses": [
+   {
+    "reference": "THE WH THE FUNNIEST OF IT WAS JUST",
+    "engine": "the funniest of it all is",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "Same meaning; 0."
+   },
+   {
+    "reference": "THEY LOVED MATHEMATICS",
+    "engine": "they love math",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "yes",
+    "note": "Tense only; 1 is acceptable."
+   },
+   {
+    "reference": "THEY WERE GREAT FANS OF MATHEMATICS",
+    "engine": "they were great fans of math",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "yes",
+    "note": "Same word shortened; 0, and need not be listed."
+   },
+   {
+    "reference": "TO ARRIVE THE CLASS",
+    "engine": "to arrive in the class",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "yes",
+    "note": "0; need not be listed."
+   },
+   {
+    "reference": "MATHS MATHS GIVES ME HEADACHE",
+    "engine": "maths gives me headache",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "yes",
+    "note": "Repeat removed; the prompt said to leave repeats out."
+   },
+   {
+    "reference": "DISLIKE ENGLISH LIKE MAD",
+    "engine": "dislike English like math",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "too high",
+    "note": "Real, but \"they dislike English\" survives and \"like math\" just reads as odd; 1, not 4."
+   },
+   {
+    "reference": "ANY FOOD YOU'VE NOT TRIED",
+    "engine": "any food you not tried",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "yes",
+    "note": "Grammar only; 1 is a little high but acceptable."
+   },
+   {
+    "reference": "ANY FOOD ANY FOOD ANY FOOD ANY FOOD",
+    "engine": "food any food any food",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "yes",
+    "note": "Repeats; should have been left out."
+   },
+   {
+    "reference": "I DON'T THINK THERE IS ANY I DON'T THINK THERE'S ANY",
+    "engine": "i don't think there's any",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "A repeat; 0."
+   }
+  ],
+  "overlooked": [
+   {
+    "reference": "MM THAT'S THAT'S A VERY VERY GOOD ENGLISH",
+    "engine": "",
+    "severity": 1,
+    "note": "Gemma's misses list leaves out the very turn this case is about, which it rated severity 4 in every other view."
+   }
+  ]
+ },
+ "worth_a_listen": {
+  "yes": true,
+  "why": "The engines disagree on what was said (\"good English\", \"good thing\", \"good idea\", nothing), so only the audio shows whether the reference is right; the stakes are low either way."
+ },
+ "summary": "Gemma badly over-rated a short dropped reaction (severity 4 in all three views), flipped its blind pick with order, and then left that same dropped turn out of its own misses list while giving \"like mad\" to \"like math\" a 4."
+}

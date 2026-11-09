@@ -1,0 +1,133 @@
+{
+ "case": "s18",
+ "X": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 4,
+    "follow_up": "content lost, gap shows",
+    "reason": "The engine completely missed a large chunk of text containing a substantive answer regarding construction timelines and capacity expectations."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 4,
+    "follow_up": "content lost, gap shows",
+    "reason": "The engine completely omits the entire response from Speaker 11, leaving only the end of the previous speaker's question and the start of the next moderator's introduction."
+   },
+   "whole": {
+    "meaning": "changed",
+    "severity": 4,
+    "follow_up": "content lost, gap shows",
+    "reason": "The engine completely missed the entire response from the speaker, leaving only the end of the question and the subsequent transition."
+   }
+  },
+  "noticeable": "no",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The engine completely omits critical information regarding the construction completion timeline and the expected ramp-up period for the unit, which are key operational details for investors."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The engine completely omitted the entire sentence present in the reference at the marked location."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "Version A provides a coherent answer to the question asked by Speaker 13, whereas Version B contains no response, leaving the dialogue nonsensical. In an earnings call, the speaker would naturally respond to a direct question about timelines."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "Version A contains no response to Speaker 13's question, whereas Version B provides a direct, coherent answer to the question about the testing period and capacity ramp-up. In an earnings call, it is much more likely that the speaker would provide an answer than simply say 'thank you' in response to a specific question."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Parakeet": 3,
+    "Qwen3": 1,
+    "Whisper": 1
+   },
+   "reason": "Engine 2 is the most accurate as it includes the name 'Pavel Danis' which, while not in the reference, is a common occurrence in transcripts, whereas Engine 3 is also highly accurate but misses that specific addition, and Engine 1 fails to provide the content."
+  },
+  "misses": [
+   {
+    "reference": "speaking. Construction, um, is going to be finished pretty soon in Q1 2022, so we would expect the unit to ramp up, uh, to the design capacity in the first half of the year. Thank you.",
+    "engine": "",
+    "severity": 4,
+    "what": "the construction and ramp up timeline information"
+   },
+   {
+    "reference": "from CIB",
+    "engine": "from Spir CIB",
+    "severity": 2,
+    "what": "the name of the caller/institution"
+   }
+  ]
+ },
+ "Y": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 4,
+    "follow_up": "content lost, gap shows",
+    "reason": "The speech recognition engine failed to capture a large segment of the speaker's response, leaving a significant gap in the information provided."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 4,
+    "follow_up": "content lost, gap shows",
+    "reason": "The speech recognition engine failed to capture the entire response from the speaker, resulting in a complete omission of the answer."
+   },
+   "whole": {
+    "meaning": "changed",
+    "severity": 4,
+    "follow_up": "content lost, gap shows",
+    "reason": "The speech recognition engine failed to capture the entire response from the speaker, resulting in a complete loss of the information provided."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The engine completely omits the answer to the question, leaving the investor without the critical information regarding the construction timeline and capacity ramp-up."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The engine completely missed the entire sentence provided in the reference, confirming the checker's finding of a long stretch of dropped speech."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "Version A provides a coherent answer to the question asked by Speaker 13, whereas Version B leaves the response empty, which is illogical in the context of an earnings call."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "Version B provides a coherent, substantive answer to the question asked by Speaker 13, whereas Version A contains an empty response that lacks any logical flow for an earnings call."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Parakeet": 3,
+    "Qwen3": 1,
+    "Whisper": 2
+   },
+   "reason": "Engine 2 is the best because it includes the speaker's identification, while Engine 3 is better than Engine 1 because it captures the content of the statement rather than leaving it blank."
+  },
+  "misses": [
+   {
+    "reference": "speaking. Construction, is going to be finished pretty soon in Q1 2022, so we would expect the unit to ramp up, to the design capacity in the first half of the year. Thank you.",
+    "engine": "",
+    "severity": 4,
+    "what": "entire response regarding construction timeline and capacity ramp-up is missing"
+   },
+   {
+    "reference": "from the line of calling from CIB",
+    "engine": "from the line of Andrei Gromadin calling from Spir CIB",
+    "severity": 2,
+    "what": "added specific name and modified firm name"
+   }
+  ]
+ }
+}

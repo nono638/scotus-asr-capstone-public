@@ -1,0 +1,13 @@
+{"case": "s30",
+ "parts": {
+  "meaning/line": {"X": "partly", "Y": "right", "better": "Y", "why": "Taking the reference as said, an added 'not' is 'opposite'. X says 'changed' while its own follow-up says 'negation added'."},
+  "meaning/minute": {"X": "right", "Y": "right", "better": "tie", "why": "Both: opposite, severity 4. Neither notes that the reference may have dropped the 'not'."},
+  "meaning/whole": {"X": "right", "Y": "right", "better": "tie", "why": "Both: opposite, severity 4."},
+  "noticeable": {"X": "wrong", "Y": "right", "better": "Y", "why": "'that alone makes me not like it' reads naturally after the talk of hackers; nothing looks wrong. X says yes."},
+  "stakes": {"X": "right", "Y": "right", "better": "tie", "why": "Both say yes: it flips like into dislike."},
+  "rule": {"X": "right", "Y": "right", "better": "tie", "why": "Granite, Canary and Parakeet have nothing there, so 3 of 4 others agree with the reference. The label and evidence are accurate."},
+  "blind": {"X": "partly", "Y": "partly", "better": "X", "why": "X picks 'not' in both orders, which is plausible (the reference may have dropped it). But its reasons misdescribe the text, calling 'make me like it' incomplete. Y flips with the order and its order-1 reason wanders through 'Wait... Actually'."},
+  "rank": {"X": "wrong", "Y": "right", "better": "Y", "why": "Measured against the reference, the three engines with nothing there should lead. Y does that. X praises the 'not' engines for 'correctly adding not', yet ranks a no-'not' engine first and the other two last over words outside the spot."},
+  "misses": {"X": {"real_and_matter": 3, "trivial": 1, "not_real": 0, "important_missed": 0}, "Y": {"real_and_matter": 2, "trivial": 1, "not_real": 0, "important_missed": 1}, "better": "X", "why": "Both find the Free Fire 'act'->'hack' rewrite and the added 'not'. Only X catches that 'the thing that we bought' became 'it in that way'."}
+ },
+ "overall": {"better": "Y", "why": "Y is right on line, noticeable and rank, where X is off. X's better blind consistency and miss list count for less than its broken rank."}}

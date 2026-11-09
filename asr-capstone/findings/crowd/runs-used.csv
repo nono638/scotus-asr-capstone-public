@@ -1,0 +1,8 @@
+model,engine,run,recordings_in_run,recordings_compared,pivot
+Whisper,whisper-large-v3,D:\scotus-corpus\runs\run-20260918-035220,138,61,True
+Qwen3,Qwen3-ASR-1.7B-hf,D:\scotus-corpus\runs\run-20260921-051927,61,61,False
+Voxtral,Voxtral-Mini-3B-2507,D:\scotus-corpus\runs\run-20260922-002324,61,61,False
+Canary,canary-1b-v2,D:\scotus-corpus\runs\run-20260921-033436,61,61,False
+Parakeet,parakeet-tdt-0.6b-v3,D:\scotus-corpus\runs\run-20260924-064733,61,61,False
+Granite,granite-speech-4.1-2b,D:\scotus-corpus\runs\run-20260923-011250,61,61,False
+Granite Plus,granite-speech-4.1-2b-plus,D:\scotus-corpus\runs\run-20260924-164308,61,61,False

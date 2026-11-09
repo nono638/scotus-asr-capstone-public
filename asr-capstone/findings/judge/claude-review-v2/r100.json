@@ -1,0 +1,1 @@
+{"case": "r100", "own": {"reason": "The engine drops \"isn't clear\", so the sentence stops at \"if the court says that the text\" and runs into the next speaker. The condition she is warning about, with its negative, is gone, though Kavanaugh's question just before hints at it.", "meaning": "garbled", "severity": 2, "follow_up": "negation lost", "reference_doubt": "no"}}

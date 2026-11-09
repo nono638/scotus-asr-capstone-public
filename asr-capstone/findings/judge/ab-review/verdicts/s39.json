@@ -1,0 +1,14 @@
+{"case": "s39",
+ "parts": {
+  "meaning/line": {"X": "right", "Y": "right", "better": "tie", "why": "Both: opposite, 4, negation added."},
+  "meaning/minute": {"X": "right", "Y": "right", "better": "tie", "why": "Both: opposite, 4, negation added."},
+  "meaning/whole": {"X": "right", "Y": "right", "better": "tie", "why": "Both: opposite, 4, negation added."},
+  "noticeable": {"X": "partly", "Y": "right", "better": "Y", "why": "'the context is not making an adjustment, I mean, of course, our whole position ... is that it means making an adjustment' contradicts itself, so a careful reader would likely notice. Y says yes. X says no; the 'I mean' could be read as a self-correction, so X is partly right."},
+  "stakes": {"X": "right", "Y": "right", "better": "tie", "why": "Both say yes: the lawyer's position is reversed."},
+  "rule": {"X": "right", "Y": "right", "better": "tie", "why": "Both say the rule is right."},
+  "blind": {"X": "right", "Y": "partly", "better": "X", "why": "X picks the reference in both orders, pointing to the contradiction with the next clause. Y's pick flips: it picks the reference in order 1, then in order 2 argues 'is not' sets up a needed contrast and picks the engine's version."},
+  "misses": {"X": {"real_and_matter": 1, "trivial": 0, "not_real": 0, "important_missed": 0},
+             "Y": {"real_and_matter": 1, "trivial": 0, "not_real": 0, "important_missed": 0},
+             "better": "tie", "why": "Both list the added 'not' at severity 4 and nothing else. X's 'what' note just repeats the reference words, a small blemish."}
+ },
+ "overall": {"better": "X", "why": "On the negation control, X picks the reference in both blind orders as it should; Y's pick flips with the order. Y is a little better on noticeable."}}

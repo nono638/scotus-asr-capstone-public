@@ -1,0 +1,1 @@
+{"case": "r177", "own": {"reason": "The engine writes 'slight' for 'psych', giving 'one slight class', which is nonsense. That it is a psychology class is lost.", "meaning": "garbled", "severity": 2, "follow_up": "garble", "reference_doubt": "no"}}

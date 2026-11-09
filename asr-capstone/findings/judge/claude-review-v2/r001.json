@@ -1,0 +1,1 @@
+{"case": "r001", "own": {"reason": "The engine writes \"phone out\" for \"falling out\", which makes no sense; the reader loses that she is talking about their fallings-out.", "meaning": "garbled", "severity": 2, "follow_up": "garble", "reference_doubt": "no"}}

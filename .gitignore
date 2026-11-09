@@ -1,0 +1,161 @@
+# ---------------------------------------------------------------------------
+# The Python environment. Never commit this.
+#
+# It is about 4 GB, and everything in it is compiled for one machine's Python
+# and one machine's CUDA version. Copying it to the other laptop would produce
+# a broken environment, not a working one. Rebuild it there with setup.ps1.
+# ---------------------------------------------------------------------------
+.venv/
+venv/
+env/
+
+# ---------------------------------------------------------------------------
+# Large sample media, re-downloadable from supremecourt.gov.
+#
+# These are public-domain government works and every source URL is recorded in
+# asr-capstone/sample/manifest.json, so they can be fetched again on any
+# machine with fetch_sample_media.py. Keeping 134 MB of audio out of the repo
+# keeps clones fast, and git stores every future version of a binary file
+# forever even after you delete it.
+# ---------------------------------------------------------------------------
+*.mp3
+*.wav
+*.flac
+*.m4a
+
+# ---------------------------------------------------------------------------
+# The textbook. Copyrighted, so it must not go to a hosted repository.
+# ---------------------------------------------------------------------------
+Information theory inference and Learning algorithms.pdf
+
+# The course syllabus. The professor's document, kept here to read, not to publish.
+DATA 698 Fall 2026 Syllabus.docx
+
+# The capstone proposal as submitted on 16 October 2026. Kept here to read.
+/_Same Room, Same Problems_*.pdf
+
+# Notes for conversations with the professor. Private, so they stay local.
+asr-capstone/professor-meeting-2026-10-15.md
+
+# ---------------------------------------------------------------------------
+# Model weights and downloaded corpora. These get very large and can always be
+# fetched again from Hugging Face or the Court's site.
+# ---------------------------------------------------------------------------
+models/
+checkpoints/
+# Anchored to the repository root on purpose. Written as a bare `corpus/` this
+# matched any directory of that name at any depth, which silently swallowed the
+# whole of `pipeline/scotus_asr/corpus/` - the source package that does the
+# downloading. Five source files sat untracked and nothing reported it, because
+# an ignored file is not an error. The downloaded corpus itself now lives
+# outside the repository entirely.
+/corpus/
+data/raw/
+*.ckpt
+*.pt
+*.bin
+*.onnx
+*.safetensors
+
+# ---------------------------------------------------------------------------
+# Pipeline run output.
+#
+# Keep the findings, drop the intermediates. The result tables are small and are
+# the point of the exercise, so they stay. The per-case JSON is large - a
+# 150-minute transcription with a timestamp on every word - and can be produced
+# again from the audio, so it does not.
+# ---------------------------------------------------------------------------
+asr-capstone/runs/*/asr/
+asr-capstone/runs/*/reference/
+asr-capstone/runs/*/ocr/
+asr-capstone/runs/*/scores/
+asr-capstone/runs/*/*.log
+
+# ---------------------------------------------------------------------------
+# Python leftovers
+# ---------------------------------------------------------------------------
+__pycache__/
+*.py[cod]
+*.egg-info/
+.ipynb_checkpoints/
+.pytest_cache/
+
+# ---------------------------------------------------------------------------
+# Editors and operating systems
+# ---------------------------------------------------------------------------
+.vscode/
+.idea/
+Thumbs.db
+desktop.ini
+.DS_Store
+*~
+*.tmp
+*.bak
+
+# Local Claude Code settings are per-machine; the shared config is committed.
+.claude/settings.local.json
+
+# Exported notebooks. `nbconvert --to html` rebuilds one in seconds from the
+# committed .ipynb, and it is the .ipynb that carries the work. Keeping the
+# export out means the history does not collect a fresh 680 KB copy every time
+# a cell is re-run. Regenerate one to email:
+#   python -m nbconvert --to html notebooks/first-look.ipynb
+# The leading ** matters: a pattern containing a slash is anchored to this
+# file's own directory, so a bare notebooks/*.html would only match a
+# notebooks/ folder at the repository root, not asr-capstone/notebooks/.
+**/notebooks/*.html
+
+# Proposal drafts: kept on this laptop only
+asr-capstone/proposal/
+
+# Where the corpora are on this laptop; each laptop makes its own from local-paths.example.yaml.
+asr-capstone/local-paths.yaml
+
+# Remade on demand: the invented-words cache (tools/find_invented_words.py), clips cut
+# for the website (tools/flip_clips.py, tools/build_site.py) and browser-check screenshots.
+asr-capstone/findings/invented-words/cache/
+asr-capstone/findings/failures/cache/
+asr-capstone/findings/failures/edits/restarts-dropped.csv.gz
+asr-capstone/findings/failures/skips/cache/
+asr-capstone/findings/failures/breakdown/cache/
+asr-capstone/site/clips/
+asr-capstone/site/checks/
+asr-capstone/site/data/
+
+# The recording explorer's data (tools/build_explorer.py): about 200 MB of transcripts,
+# audio and copies of findings/, all rebuilt from the runs. Only its page is kept.
+asr-capstone/explorer/*
+!asr-capstone/explorer/*/
+asr-capstone/explorer/*/*
+!asr-capstone/explorer/*/index.html
+
+# API keys: never committed. The judge reads the Claude key from this folder
+# (tools/judge_failures.py, key_from_file); ANTHROPIC_API_KEY works too.
+API keys/
+**/API keys/
+*.key
+.env
+
+# The LLM judge's full request logs (every request's timings and thinking text, several
+# MB a model). A gzipped copy, requests-*.jsonl.gz, is committed instead; regzip after a run.
+asr-capstone/findings/judge/requests-*.jsonl
+# Batch bookkeeping (ids and what each request was): a working file, large on a full run.
+asr-capstone/findings/judge/batch-*.json
+
+# ---------------------------------------------------------------------------
+# Papers for the literature review. Copyrighted, so they stay local;
+# asr-capstone/literature/pdf-index.md lists each one and where it came from,
+# and asr-capstone/literature/fetch_papers.py downloads them again.
+# ---------------------------------------------------------------------------
+asr-capstone/literature/pdfs/
+
+# Drafts of the midterm paper, kept local while they are rough (1 Nov 2026).
+asr-capstone/midterm/drafts/
+
+# The public site (asr-capstone/tools/build_public.py): about 0.9 GB of pages, clips and
+# audio, rebuilt from site/ and explorer/ and uploaded to Cloudflare Pages, never committed.
+asr-capstone/public/
+
+# Built from midterm/draft.md by midterm/make_pdf.py; rebuild instead of committing
+asr-capstone/midterm/midterm-draft.pdf
+asr-capstone/midterm/midterm-draft.html

@@ -1,0 +1,1 @@
+{"case": "r282", "own": {"reason": "The engine writes 'young porridge' for 'yam porridge'. That is nonsense, but 'yam porridge' appears just before it.", "meaning": "garbled", "severity": 1, "follow_up": "garble", "reference_doubt": "no"}}

@@ -1,0 +1,80 @@
+[
+  {
+    "folder": "OT2003_02-763_Barnhart_v_Thomas",
+    "docket": "02-763",
+    "argued": "2003-10-14",
+    "transcript_url": "https://www.supremecourt.gov/pdfs/transcripts/2003/02-763.pdf",
+    "audio_url": null,
+    "audio_minutes": null,
+    "turns": 137,
+    "spoken_words": 7554,
+    "uses_QUESTION_label": true,
+    "distinct_speaker_labels": 4,
+    "case_document_pdfs": 0
+  },
+  {
+    "folder": "OT2004_03-633_Roper_v_Simmons",
+    "docket": "03-633",
+    "argued": "2004-10-13",
+    "transcript_url": "https://www.supremecourt.gov/pdfs/transcripts/2004/03-633.pdf",
+    "audio_url": null,
+    "audio_minutes": null,
+    "turns": 238,
+    "spoken_words": 9902,
+    "uses_QUESTION_label": false,
+    "distinct_speaker_labels": 10,
+    "case_document_pdfs": 0
+  },
+  {
+    "folder": "OT2004_04-104_United_States_v_Booker",
+    "docket": "04-104",
+    "argued": "2004-10-04",
+    "transcript_url": "https://www.supremecourt.gov/pdfs/transcripts/2004/04-104.pdf",
+    "audio_url": null,
+    "audio_minutes": null,
+    "turns": 403,
+    "spoken_words": 18723,
+    "uses_QUESTION_label": true,
+    "distinct_speaker_labels": 13,
+    "case_document_pdfs": 0
+  },
+  {
+    "folder": "OT2010_09-834_Kasten_v_Saint_Gobain_Performance_Plasti",
+    "docket": "09-834",
+    "argued": "2010-10-13",
+    "transcript_url": "https://www.supremecourt.gov/oral_arguments/argument_transcripts/2010/09-834.pdf",
+    "audio_url": "https://www.supremecourt.gov/media/audio/mp3files/09-834.mp3",
+    "audio_minutes": 55.9,
+    "turns": 252,
+    "spoken_words": 9941,
+    "uses_QUESTION_label": false,
+    "distinct_speaker_labels": 11,
+    "case_document_pdfs": 0
+  },
+  {
+    "folder": "OT2024_24-316_Kennedy_Sec_of_H_HS_v_Braidwood_Mgmt_Inc",
+    "docket": "24-316",
+    "argued": "2025-04-21",
+    "transcript_url": "https://www.supremecourt.gov/oral_arguments/argument_transcripts/2024/24-316_1a72.pdf",
+    "audio_url": "https://www.supremecourt.gov/media/audio/mp3files/24-316.mp3",
+    "audio_minutes": 86.2,
+    "turns": 565,
+    "spoken_words": 16979,
+    "uses_QUESTION_label": false,
+    "distinct_speaker_labels": 12,
+    "case_document_pdfs": 11
+  },
+  {
+    "folder": "OT2025_24-109_Louisiana_v_Callais",
+    "docket": "24-109",
+    "argued": "2025-10-15",
+    "transcript_url": "https://www.supremecourt.gov/oral_arguments/argument_transcripts/2025/24-109_5i36.pdf",
+    "audio_url": "https://www.supremecourt.gov/media/audio/mp3files/24-109_2.mp3",
+    "audio_minutes": 150.1,
+    "turns": 621,
+    "spoken_words": 24710,
+    "uses_QUESTION_label": false,
+    "distinct_speaker_labels": 13,
+    "case_document_pdfs": 0
+  }
+]

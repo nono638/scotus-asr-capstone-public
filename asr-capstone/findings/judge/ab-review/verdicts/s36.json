@@ -1,0 +1,15 @@
+{"case": "s36",
+ "parts": {
+  "meaning/line": {"X": "partly", "Y": "partly", "better": "tie", "why": "Losing 'that actually was not even enough' drops the point that the compensation was too little: changed, severity 3, both right. But 'And just for me to find a new place. So because accommodation here is so expensive...' reads on smoothly, so the gap is hidden. Both say gap shows."},
+  "meaning/minute": {"X": "partly", "Y": "partly", "better": "tie", "why": "Same as the line answer: severity 3 is right, but both say gap shows."},
+  "meaning/whole": {"X": "partly", "Y": "partly", "better": "tie", "why": "Same as the line answer. Y's reason ('fragmented and incomplete thought') overstates how broken the text looks."},
+  "noticeable": {"X": "right", "Y": "wrong", "better": "X", "why": "The engine text reads on without a visible break, so a reader would not notice. X says no, Y says yes."},
+  "stakes": {"X": "right", "Y": "right", "better": "tie", "why": "Both say yes: the complaint that the money was not enough is lost."},
+  "rule": {"X": "right", "Y": "right", "better": "tie", "why": "Both say yes: six words of clear speech were dropped."},
+  "blind": {"X": "right", "Y": "right", "better": "tie", "why": "Both pick the reference in both orders, sure 3."},
+  "rank": {"X": "partly", "Y": "partly", "better": "tie", "why": "At the spot, Whisper, Granite, Qwen3 and Canary all keep the clause and should tie at 1, with Parakeet last. Both put Granite alone first for having 'new', a word outside the spot that does not matter."},
+  "misses": {"X": {"real_and_matter": 3, "trivial": 1, "not_real": 0, "important_missed": 1},
+             "Y": {"real_and_matter": 4, "trivial": 2, "not_real": 0, "important_missed": 0},
+             "better": "Y", "why": "Both catch '20 200' (could be read as 20,200 pounds), 'tents' for 'tenants' and 'hospital' for 'hospitable'. Only Y lists the dropped 'that actually was not even enough', the case itself. Y overrates 'tents' at 4 and adds 'rent it/rented'."}
+ },
+ "overall": {"better": "tie", "why": "X is right that the gap is hidden (noticeable no), and Y is the only one to list the dropped clause among the misses; elsewhere they agree, including the same 'gap shows' slip."}}

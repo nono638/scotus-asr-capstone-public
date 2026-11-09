@@ -1,0 +1,1 @@
+{"case": "r156", "own": {"reason": "The engine writes $7,999 where the reference has $27,999, dropping twenty thousand dollars from the Chief Justice's figure ($28,000 less one dollar).", "meaning": "changed", "severity": 3, "follow_up": "different quantity", "reference_doubt": "no"}}

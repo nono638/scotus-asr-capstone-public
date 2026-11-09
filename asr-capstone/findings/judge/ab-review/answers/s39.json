@@ -1,0 +1,105 @@
+{
+ "case": "s39",
+ "X": {
+  "meaning": {
+   "line": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation added",
+    "reason": "The engine added the word 'not', which changes the verb from affirmative to negative."
+   },
+   "minute": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation added",
+    "reason": "The engine added the word 'not' to the phrase, which changes the meaning of the sentence from a positive assertion to a negative one."
+   },
+   "whole": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation added",
+    "reason": "The engine added the word 'not' to the sentence, which fundamentally changes the meaning of the speaker's argument."
+   }
+  },
+  "noticeable": "no",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The engine's addition of the word 'not' completely reverses the meaning of the attorney's argument regarding how the context defines the adjustment."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The evidence correctly identifies that the engine added the negative word 'not' which is not present in the reference."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "In Version B, the phrase 'the context is not making an adjustment' contradicts the very next clause, 'of course our whole position in this case is that it means making an adjustment.' Version A provides a logically consistent sentence."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "In Version A, the phrase 'the context is not making an adjustment' is followed by 'of course our whole position in this case is that it means making an adjustment', which creates a logical contradiction. Version B's 'the context is making an adjustment' flows much better into the subsequent clarification of their legal position."
+   }
+  },
+  "misses": [
+   {
+    "reference": "the context is making an adjustment",
+    "engine": "the context is not making an adjustment",
+    "severity": 4,
+    "what": "the context is making an adjustment"
+   }
+  ]
+ },
+ "Y": {
+  "meaning": {
+   "line": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation added",
+    "reason": "The speech recognition engine added a negation ('not') that was not present in the original transcript."
+   },
+   "minute": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation added",
+    "reason": "The speech recognition engine added the word 'not' to the sentence, which fundamentally changes the meaning of the attorney's statement."
+   },
+   "whole": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation added",
+    "reason": "The speech recognition engine added the word 'not' to the sentence, which reverses the meaning of the speaker's argument."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The error reverses the attorney's argument regarding how context defines the word 'adjust'."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The engine added the word 'not', which is a negation not present in the official transcript."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "In Version B, the phrase 'the context is not making an adjustment' contradicts the very next clause where the speaker states 'our whole position in this case is that it means making an adjustment'."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "engine",
+    "sure": 3,
+    "reason": "The speaker's following sentence, 'of course our whole position in this case is that it means making an adjustment,' creates a logical contradiction if the context 'is making an adjustment,' whereas 'is not making an adjustment' sets up the necessary contrast for his argument."
+   }
+  },
+  "misses": [
+   {
+    "reference": "is making an adjustment",
+    "engine": "is not making an adjustment",
+    "severity": 4,
+    "what": "The engine added 'not', reversing the meaning of the attorney's position."
+   }
+  ]
+ }
+}

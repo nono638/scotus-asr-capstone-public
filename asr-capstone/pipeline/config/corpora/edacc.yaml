@@ -1,0 +1,28 @@
+# EdAcc, the Edinburgh International Accents of English Corpus, in place of the
+# Supreme Court. Given after a model's own file, so one file serves every model:
+#
+#   python -m scotus_asr.cli run --config config/qwen3.yaml --config config/corpora/edacc.yaml
+#
+# What the corpus is, how it is downloaded and how its reference is read are in
+# scotus_asr/corpora/edacc.py. `run` downloads and unpacks it on first use
+# (5.9 GB) - or `fetch` does just that.
+
+corpus:
+  name: edacc
+  root: "{asr_corpora}/edacc"
+  # The test split: 40 recordings. "dev" is the other; empty runs both.
+  split: test
+
+paths:
+  # Runs go beside the corpus, never among the Supreme Court runs, so the
+  # analysis tools that read {scotus_corpus}/runs cannot mix the two up.
+  runs_dir: "{asr_corpora}/edacc/runs"
+
+scoring:
+  # The speaking-rate check asks whether the audio and the reference are the
+  # same recording. The Supreme Court band (145-210 words a minute) was measured
+  # on argument; a chat between friends, with the read-aloud passages left out
+  # of the reference and quiet moments left in the audio, runs slower. The band
+  # is wide on purpose until the real spread has been measured.
+  words_per_minute_min: 60
+  words_per_minute_max: 260

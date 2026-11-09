@@ -1,0 +1,1 @@
+{"case": "r168", "own": {"reason": "The engine writes 'even' for 'ever', so 'do they ever have fights?' becomes 'do they even have fights?'. It still asks whether kids fight, with a slightly doubtful tone added.", "meaning": "changed", "severity": 1, "follow_up": "changes meaning", "reference_doubt": "no"}}

@@ -1,0 +1,13 @@
+{"case": "s29",
+ "parts": {
+  "meaning/line": {"X": "right", "Y": "partly", "better": "X", "why": "'rewarding shareholders with didn't payout' is broken English, not a clean reversal. X's 'changed' and its point about the broken grammar fit. Y calls it opposite."},
+  "meaning/minute": {"X": "partly", "Y": "partly", "better": "tie", "why": "Both call it opposite at severity 4; it is closer to garbled, though losing 'dividend' does matter."},
+  "meaning/whole": {"X": "partly", "Y": "partly", "better": "tie", "why": "Both opposite, severity 4. X claims it describes 'a failure to pay', which the broken sentence does not quite say."},
+  "noticeable": {"X": "right", "Y": "right", "better": "tie", "why": "Both say yes; 'didn't payout' is plainly wrong."},
+  "stakes": {"X": "partly", "Y": "partly", "better": "tie", "why": "Yes is defensible, since the dividend fact is lost. But both argue that readers would take it as 'didn't pay', when the grammar is too broken for that; maybe fits better."},
+  "rule": {"X": "partly", "Y": "partly", "better": "tie", "why": "The engine does have 'didn't' where the reference has none, but this is a misheard 'dividend', not a real negation. Both accept the label fully."},
+  "blind": {"X": "right", "Y": "right", "better": "tie", "why": "Both pick 'dividend' in both orders."},
+  "rank": {"X": "right", "Y": "right", "better": "tie", "why": "Identical: Qwen3 1, Parakeet ('digital') 2, Whisper ('didn't') 3."},
+  "misses": {"X": {"real_and_matter": 2, "trivial": 3, "not_real": 0, "important_missed": 1}, "Y": {"real_and_matter": 3, "trivial": 2, "not_real": 0, "important_missed": 0}, "better": "Y", "why": "Both find brent->brand and dividend->didn't. Only Y catches 'Operationally'->'Occasionally'. Both list name spellings (Hindustan/InSan, FACOR/FECOS) and the YYY garble; Y's severities run high."}
+ },
+ "overall": {"better": "tie", "why": "X describes the line more accurately; Y's miss list catches 'Operationally'->'Occasionally'. Otherwise they match."}}

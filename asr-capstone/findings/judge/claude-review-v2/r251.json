@@ -1,0 +1,1 @@
+{"case": "r251", "own": {"reason": "The engine writes \"last night\" for \"the last time\". The speaker means his previous visit, when she had a different parking space; \"last night\" puts it on the wrong occasion.", "meaning": "changed", "severity": 2, "follow_up": "changes meaning", "reference_doubt": "no"}}

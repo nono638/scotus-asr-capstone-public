@@ -1,0 +1,151 @@
+{
+ "case": "s23",
+ "X": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 2,
+    "follow_up": "changes meaning",
+    "reason": "The speech recognition engine misheard the word 'reads' as 'leads'."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 2,
+    "follow_up": "changes meaning",
+    "reason": "The speech recognition engine misheard the word 'reads' as 'leads'."
+   },
+   "whole": {
+    "meaning": "changed",
+    "severity": 1,
+    "follow_up": "changes meaning",
+    "reason": "The engine misheard the verb 'reads' as 'leads'."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "maybe",
+   "reason": "The error changes the verb describing how the Justice is interpreting a specific legal provision (Rule 35), which could affect the understanding of the legal reasoning."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The checker correctly identified that the reference uses 'reads,' while the engine uses 'leads,'."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "In the context of interpreting a legal rule or statute, 'reads' is the standard way to describe how a text or rule is interpreted, whereas 'leads' makes no sense here."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "In the context of interpreting a legal rule or statute, the speaker would say 'the way 35 reads' rather than 'the way 35 leads'."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Qwen3": 2,
+    "Parakeet": 1,
+    "Whisper": 3
+   },
+   "reason": "Engine 2 is the most accurate to the reference, Engine 1 adds an unnecessary repetition of 'and', and Engine 3 incorrectly changes 'reads' to 'leads'."
+  },
+  "misses": [
+   {
+    "reference": "affirmed",
+    "engine": "approved",
+    "severity": 3,
+    "what": "wrong legal term (affirmed vs approved)"
+   },
+   {
+    "reference": "35 reads",
+    "engine": "35 leads",
+    "severity": 2,
+    "what": "wrong word (reads vs leads)"
+   },
+   {
+    "reference": "after the entry -- after the sentence",
+    "engine": "after the entry",
+    "severity": 2,
+    "what": "omitted clarification/correction"
+   },
+   {
+    "reference": "And the sentence - JUSTICE SCALIA: When does -- when does it become final? When does the -- even at the",
+    "engine": "And the sentence — When does it become final? When does the — even at the trial",
+    "severity": 1,
+    "what": "added word 'trial' at the end"
+   }
+  ]
+ },
+ "Y": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 2,
+    "follow_up": "changes meaning",
+    "reason": "The engine replaces the word 'reads' with 'leads', which changes the verb describing how a statute or section is interpreted."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 2,
+    "follow_up": "changes meaning",
+    "reason": "The engine misheard the word 'reads' as 'leads'."
+   },
+   "whole": {
+    "meaning": "changed",
+    "severity": 2,
+    "follow_up": "changes meaning",
+    "reason": "The engine misheard the word 'reads' as 'leads'."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The error replaces 'reads' with 'leads', which changes the meaning from how a statute is interpreted to how it directs, potentially altering the legal interpretation of the text being discussed."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The evidence correctly identifies that the engine replaced 'reads,' with 'leads,'."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "Justice Scalia is discussing the interpretation of a specific rule or regulation (Rule 35). In legal contexts, one 'reads' a rule to determine its meaning, whereas 'leads' makes no sense in this context."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "In the context of interpreting a legal rule or statute (referred to as '35'), the standard phrase is 'the way [the rule] reads', meaning how it is written or interpreted. 'Leads' does not make sense in this context."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Qwen3": 1,
+    "Parakeet": 1,
+    "Whisper": 3
+   },
+   "reason": "Engine 1 and Engine 2 are tied for first place as they correctly identify the word 'reads', whereas Engine 3 incorrectly uses 'leads'."
+  },
+  "misses": [
+   {
+    "reference": "Supreme Court has affirmed",
+    "engine": "Supreme Court has approved",
+    "severity": 2,
+    "what": "the court has approved instead of affirmed"
+   },
+   {
+    "reference": "the way 35 reads",
+    "engine": "the way 35 leads",
+    "severity": 2,
+    "what": "the way 35 reads instead of leads"
+   },
+   {
+    "reference": "after the entry -- after the sentence",
+    "engine": "after the entry",
+    "severity": 3,
+    "what": "after the entry after the sentence instead of after the entry -- after the sentence"
+   }
+  ]
+ }
+}

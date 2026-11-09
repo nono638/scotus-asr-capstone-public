@@ -1,0 +1,1 @@
+{"case": "r276", "own": {"reason": "The engine writes 'she just learned eighty-nine' for 'she just turned eighty-nine'. That makes no sense, but 'She's eighty-nine' just before it makes the meaning clear.", "meaning": "garbled", "severity": 1, "follow_up": "garble", "reference_doubt": "no"}}

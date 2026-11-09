@@ -1,0 +1,1 @@
+{"case": "r028", "own": {"reason": "The engine writes \"It doesn't always proceed\" for \"It doesn't always precede\", so the meaning moves from coming first to going ahead.", "meaning": "changed", "severity": 2, "follow_up": "changes meaning", "reference_doubt": "no"}}

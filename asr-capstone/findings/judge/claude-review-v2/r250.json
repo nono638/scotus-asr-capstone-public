@@ -1,0 +1,1 @@
+{"case": "r250", "own": {"reason": "The engine writes \"another\" for \"in other words\", which makes the sentence nonsense. Only a linking phrase is lost, and the point about consumers versus manufacturers survives.", "meaning": "garbled", "severity": 1, "follow_up": "garble", "reference_doubt": "no"}}

@@ -1,0 +1,1 @@
+{"case": "r318", "own": {"reason": "The engine wrote \"wasn't\" for \"was one of\", so \"it wasn't those funny things\" denies the very situation he goes on to describe.", "meaning": "opposite", "severity": 3, "follow_up": "negation added", "reference_doubt": "no", "misspoke": "no"}}

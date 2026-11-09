@@ -1,0 +1,85 @@
+llm,model,step,rule,wer,cases
+gemma4:31b,Canary,0,lowercase_nopunct,7.423,61
+gemma4:31b,Canary,0,standard,7.191,61
+gemma4:31b,Canary,0,verbatim,16.473,61
+gemma4:31b,Canary,1,lowercase_nopunct,7.338,15
+gemma4:31b,Canary,1,standard,7.144,15
+gemma4:31b,Canary,1,verbatim,15.358,15
+gemma4:31b,Canary,2,lowercase_nopunct,7.234,15
+gemma4:31b,Canary,2,standard,7.021,15
+gemma4:31b,Canary,2,verbatim,15.282,15
+gemma4:31b,Canary,3,lowercase_nopunct,7.278,15
+gemma4:31b,Canary,3,standard,7.033,15
+gemma4:31b,Canary,3,verbatim,15.258,15
+gemma4:31b,Granite,0,lowercase_nopunct,8.487,61
+gemma4:31b,Granite,0,standard,8.377,61
+gemma4:31b,Granite,0,verbatim,17.432,61
+gemma4:31b,Granite,1,lowercase_nopunct,8.513,15
+gemma4:31b,Granite,1,standard,8.476,15
+gemma4:31b,Granite,1,verbatim,16.84,15
+gemma4:31b,Granite,2,lowercase_nopunct,8.413,15
+gemma4:31b,Granite,2,standard,8.366,15
+gemma4:31b,Granite,2,verbatim,16.728,15
+gemma4:31b,Granite,3,lowercase_nopunct,8.432,15
+gemma4:31b,Granite,3,standard,8.378,15
+gemma4:31b,Granite,3,verbatim,16.615,15
+gemma4:31b,Granite Plus,0,lowercase_nopunct,8.207,61
+gemma4:31b,Granite Plus,0,standard,7.026,61
+gemma4:31b,Granite Plus,0,verbatim,29.515,61
+gemma4:31b,Granite Plus,1,lowercase_nopunct,8.001,15
+gemma4:31b,Granite Plus,1,standard,6.804,15
+gemma4:31b,Granite Plus,1,verbatim,17.429,15
+gemma4:31b,Granite Plus,2,lowercase_nopunct,7.849,15
+gemma4:31b,Granite Plus,2,standard,6.946,15
+gemma4:31b,Granite Plus,2,verbatim,17.459,15
+gemma4:31b,Granite Plus,3,lowercase_nopunct,7.086,15
+gemma4:31b,Granite Plus,3,standard,6.685,15
+gemma4:31b,Granite Plus,3,verbatim,16.463,15
+gemma4:31b,Parakeet,0,lowercase_nopunct,9.806,61
+gemma4:31b,Parakeet,0,standard,7.386,61
+gemma4:31b,Parakeet,0,verbatim,18.451,61
+gemma4:31b,Parakeet,1,lowercase_nopunct,9.822,15
+gemma4:31b,Parakeet,1,standard,7.461,15
+gemma4:31b,Parakeet,1,verbatim,17.5,15
+gemma4:31b,Parakeet,2,lowercase_nopunct,9.919,15
+gemma4:31b,Parakeet,2,standard,7.714,15
+gemma4:31b,Parakeet,2,verbatim,17.777,15
+gemma4:31b,Parakeet,3,lowercase_nopunct,9.16,15
+gemma4:31b,Parakeet,3,standard,7.702,15
+gemma4:31b,Parakeet,3,verbatim,16.908,15
+gemma4:31b,Qwen3,0,lowercase_nopunct,5.251,61
+gemma4:31b,Qwen3,0,standard,4.898,61
+gemma4:31b,Qwen3,0,verbatim,15.883,61
+gemma4:31b,Qwen3,1,lowercase_nopunct,4.751,61
+gemma4:31b,Qwen3,1,standard,4.532,61
+gemma4:31b,Qwen3,1,verbatim,13.454,61
+gemma4:31b,Qwen3,2,lowercase_nopunct,5.856,18
+gemma4:31b,Qwen3,2,standard,5.634,18
+gemma4:31b,Qwen3,2,verbatim,15.084,18
+gemma4:31b,Qwen3,3,lowercase_nopunct,5.34,18
+gemma4:31b,Qwen3,3,standard,5.022,18
+gemma4:31b,Qwen3,3,verbatim,13.893,18
+gemma4:31b,Voxtral,0,lowercase_nopunct,6.685,61
+gemma4:31b,Voxtral,0,standard,6.624,61
+gemma4:31b,Voxtral,0,verbatim,15.892,61
+gemma4:31b,Voxtral,1,lowercase_nopunct,6.55,15
+gemma4:31b,Voxtral,1,standard,6.586,15
+gemma4:31b,Voxtral,1,verbatim,14.397,15
+gemma4:31b,Voxtral,2,lowercase_nopunct,6.372,15
+gemma4:31b,Voxtral,2,standard,6.396,15
+gemma4:31b,Voxtral,2,verbatim,14.24,15
+gemma4:31b,Voxtral,3,lowercase_nopunct,6.423,15
+gemma4:31b,Voxtral,3,standard,6.371,15
+gemma4:31b,Voxtral,3,verbatim,14.092,15
+gemma4:31b,Whisper,0,lowercase_nopunct,6.239,61
+gemma4:31b,Whisper,0,standard,6.156,61
+gemma4:31b,Whisper,0,verbatim,14.747,61
+gemma4:31b,Whisper,1,lowercase_nopunct,6.133,15
+gemma4:31b,Whisper,1,standard,6.097,15
+gemma4:31b,Whisper,1,verbatim,13.917,15
+gemma4:31b,Whisper,2,lowercase_nopunct,5.831,15
+gemma4:31b,Whisper,2,standard,5.76,15
+gemma4:31b,Whisper,2,verbatim,13.438,15
+gemma4:31b,Whisper,3,lowercase_nopunct,5.9,15
+gemma4:31b,Whisper,3,standard,5.818,15
+gemma4:31b,Whisper,3,verbatim,13.474,15

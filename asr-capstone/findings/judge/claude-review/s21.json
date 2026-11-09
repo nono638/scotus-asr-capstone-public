@@ -1,0 +1,154 @@
+{
+ "case": "s21",
+ "own": {
+  "meaning": "reworded",
+  "severity": 0,
+  "noticeable": "no",
+  "follow_up": "same thing",
+  "stakes": "no",
+  "reason": "'next one online' and 'next one on the line' both mean the next caller waiting on the phone line, so nothing is lost.",
+  "rule_right": "no",
+  "rule_reason": "'on the line' is the same idea as 'online' split into words, not a different content word.",
+  "more_plausible": "engine",
+  "plausible_how_clear": "Only a slight lean: 'next one on the line' is the usual operator phrase on a conference call, but 'online' fits too; the text cannot settle it.",
+  "my_misses": [
+   {
+    "reference": "on a performer basis",
+    "engine": "on a pro forma basis",
+    "severity": 0,
+    "note": "The reference is almost surely the one that is wrong: 'pro forma basis' is the standard finance phrase for growth counted as if the acquired business had been owned all along. 'Performer basis' is a transcriber's mishearing. Against the reference this is a change, but the engine is right."
+   },
+   {
+    "reference": "On, on the variant side",
+    "engine": "on on the variance side",
+    "severity": 2,
+    "note": "'Variant' (and later 'varying') stands for the acquired business Varian; 'variance side' reads as an accounting term and hides that a business unit is meant. Both texts are garbled spellings of the name."
+   },
+   {
+    "reference": "according to the challenging environments",
+    "engine": "according to the changing environments",
+    "severity": 1,
+    "note": "Challenging vs changing: a small shift in how the conditions are described."
+   },
+   {
+    "reference": "for, for, for varying, for the full fiscal year",
+    "engine": "for for for variant for the full fiscal year",
+    "severity": 0,
+    "note": "Both garble the name Varian."
+   },
+   {
+    "reference": "next one online should be from Uh, yeah, you should be live",
+    "engine": "next one on the line should be Julien Dunois, Reksane. Julien should be live",
+    "severity": 0,
+    "note": "The engine has the analyst's name and firm, which the reference left out; added content, probably correct."
+   },
+   {
+    "reference": "Good morning Dan. Good morning Johan",
+    "engine": "good morning, Ben. Good morning, Joran",
+    "severity": 0,
+    "note": "Names written differently; does not count."
+   }
+  ]
+ },
+ "review": {
+  "labelled/line": {
+   "verdict": "agree",
+   "why": "Reworded, severity 0 is right; calling 'online' a 'contraction' that the engine 'expanded' is a loose description, but harmless."
+  },
+  "labelled/minute": {
+   "verdict": "agree",
+   "why": "'same' rather than 'reworded' is a fine distinction with no effect on severity 0; the reading is right."
+  },
+  "labelled/whole": {
+   "verdict": "agree",
+   "why": "Same verdict as the minute; nothing in the minute text contradicts it (I did not have the full transcript)."
+  },
+  "rule/minute": {
+   "verdict": "disagree",
+   "why": "Gemma says the rule is right while its own labelled answers say the meaning is the same; 'on the line' for 'online' is not a different content word, so the rule's label is wrong."
+  },
+  "blind/order1": {
+   "verdict": "partly",
+   "why": "Picked 'on the line' (the engine) with a sensible reason, which matches my slight lean, but 'sure 3' is too confident when both fit."
+  },
+  "blind/order2": {
+   "verdict": "disagree",
+   "why": "Picked slot B again, now the other word, with a reason that contradicts order 1 ('on the line is redundant'); picking B both times at 'sure 3' looks like position bias, not reading."
+  },
+  "rank/minute": {
+   "verdict": "partly",
+   "why": "Engines 1 and 2 ('on the line' and 'online') keep the same meaning and should tie at 1, with Engine 3 ('next one on should be') last; Gemma's reason says Engine 1 'changes the meaning', which contradicts its own labelled answers."
+  },
+  "misses": [
+   {
+    "reference": "challenging",
+    "engine": "changing",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "too high",
+    "note": "A small shift in wording; 1, not 2."
+   },
+   {
+    "reference": "on a performer basis",
+    "engine": "on a pro forma basis",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "The difference is real but the reference is the one that is wrong: 'pro forma basis' is the standard finance phrase and 'performer basis' is a mishearing. Gemma's 'incorrect financial terminology' at severity 3 blames the engine for the transcriber's error."
+   },
+   {
+    "reference": "on the variant side",
+    "engine": "on the variance side",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "yes",
+    "note": "Both garble the business name Varian; 'variance' reads as an accounting term, so 2 is fair."
+   },
+   {
+    "reference": "for varying",
+    "engine": "for variant",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "Both are garbled forms of Varian; no reader gains or loses anything."
+   },
+   {
+    "reference": "Dan",
+    "engine": "Ben",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "A name written differently; the instructions said to leave these out."
+   },
+   {
+    "reference": "Johan",
+    "engine": "Joran",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "yes",
+    "note": "Name spelling; should have been left out, but severity 0 is harmless."
+   },
+   {
+    "reference": "pre prepared remark",
+    "engine": "prepared remarks",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "yes",
+    "note": "Restart cleaned up; severity 0 is fine."
+   }
+  ],
+  "overlooked": [
+   {
+    "reference": "next one online should be from Uh, yeah, you",
+    "engine": "next one on the line should be Julien Dunois, Reksane. Julien",
+    "severity": 0,
+    "note": "Borderline: the engine names the next analyst and firm where the reference has nothing; added content, but probably correct, so it is not a real error."
+   }
+  ]
+ },
+ "worth_a_listen": {
+  "yes": false,
+  "why": "The flagged spot is harmless. The 'performer basis' line is a reference error that is clear enough from the text ('pro forma' is the finance term), so a listen is optional."
+ },
+ "summary": "Gemma judged the flagged spot correctly as harmless, but then backed the rule anyway, ranked 'on the line' below 'online', and flipped its blind pick by position. In the misses it treated the reference's 'performer basis' as right and scored the engine's correct 'pro forma' as a severity-3 error."
+}

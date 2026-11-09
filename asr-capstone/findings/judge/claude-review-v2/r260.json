@@ -1,0 +1,1 @@
+{"case": "r260", "own": {"reason": "The engine writes \"pop moments\" for \"top moments\", which does not make sense. A reader can still tell the question is about favorite moments from college.", "meaning": "garbled", "severity": 1, "follow_up": "garble", "reference_doubt": "no"}}

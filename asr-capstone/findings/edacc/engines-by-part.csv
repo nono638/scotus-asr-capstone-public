@@ -1,0 +1,12 @@
+part,engine,recordings,wer_standard,wer_lowercase_nopunct,wer_verbatim,swapped_pct,dropped_pct,added_pct,audio_hours,hours_taken,speed_x_realtime,standard_reference_tokens,run
+dev,Qwen3-ASR-1.7B-hf,36,10.75,13.86,96.2,3.87,5.02,1.85,17.36,1.89,9.2,148459,run-edacc-qwen3
+dev,parakeet-tdt-0.6b-v3,36,12.27,14.45,96.43,4.51,6.08,1.68,17.36,0.35,49.7,148459,run-edacc-parakeet-reread
+dev,whisper-large-v3,36,13.39,16.6,98.65,3.94,7.87,1.57,17.36,0.59,29.4,148459,run-edacc-whisper
+dev,canary-1b-v2,36,14.98,19.19,96.36,4.77,8.76,1.45,17.36,0.63,27.6,148459,run-edacc-canary
+dev,granite-speech-4.1-2b,36,17.27,21.4,96.47,5.18,10.58,1.51,17.36,3.11,5.6,148459,run-edacc-granite
+test,Qwen3-ASR-1.7B-hf,40,11.82,14.96,96.22,4.42,5.25,2.15,18.24,2.64,6.9,157504,run-edacc-qwen3
+test,parakeet-tdt-0.6b-v3,40,13.54,15.51,96.5,5.16,6.51,1.88,18.24,0.55,32.9,157504,run-edacc-parakeet-reread
+test,whisper-large-v3,40,14.72,17.7,98.68,4.41,8.5,1.81,18.24,0.9,20.4,157504,run-edacc-whisper
+test,canary-1b-v2,40,16.65,20.59,96.46,5.46,9.49,1.71,18.24,0.9,20.4,157504,run-edacc-canary
+test,company,40,18.01,20.92,21.27,7.3,8.88,1.83,18.24,,,157504,D:\asr-corpora\edacc\unpacked\edacc_v1.0\test\company.ctm
+test,granite-speech-4.1-2b,40,18.61,22.44,96.44,5.37,11.55,1.7,18.24,3.74,4.9,157504,run-edacc-granite

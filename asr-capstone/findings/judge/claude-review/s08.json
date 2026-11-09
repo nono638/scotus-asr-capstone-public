@@ -1,0 +1,46 @@
+{
+ "case": "s08",
+ "own": {
+  "meaning": "same",
+  "severity": 0,
+  "noticeable": "no",
+  "follow_up": "continues the talk",
+  "stakes": "no",
+  "reason": "The engine turned \"or something\" into \"or something like that\"; the extra two words add no meaning.",
+  "rule_right": "yes",
+  "rule_reason": "The reference has nothing at the spot and the engine has \"like that.\"; the strong silence figure (0% speech, 36 dB below) can't be checked from text but nothing contradicts it.",
+  "more_plausible": "cant tell",
+  "plausible_how_clear": "Not clear from text: \"or something like that\" and \"or something\" are both natural; only the silence measure leans toward the reference.",
+  "my_misses": [
+   {"reference": "", "engine": "like that.", "severity": 0},
+   {"reference": "A POSH ACCENT FROM LONDON OR A COCKNEY ACCENT", "engine": "a Porsche accent from London or a cogniz accent", "severity": 2},
+   {"reference": "Speaker B: AH NO I THOUGHT I WAS", "engine": "it was", "severity": 1},
+   {"reference": "", "engine": "I remember it.", "severity": 0}
+  ]
+ },
+ "review": {
+  "labelled/line": {"verdict": "disagree", "why": "\"Or something like that\" means the same as \"or something\"; calling it changed, severity 2, noticeable and possibly misleading overstates a harmless filler."},
+  "labelled/minute": {"verdict": "partly", "why": "Severity 1 and no stakes are about right, but the meaning is the same, not changed, and nothing in the engine's text would look wrong to a reader, so \"noticeable: yes\" is wrong."},
+  "labelled/whole": {"verdict": "partly", "why": "Same issues as the minute answer (\"changed\", \"noticeable: yes\"); \"cant tell\" for the source is weaker than \"continues the talk\"; judged against the minute text only."},
+  "rule/minute": {"verdict": "agree", "why": "Copied both sides correctly and confirmed the extra words."},
+  "blind/order1": {"verdict": "disagree", "why": "Picked B (\"like that\") with sure 3, calling it a natural bridge, but in this version the words open Speaker B's turn (\"Speaker B: like that maybe it was\"), which reads worse, not better; the text can't support full confidence."},
+  "blind/order2": {"verdict": "disagree", "why": "Picked the \"like that\" version again with sure 3; consistent, so not a position pick, but still confidently wrong on a pair the text can't decide."},
+  "rank/minute": {"verdict": "disagree", "why": "All four engines other than Engine 3 are empty at the spot, yet Gemma ranks Engine 5 best though it drops \"Maybe it was\" entirely, and puts Engines 1 and 2, the closest to the reference, at 3 for \"extra punctuation\", which the prompt said to ignore."},
+  "misses": [
+   {"reference": "I LI", "engine": "I like it", "is_real": "partly", "matters": "no", "severity_fair": "too high", "note": "A stammer (\"I LI I LIKED THIS FILM\" vs \"I like I like it. This film\"); same meaning, 0."},
+   {"reference": "THE FILM WAS", "engine": "it was", "is_real": "no", "matters": "no", "severity_fair": "too high", "note": "The engine keeps \"the film was\" and then adds \"it was\"; no subject was replaced."},
+   {"reference": "AH NO I THOUGHT I WAS", "engine": "", "is_real": "yes", "matters": "yes", "severity_fair": "too high", "note": "Speaker B's reply is really mostly lost, but it is a small aside: 1, not 3."},
+   {"reference": "OR SOMETHING", "engine": "or something like that", "is_real": "yes", "matters": "no", "severity_fair": "yes", "note": "The flagged spot; 0 is right here, which contradicts its own labelled answers (1 to 2)."},
+   {"reference": "MAYBE IT WAS", "engine": "", "is_real": "no", "matters": "no", "severity_fair": "too high", "note": "Invented: the engine has \"Maybe it was well, they are pretty good\"."},
+   {"reference": "...A POSH ACCENT FROM LONDON OR A COCKNEY ACCENT OR A", "engine": "...a Porsche accent from London or a cogniz accent or uh", "is_real": "yes", "matters": "yes", "severity_fair": "yes", "note": "Real wrong words a reader would trip on; 2 is fair."},
+   {"reference": "YES YES", "engine": "", "is_real": "yes", "matters": "no", "severity_fair": "too high", "note": "A dropped backchannel \"yes yes\"; 0, not 3."},
+   {"reference": "OR AN IRISH ACCENT THEY ARE PRETTY GOOD AT MAKING THE TRANSITIONS", "engine": "an Irish accent. They are pretty good in making the transition", "is_real": "yes", "matters": "no", "severity_fair": "too high", "note": "Preposition and plural only; 0."},
+   {"reference": "YES", "engine": "", "is_real": "no", "matters": "no", "severity_fair": "too high", "note": "Invented: the engine has \"making the transition, yes, all the time\"."},
+   {"reference": "ALL THE TIMES", "engine": "all the time", "is_real": "yes", "matters": "no", "severity_fair": "yes", "note": "Trivial; 0 is right."},
+   {"reference": "THEY CAN THEY CAN DO FILMS THERE", "engine": "that they can do films there", "is_real": "yes", "matters": "no", "severity_fair": "too high", "note": "Extra \"that\"; 0."}
+  ],
+  "overlooked": []
+ },
+ "worth_a_listen": {"yes": false, "why": "Whatever the audio holds, \"like that\" changes nothing; not worth the time."},
+ "summary": "Gemma blew up a harmless \"like that\" into a changed meaning, picked it confidently as the true version in both blind orders, ranked the engines nearly backwards, and padded its misses list with two omissions that aren't there and several backchannels rated 3."
+}

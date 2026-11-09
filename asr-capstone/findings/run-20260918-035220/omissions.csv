@@ -1,0 +1,3 @@
+docket,engine,rank,word_count,gap_seconds,expected_seconds,audio_start,audio_end,audio_start_clock,timing_disagrees,at_start,at_end,ref_start_token,ref_end_token,text
+16-8255,whisper-large-v3,1,26,0.26,8.9,1138.84,1139.1,0:18:58,True,False,False,2971,2997,i i understand that that's that's the right at issue here and your i i i i understand your and that would i understand yeah your
+17-965,whisper-large-v3,1,97,27.6,33.3,3524.6,3552.2,0:58:44,False,False,False,10377,10474,so two things number one this waiver process has excluded and you have this in the pars equality brief at page 14 a 10 year old with cerebral palsy who wants to come to the united states to save her life and she can't move or talk the 10 year old was denied a waiver justice breyer he says there's 43

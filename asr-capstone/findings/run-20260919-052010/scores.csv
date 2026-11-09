@@ -1,0 +1,4 @@
+docket,engine,model,normalizer,wer,wer_percent,hits,substitutions,deletions,insertions,reference_tokens,hypothesis_tokens,deletion_rate
+17-530,parakeet-parakeet-tdt-0.6b-v3,parakeet-tdt-0.6b-v3,standard,0.047412390148638385,4.741,8838,127,252,58,9217,9023,0.027341
+17-530,parakeet-parakeet-tdt-0.6b-v3,parakeet-tdt-0.6b-v3,lowercase_nopunct,0.07941834451901567,7.942,8458,268,214,228,8940,8954,0.023937
+17-530,parakeet-parakeet-tdt-0.6b-v3,parakeet-tdt-0.6b-v3,verbatim,0.15090609555189458,15.091,7940,757,408,209,9105,8906,0.044811

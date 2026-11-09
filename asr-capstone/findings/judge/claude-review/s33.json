@@ -1,0 +1,37 @@
+{
+ "case": "s33",
+ "own": {
+  "meaning": "changed",
+  "severity": 1,
+  "noticeable": "no",
+  "follow_up": "continues the talk",
+  "stakes": "no",
+  "reason": "The engine put \"Thank you.\" after \"That's our point.\" where the reference has nothing; the reference does have Justice Kagan saying \"Thank you\" a few words earlier, which the engine left out in its place, so the engine has most likely moved her real \"Thank you\" rather than made it up, and without speaker names it now reads as the lawyer closing.",
+  "rule_right": "partly",
+  "rule_reason": "Locally the label fits (nothing in the reference at the spot, words in the engine), but the same two words were said a moment earlier and the engine dropped them there, so this looks like a misplaced real phrase, not words invented over silence; the silence figure cannot be checked from text.",
+  "more_plausible": "reference",
+  "plausible_how_clear": "Moderately clear: the reference already has a \"Thank you\" just before, and the Chief Justice usually calls the next justice by name alone; but a second \"Thank you\" from him is not impossible.",
+  "my_misses": [
+   {"reference": "That -- [KAGAN] Thank you. [JOSHI] -- that's our point.", "engine": "That's our point. Thank you.", "severity": 1}
+  ]
+ },
+ "review": {
+  "labelled/line": {"verdict": "partly", "why": "\"changed\", severity 1 and stakes \"no\" are fair, and \"stock phrase\" is reasonable from the line alone, but \"That's our point. Thank you. Justice Gorsuch?\" reads naturally, so \"noticeable: yes\" is wrong."},
+  "labelled/minute": {"verdict": "partly", "why": "The reason is a good reading (Justice Kagan's real \"Thank you\" moved to after \"that's our point\"), but that contradicts its own follow_up \"stock phrase\", severity 2 is a notch high for moved thanks, and a reader without the reference would not notice."},
+  "labelled/whole": {"verdict": "disagree", "why": "The reason misdescribes the record: it says Mr. Joshi finished and Justice Gorsuch \"began immediately without a 'Thank you' being spoken\", but the reference has Justice Kagan saying \"Thank you.\" and Chief Justice Roberts calling on Gorsuch in between (this is judged against the minute text, which is part of the whole transcript Gemma saw)."},
+  "rule/minute": {"verdict": "partly", "why": "Gemma is right that the words \"Thank you\" were really spoken in this minute (by Kagan), which makes a made-up phrase unlikely; but they are not at the flagged spot, so \"no\" overstates it: the text cannot show whether the audio there is silent, and \"partly\" fits better; its reference_has also copies far more than the spot, with a typo (\"ROBERS\")."},
+  "blind/order1": {"verdict": "agree", "why": "Picked A, the reference, with a sensible reason (the Chief Justice moves on by name; a \"thank you\" was just said)."},
+  "blind/order2": {"verdict": "disagree", "why": "With the versions swapped it picked A again, now the engine's \"thank you justice gorsuch\", and called the reference \"an incomplete fragment\", reversing its own order-1 reasoning: it simply took whichever version came first."},
+  "rank/minute": {"verdict": "disagree", "why": "Backwards: at the spot the reference has nothing, so Parakeet and Qwen3 match it, and Qwen3 (\"Thank you. That's our point.\") has Kagan's thanks in the right place; Gemma ranked Whisper, the engine with the thanks in the wrong place, first and said Qwen3 \"misplaces it\"."}
+  ,"misses": [
+   {"reference": "Dan's City", "engine": "Dan City", "is_real": "yes", "matters": "no", "severity_fair": "too high", "note": "A case name written differently; the prompt said to leave names out."},
+   {"reference": "every anomaly, Respondents' reading", "engine": "every anomaly. Respondents' reading", "is_real": "partly", "matters": "no", "severity_fair": "too high", "note": "The words are identical; only a comma became a full stop. Punctuation was to be left out, and severity 2 is unjustified."},
+   {"reference": "That -- / KAGAN: Thank you. / -- that's our point.", "engine": "That's our point. Thank you.", "is_real": "yes", "matters": "no", "severity_fair": "too high", "note": "The real difference in this minute: Kagan's thanks moved after the lawyer's sentence. Worth listing, but it changes who seems to say \"thank you\", not what is argued; 1, not 3."},
+   {"reference": "CHIEF JUSTICE ROBERTS: Justice Gorsuch?", "engine": "Justice Gorsuch?", "is_real": "partly", "matters": "no", "severity_fair": "too high", "note": "Only the speaker label differs, and the prompt says the engine writes no speaker names; should not be listed."},
+   {"reference": "I -- I -- I wonder why", "engine": "I wonder why that", "is_real": "yes", "matters": "no", "severity_fair": "too high", "note": "Repeated \"I\" removed, and \"that\" is the edge of the engine's minute; nothing changes. 0."}
+  ],
+  "overlooked": []
+ },
+ "worth_a_listen": {"yes": true, "why": "To settle whether Whisper's \"Thank you\" is Kagan's real thanks with a wrong time stamp (Qwen3 has it in the right place) or a second, invented \"Thank you\" over silence while Kagan's was dropped; that decides whether this counts as an invented-words case."},
+ "summary": "Gemma spotted the key fact, that Justice Kagan really says \"Thank you\" in this minute, but then overstated it into \"the rule is wrong\", wrote in the whole view that no \"Thank you\" was spoken at all, and ranked the engines backwards. In the blind pair it picked the first version both times, and its misses list padded a moved \"thank you\" with punctuation, a name and a speaker label."
+}

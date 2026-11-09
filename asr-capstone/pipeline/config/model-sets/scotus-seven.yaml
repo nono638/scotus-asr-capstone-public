@@ -1,0 +1,29 @@
+# The seven models of the Supreme Court study, OT2017, from the runs the
+# published figures come from (findings/README.md). The default for
+# tools/crowd.py and the listening bench, so their tables can always be rebuilt
+# from these exact files.
+#
+# A model set is just names and runs. Copy this file to compare any other
+# combination - three models, two runs of the same model with different
+# settings, another corpus's runs. See scotus_asr/model_sets.py.
+
+description: The seven models of the Supreme Court study (OT2017, 61 arguments)
+runs_dir: "{scotus_corpus}/runs"
+# Chosen before seeing any result: Whisper is the one model with no chunk
+# seams, so its word order is the least disturbed.
+pivot: Whisper
+out: findings/crowd
+#
+# The -reread runs are the old ones with their damaged chunks decoded again:
+# Parakeet's where its decoder stalled after a full stop (findings/parakeet-stall/),
+# the four others' where the aligner stripped a chunk's punctuation or the engine
+# gave up on one (tools/redecode_chunks.py, 6-7 November 2026). Whisper and
+# Granite Plus have no aligner and lost no chunks, so theirs are unchanged.
+models:
+  Whisper: run-20260918-035220
+  Qwen3: run-20260921-051927-reread
+  Voxtral: run-20260922-002324-reread
+  Canary: run-20260921-033436-reread
+  Parakeet: run-20260924-064733-reread
+  Granite: run-20260923-011250-reread
+  Granite Plus: run-20260924-164308

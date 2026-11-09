@@ -1,0 +1,1 @@
+{"case": "r264", "own": {"reason": "The reference has \"ain't had none\" (in case we didn't have any); the engine writes \"had none\". Both mean they had no makeup on them.", "meaning": "reworded", "severity": 0, "follow_up": "meaning kept", "reference_doubt": "no"}}

@@ -1,0 +1,15 @@
+{"case": "s33",
+ "parts": {
+  "meaning/line": {"X": "right", "Y": "right", "better": "tie", "why": "Both: changed, severity 1, stock phrase. That fits a stray 'Thank you.' before 'Justice Gorsuch?'."},
+  "meaning/minute": {"X": "right", "Y": "right", "better": "tie", "why": "Both see that this is Justice Kagan's 'Thank you' moved after 'That's our point', which is what the minute shows. Severity 2 is a little high for both."},
+  "meaning/whole": {"X": "right", "Y": "partly", "better": "X", "why": "X again explains the moved thank-you. Y says the record shows Gorsuch began 'without a Thank you being spoken'. That misreads the reference, which has Kagan's 'Thank you' a line earlier."},
+  "noticeable": {"X": "right", "Y": "wrong", "better": "X", "why": "'That's our point. Thank you. Justice Gorsuch?' reads naturally; nobody would notice. X says no, Y says yes."},
+  "stakes": {"X": "right", "Y": "right", "better": "tie", "why": "X says maybe (the speaker is misattributed) and Y says no (the legal substance is untouched); both are defensible for a moved thank-you."},
+  "rule": {"X": "right", "Y": "partly", "better": "X", "why": "Nothing is said at the spot in the reference, so the silence label holds. X says yes. Y says no because the words come from Kagan's earlier thank-you. That point is fair, but it does not make the label wrong."},
+  "blind": {"X": "wrong", "Y": "partly", "better": "Y", "why": "The reference has no second thank-you. X picks the engine's version in both orders. Y's pick flips with the order (reference first, then engine), so it is at best partly right."},
+  "rank": {"X": "right", "Y": "wrong", "better": "X", "why": "Parakeet and Qwen3 have nothing at the spot; Whisper adds 'Thank you'. X: Parakeet 1, Qwen3 1, Whisper 2. Y ranks Whisper first for 'including Kagan's interjection' and Parakeet last, which is backwards."},
+  "misses": {"X": {"real_and_matter": 0, "trivial": 1, "not_real": 0, "important_missed": 1},
+             "Y": {"real_and_matter": 1, "trivial": 4, "not_real": 0, "important_missed": 0},
+             "better": "Y", "why": "The minute's only real difference is the moved thank-you. X lists only 'Dan City', a name. Y finds the moved thank-you but pads the list with punctuation, a speaker label and a stutter."}
+ },
+ "overall": {"better": "X", "why": "X gets the whole-transcript reading, noticeable, rule and rank right; Y misreads the record and ranks the engines backwards, though Y does better on blind and misses."}}

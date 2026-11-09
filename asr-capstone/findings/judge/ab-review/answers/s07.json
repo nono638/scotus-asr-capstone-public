@@ -1,0 +1,145 @@
+{
+ "case": "s07",
+ "X": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "unrelated",
+    "reason": "The engine has inserted a completely new clause containing specific biographical information that does not exist in the reference."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "unrelated",
+    "reason": "The engine has inserted a completely new, detailed clause about a person moving to California in 1989, whereas the reference contains no speech at that point."
+   },
+   "whole": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "unrelated",
+    "reason": "The engine has inserted a completely new, unrelated sentence about someone moving to California, whereas the reference transcript contains no words at that position."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The engine has hallucinated a specific, detailed sentence about a person moving to California that does not exist in the reference transcript, which would introduce false historical data into a researcher's analysis."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The engine inserted a completely new, long sentence that does not exist in the reference transcript, which matches the evidence of silence."
+  },
+  "blind": {
+   "order1 (reference shown as B)": {
+    "picked": "engine",
+    "sure": 2,
+    "reason": "Version A contains a specific clause ('here since 1989 as he was going over to california') that provides context for the speaker's subsequent reaction ('oh my yeah'), whereas Version B leaves a sudden gap in the sentence structure. In a spontaneous interview, the speaker is likely attempting to recall a specific detail or timeframe before trailing off."
+   },
+   "order2 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "Version B introduces a highly specific, detailed clause ('here since 1989 as he was going over to california') that is completely disconnected from the surrounding context of the speaker's fragmented, stream-of-consciousness thought process. Version A's silence is much more consistent with the speaker's hesitation and the way they are struggling to recall names."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Qwen3": 2,
+    "Whisper": 1,
+    "Parakeet": 2
+   },
+   "reason": "Engine 2 is the only engine that correctly identifies the absence of text in the marked area, whereas Engine 1 and Engine 3 both hallucinated extra content."
+  },
+  "misses": [
+   {
+    "reference": "Oh my. Yeah just Mm mm mm. And years ago before um, Mister Doctor uh Why I cannot think? A doctor that we had here.",
+    "engine": "here since 1989 as he was going over to California. Oh my Yeah, just Mm-hmm, mm-hmm mm. and years ago before um Mr Doctor um I can I think the doctors that we had here.",
+    "severity": 3,
+    "what": "the phrase about moving to California"
+   },
+   {
+    "reference": "Turner Prince",
+    "engine": "Turn the Prince. Town of Prince",
+    "severity": 2,
+    "what": "the name of the person"
+   },
+   {
+    "reference": "Why I cannot think?",
+    "engine": "I can I think",
+    "severity": 2,
+    "what": "the inability to think of the name"
+   }
+  ]
+ },
+ "Y": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 4,
+    "follow_up": "unrelated",
+    "reason": "The speech recognition engine hallucinated a long, specific sentence that does not exist in the reference transcript."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 4,
+    "follow_up": "unrelated",
+    "reason": "The speech recognition engine hallucinated a completely different sentence containing specific information instead of leaving the empty pause present in the reference."
+   },
+   "whole": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "unrelated",
+    "reason": "The speech recognition engine hallucinated a specific, unrelated sentence where the speaker was actually just pausing/stuttering."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The engine inserted a specific, detailed historical claim (a date and a move to California) that was never spoken, which would create false data for a researcher."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The engine hallucinated a long sentence during a period of silence where the reference contains no speech."
+  },
+  "blind": {
+   "order1 (reference shown as B)": {
+    "picked": "engine",
+    "sure": 2,
+    "reason": "Version A contains a specific, coherent phrase that fits the conversational flow of the speaker's stream of consciousness, whereas Version B has an empty gap that makes the sentence fragment nonsensical."
+   },
+   "order2 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "Version B contains a highly specific, grammatically disconnected clause that does not fit the natural, fragmented flow of the speaker's spontaneous speech in this context."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Qwen3": 2,
+    "Whisper": 1,
+    "Parakeet": 3
+   },
+   "reason": "Engine 2 is the most accurate as it preserves the original sentiment and structure, whereas Engine 1 adds incorrect information ('A lot of people') and Engine 3 introduces a completely hallucinated clause."
+  },
+  "misses": [
+   {
+    "reference": "Turner Prince?",
+    "engine": "Turn the Prince. Town of Prince.",
+    "severity": 3,
+    "what": "Name misrecognized as a phrase"
+   },
+   {
+    "reference": "Mister Doctor uh Why I cannot think? A doctor that we had here.",
+    "engine": "Mr Doctor um I can I think the doctors that we had here.",
+    "severity": 3,
+    "what": "Changed meaning from inability to remember to a statement of thought"
+   },
+   {
+    "reference": "",
+    "engine": "here since 1989 as he was going over to California.",
+    "severity": 4,
+    "what": "Added significant hallucinated information about dates and location"
+   }
+  ]
+ }
+}

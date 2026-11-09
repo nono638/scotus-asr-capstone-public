@@ -1,0 +1,15 @@
+{"case": "s19",
+ "parts": {
+  "meaning/line": {"X": "right", "Y": "right", "better": "tie", "why": "Both: changed, content lost. Ginsburg's question ('would that count also, because it is a mechanism set up by a government employer?') is replaced by a speaker label, leaving the answer with no question. 4 (X) and 3 (Y) are both defensible at line size."},
+  "meaning/minute": {"X": "right", "Y": "right", "better": "tie", "why": "Both give 4, which fits: the question being answered is gone."},
+  "meaning/whole": {"X": "right", "Y": "right", "better": "tie", "why": "Both give 4. X's reason (the previous speaker's name reused at the spot) matches the text, since the engine labelled the earlier turn 'JUSTICE SOTOMAYOR' too."},
+  "noticeable": {"X": "right", "Y": "wrong", "better": "X", "why": "'That is the case. JUSTICE SOTOMAYOR. employer? It would qualify...' is plainly broken. Y's 'no' is wrong."},
+  "stakes": {"X": "right", "Y": "right", "better": "tie", "why": "Both say yes: the legal question is erased."},
+  "rule": {"X": "right", "Y": "right", "better": "tie", "why": "Both confirm the skip. Strictly the engine wrote a label rather than nothing, but the 12 content words are gone, as the rule says."},
+  "blind": {"X": "right", "Y": "right", "better": "tie", "why": "Both pick the reference in both orders, sure 3, for the right reason."},
+  "rank": {"X": "partly", "Y": "partly", "better": "tie", "why": "Parakeet ('it is') and Qwen3 ('it's') carry the same meaning and should tie, with Whisper last. X ranks Parakeet second, claiming it omits 'a', which is false: it has 'a mechanism'. Y ranks Qwen3 second over the contraction, which the task says to ignore."},
+  "misses": {"X": {"real_and_matter": 1, "trivial": 6, "not_real": 0, "important_missed": 0},
+             "Y": {"real_and_matter": 0, "trivial": 4, "not_real": 1, "important_missed": 1},
+             "better": "X", "why": "X lists the lost question (the case), along with speaker-label and small wording items. Y lists only speaker labels and a missing 'Yes' that the engine actually has ('Yes, Your Honor.'). It leaves out the lost question itself."}
+ },
+ "overall": {"better": "X", "why": "X spots that the broken text is noticeable and includes the lost question in its misses. Y says it would go unnoticed and misses it entirely in the misses list."}}

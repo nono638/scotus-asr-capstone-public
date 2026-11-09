@@ -1,0 +1,15 @@
+{"case": "s10",
+ "parts": {
+  "meaning/line": {"X": "right", "Y": "wrong", "better": "X", "why": "The extra words are the caller's name and bank said again, a loop that adds nothing new; X calls it reworded, severity 1. Y gives severity 3 and says the engine 'hallucinated a first name', but 'Fernando' is in the reference's introduction too."},
+  "meaning/minute": {"X": "partly", "Y": "partly", "better": "X", "why": "Both call it changed. X's severity 2 is a notch high; Y's 3 is higher still, and Y says the engine missed 'the transition to the next speaker' though the engine has the 'Hi'."},
+  "meaning/whole": {"X": "partly", "Y": "partly", "better": "tie", "why": "Both give changed, 2, for a repeat that changes no fact. Y's reason leans on the Olivier/Alíviar spelling, which is away from the spot."},
+  "noticeable": {"X": "right", "Y": "right", "better": "tie", "why": "Both say yes; the name repeated three times is obvious."},
+  "stakes": {"X": "right", "Y": "wrong", "better": "X", "why": "A repeated name misleads no investor; X says no and explains why. Y says yes but its reason only describes the repetition."},
+  "rule": {"X": "right", "Y": "right", "better": "tie", "why": "Both confirm the extra words with nothing in the reference."},
+  "blind": {"X": "right", "Y": "right", "better": "tie", "why": "Both pick the reference in both orders, sure 3; X's first reason rambles but lands right."},
+  "rank": {"X": "right", "Y": "right", "better": "tie", "why": "Both tie Parakeet and Qwen3 first and put Whisper last."},
+  "misses": {"X": {"real_and_matter": 1, "trivial": 1, "not_real": 0, "important_missed": 0},
+             "Y": {"real_and_matter": 1, "trivial": 0, "not_real": 0, "important_missed": 0},
+             "better": "X", "why": "Both point at the added 'you would see in the water? water' where the reference has a gap. X scores it 3 and lists 'I'll bring' apart; Y wraps the whole question into one item scored 4 and says the topic 'completely changes', which overstates it, since it is still volume growth by beverage type."}
+ },
+ "overall": {"better": "X", "why": "X sizes the repeated name sensibly as a small, harmless slip; Y overstates it and invents a 'hallucinated first name'."}}

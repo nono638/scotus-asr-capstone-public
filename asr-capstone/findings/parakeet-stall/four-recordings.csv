@@ -1,0 +1,37 @@
+data_set,recording,version,wer_standard,dropped_pct,wrong_pct,added_pct,words,gaps_over_speech,blank_seconds,longest_gap_seconds
+Supreme Court,20-543,Whisper,6.6,4.19,1.72,0.69,15883,,,
+Supreme Court,20-543,Qwen3,4.82,2.17,1.73,0.92,16346,,,
+Supreme Court,20-543,Parakeet 300 s (as run),7.64,4.21,2.31,1.12,16448,5,178.7,154.3
+Supreme Court,20-543,Parakeet 300 s + gap re-read,5.6,2.09,2.34,1.18,16822,0,0,0
+Supreme Court,20-543,Parakeet 120 s,6.17,2.27,2.37,1.53,16788,1,8.6,8.6
+Supreme Court,20-543,Parakeet 120 s + gap re-read,6.03,2.12,2.38,1.53,16813,0,0,0
+Supreme Court,20-543,Parakeet 60 s,6.97,3.0,2.33,1.64,16681,9,87.9,25.3
+Supreme Court,20-543,Parakeet 30 s,8.58,3.51,2.74,2.33,16705,15,118.2,14.0
+Supreme Court,20-543,"Parakeet 25 s, 15 s overlap",8.79,3.81,2.58,2.4,16673,18,126.6,10.7
+Earnings-22,4482311,Whisper,10.24,4.77,3.17,2.3,10291,,,
+Earnings-22,4482311,Qwen3,7.24,2.64,2.49,2.11,10543,,,
+Earnings-22,4482311,Parakeet 300 s (as run),9.38,3.89,3.57,1.92,11537,2,154.5,138.0
+Earnings-22,4482311,Parakeet 300 s + gap re-read,7.99,1.96,3.63,2.4,11797,0,0,0
+Earnings-22,4482311,Parakeet 120 s,8.64,2.2,3.96,2.49,11801,2,41.8,28.8
+Earnings-22,4482311,Parakeet 120 s + gap re-read,8.73,1.88,3.99,2.86,11868,0,0,0
+Earnings-22,4482311,Parakeet 60 s,9.44,2.45,4.19,2.8,11690,4,47.8,16.4
+Earnings-22,4482311,Parakeet 30 s,10.72,2.44,4.58,3.69,11850,5,67.4,22.0
+Earnings-22,4482311,"Parakeet 25 s, 15 s overlap",10.92,2.4,4.61,3.91,11944,6,67.0,20.3
+CORAAL,DCB_se3_ag4_m_02_1,Whisper,8.23,5.42,1.47,1.33,2130,,,
+CORAAL,DCB_se3_ag4_m_02_1,Qwen3,4.41,2.94,0.83,0.64,2194,,,
+CORAAL,DCB_se3_ag4_m_02_1,Parakeet 300 s (as run),8.36,6.39,1.24,0.74,2156,2,49.0,33.1
+CORAAL,DCB_se3_ag4_m_02_1,Parakeet 300 s + gap re-read,4.09,2.11,1.24,0.74,2253,0,0,0
+CORAAL,DCB_se3_ag4_m_02_1,Parakeet 120 s,4.92,2.99,1.15,0.78,2233,1,15.8,15.8
+CORAAL,DCB_se3_ag4_m_02_1,Parakeet 120 s + gap re-read,4.37,2.44,1.15,0.78,2246,0,0,0
+CORAAL,DCB_se3_ag4_m_02_1,Parakeet 60 s,4.55,2.67,1.1,0.78,2244,1,5.8,5.8
+CORAAL,DCB_se3_ag4_m_02_1,Parakeet 30 s,4.55,2.07,1.38,1.1,2259,0,0,0
+CORAAL,DCB_se3_ag4_m_02_1,"Parakeet 25 s, 15 s overlap",4.04,1.88,1.24,0.92,2249,0,0,0
+EdAcc,EDACC-C52,Whisper,27.52,9.19,12.21,6.12,3196,,,
+EdAcc,EDACC-C52,Qwen3,23.17,5.38,12.21,5.59,3376,,,
+EdAcc,EDACC-C52,Parakeet 300 s (as run),28.08,10.52,12.68,4.88,3152,1,41.3,41.3
+EdAcc,EDACC-C52,Parakeet 300 s + gap re-read,26.13,8.31,12.86,4.97,3225,0,0,0
+EdAcc,EDACC-C52,Parakeet 120 s,27.05,10.23,12.12,4.7,3155,4,44.0,24.8
+EdAcc,EDACC-C52,Parakeet 120 s + gap re-read,25.75,7.92,12.86,4.97,3244,0,0,0
+EdAcc,EDACC-C52,Parakeet 60 s,26.81,11.08,11.35,4.37,3100,6,69.5,21.5
+EdAcc,EDACC-C52,Parakeet 30 s,25.78,8.63,12.47,4.67,3197,2,12.8,7.0
+EdAcc,EDACC-C52,"Parakeet 25 s, 15 s overlap",25.89,8.13,12.77,5.0,3224,5,32.1,7.8

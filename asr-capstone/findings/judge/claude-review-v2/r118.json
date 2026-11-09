@@ -1,0 +1,1 @@
+{"case": "r118", "own": {"reason": "The engine says he bought \"cars\" from the store instead of \"cards\"; that is the wrong object, though the next words about painting the cards hint at the right one.", "meaning": "changed", "severity": 2, "follow_up": "changes meaning", "reference_doubt": "no"}}

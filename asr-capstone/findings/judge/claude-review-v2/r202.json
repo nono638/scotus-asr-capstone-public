@@ -1,0 +1,1 @@
+{"case": "r202", "own": {"reason": "The engine breaks the game title \"Somnium\" into \"i saw new\", which makes no sense, though the title was spelled right just before.", "meaning": "garbled", "severity": 1, "follow_up": "garble", "reference_doubt": "no"}}

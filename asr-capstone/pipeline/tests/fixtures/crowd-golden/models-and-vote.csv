@@ -1,0 +1,5 @@
+model,missed_words_pct,wer_pct,substitutions,deletions,insertions,right_against_the_majority,vote_with_this_pivot_wer_pct,vote_substitutions,vote_deletions,vote_insertions
+Alpha,7.692,15.385,10,0,10,16,21.538,14,4,10
+Bravo,18.462,26.154,20,4,10,0,26.154,20,4,10
+Charlie,27.692,35.385,28,8,10,0,27.692,26,4,6
+Delta,21.538,29.231,20,8,10,0,29.231,20,8,10

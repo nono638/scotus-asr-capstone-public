@@ -1,0 +1,151 @@
+{
+ "case": "s05",
+ "X": {
+  "meaning": {
+   "line": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation lost",
+    "reason": "The speech recognition engine missed the negation 'n't' in the word 'weren't'."
+   },
+   "minute": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation lost",
+    "reason": "The speech recognition engine missed the negation 'n't' in the word 'weren't'."
+   },
+   "whole": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation lost",
+    "reason": "The speech recognition engine missed the negation 'n't' in 'weren't', completely reversing the meaning of the sentence regarding the debt maturity."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The error reverses the meaning of the company's liability management strategy, falsely claiming they had an expiry in 2023 that they actually removed."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The checker correctly identified that the reference contains a negation ('weren't') while the engine version does not ('were')."
+  },
+  "blind": {
+   "order1 (reference shown as B)": {
+    "picked": "engine",
+    "sure": 3,
+    "reason": "The context describes a liability management transaction used to push an expiry further into the future, which makes sense if they 'were' going to have it in 2023, whereas 'weren't' would contradict the purpose of the transaction described."
+   },
+   "order2 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "The context describes a liability management transaction used to push an expiry out of the near term, which only makes sense if they 'weren't' going to have that expiry in 2023 due to the transaction."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Qwen3": 2,
+    "Whisper": 1,
+    "Parakeet": 2
+   },
+   "reason": "Engine 2 is the only one that correctly preserves the meaning of the reference by including the negation 'weren't', whereas Engines 1 and 3 change the meaning to 'were'."
+  },
+  "misses": [
+   {
+    "reference": "we're operating in",
+    "engine": "we're operating in",
+    "severity": 0,
+    "what": "no difference"
+   },
+   {
+    "reference": "of our… of the near term",
+    "engine": "of our, if you will, of the near term",
+    "severity": 1,
+    "what": "engine added filler phrase 'if you will'"
+   },
+   {
+    "reference": "we weren't gonna have",
+    "engine": "we were going to have",
+    "severity": 4,
+    "what": "reverses the meaning regarding the expiry in 2023"
+   },
+   {
+    "reference": "results that are delivering allows to pursue",
+    "engine": "results that Ecopetrol are delivering allow us to pursue",
+    "severity": 2,
+    "what": "engine added subject 'Ecopetrol' and corrected 'allows to' to 'allow us to'"
+   }
+  ]
+ },
+ "Y": {
+  "meaning": {
+   "line": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation lost",
+    "reason": "The engine omitted the negation 'n't' from the word 'weren't', changing the meaning of the sentence."
+   },
+   "minute": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation lost",
+    "reason": "The engine omitted the negation 'n't' from the word 'weren't', changing 'weren't going to have' to 'were going to have'."
+   },
+   "whole": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation lost",
+    "reason": "The engine's text removes the negation 'n't' from the word 'weren't', changing the meaning of the sentence."
+   }
+  },
+  "noticeable": "no",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The difference changes the meaning from a liability being removed/extended to a liability being present, which fundamentally alters the understanding of the company's debt management and 2023 obligations."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The evidence correctly identifies that the reference contains a negation ('weren't') while the engine contains a non-negated word ('were')."
+  },
+  "blind": {
+   "order1 (reference shown as B)": {
+    "picked": "engine",
+    "sure": 3,
+    "reason": "Version A ('were gonna have') makes sense in the context of a liability management transaction where the speaker is describing moving an upcoming expiry from 2023 into the future. Version B ('weren't gonna have') is logically inconsistent with the idea of 'kicking that off into the future'."
+   },
+   "order2 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "The speaker is describing a liability management transaction used to push an expiry out of 2023 into the future. Version A's 'weren't gonna have' makes logical sense in the context of moving a liability away from a specific year, whereas Version B's 'were gonna have' would imply they were keeping the liability in 2023, which contradicts the statement that they 'kick that off into the future'."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Qwen3": 2,
+    "Whisper": 1,
+    "Parakeet": 2
+   },
+   "reason": "Engine 2 is the only engine that correctly captures the negation present in the reference transcript."
+  },
+  "misses": [
+   {
+    "reference": "results that are delivering allows to",
+    "engine": "results that Ecopetrol are delivering allow us to",
+    "severity": 3,
+    "what": "the subject delivering results"
+   },
+   {
+    "reference": "was an expiry that we weren't gonna have",
+    "engine": "was an expiry that we were going to have",
+    "severity": 3,
+    "what": "the status of the expiry in 2023"
+   },
+   {
+    "reference": "two billion, uh, of our… of the near term",
+    "engine": "two billion of our, if you will, of the near term",
+    "severity": 1,
+    "what": "the description of the two billion"
+   }
+  ]
+ }
+}

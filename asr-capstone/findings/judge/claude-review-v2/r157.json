@@ -1,0 +1,1 @@
+{"case": "r157", "own": {"reason": "Asked 'can you hear me?', the lawyer answers 'I can'; the engine writes 'I can't', reversing his answer. The context (he goes straight on answering) softens it, but the yes becomes a no.", "meaning": "opposite", "severity": 3, "follow_up": "negation added", "reference_doubt": "no"}}

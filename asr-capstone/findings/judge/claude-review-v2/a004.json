@@ -1,0 +1,1 @@
+{"case": "a004", "own": {"reason": "The engine has 'eight billion' where the reference has 'eight million'; a thousandfold difference in the analyst's figure, and all three engines heard 'billion', which suits a backlog of large engineering projects.", "meaning": "changed", "severity": 3, "follow_up": "different quantity", "reference_doubt": "yes", "misspoke": "no"}}

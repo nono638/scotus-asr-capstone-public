@@ -1,0 +1,410 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Data</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Public+Sans:wght@400;500;600;700&family=Courier+Prime:wght@400;700&display=swap">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+<style>
+/*TOKENS*/
+/*SITECSS*/
+.tabs { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 28px; border-bottom: 1px solid var(--rule); }
+.tabs button { font: inherit; font-size: 15px; border: 1px solid var(--rule); border-bottom: 0; background: var(--bg); color: var(--muted); border-radius: 6px 6px 0 0; padding: 8px 14px; cursor: pointer; margin-bottom: -1px; }
+.tabs button[aria-selected="true"] { background: var(--card); color: var(--ink); font-weight: 600; }
+.panel { background: var(--card); border: 1px solid var(--rule); border-top: 0; border-radius: 0 0 6px 6px; padding: 16px 18px 20px; }
+.panel[hidden] { display: none; }
+.viewer-tools { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center; }
+.viewer-tools input[type=search] { font: inherit; font-size: 15px; padding: 7px 10px; border: 1px solid var(--rule); border-radius: 4px; background: var(--bg); color: var(--ink); min-width: min(100%, 22rem); }
+.viewer-count { font-size: 14px; color: var(--muted); }
+.viewer details { margin-top: 12px; }
+.viewer summary { cursor: pointer; font-size: 14px; color: var(--accent); }
+.filter-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 13rem), 1fr)); gap: 10px 14px; margin-top: 10px; }
+.filter-grid label { display: grid; gap: 3px; font-size: 12.5px; color: var(--muted); }
+.filter-grid select, .filter-grid input { font: inherit; font-size: 14px; padding: 4px 6px; border: 1px solid var(--rule); border-radius: 4px; background: var(--bg); color: var(--ink); min-width: 0; }
+.range { display: flex; gap: 4px; }
+.range input { width: 50%; }
+.col-list { display: flex; flex-wrap: wrap; gap: 4px 14px; margin-top: 10px; font-size: 13.5px; }
+.col-help { font-size: 13.5px; margin: 10px 0 0; display: grid; grid-template-columns: minmax(8rem, 13rem) 1fr; gap: 3px 14px; }
+.col-help dt { font-family: var(--font-transcript); }
+.col-help dd { margin: 0; color: var(--muted); }
+.grid-wrap { overflow-x: auto; margin-top: 14px; border: 1px solid var(--rule); border-radius: 4px; }
+table.data { border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; min-width: 100%; }
+table.data th, table.data td { padding: 5px 8px; border-bottom: 1px solid var(--rule); text-align: left; vertical-align: top; }
+table.data th { position: sticky; top: 0; background: var(--card); white-space: nowrap; }
+table.data th button { font: inherit; font-weight: 600; color: var(--muted); background: none; border: 0; padding: 0; cursor: pointer; }
+table.data th[aria-sort] button { color: var(--ink); }
+table.data th[aria-sort="ascending"] button::after { content: " \2191"; }
+table.data th[aria-sort="descending"] button::after { content: " \2193"; }
+table.data td { white-space: nowrap; }
+table.data td.long { min-width: 16rem; max-width: 30rem; white-space: normal; }
+table.data td.num { text-align: right; }
+.pager { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; margin-top: 12px; font-size: 14px; }
+.pager button, .viewer .btn { font: inherit; font-size: 14px; }
+.groups { display: grid; gap: 10px; margin-top: 10px; }
+.groups details { border: 1px solid var(--rule); border-radius: 6px; padding: 8px 12px; background: var(--bg); }
+.groups ul { list-style: none; padding: 0; margin: 8px 0 0; display: grid; gap: 6px; }
+.groups li { font-size: 14px; }
+.groups li button { font: inherit; font-size: 13.5px; color: var(--accent); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; font-family: var(--font-transcript); }
+.groups li span { color: var(--muted); }
+.viewer-only { font-size: 14px; display: inline-flex; gap: 5px; align-items: center; }
+table.data td.hear { padding-right: 0; }
+.hear button { font: inherit; font-size: 13px; white-space: nowrap; color: var(--accent); background: none; border: 1px solid var(--rule); border-radius: 4px; padding: 1px 7px; cursor: pointer; }
+.hear button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--card); }
+</style>
+
+<!-- The data: one big table of every case the failure searches found, one of every
+     recording and engine, and the smaller tables behind the findings. Search,
+     filter, sort and download. The files are built by tools/build_data.py. -->
+<div class="wrap">
+  <nav class="site-nav" id="nav" aria-label="Pages"></nav>
+  <h1>The data</h1>
+  <p class="lede">Everything behind the site, in tables you can search, filter and download. Pick a table, type to search every column, and narrow it down column by column.</p>
+
+  <div class="tabs" role="tablist">
+    <button type="button" role="tab" id="tab-errors" aria-selected="true" aria-controls="panel-errors">Every error case</button>
+    <button type="button" role="tab" id="tab-recordings" aria-selected="false" aria-controls="panel-recordings">Every recording and engine</button>
+    <button type="button" role="tab" id="tab-other" aria-selected="false" aria-controls="panel-other">The other tables</button>
+  </div>
+  <div class="panel" role="tabpanel" id="panel-errors" aria-labelledby="tab-errors">
+    <p class="column" style="margin-top: 0">One row per case the failure searches list: meaning changes, invented words, edits, skips and breakdowns, plus the spots where every engine differs from the reference. Not every case found is a row: about 80,000 restarts an engine tidied away (a speaker's false starts) are counted in the rates but not listed one by one, so the edits rows are CORAAL's rewritten grammar only. The AI judge's answers (Claude Sonnet, which read every listed case) are in the last columns. A second AI judge, Qwen 3.8, is still reading the cases, so its answers are left out until it finishes. <a href="data/errors.csv" download>Download the whole file (CSV)</a>.</p>
+    <p class="column">The most serious rows have a Play button with about 15 seconds of the recording around the error: those Sonnet called opposite or gave a severity of 3 or 4. Nobody has checked these by ear yet. Earnings-22 has no clips, because its audio has no stated licence. Supreme Court audio is public domain; EdAcc's is CC BY-SA 4.0 and CORAAL's CC BY-NC-SA 4.0. Who made them is under “Credits and licences” at the bottom of this page.</p>
+    <div class="viewer" id="viewer-errors"></div>
+  </div>
+  <div class="panel" role="tabpanel" id="panel-recordings" aria-labelledby="tab-recordings" hidden>
+    <p class="column" style="margin-top: 0">One row per recording and engine, every data set, from the engines' current runs. <a href="data/recordings.csv" download>Download the whole file (CSV)</a>.</p>
+    <div class="viewer" id="viewer-recordings"></div>
+  </div>
+  <div class="panel" role="tabpanel" id="panel-other" aria-labelledby="tab-other" hidden>
+    <p class="column" style="margin-top: 0">The smaller tables behind each finding, grouped by what they are about, each with the line its folder's notes give it. Pick one to open it below. Very long tables show their first 5,000 rows.</p>
+    <div class="groups" id="groups"></div>
+    <h3 id="other-title" style="margin-top: 24px"></h3>
+    <p id="other-desc" class="hint"></p>
+    <div class="viewer" id="viewer-other"></div>
+  </div>
+
+  <section id="credits">
+    <h2>Credits and licences</h2>
+    <p class="column">The audio and the reference transcripts on this site were made by the people below. The speech engines' text was written by AI models run for this project, and the tables are this project's own work, made with a lot of help from AI (<a href="ai.html">how AI was used</a>).</p>
+  </section>
+
+  <footer><p id="built"></p></footer>
+</div>
+
+<script>
+/*SITEJS*/
+/*CREDITS*/
+</script>
+<script>
+const D = /*DATA*/{};
+siteNav($("#nav"), D.pages, "data.html");
+$("#built").textContent = `Built ${D.built} by tools/build_data.py from the files in findings/ and the engines' current runs.`;
+Credits.list($("#credits"), D.credits);
+
+// What the columns of the two big tables mean.
+const HELP = {
+  errors: {
+    case: "The case's id (f… a failure search case, b… a breakdown).",
+    corpus: "The data set.", part: "Term, split, place or region of the data set.",
+    recording: "The recording's id.", engine: "The speech engine that wrote the text.",
+    kind: "Which search found it: meaning, invented, edits, skips or breakdown.",
+    subkind: "What the rule saw: negation (a “not” lost or added), number, word, dialect_changed, restarts_dropped…",
+    start: "Seconds into the recording (the engine's own word times). Empty, shown as “unknown”, where the search lost its place: such a row has no clip and no link.", end: "Where the case ends, in seconds.",
+    record: "What the reference (“true”) transcript has here.", engine_wrote: "What the engine wrote instead.",
+    record_context: "The reference around it, the passage in [brackets].", engine_context: "The engine's text around it.",
+    others_right: "Other engines that agree with the reference here.",
+    found_by: "A failure search, a breakdown search, or every engine differing from the reference.",
+    sonnet_meaning: "Claude Sonnet's reading (an AI model, through Anthropic's API): same, reworded, changed, opposite or garbled. Sonnet has read every case. Preliminary: not checked by a person.",
+    sonnet_severity: "Sonnet's severity, 0 (nothing a reader would care about) to 4 (reverses or loses the point).",
+    sonnet_reference_doubt: "Whether Sonnet thinks the reference itself may be wrong here.",
+    sonnet_reason: "The first sentence of Sonnet's reason (the whole answer is in the project's judge files).",
+    qwen_meaning: "Qwen 3.8 27B's reading (a local AI model), same choices as Sonnet's. Only in the table once Qwen has read every case.", qwen_severity: "Qwen's severity, 0 to 4.",
+    sonnet_story_score: "On 300 test cases only: how good an example Sonnet thinks it is, 0 to 3.",
+    not_counted: "Why a case is shown here but left out of the rates: the same spot as a meaning case, a skip at a chunk seam, or gone after a repaired transcript. Empty for most.",
+  },
+  recordings: {
+    corpus: "The data set.", part: "Term, split, place or region.", recording: "The recording's id.",
+    engine: "The speech engine.", run: "The run folder the transcript comes from.", minutes: "Length of the recording.",
+    reference_words: "Words in the reference, as scored.",
+    error_rate: "Errors over reference words, in percent, on the benchmark rule (case, punctuation and fillers ignored).",
+    substituted: "Reference words written as another word.", dropped: "Reference words the engine left out.",
+    added: "Words the engine wrote that the reference does not have.",
+    found_meaning: "Cases the meaning-change search found, leaving out spots where every engine differs.", found_invented: "Cases the invented-words search found.",
+    found_edits: "Cases the edits search listed: dialect features rewritten, which only CORAAL's reference marks reliably, so it is 0 on the other data sets.", found_skips: "Cases the skips search found.",
+    found_breakdown: "Stretches where the engine broke down.", judged_opposite: "Cases Sonnet judged to say the opposite, leaving out spots where every engine differs.",
+  },
+};
+const LONG = new Set(["record", "engine_wrote", "record_context", "engine_context", "evidence", "sonnet_reason"]);
+
+// The download: the platform's own save prompt where the page has it, a plain link otherwise.
+let saver = null;
+(async () => { try { saver = window.claude && await window.claude.use("downloads"); } catch (e) { saver = null; } })();
+async function offer(name, text) {
+  if (saver) {
+    try { await saver.save({ filename: name, data: new Blob([text], { type: "text/csv" }) }); return; }
+    catch (e) { if (e && e.code === "declined") return; }
+  }
+  const a = el("a", { href: URL.createObjectURL(new Blob([text], { type: "text/csv" })), download: name });
+  document.body.append(a); a.click(); a.remove();
+}
+
+// The clips for the most serious rows (tools/build_row_clips.py). They share long
+// audio files, so one player jumps to a row's place and stops at the end of its clip.
+const player = new Audio();
+player.preload = "none";
+let playing = null;
+let waiting = null;   // what will start the clip once its file has loaded
+
+function stopClip() {
+  player.pause();
+  if (waiting) { player.removeEventListener("loadedmetadata", waiting); waiting = null; }
+  if (playing) { playing.button.setAttribute("aria-pressed", "false"); playing.button.textContent = "▶ Play"; }
+  playing = null;
+}
+player.addEventListener("timeupdate", () => { if (playing && player.currentTime >= playing.to) stopClip(); });
+player.addEventListener("ended", stopClip);
+player.addEventListener("error", () => { if (playing) { const b = playing.button; stopClip(); b.textContent = "Didn't load"; } });
+
+function playClip(button, src, from, to) {
+  const again = playing && playing.button === button;
+  stopClip();
+  if (again) return;
+  playing = { button, from, to };
+  button.setAttribute("aria-pressed", "true");
+  button.textContent = "■ Stop";
+  const start = () => { player.currentTime = from; player.play().catch(() => { if (playing && playing.button === button) stopClip(); }); };
+  if (player.getAttribute("src") === src && player.readyState > 0) return start();
+  waiting = () => { waiting = null; start(); };
+  player.addEventListener("loadedmetadata", waiting, { once: true });
+  player.setAttribute("src", src);
+  player.load();
+}
+
+// A menu's "no filter" choice. Not the empty text: empty is a value a column can have.
+const ANY = "\u0000any";
+
+function clock(seconds) {
+  const s = Math.floor(seconds);
+  return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
+}
+
+// One viewer: a search box, a filter per column, the columns to show, a sorted
+// page of 50 rows, and a download of the rows that match.
+function viewer(root, rows, cols, opts = {}) {
+  root.textContent = "";
+  const PAGE = 50;
+  const numeric = new Set(cols.filter(c => rows.length && rows.every(r => r[c] === "" || r[c] === undefined || !isNaN(Number(r[c])))));
+  const values = {};
+  cols.forEach(c => { const v = new Set(rows.map(r => r[c])); if (!numeric.has(c) && v.size <= 40) values[c] = [...v].sort(); });
+  let shown = new Set(opts.shown ? cols.filter(c => opts.shown.includes(c)) : cols);
+  let sort = null, page = 0, matching = rows;
+  const filters = {};
+
+  const search = el("input", { type: "search", placeholder: "Search every column…", "aria-label": "Search" });
+  const count = el("span", { class: "viewer-count", "aria-live": "polite" });
+  const dl = el("button", { type: "button", class: "btn" }, "Download these rows (CSV)");
+  const tools = el("div", { class: "viewer-tools" }, search, dl, count);
+  root.append(tools);
+  if (opts.clip) {
+    const total = rows.filter(r => opts.clip(r)).length;
+    const only = el("input", { type: "checkbox" });
+    only.addEventListener("change", () => { only.checked ? filters.clip = r => opts.clip(r) : delete filters.clip; update(); });
+    if (total) tools.append(el("label", { class: "viewer-only" }, only, `Only rows with a clip (${total.toLocaleString()})`));
+  }
+
+  const filterBox = el("div", { class: "filter-grid" });
+  cols.forEach(c => {
+    if (values[c]) {
+      const s = el("select", { "aria-label": c }, el("option", { value: ANY }, "Any"));
+      values[c].forEach(v => s.append(el("option", { value: v }, v === "" ? "(empty)" : v)));
+      s.addEventListener("change", () => { if (s.value === ANY) delete filters[c]; else filters[c] = r => r[c] === s.value; update(); });
+      filterBox.append(el("label", {}, c, s));
+    } else if (numeric.has(c)) {
+      const lo = el("input", { type: "number", placeholder: "min", "aria-label": c + " at least", step: "any" });
+      const hi = el("input", { type: "number", placeholder: "max", "aria-label": c + " at most", step: "any" });
+      const set = () => {
+        const a = lo.value === "" ? null : Number(lo.value), b = hi.value === "" ? null : Number(hi.value);
+        if (a === null && b === null) delete filters[c];
+        else filters[c] = r => r[c] !== "" && (a === null || Number(r[c]) >= a) && (b === null || Number(r[c]) <= b);
+        update();
+      };
+      lo.addEventListener("input", set); hi.addEventListener("input", set);
+      filterBox.append(el("label", {}, c, el("span", { class: "range" }, lo, hi)));
+    }
+  });
+  root.append(el("details", {}, el("summary", {}, "Filter by column"), filterBox));
+
+  const colBox = el("div", { class: "col-list" });
+  cols.forEach(c => {
+    const box = el("input", { type: "checkbox" });
+    box.checked = shown.has(c);
+    box.addEventListener("change", () => { box.checked ? shown.add(c) : shown.delete(c); draw(); });
+    colBox.append(el("label", {}, box, " " + c));
+  });
+  root.append(el("details", {}, el("summary", {}, "Columns shown"), colBox));
+  if (opts.help) {
+    const dlist = el("dl", { class: "col-help" });
+    cols.forEach(c => opts.help[c] && dlist.append(el("dt", {}, c), el("dd", {}, opts.help[c])));
+    root.append(el("details", {}, el("summary", {}, "What the columns mean"), dlist));
+  }
+
+  const wrap = el("div", { class: "grid-wrap" });
+  const pager = el("div", { class: "pager" });
+  root.append(wrap, pager);
+
+  let timer = null;
+  search.addEventListener("input", () => { clearTimeout(timer); timer = setTimeout(update, 200); });
+  dl.addEventListener("click", () => offer(opts.name || "rows.csv", Papa.unparse(matching.map(r => Object.fromEntries(cols.map(c => [c, r[c]]))), { columns: cols })));
+
+  function update() {
+    const q = search.value.trim().toLowerCase();
+    const tests = Object.values(filters);
+    matching = rows.filter(r => tests.every(t => t(r)) && (!q || cols.some(c => String(r[c] ?? "").toLowerCase().includes(q))));
+    if (sort) {
+      const { key, dir } = sort, num = numeric.has(key);
+      matching = matching.slice().sort((a, b) => {
+        const x = a[key], y = b[key];
+        if (x === "" || x === undefined) return 1;
+        if (y === "" || y === undefined) return -1;
+        return dir * (num ? Number(x) - Number(y) : String(x).localeCompare(String(y)));
+      });
+    }
+    page = 0;
+    draw();
+  }
+
+  function draw() {
+    stopClip();
+    const show = cols.filter(c => shown.has(c));
+    const table = el("table", { class: "data" });
+    const head = el("tr");
+    if (opts.clip) head.append(el("th", {}, ""));
+    if (opts.link) head.append(el("th", {}, ""));
+    show.forEach(c => {
+      const th = el("th", { scope: "col" });
+      if (sort && sort.key === c) th.setAttribute("aria-sort", sort.dir > 0 ? "ascending" : "descending");
+      const b = el("button", { type: "button", title: (opts.help && opts.help[c]) || "", "data-col": c }, c);
+      b.addEventListener("click", () => {
+        sort = { key: c, dir: sort && sort.key === c ? -sort.dir : 1 };
+        update();
+        // The table was drawn again, so the button that had the keyboard is gone.
+        [...wrap.querySelectorAll("th button")].find(x => x.dataset.col === c)?.focus({ preventScroll: true });
+      });
+      th.append(b);
+      head.append(th);
+    });
+    const body = el("tbody");
+    matching.slice(page * PAGE, page * PAGE + PAGE).forEach(r => {
+      const tr = el("tr");
+      if (opts.clip) {
+        const clip = opts.clip(r);
+        const cell = el("td", { class: "hear" });
+        if (clip) {
+          const b = el("button", { type: "button", "aria-pressed": "false", title: `About ${Math.round(clip.to - clip.from)} seconds around this error` }, "▶ Play");
+          b.addEventListener("click", () => playClip(b, clip.src, clip.from, clip.to));
+          cell.append(b);
+        }
+        tr.append(cell);
+      }
+      if (opts.link) {
+        const url = opts.link(r);
+        tr.append(el("td", {}, url && r.start !== "" ? el("a", { href: url, target: "_blank", rel: "noopener", title: `Open the whole recording, just before this error (${clock(Number(r.start))})` }, "Open") : ""));
+      }
+      show.forEach(c => tr.append(el("td", { class: (numeric.has(c) ? "num" : "") + (LONG.has(c) ? " long" : "") },
+        opts.unknown && opts.unknown.has(c) && r[c] === "" ? "unknown" : String(r[c] ?? ""))));
+      body.append(tr);
+    });
+    table.append(el("thead", {}, head), body);
+    wrap.textContent = "";
+    wrap.append(table);
+    const first = matching.length ? page * PAGE + 1 : 0, last = Math.min(matching.length, (page + 1) * PAGE);
+    count.textContent = `${matching.length.toLocaleString()} of ${rows.length.toLocaleString()} rows match`;
+    pager.textContent = "";
+    const prev = el("button", { type: "button", class: "btn" }, "Previous 50");
+    const next = el("button", { type: "button", class: "btn" }, "Next 50");
+    prev.disabled = page === 0;
+    next.disabled = last >= matching.length;
+    // The buttons are drawn again too: keep the keyboard on the same one, or on the other
+    // if that one has just run out of rows.
+    const turn = (step, label) => {
+      page += step;
+      draw();
+      const [a, b] = pager.querySelectorAll("button");
+      const same = label === "prev" ? a : b, other = label === "prev" ? b : a;
+      (same.disabled ? other : same).focus({ preventScroll: true });
+    };
+    prev.addEventListener("click", () => turn(-1, "prev"));
+    next.addEventListener("click", () => turn(1, "next"));
+    pager.append(prev, next, el("span", {}, `Rows ${first.toLocaleString()}–${last.toLocaleString()}`));
+  }
+  update();
+  return { get matching() { return matching; } };
+}
+
+function loadCsv(url) {
+  return fetch(url).then(r => { if (!r.ok) throw new Error(r.status + " " + r.statusText); return r.text(); })
+    .then(text => Papa.parse(text, { header: true, skipEmptyLines: true }));
+}
+
+function hearAt(r) {
+  const url = EXPLORERS[r.corpus];
+  return url ? `${url}#${recordingHash(r.corpus, r.recording, Number(r.start))}` : "";
+}
+
+const loaded = {};
+function open(which) {
+  if (loaded[which]) return;
+  loaded[which] = true;
+  const root = $("#viewer-" + which);
+  root.textContent = "Loading…";
+  // A page without the clips file still works: it just has no Play buttons.
+  const clips = which !== "errors" ? Promise.resolve(null)
+    : fetch("data/row-clips.json").then(r => r.ok ? r.json() : null).catch(() => null);
+  Promise.all([loadCsv(`data/${which}.csv`), clips]).then(([p, c]) => viewer(root, p.data, p.meta.fields, {
+    help: HELP[which], name: `${which}-filtered.csv`,
+    link: which === "errors" ? hearAt : null,
+    unknown: which === "errors" ? new Set(["start", "end"]) : null,
+    clip: c ? r => {
+      const at = c.rows[r.case];
+      return at ? { src: c.files[at[0]], from: at[1], to: at[2] } : null;
+    } : null,
+    shown: which === "errors" ? ["corpus", "recording", "engine", "kind", "subkind", "start", "record", "engine_wrote", "sonnet_meaning", "sonnet_severity", "qwen_meaning", "sonnet_reason"] : null,
+  })).catch(e => { root.textContent = `The table didn't load (${e.message}).`; });
+}
+
+// The other tables, a bundle at a time.
+const bundles = {};
+function openTable(group, path) {
+  const got = bundles[group.file] || (bundles[group.file] = fetch("data/" + group.file).then(r => r.json()));
+  $("#other-title").textContent = path;
+  $("#viewer-other").textContent = "Loading…";
+  got.then(b => {
+    const t = b.tables.find(x => x.path === path);
+    $("#other-desc").textContent = (t.desc || "") + (t.shown < t.rows ? ` Showing the first ${t.shown.toLocaleString()} of ${t.rows.toLocaleString()} rows.` : "");
+    const p = Papa.parse(t.csv, { header: true, skipEmptyLines: true });
+    viewer($("#viewer-other"), p.data, p.meta.fields || [], { name: path.replace(/\//g, "-") });
+    $("#other-title").scrollIntoView({ block: "start" });
+  }).catch(e => { $("#viewer-other").textContent = `The table didn't load (${e.message}).`; });
+}
+D.tables.forEach(g => {
+  const ul = el("ul");
+  g.tables.forEach(t => {
+    const b = el("button", { type: "button" }, t.path);
+    b.addEventListener("click", () => openTable(g, t.path));
+    ul.append(el("li", {}, b, el("span", {}, ` ${t.rows.toLocaleString()} rows. ${t.desc || ""}`)));
+  });
+  $("#groups").append(el("details", {}, el("summary", {}, `${g.title} (${g.tables.length} tables)`), ul));
+});
+
+// The tabs.
+const TABS = ["errors", "recordings", "other"];
+function pick(which) {
+  stopClip();
+  TABS.forEach(t => {
+    $("#tab-" + t).setAttribute("aria-selected", String(t === which));
+    $("#panel-" + t).hidden = t !== which;
+  });
+  if (which !== "other") open(which);
+}
+TABS.forEach(t => $("#tab-" + t).addEventListener("click", () => pick(t)));
+pick("errors");
+</script>

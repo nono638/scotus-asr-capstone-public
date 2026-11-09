@@ -1,0 +1,1 @@
+{"case": "r343", "own": {"reason": "The engine wrote \"tuck the man away\" for \"took the man away\", a different real word that suggests hiding him rather than taking him off.", "meaning": "changed", "severity": 1, "follow_up": "changes meaning", "reference_doubt": "no", "misspoke": "no"}}

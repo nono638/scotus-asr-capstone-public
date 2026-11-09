@@ -1,0 +1,105 @@
+{
+ "case": "s40",
+ "X": {
+  "meaning": {
+   "line": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation added",
+    "reason": "The engine added a negation ('t) to the word 'can', changing the meaning of the sentence."
+   },
+   "minute": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation added",
+    "reason": "The engine added a negation ('t') to the word 'can', changing 'can' to 'can't'."
+   },
+   "whole": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation added",
+    "reason": "The engine incorrectly added a negation ('can't') to the verb, whereas the reference states the speaker said 'can'."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The engine's text changes the meaning from a choice between two options to a prohibition, which fundamentally alters the description of the survey process."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The evidence correctly identifies that the engine added a negation ('t) to the word 'can' found in the reference."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "Version A uses 'can', which makes sense in the context of providing two options (either provide cost or check a box). Version B uses 'can't', which would mean the second option is impossible, contradicting the subsequent sentence stating that 55 percent of hospitals actually checked the box."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "The speaker is describing two options provided to hospitals: either provide acquisition cost or check a box to use existing data. Version B ('you can check a box') makes logical sense in the context of presenting two choices, whereas Version A ('you can't check a box') contradicts the subsequent fact that 55 percent of hospitals actually checked that box."
+   }
+  },
+  "misses": [
+   {
+    "reference": "you can either tell us your acquisition cost, or you can check a box",
+    "engine": "you can either tell us your acquisition cost, or you can't check a box",
+    "severity": 4,
+    "what": "the word 'can' changed to 'can't'"
+   }
+  ]
+ },
+ "Y": {
+  "meaning": {
+   "line": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation added",
+    "reason": "The speech recognition engine added a negation ('t) to the word 'can', reversing the meaning of the sentence."
+   },
+   "minute": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation added",
+    "reason": "The speech recognition engine added a 't' to 'can', turning a positive permission into a negation."
+   },
+   "whole": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation added",
+    "reason": "The speech recognition engine added a negation ('can't') that was not present in the original speech."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The error reverses the meaning of the instruction given to hospitals, changing an available option into a prohibited action."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The engine added a negation ('t) that is not present in the official transcript."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "The context describes two options provided to hospitals, and 'can check a box' makes logical sense, whereas 'can't check a box' would contradict the subsequent statistic that 55 percent of hospitals actually checked the box."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "The context describes two options provided to hospitals, and the subsequent statistics (55 percent checked the box) only make sense if the second option was to 'can check a box'."
+   }
+  },
+  "misses": [
+   {
+    "reference": "you can either tell us your acquisition cost, or you can check a box",
+    "engine": "you can either tell us your acquisition cost, or you can't check a box",
+    "severity": 4,
+    "what": "The engine changed 'can' to 'can't', reversing the meaning of the instruction."
+   }
+  ]
+ }
+}

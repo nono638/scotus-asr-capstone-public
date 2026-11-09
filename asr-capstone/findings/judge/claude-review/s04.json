@@ -1,0 +1,47 @@
+{
+ "case": "s04",
+ "own": {
+  "meaning": "opposite",
+  "severity": 4,
+  "noticeable": "yes",
+  "follow_up": "negation lost",
+  "stakes": "maybe",
+  "reason": "The speaker said Counter Strike \"ISN'T\" a roleplay game, to show Valorant isn't one either; the engine wrote \"is\", which undoes the comparison.",
+  "rule_right": "yes",
+  "rule_reason": "The record has \"ISN'T\" and the engine \"is\" at the spot, a negative on one side only.",
+  "more_plausible": "reference",
+  "plausible_how_clear": "Clear: the whole stretch argues Valorant has no storyline or quests and is \"like Counter Strike\", so the comparison only works with \"isn't\"; the engine itself goes on \"Just a tactical shooter\".",
+  "my_misses": [
+   {"reference": "COUNTER STRIKE ISN'T A ROLEPLAY GAME", "engine": "Counter Strike is a role play game", "severity": 4},
+   {"reference": "BECAUSE THE CHARACTERS ARE PREMADE IT'S NOT ROLEPLAY", "engine": "because the characters are pre-made, it's not pre-made", "severity": 3},
+   {"reference": "YOU PLAY THAT ROLE OR SOMETHING", "engine": "So you play that wrong", "severity": 1},
+   {"reference": "THEY HAVE THESE LIKE LIKE A LINEAR NARRATIVE", "engine": "Because like like a linear narrative", "severity": 1},
+   {"reference": "I UNDERSTAND YEAH / IT'S JUST YEAH YEAH YEAH", "engine": "Just a tactical shooter. Yeah. But yeah.", "severity": 1},
+   {"reference": "DO YOU WANT ME TO ASK", "engine": "You want to ask?", "severity": 0}
+  ]
+ },
+ "review": {
+  "labelled/line": {"verdict": "partly", "why": "Opposite, 4 and negation lost are right, but the line alone (\"it's like Counter Strike. Counter Strike is a role play game.\") gives no clue, so \"noticeable: yes\" is overstated; \"stakes: yes\" is also strong for a casual chat about games."},
+  "labelled/minute": {"verdict": "agree", "why": "Right; with the minute in view the contradiction with the Valorant argument is noticeable."},
+  "labelled/whole": {"verdict": "agree", "why": "Sound; judged against the minute text only."},
+  "rule/minute": {"verdict": "agree", "why": "Copied both words exactly and confirmed the rule."},
+  "blind/order1": {"verdict": "agree", "why": "Picked A (the reference) with the right reason, the Valorant comparison."},
+  "blind/order2": {"verdict": "agree", "why": "Picked the reference again after the swap with the same reason."},
+  "rank/minute": {"verdict": "partly", "why": "The two \"is\" engines (2, 5) are rightly last, but Engines 3 and 4 were put below Engine 1 for supposedly truncating the following talk, which is false: \"okay i got it yeah but\" follows the reference as well as Engine 1's \"that's for sure\" does. Engines 1, 3 and 4 should tie."},
+  "misses": [
+   {"reference": "YOU PLAY THAT ROLE OR SOMETHING", "engine": "you play that wrong", "is_real": "yes", "matters": "yes", "severity_fair": "too high", "note": "A real wrong word, but a reader would read past it; 1, not 3."},
+   {"reference": "IT'S NOT ROLEPLAY", "engine": "it's not pre-made", "is_real": "yes", "matters": "yes", "severity_fair": "too high", "note": "A real, important change (the engine contradicts itself about pre-made characters), but 3 rather than 4."},
+   {"reference": "THEY'RE PREMADE AND THERE IS", "engine": "there is", "is_real": "partly", "matters": "no", "severity_fair": "too high", "note": "Overlaps the item above: the engine's \"it's not pre-made, and there is\" is where \"ROLEPLAY / THEY'RE PREMADE\" went, so this counts the same slip twice."},
+   {"reference": "I I WOULD SAY", "engine": "I think I'd say", "is_real": "yes", "matters": "no", "severity_fair": "too high", "note": "Same meaning; 0."},
+   {"reference": "COUNTER STRIKE ISN'T A ROLEPLAY GAME", "engine": "Counter Strike is a role play game", "is_real": "yes", "matters": "yes", "severity_fair": "yes", "note": "The main error."},
+   {"reference": "OKAY I GOT IT I UNDERSTAND YEAH", "engine": "Okay, I got it. Just a tactical shooter. Yeah.", "is_real": "yes", "matters": "yes", "severity_fair": "yes", "note": "Real added content (\"Just a tactical shooter\"); possibly real speech the reference missed."},
+   {"reference": "IT'S JUST YEAH YEAH YEAH", "engine": "But yeah.", "is_real": "yes", "matters": "no", "severity_fair": "too high", "note": "Only filler on both sides; nothing of content was omitted."},
+   {"reference": "DO YOU WANT ME TO ASK DO YOU WANT TO ASK ME ANYTHING", "engine": "You want to ask? You want to ask me anything?", "is_real": "yes", "matters": "no", "severity_fair": "too high", "note": "A self-corrected restart; the final question survives intact."}
+  ],
+  "overlooked": [
+   {"reference": "THEY HAVE THESE LIKE LIKE A LINEAR NARRATIVE", "engine": "Because like like a linear narrative", "severity": 1, "note": "Minor: roleplay games \"have\" a linear narrative becomes a loose \"because\" clause."}
+  ]
+ },
+ "worth_a_listen": {"yes": false, "why": "The text settles it, and 3 of the 5 engines wrote \"isn't\"."},
+ "summary": "Gemma handled the reversed \"isn't\" correctly everywhere, but its misses list rates most side differences one or two steps too high (several are filler) and its ranking invents a truncation to split engines that are equally right at the spot."
+}

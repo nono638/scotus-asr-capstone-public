@@ -1,0 +1,111 @@
+{
+ "case": "s23",
+ "own": {
+  "meaning": "garbled",
+  "severity": 1,
+  "noticeable": "maybe",
+  "follow_up": "garble",
+  "stakes": "no",
+  "reason": "Justice Scalia said 'the way Rule 35 reads', meaning its wording, and the engine misheard 'reads' as 'leads', which is not a sensible thing for a rule to do.",
+  "rule_right": "partly",
+  "rule_reason": "The words do differ, but it is an r/l mishearing that a reader would mostly repair, not a real change of content.",
+  "more_plausible": "reference",
+  "plausible_how_clear": "Very clear: 'the way [Rule] 35 reads' is a standard phrase for a lawyer or judge reading a rule.",
+  "my_misses": [
+   {
+    "reference": "the Rhode Island Supreme Court has affirmed",
+    "engine": "the Rhode Island Supreme Court has approved",
+    "severity": 2,
+    "note": "'Affirmed' is the exact legal outcome (upheld on appeal); 'approved' is not a legal term and blurs it."
+   },
+   {
+    "reference": "within 121 days after the entry -- after the sentence",
+    "engine": "within 121 days after the entry",
+    "severity": 2,
+    "note": "The lawyer's self-correction 'after the sentence' is dropped, so the record says the clock runs from the entry of judgment, which she took back; that is the point argued next."
+   },
+   {
+    "reference": "reads,",
+    "engine": "leads,",
+    "severity": 1,
+    "note": "Mishearing; meaning recoverable."
+   },
+   {
+    "reference": "that's not what the State says, anyway",
+    "engine": "that's not what the State says",
+    "severity": 0,
+    "note": "'anyway' dropped."
+   }
+  ]
+ },
+ "review": {
+  "labelled/line": {
+   "verdict": "partly",
+   "why": "'leads' is a mishearing a lawyer would read straight through ('the way 35 leads' makes no sense, as Gemma itself says in the blind test), so severity 2 and stakes 'yes' are too high, and its claim that the error 'alters the interpretation of how the statute functions' overstates it."
+  },
+  "labelled/minute": {
+   "verdict": "partly",
+   "why": "Same as the line, a little softer on stakes ('maybe'); still treats a garble as a real change of meaning."
+  },
+  "labelled/whole": {
+   "verdict": "agree",
+   "why": "Severity 1 and stakes 'no' match my view; 'changes meaning' instead of 'garble' is the only quibble."
+  },
+  "rule/minute": {
+   "verdict": "partly",
+   "why": "The words do differ, so 'yes' is defensible, but Gemma only restates the difference and does not ask whether 'leads' is a real change of content."
+  },
+  "blind/order1": {
+   "verdict": "agree",
+   "why": "Picked 'reads' for the right reason."
+  },
+  "blind/order2": {
+   "verdict": "agree",
+   "why": "Picked 'reads' again after the swap; consistent."
+  },
+  "rank/minute": {
+   "verdict": "partly",
+   "why": "Engine 1's repeated 'and' and 'the' change nothing, so Engines 1 and 2 should tie at 1 with Engine 3 last; Gemma ranked on small slips the prompt said to ignore."
+  },
+  "misses": [
+   {
+    "reference": "affirmed",
+    "engine": "approved",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "too high",
+    "note": "A real and fair catch (affirmed is the exact legal result), but the outcome is the same direction; 2 rather than 3."
+   },
+   {
+    "reference": "35 reads",
+    "engine": "35 leads",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "too high",
+    "note": "A mishearing a reader repairs; 1."
+   },
+   {
+    "reference": "after the entry -- after the sentence",
+    "engine": "after the entry",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "yes",
+    "note": "Good catch: the lawyer's correction is lost, and the timing is what is being argued."
+   },
+   {
+    "reference": "...even at the",
+    "engine": "...even at the trial",
+    "is_real": "partly",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "This is just the engine's minute ending one word later; the instructions say to ignore the edges."
+   }
+  ],
+  "overlooked": []
+ },
+ "worth_a_listen": {
+  "yes": false,
+  "why": "'The way 35 reads' is clearly right from the text."
+ },
+ "summary": "Gemma read the spot correctly and its misses list was good (it caught 'affirmed' to 'approved' and the dropped 'after the sentence'), but it made a harmless r/l mishearing sound like a legal change in two of three labelled answers."
+}

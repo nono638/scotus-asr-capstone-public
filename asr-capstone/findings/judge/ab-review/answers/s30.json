@@ -1,0 +1,155 @@
+{
+ "case": "s30",
+ "X": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 4,
+    "follow_up": "negation added",
+    "reason": "The engine inserted the word 'not' where the reference had no word, fundamentally changing the meaning of the sentence."
+   },
+   "minute": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation added",
+    "reason": "The engine incorrectly inserted the word 'not', changing the meaning of the sentence to its opposite."
+   },
+   "whole": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation added",
+    "reason": "The engine incorrectly inserted the word 'not', changing the speaker's meaning from liking the game to disliking it."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The engine adds a negation ('not') that completely reverses the speaker's sentiment from liking something to disliking it."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The engine added the word 'not' which is a negation, while the reference has nothing at that spot."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "engine",
+    "sure": 3,
+    "reason": "In the context of the sentence 'that alone make me [not] like it', the word 'not' provides the necessary negation to make grammatical and logical sense within the conversation."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "engine",
+    "sure": 3,
+    "reason": "Version A provides a word that completes the grammatical and logical structure of the sentence 'that alone make me not like it', whereas Version B leaves a gap that makes the sentence incomplete."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Whisper": 2,
+    "Granite": 4,
+    "Qwen3": 2,
+    "Canary": 5,
+    "Parakeet": 1
+   },
+   "reason": "Engine 5 is the best because it preserves the most words from the reference including the 'I just' phrase, while Engines 1 and 3 are tied for second for correctly adding 'not' to complete the meaning, and Engines 2 and 4 are worst for losing the 'I just' or adding nonsensical words."
+  },
+  "misses": [
+   {
+    "reference": "FREE FIRE IS BASED AFTER YEAH WHO CAN ACT THE BEST",
+    "engine": "If I had his best after, I'd say hackers, yeah, who can hack the best?",
+    "severity": 4,
+    "what": "completely different meaning regarding game mechanics and hackers"
+   },
+   {
+    "reference": "NEVER THINK IT NEVER THINK ABOUT THE THING THAT WE BOUGHT YEAH",
+    "engine": "Never think about it in that way, but yeah.",
+    "severity": 3,
+    "what": "lost the specific mention of buying something"
+   },
+   {
+    "reference": "YEAH LIKE I JUST THAT ALONE MAKE ME LIKE IT",
+    "engine": "Yeah, like that alone makes me not like it.",
+    "severity": 4,
+    "what": "reversed the sentiment from liking to not liking"
+   },
+   {
+    "reference": "WHICH ONE DO YOU PREFER",
+    "engine": "which one of your prefer",
+    "severity": 2,
+    "what": "wrong word/grammar"
+   }
+  ]
+ },
+ "Y": {
+  "meaning": {
+   "line": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation added",
+    "reason": "The engine adds the word 'not' at the marked place, whereas the reference contains no word there."
+   },
+   "minute": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation added",
+    "reason": "The engine added the word 'not' where the reference indicates there was no word, which changes the sentiment of the sentence from positive to negative."
+   },
+   "whole": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation added",
+    "reason": "The engine added the word 'not' where the reference has no word, which changes the meaning of the sentence from 'makes me like it' to 'makes me not like it'."
+   }
+  },
+  "noticeable": "no",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The engine adds the word 'not', which completely reverses the meaning of the sentence from expressing enjoyment to expressing dislike."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The evidence correctly identifies that the engine added a negative word ('not') where the reference has no text."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 2,
+    "reason": "In Version A, the sentence 'that alone make me like it' is grammatically plausible, whereas Version B's 'that alone make me not like it' is also possible but the context of the conversation is a bit fragmented. However, looking at the flow, 'make me like it' or 'make me not like it' both work, but 'make me not like it' is a more common way to express a reaction to something being 'noob' or bad. Wait, looking closer, 'that alone make me like it' is a more natural way to express a positive sentiment if the speaker is discussing why they enjoy something despite being a noob. Actually, 'not' provides a clearer contrast to the previous sentiment, but 'make me like it' is a complete thought. Let's look at the surrounding context: the speaker is talking about being a noob but still being good. 'That alone make me like it' makes sense as a reason for enjoyment."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "engine",
+    "sure": 2,
+    "reason": "In Version A, the word 'not' makes grammatical sense in the context of the speaker expressing a dislike for something based on a previous point. In Version B, the sentence 'that alone make me like it' is grammatically possible but less likely given the preceding context about 'never thinking about the thing we bought' and the general flow of expressing a negative sentiment."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Whisper": 3,
+    "Granite": 1,
+    "Qwen3": 3,
+    "Canary": 1,
+    "Parakeet": 1
+   },
+   "reason": "Engines 2, 4, and 5 are the most accurate because they correctly identify that there is no text at the marked location, whereas Engines 1 and 3 incorrectly insert the word 'not'."
+  },
+  "misses": [
+   {
+    "reference": "FREE FIRE IS BASED AFTER YEAH WHO CAN ACT THE BEST",
+    "engine": "If I had his best after, I'd say hackers, yeah, who can hack the best?",
+    "severity": 3,
+    "what": "the meaning of the sentence regarding Free Fire and hacking"
+   },
+   {
+    "reference": "YEAH LIKE I JUST THAT ALONE MAKE ME LIKE IT",
+    "engine": "Yeah, like that alone makes me not like it.",
+    "severity": 3,
+    "what": "the preference regarding the game"
+   },
+   {
+    "reference": "WHICH ONE DO YOU PREFER SHEIN FASHION NOVA OR UM ALL RIGHT WHICH ONE DO YOU PREFER SHEIN OR FASHION NOVA",
+    "engine": "Which one of your prefer Sheen, Fashion Nova Or Which one of your prefer Sheen or Fashion Nova",
+    "severity": 1,
+    "what": "the phrasing of the preference question"
+   }
+  ]
+ }
+}

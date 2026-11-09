@@ -1,0 +1,91 @@
+{
+ "case": "s38",
+ "X": {
+  "meaning": {
+   "line": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "same thing",
+    "reason": "The engine correctly transcribed the word used in the reference."
+   },
+   "minute": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "same thing",
+    "reason": "The engine omitted the comma after the word 'reads', but the word itself is identical."
+   },
+   "whole": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "same thing",
+    "reason": "The engine correctly transcribed the word used in the reference transcript."
+   }
+  },
+  "noticeable": "no",
+  "stakes": {
+   "stakes": "no",
+   "reason": "The error is a mere punctuation difference (comma vs no comma) that does not affect the legal interpretation of the sentence."
+  },
+  "rule": {
+   "rule_right": "no",
+   "reason": "The engine's text actually contains 'reads,' just like the reference, so the checker's claim that it said 'leads,' is incorrect."
+  },
+  "blind": {
+   "order1 (reference shown as B)": {
+    "picked": "cant tell",
+    "sure": 3,
+    "reason": "Both versions are identical at the marked spot and throughout the entire text provided."
+   },
+   "order2 (reference shown as A)": {
+    "picked": "cant tell",
+    "sure": 3,
+    "reason": "Both versions are identical at the marked spot and throughout the entire text provided."
+   }
+  },
+  "misses": []
+ },
+ "Y": {
+  "meaning": {
+   "line": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "same thing",
+    "reason": "The engine's text is identical to the reference at the marked place."
+   },
+   "minute": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "same thing",
+    "reason": "The engine's text is identical to the reference at the marked place."
+   },
+   "whole": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "same thing",
+    "reason": "The engine's text is identical to the reference text at the marked place."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "no",
+   "reason": "The engine's text is identical to the reference text at the marked location, so there is no risk of being misled."
+  },
+  "rule": {
+   "rule_right": "no",
+   "reason": "The evidence provided by the checker is incorrect because the engine's text matches the reference text exactly."
+  },
+  "blind": {
+   "order1 (reference shown as B)": {
+    "picked": "engine",
+    "sure": 3,
+    "reason": "Both versions are identical at the marked location, with both containing the word 'reads'."
+   },
+   "order2 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "Both versions are identical at the marked location, with both containing the word 'reads'."
+   }
+  },
+  "misses": []
+ }
+}

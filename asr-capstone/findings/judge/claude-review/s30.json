@@ -1,0 +1,105 @@
+{
+ "case": "s30",
+ "own": {
+  "meaning": "opposite",
+  "severity": 4,
+  "noticeable": "no",
+  "follow_up": "negation added",
+  "stakes": "maybe",
+  "reason": "The reference says that alone makes the speaker like the game, and the engine says it makes him not like it, the reverse.",
+  "rule_right": "yes",
+  "rule_reason": "The engine has a 'not' that the reference lacks, and three of the four other engines left it out too (though one other did write it).",
+  "more_plausible": "cant tell",
+  "plausible_how_clear": "Not clear at all: in the engine's version the game is full of 'hackers', and that making him not like it is very natural; the reference line 'who can act the best' is itself muddled, and a short 'not' is easy for a hand transcriber to miss. Two of five engines heard 'not'. This needs the audio.",
+  "my_misses": [
+   {
+    "reference": "THAT ALONE MAKE ME LIKE IT",
+    "engine": "that alone makes me not like it",
+    "severity": 4,
+    "note": "Reversed preference (if the reference is right)."
+   },
+   {
+    "reference": "FREE FIRE IS BASED AFTER YEAH WHO CAN ACT THE BEST",
+    "engine": "If I had his best after, I'd say hackers, yeah, who can hack the best?",
+    "severity": 2,
+    "note": "Game name Free Fire lost, 'act' becomes 'hack', and 'I'd say hackers' is added; both texts are muddled."
+   },
+   {
+    "reference": "NEVER THINK ABOUT THE THING THAT WE BOUGHT",
+    "engine": "Never think about it in that way, but yeah",
+    "severity": 2,
+    "note": "Different content; reference itself looks doubtful."
+   }
+  ]
+ },
+ "review": {
+  "labelled/line": {
+   "verdict": "partly",
+   "why": "Severity 4 and 'negation added' are right if the reference is right, and 'changed' should be 'opposite', but 'noticeable: yes' is wrong: 'that alone makes me not like it' reads as perfectly natural."
+  },
+  "labelled/minute": {
+   "verdict": "partly",
+   "why": "Opposite and severity 4 are right against the reference, but no reader without the reference would notice anything here."
+  },
+  "labelled/whole": {
+   "verdict": "partly",
+   "why": "Same as the minute: right size, wrong 'noticeable'."
+  },
+  "rule/minute": {
+   "verdict": "agree",
+   "why": "The engine has a 'not' the reference lacks, and three of the four other engines left it out."
+  },
+  "blind/order1": {
+   "verdict": "partly",
+   "why": "Picked 'not' (the engine), which may well be right, but the reason is false: 'that alone make me like it' is a complete sentence and does not need 'not' to make grammatical sense; 'sure 3' is not earned."
+  },
+  "blind/order2": {
+   "verdict": "partly",
+   "why": "Same pick, now arguing the other version 'leaves a gap' and is 'incomplete'. It seems to read the empty [[ ]] marker as a missing word, which is a flaw in how the blind prompt shows an empty spot. Consistent pick, unsound reasoning."
+  },
+  "rank/minute": {
+   "verdict": "disagree",
+   "why": "Against the reference, the three engines without 'not' should tie at 1 and the two with 'not' come last; Gemma instead praised the 'not' engines for 'correctly adding' it, and put Engine 4, almost word for word the reference ('i just that alone make me like it'), last for supposedly losing 'I just', which it did not lose."
+  },
+  "misses": [
+   {
+    "reference": "FREE FIRE IS BASED AFTER YEAH WHO CAN ACT THE BEST",
+    "engine": "If I had his best after, I'd say hackers, yeah, who can hack the best?",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "too high",
+    "note": "A real difference (game name lost, 'hackers' added), but the reference line is itself muddled; 2, not 4."
+   },
+   {
+    "reference": "NEVER THINK IT NEVER THINK ABOUT THE THING THAT WE BOUGHT YEAH",
+    "engine": "Never think about it in that way, but yeah.",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "too high",
+    "note": "Different content, but the reference looks doubtful too; 2."
+   },
+   {
+    "reference": "YEAH LIKE I JUST THAT ALONE MAKE ME LIKE IT",
+    "engine": "Yeah, like that alone makes me not like it.",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "yes",
+    "note": "The reversal; 4 is right against the reference."
+   },
+   {
+    "reference": "WHICH ONE DO YOU PREFER",
+    "engine": "which one of your prefer",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "A misheard 'do you'; a reader understands; 0-1."
+   }
+  ],
+  "overlooked": []
+ },
+ "worth_a_listen": {
+  "yes": true,
+  "why": "The most important listen in this batch: two of five engines (Whisper and Qwen3) heard 'not', and in the engine's version ('who can hack the best ... that alone makes me not like it') the 'not' makes good sense, so the hand transcript may have dropped it. If so, this is a reference error, not an engine error."
+ },
+ "summary": "Gemma rightly treated the added 'not' as a full reversal, but called it noticeable when it reads naturally, and its blind and rank answers argued that 'not' was needed for grammar, which is false and seems to come from reading the empty [[ ]] marker as a gap; it ranked the reference-matching engines last."
+}

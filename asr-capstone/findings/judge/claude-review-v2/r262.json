@@ -1,0 +1,1 @@
+{"case": "r262", "own": {"reason": "The reference has the unmarked verb \"it start\" in a story about the past; the engine writes \"it started\". In this past-tense story both mean the same thing.", "meaning": "same", "severity": 0, "follow_up": "meaning kept", "reference_doubt": "no"}}

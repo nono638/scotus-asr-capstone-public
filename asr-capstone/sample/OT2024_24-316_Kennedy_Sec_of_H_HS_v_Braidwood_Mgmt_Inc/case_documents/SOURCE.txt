@@ -1,0 +1,4 @@
+Filings for No. 24-316, Kennedy v. Braidwood Management, Inc.
+Docket page: https://www.supremecourt.gov/docket/docketfiles/html/public/24-316.html
+That docket links 100 filing PDFs. The 12 files here are a sample of the briefs,
+downloaded to test whether a case's own filings can supply a custom vocabulary list.

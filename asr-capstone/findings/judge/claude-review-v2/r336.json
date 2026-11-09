@@ -1,0 +1,1 @@
+{"case": "r336", "own": {"reason": "The engine wrote \"She said\" for \"she say\" in a past-tense story; the bare verb is narrative and the engine's past tense means the same.", "meaning": "same", "severity": 0, "follow_up": "meaning kept", "reference_doubt": "maybe", "misspoke": "no"}}

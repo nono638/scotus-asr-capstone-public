@@ -1,0 +1,36 @@
+{
+ "case": "s09",
+ "own": {
+  "meaning": "changed",
+  "severity": 2,
+  "noticeable": "yes",
+  "follow_up": "stock phrase",
+  "stakes": "maybe",
+  "reason": "Over silence, the engine put \"I've already said that.\" at the start of Mr. Brindley's turn, words nobody said, right before his opening \"Thank you, Mr. Chief Justice\".",
+  "rule_right": "yes",
+  "rule_reason": "The reference has nothing at the spot and the engine has a full sentence; the 0% speech figure fits the pause before counsel starts.",
+  "more_plausible": "reference",
+  "plausible_how_clear": "Very clear: counsel opens with \"Thank you, Mr. Chief Justice, and may it please the Court\"; he has said nothing yet, so \"I've already said that\" makes no sense.",
+  "my_misses": [
+   {"reference": "", "engine": "I've already said that.", "severity": 2},
+   {"reference": "this Court made in X-Citement Video", "engine": "this court made an excitement video", "severity": 1}
+  ]
+ },
+ "review": {
+  "labelled/line": {"verdict": "agree", "why": "Changed, 2, noticeable, stock phrase: all fair; \"stakes: no\" is defensible since it doesn't touch the legal argument."},
+  "labelled/minute": {"verdict": "partly", "why": "Right description, but it raises severity to 3 and stakes to yes for the same words it rated 2 and no on the line; a stray sentence before an opening is a wrong detail, not a wrong fact."},
+  "labelled/whole": {"verdict": "disagree", "why": "Severity 4 (\"reverses or loses the point\") is far too high for a stray sentence before the argument starts, and \"unrelated\" contradicts its other answers when the prompt itself gives \"I've already said that\" as the example of a stock phrase; judged against the minute text only."},
+  "rule/minute": {"verdict": "agree", "why": "Copied both sides correctly and confirmed the extra words."},
+  "blind/order1": {"verdict": "disagree", "why": "Picked B, the invented sentence, claiming counsel commonly says \"i've already said that\" and that the reference's move from \"thank you mr chief justice\" to the case is abrupt; neither claim holds, as that move is the standard opening."},
+  "blind/order2": {"verdict": "partly", "why": "Right pick with the right reason (no lawyer says that before his opening), but it picked B in order 1 too, so the second slot, not the sense, drove both."},
+  "rank/minute": {"verdict": "disagree", "why": "It puts Whisper (Engine 3) below Parakeet (Engine 1) for a doubled \"court. court.\" after the spot, when Parakeet invented a whole sentence at the spot; Engines 2 and 3 should tie first and Engine 1 should be last."},
+  "misses": [
+   {"reference": "in X-Citement Video", "engine": "an excitement video", "is_real": "yes", "matters": "yes", "severity_fair": "too high", "note": "Mostly a case name written differently, though \"made an excitement video\" does garble the sentence; 1, not 3."},
+   {"reference": "Rehaif", "engine": "Rahaf", "is_real": "yes", "matters": "no", "severity_fair": "too high", "note": "A name spelled differently, which the prompt said to leave out."},
+   {"reference": "", "engine": "I've already said that.", "is_real": "yes", "matters": "yes", "severity_fair": "yes", "note": "The flagged insertion; 2 is fair."}
+  ],
+  "overlooked": []
+ },
+ "worth_a_listen": {"yes": false, "why": "The text and the 0% speech figure agree it is invented; a listen would add little."},
+ "summary": "Gemma spotted the invented \"I've already said that\" every time but rated it anywhere from 2 to 4 across requests, took the second slot in both blind orders, and ranked the engine that invented it above one with a doubled word."
+}

@@ -1,0 +1,94 @@
+# Settings for a pipeline run.
+#
+# Anything left out falls back to the defaults in scotus_asr/config.py, which are
+# documented there. Copy this file, change what you need, and pass it with
+# --config to keep one experiment's settings separate from another's.
+#
+# Every run saves the settings it actually used as config_used.yaml, so a result
+# can always be traced back to what produced it.
+
+paths:
+  # Left unset so they resolve relative to the installed package. Set them only
+  # if the sample data or the results live somewhere else.
+  # capstone_dir: .../asr-capstone
+  # sample_dir:   .../asr-capstone/sample
+  # runs_dir:     .../asr-capstone/runs
+
+asr:
+  engine: faster-whisper
+  model: large-v3
+  device: cuda
+  # Half precision. About 5 GB of video memory, which is nothing on a 24 GB
+  # card. An 8-bit type would save 2 GB and is the less well-travelled path;
+  # half precision is what the published accuracy numbers were measured with.
+  compute_type: float16
+  language: en
+  beam_size: 5
+  word_timestamps: true
+
+  # Off on purpose. Feeding the model its own previous output is the main cause
+  # of it getting stuck repeating a phrase, and one repetition loop ruins a
+  # 150-minute transcription.
+  condition_on_previous_text: false
+
+  # Also off on purpose, and this one is the more important choice.
+  # Voice activity detection skips audio that sounds like silence. It is a known
+  # cause of quietly dropped speech - which is the exact thing this project
+  # measures. Leaving it on would mean reporting the filter's mistakes as the
+  # model's. Turn it on as a separate run and compare: the difference between the
+  # two is itself a result worth reporting.
+  vad_filter: false
+
+  # If a segment decodes badly, retry it hotter rather than accept the mess.
+  temperatures: [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
+  compression_ratio_threshold: 2.4
+  log_prob_threshold: -1.0
+  no_speech_threshold: 0.6
+
+scoring:
+  # A run of missing words at least this long counts as an omitted span. About
+  # ten seconds of speech at the pace of appellate argument.
+  omission_min_words: 25
+  # Ignore up to this many matched words inside a gap. Without it, one stray
+  # "the" splits a sixty-second omission into two shorter ones and the worst
+  # failures disappear from the statistics.
+  omission_merge_gap: 2
+  # Spoken words per audio minute. Outside this band, the audio and the
+  # transcript are probably not the same proceeding.
+  #
+  # Widened from 165-197 after measuring 138 arguments across OT2010 and OT2017.
+  # The original numbers came from three hand-checked cases and were far too
+  # tight: the real spread runs 152.9 to 203.7, so the old band flagged 32 cases,
+  # 23% of them. Every one was a false alarm - their error rates, 4.0% to 8.6%,
+  # sit inside the range of the cases it did not flag.
+  #
+  # A check that cries wolf on a quarter of the corpus is worse than no check,
+  # because the one real mismatch gets read as more noise. This band covers
+  # everything observed with a little margin either side, and still catches what
+  # it is for: audio paired with the wrong transcript reads wildly wrong, not
+  # slightly wrong.
+  #
+  # Worth revisiting once the other fourteen terms are measured.
+  words_per_minute_min: 145.0
+  words_per_minute_max: 210.0
+
+ocr:
+  # Boxes come from the PDF's own text layer. On the scanned transcripts that
+  # text is poor but its positions are good, which is all the geometry needs -
+  # and it requires nothing installed. The obvious alternative, Surya, would
+  # have pulled torch 2.14 from ordinary PyPI and silently replaced the CUDA
+  # build of PyTorch with a processor-only one.
+  layout_engine: embedded
+  text_engine: glm-ocr          # reads the body text, 0.9B, MIT licensed
+  text_model: zai-org/GLM-OCR
+  # Measured, not guessed: the same page read at 150, 200 and 300 dots per inch
+  # gave identical text, so there is nothing to gain by rendering larger.
+  render_dpi: 200
+  upscale: 1.0
+  expected_lines_per_page: 25
+  gutter_width_fraction: 0.12
+
+run:
+  max_attempts: 3
+  retry_backoff_seconds: 5.0
+  flush_every_row: true

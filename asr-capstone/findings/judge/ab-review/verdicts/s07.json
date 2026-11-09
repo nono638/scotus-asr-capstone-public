@@ -1,0 +1,15 @@
+{"case": "s07",
+ "parts": {
+  "meaning/line": {"X": "right", "Y": "partly", "better": "X", "why": "Both say changed and unrelated. The invented 'here since 1989 as he was going over to California' adds a false fact (a date, a move), which is severity 3; X gives 3, Y gives 4, but the speaker's point (trying to recall someone) is not reversed or lost."},
+  "meaning/minute": {"X": "right", "Y": "partly", "better": "X", "why": "Same as the line view: X 3, Y 4."},
+  "meaning/whole": {"X": "right", "Y": "right", "better": "tie", "why": "Both give changed, 3, unrelated. 'Continues the talk' would also fit, since the speaker is listing local people, but unrelated is defensible."},
+  "noticeable": {"X": "right", "Y": "right", "better": "tie", "why": "Both say yes; the clause drops in between 'somebody else. Um' and 'Oh my' with no lead-in."},
+  "stakes": {"X": "right", "Y": "right", "better": "tie", "why": "Both say yes: a researcher would take a made-up date and move as spoken."},
+  "rule": {"X": "right", "Y": "right", "better": "tie", "why": "Both confirm the extra words with nothing in the reference."},
+  "blind": {"X": "partly", "Y": "partly", "better": "tie", "why": "Both pick the engine's version in order 1 (sure 2) and the reference in order 2 (sure 3), so both flip with the order."},
+  "rank": {"X": "wrong", "Y": "right", "better": "Y", "why": "Qwen3 and Whisper both write nothing at the spot; Parakeet invents a sentence. X ties Qwen3 with Parakeet and says Engine 1 'hallucinated extra content' at the spot, which is false. Y puts Parakeet last and Qwen3 just behind Whisper for the nearby 'A lot of people', which is fair."},
+  "misses": {"X": {"real_and_matter": 2, "trivial": 1, "not_real": 0, "important_missed": 0},
+             "Y": {"real_and_matter": 2, "trivial": 1, "not_real": 0, "important_missed": 0},
+             "better": "tie", "why": "Both find the invented clause, 'Why I cannot think?' turned into 'I can I think' (the can't-remember is lost), and the garbled name 'Turner Prince'. Y quotes the invented clause cleanly against an empty reference; X quotes a long, loosely matched stretch."}
+ },
+ "overall": {"better": "Y", "why": "X's severity is a notch better, but its rank is wrong and rests on a false reading of Engine 1; otherwise the two sets match."}}

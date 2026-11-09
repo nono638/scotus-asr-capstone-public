@@ -1,0 +1,171 @@
+{
+ "case": "s12",
+ "own": {
+  "meaning": "reworded",
+  "severity": 1,
+  "noticeable": "no",
+  "follow_up": "meaning kept",
+  "stakes": "maybe",
+  "reason": "The speaker said \"we be walking\" (we often walk up the street) and Whisper wrote \"we'd be walking\" (we would be walking), which still reads as a habit, but the speaker's own grammar is replaced with standard English.",
+  "rule_right": "yes",
+  "rule_reason": "The reference has habitual \"we be\", Whisper has \"we'd be\" (we would be), and Qwen3 and Parakeet (Engines 3 and 1) both kept \"we be\"; the label and evidence match the texts.",
+  "more_plausible": "reference",
+  "plausible_how_clear": "Fairly clear but not certain from text: \"we be walking ... and we'll see stuff\" fits a habitual present, and two other engines wrote \"we be\"; \"we'd be\" is also natural English, so the text alone does not settle it.",
+  "my_misses": [
+   {
+    "reference": "Yo, you been missing some dope stuff",
+    "engine": "no i been missing some dope stuff",
+    "severity": 3,
+    "what": "\"you\" becomes \"I\": who has been missing the events is reversed (and it now sounds like the interviewer speaking)"
+   },
+   {
+    "reference": "forty-five people",
+    "engine": "45 five people",
+    "severity": 2,
+    "what": "the number is garbled into \"45 five\""
+   },
+   {
+    "reference": "Go in there every Monday",
+    "engine": "we there every Monday",
+    "severity": 1,
+    "what": "\"go in there\" becomes \"we there\": an instruction turns into a broken statement"
+   },
+   {
+    "reference": "walking, like, up the street",
+    "engine": "walking like yeah",
+    "severity": 1,
+    "what": "where they walk (\"up the street\") is lost"
+   },
+   {
+    "reference": "Aw. Yeah, sick.",
+    "engine": "yes my",
+    "severity": 0,
+    "what": "a reaction is misheard"
+   },
+   {
+    "reference": "Yeah, that's the spot",
+    "engine": "",
+    "severity": 0,
+    "what": "small remark left out"
+   }
+  ]
+ },
+ "review": {
+  "labelled/line": {
+   "verdict": "partly",
+   "why": "It rightly says the habitual \"be\" became \"would\", but it calls \"we'd be\" \"past tense\" (it is \"would\", which itself can mean a past habit), gives severity 3 (meant for numbers and who-did-what) and says a reader would notice, when \"my mom and i we'd be walking\" reads as normal English."
+  },
+  "labelled/minute": {
+   "verdict": "partly",
+   "why": "Severity 2 is closer, but \"noticeable: yes\" is not honest for a reader without the reference, and \"meaning changed\" overstates it: both versions describe something they often do."
+  },
+  "labelled/whole": {
+   "verdict": "partly",
+   "why": "It now calls it \"past conditional\", which is fairer, but keeps \"noticeable: yes\" and \"meaning changed\"; I judged only from the minute text."
+  },
+  "rule/minute": {
+   "verdict": "agree",
+   "why": "Reference \"we be\", engine \"we'd be\", and Qwen3 and Parakeet kept \"we be\"; the rule is right."
+  },
+  "blind/order1": {
+   "verdict": "agree",
+   "why": "Picked the reference (A); the reason leans on how people in this corpus talk, which the prompt allows, though \"sure 3\" is high when \"we'd be\" is also natural."
+  },
+  "blind/order2": {
+   "verdict": "agree",
+   "why": "Picked the reference again (now B), so the choice did not depend on order; same reason, same over-confidence."
+  },
+  "rank/minute": {
+   "verdict": "partly",
+   "why": "Whisper last is right, but Parakeet (Engine 1) and Qwen3 (Engine 3) both kept \"we be\" and should tie; Gemma put Qwen3 second for \"punctuation/word breaks\", which the prompt says to ignore."
+  },
+  "misses": [
+   {
+    "reference": "Aw. Yeah, sick.",
+    "engine": "yes my",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "A short reaction misheard; severity 3 is far too high, 0 at most."
+   },
+   {
+    "reference": "we come and support",
+    "engine": "we come to support",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "Same meaning; 0."
+   },
+   {
+    "reference": "forty-five",
+    "engine": "45 five",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "yes",
+    "note": "The number is garbled; 2 is fair."
+   },
+   {
+    "reference": "Yo , you been missing",
+    "engine": "i been missing",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "too high",
+    "note": "Real and the most important miss: \"you\" became \"I\", so who missed the events is reversed. But the \"what\" (\"changed speaker\") misdescribes it, and 3 fits better than 4 since the main point (the Monday events) survives."
+   },
+   {
+    "reference": "we be walking",
+    "engine": "we'd be walking",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "too high",
+    "note": "The flagged grammar change; it calls \"would\" past tense again. 1 rather than 2, since a habit is still described."
+   },
+   {
+    "reference": "like, up the street and",
+    "engine": "like yeah and",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "too high",
+    "note": "A small detail of place lost; 1, not 3."
+   },
+   {
+    "reference": "Go in there every Monday",
+    "engine": "we there every monday",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "too high",
+    "note": "The urging to go is lost but \"every Monday\" survives; 1, not 3."
+   },
+   {
+    "reference": "dope poets",
+    "engine": "poets",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "An adjective of praise dropped; 0."
+   },
+   {
+    "reference": "It's mad dope",
+    "engine": "that's mad dope",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "yes",
+    "note": "Correctly given 0, though it did not need listing."
+   },
+   {
+    "reference": "Okay. Right, like it Okay, ugh. But, um , oh, okay, uh,",
+    "engine": "right like okay i'm oh okay",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "Gemma itself calls this filler, then gives it 3; it should be 0 or left out."
+   }
+  ],
+  "overlooked": []
+ },
+ "worth_a_listen": {
+  "yes": true,
+  "why": "Whether the interviewer said \"we be\" or \"we'd be\" is a one-sound difference that two engines heard one way and Whisper the other; only the audio settles whether this is a real rewrite."
+ },
+ "summary": "Gemma saw the right grammar issue and its blind picks were right in both orders, but it called \"we'd be\" past tense, claimed a reader would notice, and inflated almost every severity in the misses list (fillers and a reaction at 3)."
+}

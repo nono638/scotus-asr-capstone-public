@@ -1,0 +1,163 @@
+{
+ "case": "s32",
+ "X": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 2,
+    "follow_up": "meaning changed",
+    "reason": "The engine inserted the contraction 'they're' where the reference shows the zero-copula 'they not'."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 2,
+    "follow_up": "meaning changed",
+    "reason": "The engine added the verb 'are' (as 're) to the phrase, changing the dialectal feature from 'they not' to standard 'they're not'."
+   },
+   "whole": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "meaning kept",
+    "reason": "The engine added a contraction ('they're') to the AAVE construction ('they not') used in the reference, but the semantic content remains identical."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The engine adds a contraction ('they're') that standardizes the grammar, erasing the specific African American English feature (zero copula/omitted 'are') present in the reference."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The engine added the 're (are) to the speaker's original AAE construction 'they not'."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "The speaker's dialect and the surrounding context of the sentence ('don't nobody gotta do shit for you') are more consistent with the zero copula/omitted 'are' found in version A than the standard 'they're not' in version B."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "The speaker's dialect is African American Vernacular English (AAVE), which frequently uses zero copula (omitting 'is' or 'are'), making 'they not doing' much more linguistically consistent with the rest of the transcript than 'they're not doing'."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Parakeet": 2,
+    "Qwen3": 1,
+    "Whisper": 3
+   },
+   "reason": "Engine 2 perfectly preserves the AAE grammar of the reference, while Engine 1 introduces standard grammar ('they're not') and Engine 3 introduces a semantic error ('not not going')."
+  },
+  "misses": [
+   {
+    "reference": "this woman done did for me",
+    "engine": "this woman didn't do it for me",
+    "severity": 4,
+    "what": "reverses the meaning from completed action to negation"
+   },
+   {
+    "reference": "grow to appreciate it",
+    "engine": "wrote to appreciate it",
+    "severity": 3,
+    "what": "wrong word that changes the meaning of the sentiment"
+   },
+   {
+    "reference": "nah slim",
+    "engine": "nah, stuff",
+    "severity": 3,
+    "what": "incorrect word substitution for the slang term"
+   },
+   {
+    "reference": "what they not doing",
+    "engine": "what they're not doing",
+    "severity": 0,
+    "what": "grammatical change from AAE to standard English"
+   },
+   {
+    "reference": "in a s in a different kind of way",
+    "engine": "in a sp in a different way",
+    "severity": 1,
+    "what": "slight transcription error of a stutter/fragment"
+   }
+  ]
+ },
+ "Y": {
+  "meaning": {
+   "line": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "meaning kept",
+    "reason": "The engine added the contraction 're"
+   },
+   "minute": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "meaning kept",
+    "reason": "The engine added a contraction ('re) to the verb, changing the AAE feature of zero copula ('they not') to standard English ('they're not')."
+   },
+   "whole": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "meaning kept",
+    "reason": "The engine added an 're"
+   }
+  },
+  "noticeable": "no",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The engine's use of 'they're not' introduces a standard English contraction that obscures the speaker's use of zero copula, which is a key feature of African American English being studied."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The engine added the contraction 're' (are), whereas the reference correctly preserves the speaker's AAE grammar without the copula."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "In African American Vernacular English (AAVE), the use of 'they not' (omitting the copula) is much more common and characteristic of the dialect than the standard 'they're not'. The surrounding context of the transcript also shows other features of AAVE, such as 'she do her shit' and 'don't nobody gotta do nothing'."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "The speaker is using African American Vernacular English (AAVE), where the zero copula (omitting 'are') is a standard grammatical feature. 'They not doing' is much more consistent with the speaker's established dialect and the surrounding grammar than the standard 'they're not'."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Parakeet": 2,
+    "Qwen3": 1,
+    "Whisper": 3
+   },
+   "reason": "Engine 2 is the only engine that perfectly matches the reference transcript, while Engine 1 adds an incorrect contraction and Engine 3 adds an extra word and changes the verb."
+  },
+  "misses": [
+   {
+    "reference": "this woman done did for me",
+    "engine": "this woman didn't do it for me",
+    "severity": 3,
+    "what": "negation of woman's actions"
+   },
+   {
+    "reference": "I just grow to appreciate it",
+    "engine": "I just wrote to appreciate it",
+    "severity": 2,
+    "what": "verb tense/meaning of appreciation"
+   },
+   {
+    "reference": "nah slim",
+    "engine": "nah, stuff",
+    "severity": 2,
+    "what": "slang/address term change"
+   },
+   {
+    "reference": "what they not doing",
+    "engine": "what they're not doing",
+    "severity": 1,
+    "what": "subject-verb agreement/tense change"
+   }
+  ]
+ }
+}

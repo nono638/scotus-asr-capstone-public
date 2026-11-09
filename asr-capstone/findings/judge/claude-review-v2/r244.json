@@ -1,0 +1,1 @@
+{"case": "r244", "own": {"reason": "The engine writes \"latest slides\" for \"later slides\". The speaker means slides further on in the deck, not the newest ones, but a reader would hardly notice.", "meaning": "reworded", "severity": 1, "follow_up": "same thing", "reference_doubt": "no"}}

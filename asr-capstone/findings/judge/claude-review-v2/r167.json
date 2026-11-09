@@ -1,0 +1,1 @@
+{"case": "r167", "own": {"reason": "The engine turns 'I know you now' into 'I know you're not', adding a negative. The friendly remark that she now knows the interviewer is lost and the line no longer makes sense.", "meaning": "changed", "severity": 2, "follow_up": "negation added", "reference_doubt": "no"}}

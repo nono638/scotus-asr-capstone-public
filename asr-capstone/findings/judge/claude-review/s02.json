@@ -1,0 +1,44 @@
+{
+ "case": "s02",
+ "own": {
+  "meaning": "opposite",
+  "severity": 4,
+  "noticeable": "yes",
+  "follow_up": "negation lost",
+  "stakes": "maybe",
+  "reason": "The speaker said they \"DIDN'T\" have a real football; the engine wrote \"did\", which clashes with the very next sentence about making a ball out of paper and plastic.",
+  "rule_right": "yes",
+  "rule_reason": "The record has \"DIDN'T\" and the engine \"did\" at the spot, a negative on one side only.",
+  "more_plausible": "reference",
+  "plausible_how_clear": "Very clear: the next words are \"we made something out of um paper out of plastic ... we just made it look like football\".",
+  "my_misses": [
+   {"reference": "WE DIDN'T ACTUALLY HAVE A A REAL FOOTBALL", "engine": "we did actually have a real football", "severity": 4},
+   {"reference": "MY OTHER BROTHER", "engine": "my elder brother", "severity": 1},
+   {"reference": "WE JUST", "engine": "we're just trying to adjust", "severity": 1},
+   {"reference": "WE MADE IT CIRCLICAL IN SHAPE", "engine": "made it spectral in shape", "severity": 2},
+   {"reference": "AND IT LOOKED LIKE A FOOTBALL BECAUSE", "engine": "yeah. Because", "severity": 1},
+   {"reference": "Speaker B: YEAH YEAH YEAH I GET YOU / YEAH YEAH I GET IT", "engine": "", "severity": 0}
+  ]
+ },
+ "review": {
+  "labelled/line": {"verdict": "partly", "why": "Opposite, 4 and negation lost are right, but \"noticeable: yes\" doesn't hold for the line alone (\"we did actually have a real football. We\"), which reads fine without the paper-ball sentence."},
+  "labelled/minute": {"verdict": "agree", "why": "Right, and its stakes note correctly points to the paper-and-plastic sentence; \"stakes: yes\" is a bit strong for a childhood story but acceptable."},
+  "labelled/whole": {"verdict": "agree", "why": "Sound answer; judged against the minute text only."},
+  "rule/minute": {"verdict": "agree", "why": "Copied \"DIDN'T\" and \"did\" exactly and confirmed the rule."},
+  "blind/order1": {"verdict": "agree", "why": "Picked A (the reference) with the right reason, the homemade ball."},
+  "blind/order2": {"verdict": "agree", "why": "Picked the reference again after the swap with the same reason."},
+  "rank/minute": {"verdict": "partly", "why": "It rightly puts the two \"did\" engines (1, 2) last, but splits the three \"didn't\" engines 1-2-3 over off-spot slips (\"I was always defender\", a dropped \"I was more like defender\") when the prompt said to rank on the spot only; 3, 4 and 5 should tie."},
+  "misses": [
+   {"reference": "WE JUST", "engine": "we're just trying to adjust", "is_real": "yes", "matters": "yes", "severity_fair": "too high", "note": "Real added words, but a vague filler clause; 1, not 3."},
+   {"reference": "MY OTHER BROTHER", "engine": "my elder brother", "is_real": "yes", "matters": "yes", "severity_fair": "yes", "note": "Small detail change; 1 is fair."},
+   {"reference": "WE DIDN'T ACTUALLY HAVE A A REAL FOOTBALL", "engine": "we did actually have a real football", "is_real": "yes", "matters": "yes", "severity_fair": "yes", "note": "The main error."},
+   {"reference": "CIRCLICAL IN SHAPE", "engine": "spectral in shape", "is_real": "yes", "matters": "yes", "severity_fair": "too high", "note": "Wrong shape word, but a detail (2), not a wrong fact (3)."},
+   {"reference": "WAS NEVER WAS NEVER CATCH US PLAYING BALL", "engine": "must never catch us playing football", "is_real": "yes", "matters": "no", "severity_fair": "too high", "note": "The texts differ, but both say the dad must not catch them playing; the engine's version is just cleaner. \"Changed meaning of the father's actions\" is wrong."}
+  ],
+  "overlooked": [
+   {"reference": "AND IT LOOKED LIKE A FOOTBALL BECAUSE", "engine": "yeah. Because", "severity": 1, "note": "The engine drops the clause that ties the homemade ball to the reason (hiding it from their dad)."}
+  ]
+ },
+ "worth_a_listen": {"yes": false, "why": "The text settles it: the next sentence describes a homemade ball, and 3 of the 4 other engines heard \"didn't\"."},
+ "summary": "Gemma judged the negation itself correctly in every request, but over-rated side differences in its misses list (two items at 3 that are 1 or less, one with a wrong description) and split tied engines in the ranking over slips away from the spot."
+}

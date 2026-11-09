@@ -1,0 +1,28 @@
+{
+ "case": "s38",
+ "own": {
+  "meaning": "same",
+  "severity": 0,
+  "noticeable": "no",
+  "follow_up": "same thing",
+  "stakes": "no",
+  "reason": "Control: both texts say \"the way 35 reads\"; nothing went wrong.",
+  "rule_right": "no",
+  "rule_reason": "The evidence says the engine wrote \"leads\", but the engine text has \"reads\", exactly like the reference.",
+  "more_plausible": "cant tell",
+  "plausible_how_clear": "The two blind versions are identical (both \"reads\"), so there is nothing to choose between.",
+  "my_misses": []
+ },
+ "review": {
+  "labelled/line": {"verdict": "agree", "why": "same / 0 / same thing: correct for an identical text."},
+  "labelled/minute": {"verdict": "partly", "why": "The answers are right, but the reason invents a detail: it says the engine \"omitted the comma after the word 'reads'\", when both texts have \"reads,\" with the comma."},
+  "labelled/whole": {"verdict": "agree", "why": "Correct."},
+  "rule/minute": {"verdict": "agree", "why": "Rightly said the checker's \"leads\" is not in the engine text, which has \"reads,\"."},
+  "blind/order1": {"verdict": "agree", "why": "\"cant tell\" because the versions are identical: exactly right."},
+  "blind/order2": {"verdict": "agree", "why": "Same, consistent."},
+  "misses": [],
+  "overlooked": []
+ },
+ "worth_a_listen": {"yes": false, "why": "Control case; nothing to hear."},
+ "summary": "Gemma passed this control, but in the minute view it made up a missing comma to explain a difference that does not exist, a sign it sometimes invents details in its reasons."
+}

@@ -1,0 +1,150 @@
+{
+ "case": "s16",
+ "own": {
+  "meaning": "changed",
+  "severity": 2,
+  "noticeable": "maybe",
+  "follow_up": "content lost, gap hidden",
+  "stakes": "maybe",
+  "reason": "Granite left out \"I missed a mention about the Ninja Turtles\" (and the words before it, writing a repeat of \"it was like for just one month or so\" instead), so \"Yeah, of course. The intro song.\" arrives with no topic; the Ninja Turtles are only named later.",
+  "rule_right": "yes",
+  "rule_reason": "Eight words are missing and the other four engines wrote seven of them (\"I missed to mention about the Ninja Turtles\"), as the evidence says.",
+  "more_plausible": "reference",
+  "plausible_how_clear": "Clear: \"what else have [nothing] yeah of course their intro song\" is an unfinished question, and \"their intro song\" needs something to refer to.",
+  "my_misses": [
+   {
+    "reference": "UH HUH I HAD TO SAY THIS YEAH WHAT ELSE LIKE I'M THINKING WHAT ELSE HAVE I MISSED A MENTION ABOUT THE NINJA TURTLES",
+    "engine": "Yeah, it was like for just one month or so.",
+    "severity": 2,
+    "what": "the question that brings up the Ninja Turtles is replaced by a repeat of an earlier line"
+   },
+   {
+    "reference": "I MEAN IT DIDN'T LAST THAT LONG",
+    "engine": "I mean, did it last that long?",
+    "severity": 2,
+    "what": "a statement (it didn't last long) becomes a question, and the \"not\" is lost"
+   },
+   {
+    "reference": "REALLY BUT YOU USED TO",
+    "engine": "Really.",
+    "severity": 1,
+    "what": "\"but you used to\" (do kung fu) is dropped"
+   },
+   {
+    "reference": "",
+    "engine": "And it was like for just one month or so",
+    "severity": 0,
+    "what": "line written twice"
+   }
+  ]
+ },
+ "review": {
+  "labelled/line": {
+   "verdict": "partly",
+   "why": "It is right that the topic-setting clause is gone, but severity 4 and stakes \"yes\" are too strong for a casual chat in which \"Ninja Turtles\" is said again a few lines later."
+  },
+  "labelled/minute": {
+   "verdict": "partly",
+   "why": "Severity 3 is a notch high (no number, party or fact is wrong) and stakes \"yes\" is strong; \"gap shows\" is arguable, since the engine's text has no visible break, only a jump in topic."
+  },
+  "labelled/whole": {
+   "verdict": "partly",
+   "why": "Same as the minute answer; its description of the lost words as the speaker searching for a topic is accurate. I judged only from the minute."
+  },
+  "rule/minute": {
+   "verdict": "agree",
+   "why": "The eight words are missing and the other four engines wrote seven of them; the rule is right."
+  },
+  "blind/order1": {
+   "verdict": "agree",
+   "why": "Picked the reference (B) and gave the right reason: \"what else have\" needs the missing clause to finish it."
+  },
+  "blind/order2": {
+   "verdict": "agree",
+   "why": "Picked the reference again (now A) with the same sound reason; no order effect."
+  },
+  "rank/minute": {
+   "verdict": "partly",
+   "why": "Granite last is right, but Parakeet, Canary, Qwen3 and Whisper all wrote \"I missed to mention about the Ninja Turtles\" and should tie; Gemma put the two lower-case, unpunctuated ones second, ranking on punctuation."
+  },
+  "misses": [
+   {
+    "reference": "KARATE IS JAPANESE",
+    "engine": "karate is Japanese",
+    "is_real": "no",
+    "matters": "no",
+    "severity_fair": "yes",
+    "note": "Gemma itself says \"no difference\"; it should not be in the list."
+   },
+   {
+    "reference": "I ACTUALLY NEVER KNEW",
+    "engine": "I actually never knew",
+    "is_real": "no",
+    "matters": "no",
+    "severity_fair": "yes",
+    "note": "Again \"no difference\"; padding."
+   },
+   {
+    "reference": "REALLY BUT YOU USED TO",
+    "engine": "Really",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "too high",
+    "note": "\"but you used to\" (do kung fu) is dropped; a small detail, 1 rather than 3."
+   },
+   {
+    "reference": "YEAH",
+    "engine": "And it was like",
+    "is_real": "partly",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "A one-word \"yeah\" is missing, but \"it was like\" belongs to the same speaker B's next line, not to speaker A as Gemma says; nothing of note lost."
+   },
+   {
+    "reference": "IT DIDN'T LAST THAT LONG",
+    "engine": "did it last that long",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "too high",
+    "note": "A real and good catch: a statement with \"didn't\" becomes a question. But \"for just one month or so\" right before still tells the reader it was short; 2, not 4."
+   },
+   {
+    "reference": "I HAD TO SAY THIS YEAH WHAT ELSE LIKE I'M THINKING WHAT ELSE HAVE I MISSED A MENTION ABOUT THE NINJA TURTLES",
+    "engine": "Yeah, of course. The intro song.",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "yes",
+    "note": "The loss is real, though the engine's words there are really a repeat of \"it was like for just one month or so\"; \"Yeah, of course. The intro song\" matches the reference's next words. Calling it \"filler\" undersells that the topic is lost; 2-3 is fair."
+   },
+   {
+    "reference": "... WHENEVER I HEARD THAT",
+    "engine": "... whenever I heard them",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "\"that\" to \"them\" changes nothing; 0, and the long quote hides how small it is."
+   },
+   {
+    "reference": "YOU LISTENED TO THE ARABIC OR THE ENGLISH OPENING",
+    "engine": "You listen to the Arabic or the English opening",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "yes",
+    "note": "Tense only; correctly 0."
+   }
+  ],
+  "overlooked": [
+   {
+    "reference": "",
+    "engine": "Yeah, it was like for just one month or so.",
+    "severity": 1,
+    "note": "In place of the lost question, Granite writes the kung-fu line a second time; Gemma did not mention the invented repeat."
+   }
+  ]
+ },
+ "worth_a_listen": {
+  "yes": false,
+  "why": "Four engines agree on the missing words, so the skip is clear from text; the stakes in a chat about cartoons are low."
+ },
+ "summary": "Gemma saw the skip and chose well in both blind orders, but it over-rated a low-stakes chat (severity 3-4), ranked on punctuation, and padded its misses list with two \"no difference\" items and a misread speaker."
+}

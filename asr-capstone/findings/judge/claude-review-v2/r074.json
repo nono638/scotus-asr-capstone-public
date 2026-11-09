@@ -1,0 +1,1 @@
+{"case": "r074", "own": {"reason": "The engine writes 'it happened to drop' for 'it happen to drop'. Inside the 'if something go wrong' hypothetical, both describe the same possible accident, not a past event.", "meaning": "same", "severity": 0, "follow_up": "meaning kept", "reference_doubt": "no"}}

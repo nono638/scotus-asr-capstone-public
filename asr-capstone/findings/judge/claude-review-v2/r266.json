@@ -1,0 +1,1 @@
+{"case": "r266", "own": {"reason": "The engine writes \"the final results\" for \"the bank's results\". It loses whose results they were and adds the idea that the results are final, but the remark (pleasant surprise at the results) still holds.", "meaning": "changed", "severity": 1, "follow_up": "changes meaning", "reference_doubt": "no"}}

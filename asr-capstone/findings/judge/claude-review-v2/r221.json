@@ -1,0 +1,1 @@
+{"case": "r221", "own": {"reason": "The engine writes \"we're gonna\" for \"we gonna\"; the dropped \"are\" is filled in and the meaning is the same.", "meaning": "same", "severity": 0, "follow_up": "meaning kept", "reference_doubt": "no"}}

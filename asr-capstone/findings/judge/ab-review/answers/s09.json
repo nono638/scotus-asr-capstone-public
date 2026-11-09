@@ -1,0 +1,133 @@
+{
+ "case": "s09",
+ "X": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 2,
+    "follow_up": "stock phrase",
+    "reason": "The engine inserted a complete, unrelated sentence ('I've already said that.') where the official transcript shows a pause."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "stock phrase",
+    "reason": "The speech recognition engine hallucinated a stock phrase ('I've already said that.') that does not exist in the official transcript."
+   },
+   "whole": {
+    "meaning": "changed",
+    "severity": 4,
+    "follow_up": "unrelated",
+    "reason": "The speech recognition engine hallucinated a sentence ('I've already said that.') that does not exist in the reference transcript."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The engine adds a phrase that implies the speaker is repeating a previous argument, which is not present in the official record."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The engine included a phrase that does not exist in the official transcript, which matches the checker's finding of extra words during a period of silence."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "engine",
+    "sure": 2,
+    "reason": "In oral arguments, it is very common for counsel to include a brief conversational filler or acknowledgment like 'i've already said that' when responding to a transition or a previous remark, whereas Version A's sudden jump from 'thank you mr chief justice' to the case citation is slightly more abrupt."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 2,
+    "reason": "In oral arguments, it is highly unlikely for a lawyer to say 'i've already said that' immediately after being thanked by the Chief Justice before beginning their formal opening statement."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Parakeet": 2,
+    "Qwen3": 1,
+    "Whisper": 3
+   },
+   "reason": "Engine 2 is the most accurate because it correctly identifies the silence at the marked spot, whereas Engine 1 adds hallucinated text and Engine 3 adds an extra word."
+  },
+  "misses": [
+   {
+    "reference": "in X-Citement Video",
+    "engine": "an excitement video",
+    "severity": 3,
+    "what": "misidentified a legal case name as a common phrase"
+   },
+   {
+    "reference": "Rehaif",
+    "engine": "Rahaf",
+    "severity": 2,
+    "what": "misspelled a legal case name"
+   },
+   {
+    "reference": "",
+    "engine": "I've already said that.",
+    "severity": 2,
+    "what": "added a sentence not present in the reference"
+   }
+  ]
+ },
+ "Y": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "stock phrase",
+    "reason": "The engine adds a complete sentence, 'I've already said that.', which does not exist in the reference transcript."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "stock phrase",
+    "reason": "The engine adds a complete sentence, 'I've already said that.', which does not exist in the reference transcript at that moment."
+   },
+   "whole": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "stock phrase",
+    "reason": "The engine adds a completely fabricated phrase 'I've already said that.' which does not exist in the reference transcript."
+   }
+  },
+  "noticeable": "no",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The engine adds a spoken phrase ('I've already said that.') that does not exist in the official record, which could falsely imply that the judge or counsel had previously addressed the subsequent legal argument."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The engine includes a phrase that is entirely absent from the official reference transcript."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "engine",
+    "sure": 2,
+    "reason": "Version B includes a common conversational filler/acknowledgment ('i've already said that') that fits the flow of an attorney responding to the Chief Justice, whereas Version A jumps straight into the formal address. In oral arguments, attorneys often acknowledge previous statements or the court's transition."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "engine",
+    "sure": 2,
+    "reason": "In oral arguments, lawyers often use conversational fillers or brief acknowledgments like 'i've already said that' or 'thank you' when responding to a judge's transition. Version A provides a natural-sounding conversational bridge, whereas Version B is just a sudden jump into the formal address."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Parakeet": 3,
+    "Qwen3": 1,
+    "Whisper": 1
+   },
+   "reason": "Engine 2 and Engine 3 are tied for first place because they correctly identify that there is no text in the marked area, whereas Engine 1 adds hallucinated content."
+  },
+  "misses": [
+   {
+    "reference": "X-Citement Video",
+    "engine": "an excitement video",
+    "severity": 2,
+    "what": "the case name X-Citement Video was transcribed as excitement video"
+   }
+  ]
+ }
+}

@@ -1,0 +1,8 @@
+model,parameters,wer_standard,wer_standard_fixed,wer_lowercase_nopunct,wer_verbatim,speed_x_realtime,cases,wer_leaderboard
+Qwen3-ASR-1.7B-hf,1.7B,4.685,4.235,4.721,14.975,4.59,61,4.46
+whisper-large-v3,1.55B,6.111,5.713,5.865,14.005,18.18,61,6.098
+Voxtral-Mini-3B-2507,4.7B,6.353,5.91,5.982,14.178,7.06,61,6.24
+granite-speech-4.1-2b-plus,2.3B,6.88,6.272,7.627,28.915,1.57,61,6.654
+canary-1b-v2,0.98B,7.191,6.683,6.979,16.124,35.27,61,7.129
+parakeet-tdt-0.6b-v3,0.6B,6.222,5.771,8.266,17.176,47.04,61,6.208
+granite-speech-4.1-2b,2.3B,8.298,7.763,7.912,17.14,7.86,61,8.226

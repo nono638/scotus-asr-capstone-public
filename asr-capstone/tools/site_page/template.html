@@ -1,0 +1,398 @@
+<meta charset="utf-8">
+<title>Same Room, Same Problems</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Public+Sans:wght@400;500;600;700&family=Courier+Prime:wght@400;700&display=swap">
+<style>
+/* Colours, type and the widgets' own styles come from web/widget/tokens.css,
+   shared with the listening bench. This page adds its layout: one reading
+   column like a brief, with the opening chart and the gallery a little wider. */
+/*TOKENS*/
+:root {
+  --t2010: #4063a8; --t2017: #b5532a; --t2021: #5f7f2a; --t2025: #8a4f9e;
+  --measure: 42rem; --wide: 70rem;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --t2010: #87a6e8; --t2017: #ec9468; --t2021: #a8c46a; --t2025: #c99adb; } }
+:root[data-theme="dark"] { --t2010: #87a6e8; --t2017: #ec9468; --t2021: #a8c46a; --t2025: #c99adb; }
+
+body { font: 16px/1.6 var(--font-ui); }
+.wrap { max-width: var(--wide); margin: 0 auto; padding: 32px max(16px, env(safe-area-inset-right, 0px)) 80px max(16px, env(safe-area-inset-left, 0px)); }
+.column { max-width: var(--measure); }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.15; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(2rem, 4.6vw, 3.4rem); max-width: 22ch; letter-spacing: -.01em; }
+h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); margin-top: 80px; }
+h3 { font-size: 1.2rem; margin-top: 32px; }
+p { margin: 14px 0 0; }
+.lede { font-family: var(--font-display); font-size: 1.2rem; line-height: 1.5; color: var(--muted); max-width: 40rem; margin-top: 18px; }
+.about { font-size: 14px; color: var(--muted); margin: 0 0 22px; }
+.source { font-size: 12.5px; color: var(--muted); margin-top: 10px; }
+.source code, code { font-family: var(--font-transcript); font-size: .92em; }
+a { color: var(--accent); text-underline-offset: 3px; }
+.num { font-variant-numeric: tabular-nums; }
+
+/* ---- the opening: the finding, the switch, the chart --------------------- */
+.hero-tools { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; margin-top: 30px; }
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(16rem, 23rem); gap: 28px 40px; margin-top: 22px; align-items: start; }
+.tally { border-left: 2px solid var(--diff); padding-left: 18px; }
+.tally .big { font-family: var(--font-display); font-size: clamp(3.6rem, 9vw, 6rem); line-height: 1; font-variant-numeric: tabular-nums; display: block; }
+.tally .of { font-size: 1.05rem; margin-top: 6px; }
+.tally .why { font-size: 14px; color: var(--muted); margin-top: 14px; }
+.who-qwen3 { color: var(--qwen3); font-weight: 600; }
+.who-whisper { color: var(--whisper); font-weight: 600; }
+.terms { display: flex; flex-wrap: wrap; gap: 6px; }
+.terms button { font: inherit; font-size: 13px; border: 1px solid var(--rule); background: var(--card); color: var(--ink); border-radius: 999px; padding: 4px 11px; cursor: pointer; }
+.terms button[aria-pressed="true"] { border-color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink); font-weight: 600; }
+.terms .chip { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 6px; background: var(--c); }
+.listen-box { margin-top: 22px; background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 10px; }
+.listen-box:empty { display: none; }
+.listen-box h3 { margin: 0; font-size: 1.05rem; }
+.listen-box .meta { font-size: 13px; color: var(--muted); margin: 0; }
+.hint { font-size: 13px; color: var(--muted); margin-top: 10px; }
+#figure { max-width: 40rem; }
+@media (max-width: 860px) { .hero { grid-template-columns: 1fr; } }
+
+/* ---- rules explained ----------------------------------------------------- */
+.rules { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 16px 28px; margin-top: 20px; max-width: 52rem; }
+.rules div { border-top: 2px solid var(--ink); padding-top: 10px; font-size: 15px; }
+.rules b { display: block; font-family: var(--font-display); font-weight: 400; font-size: 1.15rem; margin-bottom: 4px; }
+
+/* ---- coverage ------------------------------------------------------------- */
+.coverage { display: grid; grid-template-columns: repeat(auto-fill, minmax(8.5rem, 1fr)); gap: 10px; margin-top: 18px; }
+.term-cell { font: inherit; text-align: left; background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 10px 12px; display: grid; gap: 5px; color: var(--ink); }
+button.term-cell { cursor: pointer; }
+button.term-cell:hover { border-color: var(--accent); }
+.term-cell .year { font-family: var(--font-display); font-size: 1.15rem; }
+.term-cell .n { font-size: 12px; color: var(--muted); }
+.meter { height: 5px; background: var(--rule); border-radius: 3px; overflow: hidden; }
+.meter i { display: block; height: 100%; background: var(--c); }
+.key { font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: 12px; }
+.key span::before { content: ""; display: inline-block; width: 14px; height: 5px; border-radius: 3px; background: var(--c); margin-right: 6px; vertical-align: 2px; }
+
+/* ---- the gallery: each passage a sheet of transcript ---------------------- */
+.gallery { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 31rem), 1fr)); gap: 18px; margin-top: 22px; }
+.passage { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 16px 18px 16px 22px; display: grid; gap: 10px;
+           border-left: 3px solid var(--diff); min-width: 0; }
+.passage .kind { font-size: 13px; font-weight: 600; color: var(--diff); margin: 0; }
+.passage h3 { margin: 0; font-size: 1.1rem; font-style: italic; }
+.passage .meta { font-size: 13px; color: var(--muted); margin: 0; }
+.passage .note { font-size: 14px; margin: 0; }
+.passage .unchecked { font-size: 12px; color: var(--muted); margin: 0; }
+.passage mark:empty::before { content: "nothing here"; font-family: var(--font-ui); font-size: 12px; }
+.passage mark:empty { background: transparent; border: 1px dashed var(--gap); color: var(--gap); }
+
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr)); gap: 14px 24px; margin-top: 20px; max-width: 52rem; }
+.facts div { font-size: 14px; color: var(--muted); }
+.facts b { display: block; font-family: var(--font-display); font-weight: 400; font-size: 2rem; color: var(--ink); font-variant-numeric: tabular-nums; }
+.datasets { display: grid; grid-template-columns: repeat(auto-fit, minmax(18rem, 1fr)); gap: 18px 32px; margin-top: 18px; max-width: 56rem; }
+.datasets div { border-top: 2px solid var(--ink); padding-top: 10px; font-size: 15px; }
+.roadmap { list-style: none; padding: 0; margin: 16px 0 0; display: grid; gap: 6px; }
+.roadmap li { display: grid; grid-template-columns: 5rem 1fr; gap: 10px; font-size: 15px; }
+.roadmap .state { font-size: 12px; color: var(--muted); padding-top: 3px; }
+.roadmap li.done .state { color: var(--done); font-weight: 600; }
+.switch-row { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; margin-top: 18px; }
+footer { margin-top: 90px; border-top: 1px solid var(--rule); padding-top: 16px; font-size: 13px; color: var(--muted); max-width: var(--measure); }
+</style>
+
+<div class="wrap">
+  <p class="about">A capstone on speech recognition and the court record (CUNY SPS, DATA 698, fall 2026). Unfinished, and rebuilt from the findings as the work goes.</p>
+  <h1>Score it like a benchmark and Qwen3 wins. Score it like a court record and Whisper does.</h1>
+  <p class="lede">The same 258 Supreme Court arguments, the same machine transcripts, checked against the official record. Only the scoring rule changes, and with it the winner, argument after argument.</p>
+
+  <div class="hero-tools">
+    <div class="switch" id="rule-switch" role="group" aria-label="Scoring rule">
+      <button type="button" data-mode="benchmark" aria-pressed="true">Benchmark rule</button>
+      <button type="button" data-mode="verbatim" aria-pressed="false">Verbatim rule</button>
+    </div>
+    <div class="terms" id="term-filter" role="group" aria-label="Term"></div>
+  </div>
+
+  <div class="hero">
+    <div>
+      <div id="figure"></div>
+      <p class="source">One dot per argument. Below the diagonal Qwen3 made fewer errors, above it Whisper did. From <code>findings/flip/per-argument.csv</code>; counts in <code>findings/flip/by-term.csv</code>.</p>
+    </div>
+    <aside>
+      <div class="tally">
+        <span class="big" id="flip-count">242</span>
+        <div class="of">of <span id="flip-of" class="num">258</span> arguments, <span id="flip-who" class="who-qwen3">Qwen3</span> made fewer errors.</div>
+        <p class="why" id="flip-why"></p>
+      </div>
+      <p class="hint">Hover over a dot to see the argument. Click it to hear the 12 seconds where the two engines disagree most.</p>
+      <div class="listen-box" id="dot-listen" aria-live="polite"></div>
+    </aside>
+  </div>
+
+  <section class="column">
+    <h2>Two ways to score the same transcript</h2>
+    <div class="rules">
+      <div><b>Benchmark rule</b>Lower-case everything, drop punctuation and filler words, then count the words that differ. This is how leaderboards rank engines.</div>
+      <div><b>Verbatim rule</b>Count every difference a court reporter would: capitals, punctuation, "uh", repeated words and the reporter's dash where someone is cut off.</div>
+    </div>
+    <p>Qwen3 hears the words best, but writes "court" for "Court", leaves out the dashes and drops repeats. Whisper hears slightly worse and writes more like a transcript. Every engine is two to four and a half times worse scored as a record.</p>
+  </section>
+
+  <section>
+    <h2 class="column">The same order in every term</h2>
+    <p class="column">Average error rate per argument, in percent. Click a heading to sort.</p>
+    <div id="four-terms" class="column" style="max-width: 52rem"></div>
+    <p class="source">From <code>findings/harmonise/*/before-after.csv</code> (the "after" columns, with the October scoring fixes).</p>
+    <h3>All seven engines, October Term 2017</h3>
+    <div id="seven" class="column" style="max-width: 52rem"></div>
+    <p class="source">From <code>findings/harmonise/before-after.csv</code>, 61 arguments.</p>
+  </section>
+
+  <section>
+    <h2 class="column">How much is done</h2>
+    <p class="column">Every term of arguments on disk, and how far each of the three default engines has got. Click a finished term to see it alone in the chart at the top.</p>
+    <div class="coverage" id="coverage"></div>
+    <p class="key" id="coverage-key"></p>
+    <p class="source">Counted from the transcripts in each run folder when the page was built.</p>
+  </section>
+
+  <section>
+    <h2 class="column">What makes a word go wrong</h2>
+    <p class="column">A model of every record word, for every engine: was it written? The odds of a miss go up this many times when&hellip;</p>
+    <div class="switch-row">
+      <div class="switch" id="odds-switch" role="group" aria-label="Term"></div>
+    </div>
+    <p class="column" id="odds-fit"></p>
+    <div id="odds" style="max-width: 52rem; margin-top: 14px"></div>
+    <p class="source">Odds ratios with 95% intervals from <code>findings/error-model/three-engines-by-term/</code>. Association, not cause; the record decides what counts as a dash or a change of speaker.</p>
+  </section>
+
+  <section>
+    <h2 class="column">Listen</h2>
+    <p class="column">Passages the machines got wrong, with the record beside them. Choose how much to hear; the engines' words light up as they are spoken. None of these has been checked by ear yet.</p>
+    <div class="gallery" id="gallery"></div>
+    <p class="source">Passages no engine got: <code>findings/crowd/hard-passages.csv</code>. Invented words: <code>findings/invented-words/</code>. Supreme Court audio is public domain.</p>
+  </section>
+
+  <section class="column">
+    <h2>Invented words</h2>
+    <p id="invented-lede"></p>
+    <div class="facts" id="invented-facts"></div>
+    <div id="invented-table" style="margin-top: 18px"></div>
+    <p class="source">From <code>findings/invented-words/counts.csv</code>. Quiet means under a fifth of the stretch holds speech and it is at least 15 dB below the recording.</p>
+  </section>
+
+  <section class="column">
+    <h2>A second kind of speech</h2>
+    <p>EdAcc: 40 video calls between friends, many speaking English as a second language. Its reference has no capitals or punctuation, so only the benchmark rule is fair there.</p>
+    <div id="edacc" style="margin-top: 14px"></div>
+    <p class="source">From <code>findings/edacc/engines.csv</code>.</p>
+  </section>
+
+  <section>
+    <h2 class="column">The next datasets</h2>
+    <div class="datasets">
+      <div><b>CORAAL</b><p>Interviews from the Corpus of Regional African American Language: Rochester (2016) and Princeville (2004), 51 interviews and 27 hours, downloaded and queued for the three engines. The corpus Koenecke et al. used in 2020 to show commercial engines made twice as many errors for Black speakers. Notes in <code>datasets/coraal.md</code>.</p></div>
+      <div><b>Earnings-22</b><p>125 company earnings calls from 27 countries, 119 hours. Its reference is verbatim, with fillers, false starts and punctuation, so both scoring rules are fair on it; ten calls also come with a cleaned-up second reference. Not downloaded yet. Notes in <code>datasets/earnings22.md</code>.</p></div>
+    </div>
+  </section>
+
+  <section class="column">
+    <h2>The tool</h2>
+    <p>The same bench, made for anyone: bring your own recordings and a transcript you trust, choose engines, get the same scores and error kinds. Models run on your own machine; the site only shows finished results.</p>
+    <ol class="roadmap" id="roadmap"></ol>
+    <p class="source">From <code>app-roadmap.md</code>.</p>
+  </section>
+
+  <section class="column">
+    <h2>The queue</h2>
+    <p id="queue-lede"></p>
+    <div id="queue" style="margin-top: 14px"></div>
+    <p class="source">From <code>pipeline/overnight-queue.csv</code> and each run's ledger.</p>
+  </section>
+
+  <footer><p id="built"></p></footer>
+</div>
+
+<script>
+/*LISTEN*/
+</script>
+<script>
+/*COMPARE*/
+</script>
+<script>
+/*CHART*/
+</script>
+<script>
+/*TABLE*/
+</script>
+<script>
+const D = /*DATA*/{};
+const $ = s => document.querySelector(s);
+function el(tag, attrs = {}, ...kids) {
+  const n = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) n.setAttribute(k, v);
+  for (const k of kids) n.append(k);
+  return n;
+}
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const pct = v => (v === null || v === undefined) ? "–" : v.toFixed(2) + "%";
+const year = t => t.replace("OT", "");
+const COLOUR = { OT2010: "var(--t2010)", OT2017: "var(--t2017)", OT2021: "var(--t2021)", OT2025: "var(--t2025)" };
+const RULE = { benchmark: "benchmark rule", verbatim: "verbatim rule" };
+
+// ---- Figure 1 ----------------------------------------------------------------
+const fig = Chart.scatter($("#figure"), {
+  points: D.figure.points, mode: "benchmark", groups: COLOUR,
+  xLabel: "Whisper's error rate (%)", yLabel: "Qwen3's error rate (%)",
+  below: "Qwen3 better", above: "Whisper better",
+  ariaLabel: "Figure 1: Qwen3 against Whisper, one dot per argument",
+  label: p => `${p.case || p.docket}, ${year(p.group)} term`,
+  tip: (p, mode) => `<b>${esc(p.case || p.docket)}</b><br>No. ${esc(p.docket)}, ${year(p.group)} term<br>` +
+    `<span class="who-qwen3">Qwen3</span> ${pct(p.y[mode])}, <span class="who-whisper">Whisper</span> ${pct(p.x[mode])}<br>` +
+    `<span style="color:var(--muted)">${RULE[mode]}; click to hear it</span>`,
+  onPick: showDot,
+});
+let term = "";
+function tally() {
+  const mode = fig.mode;
+  const better = mode === "benchmark" ? (p, m) => p.y[m] < p.x[m] : (p, m) => p.x[m] < p.y[m];
+  $("#flip-count").textContent = fig.count(better);
+  $("#flip-of").textContent = fig.shown();
+  const who = $("#flip-who");
+  who.textContent = mode === "benchmark" ? "Qwen3" : "Whisper";
+  who.className = mode === "benchmark" ? "who-qwen3" : "who-whisper";
+  $("#flip-why").textContent = mode === "benchmark"
+    ? "Scored the way leaderboards score: capitals, punctuation and fillers ignored. Switch to the verbatim rule to score it as a record."
+    : "Scored as a record: every capital, comma, filler and dash counts. The dots move up and to the right, and most cross the line.";
+}
+document.querySelectorAll("#rule-switch [data-mode]").forEach(b => b.addEventListener("click", () => {
+  document.querySelectorAll("#rule-switch [data-mode]").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+  fig.setMode(b.dataset.mode);
+  tally();
+}));
+const filter = $("#term-filter");
+[["", "All four terms"], ...Object.keys(COLOUR).map(t => [t, year(t)])].forEach(([t, name]) => {
+  const b = el("button", { type: "button", "data-term": t, "aria-pressed": String(t === "") });
+  if (t) { const chip = el("span", { class: "chip" }); chip.style.setProperty("--c", COLOUR[t]); b.append(chip); }
+  b.append(name);
+  b.addEventListener("click", () => setTerm(t));
+  filter.append(b);
+});
+function setTerm(t) {
+  term = t;
+  filter.querySelectorAll("button").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.term === t)));
+  fig.filter(t ? p => p.group === t : null);
+  tally();
+}
+function showDot(p) {
+  const box = $("#dot-listen");
+  box.textContent = "";
+  if (!p.clip) { box.append(el("p", { class: "meta" }, "No clip for this argument yet.")); return; }
+  box.append(el("h3", {}, p.case || p.docket),
+    el("p", { class: "meta" }, `No. ${p.docket}, ${year(p.group)} term. Benchmark rule: Qwen3 ${pct(p.y.benchmark)}, Whisper ${pct(p.x.benchmark)}. Verbatim rule: Qwen3 ${pct(p.y.verbatim)}, Whisper ${pct(p.x.verbatim)}.`));
+  const player = Listen.create(box, { clip: p.clip.clip, views: [{ key: "all", label: "Play 12 seconds", from: 0, to: 12 }] });
+  box.append(player.controls(""), Compare.lines(player, p.clip.lines));
+  player.play("all");
+}
+tally();
+
+// ---- tables ------------------------------------------------------------------
+Table.sortable($("#four-terms"), {
+  columns: [{ key: "engine", label: "Engine" }, { key: "rule", label: "Rule" },
+    ...["OT2010", "OT2017", "OT2021", "OT2025"].map(t => ({ key: t, label: year(t), num: true, fmt: pct }))],
+  rows: D.fourTerms,
+});
+Table.sortable($("#seven"), {
+  columns: [{ key: "engine", label: "Engine" }, { key: "benchmark", label: "Benchmark rule", num: true, fmt: pct },
+    { key: "verbatim", label: "Verbatim rule", num: true, fmt: pct },
+    { key: "times", label: "Times worse as a record", num: true, fmt: v => v.toFixed(1) + "×" }],
+  rows: D.seven, sort: { key: "benchmark", dir: 1 },
+});
+
+// ---- coverage ------------------------------------------------------------------
+const cov = $("#coverage");
+D.coverage.forEach(r => {
+  const inFigure = r.term in COLOUR;
+  const full = ["Parakeet", "Whisper", "Qwen3"].every(e => r[e] === r.arguments);
+  const cell = el(inFigure ? "button" : "div", { class: "term-cell", title:
+    `Parakeet ${r.Parakeet}, Whisper ${r.Whisper}, Qwen3 ${r.Qwen3} of ${r.arguments}` });
+  if (inFigure) { cell.type = "button"; cell.dataset.term = r.term; }
+  cell.append(el("span", { class: "year" }, year(r.term)),
+    el("span", { class: "n" }, `${r.arguments} arguments${r.telephone ? ", by telephone" : ""}${full ? ", all done" : ""}`));
+  for (const e of ["Parakeet", "Whisper", "Qwen3"]) {
+    const m = el("div", { class: "meter", role: "img", "aria-label": `${e}: ${r[e]} of ${r.arguments}` });
+    const fill = el("i");
+    fill.style.width = (100 * r[e] / r.arguments) + "%";
+    fill.style.setProperty("--c", `var(--${e.toLowerCase()})`);
+    m.append(fill);
+    cell.append(m);
+  }
+  if (inFigure) cell.addEventListener("click", () => { setTerm(r.term); $("#figure").scrollIntoView({ behavior: "smooth", block: "center" }); });
+  cov.append(cell);
+});
+
+["Parakeet", "Whisper", "Qwen3"].forEach(e => {
+  const s = el("span", {}, e); s.style.setProperty("--c", `var(--${e.toLowerCase()})`); $("#coverage-key").append(s);
+});
+$("#coverage-key").prepend("Bars, top to bottom: ");
+
+// ---- the error model ---------------------------------------------------------------
+const MODES = [["all-four", "All four terms"], ["OT2010", "2010"], ["OT2017", "2017"], ["OT2021", "2021"], ["OT2025", "2025"]];
+const odds = Chart.bars($("#odds"), {
+  rows: D.odds.rows, mode: "all-four", max: 20,
+  value: (r, m) => D.odds.values[m][r.key],
+  tip: (r, m) => { const d = D.odds.values[m][r.key]; return `<b>${esc(r.label)}</b><br>${d.v.toFixed(2)} times the odds of a miss<br>95% interval ${d.lo.toFixed(2)} to ${d.hi.toFixed(2)}`; },
+});
+function oddsFit(m) {
+  const f = D.odds.fit[m];
+  $("#odds-fit").textContent = `What is going on around a word explains about ${Math.round(f.conditions / f.engine)} times as much as which engine wrote it (McFadden pseudo R² ${f.conditions.toFixed(3)} against ${f.engine.toFixed(4)}).`;
+}
+MODES.forEach(([m, name]) => {
+  const b = el("button", { type: "button", "data-mode": m, "aria-pressed": String(m === "all-four") }, name);
+  b.addEventListener("click", () => {
+    document.querySelectorAll("#odds-switch button").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+    odds.setMode(m); oddsFit(m);
+  });
+  $("#odds-switch").append(b);
+});
+oddsFit("all-four");
+
+// ---- the gallery -------------------------------------------------------------------
+D.gallery.forEach(g => {
+  const card = el("article", { class: "passage" });
+  card.append(el("p", { class: "kind" }, g.title), el("h3", {}, g.case),
+    el("p", { class: "meta" }, `No. ${g.docket}, ${year(g.term)} term, ${g.clock} into the recording`),
+    el("p", { class: "note" }, g.note));
+  const player = Listen.create(card, { clip: g.clip, views: g.views, view: "ten" });
+  card.append(player.controls("Hear"), Compare.lines(player, g.lines, { key: false }),
+    el("p", { class: "unchecked" }, "Found by the scoring, not yet checked by ear."));
+  $("#gallery").append(card);
+});
+$("#gallery").after(el("p", { class: "compare-key column" },
+  "The word being spoken lights up as the clip plays; click a word to play from it. A yellow highlight marks an engine's word that differs from the record."));
+
+// ---- invented words -------------------------------------------------------------------
+const inv = D.invented;
+$("#invented-lede").textContent = `A stenographer can mishear a word, but does not write words into a silence. Engines sometimes do. Of ${inv.insertions.toLocaleString()} words the engines added that the record does not have, ${inv.quiet} fall on quiet audio.`;
+[[inv.quiet, "added words on quiet audio"], [inv.labels, "of them Whisper writing speaker names into pauses"],
+ [inv.real, "real words inside an argument"], [inv.alone, "of those written by one engine alone"]].forEach(([n, what]) =>
+  $("#invented-facts").append(el("div", {}, el("b", {}, n.toLocaleString()), what)));
+Table.sortable($("#invented-table"), {
+  columns: [{ key: "corpus", label: "Corpus" }, { key: "term", label: "Term" }, { key: "engine", label: "Engine" },
+    { key: "quiet", label: "Quiet", num: true }, { key: "labels", label: "Speaker names", num: true },
+    { key: "perHour", label: "Per hour", num: true, fmt: v => v.toFixed(2) }],
+  rows: inv.rows, sort: { key: "perHour", dir: -1 },
+});
+
+// ---- EdAcc, the tool, the queue -------------------------------------------------------------
+Table.sortable($("#edacc"), {
+  columns: [{ key: "engine", label: "Engine" }, { key: "rate", label: "Error rate, benchmark rule", num: true, fmt: pct }],
+  rows: D.edacc, sort: { key: "rate", dir: 1 },
+});
+D.roadmap.forEach(r => $("#roadmap").append(el("li", { class: r.done ? "done" : "" },
+  el("span", { class: "state" }, r.done ? "Done" : "To do"), `${r.n}. ${r.title}`)));
+const q = D.queue;
+$("#queue-lede").textContent = `${q.done} runs done and ${q.todo} waiting: about ${q.hours} hours of GPU time, roughly ${Math.round(q.hours / 12)} nights.`;
+Table.sortable($("#queue"), {
+  columns: [{ key: "engine", label: "Next up" }, { key: "terms", label: "Term" },
+    { key: "done", label: "Done", num: true, fmt: (v, r) => `${v} of ${r.total}` },
+    { key: "hours", label: "Hours left", num: true, fmt: v => v === null ? "–" : v.toFixed(1) }],
+  rows: q.rows,
+});
+$("#built").textContent = `Built ${D.built} by tools/build_site.py from the files in findings/. Every number on this page comes from the file named beside it.`;
+</script>

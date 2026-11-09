@@ -1,0 +1,7 @@
+# Parakeet re-run with the per-frame cap (26 Oct 2026, commit 3392e30): the earnings22
+# recordings that had a frame over 10 pieces or were halved by the loop check.
+# Given after parakeet.yaml (and the corpus's file), into a new run folder.
+corpus:
+  recordings:
+    - "4481766"
+    - "4481904"

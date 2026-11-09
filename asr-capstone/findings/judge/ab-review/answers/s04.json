@@ -1,0 +1,185 @@
+{
+ "case": "s04",
+ "X": {
+  "meaning": {
+   "line": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation lost",
+    "reason": "The engine failed to recognize the negation 'n't' in 'isn't', changing the sentence from negative to positive."
+   },
+   "minute": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation lost",
+    "reason": "The engine failed to transcribe the negation 'n't' in 'isn't', changing the meaning from negative to positive."
+   },
+   "whole": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation lost",
+    "reason": "The speech recognition engine failed to capture the negation 'n't' in the word 'isn't'."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The error completely reverses the speaker's point about whether Counter-Strike is a roleplay game."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The checker correctly identified that the reference contains a negation ('ISN'T') while the engine version does not ('is')."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "The context compares Valorant to Counter-Strike to explain why it is not a roleplay game, making 'isn't' the only logically consistent choice."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "The context of the conversation is comparing Valorant to Counter-Strike to explain why Valorant is not a roleplay game, making 'isn't a roleplay game' the only logically sound conclusion."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Granite": 1,
+    "Qwen3": 3,
+    "Whisper": 2,
+    "Parakeet": 2,
+    "Canary": 3
+   },
+   "reason": "Engine 1 is the only one that correctly preserves the negation 'isn't' and the full context of the reference, while Engines 2 and 5 incorrectly change the meaning to 'is', and Engines 3 and 4 are tied for second as they preserve the negation but truncate the following dialogue."
+  },
+  "misses": [
+   {
+    "reference": "YOU PLAY THAT ROLE OR SOMETHING",
+    "engine": "you play that wrong",
+    "severity": 3,
+    "what": "changed 'role or something' to 'wrong'"
+   },
+   {
+    "reference": "IT'S NOT ROLEPLAY",
+    "engine": "it's not pre-made",
+    "severity": 4,
+    "what": "reversed/changed the meaning of the character status"
+   },
+   {
+    "reference": "THEY'RE PREMADE AND THERE IS",
+    "engine": "there is",
+    "severity": 2,
+    "what": "omitted the fact that characters are premade"
+   },
+   {
+    "reference": "I I WOULD SAY",
+    "engine": "I think I'd say",
+    "severity": 1,
+    "what": "changed phrasing"
+   },
+   {
+    "reference": "COUNTER STRIKE ISN'T A ROLEPLAY GAME",
+    "engine": "Counter Strike is a role play game",
+    "severity": 4,
+    "what": "reversed the meaning regarding Counter Strike"
+   },
+   {
+    "reference": "OKAY I GOT IT I UNDERSTAND YEAH",
+    "engine": "Okay, I got it. Just a tactical shooter. Yeah.",
+    "severity": 2,
+    "what": "replaced 'I understand' with 'Just a tactical shooter'"
+   },
+   {
+    "reference": "IT'S JUST YEAH YEAH YEAH",
+    "engine": "But yeah.",
+    "severity": 2,
+    "what": "omitted the content of the speaker's agreement"
+   },
+   {
+    "reference": "DO YOU WANT ME TO ASK DO YOU WANT TO ASK ME ANYTHING",
+    "engine": "You want to ask? You want to ask me anything?",
+    "severity": 2,
+    "what": "omitted the first part of the speaker's question"
+   }
+  ]
+ },
+ "Y": {
+  "meaning": {
+   "line": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation lost",
+    "reason": "The engine omits the negation 'not' (ISN'T), changing the statement from saying Counter Strike is not a roleplay game to saying it is."
+   },
+   "minute": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation lost",
+    "reason": "The engine removes the negation 'n't' from the word 'isn't', changing the statement from a negative to a positive."
+   },
+   "whole": {
+    "meaning": "opposite",
+    "severity": 4,
+    "follow_up": "negation lost",
+    "reason": "The engine fails to recognize the negation 'isn't', turning the statement that Counter Strike is not a roleplay game into a statement that it is."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The engine incorrectly removes the negation, which fundamentally reverses the meaning of the speaker's comparison between Counter-Strike and roleplay games."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The evidence correctly identifies that the reference contains a negation ('ISN'T') while the engine does not ('is')."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "In the context of the conversation, the speaker is comparing Valorant to Counter-Strike to explain why it is not a roleplay game. Saying 'counter strike isn't a roleplay game' makes logical sense, whereas saying 'counter strike is a roleplay game' contradicts the speaker's point about the lack of storyline and quests."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "In the context of the conversation, the speaker is comparing Valorant (which they claim is not a roleplay game because it lacks a storyline/quests) to Counter-Strike. Saying 'counter strike is a roleplay game' contradicts the speaker's established logic, whereas 'counter strike isn't a roleplay game' fits the comparison perfectly."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Granite": 1,
+    "Qwen3": 3,
+    "Whisper": 1,
+    "Parakeet": 1,
+    "Canary": 3
+   },
+   "reason": "Engines 1, 3, and 4 correctly identify the negation 'isn't', whereas Engines 2 and 5 change the meaning to the affirmative 'is'."
+  },
+  "misses": [
+   {
+    "reference": "YOU PLAY THAT ROLE OR SOMETHING",
+    "engine": "you play that wrong",
+    "severity": 2,
+    "what": "the roleplay/wrong distinction"
+   },
+   {
+    "reference": "COUNTER STRIKE ISN'T A ROLEPLAY GAME",
+    "engine": "Counter Strike is a role play game",
+    "severity": 4,
+    "what": "the description of Counter Strike"
+   },
+   {
+    "reference": "IT'S JUST YEAH YEAH YEAH",
+    "engine": "Just a tactical shooter. Yeah.",
+    "severity": 2,
+    "what": "the description of the game type"
+   },
+   {
+    "reference": "I I WOULD SAY",
+    "engine": "I think I'd say",
+    "severity": 1,
+    "what": "the speaker's opinion on the narrative"
+   }
+  ]
+ }
+}

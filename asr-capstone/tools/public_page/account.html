@@ -1,0 +1,83 @@
+  <h1>Your account</h1>
+  <p class="lede">An account lets you save ratings and come back to change them. We keep your email only for signing in and password resets, and never publish it.</p>
+  <p class="notice" id="off" hidden>Accounts are not switched on yet on this site.</p>
+
+  <div class="panels" id="signed-out" hidden>
+    <section class="panel">
+      <h2>Sign in</h2>
+      <form class="form" id="signin-form">
+        <label>Email <input type="email" id="in-email" autocomplete="email" required></label>
+        <label>Password <input type="password" id="in-password" autocomplete="current-password" required></label>
+        <button class="primary" type="submit">Sign in</button>
+      </form>
+      <p class="say" id="in-say" role="status"></p>
+      <h3>Forgot your password?</h3>
+      <form class="form" id="reset-form">
+        <label>Email <input type="email" id="reset-email" autocomplete="email" required></label>
+        <button class="btn" type="submit">Email me a link to reset it</button>
+      </form>
+      <p class="say" id="reset-say" role="status"></p>
+    </section>
+
+    <section class="panel">
+      <h2>Make an account</h2>
+      <form class="form" id="signup-form">
+        <label>Display name <input type="text" id="up-name" maxlength="40" required autocomplete="nickname">
+          <small class="hint" style="margin: 0">Shown only to you. Please don't use your real name.</small></label>
+        <label>Email <input type="email" id="up-email" autocomplete="email" required></label>
+        <label>Password <input type="password" id="up-password" minlength="8" autocomplete="new-password" required>
+          <small class="hint" style="margin: 0">At least 8 characters.</small></label>
+        <label class="inline"><input type="checkbox" id="up-adult" required> I am 18 or older.</label>
+        <label class="inline"><input type="checkbox" id="up-terms" required> <span>I have read the <a href="privacy.html">privacy notice</a> and the <a href="terms.html">contributor terms</a>.</span></label>
+        <button class="primary" type="submit">Make my account</button>
+      </form>
+      <p class="say" id="up-say" role="status"></p>
+      <p class="hint" id="contrib"></p>
+    </section>
+  </div>
+
+  <div id="signed-in" hidden>
+    <section class="panel" id="verify" hidden>
+      <h2>Check your email</h2>
+      <p>We sent a link to <b id="verify-email"></b>. Click it to confirm your address, then come back here. You can't save ratings until you do.</p>
+      <div class="row-buttons">
+        <button class="primary" type="button" id="verify-done">I've clicked the link</button>
+        <button class="btn" type="button" id="verify-again">Send the email again</button>
+      </div>
+      <p class="say" id="verify-say" role="status"></p>
+    </section>
+
+    <section class="panel">
+      <h2>Profile</h2>
+      <p>Signed in as <b id="me-email"></b>. <span id="me-ratings"></span></p>
+      <form class="form" id="profile-form">
+        <label>Display name <input type="text" id="me-name" maxlength="40" required></label>
+        <label id="bg-label" hidden>Which fits you best? <small>(optional)</small>
+          <select id="me-background">
+            <option value="">Rather not say</option>
+            <option value="court_reporter">Court reporter</option>
+            <option value="transcriber">Captioner or transcriber</option>
+            <option value="linguist">Linguist</option>
+            <option value="other">Other</option>
+          </select></label>
+        <button class="primary" type="submit">Save</button>
+      </form>
+      <p class="say" id="me-say" role="status"></p>
+      <div class="row-buttons" style="margin-top: 14px">
+        <a class="source-button" href="rate.html" id="go-rate">Rate clips</a>
+        <a class="source-button" href="admin.html" id="go-admin" hidden>Admin: export the ratings</a>
+        <button class="btn" type="button" id="signout">Sign out</button>
+      </div>
+    </section>
+
+    <section class="panel">
+      <h2>Delete my account and ratings</h2>
+      <p>This deletes every rating you saved, your profile and your account, at once. It can't be undone.</p>
+      <form class="form" id="delete-form">
+        <label>Your password, to confirm <input type="password" id="del-password" autocomplete="current-password" required></label>
+        <label class="inline"><input type="checkbox" id="del-sure" required> Yes, delete everything.</label>
+        <button class="btn" type="submit">Delete my account</button>
+      </form>
+      <p class="say" id="del-say" role="status"></p>
+    </section>
+  </div>

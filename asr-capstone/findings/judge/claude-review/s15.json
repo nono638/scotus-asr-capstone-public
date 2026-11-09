@@ -1,0 +1,97 @@
+{
+ "case": "s15",
+ "own": {
+  "meaning": "same",
+  "severity": 0,
+  "noticeable": "no",
+  "follow_up": "only the stumble lost",
+  "stakes": "no",
+  "reason": "The lawyer said \"we -- we ask juries\" and Whisper wrote \"we ask juries\": only the restart is gone.",
+  "rule_right": "yes",
+  "rule_reason": "The reference has \"we -- we\", Whisper has one \"we\", and Qwen3 and Parakeet (Engines 3 and 2) wrote \"we we\", as the evidence says.",
+  "more_plausible": "reference",
+  "plausible_how_clear": "Weak from text: the official transcript marks the restart, and the lawyer restarts elsewhere (\"if -- if\"), but a single \"we\" is equally natural.",
+  "my_misses": [
+   {
+    "reference": "that the -- that the seller can get",
+    "engine": "that the seller Miller can get",
+    "severity": 2,
+    "what": "an invented name \"Miller\" is added"
+   },
+   {
+    "reference": "creating such a thing",
+    "engine": "creating such a board",
+    "severity": 1,
+    "what": "\"thing\" becomes \"board\", a more specific word Scalia did not use here"
+   },
+   {
+    "reference": "if we can view the -",
+    "engine": "if we can view the level...",
+    "severity": 1,
+    "what": "an invented word \"level\" is added where the lawyer was cut off"
+   }
+  ]
+ },
+ "review": {
+  "labelled/line": {
+   "verdict": "agree",
+   "why": "Only the restart \"we -- we\" lost; severity 0 is right."
+  },
+  "labelled/minute": {
+   "verdict": "agree",
+   "why": "Same answer, accurately described."
+  },
+  "labelled/whole": {
+   "verdict": "agree",
+   "why": "Same answer; I could not see the full transcript but nothing suggests it matters."
+  },
+  "rule/minute": {
+   "verdict": "agree",
+   "why": "Reference \"we -- we\", engine \"we\", Qwen3 and Parakeet kept both; the rule is right."
+  },
+  "blind/order1": {
+   "verdict": "disagree",
+   "why": "It picked the engine's single \"we\" with \"sure 3\", arguing a formal setting makes a stutter unlikely, though the same lawyer says \"if -- if\" in this very passage."
+  },
+  "blind/order2": {
+   "verdict": "partly",
+   "why": "It picked the reference here, but with the opposite reason (\"very common\") and it picked Version A both times, so position decided."
+  },
+  "rank/minute": {
+   "verdict": "partly",
+   "why": "All three engines keep the meaning, so a three-way tie fits the instructions; Gemma ranked Whisper down for dropping the stutter, which is not a meaning difference."
+  },
+  "misses": [
+   {
+    "reference": "the -- that the seller",
+    "engine": "the seller Miller",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "yes",
+    "note": "An invented name; a reader could think a party called Miller is involved. 3 is on the high side but defensible (2-3)."
+   },
+   {
+    "reference": "creating such a thing",
+    "engine": "creating such a board",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "too high",
+    "note": "Real wording change, but Scalia goes on to speak of \"a board of censors\" anyway; 1, not 2."
+   },
+   {
+    "reference": "if we can view the -",
+    "engine": "if we can view the level...",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "too high",
+    "note": "An invented word where the lawyer was cut off; a reader sees a broken sentence either way. 1, not 3."
+   }
+  ],
+  "overlooked": []
+ },
+ "worth_a_listen": {
+  "yes": false,
+  "why": "The spot is a restart with no meaning; the invented \"Miller\" might be worth a glance some time, but it is outside this case."
+ },
+ "summary": "Gemma judged the spot and its misses list correctly (it found all three real slips, though it rated them high), but in the blind test it again picked Version A in both orders with opposite reasons, and its ranking punished a dropped stutter."
+}

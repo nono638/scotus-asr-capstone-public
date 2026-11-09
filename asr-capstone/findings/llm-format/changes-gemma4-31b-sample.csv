@@ -1,0 +1,316 @@
+llm,step,compared_with,model,docket,fixed,broken,added_before,added_after
+gemma4:31b,1,0,Qwen3,15-1204_OT2017,15,4,174,124
+gemma4:31b,2,1,Qwen3,15-1204_OT2017,14,161,124,67
+gemma4:31b,3,1,Qwen3,15-1204_OT2017,30,127,124,101
+gemma4:31b,1,0,Whisper,15-1204_OT2017,4,7,101,83
+gemma4:31b,2,1,Whisper,15-1204_OT2017,26,11,83,52
+gemma4:31b,3,1,Whisper,15-1204_OT2017,32,18,83,50
+gemma4:31b,1,0,Granite Plus,15-1204_OT2017,13,9,260,232
+gemma4:31b,2,1,Granite Plus,15-1204_OT2017,85,127,232,145
+gemma4:31b,3,1,Granite Plus,15-1204_OT2017,97,106,232,166
+gemma4:31b,1,0,Voxtral,15-1204_OT2017,5,2,99,79
+gemma4:31b,2,1,Voxtral,15-1204_OT2017,24,10,79,64
+gemma4:31b,3,1,Voxtral,15-1204_OT2017,34,19,79,56
+gemma4:31b,1,0,Canary,15-1204_OT2017,7,2,108,90
+gemma4:31b,2,1,Canary,15-1204_OT2017,33,38,90,74
+gemma4:31b,3,1,Canary,15-1204_OT2017,51,59,90,75
+gemma4:31b,1,0,Parakeet,15-1204_OT2017,2,2,159,141
+gemma4:31b,2,1,Parakeet,15-1204_OT2017,29,104,141,84
+gemma4:31b,3,1,Parakeet,15-1204_OT2017,46,110,141,85
+gemma4:31b,1,0,Granite,15-1204_OT2017,5,0,87,79
+gemma4:31b,2,1,Granite,15-1204_OT2017,10,21,79,64
+gemma4:31b,3,1,Granite,15-1204_OT2017,27,28,79,61
+gemma4:31b,1,0,Qwen3,15-1509,8,0,112,86
+gemma4:31b,2,1,Qwen3,15-1509,15,129,86,65
+gemma4:31b,3,1,Qwen3,15-1509,40,57,86,82
+gemma4:31b,1,0,Whisper,15-1509,2,1,73,69
+gemma4:31b,2,1,Whisper,15-1509,29,11,69,33
+gemma4:31b,3,1,Whisper,15-1509,42,20,69,40
+gemma4:31b,1,0,Granite Plus,15-1509,11,0,142,130
+gemma4:31b,2,1,Granite Plus,15-1509,83,120,130,88
+gemma4:31b,3,1,Granite Plus,15-1509,108,77,130,109
+gemma4:31b,1,0,Voxtral,15-1509,2,0,52,52
+gemma4:31b,2,1,Voxtral,15-1509,14,7,52,42
+gemma4:31b,3,1,Voxtral,15-1509,28,14,52,23
+gemma4:31b,1,0,Canary,15-1509,3,0,44,40
+gemma4:31b,2,1,Canary,15-1509,38,22,40,38
+gemma4:31b,3,1,Canary,15-1509,62,45,40,38
+gemma4:31b,1,0,Parakeet,15-1509,6,0,75,73
+gemma4:31b,2,1,Parakeet,15-1509,31,76,73,58
+gemma4:31b,3,1,Parakeet,15-1509,59,96,73,54
+gemma4:31b,1,0,Granite,15-1509,0,0,25,25
+gemma4:31b,2,1,Granite,15-1509,20,6,25,23
+gemma4:31b,3,1,Granite,15-1509,41,23,25,23
+gemma4:31b,1,0,Qwen3,16-111,18,0,158,147
+gemma4:31b,2,1,Qwen3,16-111,14,206,147,56
+gemma4:31b,3,1,Qwen3,16-111,21,132,147,76
+gemma4:31b,1,0,Whisper,16-111,3,0,80,77
+gemma4:31b,2,1,Whisper,16-111,18,15,77,54
+gemma4:31b,3,1,Whisper,16-111,26,26,77,57
+gemma4:31b,1,0,Granite Plus,16-111,15,2,346,336
+gemma4:31b,2,1,Granite Plus,16-111,56,203,336,265
+gemma4:31b,3,1,Granite Plus,16-111,70,163,336,273
+gemma4:31b,1,0,Voxtral,16-111,0,0,115,112
+gemma4:31b,2,1,Voxtral,16-111,21,19,112,79
+gemma4:31b,3,1,Voxtral,16-111,32,40,112,68
+gemma4:31b,1,0,Canary,16-111,3,0,63,63
+gemma4:31b,2,1,Canary,16-111,20,19,63,64
+gemma4:31b,3,1,Canary,16-111,40,64,63,57
+gemma4:31b,1,0,Parakeet,16-111,3,0,141,141
+gemma4:31b,2,1,Parakeet,16-111,37,104,141,118
+gemma4:31b,3,1,Parakeet,16-111,67,176,141,96
+gemma4:31b,1,0,Granite,16-111,0,0,63,63
+gemma4:31b,2,1,Granite,16-111,20,17,63,61
+gemma4:31b,3,1,Granite,16-111,34,45,63,61
+gemma4:31b,1,0,Qwen3,16-1161,13,15,85,78
+gemma4:31b,2,1,Qwen3,16-1161,25,116,78,39
+gemma4:31b,3,1,Qwen3,16-1161,40,76,78,60
+gemma4:31b,1,0,Whisper,16-1161,2,3,54,51
+gemma4:31b,2,1,Whisper,16-1161,8,6,51,30
+gemma4:31b,3,1,Whisper,16-1161,15,17,51,35
+gemma4:31b,1,0,Granite Plus,16-1161,9,8,185,178
+gemma4:31b,2,1,Granite Plus,16-1161,56,147,178,95
+gemma4:31b,3,1,Granite Plus,16-1161,77,112,178,117
+gemma4:31b,1,0,Voxtral,16-1161,0,1,68,68
+gemma4:31b,2,1,Voxtral,16-1161,11,3,68,33
+gemma4:31b,3,1,Voxtral,16-1161,21,16,68,32
+gemma4:31b,1,0,Canary,16-1161,3,9,35,33
+gemma4:31b,2,1,Canary,16-1161,38,20,33,32
+gemma4:31b,3,1,Canary,16-1161,46,29,33,42
+gemma4:31b,1,0,Parakeet,16-1161,2,0,99,99
+gemma4:31b,2,1,Parakeet,16-1161,31,68,99,71
+gemma4:31b,3,1,Parakeet,16-1161,47,133,99,78
+gemma4:31b,1,0,Granite,16-1161,1,0,34,34
+gemma4:31b,2,1,Granite,16-1161,18,5,34,30
+gemma4:31b,3,1,Granite,16-1161,24,12,34,35
+gemma4:31b,1,0,Qwen3,16-1348,2,0,89,84
+gemma4:31b,2,1,Qwen3,16-1348,10,116,84,66
+gemma4:31b,3,1,Qwen3,16-1348,12,74,84,73
+gemma4:31b,1,0,Whisper,16-1348,1,0,68,65
+gemma4:31b,2,1,Whisper,16-1348,15,9,65,41
+gemma4:31b,3,1,Whisper,16-1348,16,14,65,40
+gemma4:31b,1,0,Granite Plus,16-1348,4,2,122,118
+gemma4:31b,2,1,Granite Plus,16-1348,46,102,118,78
+gemma4:31b,3,1,Granite Plus,16-1348,67,105,118,86
+gemma4:31b,1,0,Voxtral,16-1348,0,0,82,80
+gemma4:31b,2,1,Voxtral,16-1348,16,4,80,65
+gemma4:31b,3,1,Voxtral,16-1348,25,21,80,33
+gemma4:31b,1,0,Canary,16-1348,2,0,33,31
+gemma4:31b,2,1,Canary,16-1348,28,29,31,27
+gemma4:31b,3,1,Canary,16-1348,45,46,31,24
+gemma4:31b,1,0,Parakeet,16-1348,4,0,89,86
+gemma4:31b,2,1,Parakeet,16-1348,40,90,86,62
+gemma4:31b,3,1,Parakeet,16-1348,61,107,86,58
+gemma4:31b,1,0,Granite,16-1348,3,0,42,39
+gemma4:31b,2,1,Granite,16-1348,22,6,39,36
+gemma4:31b,3,1,Granite,16-1348,35,19,39,38
+gemma4:31b,1,0,Qwen3,16-1435,7,0,111,89
+gemma4:31b,2,1,Qwen3,16-1435,13,304,89,41
+gemma4:31b,3,1,Qwen3,16-1435,22,151,89,69
+gemma4:31b,1,0,Whisper,16-1435,12,3,78,73
+gemma4:31b,2,1,Whisper,16-1435,17,25,73,44
+gemma4:31b,3,1,Whisper,16-1435,26,49,73,52
+gemma4:31b,1,0,Granite Plus,16-1435,17,3,224,200
+gemma4:31b,2,1,Granite Plus,16-1435,28,264,200,97
+gemma4:31b,3,1,Granite Plus,16-1435,42,197,200,134
+gemma4:31b,1,0,Voxtral,16-1435,1,0,57,55
+gemma4:31b,2,1,Voxtral,16-1435,7,1,55,58
+gemma4:31b,3,1,Voxtral,16-1435,22,31,55,51
+gemma4:31b,1,0,Canary,16-1435,11,4,53,48
+gemma4:31b,2,1,Canary,16-1435,22,27,48,43
+gemma4:31b,3,1,Canary,16-1435,33,44,48,44
+gemma4:31b,1,0,Parakeet,16-1435,5,0,99,97
+gemma4:31b,2,1,Parakeet,16-1435,37,175,97,64
+gemma4:31b,3,1,Parakeet,16-1435,51,121,97,69
+gemma4:31b,1,0,Granite,16-1435,1,0,51,51
+gemma4:31b,2,1,Granite,16-1435,17,23,51,41
+gemma4:31b,3,1,Granite,16-1435,40,29,51,41
+gemma4:31b,1,0,Qwen3,16-1519,16,0,178,100
+gemma4:31b,2,1,Qwen3,16-1519,26,129,100,41
+gemma4:31b,3,1,Qwen3,16-1519,34,84,100,49
+gemma4:31b,1,0,Whisper,16-1519,7,3,130,105
+gemma4:31b,2,1,Whisper,16-1519,20,20,105,43
+gemma4:31b,3,1,Whisper,16-1519,27,23,105,50
+gemma4:31b,1,0,Granite Plus,16-1519,24,10,222,144
+gemma4:31b,2,1,Granite Plus,16-1519,54,152,144,83
+gemma4:31b,3,1,Granite Plus,16-1519,61,109,144,91
+gemma4:31b,1,0,Voxtral,16-1519,12,0,113,66
+gemma4:31b,2,1,Voxtral,16-1519,10,11,66,59
+gemma4:31b,3,1,Voxtral,16-1519,17,11,66,54
+gemma4:31b,1,0,Canary,16-1519,4,6,103,56
+gemma4:31b,2,1,Canary,16-1519,26,22,56,48
+gemma4:31b,3,1,Canary,16-1519,29,35,56,51
+gemma4:31b,1,0,Parakeet,16-1519,5,1,120,103
+gemma4:31b,2,1,Parakeet,16-1519,28,80,103,61
+gemma4:31b,3,1,Parakeet,16-1519,41,86,103,62
+gemma4:31b,1,0,Granite,16-1519,11,5,98,55
+gemma4:31b,2,1,Granite,16-1519,31,15,55,47
+gemma4:31b,3,1,Granite,16-1519,37,24,55,50
+gemma4:31b,1,0,Qwen3,16-424,2,1,86,63
+gemma4:31b,2,1,Qwen3,16-424,4,131,63,28
+gemma4:31b,3,1,Qwen3,16-424,11,125,63,38
+gemma4:31b,1,0,Whisper,16-424,3,2,93,74
+gemma4:31b,2,1,Whisper,16-424,8,13,74,33
+gemma4:31b,3,1,Whisper,16-424,14,21,74,35
+gemma4:31b,1,0,Granite Plus,16-424,9,4,178,148
+gemma4:31b,2,1,Granite Plus,16-424,57,109,148,72
+gemma4:31b,3,1,Granite Plus,16-424,77,95,148,86
+gemma4:31b,1,0,Voxtral,16-424,3,2,83,64
+gemma4:31b,2,1,Voxtral,16-424,1,15,64,60
+gemma4:31b,3,1,Voxtral,16-424,11,28,64,42
+gemma4:31b,1,0,Canary,16-424,5,0,47,35
+gemma4:31b,2,1,Canary,16-424,56,38,35,31
+gemma4:31b,3,1,Canary,16-424,85,72,35,27
+gemma4:31b,1,0,Parakeet,16-424,2,1,108,87
+gemma4:31b,2,1,Parakeet,16-424,30,88,87,54
+gemma4:31b,3,1,Parakeet,16-424,46,114,87,54
+gemma4:31b,1,0,Granite,16-424,0,1,53,37
+gemma4:31b,2,1,Granite,16-424,18,33,37,33
+gemma4:31b,3,1,Granite,16-424,27,35,37,34
+gemma4:31b,1,0,Qwen3,16-499,3,0,105,104
+gemma4:31b,2,1,Qwen3,16-499,12,88,104,63
+gemma4:31b,3,1,Qwen3,16-499,21,68,104,63
+gemma4:31b,1,0,Whisper,16-499,0,0,70,70
+gemma4:31b,2,1,Whisper,16-499,29,9,70,46
+gemma4:31b,3,1,Whisper,16-499,36,20,70,52
+gemma4:31b,1,0,Granite Plus,16-499,8,3,199,191
+gemma4:31b,2,1,Granite Plus,16-499,43,70,191,103
+gemma4:31b,3,1,Granite Plus,16-499,104,84,191,124
+gemma4:31b,1,0,Voxtral,16-499,14,0,79,79
+gemma4:31b,2,1,Voxtral,16-499,17,5,79,66
+gemma4:31b,3,1,Voxtral,16-499,40,33,79,71
+gemma4:31b,1,0,Canary,16-499,2,0,56,56
+gemma4:31b,2,1,Canary,16-499,39,13,56,50
+gemma4:31b,3,1,Canary,16-499,65,36,56,52
+gemma4:31b,1,0,Parakeet,16-499,2,0,111,111
+gemma4:31b,2,1,Parakeet,16-499,35,56,111,75
+gemma4:31b,3,1,Parakeet,16-499,50,84,111,71
+gemma4:31b,1,0,Granite,16-499,1,0,56,55
+gemma4:31b,2,1,Granite,16-499,17,7,55,50
+gemma4:31b,3,1,Granite,16-499,25,30,55,49
+gemma4:31b,1,0,Qwen3,16-6855,8,0,91,64
+gemma4:31b,2,1,Qwen3,16-6855,17,107,64,32
+gemma4:31b,3,1,Qwen3,16-6855,23,60,64,53
+gemma4:31b,1,0,Whisper,16-6855,4,1,88,75
+gemma4:31b,2,1,Whisper,16-6855,29,24,75,40
+gemma4:31b,3,1,Whisper,16-6855,36,38,75,48
+gemma4:31b,1,0,Granite Plus,16-6855,5,0,185,170
+gemma4:31b,2,1,Granite Plus,16-6855,66,108,170,97
+gemma4:31b,3,1,Granite Plus,16-6855,74,108,170,101
+gemma4:31b,1,0,Voxtral,16-6855,1,0,67,56
+gemma4:31b,2,1,Voxtral,16-6855,25,11,56,43
+gemma4:31b,3,1,Voxtral,16-6855,33,21,56,44
+gemma4:31b,1,0,Canary,16-6855,5,0,60,46
+gemma4:31b,2,1,Canary,16-6855,34,27,46,40
+gemma4:31b,3,1,Canary,16-6855,51,66,46,39
+gemma4:31b,1,0,Parakeet,16-6855,2,0,79,68
+gemma4:31b,2,1,Parakeet,16-6855,36,48,68,48
+gemma4:31b,3,1,Parakeet,16-6855,59,96,68,40
+gemma4:31b,1,0,Granite,16-6855,3,0,51,38
+gemma4:31b,2,1,Granite,16-6855,24,38,38,26
+gemma4:31b,3,1,Granite,16-6855,40,53,38,30
+gemma4:31b,1,0,Qwen3,16-9493,2,2,74,60
+gemma4:31b,2,1,Qwen3,16-9493,11,158,60,27
+gemma4:31b,3,1,Qwen3,16-9493,15,115,60,29
+gemma4:31b,1,0,Whisper,16-9493,0,0,69,62
+gemma4:31b,2,1,Whisper,16-9493,13,6,62,43
+gemma4:31b,3,1,Whisper,16-9493,21,17,62,44
+gemma4:31b,1,0,Granite Plus,16-9493,3,0,116,108
+gemma4:31b,2,1,Granite Plus,16-9493,45,128,108,53
+gemma4:31b,3,1,Granite Plus,16-9493,59,120,108,70
+gemma4:31b,1,0,Voxtral,16-9493,4,1,45,35
+gemma4:31b,2,1,Voxtral,16-9493,13,3,35,36
+gemma4:31b,3,1,Voxtral,16-9493,18,30,35,32
+gemma4:31b,1,0,Canary,16-9493,4,0,45,36
+gemma4:31b,2,1,Canary,16-9493,55,43,36,28
+gemma4:31b,3,1,Canary,16-9493,66,34,36,26
+gemma4:31b,1,0,Parakeet,16-9493,2,0,98,92
+gemma4:31b,2,1,Parakeet,16-9493,32,91,92,61
+gemma4:31b,3,1,Parakeet,16-9493,56,140,92,47
+gemma4:31b,1,0,Granite,16-9493,0,0,32,24
+gemma4:31b,2,1,Granite,16-9493,13,2,24,19
+gemma4:31b,3,1,Granite,16-9493,16,19,24,16
+gemma4:31b,1,0,Qwen3,17-130,6,2,79,65
+gemma4:31b,2,1,Qwen3,17-130,12,143,65,21
+gemma4:31b,3,1,Qwen3,17-130,20,99,65,36
+gemma4:31b,1,0,Whisper,17-130,3,2,71,62
+gemma4:31b,2,1,Whisper,17-130,20,11,62,31
+gemma4:31b,3,1,Whisper,17-130,25,27,62,33
+gemma4:31b,1,0,Granite Plus,17-130,33,15,177,142
+gemma4:31b,2,1,Granite Plus,17-130,65,144,142,96
+gemma4:31b,3,1,Granite Plus,17-130,90,139,142,92
+gemma4:31b,1,0,Voxtral,17-130,11,2,93,86
+gemma4:31b,2,1,Voxtral,17-130,20,19,86,51
+gemma4:31b,3,1,Voxtral,17-130,28,36,86,74
+gemma4:31b,1,0,Canary,17-130,7,6,40,31
+gemma4:31b,2,1,Canary,17-130,22,19,31,22
+gemma4:31b,3,1,Canary,17-130,59,39,31,27
+gemma4:31b,1,0,Parakeet,17-130,2,6,77,67
+gemma4:31b,2,1,Parakeet,17-130,24,96,67,44
+gemma4:31b,3,1,Parakeet,17-130,42,108,67,36
+gemma4:31b,1,0,Granite,17-130,1,2,56,53
+gemma4:31b,2,1,Granite,17-130,36,10,53,35
+gemma4:31b,3,1,Granite,17-130,47,33,53,37
+gemma4:31b,1,0,Qwen3,17-269,30,44,125,79
+gemma4:31b,2,1,Qwen3,17-269,30,238,79,50
+gemma4:31b,3,1,Qwen3,17-269,75,137,79,51
+gemma4:31b,1,0,Whisper,17-269,1,11,73,71
+gemma4:31b,2,1,Whisper,17-269,15,27,71,38
+gemma4:31b,3,1,Whisper,17-269,43,36,71,41
+gemma4:31b,1,0,Granite Plus,17-269,20,34,222,190
+gemma4:31b,2,1,Granite Plus,17-269,86,198,190,124
+gemma4:31b,3,1,Granite Plus,17-269,112,135,190,141
+gemma4:31b,1,0,Voxtral,17-269,8,15,55,55
+gemma4:31b,2,1,Voxtral,17-269,9,4,55,28
+gemma4:31b,3,1,Voxtral,17-269,21,18,55,28
+gemma4:31b,1,0,Canary,17-269,6,31,48,48
+gemma4:31b,2,1,Canary,17-269,55,33,48,44
+gemma4:31b,3,1,Canary,17-269,74,50,48,45
+gemma4:31b,1,0,Parakeet,17-269,2,26,84,84
+gemma4:31b,2,1,Parakeet,17-269,62,110,84,63
+gemma4:31b,3,1,Parakeet,17-269,82,151,84,54
+gemma4:31b,1,0,Granite,17-269,2,0,51,50
+gemma4:31b,2,1,Granite,17-269,22,15,50,45
+gemma4:31b,3,1,Granite,17-269,41,43,50,40
+gemma4:31b,1,0,Qwen3,17-43,7,3,99,87
+gemma4:31b,2,1,Qwen3,17-43,20,178,87,47
+gemma4:31b,3,1,Qwen3,17-43,36,61,87,72
+gemma4:31b,1,0,Whisper,17-43,3,3,95,92
+gemma4:31b,2,1,Whisper,17-43,9,9,92,60
+gemma4:31b,3,1,Whisper,17-43,13,24,92,63
+gemma4:31b,1,0,Granite Plus,17-43,20,5,205,181
+gemma4:31b,2,1,Granite Plus,17-43,42,199,181,87
+gemma4:31b,3,1,Granite Plus,17-43,62,138,181,116
+gemma4:31b,1,0,Voxtral,17-43,4,0,73,69
+gemma4:31b,2,1,Voxtral,17-43,5,7,69,58
+gemma4:31b,3,1,Voxtral,17-43,15,10,69,46
+gemma4:31b,1,0,Canary,17-43,9,2,75,65
+gemma4:31b,2,1,Canary,17-43,16,18,65,61
+gemma4:31b,3,1,Canary,17-43,33,31,65,54
+gemma4:31b,1,0,Parakeet,17-43,8,0,117,114
+gemma4:31b,2,1,Parakeet,17-43,20,131,114,67
+gemma4:31b,3,1,Parakeet,17-43,34,98,114,67
+gemma4:31b,1,0,Granite,17-43,2,2,92,91
+gemma4:31b,2,1,Granite,17-43,20,17,91,87
+gemma4:31b,3,1,Granite,17-43,30,34,91,58
+gemma4:31b,1,0,Qwen3,17-530,7,0,76,59
+gemma4:31b,2,1,Qwen3,17-530,9,81,59,24
+gemma4:31b,3,1,Qwen3,17-530,12,44,59,48
+gemma4:31b,1,0,Whisper,17-530,1,0,64,63
+gemma4:31b,2,1,Whisper,17-530,19,2,63,36
+gemma4:31b,3,1,Whisper,17-530,24,11,63,34
+gemma4:31b,1,0,Granite Plus,17-530,13,4,152,132
+gemma4:31b,2,1,Granite Plus,17-530,21,75,132,63
+gemma4:31b,3,1,Granite Plus,17-530,25,63,132,81
+gemma4:31b,1,0,Voxtral,17-530,0,0,61,60
+gemma4:31b,2,1,Voxtral,17-530,13,0,60,44
+gemma4:31b,3,1,Voxtral,17-530,18,12,60,24
+gemma4:31b,1,0,Canary,17-530,4,0,41,36
+gemma4:31b,2,1,Canary,17-530,18,11,36,36
+gemma4:31b,3,1,Canary,17-530,24,21,36,34
+gemma4:31b,1,0,Parakeet,17-530,4,2,58,55
+gemma4:31b,2,1,Parakeet,17-530,16,33,55,49
+gemma4:31b,3,1,Parakeet,17-530,19,47,55,44
+gemma4:31b,1,0,Granite,17-530,0,0,33,32
+gemma4:31b,2,1,Granite,17-530,9,2,32,30
+gemma4:31b,3,1,Granite,17-530,20,22,32,29

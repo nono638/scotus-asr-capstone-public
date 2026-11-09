@@ -1,0 +1,1 @@
+{"case": "r018", "own": {"reason": "The engine writes \"the orange steps\" for \"the iron steps\", so the steps get a color instead of the metal; the next sentence still says iron steps.", "meaning": "changed", "severity": 2, "follow_up": "changes meaning", "reference_doubt": "no"}}

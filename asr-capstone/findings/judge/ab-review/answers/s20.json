@@ -1,0 +1,185 @@
+{
+ "case": "s20",
+ "X": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 4,
+    "follow_up": "content lost, gap shows",
+    "reason": "The speech recognition engine failed to transcribe the entire phrase present in the reference."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 4,
+    "follow_up": "content lost, gap shows",
+    "reason": "The speech recognition engine failed to transcribe the entire utterance from Speaker B at the specified spot."
+   },
+   "whole": {
+    "meaning": "changed",
+    "severity": 4,
+    "follow_up": "content lost, gap shows",
+    "reason": "The speech recognition engine failed to transcribe the entire sentence spoken by Speaker B at the indicated spot."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The engine completely omits Speaker B's entire response, which breaks the conversational flow and removes a significant piece of dialogue."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The engine completely omitted Speaker B's entire turn at the marked spot."
+  },
+  "blind": {
+   "order1 (reference shown as B)": {
+    "picked": "engine",
+    "sure": 3,
+    "reason": "In Version B, Speaker B's comment about 'very very good english' is a non-sequitur that doesn't logically transition to the next topic about food, whereas Version A's empty placeholder represents a natural pause or simple acknowledgement."
+   },
+   "order2 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "Version A contains a coherent conversational response from Speaker B that fits the flow of the dialogue, whereas Version B leaves a sudden, unnatural silence in the middle of a transition."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Qwen3": 2,
+    "Granite": 3,
+    "Whisper": 1,
+    "Canary": 4,
+    "Parakeet": 4
+   },
+   "reason": "Engine 3 is the most accurate as it preserves the core of the phrase 'that's that's a very good', while Engine 1 and 2 introduce semantic changes ('good thing' and 'good idea') that alter the original meaning."
+  },
+  "misses": [
+   {
+    "reference": "THE WH THE FUNNIEST OF IT WAS JUST",
+    "engine": "the funniest of it all is",
+    "severity": 1,
+    "what": "changed 'was just' to 'all is'"
+   },
+   {
+    "reference": "THEY LOVED MATHEMATICS",
+    "engine": "they love math",
+    "severity": 1,
+    "what": "changed tense and shortened word"
+   },
+   {
+    "reference": "THEY WERE GREAT FANS OF MATHEMATICS",
+    "engine": "they were great fans of math",
+    "severity": 0,
+    "what": "shortened word"
+   },
+   {
+    "reference": "TO ARRIVE THE CLASS",
+    "engine": "to arrive in the class",
+    "severity": 0,
+    "what": "added preposition"
+   },
+   {
+    "reference": "MATHS MATHS GIVES ME HEADACHE",
+    "engine": "maths gives me headache",
+    "severity": 0,
+    "what": "removed repetition"
+   },
+   {
+    "reference": "DISLIKE ENGLISH LIKE MAD",
+    "engine": "dislike English like math",
+    "severity": 4,
+    "what": "replaced 'mad' with 'math', changing meaning"
+   },
+   {
+    "reference": "ANY FOOD YOU'VE NOT TRIED",
+    "engine": "any food you not tried",
+    "severity": 1,
+    "what": "missing verb 'have'"
+   },
+   {
+    "reference": "ANY FOOD ANY FOOD ANY FOOD ANY FOOD",
+    "engine": "food any food any food",
+    "severity": 0,
+    "what": "removed repetition"
+   },
+   {
+    "reference": "I DON'T THINK THERE IS ANY I DON'T THINK THERE'S ANY",
+    "engine": "i don't think there's any",
+    "severity": 1,
+    "what": "removed repetition"
+   }
+  ]
+ },
+ "Y": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "content lost, gap shows",
+    "reason": "The engine completely omits the entire clause present in the reference at the marked location."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 4,
+    "follow_up": "content lost, gap shows",
+    "reason": "The engine completely omitted the entire phrase spoken by Speaker B at the marked location."
+   },
+   "whole": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "content lost, gap shows",
+    "reason": "The engine completely omitted the speaker's entire sentence at the marked place."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The engine completely omits Speaker B's entire response, which contains a significant reaction to the previous statement, leaving a gap in the conversation flow."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The engine completely omitted the speaker's turn present in the reference."
+  },
+  "blind": {
+   "order1 (reference shown as B)": {
+    "picked": "engine",
+    "sure": 2,
+    "reason": "In Version A, Speaker B provides a simple backchanneling sound ('mm'), which is natural when someone is telling a story. In Version B, the phrase 'that's that's a very very good english' is grammatically awkward and feels like an out-of-place commentary that doesn't follow the flow of the anecdote as smoothly as a simple acknowledgment."
+   },
+   "order2 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 2,
+    "reason": "In Version A, Speaker B provides a reactive comment ('that's that's a very very good english') that fits the conversational flow of Speaker A describing their classmates' proficiency/preferences. Version B leaves a silence where a conversational filler or reaction would naturally occur."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Qwen3": 3,
+    "Granite": 3,
+    "Whisper": 1,
+    "Canary": 4,
+    "Parakeet": 4
+   },
+   "reason": "Engine 3 is the most accurate as it captures the exact words of the reference, while Engine 1 and 2 introduce incorrect words, and Engines 4 and 5 miss the content entirely."
+  },
+  "misses": [
+   {
+    "reference": "THE WH THE FUNNIEST OF IT WAS JUST THEY LOVED",
+    "engine": "the funniest of it all is they love",
+    "severity": 1,
+    "what": "the funniest of it was just they loved"
+   },
+   {
+    "reference": "DISLIKE ENGLISH LIKE MAD",
+    "engine": "dislike English like math",
+    "severity": 2,
+    "what": "dislike English like mad"
+   },
+   {
+    "reference": "ANY FOOD YOU'VE NOT TRIED",
+    "engine": "any food you not tried",
+    "severity": 1,
+    "what": "any food you've not tried"
+   }
+  ]
+ }
+}

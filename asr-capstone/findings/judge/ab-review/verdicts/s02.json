@@ -1,0 +1,15 @@
+{"case": "s02",
+ "parts": {
+  "meaning/line": {"X": "right", "Y": "right", "better": "tie", "why": "Both say opposite, severity 4, negation lost for DIDN'T -> did."},
+  "meaning/minute": {"X": "right", "Y": "right", "better": "tie", "why": "Both correct."},
+  "meaning/whole": {"X": "right", "Y": "right", "better": "tie", "why": "Both correct, and both tie it to not having a real ball."},
+  "noticeable": {"X": "right", "Y": "wrong", "better": "X", "why": "The engine's own next sentence says they made a ball out of paper and plastic, so a careful reader would see the clash; X says yes, Y says no."},
+  "stakes": {"X": "right", "Y": "right", "better": "tie", "why": "Both say yes and explain the contradiction with the homemade ball."},
+  "rule": {"X": "right", "Y": "right", "better": "tie", "why": "Both confirm the evidence."},
+  "blind": {"X": "right", "Y": "partly", "better": "X", "why": "X picks the reference in both orders. Y picks it in order 1 but the engine's 'did' in order 2, with reasoning turned backwards ('didn't' contradicts making a ball)."},
+  "rank": {"X": "partly", "Y": "right", "better": "Y", "why": "Y ties the three engines that kept 'didn't' at 1 and the two that wrote 'did' last, which is right at the spot. X also puts the 'did' engines last but splits Canary, Granite and Whisper on differences away from the spot."},
+  "misses": {"X": {"real_and_matter": 4, "trivial": 1, "not_real": 0, "important_missed": 0},
+             "Y": {"real_and_matter": 4, "trivial": 1, "not_real": 0, "important_missed": 0},
+             "better": "tie", "why": "Same five items in both: didn't/did, other/elder brother, circlical/spectral, the added 'trying to adjust', and 'was never'/'must never catch us' (same sense, so trivial). X over-scores the added clause at 3; Y under-scores the reversal at 3."}
+ },
+ "overall": {"better": "X", "why": "X is right on noticeable and steady on the blind test where Y flips with the order; Y's only edge is a cleaner rank."}}

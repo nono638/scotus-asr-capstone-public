@@ -1,0 +1,860 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>The Data</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Public+Sans:wght@400;500;600;700&family=Courier+Prime:wght@400;700&display=swap">
+<script src="https://cdnjs.cloudflare.com/ajax/libs/PapaParse/5.4.1/papaparse.min.js"></script>
+<style>
+/* One set of colours and type for every page of the project (app-roadmap.md,
+   "One set of widgets on every page"). Pages inline this file at build time.
+
+   The look comes from a certified transcript page: navy ink on a cool white
+   page and the record in a typewriter face. Where a machine and the record
+   differ gets a highlighter, on both of their lines, and must be easy to see
+   on any screen. Each engine keeps one colour everywhere. */
+
+:root {
+  --bg: #f5f7fa;          /* the page */
+  --card: #ffffff;        /* a sheet on it */
+  --ink: #14213d;         /* federal navy */
+  --muted: #55607a;
+  --faint: #8a93a8;
+  --rule: #dce1ea;
+  --accent: #1f4e8c;      /* links, buttons, the chosen thing */
+  --accent-soft: #e4ecf7;
+  --mark: #ffe066;        /* highlighter: differs from the record, or the passage in question */
+  --mark-ink: #2b2000;
+  --mark-strong: #ffb300; /* the same, louder: every engine differs */
+  --mark-strong-ink: #201400;
+  /* Solid fills for the errors the searches found, with one ink for all of them. */
+  --e-ink: #ffffff;
+  --e-meaning: #c62828; --e-fact: #00796b; --e-invented: #4d7c0f; --e-skips: #c2187a; --e-edits: #6d3fc4;
+  --gap: #b6bfcd;
+  --done: #2f7a50;
+  --done-soft: #ddefe3;
+  --warn: #a1281c;
+  --now: #7fb2f5;         /* the word being spoken */
+  --diff: #b42318;        /* the margin red: differs from the record */
+  --qwen3: #0e7c74;
+  --whisper: #b5650d;
+  --parakeet: #6550c8;
+  --canary: #7a6a12;
+  --granite: #5d6676;
+  --record: #14213d;
+  /* One colour per kind of difference (the listening bench's codebook). */
+  --k-overlap: #2f68a8; --k-disfluency: #7f52b8; --k-name: #a85d16; --k-number: #19807f; --k-small: #8f7414;
+  --k-notreal: #66705a; --k-misheard: #b8392b; --k-leftout: #b03f7d; --k-cant: #8c94a3;
+  --font-display: "Libre Caslon Text", "Iowan Old Style", Georgia, serif;
+  --font-ui: "Public Sans", "Segoe UI", system-ui, sans-serif;
+  --font-transcript: "Courier Prime", "Courier New", Courier, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1626; --card: #152036; --ink: #e7ebf3; --muted: #a2acc0; --faint: #6e7891; --rule: #26324a;
+    --accent: #8db4ee; --accent-soft: #1e2e4d; --mark: #8a6a00; --mark-ink: #ffffff; --mark-strong: #ffd23f; --mark-strong-ink: #1a1300; --gap: #4f5b73;
+    --e-ink: #10141f; --e-meaning: #ff7a6b; --e-fact: #3dd6c6; --e-invented: #a3e635; --e-skips: #ff85c8; --e-edits: #b79bff;
+    --done: #7cc79a; --done-soft: #1c3627; --warn: #f0998b; --now: #2563d0; --diff: #f2867a;
+    --qwen3: #3cc7b9; --whisper: #f0a64a; --parakeet: #a797f7; --canary: #d6bc5a; --granite: #a9b1c0; --record: #e7ebf3; color-scheme: dark;
+    --k-overlap: #7aa9e6; --k-disfluency: #b294e6; --k-name: #e0a060; --k-number: #5cc4c2; --k-small: #d6bc5a;
+    --k-notreal: #a9b39a; --k-misheard: #ee8a7c; --k-leftout: #e58cbd; --k-cant: #6c7586;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1626; --card: #152036; --ink: #e7ebf3; --muted: #a2acc0; --faint: #6e7891; --rule: #26324a;
+  --accent: #8db4ee; --accent-soft: #1e2e4d; --mark: #8a6a00; --mark-ink: #ffffff; --mark-strong: #ffd23f; --mark-strong-ink: #1a1300; --gap: #4f5b73;
+    --e-ink: #10141f; --e-meaning: #ff7a6b; --e-fact: #3dd6c6; --e-invented: #a3e635; --e-skips: #ff85c8; --e-edits: #b79bff;
+  --done: #7cc79a; --done-soft: #1c3627; --warn: #f0998b; --now: #2563d0; --diff: #f2867a;
+  --qwen3: #3cc7b9; --whisper: #f0a64a; --parakeet: #a797f7; --canary: #d6bc5a; --granite: #a9b1c0; --record: #e7ebf3; color-scheme: dark;
+  --k-overlap: #7aa9e6; --k-disfluency: #b294e6; --k-name: #e0a060; --k-number: #5cc4c2; --k-small: #d6bc5a;
+  --k-notreal: #a9b39a; --k-misheard: #ee8a7c; --k-leftout: #e58cbd; --k-cant: #6c7586;
+}
+
+body { background: var(--bg); color: var(--ink); font-family: var(--font-ui); margin: 0; }
+button:focus-visible, summary:focus-visible, a:focus-visible, select:focus-visible, textarea:focus-visible,
+[tabindex]:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+
+/* ---- Listen: the player, the same on every page ---------------------------- */
+.btn { font: inherit; font-size: 13px; border: 1px solid var(--rule); background: var(--bg); color: var(--ink);
+       border-radius: 4px; padding: 5px 10px; cursor: pointer; }
+.btn:hover { border-color: var(--accent); }
+.btn[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); font-weight: 600; }
+.btn small { font-size: 11px; color: var(--muted); font-weight: 400; margin-left: 4px; font-variant-numeric: tabular-nums; }
+.btn kbd { font-family: var(--font-ui); font-size: 10px; color: var(--faint); margin-left: 5px; }
+.listen-controls { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.listen-controls .label { font-size: 12px; color: var(--muted); margin-right: 4px; }
+.listen-controls .playing { font-size: 12px; color: var(--accent); min-width: 7ch; }
+.listen-status { font-size: 12px; color: var(--warn); }
+.listen-status:empty { display: none; }
+.word { cursor: pointer; border-radius: 2px; }
+.word:hover { text-decoration: underline; text-decoration-color: var(--faint); }
+.word.off, .word.passage { background: var(--mark); color: var(--mark-ink); box-shadow: 0 0 0 1px var(--mark); }
+.word.now { background: var(--now); color: var(--ink); box-shadow: 0 0 0 2px var(--now); }
+.word.outside { display: none; }
+
+/* ---- Compare: the record beside the engines --------------------------------- */
+.compare { display: grid; border-top: 1px solid var(--rule); }
+.compare-line { display: grid; grid-template-columns: 92px 1fr; gap: 12px; padding-block: 9px;
+                border-bottom: 1px solid var(--rule); min-width: 0; }
+.compare-who { font-size: 13px; font-weight: 600; color: var(--who, var(--muted)); padding-top: 2px; }
+.compare-who::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+                       background: var(--who, var(--faint)); margin-right: 6px; vertical-align: 1px; }
+.compare-text { font-family: var(--font-transcript); font-size: 15px; line-height: 1.65; min-width: 0; overflow-wrap: anywhere; }
+.compare-text .ctx { color: var(--muted); }
+.compare mark, mark.passage { background: var(--mark); color: var(--mark-ink); padding: 1px 3px; border-radius: 2px; }
+.compare-key { font-size: 12px; color: var(--muted); margin: 6px 0 0; }
+@media (max-width: 520px) { .compare-line { grid-template-columns: 1fr; gap: 2px; } }
+
+/* ---- Chart ------------------------------------------------------------------ */
+.chart { position: relative; min-width: 0; }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; font-family: var(--font-ui); }
+.chart .axis line, .chart .axis path { stroke: var(--rule); }
+.chart .axis text { fill: var(--muted); font-size: 12px; }
+.chart .diagonal { stroke: var(--faint); stroke-dasharray: 4 4; }
+.chart .zone { fill: var(--muted); font-size: 13px; }
+.chart .dot { transition: transform .7s cubic-bezier(.3,.7,.2,1), opacity .3s; cursor: pointer; }
+.chart .dot.hidden { opacity: 0; pointer-events: none; }
+.chart .dot.picked circle { stroke: var(--ink); stroke-width: 2.5; }
+.chart .bar { transition: width .5s cubic-bezier(.3,.7,.2,1), x .5s; }
+.chart-tip { position: absolute; pointer-events: none; background: var(--card); border: 1px solid var(--rule);
+             border-radius: 4px; padding: 6px 9px; font-size: 12px; line-height: 1.4; box-shadow: 0 2px 8px rgb(20 33 61 / .12);
+             max-width: 240px; z-index: 2; }
+.chart-tip[hidden] { display: none; }
+.switch { display: inline-flex; border: 1px solid var(--rule); border-radius: 999px; padding: 3px; background: var(--card); gap: 2px; flex-wrap: wrap; }
+.switch button { font: inherit; font-size: 14px; border: 0; background: none; color: var(--muted); padding: 6px 14px; border-radius: 999px; cursor: pointer; }
+.switch button[aria-pressed="true"] { background: var(--ink); color: var(--card); font-weight: 600; }
+
+.bar-list { display: grid; gap: 6px; }
+.bar-row { display: grid; grid-template-columns: minmax(9rem, 17rem) 1fr 3.6rem; gap: 12px; align-items: center;
+           font-size: 14px; border-radius: 3px; }
+.bar-row:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.bar-track { position: relative; height: 20px; border-left: 1px solid var(--faint); }
+.bar-fill { position: absolute; left: 0; top: 4px; height: 12px; width: 0; background: var(--accent);
+            border-radius: 0 2px 2px 0; transition: width .55s cubic-bezier(.3,.7,.2,1); }
+.bar-ci { position: absolute; top: 9px; height: 2px; background: var(--ink); opacity: .55;
+          transition: left .55s cubic-bezier(.3,.7,.2,1), width .55s cubic-bezier(.3,.7,.2,1); }
+.bar-value { font-variant-numeric: tabular-nums; text-align: right; font-weight: 600; }
+.bar-scale .bar-track { border-left: 0; height: 16px; }
+.bar-scale .bar-track span { position: absolute; transform: translateX(-50%); font-size: 11px; color: var(--muted); white-space: nowrap; }
+@media (max-width: 560px) {
+  .bar-row { grid-template-columns: 1fr 3.2rem; gap: 2px 10px; }
+  .bar-row .bar-label { grid-column: 1 / -1; }
+  .bar-scale .bar-label { display: none; }
+}
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ---- Table ------------------------------------------------------------------ */
+.table-wrap { overflow-x: auto; }
+table.sortable { border-collapse: collapse; width: 100%; font-size: 14px; font-variant-numeric: tabular-nums; }
+table.sortable th, table.sortable td { padding: 6px 10px; border-bottom: 1px solid var(--rule); text-align: left; }
+table.sortable td.num, table.sortable th.num { text-align: right; }
+table.sortable th button { font: inherit; font-weight: 600; font-size: 13px; color: var(--muted); background: none; border: 0; padding: 0; cursor: pointer; }
+table.sortable th[aria-sort] button { color: var(--ink); }
+table.sortable th[aria-sort="ascending"] button::after { content: " \2191"; }
+table.sortable th[aria-sort="descending"] button::after { content: " \2193"; }
+table.sortable tr.best td { font-weight: 600; }
+
+/* The website's layout, shared by the front page and every data-set page.
+   Colours, type and the widgets' own styles come from web/widget/tokens.css. */
+:root {
+  --t2010: #4063a8; --t2017: #b5532a; --t2021: #5f7f2a; --t2025: #8a4f9e;
+  --measure: 42rem; --wide: 70rem;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --t2010: #87a6e8; --t2017: #ec9468; --t2021: #a8c46a; --t2025: #c99adb; } }
+:root[data-theme="dark"] { --t2010: #87a6e8; --t2017: #ec9468; --t2021: #a8c46a; --t2025: #c99adb; }
+
+body { font: 16px/1.6 var(--font-ui); }
+.wrap { max-width: var(--wide); margin: 0 auto; padding: 20px max(16px, env(safe-area-inset-right, 0px)) 80px max(16px, env(safe-area-inset-left, 0px)); }
+.column { max-width: var(--measure); }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.15; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(2rem, 4.6vw, 3.4rem); max-width: 22ch; letter-spacing: -.01em; margin-top: 28px; }
+h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); margin-top: 80px; }
+h3 { font-size: 1.2rem; margin-top: 32px; }
+p { margin: 14px 0 0; }
+.lede { font-family: var(--font-display); font-size: 1.2rem; line-height: 1.5; color: var(--muted); max-width: 40rem; margin-top: 18px; }
+.about { font-size: 14px; color: var(--muted); margin: 0; }
+.source { font-size: 12.5px; color: var(--muted); margin-top: 10px; }
+.source code, code { font-family: var(--font-transcript); font-size: .92em; }
+a { color: var(--accent); text-underline-offset: 3px; }
+.num { font-variant-numeric: tabular-nums; }
+.hint { font-size: 13px; color: var(--muted); margin-top: 10px; }
+
+/* ---- the bar across the top: the site and its data sets --------------------- */
+.site-nav { display: flex; flex-wrap: wrap; gap: 6px 18px; align-items: baseline; border-bottom: 1px solid var(--rule); padding-bottom: 10px; font-size: 15px; }
+.site-nav .home { font-family: var(--font-display); font-size: 1.05rem; color: var(--ink); text-decoration: none; margin-right: auto; }
+.site-nav .links { display: flex; flex-wrap: wrap; gap: 4px 18px; }
+.site-nav .recordings { flex-basis: 100%; display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px 14px; font-size: 13px; color: var(--muted); }
+.site-nav a { color: var(--ink); opacity: .78; text-decoration: none; }
+.site-nav .recordings a { color: var(--accent); opacity: 1; }
+.site-nav .recordings a::after { content: " ↗"; }
+.site-nav .recordings a[aria-current]::after { content: none; }
+.site-nav .own { flex-basis: 100%; text-align: right; font-size: 13px; }
+.site-nav .own a { color: var(--accent); opacity: 1; }
+.site-nav a:hover { color: var(--accent); opacity: 1; }
+.site-nav a[aria-current="page"] { color: var(--ink); opacity: 1; font-weight: 600; box-shadow: inset 0 -2px 0 var(--diff); }
+
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: 14px 24px; margin-top: 24px; max-width: 56rem; }
+.facts div { font-size: 14px; color: var(--muted); }
+.facts b { display: block; font-family: var(--font-display); font-weight: 400; font-size: 2rem; color: var(--ink); font-variant-numeric: tabular-nums; }
+
+/* ---- where it goes wrong: four kinds, each a sheet of cards ------------------- */
+.kinds-index { list-style: none; padding: 0; margin: 20px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.kinds-index a { display: inline-block; border: 1px solid var(--rule); border-radius: 999px; padding: 4px 12px; font-size: 14px; text-decoration: none; color: var(--ink); background: var(--card); }
+.kinds-index a:hover { border-color: var(--accent); }
+.kinds-index small { color: var(--muted); margin-left: 6px; font-variant-numeric: tabular-nums; }
+.kind-section { margin-top: 56px; scroll-margin-top: 16px; }
+.kind-section > h3 { font-size: clamp(1.3rem, 2.2vw, 1.6rem); margin-top: 0; }
+.kind-section .why { max-width: var(--measure); }
+.kind-counts { max-width: 40rem; margin-top: 14px; }
+.kind-empty { color: var(--muted); font-style: italic; }
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 31rem), 1fr)); gap: 18px; margin-top: 20px; }
+.failure-card { background: var(--card); border: 1px solid var(--rule); border-left: 3px solid var(--diff); border-radius: 6px;
+                padding: 16px 18px 16px 22px; display: grid; gap: 10px; min-width: 0; }
+.failure-card .card-kind { font-size: 13px; font-weight: 600; color: var(--diff); margin: 0; }
+.failure-card h3 { margin: 0; font-size: 1.1rem; font-style: italic; }
+.failure-card .card-where { font-size: 13px; color: var(--muted); margin: 0; }
+.failure-card .card-note { font-size: 15px; margin: 0; }
+.failure-card .card-heard { font-size: 12px; color: var(--muted); margin: 0; }
+.failure-card mark:empty::before { content: "nothing here"; font-family: var(--font-ui); font-size: 12px; }
+.failure-card mark:empty { background: transparent; border: 1px dashed var(--gap); color: var(--gap); }
+.more-cards { font: inherit; font-size: 14px; margin-top: 14px; border: 1px solid var(--rule); background: var(--card); color: var(--accent); border-radius: 999px; padding: 6px 14px; cursor: pointer; }
+
+/* ---- the front page's opening: one failure, large ----------------------------- */
+.feature { margin-top: 30px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(15rem, 20rem); gap: 24px 40px; align-items: start; }
+.feature .failure-card { border-left-width: 4px; padding: 20px 24px 20px 26px; }
+.feature .failure-card h3 { font-size: 1.4rem; }
+.feature .failure-card .compare-text { font-size: 17px; }
+.feature aside { border-left: 2px solid var(--diff); padding-left: 18px; font-size: 15px; }
+.feature aside b { display: block; font-family: var(--font-display); font-weight: 400; font-size: clamp(2.6rem, 6vw, 3.6rem); line-height: 1; font-variant-numeric: tabular-nums; }
+@media (max-width: 860px) { .feature { grid-template-columns: 1fr; } }
+
+.kind-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 18px 28px; margin-top: 22px; }
+.kind-grid > div { border-top: 2px solid var(--ink); padding-top: 10px; font-size: 15px; }
+.kind-grid b { display: block; font-family: var(--font-display); font-weight: 400; font-size: 1.2rem; margin-bottom: 4px; }
+.kind-grid ul { list-style: none; padding: 0; margin: 10px 0 0; font-size: 14px; display: grid; gap: 2px; }
+.kind-grid li { display: flex; justify-content: space-between; gap: 10px; border-bottom: 1px dotted var(--rule); }
+.kind-grid li span:last-child { font-variant-numeric: tabular-nums; color: var(--muted); }
+
+.datasets { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 18px; margin-top: 20px; }
+.dataset-card { display: grid; gap: 6px; align-content: start; background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 16px 18px; color: var(--ink); text-decoration: none; }
+a.dataset-card:hover { border-color: var(--accent); }
+.dataset-card b { font-family: var(--font-display); font-weight: 400; font-size: 1.3rem; }
+.dataset-card span { font-size: 14px; color: var(--muted); }
+.dataset-card p { margin: 4px 0 0; font-size: 15px; }
+.dataset-card .go { color: var(--accent); font-size: 14px; }
+
+/* ---- the Supreme Court's Figure 1 --------------------------------------------- */
+.hero-tools { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; margin-top: 22px; }
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(16rem, 23rem); gap: 28px 40px; margin-top: 22px; align-items: start; }
+.tally { border-left: 2px solid var(--diff); padding-left: 18px; }
+.tally .big { font-family: var(--font-display); font-size: clamp(3.2rem, 8vw, 5rem); line-height: 1; font-variant-numeric: tabular-nums; display: block; }
+.tally .of { font-size: 1.05rem; margin-top: 6px; }
+.tally .why { font-size: 14px; color: var(--muted); margin-top: 14px; }
+.who-qwen3 { color: var(--qwen3); font-weight: 600; }
+.who-whisper { color: var(--whisper); font-weight: 600; }
+.terms { display: flex; flex-wrap: wrap; gap: 6px; }
+.terms button { font: inherit; font-size: 13px; border: 1px solid var(--rule); background: var(--card); color: var(--ink); border-radius: 999px; padding: 4px 11px; cursor: pointer; }
+.terms button[aria-pressed="true"] { border-color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink); font-weight: 600; }
+.terms .chip { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 6px; background: var(--c); }
+.listen-box { margin-top: 22px; background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 10px; }
+.listen-box:empty { display: none; }
+.listen-box h3 { margin: 0; font-size: 1.05rem; }
+.listen-box .meta { font-size: 13px; color: var(--muted); margin: 0; }
+#figure { max-width: 40rem; }
+@media (max-width: 860px) { .hero { grid-template-columns: 1fr; } }
+.rules { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 16px 28px; margin-top: 20px; max-width: 52rem; }
+.rules div { border-top: 2px solid var(--ink); padding-top: 10px; font-size: 15px; }
+.rules b { display: block; font-family: var(--font-display); font-weight: 400; font-size: 1.15rem; margin-bottom: 4px; }
+
+/* ---- how much is done ------------------------------------------------------- */
+.coverage { display: grid; grid-template-columns: repeat(auto-fill, minmax(8.5rem, 1fr)); gap: 10px; margin-top: 18px; }
+.term-cell { font: inherit; text-align: left; background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 10px 12px; display: grid; gap: 5px; color: var(--ink); }
+button.term-cell { cursor: pointer; }
+button.term-cell:hover { border-color: var(--accent); }
+.term-cell .year { font-family: var(--font-display); font-size: 1.15rem; }
+.term-cell .n { font-size: 12px; color: var(--muted); }
+.meter { height: 5px; background: var(--rule); border-radius: 3px; overflow: hidden; }
+.meter i { display: block; height: 100%; background: var(--c); }
+.key { font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: 12px; }
+.key span::before { content: ""; display: inline-block; width: 14px; height: 5px; border-radius: 3px; background: var(--c); margin-right: 6px; vertical-align: 2px; }
+
+.switch-row { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; margin-top: 18px; }
+.roadmap { list-style: none; padding: 0; margin: 16px 0 0; display: grid; gap: 6px; }
+.roadmap li { display: grid; grid-template-columns: 5rem 1fr; gap: 10px; font-size: 15px; }
+.roadmap .state { font-size: 12px; color: var(--muted); padding-top: 3px; }
+.roadmap li.done .state { color: var(--done); font-weight: 600; }
+footer { margin-top: 90px; border-top: 1px solid var(--rule); padding-top: 16px; font-size: 13px; color: var(--muted); max-width: var(--measure); }
+footer p { margin: 6px 0 0; }
+
+/* ---- the link to the data set, the big picture, who wrote the record ---------- */
+.go-source { margin-top: 20px; }
+.source-button { display: inline-block; border: 1px solid var(--accent); border-radius: 6px; padding: 8px 14px; font-weight: 600; text-decoration: none; background: var(--accent-soft); }
+.source-button::after { content: " ↗"; }
+.big-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr)); gap: 24px 40px; margin-top: 26px; }
+.big-grid h3 { margin-top: 0; }
+.big-grid .table-wrap, .big-grid table { margin-top: 10px; }
+#classes { overflow-x: auto; }
+.plain-bars { margin-top: 12px; }
+.plain-bars .bar-row { grid-template-columns: minmax(5rem, 8rem) 1fr 4rem; }
+.truth { margin-top: 70px; background: var(--card); border: 1px solid var(--rule); border-left: 4px solid var(--record); border-radius: 6px; padding: 4px 22px 18px; max-width: 52rem; }
+.truth h2 { margin-top: 18px; font-size: clamp(1.3rem, 2.2vw, 1.6rem); }
+.truth ul { margin: 12px 0 0; padding-left: 20px; display: grid; gap: 4px; }
+.truth-small { font-size: 14px; color: var(--muted); }
+.truth-small b { color: var(--ink); font-weight: 600; }
+
+/* ---- back to the top ------------------------------------------------------------ */
+.to-top { position: fixed; right: max(16px, env(safe-area-inset-right, 0px)); bottom: 18px; z-index: 20; font: inherit; font-size: 14px; font-weight: 600;
+          border: 1px solid var(--rule); background: var(--card); color: var(--accent); border-radius: 999px; padding: 8px 14px; cursor: pointer; box-shadow: 0 2px 8px rgb(20 33 61 / .15); }
+.to-top:hover { border-color: var(--accent); }
+.to-top[hidden] { display: none; }
+.dataset-card .go + .go { margin-top: -2px; }
+.across { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+.across .source-button::after { content: none; }
+
+/* ---- who made what, under what licence ------------------------------------------- */
+.credit-list { display: grid; gap: 16px; margin-top: 12px; font-size: 13.5px; color: var(--muted); max-width: var(--measure); }
+.credit-one h3 { font-size: 14px; margin: 0; color: var(--ink); }
+.credit-one p { margin: 4px 0 0; }
+.credit-one ul { margin: 6px 0 0; padding-left: 18px; display: grid; gap: 4px; }
+.credit-one summary { cursor: pointer; margin-top: 6px; color: var(--accent); }
+
+.tabs { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 28px; border-bottom: 1px solid var(--rule); }
+.tabs button { font: inherit; font-size: 15px; border: 1px solid var(--rule); border-bottom: 0; background: var(--bg); color: var(--muted); border-radius: 6px 6px 0 0; padding: 8px 14px; cursor: pointer; margin-bottom: -1px; }
+.tabs button[aria-selected="true"] { background: var(--card); color: var(--ink); font-weight: 600; }
+.panel { background: var(--card); border: 1px solid var(--rule); border-top: 0; border-radius: 0 0 6px 6px; padding: 16px 18px 20px; }
+.panel[hidden] { display: none; }
+.viewer-tools { display: flex; flex-wrap: wrap; gap: 10px 14px; align-items: center; }
+.viewer-tools input[type=search] { font: inherit; font-size: 15px; padding: 7px 10px; border: 1px solid var(--rule); border-radius: 4px; background: var(--bg); color: var(--ink); min-width: min(100%, 22rem); }
+.viewer-count { font-size: 14px; color: var(--muted); }
+.viewer details { margin-top: 12px; }
+.viewer summary { cursor: pointer; font-size: 14px; color: var(--accent); }
+.filter-grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 13rem), 1fr)); gap: 10px 14px; margin-top: 10px; }
+.filter-grid label { display: grid; gap: 3px; font-size: 12.5px; color: var(--muted); }
+.filter-grid select, .filter-grid input { font: inherit; font-size: 14px; padding: 4px 6px; border: 1px solid var(--rule); border-radius: 4px; background: var(--bg); color: var(--ink); min-width: 0; }
+.range { display: flex; gap: 4px; }
+.range input { width: 50%; }
+.col-list { display: flex; flex-wrap: wrap; gap: 4px 14px; margin-top: 10px; font-size: 13.5px; }
+.col-help { font-size: 13.5px; margin: 10px 0 0; display: grid; grid-template-columns: minmax(8rem, 13rem) 1fr; gap: 3px 14px; }
+.col-help dt { font-family: var(--font-transcript); }
+.col-help dd { margin: 0; color: var(--muted); }
+.grid-wrap { overflow-x: auto; margin-top: 14px; border: 1px solid var(--rule); border-radius: 4px; }
+table.data { border-collapse: collapse; font-size: 13px; font-variant-numeric: tabular-nums; min-width: 100%; }
+table.data th, table.data td { padding: 5px 8px; border-bottom: 1px solid var(--rule); text-align: left; vertical-align: top; }
+table.data th { position: sticky; top: 0; background: var(--card); white-space: nowrap; }
+table.data th button { font: inherit; font-weight: 600; color: var(--muted); background: none; border: 0; padding: 0; cursor: pointer; }
+table.data th[aria-sort] button { color: var(--ink); }
+table.data th[aria-sort="ascending"] button::after { content: " \2191"; }
+table.data th[aria-sort="descending"] button::after { content: " \2193"; }
+table.data td { white-space: nowrap; }
+table.data td.long { min-width: 16rem; max-width: 30rem; white-space: normal; }
+table.data td.num { text-align: right; }
+.pager { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; margin-top: 12px; font-size: 14px; }
+.pager button, .viewer .btn { font: inherit; font-size: 14px; }
+.groups { display: grid; gap: 10px; margin-top: 10px; }
+.groups details { border: 1px solid var(--rule); border-radius: 6px; padding: 8px 12px; background: var(--bg); }
+.groups ul { list-style: none; padding: 0; margin: 8px 0 0; display: grid; gap: 6px; }
+.groups li { font-size: 14px; }
+.groups li button { font: inherit; font-size: 13.5px; color: var(--accent); background: none; border: 0; padding: 0; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; font-family: var(--font-transcript); }
+.groups li span { color: var(--muted); }
+.viewer-only { font-size: 14px; display: inline-flex; gap: 5px; align-items: center; }
+table.data td.hear { padding-right: 0; }
+.hear button { font: inherit; font-size: 13px; white-space: nowrap; color: var(--accent); background: none; border: 1px solid var(--rule); border-radius: 4px; padding: 1px 7px; cursor: pointer; }
+.hear button[aria-pressed="true"] { background: var(--accent); border-color: var(--accent); color: var(--card); }
+</style>
+
+<!-- The data: one big table of every case the failure searches found, one of every
+     recording and engine, and the smaller tables behind the findings. Search,
+     filter, sort and download. The files are built by tools/build_data.py. -->
+<div class="wrap">
+  <nav class="site-nav" id="nav" aria-label="Pages"></nav>
+  <h1>The data</h1>
+  <p class="lede">Everything behind the site, in tables you can search, filter and download. Pick a table, type to search every column, and narrow it down column by column.</p>
+
+  <div class="tabs" role="tablist">
+    <button type="button" role="tab" id="tab-errors" aria-selected="true" aria-controls="panel-errors">Every error case</button>
+    <button type="button" role="tab" id="tab-recordings" aria-selected="false" aria-controls="panel-recordings">Every recording and engine</button>
+    <button type="button" role="tab" id="tab-other" aria-selected="false" aria-controls="panel-other">The other tables</button>
+  </div>
+  <div class="panel" role="tabpanel" id="panel-errors" aria-labelledby="tab-errors">
+    <p class="column" style="margin-top: 0">One row per case the failure searches list: meaning changes, invented words, edits, skips and breakdowns, plus the spots where every engine differs from the reference. Not every case found is a row: about 80,000 restarts an engine tidied away (a speaker's false starts) are counted in the rates but not listed one by one, so the edits rows are CORAAL's rewritten grammar only. The AI judge's answers (Claude Sonnet, which read every listed case) are in the last columns. A second AI judge, Qwen 3.8, is still reading the cases, so its answers are left out until it finishes. <a href="data/errors.csv" download>Download the whole file (CSV)</a>.</p>
+    <p class="column">The most serious rows have a Play button with about 15 seconds of the recording around the error: those Sonnet called opposite or gave a severity of 3 or 4. Nobody has checked these by ear yet. Earnings-22 has no clips, because its audio has no stated licence. Supreme Court audio is public domain; EdAcc's is CC BY-SA 4.0 and CORAAL's CC BY-NC-SA 4.0. Who made them is under “Credits and licences” at the bottom of this page.</p>
+    <div class="viewer" id="viewer-errors"></div>
+  </div>
+  <div class="panel" role="tabpanel" id="panel-recordings" aria-labelledby="tab-recordings" hidden>
+    <p class="column" style="margin-top: 0">One row per recording and engine, every data set, from the engines' current runs. <a href="data/recordings.csv" download>Download the whole file (CSV)</a>.</p>
+    <div class="viewer" id="viewer-recordings"></div>
+  </div>
+  <div class="panel" role="tabpanel" id="panel-other" aria-labelledby="tab-other" hidden>
+    <p class="column" style="margin-top: 0">The smaller tables behind each finding, grouped by what they are about, each with the line its folder's notes give it. Pick one to open it below. Very long tables show their first 5,000 rows.</p>
+    <div class="groups" id="groups"></div>
+    <h3 id="other-title" style="margin-top: 24px"></h3>
+    <p id="other-desc" class="hint"></p>
+    <div class="viewer" id="viewer-other"></div>
+  </div>
+
+  <section id="credits">
+    <h2>Credits and licences</h2>
+    <p class="column">The audio and the reference transcripts on this site were made by the people below. The speech engines' text was written by AI models run for this project, and the tables are this project's own work, made with a lot of help from AI (<a href="ai.html">how AI was used</a>).</p>
+  </section>
+
+  <footer><p id="built"></p></footer>
+</div>
+
+<script>
+// Small helpers shared by the front page and every data-set page.
+const $ = s => document.querySelector(s);
+function el(tag, attrs = {}, ...kids) {
+  const n = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) n.setAttribute(k, v);
+  for (const k of kids) n.append(k);
+  return n;
+}
+const esc = s => String(s).replace(/[&<>"]/g, c => ({ "&": "&amp;", "<": "&lt;", ">": "&gt;", '"': "&quot;" }[c]));
+const pct = v => (v === null || v === undefined) ? "–" : v.toFixed(1) + "%";
+const pct2 = v => (v === null || v === undefined) ? "–" : v.toFixed(2) + "%";
+
+// The whole-recording pages (tools/build_explorer.py), one per data set: each is
+// its own page, since one page cannot hold the audio of them all.
+const EXPLORERS = {"scotus": "https://claude.ai/artifact/3pzYvWbX1WtcdLqqycpPQS", "edacc": "https://claude.ai/artifact/Tkzb4Nj8s7hyqTGUS8D9E7", "coraal": "https://claude.ai/artifact/UmA8KeREAGjcBPok4pjMZr", "earnings22": "https://claude.ai/artifact/M5Q1JCD8EWz9wwr8FMMkXa"};
+
+// The bar across the top: the site's name, home, a link to each data set, the
+// big picture and the data; under it, the whole-recording pages, which are
+// separate pages and open in a new tab.
+function siteNav(root, pages, current) {
+  root.append(el("a", { class: "home", href: "index.html" }, "Where speech recognition goes wrong"));
+  const links = el("span", { class: "links" });
+  [{ file: "index.html", name: "Home" }, ...pages,
+   { file: "compare.html", name: "Big picture" }, { file: "data.html", name: "Search the data" },
+   { file: "ai.html", name: "How AI was used" }].forEach(p => {
+    const a = el("a", { href: p.file }, p.name);
+    if (p.file === current) a.setAttribute("aria-current", "page");
+    links.append(a);
+  });
+  root.append(links);
+  const rec = el("span", { class: "recordings" }, "Whole recordings:");
+  pages.forEach(p => {
+    const url = EXPLORERS[p.corpus];
+    if (url) rec.append(el("a", { href: url, target: "_blank", rel: "noopener" }, p.name));
+  });
+  if (rec.children.length) root.append(rec);
+  backToTop();
+  aiNote();
+}
+
+// A line at the foot of every page: AI did much of the work, and where to read how.
+function aiNote() {
+  const foot = document.querySelector("footer");
+  if (!foot || foot.querySelector(".ai-note")) return;
+  foot.append(el("p", { class: "ai-note" }, "This site was built with a lot of help from AI: the speech engines, the judges that labelled the errors, and the assistant that wrote most of the code. ",
+    el("a", { href: "ai.html" }, "How AI was used"), "."));
+}
+
+// A button in the corner that takes you back to the top, shown once you have
+// scrolled down a screen or so.
+function backToTop() {
+  const b = el("button", { type: "button", class: "to-top", "aria-label": "Back to top" }, "↑ Top");
+  b.hidden = true;
+  b.addEventListener("click", () => window.scrollTo({ top: 0, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }));
+  document.body.append(b);
+  const check = () => { b.hidden = window.scrollY < window.innerHeight * 0.8; };
+  window.addEventListener("scroll", check, { passive: true });
+  check();
+}
+
+// A switch of buttons (role group); calls pick(key) and marks the pressed one.
+function switchOf(root, options, chosen, pick) {
+  options.forEach(([key, label]) => {
+    const b = el("button", { type: "button", "data-mode": key, "aria-pressed": String(key === chosen) }, label);
+    b.addEventListener("click", () => {
+      root.querySelectorAll("button").forEach(x => x.setAttribute("aria-pressed", String(x === b)));
+      pick(key);
+    });
+    root.append(b);
+  });
+}
+
+// The address of a moment on a whole-recording page, 5 seconds before `start`.
+// claude.ai passes only letters, digits and hyphens from a link to the page, so in the
+// recording's name "-" is written "-h" and "_" "-u"; explorer.js reads it back.
+function recordingHash(corpus, recording, start) {
+  const id = String(recording).replace(/-/g, "-h").replace(/_/g, "-u");
+  return `r-${corpus}-${Math.max(0, Math.floor(start - 5))}-${id}`;
+}
+
+// A link into the whole-recording page at a moment, when that recording has audio there.
+function hearLink(c) {
+  const url = EXPLORERS[c.corpus];
+  return url && c.recording ? `${url}#${recordingHash(c.corpus, c.recording, c.start)}` : "";
+}
+
+// A grid of failure cards, the first `shown` visible and a button for the rest.
+function cardGrid(root, cards, shown = 4) {
+  const grid = el("div", { class: "cards" });
+  root.append(grid);
+  const draw = c => Cards.failure(grid, { ...c, hear: hearLink(c) });
+  cards.slice(0, shown).forEach(draw);
+  if (cards.length > shown) {
+    const more = el("button", { type: "button", class: "more-cards" }, `Show ${cards.length - shown} more`);
+    more.addEventListener("click", () => { cards.slice(shown).forEach(draw); more.remove(); });
+    root.append(more);
+  }
+}
+
+// Columns from the data can't carry functions; "digits" asks for a fixed number of decimals.
+function withFormats(columns) {
+  return columns.map(c => c.digits === undefined ? c :
+    { ...c, fmt: v => (v === null || v === undefined) ? "–" : Number(v).toFixed(c.digits) });
+}
+
+// Credits: who made the audio and transcripts on a page, under what licence, and what
+// was changed. Written once here and inlined by every page that shows them, from
+// CREDITS in tools/build_site.py.
+//
+//   Credits.list(root, [{name, uses, licence, licenceUrl, source: [label, url], changed,
+//                        cite: [...], more: [...]}]);
+
+const Credits = (() => {
+  function el(tag, attrs = {}, ...kids) {
+    const n = document.createElement(tag);
+    for (const [k, v] of Object.entries(attrs)) n.setAttribute(k, v);
+    for (const k of kids) n.append(k);
+    return n;
+  }
+
+  function one(c) {
+    const licence = c.licenceUrl ? el("a", { href: c.licenceUrl, target: "_blank", rel: "noopener" }, c.licence) : c.licence;
+    const box = el("div", { class: "credit-one" }, el("h3", {}, c.name),
+      el("p", {}, `${c.uses} Licence: `, licence, ". ", el("a", { href: c.source[1], target: "_blank", rel: "noopener" }, c.source[0]), "."));
+    if (c.changed) box.append(el("p", {}, c.changed));
+    box.append(el("ul", {}, ...c.cite.map(t => el("li", {}, t))));
+    if (c.more && c.more.length) {
+      box.append(el("details", {}, el("summary", {}, `The citations for each part (${c.more.length})`),
+        el("ul", {}, ...c.more.map(t => el("li", {}, t)))));
+    }
+    return box;
+  }
+
+  function list(root, items) {
+    root.append(el("div", { class: "credit-list" }, ...items.map(one)));
+  }
+
+  return { list };
+})();
+
+</script>
+<script>
+const D = {"built": "2026-11-07", "pages": [{"file": "scotus.html", "name": "Supreme Court", "corpus": "scotus"}, {"file": "edacc.html", "name": "EdAcc", "corpus": "edacc"}, {"file": "coraal.html", "name": "CORAAL", "corpus": "coraal"}, {"file": "earnings22.html", "name": "Earnings-22", "corpus": "earnings22"}], "credits": [{"name": "Supreme Court", "uses": "Audio and transcripts of oral arguments.", "licence": "the Court's pages state none; U.S. government works are not under copyright", "licenceUrl": null, "source": ["supremecourt.gov", "https://www.supremecourt.gov/oral_arguments/"], "changed": "Audio cut into clips, joined into longer files or kept whole, and re-encoded at lower quality.", "cite": ["Supreme Court of the United States, oral argument audio and transcripts, 2010-2025 terms."]}, {"name": "EdAcc", "uses": "Audio and reference transcripts.", "licence": "CC BY-SA 4.0", "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/", "source": ["Edinburgh DataShare", "https://doi.org/10.7488/ds/7914"], "changed": "Audio cut into clips, joined into longer files or kept whole, and re-encoded at lower quality. These and the reference text shown here are shared under the same licence.", "cite": ["Sanabria, Ramon; Markl, Nina; Carmantini, Andrea; Klejch, Ondrej; Bell, Peter; Bogoychev, Nikolay. (2025). The Edinburgh International Accents of English Corpus, [dataset]. University of Edinburgh. School of Informatics. The Institute for Language, Cognition and Computation. The Centre for Speech Technology Research. https://doi.org/10.7488/ds/7914.", "Sanabria, Bogoychev, Markl, Carmantini, Klejch and Bell (2023), The Edinburgh International Accents of English Corpus: Towards the Democratization of English ASR, ICASSP 2023."]}, {"name": "CORAAL", "uses": "Audio and reference transcripts, for non-commercial use.", "licence": "CC BY-NC-SA 4.0", "licenceUrl": "https://creativecommons.org/licenses/by-nc-sa/4.0/", "source": ["The Online Resources for African American Language Project", "https://doi.org/10.7264/1ad5-6t35"], "changed": "Audio cut into clips, joined into longer files or kept whole, and re-encoded at lower quality. Names and places are bleeped in the original recordings. These and the reference text shown here are shared under the same licence.", "cite": ["Kendall, Tyler and Charlie Farrington. 2023. The Corpus of Regional African American Language. Version 2023.06. Eugene, OR: The Online Resources for African American Language Project. https://doi.org/10.7264/1ad5-6t35."], "more": ["Farrington, Charlie, Tyler Kendall, Patrick Slay Brooks, Lucas Jenson, Chloe Tacata, and Jaidan McLean. 2020. The Corpus of Regional African American Language: ATL (Atlanta, GA 2017). Version 2020.05. Eugene, OR: The Online Resources for African American Language Project.", "Kendall, Tyler, Ralph Fasold, Charlie Farrington, Jason McLarty, Shelby Arnson, and Brooke Josler. 2018. The Corpus of Regional African American Language: DCA (Washington DC 1968). Version 2018.10.06. Eugene, OR: The Online Resources for African American Language Project.", "Fasold, Ralph. 1972. Tense marking in Black English: A linguistic and social analysis. Arlington, VA: Center for Applied Linguistics.", "Kendall, Tyler, Minnie Quartey, Charlie Farrington, Jason McLarty, Shelby Arnson, and Brooke Josler. 2018. The Corpus of Regional African American Language: DCB (Washington DC 2016). Version 2018.10.06. Eugene, OR: The Online Resources for African American Language Project.", "Shuy, Roger, Walt Wolfram, Charlie Farrington, Tyler Kendall, Jaidan McLean, and Chloe Tacata. 2023. The Corpus of Regional African American Language: DTA (Detroit, MI 1966). Version 2023.06. Eugene, OR: The Online Resources for African American Language Project.", "Shuy, Roger W., Walter A. Wolfram, and William K. Riley. 1967. Linguistic Correlates of Social Stratification in Detroit Speech. East Lansing, MI: Michigan State University.", "Shuy, Roger W., Walter A. Wolfram, and William K. Riley. 1968. Field Techniques in an Urban Language Study. Urban Language Series 3. Washington D.C.: Center for Applied Linguistics.", "Becker, Kara, Charlie Farrington, Tyler Kendall, Chloe Tacata, and Jaidan McLean. 2021. The Corpus of Regional African American Language: LES (Lower East Side, NY 2008). Version 2021.07. Eugene, OR: The Online Resources for African American Language Project.", "Becker, Kara. 2010. Regional dialect features on the Lower East Side of New York City: Sociophonetics, ethnicity, and identity. Ph.D. dissertation. New York, New York: New York University.", "Rowe, Ryan, Walt Wolfram, Tyler Kendall, Charlie Farrington, and Brooke Josler. 2018. The Corpus of Regional African American Language: PRV (Princeville, NC 2004). Version 2018.10.06. Eugene, OR: The Online Resources for African American Language.", "Rowe, Ryan. 2005. The development of African American English in the oldest Black town in America: Plural -s absence in Princeville, North Carolina. MA Thesis. Raleigh: North Carolina State University.", "King, Sharese, Charlie Farrington, Tyler Kendall, Emma Mullen, Shelby Arnson, and Lucas Jenson. 2020. The Corpus of Regional African American Language: ROC (Rochester, NY 2016). Version 2020.05. Eugene, OR: The Online Resources for African American Language Project.", "King, Sharese. 2018. Exploring social and linguistic diversity across African Americans from Rochester, New York. Ph.D. dissertation. Palo Alto, CA: Stanford University.", "Quartey, Minnie, Charlie Farrington, Tyler Kendall, Lucas Jenson, Chloe Tacata, and Jaidan McLean. 2020. The Corpus of Regional African American Language: VLD (Valdosta, GA 2017). Version 2021.07. Eugene, OR: The Online Resources for African American Language Project."]}, {"name": "Earnings-22", "uses": "Reference transcripts only. The audio has no stated licence, so none of it is played here.", "licence": "CC BY-SA 4.0", "licenceUrl": "https://creativecommons.org/licenses/by-sa/4.0/", "source": ["Rev's speech-datasets on GitHub", "https://github.com/revdotcom/speech-datasets/tree/main/earnings22"], "changed": "The reference text is shown split by time, beside the engines' transcripts, and is shared under the same licence.", "cite": ["Del Rio, Ha, McNamara, Miller and Chandra (2022), Earnings-22: A Practical Benchmark for Accents in the Wild, arXiv:2203.15591."]}], "tables": [{"key": "rates", "title": "Error rates", "file": "tables-rates.json", "mb": 0.6, "tables": [{"path": "coraal/benchmark.csv", "rows": 27, "shown": 27, "desc": ""}, {"path": "coraal/engines-by-part.csv", "rows": 24, "shown": 24, "desc": ""}, {"path": "coraal/engines.csv", "rows": 3, "shown": 3, "desc": ""}, {"path": "coraal/per-recording.csv", "rows": 153, "shown": 153, "desc": ""}, {"path": "corpus/record-fixes.csv", "rows": 12, "shown": 12, "desc": ""}, {"path": "corpus/terms.csv", "rows": 5, "shown": 5, "desc": ""}, {"path": "earnings22/benchmark.csv", "rows": 24, "shown": 24, "desc": ""}, {"path": "earnings22/engines-by-part.csv", "rows": 21, "shown": 21, "desc": ""}, {"path": "earnings22/engines.csv", "rows": 3, "shown": 3, "desc": ""}, {"path": "earnings22/per-recording.csv", "rows": 375, "shown": 375, "desc": ""}, {"path": "earnings22/subset10-two-references.csv", "rows": 240, "shown": 240, "desc": ""}, {"path": "edacc/benchmark.csv", "rows": 16, "shown": 16, "desc": ""}, {"path": "edacc/engines-by-part.csv", "rows": 11, "shown": 11, "desc": ""}, {"path": "edacc/engines.csv", "rows": 6, "shown": 6, "desc": "one row per engine: error rate under each rule, swapped/dropped/added, hours, speed"}, {"path": "edacc/per-recording.csv", "rows": 240, "shown": 240, "desc": "the same per engine and conversation"}, {"path": "flip/by-term.csv", "rows": 5, "shown": 5, "desc": "the counts above, plus how often Parakeet is last"}, {"path": "flip/listen-windows.csv", "rows": 258, "shown": 258, "desc": ""}, {"path": "flip/per-argument.csv", "rows": 258, "shown": 258, "desc": "every argument's rate for each engine on both rules"}, {"path": "harmonise/before-after.csv", "rows": 7, "shown": 7, "desc": ""}, {"path": "harmonise/per-case.csv", "rows": 427, "shown": 427, "desc": ""}, {"path": "harmonise/run-20260916-041602/before-after.csv", "rows": 3, "shown": 3, "desc": ""}, {"path": "harmonise/run-20260916-041602/per-case.csv", "rows": 3, "shown": 3, "desc": ""}, {"path": "harmonise/run-20260917-041257/before-after.csv", "rows": 1, "shown": 1, "desc": ""}, {"path": "harmonise/run-20260917-041257/per-case.csv", "rows": 8, "shown": 8, "desc": ""}, {"path": "harmonise/run-20260918-035220/before-after.csv", "rows": 2, "shown": 2, "desc": ""}, {"path": "harmonise/run-20260918-035220/per-case.csv", "rows": 138, "shown": 138, "desc": ""}, {"path": "harmonise/run-20260924-064733-reread/before-after.csv", "rows": 1, "shown": 1, "desc": ""}, {"path": "harmonise/run-20260924-064733-reread/per-case.csv", "rows": 61, "shown": 61, "desc": ""}, {"path": "harmonise/run-scotus250-parakeet-capped/before-after.csv", "rows": 9, "shown": 9, "desc": ""}, {"path": "harmonise/run-scotus250-parakeet-capped/per-case.csv", "rows": 53, "shown": 53, "desc": ""}, {"path": "harmonise/run-scotus250-parakeet-reread/before-after.csv", "rows": 9, "shown": 9, "desc": ""}, {"path": "harmonise/run-scotus250-parakeet-reread/per-case.csv", "rows": 568, "shown": 568, "desc": ""}, {"path": "harmonise/run-scotus250-qwen3/before-after.csv", "rows": 9, "shown": 9, "desc": ""}, {"path": "harmonise/run-scotus250-qwen3/per-case.csv", "rows": 568, "shown": 568, "desc": ""}, {"path": "harmonise/run-scotus250-qwen3-reread/before-after.csv", "rows": 9, "shown": 9, "desc": ""}, {"path": "harmonise/run-scotus250-qwen3-reread/per-case.csv", "rows": 568, "shown": 568, "desc": ""}, {"path": "harmonise/run-scotus250-whisper/before-after.csv", "rows": 8, "shown": 8, "desc": ""}, {"path": "harmonise/run-scotus250-whisper/per-case.csv", "rows": 491, "shown": 491, "desc": ""}]}, {"key": "failures", "title": "The failure searches", "file": "tables-failures.json", "mb": 2.4, "tables": [{"path": "failures/breakdown/counts.csv", "rows": 67, "shown": 67, "desc": "per data set, part and engine: hours, cases, minutes in each kind, and"}, {"path": "failures/breakdown/per-recording.csv", "rows": 2342, "shown": 2342, "desc": "per recording and engine, the seconds in each kind and"}, {"path": "failures/edits/counts.csv", "rows": 67, "shown": 67, "desc": "per data set, part and engine: hours, candidates (dialect changes plus dropped restarts), candidates per hour"}, {"path": "failures/edits/dialect-instances.csv", "rows": 19791, "shown": 5000, "desc": "every dialect feature found, with every engine's outcome, kept or not, to check the rates by hand"}, {"path": "failures/edits/dialect-rates.csv", "rows": 258, "shown": 258, "desc": "**the headline**: per component (ROC, PRV, both), feature and engine, how many times the record has the feature and the share kept, standardised and other. clear_ columns repeat it for the places where the engine wrote the words just before and after correctly"}, {"path": "failures/edits/restart-rates.csv", "rows": 14, "shown": 14, "desc": "per data set and engine: restarts in the record and the share kept"}, {"path": "failures/edits/shortlist.csv", "rows": 24, "shown": 24, "desc": "19 hand-picked cases: 15 dialect, 4 restarts. None heard yet"}, {"path": "failures/invented/counts.csv", "rows": 67, "shown": 67, "desc": ""}, {"path": "failures/invented/shortlist.csv", "rows": 26, "shown": 26, "desc": ""}, {"path": "failures/meaning/counts.csv", "rows": 67, "shown": 67, "desc": ""}, {"path": "failures/meaning/shortlist.csv", "rows": 44, "shown": 44, "desc": ""}, {"path": "failures/skips/counts.csv", "rows": 67, "shown": 67, "desc": "by data set, part and engine: hours, skips, skipped words, subkinds,"}, {"path": "failures/skips/omissions-check.csv", "rows": 510, "shown": 510, "desc": "the cross-check above, one row per omitted span."}, {"path": "failures/skips/shortlist.csv", "rows": 22, "shown": 22, "desc": "22 picked by reading, spread over data sets and engines, at most two"}]}, {"key": "judge", "title": "The machine judges", "file": "tables-judge.json", "mb": 3.9, "tables": [{"path": "judge/answers-claude-haiku-5-5-sample-v2.csv", "rows": 300, "shown": 300, "desc": ""}, {"path": "judge/answers-claude-haiku-5-5-sample-v3.csv", "rows": 400, "shown": 400, "desc": ""}, {"path": "judge/answers-claude-haiku-5-5.csv", "rows": 792, "shown": 792, "desc": ""}, {"path": "judge/answers-claude-sonnet-5-5-full-v1-repeat.csv", "rows": 700, "shown": 700, "desc": ""}, {"path": "judge/answers-claude-sonnet-5-5-high-sample-v3.csv", "rows": 400, "shown": 400, "desc": ""}, {"path": "judge/answers-claude-sonnet-5-5-sample-v2.csv", "rows": 300, "shown": 300, "desc": ""}, {"path": "judge/answers-claude-sonnet-5-5-sample-v3.csv", "rows": 400, "shown": 400, "desc": ""}, {"path": "judge/answers-claude-sonnet-5-5.csv", "rows": 396, "shown": 396, "desc": ""}, {"path": "judge/answers-gemma4-26b.csv", "rows": 1253, "shown": 1253, "desc": ""}, {"path": "judge/answers-gemma4-31b.csv", "rows": 397, "shown": 397, "desc": ""}, {"path": "judge/answers-qwen3.8-27b-sample-v3.csv", "rows": 400, "shown": 400, "desc": ""}, {"path": "judge/answers-qwen3.8-27b.csv", "rows": 396, "shown": 396, "desc": ""}, {"path": "judge/combo-v1.csv", "rows": 300, "shown": 300, "desc": ""}, {"path": "judge/full-v1-repeat.csv", "rows": 700, "shown": 700, "desc": ""}, {"path": "judge/qwen-targets-v1.csv", "rows": 19111, "shown": 5000, "desc": ""}, {"path": "judge/sample-v1.csv", "rows": 40, "shown": 40, "desc": ""}, {"path": "judge/sample-v2.csv", "rows": 300, "shown": 300, "desc": ""}, {"path": "judge/sample-v3.csv", "rows": 400, "shown": 400, "desc": ""}, {"path": "judge/sonnet-serious-v1.csv", "rows": 2829, "shown": 2829, "desc": ""}]}, {"key": "engines", "title": "Engines compared word by word", "file": "tables-engines.json", "mb": 3.7, "tables": [{"path": "crowd/against-the-record.csv", "rows": 7917, "shown": 5000, "desc": "stretches where six or more models agree with each other and not with the record, both ways round, with a rough first sort"}, {"path": "crowd/hard-passages.csv", "rows": 1587, "shown": 1587, "desc": "stretches of 3+ words that at most three models got: where a person has to listen"}, {"path": "crowd/heard-by.csv", "rows": 8, "shown": 8, "desc": "how many official words 0, 1, ... 7 models got right"}, {"path": "crowd/interruptions.csv", "rows": 4, "shown": 4, "desc": "how often each kind of word sits within two words of a dash, the reporter's mark for one speaker cutting in on another"}, {"path": "crowd/judge.csv", "rows": 819, "shown": 819, "desc": "a language model's labels for each of the 819 spots in the two lists above that the rules left as \"other\": the kinds of difference, primary and secondary (several are separated by \"; \"), and one sentence why"}, {"path": "crowd/models-and-vote.csv", "rows": 7, "shown": 7, "desc": "each model alone; how often it was right when most others were wrong; and a vote among all seven, built once with each model as the pivot"}, {"path": "crowd/runs-used.csv", "rows": 7, "shown": 7, "desc": "which run each model came from, and how many recordings were compared"}, {"path": "crowd/shared-misses.csv", "rows": 7, "shown": 7, "desc": "when the row model misses a word, how often the column model misses it too"}, {"path": "edacc/crowd/against-the-record.csv", "rows": 6881, "shown": 5000, "desc": ""}, {"path": "edacc/crowd/hard-passages.csv", "rows": 583, "shown": 583, "desc": ""}, {"path": "edacc/crowd/heard-by.csv", "rows": 6, "shown": 6, "desc": ""}, {"path": "edacc/crowd/models-and-vote.csv", "rows": 5, "shown": 5, "desc": ""}, {"path": "edacc/crowd/runs-used.csv", "rows": 5, "shown": 5, "desc": ""}, {"path": "edacc/crowd/shared-misses.csv", "rows": 5, "shown": 5, "desc": ""}]}, {"key": "experiments", "title": "Experiments and checks", "file": "tables-experiments.json", "mb": 0.3, "tables": [{"path": "aligner-control.csv", "rows": 20, "shown": 20, "desc": ""}, {"path": "chunk-sweep-granite-plus-16-285.csv", "rows": 20, "shown": 20, "desc": ""}, {"path": "chunk-sweep-granite-plus-halves.csv", "rows": 12, "shown": 12, "desc": ""}, {"path": "chunk-sweep-granite-plus-wide.csv", "rows": 40, "shown": 40, "desc": ""}, {"path": "chunk-sweep-granite-plus.csv", "rows": 12, "shown": 12, "desc": ""}, {"path": "chunk-sweep-voxtral-parakeet.csv", "rows": 30, "shown": 30, "desc": ""}, {"path": "chunk-sweep.csv", "rows": 69, "shown": 69, "desc": ""}, {"path": "error-model/error-rates-edacc.csv", "rows": 17, "shown": 17, "desc": ""}, {"path": "error-model/error-rates-scotus.csv", "rows": 22, "shown": 22, "desc": ""}, {"path": "error-model/odds-ratios-edacc.csv", "rows": 12, "shown": 12, "desc": ""}, {"path": "error-model/odds-ratios-scotus.csv", "rows": 17, "shown": 17, "desc": ""}, {"path": "error-model/three-engines-by-term/error-rates-all-four.csv", "rows": 18, "shown": 18, "desc": ""}, {"path": "error-model/three-engines-by-term/error-rates-OT2010.csv", "rows": 18, "shown": 18, "desc": ""}, {"path": "error-model/three-engines-by-term/error-rates-OT2017.csv", "rows": 18, "shown": 18, "desc": ""}, {"path": "error-model/three-engines-by-term/error-rates-OT2021.csv", "rows": 18, "shown": 18, "desc": ""}, {"path": "error-model/three-engines-by-term/error-rates-OT2025.csv", "rows": 18, "shown": 18, "desc": ""}, {"path": "error-model/three-engines-by-term/odds-ratios-all-four.csv", "rows": 13, "shown": 13, "desc": ""}, {"path": "error-model/three-engines-by-term/odds-ratios-OT2010.csv", "rows": 13, "shown": 13, "desc": ""}, {"path": "error-model/three-engines-by-term/odds-ratios-OT2017.csv", "rows": 13, "shown": 13, "desc": ""}, {"path": "error-model/three-engines-by-term/odds-ratios-OT2021.csv", "rows": 13, "shown": 13, "desc": ""}, {"path": "error-model/three-engines-by-term/odds-ratios-OT2025.csv", "rows": 13, "shown": 13, "desc": ""}, {"path": "error-model/three-engines-by-term/variance-explained.csv", "rows": 15, "shown": 15, "desc": "the table above"}, {"path": "error-model/variance-explained.csv", "rows": 6, "shown": 6, "desc": "the table above"}, {"path": "error-model/without-parakeet/error-rates-scotus.csv", "rows": 21, "shown": 21, "desc": ""}, {"path": "error-model/without-parakeet/odds-ratios-scotus.csv", "rows": 16, "shown": 16, "desc": ""}, {"path": "error-model/without-parakeet/variance-explained.csv", "rows": 3, "shown": 3, "desc": "the table above"}, {"path": "experiment-conditioning/cases.csv", "rows": 10, "shown": 10, "desc": "case and model"}, {"path": "experiment-conditioning/scores.csv", "rows": 30, "shown": 30, "desc": "case, model and scoring rule"}, {"path": "final-seven-model-results.csv", "rows": 7, "shown": 7, "desc": ""}, {"path": "parakeet-stall/four-recordings.csv", "rows": 36, "shown": 36, "desc": "every version of the four recordings: error rate, dropped,"}, {"path": "parakeet-stall/full-pass.csv", "rows": 5, "shown": 5, "desc": "every run before and after, from full_pass.py."}, {"path": "parakeet-stall/gaps-by-data-set.csv", "rows": 4, "shown": 4, "desc": "the two tables at the top, from gaps_by_corpus.py."}, {"path": "parakeet-stall/random-sample.csv", "rows": 12, "shown": 12, "desc": "the 12 random recordings, before and after, with Whisper and"}, {"path": "parakeet-stall/stacked-phrases.csv", "rows": 5, "shown": 5, "desc": "stock phrases on one timestamp, before and added by the"}, {"path": "phase3-final-rescore.csv", "rows": 18, "shown": 18, "desc": ""}, {"path": "qwen3-official-check.csv", "rows": 12, "shown": 12, "desc": ""}, {"path": "recordings.csv", "rows": 2342, "shown": 2342, "desc": ""}, {"path": "seam-fix-before-after.csv", "rows": 15, "shown": 15, "desc": ""}]}, {"key": "seven", "title": "The seven-engine study (2017 term)", "file": "tables-seven.json", "mb": 2.5, "tables": [{"path": "run-20260917-041257/cases.csv", "rows": 8, "shown": 8, "desc": "case and model"}, {"path": "run-20260917-041257/notations.csv", "rows": 39, "shown": 39, "desc": "reporter notation"}, {"path": "run-20260917-041257/omissions.csv", "rows": 1, "shown": 1, "desc": "dropped passage"}, {"path": "run-20260917-041257/scores.csv", "rows": 24, "shown": 24, "desc": "case, model and scoring rule"}, {"path": "run-20260917-041257/silence_speech.csv", "rows": 84, "shown": 84, "desc": "silence"}, {"path": "run-20260918-035220/cases.csv", "rows": 138, "shown": 138, "desc": "case and model"}, {"path": "run-20260918-035220/notations.csv", "rows": 546, "shown": 546, "desc": "reporter notation"}, {"path": "run-20260918-035220/omissions.csv", "rows": 2, "shown": 2, "desc": "dropped passage"}, {"path": "run-20260918-035220/scores.csv", "rows": 414, "shown": 414, "desc": "case, model and scoring rule"}, {"path": "run-20260918-035220/silence_speech.csv", "rows": 1264, "shown": 1264, "desc": "silence"}, {"path": "run-20260918-035220/silences.csv", "rows": 55, "shown": 55, "desc": "silence over 10s"}, {"path": "run-20260918-035220/triangulation.csv", "rows": 470, "shown": 470, "desc": "silence"}, {"path": "run-20260919-052010/cases.csv", "rows": 1, "shown": 1, "desc": "case and model"}, {"path": "run-20260919-052010/scores.csv", "rows": 3, "shown": 3, "desc": "case, model and scoring rule"}, {"path": "run-20260919-052010/silence_speech.csv", "rows": 10, "shown": 10, "desc": "silence"}, {"path": "run-20260919-052219/cases.csv", "rows": 61, "shown": 61, "desc": "case and model"}, {"path": "run-20260919-052219/notations.csv", "rows": 257, "shown": 257, "desc": "reporter notation"}, {"path": "run-20260919-052219/omissions.csv", "rows": 91, "shown": 91, "desc": "dropped passage"}, {"path": "run-20260919-052219/scores.csv", "rows": 183, "shown": 183, "desc": "case, model and scoring rule"}, {"path": "run-20260919-052219/silence_speech.csv", "rows": 1081, "shown": 1081, "desc": "silence"}, {"path": "run-20260919-052219/silences.csv", "rows": 95, "shown": 95, "desc": "silence over 10s"}, {"path": "run-20260919-052219/triangulation.csv", "rows": 1081, "shown": 1081, "desc": "silence"}, {"path": "run-20260919-174623/cases.csv", "rows": 1, "shown": 1, "desc": "case and model"}, {"path": "run-20260919-174623/scores.csv", "rows": 3, "shown": 3, "desc": "case, model and scoring rule"}, {"path": "run-20260919-174623/silence_speech.csv", "rows": 15, "shown": 15, "desc": "silence"}, {"path": "run-20260919-174623/silences.csv", "rows": 1, "shown": 1, "desc": "silence over 10s"}, {"path": "run-20260919-175553/cases.csv", "rows": 61, "shown": 61, "desc": "case and model"}, {"path": "run-20260919-175553/notations.csv", "rows": 258, "shown": 258, "desc": "reporter notation"}, {"path": "run-20260919-175553/scores.csv", "rows": 183, "shown": 183, "desc": "case, model and scoring rule"}, {"path": "run-20260919-175553/silence_speech.csv", "rows": 1223, "shown": 1223, "desc": "silence"}, {"path": "run-20260919-175553/silences.csv", "rows": 84, "shown": 84, "desc": "silence over 10s"}, {"path": "run-20260919-175553/triangulation.csv", "rows": 1223, "shown": 1223, "desc": "silence"}, {"path": "run-20260921-033436/cases.csv", "rows": 61, "shown": 61, "desc": "case and model"}, {"path": "run-20260921-033436/notations.csv", "rows": 258, "shown": 258, "desc": "reporter notation"}, {"path": "run-20260921-033436/omissions.csv", "rows": 8, "shown": 8, "desc": "dropped passage"}, {"path": "run-20260921-033436/scores.csv", "rows": 183, "shown": 183, "desc": "case, model and scoring rule"}, {"path": "run-20260921-033436/silence_speech.csv", "rows": 742, "shown": 742, "desc": "silence"}, {"path": "run-20260921-033436/silences.csv", "rows": 25, "shown": 25, "desc": "silence over 10s"}, {"path": "run-20260921-033436/triangulation.csv", "rows": 742, "shown": 742, "desc": "silence"}, {"path": "run-20260921-051927/cases.csv", "rows": 61, "shown": 61, "desc": "case and model"}, {"path": "run-20260921-051927/notations.csv", "rows": 258, "shown": 258, "desc": "reporter notation"}, {"path": "run-20260921-051927/scores.csv", "rows": 183, "shown": 183, "desc": "case, model and scoring rule"}, {"path": "run-20260921-051927/silence_speech.csv", "rows": 1240, "shown": 1240, "desc": "silence"}, {"path": "run-20260921-051927/silences.csv", "rows": 255, "shown": 255, "desc": "silence over 10s"}, {"path": "run-20260921-051927/triangulation.csv", "rows": 1240, "shown": 1240, "desc": "silence"}, {"path": "run-20260922-002324/cases.csv", "rows": 61, "shown": 61, "desc": "case and model"}, {"path": "run-20260922-002324/notations.csv", "rows": 258, "shown": 258, "desc": "reporter notation"}, {"path": "run-20260922-002324/omissions.csv", "rows": 10, "shown": 10, "desc": "dropped passage"}, {"path": "run-20260922-002324/scores.csv", "rows": 183, "shown": 183, "desc": "case, model and scoring rule"}, {"path": "run-20260922-002324/silence_speech.csv", "rows": 1485, "shown": 1485, "desc": "silence"}, {"path": "run-20260922-002324/silences.csv", "rows": 319, "shown": 319, "desc": "silence over 10s"}, {"path": "run-20260922-002324/triangulation.csv", "rows": 1485, "shown": 1485, "desc": "silence"}, {"path": "run-20260922-123112/cases.csv", "rows": 61, "shown": 61, "desc": "case and model"}, {"path": "run-20260922-123112/omissions.csv", "rows": 571, "shown": 571, "desc": "dropped passage"}, {"path": "run-20260922-123112/scores.csv", "rows": 183, "shown": 183, "desc": "case, model and scoring rule"}, {"path": "run-20260922-123112/silences.csv", "rows": 272, "shown": 272, "desc": "silence over 10s"}, {"path": "run-20260923-011250/cases.csv", "rows": 61, "shown": 61, "desc": "case and model"}, {"path": "run-20260923-011250/notations.csv", "rows": 258, "shown": 258, "desc": "reporter notation"}, {"path": "run-20260923-011250/omissions.csv", "rows": 52, "shown": 52, "desc": "dropped passage"}, {"path": "run-20260923-011250/scores.csv", "rows": 183, "shown": 183, "desc": "case, model and scoring rule"}, {"path": "run-20260923-011250/silence_speech.csv", "rows": 888, "shown": 888, "desc": "silence"}, {"path": "run-20260923-011250/silences.csv", "rows": 57, "shown": 57, "desc": "silence over 10s"}, {"path": "run-20260923-011250/triangulation.csv", "rows": 888, "shown": 888, "desc": "silence"}, {"path": "run-20260924-064733/cases.csv", "rows": 61, "shown": 61, "desc": "case and model"}, {"path": "run-20260924-064733/notations.csv", "rows": 258, "shown": 258, "desc": "reporter notation"}, {"path": "run-20260924-064733/omissions.csv", "rows": 124, "shown": 124, "desc": "dropped passage"}, {"path": "run-20260924-064733/scores.csv", "rows": 183, "shown": 183, "desc": "case, model and scoring rule"}, {"path": "run-20260924-064733/silence_speech.csv", "rows": 1188, "shown": 1188, "desc": "silence"}, {"path": "run-20260924-064733/silences.csv", "rows": 131, "shown": 131, "desc": "silence over 10s"}, {"path": "run-20260924-064733/triangulation.csv", "rows": 1188, "shown": 1188, "desc": "silence"}, {"path": "run-20260924-164308/cases.csv", "rows": 61, "shown": 61, "desc": "case and model"}, {"path": "run-20260924-164308/notations.csv", "rows": 252, "shown": 252, "desc": "reporter notation"}, {"path": "run-20260924-164308/omissions.csv", "rows": 5, "shown": 5, "desc": "dropped passage"}, {"path": "run-20260924-164308/scores.csv", "rows": 183, "shown": 183, "desc": "case, model and scoring rule"}, {"path": "run-20260924-164308/silence_speech.csv", "rows": 984, "shown": 984, "desc": "silence"}, {"path": "run-20260924-164308/silences.csv", "rows": 20, "shown": 20, "desc": "silence over 10s"}, {"path": "run-20260924-164308/triangulation.csv", "rows": 984, "shown": 984, "desc": "silence"}]}]};
+siteNav($("#nav"), D.pages, "data.html");
+$("#built").textContent = `Built ${D.built} by tools/build_data.py from the files in findings/ and the engines' current runs.`;
+Credits.list($("#credits"), D.credits);
+
+// What the columns of the two big tables mean.
+const HELP = {
+  errors: {
+    case: "The case's id (f… a failure search case, b… a breakdown).",
+    corpus: "The data set.", part: "Term, split, place or region of the data set.",
+    recording: "The recording's id.", engine: "The speech engine that wrote the text.",
+    kind: "Which search found it: meaning, invented, edits, skips or breakdown.",
+    subkind: "What the rule saw: negation (a “not” lost or added), number, word, dialect_changed, restarts_dropped…",
+    start: "Seconds into the recording (the engine's own word times). Empty, shown as “unknown”, where the search lost its place: such a row has no clip and no link.", end: "Where the case ends, in seconds.",
+    record: "What the reference (“true”) transcript has here.", engine_wrote: "What the engine wrote instead.",
+    record_context: "The reference around it, the passage in [brackets].", engine_context: "The engine's text around it.",
+    others_right: "Other engines that agree with the reference here.",
+    found_by: "A failure search, a breakdown search, or every engine differing from the reference.",
+    sonnet_meaning: "Claude Sonnet's reading (an AI model, through Anthropic's API): same, reworded, changed, opposite or garbled. Sonnet has read every case. Preliminary: not checked by a person.",
+    sonnet_severity: "Sonnet's severity, 0 (nothing a reader would care about) to 4 (reverses or loses the point).",
+    sonnet_reference_doubt: "Whether Sonnet thinks the reference itself may be wrong here.",
+    sonnet_reason: "The first sentence of Sonnet's reason (the whole answer is in the project's judge files).",
+    qwen_meaning: "Qwen 3.8 27B's reading (a local AI model), same choices as Sonnet's. Only in the table once Qwen has read every case.", qwen_severity: "Qwen's severity, 0 to 4.",
+    sonnet_story_score: "On 300 test cases only: how good an example Sonnet thinks it is, 0 to 3.",
+    not_counted: "Why a case is shown here but left out of the rates: the same spot as a meaning case, a skip at a chunk seam, or gone after a repaired transcript. Empty for most.",
+  },
+  recordings: {
+    corpus: "The data set.", part: "Term, split, place or region.", recording: "The recording's id.",
+    engine: "The speech engine.", run: "The run folder the transcript comes from.", minutes: "Length of the recording.",
+    reference_words: "Words in the reference, as scored.",
+    error_rate: "Errors over reference words, in percent, on the benchmark rule (case, punctuation and fillers ignored).",
+    substituted: "Reference words written as another word.", dropped: "Reference words the engine left out.",
+    added: "Words the engine wrote that the reference does not have.",
+    found_meaning: "Cases the meaning-change search found, leaving out spots where every engine differs.", found_invented: "Cases the invented-words search found.",
+    found_edits: "Cases the edits search listed: dialect features rewritten, which only CORAAL's reference marks reliably, so it is 0 on the other data sets.", found_skips: "Cases the skips search found.",
+    found_breakdown: "Stretches where the engine broke down.", judged_opposite: "Cases Sonnet judged to say the opposite, leaving out spots where every engine differs.",
+  },
+};
+const LONG = new Set(["record", "engine_wrote", "record_context", "engine_context", "evidence", "sonnet_reason"]);
+
+// The download: the platform's own save prompt where the page has it, a plain link otherwise.
+let saver = null;
+(async () => { try { saver = window.claude && await window.claude.use("downloads"); } catch (e) { saver = null; } })();
+async function offer(name, text) {
+  if (saver) {
+    try { await saver.save({ filename: name, data: new Blob([text], { type: "text/csv" }) }); return; }
+    catch (e) { if (e && e.code === "declined") return; }
+  }
+  const a = el("a", { href: URL.createObjectURL(new Blob([text], { type: "text/csv" })), download: name });
+  document.body.append(a); a.click(); a.remove();
+}
+
+// The clips for the most serious rows (tools/build_row_clips.py). They share long
+// audio files, so one player jumps to a row's place and stops at the end of its clip.
+const player = new Audio();
+player.preload = "none";
+let playing = null;
+let waiting = null;   // what will start the clip once its file has loaded
+
+function stopClip() {
+  player.pause();
+  if (waiting) { player.removeEventListener("loadedmetadata", waiting); waiting = null; }
+  if (playing) { playing.button.setAttribute("aria-pressed", "false"); playing.button.textContent = "▶ Play"; }
+  playing = null;
+}
+player.addEventListener("timeupdate", () => { if (playing && player.currentTime >= playing.to) stopClip(); });
+player.addEventListener("ended", stopClip);
+player.addEventListener("error", () => { if (playing) { const b = playing.button; stopClip(); b.textContent = "Didn't load"; } });
+
+function playClip(button, src, from, to) {
+  const again = playing && playing.button === button;
+  stopClip();
+  if (again) return;
+  playing = { button, from, to };
+  button.setAttribute("aria-pressed", "true");
+  button.textContent = "■ Stop";
+  const start = () => { player.currentTime = from; player.play().catch(() => { if (playing && playing.button === button) stopClip(); }); };
+  if (player.getAttribute("src") === src && player.readyState > 0) return start();
+  waiting = () => { waiting = null; start(); };
+  player.addEventListener("loadedmetadata", waiting, { once: true });
+  player.setAttribute("src", src);
+  player.load();
+}
+
+// A menu's "no filter" choice. Not the empty text: empty is a value a column can have.
+const ANY = "\u0000any";
+
+function clock(seconds) {
+  const s = Math.floor(seconds);
+  return `${Math.floor(s / 60)}:${String(s % 60).padStart(2, "0")}`;
+}
+
+// One viewer: a search box, a filter per column, the columns to show, a sorted
+// page of 50 rows, and a download of the rows that match.
+function viewer(root, rows, cols, opts = {}) {
+  root.textContent = "";
+  const PAGE = 50;
+  const numeric = new Set(cols.filter(c => rows.length && rows.every(r => r[c] === "" || r[c] === undefined || !isNaN(Number(r[c])))));
+  const values = {};
+  cols.forEach(c => { const v = new Set(rows.map(r => r[c])); if (!numeric.has(c) && v.size <= 40) values[c] = [...v].sort(); });
+  let shown = new Set(opts.shown ? cols.filter(c => opts.shown.includes(c)) : cols);
+  let sort = null, page = 0, matching = rows;
+  const filters = {};
+
+  const search = el("input", { type: "search", placeholder: "Search every column…", "aria-label": "Search" });
+  const count = el("span", { class: "viewer-count", "aria-live": "polite" });
+  const dl = el("button", { type: "button", class: "btn" }, "Download these rows (CSV)");
+  const tools = el("div", { class: "viewer-tools" }, search, dl, count);
+  root.append(tools);
+  if (opts.clip) {
+    const total = rows.filter(r => opts.clip(r)).length;
+    const only = el("input", { type: "checkbox" });
+    only.addEventListener("change", () => { only.checked ? filters.clip = r => opts.clip(r) : delete filters.clip; update(); });
+    if (total) tools.append(el("label", { class: "viewer-only" }, only, `Only rows with a clip (${total.toLocaleString()})`));
+  }
+
+  const filterBox = el("div", { class: "filter-grid" });
+  cols.forEach(c => {
+    if (values[c]) {
+      const s = el("select", { "aria-label": c }, el("option", { value: ANY }, "Any"));
+      values[c].forEach(v => s.append(el("option", { value: v }, v === "" ? "(empty)" : v)));
+      s.addEventListener("change", () => { if (s.value === ANY) delete filters[c]; else filters[c] = r => r[c] === s.value; update(); });
+      filterBox.append(el("label", {}, c, s));
+    } else if (numeric.has(c)) {
+      const lo = el("input", { type: "number", placeholder: "min", "aria-label": c + " at least", step: "any" });
+      const hi = el("input", { type: "number", placeholder: "max", "aria-label": c + " at most", step: "any" });
+      const set = () => {
+        const a = lo.value === "" ? null : Number(lo.value), b = hi.value === "" ? null : Number(hi.value);
+        if (a === null && b === null) delete filters[c];
+        else filters[c] = r => r[c] !== "" && (a === null || Number(r[c]) >= a) && (b === null || Number(r[c]) <= b);
+        update();
+      };
+      lo.addEventListener("input", set); hi.addEventListener("input", set);
+      filterBox.append(el("label", {}, c, el("span", { class: "range" }, lo, hi)));
+    }
+  });
+  root.append(el("details", {}, el("summary", {}, "Filter by column"), filterBox));
+
+  const colBox = el("div", { class: "col-list" });
+  cols.forEach(c => {
+    const box = el("input", { type: "checkbox" });
+    box.checked = shown.has(c);
+    box.addEventListener("change", () => { box.checked ? shown.add(c) : shown.delete(c); draw(); });
+    colBox.append(el("label", {}, box, " " + c));
+  });
+  root.append(el("details", {}, el("summary", {}, "Columns shown"), colBox));
+  if (opts.help) {
+    const dlist = el("dl", { class: "col-help" });
+    cols.forEach(c => opts.help[c] && dlist.append(el("dt", {}, c), el("dd", {}, opts.help[c])));
+    root.append(el("details", {}, el("summary", {}, "What the columns mean"), dlist));
+  }
+
+  const wrap = el("div", { class: "grid-wrap" });
+  const pager = el("div", { class: "pager" });
+  root.append(wrap, pager);
+
+  let timer = null;
+  search.addEventListener("input", () => { clearTimeout(timer); timer = setTimeout(update, 200); });
+  dl.addEventListener("click", () => offer(opts.name || "rows.csv", Papa.unparse(matching.map(r => Object.fromEntries(cols.map(c => [c, r[c]]))), { columns: cols })));
+
+  function update() {
+    const q = search.value.trim().toLowerCase();
+    const tests = Object.values(filters);
+    matching = rows.filter(r => tests.every(t => t(r)) && (!q || cols.some(c => String(r[c] ?? "").toLowerCase().includes(q))));
+    if (sort) {
+      const { key, dir } = sort, num = numeric.has(key);
+      matching = matching.slice().sort((a, b) => {
+        const x = a[key], y = b[key];
+        if (x === "" || x === undefined) return 1;
+        if (y === "" || y === undefined) return -1;
+        return dir * (num ? Number(x) - Number(y) : String(x).localeCompare(String(y)));
+      });
+    }
+    page = 0;
+    draw();
+  }
+
+  function draw() {
+    stopClip();
+    const show = cols.filter(c => shown.has(c));
+    const table = el("table", { class: "data" });
+    const head = el("tr");
+    if (opts.clip) head.append(el("th", {}, ""));
+    if (opts.link) head.append(el("th", {}, ""));
+    show.forEach(c => {
+      const th = el("th", { scope: "col" });
+      if (sort && sort.key === c) th.setAttribute("aria-sort", sort.dir > 0 ? "ascending" : "descending");
+      const b = el("button", { type: "button", title: (opts.help && opts.help[c]) || "", "data-col": c }, c);
+      b.addEventListener("click", () => {
+        sort = { key: c, dir: sort && sort.key === c ? -sort.dir : 1 };
+        update();
+        // The table was drawn again, so the button that had the keyboard is gone.
+        [...wrap.querySelectorAll("th button")].find(x => x.dataset.col === c)?.focus({ preventScroll: true });
+      });
+      th.append(b);
+      head.append(th);
+    });
+    const body = el("tbody");
+    matching.slice(page * PAGE, page * PAGE + PAGE).forEach(r => {
+      const tr = el("tr");
+      if (opts.clip) {
+        const clip = opts.clip(r);
+        const cell = el("td", { class: "hear" });
+        if (clip) {
+          const b = el("button", { type: "button", "aria-pressed": "false", title: `About ${Math.round(clip.to - clip.from)} seconds around this error` }, "▶ Play");
+          b.addEventListener("click", () => playClip(b, clip.src, clip.from, clip.to));
+          cell.append(b);
+        }
+        tr.append(cell);
+      }
+      if (opts.link) {
+        const url = opts.link(r);
+        tr.append(el("td", {}, url && r.start !== "" ? el("a", { href: url, target: "_blank", rel: "noopener", title: `Open the whole recording, just before this error (${clock(Number(r.start))})` }, "Open") : ""));
+      }
+      show.forEach(c => tr.append(el("td", { class: (numeric.has(c) ? "num" : "") + (LONG.has(c) ? " long" : "") },
+        opts.unknown && opts.unknown.has(c) && r[c] === "" ? "unknown" : String(r[c] ?? ""))));
+      body.append(tr);
+    });
+    table.append(el("thead", {}, head), body);
+    wrap.textContent = "";
+    wrap.append(table);
+    const first = matching.length ? page * PAGE + 1 : 0, last = Math.min(matching.length, (page + 1) * PAGE);
+    count.textContent = `${matching.length.toLocaleString()} of ${rows.length.toLocaleString()} rows match`;
+    pager.textContent = "";
+    const prev = el("button", { type: "button", class: "btn" }, "Previous 50");
+    const next = el("button", { type: "button", class: "btn" }, "Next 50");
+    prev.disabled = page === 0;
+    next.disabled = last >= matching.length;
+    // The buttons are drawn again too: keep the keyboard on the same one, or on the other
+    // if that one has just run out of rows.
+    const turn = (step, label) => {
+      page += step;
+      draw();
+      const [a, b] = pager.querySelectorAll("button");
+      const same = label === "prev" ? a : b, other = label === "prev" ? b : a;
+      (same.disabled ? other : same).focus({ preventScroll: true });
+    };
+    prev.addEventListener("click", () => turn(-1, "prev"));
+    next.addEventListener("click", () => turn(1, "next"));
+    pager.append(prev, next, el("span", {}, `Rows ${first.toLocaleString()}–${last.toLocaleString()}`));
+  }
+  update();
+  return { get matching() { return matching; } };
+}
+
+function loadCsv(url) {
+  return fetch(url).then(r => { if (!r.ok) throw new Error(r.status + " " + r.statusText); return r.text(); })
+    .then(text => Papa.parse(text, { header: true, skipEmptyLines: true }));
+}
+
+function hearAt(r) {
+  const url = EXPLORERS[r.corpus];
+  return url ? `${url}#${recordingHash(r.corpus, r.recording, Number(r.start))}` : "";
+}
+
+const loaded = {};
+function open(which) {
+  if (loaded[which]) return;
+  loaded[which] = true;
+  const root = $("#viewer-" + which);
+  root.textContent = "Loading…";
+  // A page without the clips file still works: it just has no Play buttons.
+  const clips = which !== "errors" ? Promise.resolve(null)
+    : fetch("data/row-clips.json").then(r => r.ok ? r.json() : null).catch(() => null);
+  Promise.all([loadCsv(`data/${which}.csv`), clips]).then(([p, c]) => viewer(root, p.data, p.meta.fields, {
+    help: HELP[which], name: `${which}-filtered.csv`,
+    link: which === "errors" ? hearAt : null,
+    unknown: which === "errors" ? new Set(["start", "end"]) : null,
+    clip: c ? r => {
+      const at = c.rows[r.case];
+      return at ? { src: c.files[at[0]], from: at[1], to: at[2] } : null;
+    } : null,
+    shown: which === "errors" ? ["corpus", "recording", "engine", "kind", "subkind", "start", "record", "engine_wrote", "sonnet_meaning", "sonnet_severity", "qwen_meaning", "sonnet_reason"] : null,
+  })).catch(e => { root.textContent = `The table didn't load (${e.message}).`; });
+}
+
+// The other tables, a bundle at a time.
+const bundles = {};
+function openTable(group, path) {
+  const got = bundles[group.file] || (bundles[group.file] = fetch("data/" + group.file).then(r => r.json()));
+  $("#other-title").textContent = path;
+  $("#viewer-other").textContent = "Loading…";
+  got.then(b => {
+    const t = b.tables.find(x => x.path === path);
+    $("#other-desc").textContent = (t.desc || "") + (t.shown < t.rows ? ` Showing the first ${t.shown.toLocaleString()} of ${t.rows.toLocaleString()} rows.` : "");
+    const p = Papa.parse(t.csv, { header: true, skipEmptyLines: true });
+    viewer($("#viewer-other"), p.data, p.meta.fields || [], { name: path.replace(/\//g, "-") });
+    $("#other-title").scrollIntoView({ block: "start" });
+  }).catch(e => { $("#viewer-other").textContent = `The table didn't load (${e.message}).`; });
+}
+D.tables.forEach(g => {
+  const ul = el("ul");
+  g.tables.forEach(t => {
+    const b = el("button", { type: "button" }, t.path);
+    b.addEventListener("click", () => openTable(g, t.path));
+    ul.append(el("li", {}, b, el("span", {}, ` ${t.rows.toLocaleString()} rows. ${t.desc || ""}`)));
+  });
+  $("#groups").append(el("details", {}, el("summary", {}, `${g.title} (${g.tables.length} tables)`), ul));
+});
+
+// The tabs.
+const TABS = ["errors", "recordings", "other"];
+function pick(which) {
+  stopClip();
+  TABS.forEach(t => {
+    $("#tab-" + t).setAttribute("aria-selected", String(t === which));
+    $("#panel-" + t).hidden = t !== which;
+  });
+  if (which !== "other") open(which);
+}
+TABS.forEach(t => $("#tab-" + t).addEventListener("click", () => pick(t)));
+pick("errors");
+</script>

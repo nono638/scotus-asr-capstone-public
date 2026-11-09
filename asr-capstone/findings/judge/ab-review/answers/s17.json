@@ -1,0 +1,175 @@
+{
+ "case": "s17",
+ "X": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 4,
+    "follow_up": "content lost, gap shows",
+    "reason": "The engine completely omits a large portion of the speaker's sentence, including the core argument about money not making one happy."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 4,
+    "follow_up": "content lost, gap shows",
+    "reason": "The engine completely omits the phrase 'in the world. It's not about that. Cause money don't make you happy at night. It it don't.' and replaces it with a single word 'It's'."
+   },
+   "whole": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "content lost, gap shows",
+    "reason": "The engine completely omits the phrase 'in the world. It's not about that. Cause money don't make you happy at night. It it don't.' and replaces it with a single word 'It's'."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The engine's transcript significantly omits the speaker's core message regarding the insufficiency of money and its impact on happiness, replacing a complex philosophical statement with a single, unrelated fragment."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The engine missed the entire phrase 'in the world. It's not about that. Cause money don't make you happy at night. It it don't.', which matches the evidence of a large number of dropped words."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "Version A provides a complete, coherent thought that follows the speaker's flow of discussing how money doesn't bring happiness, whereas Version B is grammatically fragmented and lacks the necessary context to complete the sentence."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "engine",
+    "sure": 3,
+    "reason": "Version A provides a much more natural and grammatically coherent continuation of the sentence 'it's not all about i got all the money it's having all the money'. Version B introduces a long, disjointed, and repetitive phrase that breaks the flow of the speaker's point."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Qwen3": 1,
+    "Parakeet": 2,
+    "Whisper": 3
+   },
+   "reason": "Engine 1 is the most accurate as it captures almost all the words in the reference, whereas Engine 2 introduces an error ('and all') and Engine 3 misses the majority of the text."
+  },
+  "misses": [
+   {
+    "reference": "rap about what rap about about you",
+    "engine": "rap about you",
+    "severity": 2,
+    "what": "the phrase 'rap about what rap about about you'"
+   },
+   {
+    "reference": "that was on that was on the label",
+    "engine": "that was on a label",
+    "severity": 2,
+    "what": "the phrase 'that was on that was on the label'"
+   },
+   {
+    "reference": "how you gonna go out here",
+    "engine": "how you going to go out here",
+    "severity": 0,
+    "what": "the phrase 'how you gonna go out here'"
+   },
+   {
+    "reference": "It's not all about, I got all the money in the world. It's not about that. Cause money don't make you happy at night. It it don't. Having all the money it's it's not all that.",
+    "engine": "It's not all about I got all the money. It's having all the money is it's not all that",
+    "severity": 1,
+    "what": "the phrase 'It's not all about, I got all the money in the world. It's not about that. Cause money don't make you happy at night. It it don't. Having all the money it's it's not all that.'"
+   },
+   {
+    "reference": "Hermes",
+    "engine": "armes",
+    "severity": 1,
+    "what": "the brand name 'Hermes'"
+   }
+  ]
+ },
+ "Y": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 4,
+    "follow_up": "content lost, gap shows",
+    "reason": "The speech recognition engine failed to capture a large, continuous segment of speech, resulting in a significant omission of the speaker's main point."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 4,
+    "follow_up": "content lost, gap shows",
+    "reason": "The speech recognition engine failed to capture a large chunk of the sentence, replacing a complete thought with a single, disconnected word."
+   },
+   "whole": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "content lost, gap shows",
+    "reason": "The engine completely omitted a significant portion of the speaker's sentence, replacing a complex thought with a single word that fails to bridge the gap between the preceding and following phrases."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The engine completely removes the speaker's core argument about money not bringing happiness, leaving only a fragment that fails to convey the point."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The engine completely omitted the phrase 'in the world. It's not about that. Cause money don't make you happy at night. It it don't.', which matches the checker's finding of a significant deletion."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "Version A contains a more natural,-repetitive speech pattern ('it's not all about i got all the money in the world it's not about that cause money don't make you happy at night it it don't') that aligns with the spontaneous, stream-of-consciousness style of the rest of the transcript."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "engine",
+    "sure": 3,
+    "reason": "Version B contains a long, repetitive, and grammatically disjointed insertion that breaks the flow of the speaker's existing sentence structure, whereas Version A provides a more natural-sounding correction/repetition common in spontaneous speech."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Qwen3": 1,
+    "Parakeet": 2,
+    "Whisper": 3
+   },
+   "reason": "Engine 1 most accurately preserves the original phrase 'in the world' and the subsequent sentence structure, whereas Engine 2 alters the phrase to 'and all' and Engine 3 omits the core content entirely."
+  },
+  "misses": [
+   {
+    "reference": "that was on that was on the label",
+    "engine": "that was on a label",
+    "severity": 1,
+    "what": "omitted specific reference to 'the' label"
+   },
+   {
+    "reference": "Rap about what rap about about you",
+    "engine": "Rap about you",
+    "severity": 2,
+    "what": "omitted 'what' which changes the phrasing of the instruction"
+   },
+   {
+    "reference": "how you gonna go out here",
+    "engine": "how you going to go out here",
+    "severity": 0,
+    "what": "standardization of 'gonna' to 'going to'"
+   },
+   {
+    "reference": "It's not all about, I got all the money in the world. It's not about that. Cause money don't make you happy at night. It it don't. Having all the money it's it's not all that.",
+    "engine": "It's not all about I got all the money. It's having all the money is it's not all that",
+    "severity": 3,
+    "what": "loss of significant content regarding money not making one happy at night and the specific phrasing of the struggle"
+   },
+   {
+    "reference": "Hermes",
+    "engine": "armes",
+    "severity": 2,
+    "what": "wrong word/misrecognition of a brand name"
+   },
+   {
+    "reference": "it's not gonna t externally",
+    "engine": "it's not going to externally",
+    "severity": 1,
+    "what": "omitted the 't' (likely a stutter or fragment) and standardized 'gonna'"
+   }
+  ]
+ }
+}

@@ -1,0 +1,1 @@
+{"case": "r154", "own": {"reason": "The engine drops 'didn't' from the double negative 'didn't tell us nothing', leaving 'tell us nothing'. It still says nobody told them anything, so the sense survives.", "meaning": "reworded", "severity": 1, "follow_up": "meaning kept", "reference_doubt": "no"}}

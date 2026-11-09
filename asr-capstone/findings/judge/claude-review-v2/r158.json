@@ -1,0 +1,1 @@
+{"case": "r158", "own": {"reason": "The reference question breaks off at 'that you always'; the engine has 'that you and played with?', losing 'always' but completing the question sensibly. It still asks about a group of childhood friends.", "meaning": "reworded", "severity": 1, "follow_up": "cant tell", "reference_doubt": "maybe"}}

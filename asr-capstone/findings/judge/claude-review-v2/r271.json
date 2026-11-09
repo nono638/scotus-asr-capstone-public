@@ -1,0 +1,1 @@
+{"case": "r271", "own": {"reason": "Where Speaker B answers 'gondolas', the engine has a stray 'I don't', though the word 'gondolas' still follows in the engine's text. The fragment adds a negative-looking word but negates nothing that was said.", "meaning": "garbled", "severity": 1, "follow_up": "negation added", "reference_doubt": "no"}}

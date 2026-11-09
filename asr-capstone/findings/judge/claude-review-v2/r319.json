@@ -1,0 +1,1 @@
+{"case": "r319", "own": {"reason": "The engine wrote \"Mike\" for \"mic\"; it reads like a name for a moment, but the context makes the microphone clear.", "meaning": "same", "severity": 1, "follow_up": "same thing", "reference_doubt": "no", "misspoke": "no"}}

@@ -1,0 +1,2 @@
+model,term,cases,standard_before,standard_after,standard_change,lowercase_nopunct_before,lowercase_nopunct_after,lowercase_nopunct_change,verbatim_before,verbatim_after,verbatim_change
+whisper-large-v3,OT2025,8,6.122,5.672,-0.45,6.152,5.797,-0.355,15.107,14.896,-0.211

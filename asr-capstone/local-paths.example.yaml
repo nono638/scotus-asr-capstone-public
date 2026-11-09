@@ -1,0 +1,15 @@
+# Where the corpora live on this laptop. Copy this file to local-paths.yaml
+# (same folder) and change the paths to match. local-paths.yaml is not in git,
+# because the two laptops keep things in different places.
+#
+# The settings files and tools refer to these by name - "{scotus_corpus}/runs" -
+# so none of them has to say which drive the corpus is on. Only the 5090 laptop
+# has the corpora; the steno laptop can do without this file until it does
+# corpus work.
+#
+# The values below are the 5090 laptop's.
+
+# The Supreme Court corpus: cases/ (the audio and transcripts) and runs/.
+scotus_corpus: D:/scotus-corpus
+# Other speech corpora, one folder each (edacc/).
+asr_corpora: D:/asr-corpora

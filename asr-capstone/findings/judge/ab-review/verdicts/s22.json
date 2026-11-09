@@ -1,0 +1,13 @@
+{"case": "s22",
+ "parts": {
+  "meaning/line": {"X": "partly", "Y": "partly", "better": "Y", "why": "Changed is right. X puts it at severity 3, but sheep->cheap is a wrong detail (2), not a number or party. Y has the right severity but calls sheep/cheap 'homophones', which they are not quite."},
+  "meaning/minute": {"X": "right", "Y": "right", "better": "tie", "why": "Both: changed, severity 2, reasonable reasons."},
+  "meaning/whole": {"X": "right", "Y": "right", "better": "tie", "why": "Both: changed, severity 2."},
+  "noticeable": {"X": "wrong", "Y": "right", "better": "Y", "why": "'stark countryside, just cheap and a single house' does not make sense, so a careful reader would notice. X says no."},
+  "stakes": {"X": "partly", "Y": "right", "better": "Y", "why": "A casual description of scenery; the slip is odd but unlikely to mislead anyone. X says yes while calling the result 'nonsensical', which points the other way. Y's no is sensible."},
+  "rule": {"X": "right", "Y": "right", "better": "tie", "why": "Different content word; 3 of 4 others wrote 'sheep' (Granite did not). Both say yes."},
+  "blind": {"X": "right", "Y": "right", "better": "tie", "why": "Both pick 'sheep' in both orders."},
+  "rank": {"X": "right", "Y": "partly", "better": "X", "why": "At the spot the three 'sheep' engines are equal and the two 'cheap' engines are equal. Y splits the 'sheep' engines over stock/stark, which is outside the spot (and 'stark' is likely what was said)."},
+  "misses": {"X": {"real_and_matter": 2, "trivial": 1, "not_real": 0, "important_missed": 0}, "Y": {"real_and_matter": 2, "trivial": 1, "not_real": 0, "important_missed": 0}, "better": "tie", "why": "Both find the garbled 'for choice ... very cute in the countryside' and sheep->cheap. X adds stock/stark and Y adds the dropped 'do you', both trivial. Y's severity 3s are a little high."}
+ },
+ "overall": {"better": "Y", "why": "Y gets noticeable, stakes and the line severity right where X slips; X's only win is a cleaner rank."}}

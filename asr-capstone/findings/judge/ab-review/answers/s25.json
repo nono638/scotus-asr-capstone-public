@@ -1,0 +1,211 @@
+{
+ "case": "s25",
+ "X": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 4,
+    "follow_up": "changes meaning",
+    "reason": "The speech recognition engine misidentified the word 'slave' as 'slick'."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 4,
+    "follow_up": "changes meaning",
+    "reason": "The speech recognition engine misheard the word 'slave' as 'slick', which fundamentally alters the context of the speaker's comparison."
+   },
+   "whole": {
+    "meaning": "changed",
+    "severity": 4,
+    "follow_up": "changes meaning",
+    "reason": "The speech recognition engine misheard the word 'slave' as 'slick', which fundamentally alters the speaker's sociological point."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The error replaces a profound and controversial statement about modern slavery with a nonsensical or trivial word, completely erasing the speaker's intended point."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The engine incorrectly transcribed 'slave' as 'slick', which is a different content word as identified by the checker."
+  },
+  "blind": {
+   "order1 (reference shown as B)": {
+    "picked": "engine",
+    "sure": 3,
+    "reason": "In the context of discussing modern slavery and comparing current conditions to the old days, 'it's still slick to me' is a common idiomatic way to express that something feels deceptive or subtly wrong, whereas 'it's still slave to me' is grammatically awkward and less likely in this dialectal context."
+   },
+   "order2 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "The speaker is discussing the concept of modern slavery and comparing current conditions to the old days, making 'slave' the only logically consistent word in that context."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Whisper": 3,
+    "Qwen3": 1,
+    "Parakeet": 1
+   },
+   "reason": "Engine 2 and Engine 3 correctly identify the word 'slave', whereas Engine 1 replaces it with 'slick', which fundamentally changes the speaker's meaning."
+  },
+  "misses": [
+   {
+    "reference": "you take me and her",
+    "engine": "you take me her",
+    "severity": 1,
+    "what": "missing conjunction 'and'"
+   },
+   {
+    "reference": "they woah",
+    "engine": "oh",
+    "severity": 2,
+    "what": "incorrect word/interjection"
+   },
+   {
+    "reference": "what she what he with her for",
+    "engine": "she what he with her for",
+    "severity": 1,
+    "what": "missing 'what'"
+   },
+   {
+    "reference": "you gonna have",
+    "engine": "you can have",
+    "severity": 2,
+    "what": "changed verb 'gonna' to 'can'"
+   },
+   {
+    "reference": "I be the first to I tell my guy",
+    "engine": "I'd be first I tell my guy",
+    "severity": 2,
+    "what": "changed 'be' to 'd' (would)"
+   },
+   {
+    "reference": "we're we I mean, we still in slavery",
+    "engine": "I work with me and we still in slavery",
+    "severity": 4,
+    "what": "completely different phrase/meaning"
+   },
+   {
+    "reference": "It just modern slavery",
+    "engine": "it just bothers me",
+    "severity": 4,
+    "what": "changed 'modern slavery' to 'bothers me'"
+   },
+   {
+    "reference": "it's still slave To me",
+    "engine": "it's still slick to me",
+    "severity": 3,
+    "what": "changed 'slave' to 'slick'"
+   },
+   {
+    "reference": "That's the way I look at it",
+    "engine": "that's why i look at it",
+    "severity": 1,
+    "what": "changed 'the way' to 'why'"
+   },
+   {
+    "reference": "I just stay su Uh, the way I say stuff is Now they they listen",
+    "engine": "i just stay sad the way i say stuff and then they listen",
+    "severity": 3,
+    "what": "changed 'stay su' to 'stay sad'"
+   },
+   {
+    "reference": "but they be like",
+    "engine": "but they were like",
+    "severity": 2,
+    "what": "changed 'be' to 'were'"
+   },
+   {
+    "reference": "at work",
+    "engine": "it works",
+    "severity": 3,
+    "what": "changed 'at work' to 'it works'"
+   }
+  ]
+ },
+ "Y": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 2,
+    "follow_up": "changes meaning",
+    "reason": "The engine replaces the word 'slave' with 'slick' at the marked location."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "changes meaning",
+    "reason": "The engine replaces the word 'slave' with 'slick', which changes the core subject of the speaker's metaphor."
+   },
+   "whole": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "changes meaning",
+    "reason": "The engine misidentifies the word 'slave' as 'slick', which completely changes the speaker's point about modern slavery."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The error replaces a profound and central metaphor of the speaker's argument ('slave') with a nonsensical word ('slick'), which fundamentally alters the meaning and gravity of the statement."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The evidence correctly identifies that the engine's word 'slick' differs from the reference word 'slave'."
+  },
+  "blind": {
+   "order1 (reference shown as B)": {
+    "picked": "engine",
+    "sure": 2,
+    "reason": "The speaker is discussing the concept of 'modern slavery' and how they view current societal structures. 'Slick' is a common colloquialism used to describe something deceptive or subtly manipulative, which fits the context of describing a 'better way of putting' the concept of modern slavery."
+   },
+   "order2 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "The speaker is discussing the concept of 'modern slavery' and comparing current conditions to the 'old days' of slavery. 'Slave' fits the context of the speaker's argument, whereas 'slick' makes no sense in this comparison."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Whisper": 3,
+    "Qwen3": 1,
+    "Parakeet": 1
+   },
+   "reason": "Engine 2 and Engine 3 are tied for first place because they correctly identify the word 'slave', while Engine 1 incorrectly replaces it with 'slick'."
+  },
+  "misses": [
+   {
+    "reference": "It just modern slavery. It just a another way",
+    "engine": "it just bothers me it's just a another way",
+    "severity": 3,
+    "what": "the speaker's description of slavery"
+   },
+   {
+    "reference": "You know, it's still slave To me",
+    "engine": "you know it's still slick to me",
+    "severity": 3,
+    "what": "the speaker's feeling about the situation"
+   },
+   {
+    "reference": "I just stay su Uh, the way I say stuff",
+    "engine": "i just stay sad the way i say stuff",
+    "severity": 2,
+    "what": "the speaker's state of mind"
+   },
+   {
+    "reference": "they be like, man you crazy",
+    "engine": "they were like man you crazy",
+    "severity": 2,
+    "what": "the speaker's reaction of others"
+   },
+   {
+    "reference": "like at work",
+    "engine": "like it works",
+    "severity": 2,
+    "what": "the speaker's description of the work environment"
+   }
+  ]
+ }
+}

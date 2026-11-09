@@ -1,0 +1,193 @@
+{
+ "case": "s12",
+ "X": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "meaning changed",
+    "reason": "The engine misidentified the AAE habitual 'be' as the contraction for 'would'."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 2,
+    "follow_up": "meaning changed",
+    "reason": "The engine misidentified the AAE habitual 'be' as a contraction of 'would'."
+   },
+   "whole": {
+    "meaning": "changed",
+    "severity": 2,
+    "follow_up": "meaning changed",
+    "reason": "The engine misheard the habitual 'be' as the contraction 'd be'."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The engine converts the habitual aspect 'we be' (characteristic of AAE) into the past tense 'we'd be', which fundamentally changes the temporal aspect of the speaker's statement."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The engine expanded the habitual 'be' into the standard English contraction 'we'd be' (we would be), which is a common error in speech recognition."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "The phrase 'we be walking' uses the habitual 'be' characteristic of African American Vernacular English (AAVE), which is consistent with the linguistic features of the CORAAL corpus."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "The use of 'we be' represents the habitual 'be' characteristic of African American Vernacular English (AAVE), which is the focus of the CORAAL corpus."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Parakeet": 1,
+    "Whisper": 3,
+    "Qwen3": 2
+   },
+   "reason": "Engine 1 is the most accurate as it preserves the habitual aspect 'we be' and the original phrasing, whereas Engine 2 incorrectly changes the grammar to 'we'd be' and Engine 3 introduces unnecessary punctuation/word breaks."
+  },
+  "misses": [
+   {
+    "reference": "Aw. Yeah, sick.",
+    "engine": "yes my",
+    "severity": 3,
+    "what": "incorrect words/meaning changed"
+   },
+   {
+    "reference": "we come and support",
+    "engine": "we come to support",
+    "severity": 1,
+    "what": "changed 'and' to 'to'"
+   },
+   {
+    "reference": "forty-five",
+    "engine": "45 five",
+    "severity": 2,
+    "what": "repetition/error in number transcription"
+   },
+   {
+    "reference": "Yo , you been missing",
+    "engine": "i been missing",
+    "severity": 4,
+    "what": "changed speaker from Speaker 1 to Interviewer"
+   },
+   {
+    "reference": "we be walking",
+    "engine": "we'd be walking",
+    "severity": 2,
+    "what": "changed AAE habitual 'be' to past tense 'would'"
+   },
+   {
+    "reference": "like, up the street and",
+    "engine": "like yeah and",
+    "severity": 3,
+    "what": "lost content 'up the street'"
+   },
+   {
+    "reference": "Go in there every Monday",
+    "engine": "we there every monday",
+    "severity": 3,
+    "what": "lost verb 'Go in there'"
+   },
+   {
+    "reference": "dope poets",
+    "engine": "poets",
+    "severity": 2,
+    "what": "omitted adjective 'dope'"
+   },
+   {
+    "reference": "It's mad dope",
+    "engine": "that's mad dope",
+    "severity": 0,
+    "what": "minor word change"
+   },
+   {
+    "reference": "Okay. Right, like it Okay, ugh. But, um , oh, okay, uh,",
+    "engine": "right like okay i'm oh okay",
+    "severity": 3,
+    "what": "garbled transcription of filler/stuttering"
+   }
+  ]
+ },
+ "Y": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "meaning changed",
+    "reason": "The engine replaces the habitual 'be' with 'we'd be' (we would be), which changes the aspect of the verb from habitual to conditional/past habitual."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "meaning changed",
+    "reason": "The engine replaces the habitual 'be' ('we be') with the contraction for 'we would' ('we'd be'), which changes the aspect of the verb from habitual to conditional/past."
+   },
+   "whole": {
+    "meaning": "changed",
+    "severity": 2,
+    "follow_up": "meaning changed",
+    "reason": "The engine replaces the habitual 'be' ('we be walking') with the past tense contraction 'we'd be' ('we would be walking')."
+   }
+  },
+  "noticeable": "no",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The difference replaces the habitual aspect 'we be' (characteristic of African American English) with the contraction 'we'd be' (we would be), which misrepresents the speaker's grammatical features and sociolinguistic identity."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The engine added a contraction for 'would' ('we'd'), which changes the habitual 'be' from the reference into a conditional/past habitual form."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "Version A uses 'we be', which is a feature of African American Vernacular English (AAVE) indicating habitual action, fitting the context of regularly walking up the street. Version B uses 'we'd be', which is a standard contraction for 'we would be', but 'we be' is more consistent with the sociolinguistic context of the CORAAL corpus."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "Version B uses 'we be', which is a classic example of habitual aspect in African American Vernacular English (AAVE), fitting the linguistic context of the corpus. Version A's 'we'd be' is more standard but less characteristic of the speaker's established dialect in this transcript."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Parakeet": 1,
+    "Whisper": 3,
+    "Qwen3": 1
+   },
+   "reason": "Engine 1 and Engine 3 are tied for first because they correctly preserve the AAE habitual aspect 'we be', whereas Engine 2 incorrectly changes it to the past tense 'we'd be'."
+  },
+  "misses": [
+   {
+    "reference": "we be walking",
+    "engine": "we'd be walking",
+    "severity": 2,
+    "what": "loss of habitual 'be' in 'we be walking'"
+   },
+   {
+    "reference": "we'll be like",
+    "engine": "we there every monday",
+    "severity": 2,
+    "what": "loss of habitual 'be' in 'we'll be like'"
+   },
+   {
+    "reference": "forty-five",
+    "engine": "45 five",
+    "severity": 3,
+    "what": "incorrect number of people"
+   },
+   {
+    "reference": "dope poets",
+    "engine": "poets",
+    "severity": 1,
+    "what": "loss of 'dope' in 'dope poets'"
+   }
+  ]
+ }
+}

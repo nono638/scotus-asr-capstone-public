@@ -1,0 +1,14 @@
+{"case": "s40",
+ "parts": {
+  "meaning/line": {"X": "right", "Y": "right", "better": "tie", "why": "Both: opposite, 4, negation added."},
+  "meaning/minute": {"X": "right", "Y": "right", "better": "tie", "why": "Both: opposite, 4, negation added."},
+  "meaning/whole": {"X": "right", "Y": "right", "better": "tie", "why": "Both: opposite, 4, negation added."},
+  "noticeable": {"X": "right", "Y": "right", "better": "tie", "why": "Both say yes: 'two options ... or you can't check a box', then '55 percent checked the box', does not add up."},
+  "stakes": {"X": "right", "Y": "right", "better": "tie", "why": "Both say yes: an option becomes a prohibition."},
+  "rule": {"X": "right", "Y": "right", "better": "tie", "why": "Both say the rule is right."},
+  "blind": {"X": "right", "Y": "right", "better": "tie", "why": "Both pick the reference in both orders, sure 3, using the 55 percent who checked the box."},
+  "misses": {"X": {"real_and_matter": 1, "trivial": 0, "not_real": 0, "important_missed": 0},
+             "Y": {"real_and_matter": 1, "trivial": 0, "not_real": 0, "important_missed": 0},
+             "better": "tie", "why": "Both list only the can/can't change, at severity 4."}
+ },
+ "overall": {"better": "tie", "why": "On this negation control the two sets give the same answers, all correct."}}

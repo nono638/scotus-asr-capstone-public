@@ -1,0 +1,1 @@
+{"case": "r342", "own": {"reason": "The engine wrote \"I didn't hear anything\" for \"I ain't heard nothing\"; \"ain't\" here means \"didn't\", so the meaning is kept.", "meaning": "reworded", "severity": 0, "follow_up": "meaning kept", "reference_doubt": "maybe", "misspoke": "no"}}

@@ -1,0 +1,1 @@
+{"case": "r248", "own": {"reason": "The child says she knows she is happy \"cause I'm not sad\"; the engine writes \"because I'm upset\". The answer is turned into its opposite.", "meaning": "opposite", "severity": 4, "follow_up": "negation lost", "reference_doubt": "no"}}

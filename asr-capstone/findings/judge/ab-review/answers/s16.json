@@ -1,0 +1,179 @@
+{
+ "case": "s16",
+ "X": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "content lost, gap shows",
+    "reason": "The engine completely omits the clause about mentioning the Ninja Turtles, jumping straight to the confirmation of the intro song."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "content lost, gap shows",
+    "reason": "The engine completely omits the entire clause 'I MISSED A MENTION ABOUT THE NINJA TURTLES', jumping straight from the previous thought to 'Yeah, of course'."
+   },
+   "whole": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "content lost, gap shows",
+    "reason": "The engine completely omits the clause 'I MISSED A MENTION ABOUT THE NINJA TURTLES', jumping straight from the previous thought to the next."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "maybe",
+   "reason": "The engine completely omits the speaker's thought process regarding what they had forgotten to mention, removing the context for the subsequent discussion about the Ninja Turtles."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The engine contains no text at the marked place, while the reference contains 8 words, which matches the checker's evidence of 8 words dropped."
+  },
+  "blind": {
+   "order1 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "Version B provides a specific phrase ('i missed a mention about the ninja turtles') that logically connects the speaker's thought process ('what else have...') to the subsequent mention of the ninja turtles' intro song. Version A's gap leaves the sentence 'what else have' grammatically incomplete and disconnected from the topic."
+   },
+   "order2 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "In Version A, the phrase 'i missed a mention about the ninja turtles' provides a logical transition to the subsequent discussion about the Ninja Turtles' intro song. Version B leaves a sudden gap in the sentence structure that makes the transition to 'yeah of course their intro song' feel disjointed."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Parakeet": 1,
+    "Canary": 1,
+    "Qwen3": 1,
+    "Whisper": 1,
+    "Granite": 5
+   },
+   "reason": "Engines 1, 2, 3, and 4 are all equally accurate in terms of word content, while Engine 5 is incorrect because it omits the text entirely."
+  },
+  "misses": [
+   {
+    "reference": "IT DIDN'T LAST THAT LONG",
+    "engine": "did it last that long?",
+    "severity": 3,
+    "what": "the duration of the karate training"
+   },
+   {
+    "reference": "WHENEVER I HEARD THAT",
+    "engine": "whenever I heard them",
+    "severity": 1,
+    "what": "the subject of the motivation/energy"
+   },
+   {
+    "reference": "REALLY BUT YOU USED TO",
+    "engine": "Really. Wow. And it was like",
+    "severity": 1,
+    "what": "the speaker's knowledge of karate/kung fu"
+   }
+  ]
+ },
+ "Y": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 4,
+    "follow_up": "content lost, gap shows",
+    "reason": "The speech recognition engine failed to capture the entire clause, resulting in a significant omission of the subject matter."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "content lost, gap shows",
+    "reason": "The speech recognition engine failed to transcribe an entire clause of the speaker's sentence."
+   },
+   "whole": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "content lost, gap shows",
+    "reason": "The speech recognition engine failed to transcribe the entire clause where the speaker was searching for a topic."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The engine completely omits a specific thought/sentence, creating a disjointed jump in the conversation."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The engine completely omitted the phrase 'I MISSED A MENTION ABOUT THE NINJA TURTLES' which is present in the reference."
+  },
+  "blind": {
+   "order1 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "Version B provides a coherent phrase 'i missed a mention about the ninja turtles' that logically connects the speaker's thought process to the subsequent mention of the ninja turtles' intro song."
+   },
+   "order2 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "Version A provides a necessary bridge in the sentence structure to connect the thought of 'what else have' to the subsequent mention of the 'ninja turtles' intro song."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Parakeet": 2,
+    "Canary": 1,
+    "Qwen3": 1,
+    "Whisper": 2,
+    "Granite": 5
+   },
+   "reason": "Engines 2 and 3 are tied for first as they correctly capture the meaning of the reference, while Engine 5 is last because it completely omits the content within the brackets."
+  },
+  "misses": [
+   {
+    "reference": "KARATE IS JAPANESE",
+    "engine": "karate is Japanese",
+    "severity": 0,
+    "what": "no difference"
+   },
+   {
+    "reference": "I ACTUALLY NEVER KNEW",
+    "engine": "I actually never knew",
+    "severity": 0,
+    "what": "no difference"
+   },
+   {
+    "reference": "REALLY BUT YOU USED TO",
+    "engine": "Really",
+    "severity": 3,
+    "what": "engine omitted the phrase about the person having used to do it"
+   },
+   {
+    "reference": "YEAH",
+    "engine": "And it was like",
+    "severity": 3,
+    "what": "engine replaced speaker B's confirmation with a fragment of speaker A's next thought"
+   },
+   {
+    "reference": "IT DIDN'T LAST THAT LONG",
+    "engine": "did it last that long",
+    "severity": 4,
+    "what": "changed a statement of fact into a question"
+   },
+   {
+    "reference": "I HAD TO SAY THIS YEAH WHAT ELSE LIKE I'M THINKING WHAT ELSE HAVE I MISSED A MENTION ABOUT THE NINJA TURTLES",
+    "engine": "Yeah, of course. The intro song.",
+    "severity": 3,
+    "what": "engine omitted the speaker's internal monologue/filler about thinking of what else to mention"
+   },
+   {
+    "reference": "IT USED TO MAKE ME VERY MOTIVATED AND VERY ENERGETIC AND THE THE LIKE CHARGED AND HARDWIRED LIKE YEAH NINJA TURTLES YEAH IT MADE ME GO CRAZY WHENEVER I HEARD THAT",
+    "engine": "It was so great. Actually, it used to make me very motivated and very energetic and like charged and hardwired. Yeah, Ninja Turtles. Yeah, it made me go crazy whenever I heard them.",
+    "severity": 1,
+    "what": "engine changed 'that' to 'them'"
+   },
+   {
+    "reference": "YOU LISTENED TO THE ARABIC OR THE ENGLISH OPENING",
+    "engine": "You listen to the Arabic or the English opening",
+    "severity": 0,
+    "what": "tense change"
+   }
+  ]
+ }
+}

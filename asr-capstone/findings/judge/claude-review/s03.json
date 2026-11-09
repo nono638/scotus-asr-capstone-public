@@ -1,0 +1,44 @@
+{
+ "case": "s03",
+ "own": {
+  "meaning": "opposite",
+  "severity": 4,
+  "noticeable": "yes",
+  "follow_up": "negation lost",
+  "stakes": "yes",
+  "reason": "The speaker's mentoring program is about showing young black men they \"shouldn't\" go to the streets; the engine wrote \"should\", turning the program's purpose upside down.",
+  "rule_right": "yes",
+  "rule_reason": "The record has \"shouldn't\" and the engine \"should\" at the spot, a negative on one side only.",
+  "more_plausible": "reference",
+  "plausible_how_clear": "Very clear: it is a mentoring program called Big Brother, and nobody runs one to push young men into the streets.",
+  "my_misses": [
+   {"reference": "all young black men shouldn't go to the streets", "engine": "all young black men should go to the streets", "severity": 4},
+   {"reference": "Uh, I want to I'm going to pursue IT. And I'm'a start a, uh, a non-profit program called Big Brother.", "engine": "", "severity": 3},
+   {"reference": "then from eighteen to twenty five you have the chance to be a mentor", "engine": "Then from 18", "severity": 3},
+   {"reference": "we will try to do uh, a scholarship", "engine": "you will try to do a scholarship", "severity": 2},
+   {"reference": "showing that", "engine": "It's one that", "severity": 1}
+  ]
+ },
+ "review": {
+  "labelled/line": {"verdict": "partly", "why": "Opposite, 4, negation lost and stakes are right, but from the line alone (\"one that all young black men should go to the streets\") a reader has no context about a mentoring program; \"maybe\" fits better than \"yes\"."},
+  "labelled/minute": {"verdict": "agree", "why": "Right on all counts, and the stakes note (the program's purpose reversed) is exactly the harm."},
+  "labelled/whole": {"verdict": "agree", "why": "Sound; judged against the minute text only."},
+  "rule/minute": {"verdict": "agree", "why": "Copied both words exactly and confirmed the rule."},
+  "blind/order1": {"verdict": "agree", "why": "Picked B (the reference) for the right reason: a mentoring program aims to keep young men off the streets."},
+  "blind/order2": {"verdict": "agree", "why": "Picked the reference again after the swap with the same reason."},
+  "rank/minute": {"verdict": "partly", "why": "Whisper's \"should\" is rightly last, but Engine 2 keeps \"shouldn't\" just as well as Engine 1 and was pushed to 2nd for \"So one\" and \"first track\", slips away from the spot; they should tie."},
+  "misses": [
+   {"reference": "I want to I'm going to pursue IT. And I'm'a start a, uh, a non-profit program called Big Brother.", "engine": "", "is_real": "yes", "matters": "yes", "severity_fair": "yes", "note": "The engine really skips the speaker's plans and the program's name."},
+   {"reference": "showing that all young black men shouldn't go to the streets", "engine": "It's one that all young black men should go to the streets", "is_real": "yes", "matters": "yes", "severity_fair": "yes", "note": "The main error."},
+   {"reference": "they first answer. Or they first try.", "engine": "They first answer. First try.", "is_real": "yes", "matters": "no", "severity_fair": "too high", "note": "Dropping \"Or they\" changes nothing; 0, not 2."},
+   {"reference": "mentoring program", "engine": "mentor program", "is_real": "yes", "matters": "no", "severity_fair": "too high", "note": "Same meaning; should have been left out (0)."},
+   {"reference": "you would be in the mentoring program from six to eighteen ... then from eighteen to twenty five you have the chance to be a mentor.", "engine": "You'll be in the mentor program from 6 to 18. From ages 6 to 18. Then from 18", "is_real": "yes", "matters": "yes", "severity_fair": "yes", "note": "Real skip of the become-a-mentor stage, which is the \"full cycle\" the interviewer remarks on."},
+   {"reference": "And one And once you in college we will try to do uh, a scholarship. For the For all", "engine": "And once you're in college, you will try to do a scholarship for all", "is_real": "partly", "matters": "yes", "severity_fair": "too low", "note": "The texts do differ, but Gemma calls it smoothed grammar and misses that \"we will try\" became \"you will try\", which changes who offers the scholarship (2)."}
+  ],
+  "overlooked": [
+   {"reference": "we will try to do uh, a scholarship", "engine": "you will try to do a scholarship", "severity": 2, "note": "Listed by Gemma only as grammar smoothing; the change of who acts (the program vs the student) was not named."}
+  ]
+ },
+ "worth_a_listen": {"yes": true, "why": "Low doubt from the text, but it is a sensitive quote and a strong showcase example of a reversed meaning, so it should be confirmed by ear before it is used."},
+ "summary": "Gemma was right about the reversed \"shouldn't\" in every request and found the two big skips, but over-rated trivial word changes and described the \"we\" to \"you\" scholarship change as mere grammar smoothing."
+}

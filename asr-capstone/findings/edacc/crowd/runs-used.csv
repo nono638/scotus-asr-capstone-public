@@ -1,0 +1,6 @@
+model,engine,run,recordings_in_run,recordings_compared,pivot
+Qwen3-ASR-1.7B-hf,Qwen3-ASR-1.7B-hf,D:\asr-corpora\edacc\runs\run-edacc-qwen3,40,40,True
+canary-1b-v2,canary-1b-v2,D:\asr-corpora\edacc\runs\run-edacc-canary,40,40,False
+granite-speech-4.1-2b,granite-speech-4.1-2b,D:\asr-corpora\edacc\runs\run-edacc-granite,40,40,False
+parakeet-tdt-0.6b-v3,parakeet-tdt-0.6b-v3,D:\asr-corpora\edacc\runs\run-edacc-parakeet,40,40,False
+whisper-large-v3,whisper-large-v3,D:\asr-corpora\edacc\runs\run-edacc-whisper,40,40,False

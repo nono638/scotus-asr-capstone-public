@@ -1,0 +1,514 @@
+<meta charset="utf-8">
+<title>Listening Bench</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Public+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* Layout: one spot at a time, like a page of transcript on a desk; a strip of squares above to move between spots.
+   Colours, type, the player and its highlighting come from web/widget/ (tokens.css, listen.js), shared with the website. */
+/*TOKENS*/
+body { background: var(--bg); color: var(--ink); font-family: var(--font-ui); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 800px; margin: 0 auto; padding-inline: 16px; padding-block: 24px 64px; display: grid; gap: 16px; }
+header { display: grid; gap: 8px; }
+.eyebrow { font-size: 12px; letter-spacing: .08em; text-transform: uppercase; color: var(--muted); font-weight: 600; }
+h1 { font-size: 26px; line-height: 1.15; margin: 0; font-weight: 600; text-wrap: balance; }
+.lede { margin: 0; color: var(--muted); max-width: 64ch; font-size: 14px; }
+.intro { display: grid; gap: 8px; max-width: 68ch; font-size: 14px; }
+.intro h2 { font-size: 13px; font-weight: 600; letter-spacing: .04em; text-transform: uppercase; color: var(--muted); margin: 4px 0 0; }
+.intro p { margin: 0; }
+.squares-note { font-size: 12px; color: var(--muted); margin: 0; }
+.hint { font-size: 13px; color: var(--ink); margin: 0; max-width: 72ch; min-height: 2.6em; }
+.explainer { display: grid; gap: 2px; border: 1px solid var(--rule); border-left: 4px solid var(--ex, var(--rule)); border-radius: 4px; padding: 8px 12px; background: var(--bg); }
+.explainer-label { font-size: 11px; font-weight: 600; letter-spacing: .06em; text-transform: uppercase; color: var(--muted); }
+.swatch { display: inline-block; width: 10px; height: 10px; border-radius: 50%; margin-right: 7px; background: var(--sw); }
+.btn.kind[data-tier="primary"] { border-color: var(--sw); box-shadow: inset 0 0 0 2px var(--sw); background: var(--card); font-weight: 600; }
+.btn.kind[data-tier="secondary"] { border-color: var(--sw); border-style: dashed; background: var(--card); }
+.btn.feat[aria-pressed="true"] { border-color: var(--sw, var(--accent)); box-shadow: inset 0 0 0 2px var(--sw, var(--accent)); background: var(--card); color: var(--ink); font-weight: 600; }
+.btn:disabled { opacity: .45; cursor: not-allowed; }
+.btn.go { background: var(--accent); border-color: var(--accent); color: var(--card); font-weight: 600; }
+.btn.go:disabled { background: var(--bg); color: var(--muted); border-color: var(--rule); }
+.stepline { margin: 0; font-size: 13px; font-weight: 600; color: var(--accent); }
+.step-block { border-top: 1px solid var(--rule); padding-top: 12px; }
+code { font-family: var(--font-transcript); font-size: .95em; }
+.tier { font-size: 10px; letter-spacing: .05em; text-transform: uppercase; color: var(--sw); margin-left: 6px; font-weight: 600; }
+.tier:empty { display: none; }
+.keys { font-weight: 400; text-transform: none; letter-spacing: 0; color: var(--faint); }
+.shortcuts { font-size: 12px; color: var(--muted); margin: 0; }
+.shortcuts b { font-weight: 600; color: var(--ink); }
+.banner { background: var(--card); border: 1px solid var(--warn); color: var(--warn); border-radius: 6px; padding: 10px 12px; font-size: 13px; }
+
+.progress { display: grid; gap: 8px; background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 12px; }
+.progress-row { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; justify-content: space-between; font-size: 13px; }
+.progress-row b { font-variant-numeric: tabular-nums; }
+.squares { display: flex; flex-wrap: wrap; gap: 3px; }
+.squares button { width: 14px; height: 14px; padding: 0; border: 1px solid var(--rule); background: var(--bg); border-radius: 2px; cursor: pointer; }
+.squares button.half { background: var(--accent-soft); border-color: var(--accent); }
+.squares button.done { background: var(--done); border-color: var(--done); }
+.squares button[aria-current="true"] { outline: 2px solid var(--ink); outline-offset: 1px; }
+
+
+.spot { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 18px; display: grid; gap: 14px; min-width: 0; }
+.spot-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; align-items: baseline; }
+.spot-num { font-weight: 600; font-size: 16px; font-variant-numeric: tabular-nums; }
+.nav { display: flex; gap: 6px; }
+.meta { display: flex; flex-wrap: wrap; gap: 4px 14px; font-size: 13px; color: var(--muted); }
+.meta i { font-style: italic; color: var(--ink); }
+
+
+.lines { display: grid; border-top: 1px solid var(--rule); }
+.line { display: grid; grid-template-columns: 112px 1fr; gap: 12px; padding-block: 10px; border-bottom: 1px solid var(--rule); min-width: 0; }
+.who { font-size: 12px; font-weight: 600; color: var(--muted); letter-spacing: .04em; text-transform: uppercase; padding-top: 2px; }
+.text { font-family: var(--font-transcript); font-size: 15px; line-height: 1.65; min-width: 0; overflow-wrap: anywhere; }
+.text .ctx { color: var(--faint); }
+.text .speaker { font-family: var(--font-ui); font-size: 11px; font-weight: 600; letter-spacing: .05em; color: var(--accent); }
+.spot[data-view="bite"] .region-ctx, .spot[data-view="sentence"] .region-ctx { display: none; }
+mark { background: var(--mark); color: var(--mark-ink); padding: 1px 3px; border-radius: 2px; font-weight: 700; }
+mark.empty { background: transparent; color: var(--gap); border: 1px dashed var(--gap); font-weight: 400; font-family: var(--font-ui); font-size: 12px; padding: 0 5px; }
+details { font-size: 13px; }
+summary { cursor: pointer; color: var(--accent); font-weight: 500; }
+.others { margin-top: 10px; }
+.others .text { font-size: 14px; }
+
+.label-block { display: grid; gap: 8px; }
+.label-title { font-size: 12px; font-weight: 600; color: var(--muted); letter-spacing: .04em; text-transform: uppercase; }
+.choices { display: flex; flex-wrap: wrap; gap: 6px; }
+textarea { font: inherit; font-size: 14px; width: 100%; min-height: 54px; box-sizing: border-box; border: 1px solid var(--rule); border-radius: 4px; padding: 6px 8px; background: var(--bg); color: var(--ink); resize: vertical; }
+.status { font-size: 12px; color: var(--muted); min-height: 1.5em; }
+.status.ok { color: var(--done); }
+.status.bad { color: var(--warn); }
+.where { font-size: 12px; color: var(--muted); }
+.where.ok { color: var(--done); }
+.where.bad { color: var(--warn); }
+#copy-box { font-family: var(--font-transcript); font-size: 12px; min-height: 120px; }
+footer { font-size: 12px; color: var(--muted); display: grid; gap: 6px; border-top: 1px solid var(--rule); padding-top: 14px; }
+footer p { margin: 0; max-width: 72ch; }
+@media (max-width: 520px) {
+  .line { grid-template-columns: 1fr; gap: 4px; }
+  h1 { font-size: 22px; }
+}
+</style>
+
+<div class="wrap">
+  <header>
+    <div class="eyebrow">Supreme Court, October Term 2017 · random sample of flagged spots</div>
+    <h1>Listening bench</h1>
+    <div class="intro">
+      <h2>What this page is for</h2>
+      <p>Seven speech recognition models transcribed the 61 oral arguments of the Supreme Court's October 2017 term. Wherever most of them disagree with the official transcript, or split among themselves, the place is flagged: 9,504 spots in all. A computer then sorted every spot by the kind of difference it is. Simple rules came first, and a language model (Gemma 4 31B, run locally) sorted the 819 spots the rules could not place.</p>
+      <p>Those counts can't be quoted until someone checks the sorting. That is this page: 200 of the flagged spots, picked at random. For each one, play the sentence clip, tick every one of eight short questions that is true of the highlighted words from what you hear, and say who got it right. The computer's labels are hidden here on purpose, so they can't sway you.</p>
+      <p>The rules for labelling, and why they are what they are, are in <code>labelling-guidelines.md</code> (version 0.2, a pilot).</p>
+      <p>Labels save as you click, in this browser and in your claude.ai account.</p>
+    </div>
+    <div class="banner" id="no-db" hidden>Labels are not reaching your claude.ai account from this view, so they are kept in this browser only. Use "Copy all labels" before you clear the browser or switch computers. Opening the page in claude.ai, signed in as its owner, should fix it.</div>
+  </header>
+
+  <section class="progress" aria-label="Progress">
+    <div class="progress-row">
+      <span><b id="count-done">0</b> of <b id="count-all">0</b> labelled <span class="where" id="where">· connecting to your account…</span></span>
+      <span style="display:flex; gap:6px; flex-wrap:wrap;">
+        <button class="btn" type="button" id="copy-labels">Copy all labels</button>
+        <button class="btn" type="button" id="next-open">Next unlabelled</button>
+      </span>
+    </div>
+    <div class="status" id="copy-msg" aria-live="polite"></div>
+    <textarea id="copy-box" hidden readonly aria-label="All labels, to copy"></textarea>
+    <p class="squares-note">One square per spot, in order. Green is labelled, blue is half done. The order is already random, so working straight through is fine; the squares are only for going back to one.</p>
+    <div class="squares" id="squares" role="group" aria-label="Jump to a spot"></div>
+    <p class="shortcuts"><b>Keyboard shortcuts:</b> 1–8 tick a question · 9 none of these · 0 can't tell · A S D F G who got it right · Q W E play the three clips · Space play again · ← → previous or next spot · N next unlabelled. Off while you type a note.</p>
+  </section>
+
+  <main id="spot"></main>
+
+  <footer>
+    <p>As a clip plays, each model's line highlights the word that model thinks is being spoken, from its own word timings; click a word to play from there. Where people talk over each other those timings can be off by a second or more, and words a model left out have nothing to highlight.</p>
+    <p>Sentences come from the official transcript. Clip times come from Whisper's word timings, so a clip can start or stop a little early or late. Qwen3 is shown first because it has the lowest error rate on the usual benchmark scoring.</p>
+    <p>Afterwards these labels are compared with two automatic sorts, neither shown here: simple rules written after a hand read of 157 spots, and a language model given the same eight questions and the official and model sentences as text. That model is Gemma 4 31B, run locally through Ollama. It is a mid-sized open model, not a frontier one such as Claude, and it never hears the audio.</p>
+  </footer>
+</div>
+
+<script>
+/*LISTEN*/
+</script>
+<script>
+const SPOTS = /*SPOTS*/[];
+
+// ---- the codebook: asr-capstone/labelling-guidelines.md, version 0.2 --------
+// The judge (tools/judge_spots.py) is given these same questions.
+const GUIDE = "0.2";
+const QUESTIONS = [
+  ["overlap", "Overlap or hand-over", "Someone else is speaking during the spot, or a new speaker starts inside the spot or on the word right next to it. A justice saying \"Right\" while counsel is still talking counts; a change of speaker further away doesn't.", "--k-overlap"],
+  ["stumble", "Stumble", "The spot is, or sits right next to, a repeated word (\"I -- I think\"), a restart (\"the -- to take\"), a word cut off partway, or a filler that is part of a stumble (uh, um, well, you know, I mean).", "--k-disfluency"],
+  ["name", "Name or legal term", "A person, place, case name, statute name or legal term of art is involved: Cronic, comity, en banc, Blackledge, AEDPA.", "--k-name"],
+  ["number", "Number or citation", "A number, date, statute, section or subsection is involved: \"3553(e)\", \"III\", \"15 cents\".", "--k-number"],
+  ["written", "Same words, written differently", "Read aloud, both sides would sound the same; only spelling, spacing, hyphens, an abbreviation, punctuation or a transcript convention differ: \"e-mails\" and \"emails\", \"all right\" and \"alright\".", "--k-notreal"],
+  ["soundalike", "Sound-alike", "The words differ but sound alike or nearly alike: relief and belief, breadth and breath, \"him to\" and \"into\". Not ticked together with \"same words, written differently\".", "--k-misheard"],
+  ["small", "Small word or ending", "The difference is in a short common word (a, the, is, are, in, and, of, to, could, can) or a word ending (-s, -ed, -ing, 's).", "--k-small"],
+  ["oneside", "Words on one side only", "At least one whole word on one side has no counterpart on the other.", "--k-leftout"],
+];
+const EXTRAS = [
+  ["none", "None of these", "You looked, and none of the eight is true."],
+  ["cant", "Can't tell", "The audio isn't enough to answer."],
+];
+const VERDICTS = [
+  ["official", "Official", "A", "What you hear matches the official transcript."],
+  ["machines", "Machines", "S", "What you hear matches what most of the models wrote. Where the models split, compare with Qwen3's line."],
+  ["both", "Both reasonable", "D", "Both are fair ways to write what was said."],
+  ["neither", "Neither", "F", "What you hear matches neither."],
+  ["unclear", "Can't tell", "G", "The audio isn't clear enough to say."],
+];
+const HINT = "Tick every question that is true of the highlighted words, from what you hear. Point at a question to see what it means.";
+const VERDICT_HINT = "Point at a choice to see what it means.";
+// The short clip is named by its length (10 seconds for nearly every spot).
+const VIEWS = [["bite", null, "Q"], ["sentence", "Sentence", "W"], ["three", "Three sentences", "E"]];
+
+function load(key, fallback) { try { const v = localStorage.getItem(key); return v ? JSON.parse(v) : fallback; } catch (e) { return fallback; } }
+function store(key, value) { try { localStorage.setItem(key, JSON.stringify(value)); } catch (e) {} }
+
+// spot id -> {guide, ticks, played, verdict, note, at}.
+// Kept in this browser as well as the account, under names of their own for
+// version 0.2, so labels made under earlier rules ("labels", "labels-v01") stay apart.
+const COLLECTION = "labels-v02";
+const LOCAL_KEY = "bench-labels-v02";
+let labels = load(LOCAL_KEY, {});
+let db = null;
+let synced = false;
+let index = Math.min(load("bench-index", 0), Math.max(0, SPOTS.length - 1));
+let player = null;             // the open spot's player (Listen, from web/widget/listen.js)
+
+const clean = s => (s || "").split(/\s+/).filter(Boolean).join(" ");
+function el(tag, attrs = {}, ...kids) {
+  const n = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) n.setAttribute(k, v);
+  for (const k of kids) n.append(k);
+  return n;
+}
+const defaultView = s => (s.sentence_words <= 10 ? "three" : "sentence");
+
+// ---- where a spot stands ----------------------------------------------------
+function norm(l) {
+  l = l || {};
+  return { ticks: l.ticks || [], played: l.played || [], verdict: l.verdict || null, note: l.note || "", at: l.at || "" };
+}
+const cur = () => norm(labels[SPOTS[index].id]);
+const isDone = id => { const l = norm(labels[id]); return l.ticks.length > 0 && !!l.verdict; };
+const started = id => { const l = norm(labels[id]); return l.ticks.length > 0 || l.played.length > 0 || !!l.verdict; };
+
+// ---- audio: the shared player; each spot has one clip, the views are slices of it
+function viewsFor(s, l) {
+  return VIEWS.map(([key, name]) => {
+    const [a, b] = s.views[key];
+    const heard = l.played.includes(key) ? " ✓" : "";
+    return name
+      ? { key, label: name, from: a, to: b, note: (b - a).toFixed(1) + " s" + (s.trimmed[key] ? ", trimmed" : "") + heard }
+      : { key, label: Math.round(b - a) + " sec", from: a, to: b, note: heard.trim() };
+  });
+}
+// The player reports each view played, and "word" for a clicked word.
+function played(key) {
+  const s = SPOTS[index];
+  const l = cur();
+  if (l.played.includes(key)) return;
+  save(s.id, { played: [...l.played, key] });
+  const v = viewsFor(s, cur()).find(x => x.key === key);
+  if (v) player.setNote(key, v.note);
+}
+function play(key) { if (player) player.play(key); }
+
+// ---- one transcript line --------------------------------------------------
+function line(who, segments) {
+  const text = el("div", { class: "text" });
+  segments.forEach((seg, i) => {
+    let region = seg.r;
+    if (seg.r === "who") {
+      const next = segments.slice(i + 1).find(x => x.r !== "who");
+      region = next ? next.r : "post";
+    }
+    const ctx = region === "pre" || region === "post";
+    const cls = ctx ? "region-ctx" : "region-main";
+    let node;
+    if (seg.r === "spot") node = clean(seg.t) ? el("mark", { class: cls }, ...player.words(seg)) : el("mark", { class: "empty " + cls }, "nothing here");
+    else if (seg.r === "who") node = el("span", { class: "speaker " + cls }, clean(seg.t));
+    else node = el("span", { class: (ctx ? "ctx " : "") + cls }, ...player.words(seg));
+    text.append(node, el("span", { class: cls }, " "));
+  });
+  return el("div", { class: "line" }, el("div", { class: "who" }, who), text);
+}
+
+// ---- saving -----------------------------------------------------------------
+let noteTimer = null;
+function setStatus(text, cls) {
+  const status = document.getElementById("status");
+  if (status) { status.textContent = text; status.className = "status " + cls; }
+}
+function setWhere(text, cls) {
+  const w = document.getElementById("where");
+  w.textContent = "· " + text; w.className = "where " + cls;
+}
+// One write at a time per spot: each waits for the one before it.
+const chains = {};
+function push(id) {
+  const l = norm(labels[id]);
+  const body = { guide: GUIDE, ticks: l.ticks, played: l.played, verdict: l.verdict, note: l.note, at: l.at };
+  chains[id] = (chains[id] || Promise.resolve()).catch(() => {}).then(() => db.collection(COLLECTION).doc(id).set(body));
+  return chains[id];
+}
+async function save(id, patch) {
+  labels[id] = { ...norm(labels[id]), ...patch, guide: GUIDE, at: new Date().toISOString() };
+  store(LOCAL_KEY, labels);
+  renderProgress();
+  if (!db) { setStatus("Saved in this browser only.", "bad"); return; }
+  try {
+    await push(id);
+    setStatus("Saved to your account", "ok");
+  } catch (e) {
+    setStatus("Saved in this browser only; the account refused it (" + (e && e.code || "error") + ").", "bad");
+    setWhere("account not saving, labels kept in this browser", "bad");
+  }
+}
+// Labels made while the account was out of reach, sent once it answers.
+async function sendWaiting(ids) {
+  let sent = 0;
+  for (const id of ids) {
+    try { await push(id); sent++; } catch (e) { setWhere("account not saving, labels kept in this browser", "bad"); return; }
+  }
+  if (sent) setWhere("saving to your account (" + sent + " sent from this browser)", "ok");
+}
+
+document.getElementById("copy-labels").addEventListener("click", async () => {
+  const out = {};
+  SPOTS.forEach(s => { if (started(s.id)) { const l = norm(labels[s.id]); out[s.id] = { guide: GUIDE, ticks: l.ticks, played: l.played, verdict: l.verdict, note: l.note }; } });
+  const text = JSON.stringify(out, null, 1);
+  const n = Object.keys(out).length;
+  const msg = document.getElementById("copy-msg");
+  const box = document.getElementById("copy-box");
+  try {
+    await navigator.clipboard.writeText(text);
+    box.hidden = true;
+    msg.textContent = "Copied " + n + " spots. Paste them into a .json file for compare_labels.py.";
+    msg.className = "status ok";
+  } catch (e) {
+    box.hidden = false; box.value = text; box.focus(); box.select();
+    msg.textContent = "Copying did not work in this view. All " + n + " spots are selected below: press Ctrl+C.";
+    msg.className = "status bad";
+  }
+});
+
+// ---- rendering -------------------------------------------------------------
+function renderProgress() {
+  document.getElementById("count-all").textContent = SPOTS.length;
+  document.getElementById("count-done").textContent = SPOTS.filter(s => isDone(s.id)).length;
+  const squares = document.getElementById("squares");
+  if (squares.children.length !== SPOTS.length) {
+    squares.textContent = "";
+    SPOTS.forEach((s, i) => {
+      const b = el("button", { type: "button", id: "sq-" + s.id, title: "Spot " + (i + 1), "aria-label": "Spot " + (i + 1) });
+      b.addEventListener("click", () => go(i));
+      squares.append(b);
+    });
+  }
+  SPOTS.forEach((s, i) => {
+    const b = document.getElementById("sq-" + s.id);
+    b.className = isDone(s.id) ? "done" : (started(s.id) ? "half" : "");
+    b.setAttribute("aria-current", String(i === index));
+  });
+}
+
+// The row of tick buttons: the eight questions, then "none" and "can't tell".
+function tickRow(ticks) {
+  const row = el("div", { class: "choices", role: "group", "aria-label": "Answers" });
+  [...QUESTIONS, ...EXTRAS].forEach(([key, name, about, color]) => {
+    const attrs = { class: "btn feat", type: "button", id: "tick-" + key, "aria-pressed": String(ticks.includes(key)) };
+    if (color) attrs.style = "--sw: var(" + color + ")";
+    const kids = color ? [el("span", { class: "swatch", "aria-hidden": "true" }), name] : [name];
+    const b = el("button", attrs, ...kids);
+    b.addEventListener("click", () => toggle(key));
+    hintOnPoint(b, () => setExplainer("ticks", name, about, color), showHint);
+    row.append(b);
+  });
+  return row;
+}
+
+function renderSpot(keepView) {
+  const root = document.getElementById("spot");
+  root.textContent = "";
+  if (!SPOTS.length) { root.append(el("p", {}, "No spots in this build.")); return; }
+  const s = SPOTS[index];
+  const l = cur();
+  const view = keepView && player ? player.view : defaultView(s);
+  const card = el("article", { class: "spot", "data-view": view, "aria-label": "Spot " + (index + 1) });
+  player = Listen.create(card, { clip: s.clip, views: viewsFor(s, l), view, onPlayed: played, onStatus: setStatus });
+
+  const prev = el("button", { class: "btn", type: "button", id: "prev" }, "← Previous");
+  const next = el("button", { class: "btn", type: "button", id: "next" }, "Next →");
+  prev.addEventListener("click", () => go(index - 1));
+  next.addEventListener("click", () => go(index + 1));
+  card.append(el("div", { class: "spot-head" },
+    el("span", { class: "spot-num" }, "Spot " + (index + 1) + " of " + SPOTS.length),
+    el("span", { class: "nav" }, prev, next)));
+
+  card.append(el("div", { class: "meta" },
+    el("i", {}, s.case), el("span", {}, "No. " + s.docket), el("span", {}, "at " + s.clock),
+    el("span", {}, s.speaker), el("span", {}, "turn starts p. " + s.page + ", line " + s.line)));
+
+  card.append(el("p", { class: "stepline" }, "Play the sentence clip, then tick what you hear. The other two clips are there if you're unsure."));
+
+  card.append(player.controls(el("span", {}, "Play ", el("span", { class: "keys" }, "· keys Q W E"))));
+
+  card.append(el("div", { class: "lines" }, line("Official", s.official), line("Qwen3", s.qwen)));
+  const others = el("div", { class: "lines others" });
+  for (const [m, segs] of Object.entries(s.others)) others.append(line(m, segs));
+  card.append(el("details", {}, el("summary", {}, "What the other six models wrote"), others));
+
+  card.append(el("div", { class: "label-block step-block" },
+    el("div", { class: "label-title" }, "What do you hear? ", el("span", { class: "keys" }, "· keys 1–8, 9 none, 0 can't tell")),
+    tickRow(l.ticks), explainer("ticks")));
+
+  const verdicts = el("div", { class: "choices", role: "group", "aria-label": "Who is right" });
+  VERDICTS.forEach(([key, name, k, about]) => {
+    const b = el("button", { class: "btn", type: "button", id: "verdict-" + key, "aria-pressed": String(l.verdict === key) }, name);
+    b.addEventListener("click", () => chooseVerdict(key));
+    hintOnPoint(b, () => setExplainer("verdict", name, about, null), showVerdictHint);
+    verdicts.append(b);
+  });
+  card.append(el("div", { class: "label-block" },
+    el("div", { class: "label-title" }, "Who got it right, by ear? ", el("span", { class: "keys" }, "· keys A S D F G")),
+    verdicts, explainer("verdict")));
+
+  const note = el("textarea", { id: "note-" + s.id, placeholder: "Note (optional): what you saw or heard" });
+  note.value = l.note;
+  note.addEventListener("input", () => {
+    clearTimeout(noteTimer);
+    noteTimer = setTimeout(() => save(s.id, { note: note.value }), 800);
+  });
+  card.append(el("div", { class: "label-block" }, el("label", { class: "label-title", for: "note-" + s.id }, "Note"), note,
+    el("div", { class: "status", id: "status", "aria-live": "polite" })));
+  root.append(card);
+  showHint();
+  showVerdictHint();
+  renderProgress();
+}
+
+// The explainer under each set of choices: what the pointed-at choice means, or
+// else a summary of what is ticked (so it works on a phone, where nothing hovers).
+function hintOnPoint(button, show, restore) {
+  button.addEventListener("mouseenter", show);
+  button.addEventListener("focus", show);
+  button.addEventListener("mouseleave", restore);
+  button.addEventListener("blur", restore);
+}
+function explainer(which) {
+  return el("div", { class: "explainer", id: which + "-explainer" },
+    el("span", { class: "explainer-label" }, "Explainer"),
+    el("p", { class: "hint", id: which + "-hint", "aria-live": "polite" }));
+}
+function setExplainer(which, name, about, color) {
+  const box = document.getElementById(which + "-explainer");
+  const hint = document.getElementById(which + "-hint");
+  if (!box || !hint) return;
+  hint.textContent = name ? name + ": " + about : about;
+  box.style.setProperty("--ex", color ? "var(" + color + ")" : "var(--rule)");
+}
+function showHint() {
+  const ticks = cur().ticks;
+  if (!ticks.length) return setExplainer("ticks", null, HINT, null);
+  const all = [...QUESTIONS, ...EXTRAS];
+  const names = ticks.map(k => (all.find(([x]) => x === k) || [k, k])[1]).join(", ");
+  const first = QUESTIONS.find(([x]) => x === ticks[0]);
+  setExplainer("ticks", null, "Ticked: " + names + ". Point at a question to see what it means.", first ? first[3] : null);
+}
+function showVerdictHint() {
+  const picked = VERDICTS.find(([k]) => k === cur().verdict);
+  if (picked) setExplainer("verdict", picked[1], picked[3], null);
+  else setExplainer("verdict", null, VERDICT_HINT, null);
+}
+
+// Ticking a question clears "none" and "can't tell"; ticking either of those
+// clears everything else.
+function toggle(key) {
+  const s = SPOTS[index];
+  let ticks = cur().ticks;
+  if (ticks.includes(key)) ticks = ticks.filter(k => k !== key);
+  else if (key === "none" || key === "cant") ticks = [key];
+  else ticks = [...ticks.filter(k => k !== "none" && k !== "cant"), key];
+  save(s.id, { ticks });
+  [...QUESTIONS, ...EXTRAS].forEach(([k]) => {
+    const b = document.getElementById("tick-" + k);
+    if (b) b.setAttribute("aria-pressed", String(ticks.includes(k)));
+  });
+  showHint();
+}
+function chooseVerdict(key) {
+  const s = SPOTS[index];
+  const l = cur();
+  save(s.id, { verdict: l.verdict === key ? null : key });
+  VERDICTS.forEach(([k]) => { const b = document.getElementById("verdict-" + k); if (b) b.setAttribute("aria-pressed", String(cur().verdict === k)); });
+  showVerdictHint();
+}
+
+function go(i) {
+  if (i < 0 || i >= SPOTS.length) return;
+  Listen.stop();
+  index = i;
+  store("bench-index", index);
+  renderSpot();
+  window.scrollTo({ top: 0 });
+}
+function nextOpen() {
+  for (let k = 1; k <= SPOTS.length; k++) {
+    const i = (index + k) % SPOTS.length;
+    if (!isDone(SPOTS[i].id)) return go(i);
+  }
+}
+document.getElementById("next-open").addEventListener("click", nextOpen);
+
+document.addEventListener("keydown", e => {
+  const t = e.target;
+  if (t && (t.tagName === "TEXTAREA" || t.tagName === "INPUT")) return;
+  if (e.ctrlKey || e.metaKey || e.altKey) return;
+  const k = e.key.toLowerCase();
+  if (k >= "1" && k <= "8") { toggle(QUESTIONS[Number(k) - 1][0]); e.preventDefault(); return; }
+  if (k === "9") { toggle("none"); e.preventDefault(); return; }
+  if (k === "0") { toggle("cant"); e.preventDefault(); return; }
+  const v = Object.fromEntries(VERDICTS.map(([key, , letter]) => [letter.toLowerCase(), key]))[k];
+  if (v) { chooseVerdict(v); e.preventDefault(); return; }
+  const p = { q: "bite", w: "sentence", e: "three" }[k];
+  if (p) { play(p); e.preventDefault(); return; }
+  if (k === " ") { play(player ? player.view : defaultView(SPOTS[index])); e.preventDefault(); return; }
+  if (k === "arrowright" || k === "k") { go(index + 1); e.preventDefault(); }
+  if (k === "arrowleft" || k === "j") { go(index - 1); e.preventDefault(); }
+  if (k === "n") { nextOpen(); e.preventDefault(); }
+});
+
+renderSpot();
+
+// ---- the database lights up when the viewer provides it -------------------
+(async () => {
+  db = window.claude && window.claude.use ? await window.claude.use("db") : null;
+  if (!db) {
+    document.getElementById("no-db").hidden = false;
+    setWhere("saving in this browser only", "bad");
+    return;
+  }
+  setWhere("saving to your account", "ok");
+  db.collection(COLLECTION).onSnapshot(snap => {
+    // Whichever copy of a label is newer wins, the account's or this browser's.
+    const remote = {};
+    snap.docs.forEach(d => { remote[d.id] = norm(d.data()); });
+    for (const [id, r] of Object.entries(remote)) {
+      const l = labels[id];
+      if (!l || (r.at || "") >= (l.at || "")) labels[id] = r;
+    }
+    store(LOCAL_KEY, labels);
+    if (!synced) {
+      synced = true;
+      const waiting = Object.keys(labels).filter(id => !remote[id] || (labels[id].at || "") > (remote[id].at || ""));
+      renderSpot();
+      if (waiting.length) sendWaiting(waiting);
+    } else {
+      renderProgress();
+    }
+  }, e => {
+    document.getElementById("no-db").hidden = false;
+    setWhere("account not answering (" + (e && e.code || "error") + "), saving in this browser only", "bad");
+  });
+})();
+</script>

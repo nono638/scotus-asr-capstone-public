@@ -1,0 +1,1 @@
+{"case": "r101", "own": {"reason": "The engine adds a stray \"any\" in \"I don't think uh any very far at all\", likely a false start the reference left out along with the uhs. It changes nothing.", "meaning": "same", "severity": 0, "follow_up": "cant tell", "reference_doubt": "no"}}

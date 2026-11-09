@@ -1,0 +1,155 @@
+{
+ "case": "s11",
+ "X": {
+  "meaning": {
+   "line": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "only the stumble lost",
+    "reason": "The engine removed a repeated word (a stutter) present in the reference."
+   },
+   "minute": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "only the stumble lost",
+    "reason": "The speech recognition engine removed the speaker's stutter/repetition of the word 'I'."
+   },
+   "whole": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "only the stumble lost",
+    "reason": "The engine correctly identified the word but omitted the speaker's stutter/repetition."
+   }
+  },
+  "noticeable": "no",
+  "stakes": {
+   "stakes": "no",
+   "reason": "The omission of the repeated 'I' does not change the factual content of the sentence."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The reference contains a repeated word 'I I' which the engine correctly smoothed into a single 'I'."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 2,
+    "reason": "The repetition of 'i i' is a common disfluency in natural speech, especially when a speaker is pausing to formulate a thought about a specific memory."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "engine",
+    "sure": 2,
+    "reason": "Version A is more likely because the repetition of 'i i' in Version B is a common transcription error or stutter that is less likely to be the intended grammatical structure compared to the single 'i' in Version A."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Granite": 2,
+    "Whisper": 4,
+    "Parakeet": 1,
+    "Qwen3": 1,
+    "Canary": 4
+   },
+   "reason": "Engines 3 and 4 are the best because they correctly capture the repetition of 'I I' present in the reference, while Engines 2 and 5 fail to include the repeated word, and Engine 1 is slightly less accurate due to the extra comma."
+  },
+  "misses": [
+   {
+    "reference": "ZURG",
+    "engine": "sort",
+    "severity": 3,
+    "what": "wrong character name"
+   },
+   {
+    "reference": "ZURG TELLS BUZZ",
+    "engine": "Sora tells Boss",
+    "severity": 3,
+    "what": "wrong character names"
+   },
+   {
+    "reference": "LIKE YOU KNOW THAT I AM YOUR FATHER",
+    "engine": "like you that I am your father",
+    "severity": 2,
+    "what": "missing words in dialogue"
+   },
+   {
+    "reference": "BUZZ",
+    "engine": "Boss",
+    "severity": 3,
+    "what": "wrong character name"
+   }
+  ]
+ },
+ "Y": {
+  "meaning": {
+   "line": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "only the stumble lost",
+    "reason": "The engine removes a repeated word ('I') present in the reference."
+   },
+   "minute": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "only the stumble lost",
+    "reason": "The engine omitted the repeated word 'I' from the reference."
+   },
+   "whole": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "only the stumble lost",
+    "reason": "The engine omitted the repetition of the word 'I'."
+   }
+  },
+  "noticeable": "no",
+  "stakes": {
+   "stakes": "no",
+   "reason": "The omission of the repeated 'I' does not change the meaning or the factual content of the sentence."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The evidence correctly identifies that the reference contains a repeated word 'I I' while the engine only contains 'I'."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 2,
+    "reason": "Version A includes a repetition of the pronoun 'i i', which is a very common feature of natural, spontaneous speech (disfluency/stuttering) in a casual conversation. Version B is a cleaner, single 'i'. Given the context of the rest of the transcript containing many 'like' and 'um' fillers, the repetition in A is highly plausible."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 2,
+    "reason": "Version B contains a repetition of the word 'i' ('i i'), which is a common disfluency in spontaneous speech, whereas Version A is a clean single pronoun. In the context of a casual video call, the repetition in Version B is highly plausible and often how people actually speak."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Granite": 1,
+    "Whisper": 3,
+    "Parakeet": 1,
+    "Qwen3": 1,
+    "Canary": 3
+   },
+   "reason": "The reference contains a repetition of the word 'I', so engines that include both instances are more accurate than those that only include one."
+  },
+  "misses": [
+   {
+    "reference": "ZURG",
+    "engine": "sort",
+    "severity": 2,
+    "what": "the name of the character Zurg"
+   },
+   {
+    "reference": "BUZZ",
+    "engine": "Boss",
+    "severity": 2,
+    "what": "the name of the character Buzz"
+   },
+   {
+    "reference": "ZURG TELLS BUZZ",
+    "engine": "Sora tells Boss",
+    "severity": 2,
+    "what": "the character Zurg speaking"
+   }
+  ]
+ }
+}

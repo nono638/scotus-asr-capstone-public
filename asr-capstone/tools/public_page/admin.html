@@ -1,0 +1,15 @@
+  <h1>Admin: the ratings</h1>
+  <p class="lede">For the site's admin only. Download every rating as a CSV to analyse with <code>tools/read_ratings.py</code>.</p>
+  <p class="notice" id="not-admin" hidden></p>
+  <section class="panel" id="admin" hidden>
+    <h2>Export</h2>
+    <p id="summary">Loading…</p>
+    <p class="hint">The files have each person's random user id, never an email address or display name. Keep CORAAL's file apart from the others if you ever publish them: corrections of CORAAL material are CC BY-NC-SA 4.0, EdAcc's CC BY-SA 4.0 (going-public.md).</p>
+    <div class="row-buttons" style="margin-top: 12px">
+      <button class="primary" type="button" id="dl-all" data-licence="">All ratings (CSV)</button>
+      <button class="btn" type="button" data-licence="CC BY 4.0">Supreme Court only</button>
+      <button class="btn" type="button" data-licence="CC BY-SA 4.0">EdAcc only</button>
+      <button class="btn" type="button" data-licence="CC BY-NC-SA 4.0">CORAAL only</button>
+    </div>
+    <p class="say" id="say" role="status"></p>
+  </section>

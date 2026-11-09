@@ -1,0 +1,37 @@
+{
+ "case": "s01",
+ "own": {
+  "meaning": "opposite",
+  "severity": 4,
+  "noticeable": "maybe",
+  "follow_up": "negation lost",
+  "stakes": "yes",
+  "reason": "The lawyer said a release condition \"can't\" cover who a person gets pregnant with; the engine wrote \"can\", which says the opposite of her example of an obviously out-of-bounds condition.",
+  "rule_right": "yes",
+  "rule_reason": "The record has \"can't\" and the engine has \"can\" at the spot, so a negative really is on one side only.",
+  "more_plausible": "reference",
+  "plausible_how_clear": "Fairly clear: she is listing conditions outside \"the realm of plausibility\" and follows with \"That's just -- no\", which only fits \"can't\".",
+  "my_misses": [
+   {"reference": "It can't include who you get pregnant with.", "engine": "It can include who you get pregnant with.", "severity": 4},
+   {"reference": "just to summarize, not --", "engine": "just to summarize.", "severity": 0},
+   {"reference": "well, yeah, no", "engine": "well, well, yeah, that no", "severity": 0}
+  ]
+ },
+ "review": {
+  "labelled/line": {"verdict": "partly", "why": "Opposite, 4, negation lost and stakes yes are right, but \"noticeable: yes\" is too generous: the line alone (\"It can include who you get pregnant with.\") gives a reader no clue that anything is wrong."},
+  "labelled/minute": {"verdict": "agree", "why": "Right on all counts; \"noticeable: yes\" is a little generous but defensible because \"That's just no\" follows straight after."},
+  "labelled/whole": {"verdict": "agree", "why": "Same sound answer; judged against the minute text only, as I don't have the full transcript."},
+  "rule/minute": {"verdict": "agree", "why": "Copied \"can't\" and \"can\" exactly and confirmed the rule correctly."},
+  "blind/order1": {"verdict": "agree", "why": "Picked B (the reference) with a sound reason: \"that's just no\" only fits \"can't\"."},
+  "blind/order2": {"verdict": "agree", "why": "Picked the reference again in the swapped order with the same reason, so not a position pick."},
+  "rank/minute": {"verdict": "agree", "why": "Engines 1 and 2 both keep \"can't\" and tie; Engine 3 (\"can\") is rightly last."},
+  "misses": [
+   {"reference": "It can't include", "engine": "It can include", "is_real": "yes", "matters": "yes", "severity_fair": "yes", "note": "The main error, described correctly."},
+   {"reference": "broader standard", "engine": "broader standards", "is_real": "yes", "matters": "no", "severity_fair": "yes", "note": "Plural slip; severity 0 is right, though it could have been left out."},
+   {"reference": "well, yeah, no, we really need to do that", "engine": "well, well, yeah, that no, we really need to do that", "is_real": "yes", "matters": "no", "severity_fair": "yes", "note": "Repeated filler, which the prompt said to leave out; severity 1 is harmless."}
+  ],
+  "overlooked": []
+ },
+ "worth_a_listen": {"yes": true, "why": "The text makes the reference near certain, but this is a top showcase example (a reversed statement in a court record), so a one-minute listen before quoting it is cheap insurance."},
+ "summary": "Gemma got this clear negation case right everywhere, including both blind orders and the ranking; its only slip is calling the error noticeable from the single line, which gives no clue."
+}

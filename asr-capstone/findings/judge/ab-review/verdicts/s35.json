@@ -1,0 +1,15 @@
+{"case": "s35",
+ "parts": {
+  "meaning/line": {"X": "partly", "Y": "right", "better": "Y", "why": "The interviewer's prompt 'Cause it gives you a very different perspective' is gone, so 'Yes, it does' answers nothing. That is real content lost. The speaker's following words still carry the idea, so severity 3 (Y) fits better than 4 (X). Both say changed, gap shows."},
+  "meaning/minute": {"X": "partly", "Y": "right", "better": "Y", "why": "Same as the line answer: X severity 4, Y severity 3."},
+  "meaning/whole": {"X": "partly", "Y": "right", "better": "Y", "why": "Same as the line answer: X severity 4, Y severity 3."},
+  "noticeable": {"X": "right", "Y": "wrong", "better": "X", "why": "'...they don't at all. Yes, it does.' jars, so a careful reader would notice. X says yes. Y says no, which contradicts its own 'gap shows'."},
+  "stakes": {"X": "right", "Y": "right", "better": "tie", "why": "Both say yes: the prompt that sets up the answer is lost."},
+  "rule": {"X": "right", "Y": "right", "better": "tie", "why": "Both say yes: the interviewer's whole turn was dropped."},
+  "blind": {"X": "right", "Y": "right", "better": "tie", "why": "Both pick the reference in both orders, sure 3, because 'yes it does' needs a prompt."},
+  "rank": {"X": "partly", "Y": "partly", "better": "X", "why": "Both: Qwen3 1, Whisper 2, Parakeet 3. Whisper's text ('it gives you a very different perspective') keeps the meaning and should tie with Qwen3. Y's reason also invents a detail: it says Engine 3 'misses the word a', but Engine 3 has 'a'; it drops 'cause'."},
+  "misses": {"X": {"real_and_matter": 2, "trivial": 5, "not_real": 0, "important_missed": 1},
+             "Y": {"real_and_matter": 1, "trivial": 3, "not_real": 0, "important_missed": 2},
+             "better": "X", "why": "Neither lists the dropped interviewer line, which is the case itself. X also catches the lost 'number eleven' (where they met) and 'if you in' to 'you're in'. Y has only the 'you're in' item, and misdescribes it. Both list program-name and plural slips."}
+ },
+ "overall": {"better": "X", "why": "Y rates the severity better, but X's answers agree with each other (gap shows, noticeable yes) and its misses list catches a second real loss; Y says the gap shows yet nobody would notice it."}}

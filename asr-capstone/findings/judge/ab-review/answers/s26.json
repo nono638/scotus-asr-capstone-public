@@ -1,0 +1,163 @@
+{
+ "case": "s26",
+ "X": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "changes meaning",
+    "reason": "The engine replaces the phrase 'Got down,' with 'Goddamn them,', which changes the action described from arriving/descending to an expression of frustration or an insult."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "changes meaning",
+    "reason": "The engine misheard the phrase 'Got down,' as 'Goddamn them,', which changes the action described from moving/arriving to an expression of anger or a curse."
+   },
+   "whole": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "changes meaning",
+    "reason": "The engine misheard the phrase 'Got down,' as 'Goddamn them,', which introduces an entirely different, aggressive sentiment not present in the reference."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The engine's transcription replaces a description of movement ('Got down,') with a profanity ('Goddamn them,'), which fundamentally alters the speaker's tone and the narrative content of the event."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The evidence correctly identifies that the engine's text 'Goddamn them,' differs from the reference text 'Got down,'."
+  },
+  "blind": {
+   "order1 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "Version B's 'got down' makes much more sense in the context of describing a route or movement ('got down... eleventh street'), whereas 'goddamn them' is a non-sequitur that doesn't grammatically connect to the following phrase about traveling down a street."
+   },
+   "order2 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "Version A's 'got down' fits the narrative flow of traveling home via a specific route (eleventh street), whereas Version B's 'goddamn them' is an interjection that doesn't logically connect the act of making it home to the description of the route taken."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Qwen3": 3,
+    "Whisper": 1,
+    "Parakeet": 1
+   },
+   "reason": "Engine 2 and Engine 3 are tied for first place as they both correctly identify the words in the reference, while Engine 1 introduces an entirely different and incorrect phrase."
+  },
+  "misses": [
+   {
+    "reference": "Doctor King",
+    "engine": "the King",
+    "severity": 2,
+    "what": "the mention of Doctor King"
+   },
+   {
+    "reference": "I started to see",
+    "engine": "I start to see",
+    "severity": 2,
+    "what": "the verb tense of 'start'"
+   },
+   {
+    "reference": "Got down",
+    "engine": "Goddamn them",
+    "severity": 2,
+    "what": "the phrase 'Got down'"
+   },
+   {
+    "reference": "s neighborhoods",
+    "engine": "neighborhoods",
+    "severity": 1,
+    "what": "the word 's' in 's neighborhoods'"
+   }
+  ]
+ },
+ "Y": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "changes meaning",
+    "reason": "The speech recognition engine misheard the phrase 'Got down' as the much more aggressive and different phrase 'Goddamn them'."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "changes meaning",
+    "reason": "The speech recognition engine misheard the phrase 'Got down' as the profanity 'Goddamn them'."
+   },
+   "whole": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "changes meaning",
+    "reason": "The speech recognition engine misheard the speaker's words 'Got down' as the much more aggressive 'Goddamn them'."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The engine replaces a description of movement ('Got down') with an expression of anger or profanity ('Goddamn them'), which fundamentally changes the speaker's tone and the narrative content."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The engine misidentified the phrase 'Got down,' as 'Goddamn them,' which is a different set of content words."
+  },
+  "blind": {
+   "order1 (reference shown as B)": {
+    "picked": "engine",
+    "sure": 3,
+    "reason": "The phrase 'goddamn them' fits the emotional context of the speaker expressing distress and anger about the destruction of their neighborhood, whereas 'got down' makes little sense in the context of returning home."
+   },
+   "order2 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "The phrase 'got down' fits the narrative flow of traveling home via specific streets, whereas 'goddamn them' is a non-sequitur in that specific grammatical position."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Qwen3": 3,
+    "Whisper": 1,
+    "Parakeet": 1
+   },
+   "reason": "Engine 2 and Engine 3 correctly preserve the original phrase, whereas Engine 1 introduces a completely different and inaccurate meaning."
+  },
+  "misses": [
+   {
+    "reference": "I had never seen",
+    "engine": "something I had never seen",
+    "severity": 1,
+    "what": "added word"
+   },
+   {
+    "reference": "Doctor King",
+    "engine": "the King",
+    "severity": 2,
+    "what": "changed name/title"
+   },
+   {
+    "reference": "I started to see",
+    "engine": "I start to see",
+    "severity": 1,
+    "what": "tense change"
+   },
+   {
+    "reference": "their own s neighborhoods",
+    "engine": "their own neighborhoods",
+    "severity": 0,
+    "what": "removed typo/fragment"
+   },
+   {
+    "reference": "Got down",
+    "engine": "Goddamn them",
+    "severity": 4,
+    "what": "completely different meaning/hallucination"
+   }
+  ]
+ }
+}

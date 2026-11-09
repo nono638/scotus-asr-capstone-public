@@ -1,0 +1,259 @@
+docket,engine,kind,text,page,line,audio_seconds,audio_clock,model_was_silent,silence_seconds
+15-1204_OT2017,Voxtral-Mini-3B-2507,laughter,(Laughter.),27,4,1429.36,0:23:49,False,0.0
+15-1204_OT2017,Voxtral-Mini-3B-2507,end,"(Whereupon, at 12:05 p.m. the case was",70,20,3655.12,1:00:55,False,0.0
+15-1439,Voxtral-Mini-3B-2507,laughter,(Laughter.),12,13,487.52,0:08:07,False,0.0
+15-1439,Voxtral-Mini-3B-2507,laughter,(Laughter.),43,16,2067.68,0:34:27,False,0.0
+15-1439,Voxtral-Mini-3B-2507,laughter,(Laughter.),47,21,2288.24,0:38:08,False,0.0
+15-1439,Voxtral-Mini-3B-2507,laughter,(Laughter.),77,18,3633.36,1:00:33,True,2.2
+15-1439,Voxtral-Mini-3B-2507,end,"(Whereupon, at 11:10 a.m., the case",84,9,3965.68,1:06:05,True,2.2
+15-1485,Voxtral-Mini-3B-2507,laughter,(Laughter.),11,12,337.92,0:05:37,False,0.0
+15-1485,Voxtral-Mini-3B-2507,laughter,(Laughter.),30,10,1364.24,0:22:44,True,6.7
+15-1485,Voxtral-Mini-3B-2507,laughter,(Laughter.),58,23,2958.24,0:49:18,False,0.0
+15-1485,Voxtral-Mini-3B-2507,laughter,(Laughter.),60,6,3013.28,0:50:13,True,3.0
+15-1485,Voxtral-Mini-3B-2507,end,"(Whereupon, at 10:59 a.m., the case",66,11,3347.44,0:55:47,False,0.0
+15-1498_OT2017,Voxtral-Mini-3B-2507,laughter,(Laughter.),30,13,1514.48,0:25:14,False,0.0
+15-1498_OT2017,Voxtral-Mini-3B-2507,laughter,(Laughter).,40,21,2142.24,0:35:42,False,0.0
+15-1498_OT2017,Voxtral-Mini-3B-2507,laughter,(Laughter.),42,23,2258.96,0:37:38,False,0.0
+15-1498_OT2017,Voxtral-Mini-3B-2507,end,"(Whereupon, 12:08 p.m. the case was",63,2,3492.48,0:58:12,False,0.0
+15-1509,Voxtral-Mini-3B-2507,laughter,(Laughter.),46,15,2263.28,0:37:43,False,0.0
+15-1509,Voxtral-Mini-3B-2507,laughter,(Laughter.),70,6,3519.44,0:58:39,False,0.0
+15-1509,Voxtral-Mini-3B-2507,end,"(Whereupon, at 11:03 a.m., the case",71,18,3592.56,0:59:52,False,0.0
+16-1011,Voxtral-Mini-3B-2507,laughter,(Laughter.),13,18,568.32,0:09:28,False,0.0
+16-1011,Voxtral-Mini-3B-2507,laughter,(Laughter.),55,20,2978.8,0:49:38,False,0.0
+16-1011,Voxtral-Mini-3B-2507,laughter,(Laughter.),65,19,3534.32,0:58:54,True,9.8
+16-1011,Voxtral-Mini-3B-2507,end,"(Whereupon, at 11:57 a.m., the case",68,7,3682.32,1:01:22,False,0.0
+16-1027,Voxtral-Mini-3B-2507,laughter,(Laughter.),19,2,810.56,0:13:30,True,9.4
+16-1027,Voxtral-Mini-3B-2507,laughter,(Laughter.),25,1,1191.04,0:19:51,False,0.0
+16-1027,Voxtral-Mini-3B-2507,laughter,(Laughter.),38,25,1855.6,0:30:55,False,0.0
+16-1027,Voxtral-Mini-3B-2507,laughter,(Laughter.),40,12,1928.64,0:32:08,False,0.0
+16-1027,Voxtral-Mini-3B-2507,laughter,(Laughter.),54,25,2735.52,0:45:35,False,0.0
+16-1027,Voxtral-Mini-3B-2507,end,"(Whereupon, at 12:03 p.m., the case",65,20,3314.56,0:55:14,False,0.0
+16-1067,Voxtral-Mini-3B-2507,laughter,(Laughter.),45,1,2300.48,0:38:20,False,0.0
+16-1067,Voxtral-Mini-3B-2507,laughter,(Laughter.),52,17,2728.16,0:45:28,True,9.8
+16-1067,Voxtral-Mini-3B-2507,laughter,(Laughter.),53,1,2744.32,0:45:44,False,0.0
+16-1067,Voxtral-Mini-3B-2507,laughter,(Laughter.),53,9,2755.44,0:45:55,False,0.0
+16-1067,Voxtral-Mini-3B-2507,laughter,(Laughter.),53,13,2763.12,0:46:03,True,3.3
+16-1067,Voxtral-Mini-3B-2507,laughter,(Laughter.),53,16,2769.84,0:46:09,True,2.6
+16-1067,Voxtral-Mini-3B-2507,laughter,(Laughter.),54,2,2787.68,0:46:27,False,0.0
+16-1067,Voxtral-Mini-3B-2507,end,"(Whereupon, at 10:57 a.m., the case",60,10,3182.16,0:53:02,True,3.9
+16-111,Voxtral-Mini-3B-2507,laughter,(Laughter.),13,22,481.28,0:08:01,False,0.0
+16-111,Voxtral-Mini-3B-2507,laughter,(Laughter.),23,4,1032.8,0:17:12,True,7.9
+16-111,Voxtral-Mini-3B-2507,laughter,(Laughter.),36,14,1709.6,0:28:29,False,0.0
+16-111,Voxtral-Mini-3B-2507,laughter,(Laughter.),38,14,1787.28,0:29:47,False,0.0
+16-111,Voxtral-Mini-3B-2507,laughter,(Laughter.),42,11,1947.44,0:32:27,False,0.0
+16-111,Voxtral-Mini-3B-2507,laughter,(Laughter.),68,6,3151.6,0:52:31,True,2.1
+16-111,Voxtral-Mini-3B-2507,laughter,(Laughter.),80,18,3853.04,1:04:13,False,0.0
+16-111,Voxtral-Mini-3B-2507,laughter,(Laughter.),81,18,3907.2,1:05:07,False,0.0
+16-111,Voxtral-Mini-3B-2507,end,"(Whereupon, 11:31 a.m., the case was",106,6,5259.76,1:27:39,False,0.0
+16-1140,Voxtral-Mini-3B-2507,laughter,(Laughter.),53,21,2796.96,0:46:36,False,0.0
+16-1140,Voxtral-Mini-3B-2507,laughter,(Laughter.),61,3,3177.44,0:52:57,False,0.0
+16-1140,Voxtral-Mini-3B-2507,end,"(Whereupon, at 11:10 a.m., the case in",69,4,3609.44,1:00:09,False,0.0
+16-1144,Voxtral-Mini-3B-2507,laughter,(Laughter.),19,10,859.6,0:14:19,False,0.0
+16-1144,Voxtral-Mini-3B-2507,laughter,(Laughter.),19,16,866.32,0:14:26,False,0.0
+16-1144,Voxtral-Mini-3B-2507,laughter,(Laughter.),19,23,878.08,0:14:38,True,2.2
+16-1144,Voxtral-Mini-3B-2507,laughter,(Laughter.),29,5,1391.6,0:23:11,False,0.0
+16-1144,Voxtral-Mini-3B-2507,laughter,(Laughter.),30,15,1471.28,0:24:31,True,4.2
+16-1144,Voxtral-Mini-3B-2507,laughter,(Laughter.),33,24,1628.64,0:27:08,True,7.5
+16-1144,Voxtral-Mini-3B-2507,laughter,(Laughter.),35,9,1682.88,0:28:02,True,2.5
+16-1144,Voxtral-Mini-3B-2507,end,"(Whereupon, at 11:59 a.m., the case in",70,13,3650.96,1:00:50,False,0.0
+16-1150,Voxtral-Mini-3B-2507,laughter,(Laughter.),60,7,3111.2,0:51:51,False,0.0
+16-1150,Voxtral-Mini-3B-2507,end,"(Whereupon, at 11:03 a.m., the case",68,6,3531.2,0:58:51,False,0.0
+16-1161,Voxtral-Mini-3B-2507,laughter,(Laughter.),7,4,160.56,0:02:40,False,0.0
+16-1161,Voxtral-Mini-3B-2507,laughter,(Laughter.),14,15,623.92,0:10:23,False,0.0
+16-1161,Voxtral-Mini-3B-2507,laughter,(Laughter.),42,7,2173.68,0:36:13,True,10.9
+16-1161,Voxtral-Mini-3B-2507,laughter,(Laughter.),45,21,2398.08,0:39:58,False,0.0
+16-1161,Voxtral-Mini-3B-2507,laughter,(Laughter.),46,4,2408.96,0:40:08,False,0.0
+16-1161,Voxtral-Mini-3B-2507,laughter,(Laughter.),63,3,3299.12,0:54:59,False,0.0
+16-1161,Voxtral-Mini-3B-2507,end,"(Whereupon, at 11:03 a.m., the hearing",66,18,3490.72,0:58:10,False,0.0
+16-1215,Voxtral-Mini-3B-2507,laughter,(Laughter.),10,19,385.12,0:06:25,False,0.0
+16-1215,Voxtral-Mini-3B-2507,laughter,(Laughter.),12,4,447.84,0:07:27,False,0.0
+16-1215,Voxtral-Mini-3B-2507,laughter,(Laughter.),20,1,851.36,0:14:11,False,0.0
+16-1215,Voxtral-Mini-3B-2507,laughter,(Laughter.),42,17,2103.36,0:35:03,False,0.0
+16-1215,Voxtral-Mini-3B-2507,end,"(Whereupon, at 12:15 p.m., the case",68,20,3445.76,0:57:25,False,0.0
+16-1220,Voxtral-Mini-3B-2507,laughter,(Laughter.),47,5,2183.36,0:36:23,False,0.0
+16-1220,Voxtral-Mini-3B-2507,laughter,(Laughter.),63,11,3099.68,0:51:39,True,3.8
+16-1220,Voxtral-Mini-3B-2507,laughter,(Laughter.),63,14,3105.12,0:51:45,True,3.8
+16-1220,Voxtral-Mini-3B-2507,end,"(Whereupon, at 12:40 p.m., the case",72,1,3631.76,1:00:31,False,0.0
+16-1276,Voxtral-Mini-3B-2507,laughter,(Laughter.),44,21,2262.88,0:37:42,False,0.0
+16-1276,Voxtral-Mini-3B-2507,laughter,(Laughter.),61,14,3076.32,0:51:16,True,2.6
+16-1276,Voxtral-Mini-3B-2507,end,"(Whereupon, at 12:07 p.m., the case",66,13,3348.88,0:55:48,False,0.0
+16-1348,Voxtral-Mini-3B-2507,laughter,(Laughter.),15,6,553.44,0:09:13,True,9.5
+16-1348,Voxtral-Mini-3B-2507,laughter,(Laughter.),68,23,3208.32,0:53:28,False,0.0
+16-1348,Voxtral-Mini-3B-2507,laughter,(Laughter.),74,20,3467.44,0:57:47,False,0.0
+16-1348,Voxtral-Mini-3B-2507,end,"(Whereupon, at 11:05 a.m., the case in",77,1,3578.32,0:59:38,True,2.2
+16-1362,Voxtral-Mini-3B-2507,laughter,(Laughter.),16,9,702.56,0:11:42,True,2.2
+16-1362,Voxtral-Mini-3B-2507,laughter,(Laughter.),17,19,775.68,0:12:55,False,0.0
+16-1362,Voxtral-Mini-3B-2507,laughter,(Laughter.),38,24,1906.64,0:31:46,True,5.8
+16-1362,Voxtral-Mini-3B-2507,end,"(Whereupon, at 11:02 a.m., the case",65,23,3416.72,0:56:56,False,0.0
+16-1371,Voxtral-Mini-3B-2507,laughter,(Laughter.),17,17,716.0,0:11:56,False,0.0
+16-1371,Voxtral-Mini-3B-2507,laughter,(Laughter.),23,6,1046.96,0:17:26,False,0.0
+16-1371,Voxtral-Mini-3B-2507,laughter,(Laughter.),37,5,1836.08,0:30:36,False,0.0
+16-1371,Voxtral-Mini-3B-2507,laughter,(Laughter.),41,25,2106.32,0:35:06,False,0.0
+16-1371,Voxtral-Mini-3B-2507,laughter,(Laughter.),62,13,3174.4,0:52:54,False,0.0
+16-1371,Voxtral-Mini-3B-2507,laughter,(Laughter.),65,20,3329.6,0:55:29,False,0.0
+16-1371,Voxtral-Mini-3B-2507,end,"(Whereupon, at 11:06 a.m., the case",73,8,3713.36,1:01:53,False,0.0
+16-1432,Voxtral-Mini-3B-2507,laughter,(Laughter.),25,2,966.96,0:16:06,False,0.0
+16-1432,Voxtral-Mini-3B-2507,laughter,(Laughter.),34,2,1383.28,0:23:03,True,3.4
+16-1432,Voxtral-Mini-3B-2507,laughter,(Laughter.),34,5,1386.91,0:23:06,True,3.4
+16-1432,Voxtral-Mini-3B-2507,laughter,(Laughter.),43,6,1951.12,0:32:31,False,0.0
+16-1432,Voxtral-Mini-3B-2507,laughter,(Laughter.),50,18,2365.84,0:39:25,False,0.0
+16-1432,Voxtral-Mini-3B-2507,laughter,(Laughter.),57,16,2759.76,0:45:59,False,0.0
+16-1432,Voxtral-Mini-3B-2507,laughter,(Laughter.),57,23,2767.76,0:46:07,False,0.0
+16-1432,Voxtral-Mini-3B-2507,laughter,(Laughter.),58,6,2775.28,0:46:15,False,0.0
+16-1432,Voxtral-Mini-3B-2507,end,"(Whereupon, 11:06 a.m., the hearing",74,19,3639.76,1:00:39,False,0.0
+16-1435,Voxtral-Mini-3B-2507,laughter,(Laughter.),7,21,197.42,0:03:17,False,0.0
+16-1435,Voxtral-Mini-3B-2507,laughter,(Laughter.),41,12,2041.12,0:34:01,True,3.6
+16-1435,Voxtral-Mini-3B-2507,laughter,(Laughter.),42,19,2088.72,0:34:48,False,0.0
+16-1435,Voxtral-Mini-3B-2507,laughter,(Laughter.),66,19,3371.68,0:56:11,False,0.0
+16-1435,Voxtral-Mini-3B-2507,end,"(Whereupon, at 11:06 a.m., the case in",71,24,3698.08,1:01:38,False,0.0
+16-1454,Voxtral-Mini-3B-2507,laughter,(Laughter.),57,11,3010.56,0:50:10,False,0.0
+16-1454,Voxtral-Mini-3B-2507,laughter,(Laughter.),59,2,3096.72,0:51:36,False,0.0
+16-1454,Voxtral-Mini-3B-2507,laughter,(Laughter.),59,21,3127.76,0:52:07,False,0.0
+16-1454,Voxtral-Mini-3B-2507,end,"(Whereupon, at 12:12 p.m., the case in",71,12,3710.64,1:01:50,False,0.0
+16-1466,Voxtral-Mini-3B-2507,laughter,(Laughter.),41,2,1956.32,0:32:36,False,0.0
+16-1466,Voxtral-Mini-3B-2507,laughter,(Laughter.),56,25,2891.2,0:48:11,True,2.9
+16-1466,Voxtral-Mini-3B-2507,laughter,(Laughter.),61,9,3132.4,0:52:12,False,0.0
+16-1466,Voxtral-Mini-3B-2507,end,"(Whereupon, at 11:08 a.m., the case",72,22,3735.28,1:02:15,False,0.0
+16-1495,Voxtral-Mini-3B-2507,laughter,(Laughter.),42,23,1872.72,0:31:12,False,0.0
+16-1495,Voxtral-Mini-3B-2507,laughter,(Laughter.),48,17,2148.92,0:35:48,False,0.0
+16-1495,Voxtral-Mini-3B-2507,end,"(Whereupon, at 12:04 p.m., the case in",75,11,3504.24,0:58:24,False,0.0
+16-1519,Voxtral-Mini-3B-2507,laughter,(Laughter.),35,16,1672.0,0:27:52,True,2.2
+16-1519,Voxtral-Mini-3B-2507,end,"(Whereupon, at 11:05 a.m., the case",70,3,3474.32,0:57:54,False,0.0
+16-285,Voxtral-Mini-3B-2507,laughter,(Laughter.),61,11,3216.4,0:53:36,False,0.0
+16-285,Voxtral-Mini-3B-2507,laughter,(Laughter.),63,24,3344.32,0:55:44,False,0.0
+16-285,Voxtral-Mini-3B-2507,end,"(Whereupon, at 11:09 a.m., the case",72,3,3779.2,1:02:59,False,0.0
+16-299,Voxtral-Mini-3B-2507,end,"(Whereupon, at 11:02 a.m., the case",64,23,3453.68,0:57:33,False,0.0
+16-402,Voxtral-Mini-3B-2507,laughter,(Laughter.),28,6,1458.64,0:24:18,False,0.0
+16-402,Voxtral-Mini-3B-2507,laughter,(Laughter.),44,11,2354.08,0:39:14,False,0.0
+16-402,Voxtral-Mini-3B-2507,laughter,(Laughter.),54,14,2959.76,0:49:19,False,0.0
+16-402,Voxtral-Mini-3B-2507,laughter,(Laughter.),56,23,3052.16,0:50:52,False,0.0
+16-402,Voxtral-Mini-3B-2507,laughter,(Laughter.),68,4,3614.08,1:00:14,False,0.0
+16-402,Voxtral-Mini-3B-2507,laughter,(Laughter.),79,5,4237.28,1:10:37,False,0.0
+16-402,Voxtral-Mini-3B-2507,laughter,(Laughter.),92,3,4856.46,1:20:56,False,0.0
+16-402,Voxtral-Mini-3B-2507,end,"(Whereupon, at 11:27 a.m., the case in",93,11,4921.04,1:22:01,False,0.0
+16-424,Voxtral-Mini-3B-2507,laughter,(Laughter.),30,14,1547.68,0:25:47,False,0.0
+16-424,Voxtral-Mini-3B-2507,end,"(Whereupon, at 12:00 noon, the case",67,13,3563.12,0:59:23,False,0.0
+16-460,Voxtral-Mini-3B-2507,laughter,(Laughter.),52,12,2378.08,0:39:38,False,0.0
+16-460,Voxtral-Mini-3B-2507,end,"(Whereupon, at 10:56 a.m., the case was",67,22,3146.0,0:52:26,False,0.0
+16-476,Voxtral-Mini-3B-2507,laughter,(Laughter.),13,3,452.4,0:07:32,False,0.0
+16-476,Voxtral-Mini-3B-2507,laughter,(Laughter.),13,24,510.24,0:08:30,False,0.0
+16-476,Voxtral-Mini-3B-2507,laughter,(Laughter.),50,15,2506.4,0:41:46,False,0.0
+16-476,Voxtral-Mini-3B-2507,laughter,(Laughter.),69,13,3451.36,0:57:31,False,0.0
+16-476,Voxtral-Mini-3B-2507,end,"(Whereupon, at 11:09 a.m., the case in",75,24,3817.12,1:03:37,True,11.3
+16-498,Voxtral-Mini-3B-2507,laughter,(Laughter.),29,23,1430.32,0:23:50,False,0.0
+16-498,Voxtral-Mini-3B-2507,laughter,(Laughter.),30,1,1435.12,0:23:55,False,0.0
+16-498,Voxtral-Mini-3B-2507,laughter,(Laughter.),33,20,1619.76,0:26:59,False,0.0
+16-498,Voxtral-Mini-3B-2507,laughter,(Laughter.),61,6,3038.56,0:50:38,True,2.3
+16-498,Voxtral-Mini-3B-2507,end,"(Whereupon, at 11:06 a.m., the case",76,14,3773.52,1:02:53,False,0.0
+16-499,Voxtral-Mini-3B-2507,laughter,(Laughter.),46,17,2173.68,0:36:13,True,10.2
+16-499,Voxtral-Mini-3B-2507,laughter,(Laughter.),48,1,2255.84,0:37:35,False,0.0
+16-499,Voxtral-Mini-3B-2507,end,"(Whereupon, at 12:03 p.m., the case",74,4,3619.6,1:00:19,False,0.0
+16-534,Voxtral-Mini-3B-2507,end,"(Whereupon, at 11:56 a.m., the case in",50,8,2714.56,0:45:14,True,2.4
+16-658,Voxtral-Mini-3B-2507,end,"(Whereupon, at 10:51 a.m., the case",51,3,2751.52,0:45:51,False,0.0
+16-6795,Voxtral-Mini-3B-2507,laughter,(Laughter.),19,20,862.64,0:14:22,True,2.2
+16-6795,Voxtral-Mini-3B-2507,laughter,(Laughter.),20,1,870.08,0:14:30,False,0.0
+16-6795,Voxtral-Mini-3B-2507,laughter,(Laughter.),30,9,1438.96,0:23:58,False,0.0
+16-6795,Voxtral-Mini-3B-2507,laughter,(Laughter.),38,19,1914.4,0:31:54,True,6.5
+16-6795,Voxtral-Mini-3B-2507,laughter,(Laughter.),40,16,2014.08,0:33:34,False,0.0
+16-6795,Voxtral-Mini-3B-2507,laughter,(Laughter.),44,9,2199.76,0:36:39,False,0.0
+16-6795,Voxtral-Mini-3B-2507,laughter,(Laughter.),55,11,2812.08,0:46:52,False,0.0
+16-6795,Voxtral-Mini-3B-2507,laughter,(Laughter.),58,16,2968.24,0:49:28,False,0.0
+16-6795,Voxtral-Mini-3B-2507,end,"(Whereupon, at 11:03 a.m., the case",69,7,3542.88,0:59:02,True,6.6
+16-6855,Voxtral-Mini-3B-2507,laughter,(Laughter.),35,11,1895.15,0:31:35,False,0.0
+16-6855,Voxtral-Mini-3B-2507,laughter,(Laughter.),36,12,1952.96,0:32:32,False,0.0
+16-6855,Voxtral-Mini-3B-2507,laughter,(Laughter.),63,11,3479.04,0:57:59,False,0.0
+16-6855,Voxtral-Mini-3B-2507,laughter,(Laughter.),63,19,3486.56,0:58:06,False,0.0
+16-6855,Voxtral-Mini-3B-2507,end,"(Whereupon, at 12:02 p.m., the case",63,22,3490.24,0:58:10,False,0.0
+16-712,Voxtral-Mini-3B-2507,laughter,(Laughter.),32,4,1713.84,0:28:33,False,0.0
+16-712,Voxtral-Mini-3B-2507,laughter,(Laughter.),48,13,2491.52,0:41:31,False,0.0
+16-712,Voxtral-Mini-3B-2507,laughter,(Laughter.),48,19,2502.48,0:41:42,True,2.7
+16-712,Voxtral-Mini-3B-2507,end,"(Whereupon, at 11:07 a.m., the case was",71,19,3744.72,1:02:24,False,0.0
+16-784,Voxtral-Mini-3B-2507,laughter,(Laughter.),59,4,2987.08,0:49:47,False,0.0
+16-784,Voxtral-Mini-3B-2507,end,"(Whereupon, 11:02 a.m., the case was",69,23,3534.32,0:58:54,True,3.9
+16-8255,Voxtral-Mini-3B-2507,laughter,(Laughter.),8,8,250.32,0:04:10,False,0.0
+16-8255,Voxtral-Mini-3B-2507,laughter,(Laughter.),48,24,2682.0,0:44:42,False,0.0
+16-8255,Voxtral-Mini-3B-2507,end,"(Whereupon, at 12:04 p.m., the case",64,13,3659.6,1:00:59,False,0.0
+16-9493,Voxtral-Mini-3B-2507,laughter,(Laughter.),27,3,1538.0,0:25:38,True,3.4
+16-9493,Voxtral-Mini-3B-2507,laughter,(Laughter.),27,7,1546.72,0:25:46,False,0.0
+16-9493,Voxtral-Mini-3B-2507,laughter,(Laughter.),29,1,1642.8,0:27:22,True,2.6
+16-9493,Voxtral-Mini-3B-2507,laughter,(Laughter.),29,6,1647.84,0:27:27,True,2.6
+16-9493,Voxtral-Mini-3B-2507,laughter,(Laughter.),33,6,1843.28,0:30:43,False,0.0
+16-9493,Voxtral-Mini-3B-2507,laughter,(Laughter.),46,24,2539.52,0:42:19,False,0.0
+16-9493,Voxtral-Mini-3B-2507,end,"(Whereupon, at 11:11 a.m., the case",58,24,3190.32,0:53:10,True,4.6
+16-961,Voxtral-Mini-3B-2507,laughter,(Laughter.),5,7,11.76,0:00:11,True,2.9
+16-961,Voxtral-Mini-3B-2507,laughter,(Laughter.),28,17,1338.08,0:22:18,False,0.0
+16-961,Voxtral-Mini-3B-2507,laughter,(Laughter.),28,20,1342.16,0:22:22,False,0.0
+16-961,Voxtral-Mini-3B-2507,laughter,(Laughter.),31,19,1492.16,0:24:52,False,0.0
+16-961,Voxtral-Mini-3B-2507,laughter,(Laughter.),58,19,2906.16,0:48:26,False,0.0
+16-961,Voxtral-Mini-3B-2507,laughter,(Laughter.),64,19,3204.96,0:53:24,False,0.0
+16-961,Voxtral-Mini-3B-2507,end,"(Whereupon, at 12:10 p.m., the case",79,5,3938.0,1:05:38,False,0.0
+16-969,Voxtral-Mini-3B-2507,laughter,(Laughter.),7,22,198.84,0:03:18,False,0.0
+16-969,Voxtral-Mini-3B-2507,laughter,(Laughter.),41,2,2024.08,0:33:44,False,0.0
+16-969,Voxtral-Mini-3B-2507,laughter,(Laughter.),73,5,3577.12,0:59:37,False,0.0
+16-969,Voxtral-Mini-3B-2507,laughter,(Laughter.),73,8,3578.48,0:59:38,False,0.0
+16-969,Voxtral-Mini-3B-2507,end,"(Whereupon, at 12:09 p.m., the case",73,12,3580.48,0:59:40,False,0.0
+16-980,Voxtral-Mini-3B-2507,laughter,(Laughter.),62,21,3116.0,0:51:56,False,0.0
+16-980,Voxtral-Mini-3B-2507,end,"(Whereupon, at 11:10 a.m., the case",81,22,3982.48,1:06:22,False,0.0
+17-130,Voxtral-Mini-3B-2507,laughter,(Laughter.),18,21,852.56,0:14:12,False,0.0
+17-130,Voxtral-Mini-3B-2507,laughter,(Laughter.),19,15,879.04,0:14:39,False,0.0
+17-130,Voxtral-Mini-3B-2507,laughter,(Laughter.),19,23,895.84,0:14:55,False,0.0
+17-130,Voxtral-Mini-3B-2507,laughter,(Laughter.),22,21,1047.6,0:17:27,False,0.0
+17-130,Voxtral-Mini-3B-2507,end,"(Whereupon, at 11:03 a.m., the case",70,15,3598.88,0:59:58,False,0.0
+17-155,Voxtral-Mini-3B-2507,laughter,(Laughter.),34,11,1877.12,0:31:17,True,2.1
+17-155,Voxtral-Mini-3B-2507,laughter,(Laughter.),34,21,1886.24,0:31:26,False,0.0
+17-155,Voxtral-Mini-3B-2507,laughter,(Laughter.),34,25,1892.32,0:31:32,False,0.0
+17-155,Voxtral-Mini-3B-2507,laughter,(Laughter.),35,6,1901.92,0:31:41,True,10.3
+17-155,Voxtral-Mini-3B-2507,end,"(Whereupon, at 11:03 a.m., the case",59,6,3143.52,0:52:23,False,0.0
+17-2,Voxtral-Mini-3B-2507,laughter,(Laughter.),46,23,2494.56,0:41:34,False,0.0
+17-2,Voxtral-Mini-3B-2507,laughter,(Laughter.),56,5,3057.84,0:50:57,False,0.0
+17-2,Voxtral-Mini-3B-2507,laughter,(Laughter.),60,16,3327.68,0:55:27,False,0.0
+17-2,Voxtral-Mini-3B-2507,end,"(Whereupon, at 11:22 a.m., the case",65,17,3630.48,1:00:30,False,0.0
+17-21,Voxtral-Mini-3B-2507,laughter,(Laughter.),13,11,575.68,0:09:35,False,0.0
+17-21,Voxtral-Mini-3B-2507,laughter,(Laughter.),32,11,1671.68,0:27:51,False,0.0
+17-21,Voxtral-Mini-3B-2507,laughter,(Laughter.),32,24,1708.16,0:28:28,False,0.0
+17-21,Voxtral-Mini-3B-2507,laughter,(Laughter.),45,10,2465.44,0:41:05,True,3.4
+17-21,Voxtral-Mini-3B-2507,laughter,(Laughter.),60,9,3260.16,0:54:20,True,9.8
+17-21,Voxtral-Mini-3B-2507,end,"(Whereupon, at 12:23 p.m., the case",66,3,3583.44,0:59:43,False,0.0
+17-269,Voxtral-Mini-3B-2507,laughter,(Laughter.),32,7,1350.19,0:22:30,False,0.0
+17-269,Voxtral-Mini-3B-2507,end,"(Whereupon, at 12:08 p.m., the case",78,9,3691.76,1:01:31,False,0.0
+17-312,Voxtral-Mini-3B-2507,end,"(Whereupon, at 11:07 a.m., the case",73,18,3695.76,1:01:35,False,0.0
+17-333,Voxtral-Mini-3B-2507,laughter,(Laughter.),14,17,564.8,0:09:24,False,0.0
+17-333,Voxtral-Mini-3B-2507,laughter,(Laughter.),40,23,1970.56,0:32:50,False,0.0
+17-333,Voxtral-Mini-3B-2507,laughter,(Laughter.),44,6,2170.72,0:36:10,True,14.4
+17-333,Voxtral-Mini-3B-2507,laughter,(Laughter.),49,16,2438.67,0:40:38,False,0.0
+17-333,Voxtral-Mini-3B-2507,laughter,(Laughter.),50,10,2475.76,0:41:15,False,0.0
+17-333,Voxtral-Mini-3B-2507,laughter,(Laughter.),50,14,2479.04,0:41:19,False,0.0
+17-333,Voxtral-Mini-3B-2507,laughter,(Laughter.),59,3,2945.52,0:49:05,False,0.0
+17-333,Voxtral-Mini-3B-2507,end,"(Whereupon, at 11:06 a.m., the hearing",73,18,3757.6,1:02:37,False,0.0
+17-387,Voxtral-Mini-3B-2507,laughter,(Laughter.),9,22,334.4,0:05:34,False,0.0
+17-387,Voxtral-Mini-3B-2507,laughter,(Laughter.),32,17,1627.2,0:27:07,True,12.8
+17-387,Voxtral-Mini-3B-2507,laughter,(Laughter.),46,11,2404.48,0:40:04,False,0.0
+17-387,Voxtral-Mini-3B-2507,laughter,(Laughter.),48,22,2520.56,0:42:00,False,0.0
+17-387,Voxtral-Mini-3B-2507,laughter,(Laughter.),49,3,2527.28,0:42:07,False,0.0
+17-387,Voxtral-Mini-3B-2507,laughter,(Laughter.),55,20,2927.92,0:48:47,False,0.0
+17-387,Voxtral-Mini-3B-2507,end,"(Whereupon, at 11:07 a.m., the case",62,19,3330.96,0:55:30,False,0.0
+17-43,Voxtral-Mini-3B-2507,laughter,(Laughter.),30,20,1461.76,0:24:21,False,0.0
+17-43,Voxtral-Mini-3B-2507,end,"(Whereupon, at 12:11 p.m., the case",69,3,3528.48,0:58:48,False,0.0
+17-432,Voxtral-Mini-3B-2507,end,"(Whereupon, at 12:06 p.m., the case",63,2,3430.72,0:57:10,False,0.0
+17-459,Voxtral-Mini-3B-2507,laughter,(Laughter.),27,17,1136.08,0:18:56,False,0.0
+17-459,Voxtral-Mini-3B-2507,laughter,(Laughter.),52,6,2362.0,0:39:22,False,0.0
+17-459,Voxtral-Mini-3B-2507,end,"(Whereupon, at 11:59 a.m., the case",69,8,3286.72,0:54:46,False,0.0
+17-494,Voxtral-Mini-3B-2507,laughter,(Laughter.),16,10,728.72,0:12:08,False,0.0
+17-494,Voxtral-Mini-3B-2507,laughter,(Laughter.),38,9,2057.28,0:34:17,False,0.0
+17-494,Voxtral-Mini-3B-2507,end,"(Whereupon, at 11:16 a.m., the case",63,5,3608.16,1:00:08,False,0.0
+17-530,Voxtral-Mini-3B-2507,laughter,(Laughter.),54,5,2717.11,0:45:17,True,9.0
+17-530,Voxtral-Mini-3B-2507,end,"(Whereupon, at 10:55 a.m., the hearing",59,12,2956.48,0:49:16,False,0.0
+17-5639,Voxtral-Mini-3B-2507,laughter,(Laughter.),66,20,3493.2,0:58:13,False,0.0
+17-5639,Voxtral-Mini-3B-2507,end,"(Whereupon, at 1:59 p.m., the case was",67,12,3515.68,0:58:35,False,0.0
+17-5716,Voxtral-Mini-3B-2507,laughter,(Laughter.),42,17,2221.6,0:37:01,False,0.0
+17-5716,Voxtral-Mini-3B-2507,end,"(Whereupon, at 12:05 p.m., the hearing",67,24,3632.64,1:00:32,True,3.4
+17-586,Voxtral-Mini-3B-2507,laughter,(Laughter.),26,14,1193.76,0:19:53,True,2.1
+17-586,Voxtral-Mini-3B-2507,laughter,(Laughter.),40,19,1998.0,0:33:18,False,0.0
+17-586,Voxtral-Mini-3B-2507,laughter,(Laughter.),50,9,2500.96,0:41:40,False,0.0
+17-586,Voxtral-Mini-3B-2507,end,"(Whereupon, at 11:38 a.m., the case",88,1,4655.84,1:17:35,False,0.0
+17-965,Voxtral-Mini-3B-2507,laughter,(Laughter.),19,8,869.44,0:14:29,False,0.0
+17-965,Voxtral-Mini-3B-2507,laughter,(Laughter.),35,11,1653.2,0:27:33,False,0.0
+17-965,Voxtral-Mini-3B-2507,laughter,(Laughter.),43,3,2000.56,0:33:20,False,0.0
+17-965,Voxtral-Mini-3B-2507,laughter,(Laughter.),76,7,3655.92,1:00:55,False,0.0
+17-965,Voxtral-Mini-3B-2507,laughter,(Laughter.),76,10,3660.88,1:01:00,False,0.0
+17-965,Voxtral-Mini-3B-2507,end,"(Whereupon, at 11:09 a.m., the case",83,6,4012.56,1:06:52,False,0.0

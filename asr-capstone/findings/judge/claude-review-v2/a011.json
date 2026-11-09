@@ -1,0 +1,1 @@
+{"case": "a011", "own": {"reason": "The engine has 'On the third question' where the reference has 'first'; it changes which question the speaker says he is answering, and the two words sound quite different.", "meaning": "changed", "severity": 2, "follow_up": "different quantity", "reference_doubt": "yes", "misspoke": "no"}}

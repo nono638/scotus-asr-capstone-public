@@ -1,0 +1,145 @@
+{
+ "case": "s06",
+ "X": {
+  "meaning": {
+   "line": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "stock phrase",
+    "reason": "The engine repeated a phrase that had just been uttered, likely due to a loop in the speech recognition process."
+   },
+   "minute": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "stock phrase",
+    "reason": "The engine duplicated the 'Thank you' from the end of the previous speaker's turn into the transition to the next speaker."
+   },
+   "whole": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "stock phrase",
+    "reason": "The engine added an extra 'Thank you.' which is just a repetition of the preceding speaker's closing remark."
+   }
+  },
+  "noticeable": "no",
+  "stakes": {
+   "stakes": "no",
+   "reason": "The engine added an extra 'Thank you' that was already present in the transcript (spoken by Justice Jackson), but it does not change the substance of the legal argument."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The engine included 'Thank you.' which is not present in the reference transcript at that specific spot, and the checker correctly identified it as extra text."
+  },
+  "blind": {
+   "order1 (reference shown as B)": {
+    "picked": "engine",
+    "sure": 3,
+    "reason": "In oral arguments, a justice or chief justice typically follows a 'thank you' to the previous speaker with a transition to the next, and 'thank you mr stewart' is a complete and natural way to transition, whereas the empty bracket in B makes the sentence fragment 'thank you counsel mr stewart' slightly less natural in the context of a formal transition."
+   },
+   "order2 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "In oral arguments, a justice typically transitions to the next speaker by saying 'thank you counsel' followed by the name, making the repetition of 'thank you' in version B redundant and unlikely."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Whisper": 1,
+    "Qwen3": 2,
+    "Parakeet": 1
+   },
+   "reason": "Engine 1 and Engine 3 are tied for first because they correctly omit the extra 'Thank you' present in Engine 2, and Engine 1 is preferred over Engine 3 because it does not incorrectly change the punctuation of the Chief Justice's address to a question."
+  },
+  "misses": [
+   {
+    "reference": "the victims and determine their loss is because",
+    "engine": "those victims and determine their losses because",
+    "severity": 1,
+    "what": "added 'those' and changed 'loss' to 'losses'"
+   },
+   {
+    "reference": "Petitioner is trying to do that by urging the Court to adopt the narrow,est possible conception of victim. And then, second, Petitioner is",
+    "engine": "victims and petitioners trying to do that by urging. victims and petitioners trying to do that by urging the court to adopt the narrowest possible conception of victim and then second",
+    "severity": 4,
+    "what": "the engine garbled the end of the sentence, repeating 'victims and petitioners' and losing the coherent structure of the argument"
+   }
+  ]
+ },
+ "Y": {
+  "meaning": {
+   "line": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "stock phrase",
+    "reason": "The engine adds an extra 'Thank you.' at the marked place where the reference indicates silence."
+   },
+   "minute": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "stock phrase",
+    "reason": "The engine adds the phrase 'Thank you.' at the marked place, whereas the reference contains no text."
+   },
+   "whole": {
+    "meaning": "same",
+    "severity": 0,
+    "follow_up": "stock phrase",
+    "reason": "The engine adds the words 'Thank you.' at the end of the Chief Justice's transition, whereas the reference transcript shows no words at that specific point."
+   }
+  },
+  "noticeable": "no",
+  "stakes": {
+   "stakes": "no",
+   "reason": "The engine adds an extra "
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The engine includes 'Thank you.' at the marked place, whereas the reference shows no words, which matches the evidence of low speech volume and decibel level."
+  },
+  "blind": {
+   "order1 (reference shown as B)": {
+    "picked": "engine",
+    "sure": 3,
+    "reason": "In oral arguments, a judge often repeats a polite phrase like 'thank you' or uses it as a transition when acknowledging a speaker. Version A's inclusion of 'thank you' is a natural part of the conversational flow between the Chief Justice and the next counsel."
+   },
+   "order2 (reference shown as A)": {
+    "picked": "engine",
+    "sure": 3,
+    "reason": "In oral arguments, a judge often says 'thank you' or 'thank you, counsel' before addressing the next attorney. Version B's inclusion of 'thank you' is more natural and consistent with the preceding 'thank you counsel'."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Whisper": 1,
+    "Qwen3": 3,
+    "Parakeet": 1
+   },
+   "reason": "Engine 1 and Engine 3 are tied for first because they correctly identify that there is no text at the marked location, whereas Engine 2 incorrectly inserts extra words."
+  },
+  "misses": [
+   {
+    "reference": "the reason you find the victims and determine their loss is",
+    "engine": "the the reason you find those victims and determine their losses because",
+    "severity": 1,
+    "what": "the engine repeats 'the' and changes 'the victims' to 'those victims'"
+   },
+   {
+    "reference": "JUSTICE JACKSON: Thank you.",
+    "engine": "Thank you.",
+    "severity": 0,
+    "what": "the engine repeats 'Thank you' and omits the speaker name"
+   },
+   {
+    "reference": "CHIEF JUSTICE ROBERTS: Thank you, counsel. Mr. Stewart.",
+    "engine": "Thank you, counsel. Thank you. Mr. Stewart.",
+    "severity": 0,
+    "what": "the engine omits the transition to the next speaker"
+   },
+   {
+    "reference": "Petitioner is trying to do that by urging the Court to adopt the narrowest possible conception of victim. And then, second, Petitioner is",
+    "engine": "victims and petitioners trying to do that by urging. victims and petitioners trying to do that by urging the court to adopt the narrowest possible conception of victim and then second",
+    "severity": 1,
+    "what": "the engine hallucinates/repeats 'victims and petitioners trying to do that by urging' at the end"
+   }
+  ]
+ }
+}

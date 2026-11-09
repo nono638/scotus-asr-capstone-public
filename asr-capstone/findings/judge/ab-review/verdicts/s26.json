@@ -1,0 +1,13 @@
+{"case": "s26",
+ "parts": {
+  "meaning/line": {"X": "right", "Y": "right", "better": "tie", "why": "Both: changed, severity 3; the engine invents a curse in place of 'got down'."},
+  "meaning/minute": {"X": "right", "Y": "right", "better": "tie", "why": "Same answer from both."},
+  "meaning/whole": {"X": "right", "Y": "right", "better": "tie", "why": "Same answer from both."},
+  "noticeable": {"X": "right", "Y": "right", "better": "tie", "why": "'Goddamn them, came all the way down 11th Street' is awkward; yes is fair."},
+  "stakes": {"X": "right", "Y": "right", "better": "tie", "why": "Both say yes: it puts a profanity and anger into the speaker's mouth."},
+  "rule": {"X": "right", "Y": "right", "better": "tie", "why": "Whisper and Parakeet wrote 'got down'; the evidence holds."},
+  "blind": {"X": "right", "Y": "partly", "better": "X", "why": "X picks 'got down' in both orders, reasoning from the route that follows. Y flips with the order."},
+  "rank": {"X": "right", "Y": "right", "better": "tie", "why": "Identical and right."},
+  "misses": {"X": {"real_and_matter": 2, "trivial": 2, "not_real": 0, "important_missed": 0}, "Y": {"real_and_matter": 2, "trivial": 3, "not_real": 0, "important_missed": 0}, "better": "tie", "why": "Both find 'Doctor King'->'the King' and the 'Goddamn them' spot, plus the started/start and 's' trivia; Y also lists the edge word 'something'. X's severity 2 for the curse is low and Y's 4 is high."}
+ },
+ "overall": {"better": "X", "why": "The same on every part except the blind test, where X is steady and Y flips."}}

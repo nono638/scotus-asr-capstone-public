@@ -1,0 +1,1 @@
+{"case": "r160", "own": {"reason": "The engine writes 'Come again three months' for 'come back in three months'. It reads a little oddly, but a reader still understands the doctor wants to see her again in three months.", "meaning": "reworded", "severity": 1, "follow_up": "same thing", "reference_doubt": "no"}}

@@ -1,0 +1,1 @@
+{"case": "r029", "own": {"reason": "The engine writes \"Are you the oldest metal?\" for \"oldest, middle?\"; \"metal\" is nonsense, though the birth-order question is still clear from the answer.", "meaning": "garbled", "severity": 1, "follow_up": "garble", "reference_doubt": "no"}}

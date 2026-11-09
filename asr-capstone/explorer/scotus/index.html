@@ -1,0 +1,1281 @@
+<title>Supreme Court Recordings</title>
+<meta name="claude:viewport-fit-sides" content="cover">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Public+Sans:wght@400;500;600;700&family=Courier+Prime:wght@400;700&display=swap">
+<style>
+/* One set of colours and type for every page of the project (app-roadmap.md,
+   "One set of widgets on every page"). Pages inline this file at build time.
+
+   The look comes from a certified transcript page: navy ink on a cool white
+   page and the record in a typewriter face. Where a machine and the record
+   differ gets a highlighter, on both of their lines, and must be easy to see
+   on any screen. Each engine keeps one colour everywhere. */
+
+:root {
+  --bg: #f5f7fa;          /* the page */
+  --card: #ffffff;        /* a sheet on it */
+  --ink: #14213d;         /* federal navy */
+  --muted: #55607a;
+  --faint: #8a93a8;
+  --rule: #dce1ea;
+  --accent: #1f4e8c;      /* links, buttons, the chosen thing */
+  --accent-soft: #e4ecf7;
+  --mark: #ffe066;        /* highlighter: differs from the record, or the passage in question */
+  --mark-ink: #2b2000;
+  --mark-strong: #ffb300; /* the same, louder: every engine differs */
+  --mark-strong-ink: #201400;
+  /* Solid fills for the errors the searches found, with one ink for all of them. */
+  --e-ink: #ffffff;
+  --e-meaning: #c62828; --e-fact: #00796b; --e-invented: #4d7c0f; --e-skips: #c2187a; --e-edits: #6d3fc4;
+  --gap: #b6bfcd;
+  --done: #2f7a50;
+  --done-soft: #ddefe3;
+  --warn: #a1281c;
+  --now: #7fb2f5;         /* the word being spoken */
+  --diff: #b42318;        /* the margin red: differs from the record */
+  --qwen3: #0e7c74;
+  --whisper: #b5650d;
+  --parakeet: #6550c8;
+  --canary: #7a6a12;
+  --granite: #5d6676;
+  --record: #14213d;
+  /* One colour per kind of difference (the listening bench's codebook). */
+  --k-overlap: #2f68a8; --k-disfluency: #7f52b8; --k-name: #a85d16; --k-number: #19807f; --k-small: #8f7414;
+  --k-notreal: #66705a; --k-misheard: #b8392b; --k-leftout: #b03f7d; --k-cant: #8c94a3;
+  --font-display: "Libre Caslon Text", "Iowan Old Style", Georgia, serif;
+  --font-ui: "Public Sans", "Segoe UI", system-ui, sans-serif;
+  --font-transcript: "Courier Prime", "Courier New", Courier, monospace;
+}
+@media (prefers-color-scheme: dark) {
+  :root:not([data-theme="light"]) {
+    --bg: #0d1626; --card: #152036; --ink: #e7ebf3; --muted: #a2acc0; --faint: #6e7891; --rule: #26324a;
+    --accent: #8db4ee; --accent-soft: #1e2e4d; --mark: #8a6a00; --mark-ink: #ffffff; --mark-strong: #ffd23f; --mark-strong-ink: #1a1300; --gap: #4f5b73;
+    --e-ink: #10141f; --e-meaning: #ff7a6b; --e-fact: #3dd6c6; --e-invented: #a3e635; --e-skips: #ff85c8; --e-edits: #b79bff;
+    --done: #7cc79a; --done-soft: #1c3627; --warn: #f0998b; --now: #2563d0; --diff: #f2867a;
+    --qwen3: #3cc7b9; --whisper: #f0a64a; --parakeet: #a797f7; --canary: #d6bc5a; --granite: #a9b1c0; --record: #e7ebf3; color-scheme: dark;
+    --k-overlap: #7aa9e6; --k-disfluency: #b294e6; --k-name: #e0a060; --k-number: #5cc4c2; --k-small: #d6bc5a;
+    --k-notreal: #a9b39a; --k-misheard: #ee8a7c; --k-leftout: #e58cbd; --k-cant: #6c7586;
+  }
+}
+:root[data-theme="dark"] {
+  --bg: #0d1626; --card: #152036; --ink: #e7ebf3; --muted: #a2acc0; --faint: #6e7891; --rule: #26324a;
+  --accent: #8db4ee; --accent-soft: #1e2e4d; --mark: #8a6a00; --mark-ink: #ffffff; --mark-strong: #ffd23f; --mark-strong-ink: #1a1300; --gap: #4f5b73;
+    --e-ink: #10141f; --e-meaning: #ff7a6b; --e-fact: #3dd6c6; --e-invented: #a3e635; --e-skips: #ff85c8; --e-edits: #b79bff;
+  --done: #7cc79a; --done-soft: #1c3627; --warn: #f0998b; --now: #2563d0; --diff: #f2867a;
+  --qwen3: #3cc7b9; --whisper: #f0a64a; --parakeet: #a797f7; --canary: #d6bc5a; --granite: #a9b1c0; --record: #e7ebf3; color-scheme: dark;
+  --k-overlap: #7aa9e6; --k-disfluency: #b294e6; --k-name: #e0a060; --k-number: #5cc4c2; --k-small: #d6bc5a;
+  --k-notreal: #a9b39a; --k-misheard: #ee8a7c; --k-leftout: #e58cbd; --k-cant: #6c7586;
+}
+
+body { background: var(--bg); color: var(--ink); font-family: var(--font-ui); margin: 0; }
+button:focus-visible, summary:focus-visible, a:focus-visible, select:focus-visible, textarea:focus-visible,
+[tabindex]:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+@media (prefers-reduced-motion: reduce) { * { transition: none !important; animation: none !important; } }
+
+/* ---- Listen: the player, the same on every page ---------------------------- */
+.btn { font: inherit; font-size: 13px; border: 1px solid var(--rule); background: var(--bg); color: var(--ink);
+       border-radius: 4px; padding: 5px 10px; cursor: pointer; }
+.btn:hover { border-color: var(--accent); }
+.btn[aria-pressed="true"] { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); font-weight: 600; }
+.btn small { font-size: 11px; color: var(--muted); font-weight: 400; margin-left: 4px; font-variant-numeric: tabular-nums; }
+.btn kbd { font-family: var(--font-ui); font-size: 10px; color: var(--faint); margin-left: 5px; }
+.listen-controls { display: flex; flex-wrap: wrap; gap: 6px; align-items: center; }
+.listen-controls .label { font-size: 12px; color: var(--muted); margin-right: 4px; }
+.listen-controls .playing { font-size: 12px; color: var(--accent); min-width: 7ch; }
+.listen-status { font-size: 12px; color: var(--warn); }
+.listen-status:empty { display: none; }
+.word { cursor: pointer; border-radius: 2px; }
+.word:hover { text-decoration: underline; text-decoration-color: var(--faint); }
+.word.off, .word.passage { background: var(--mark); color: var(--mark-ink); box-shadow: 0 0 0 1px var(--mark); }
+.word.now { background: var(--now); color: var(--ink); box-shadow: 0 0 0 2px var(--now); }
+.word.outside { display: none; }
+
+/* ---- Compare: the record beside the engines --------------------------------- */
+.compare { display: grid; border-top: 1px solid var(--rule); }
+.compare-line { display: grid; grid-template-columns: 92px 1fr; gap: 12px; padding-block: 9px;
+                border-bottom: 1px solid var(--rule); min-width: 0; }
+.compare-who { font-size: 13px; font-weight: 600; color: var(--who, var(--muted)); padding-top: 2px; }
+.compare-who::before { content: ""; display: inline-block; width: 8px; height: 8px; border-radius: 50%;
+                       background: var(--who, var(--faint)); margin-right: 6px; vertical-align: 1px; }
+.compare-text { font-family: var(--font-transcript); font-size: 15px; line-height: 1.65; min-width: 0; overflow-wrap: anywhere; }
+.compare-text .ctx { color: var(--muted); }
+.compare mark, mark.passage { background: var(--mark); color: var(--mark-ink); padding: 1px 3px; border-radius: 2px; }
+.compare-key { font-size: 12px; color: var(--muted); margin: 6px 0 0; }
+@media (max-width: 520px) { .compare-line { grid-template-columns: 1fr; gap: 2px; } }
+
+/* ---- Chart ------------------------------------------------------------------ */
+.chart { position: relative; min-width: 0; }
+.chart svg { display: block; width: 100%; height: auto; overflow: visible; font-family: var(--font-ui); }
+.chart .axis line, .chart .axis path { stroke: var(--rule); }
+.chart .axis text { fill: var(--muted); font-size: 12px; }
+.chart .diagonal { stroke: var(--faint); stroke-dasharray: 4 4; }
+.chart .zone { fill: var(--muted); font-size: 13px; }
+.chart .dot { transition: transform .7s cubic-bezier(.3,.7,.2,1), opacity .3s; cursor: pointer; }
+.chart .dot.hidden { opacity: 0; pointer-events: none; }
+.chart .dot.picked circle { stroke: var(--ink); stroke-width: 2.5; }
+.chart .bar { transition: width .5s cubic-bezier(.3,.7,.2,1), x .5s; }
+.chart-tip { position: absolute; pointer-events: none; background: var(--card); border: 1px solid var(--rule);
+             border-radius: 4px; padding: 6px 9px; font-size: 12px; line-height: 1.4; box-shadow: 0 2px 8px rgb(20 33 61 / .12);
+             max-width: 240px; z-index: 2; }
+.chart-tip[hidden] { display: none; }
+.switch { display: inline-flex; border: 1px solid var(--rule); border-radius: 999px; padding: 3px; background: var(--card); gap: 2px; flex-wrap: wrap; }
+.switch button { font: inherit; font-size: 14px; border: 0; background: none; color: var(--muted); padding: 6px 14px; border-radius: 999px; cursor: pointer; }
+.switch button[aria-pressed="true"] { background: var(--ink); color: var(--card); font-weight: 600; }
+
+.bar-list { display: grid; gap: 6px; }
+.bar-row { display: grid; grid-template-columns: minmax(9rem, 17rem) 1fr 3.6rem; gap: 12px; align-items: center;
+           font-size: 14px; border-radius: 3px; }
+.bar-row:focus-visible { outline: 2px solid var(--accent); outline-offset: 2px; }
+.bar-track { position: relative; height: 20px; border-left: 1px solid var(--faint); }
+.bar-fill { position: absolute; left: 0; top: 4px; height: 12px; width: 0; background: var(--accent);
+            border-radius: 0 2px 2px 0; transition: width .55s cubic-bezier(.3,.7,.2,1); }
+.bar-ci { position: absolute; top: 9px; height: 2px; background: var(--ink); opacity: .55;
+          transition: left .55s cubic-bezier(.3,.7,.2,1), width .55s cubic-bezier(.3,.7,.2,1); }
+.bar-value { font-variant-numeric: tabular-nums; text-align: right; font-weight: 600; }
+.bar-scale .bar-track { border-left: 0; height: 16px; }
+.bar-scale .bar-track span { position: absolute; transform: translateX(-50%); font-size: 11px; color: var(--muted); white-space: nowrap; }
+@media (max-width: 560px) {
+  .bar-row { grid-template-columns: 1fr 3.2rem; gap: 2px 10px; }
+  .bar-row .bar-label { grid-column: 1 / -1; }
+  .bar-scale .bar-label { display: none; }
+}
+.sr-only { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+/* ---- Table ------------------------------------------------------------------ */
+.table-wrap { overflow-x: auto; }
+table.sortable { border-collapse: collapse; width: 100%; font-size: 14px; font-variant-numeric: tabular-nums; }
+table.sortable th, table.sortable td { padding: 6px 10px; border-bottom: 1px solid var(--rule); text-align: left; }
+table.sortable td.num, table.sortable th.num { text-align: right; }
+table.sortable th button { font: inherit; font-weight: 600; font-size: 13px; color: var(--muted); background: none; border: 0; padding: 0; cursor: pointer; }
+table.sortable th[aria-sort] button { color: var(--ink); }
+table.sortable th[aria-sort="ascending"] button::after { content: " \2191"; }
+table.sortable th[aria-sort="descending"] button::after { content: " \2193"; }
+table.sortable tr.best td { font-weight: 600; }
+
+/* The website's layout, shared by the front page and every data-set page.
+   Colours, type and the widgets' own styles come from web/widget/tokens.css. */
+:root {
+  --t2010: #4063a8; --t2017: #b5532a; --t2021: #5f7f2a; --t2025: #8a4f9e;
+  --measure: 42rem; --wide: 70rem;
+}
+@media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) {
+  --t2010: #87a6e8; --t2017: #ec9468; --t2021: #a8c46a; --t2025: #c99adb; } }
+:root[data-theme="dark"] { --t2010: #87a6e8; --t2017: #ec9468; --t2021: #a8c46a; --t2025: #c99adb; }
+
+body { font: 16px/1.6 var(--font-ui); }
+.wrap { max-width: var(--wide); margin: 0 auto; padding: 20px max(16px, env(safe-area-inset-right, 0px)) 80px max(16px, env(safe-area-inset-left, 0px)); }
+.column { max-width: var(--measure); }
+h1, h2, h3 { font-family: var(--font-display); font-weight: 400; line-height: 1.15; text-wrap: balance; margin: 0; }
+h1 { font-size: clamp(2rem, 4.6vw, 3.4rem); max-width: 22ch; letter-spacing: -.01em; margin-top: 28px; }
+h2 { font-size: clamp(1.5rem, 2.6vw, 2rem); margin-top: 80px; }
+h3 { font-size: 1.2rem; margin-top: 32px; }
+p { margin: 14px 0 0; }
+.lede { font-family: var(--font-display); font-size: 1.2rem; line-height: 1.5; color: var(--muted); max-width: 40rem; margin-top: 18px; }
+.about { font-size: 14px; color: var(--muted); margin: 0; }
+.source { font-size: 12.5px; color: var(--muted); margin-top: 10px; }
+.source code, code { font-family: var(--font-transcript); font-size: .92em; }
+a { color: var(--accent); text-underline-offset: 3px; }
+.num { font-variant-numeric: tabular-nums; }
+.hint { font-size: 13px; color: var(--muted); margin-top: 10px; }
+
+/* ---- the bar across the top: the site and its data sets --------------------- */
+.site-nav { display: flex; flex-wrap: wrap; gap: 6px 18px; align-items: baseline; border-bottom: 1px solid var(--rule); padding-bottom: 10px; font-size: 15px; }
+.site-nav .home { font-family: var(--font-display); font-size: 1.05rem; color: var(--ink); text-decoration: none; margin-right: auto; }
+.site-nav .links { display: flex; flex-wrap: wrap; gap: 4px 18px; }
+.site-nav .recordings { flex-basis: 100%; display: flex; flex-wrap: wrap; justify-content: flex-end; gap: 4px 14px; font-size: 13px; color: var(--muted); }
+.site-nav a { color: var(--ink); opacity: .78; text-decoration: none; }
+.site-nav .recordings a { color: var(--accent); opacity: 1; }
+.site-nav .recordings a::after { content: " ↗"; }
+.site-nav .recordings a[aria-current]::after { content: none; }
+.site-nav .own { flex-basis: 100%; text-align: right; font-size: 13px; }
+.site-nav .own a { color: var(--accent); opacity: 1; }
+.site-nav a:hover { color: var(--accent); opacity: 1; }
+.site-nav a[aria-current="page"] { color: var(--ink); opacity: 1; font-weight: 600; box-shadow: inset 0 -2px 0 var(--diff); }
+
+.facts { display: grid; grid-template-columns: repeat(auto-fit, minmax(10rem, 1fr)); gap: 14px 24px; margin-top: 24px; max-width: 56rem; }
+.facts div { font-size: 14px; color: var(--muted); }
+.facts b { display: block; font-family: var(--font-display); font-weight: 400; font-size: 2rem; color: var(--ink); font-variant-numeric: tabular-nums; }
+
+/* ---- where it goes wrong: four kinds, each a sheet of cards ------------------- */
+.kinds-index { list-style: none; padding: 0; margin: 20px 0 0; display: flex; flex-wrap: wrap; gap: 8px; }
+.kinds-index a { display: inline-block; border: 1px solid var(--rule); border-radius: 999px; padding: 4px 12px; font-size: 14px; text-decoration: none; color: var(--ink); background: var(--card); }
+.kinds-index a:hover { border-color: var(--accent); }
+.kinds-index small { color: var(--muted); margin-left: 6px; font-variant-numeric: tabular-nums; }
+.kind-section { margin-top: 56px; scroll-margin-top: 16px; }
+.kind-section > h3 { font-size: clamp(1.3rem, 2.2vw, 1.6rem); margin-top: 0; }
+.kind-section .why { max-width: var(--measure); }
+.kind-counts { max-width: 40rem; margin-top: 14px; }
+.kind-empty { color: var(--muted); font-style: italic; }
+.cards { display: grid; grid-template-columns: repeat(auto-fill, minmax(min(100%, 31rem), 1fr)); gap: 18px; margin-top: 20px; }
+.failure-card { background: var(--card); border: 1px solid var(--rule); border-left: 3px solid var(--diff); border-radius: 6px;
+                padding: 16px 18px 16px 22px; display: grid; gap: 10px; min-width: 0; }
+.failure-card .card-kind { font-size: 13px; font-weight: 600; color: var(--diff); margin: 0; }
+.failure-card h3 { margin: 0; font-size: 1.1rem; font-style: italic; }
+.failure-card .card-where { font-size: 13px; color: var(--muted); margin: 0; }
+.failure-card .card-note { font-size: 15px; margin: 0; }
+.failure-card .card-heard { font-size: 12px; color: var(--muted); margin: 0; }
+.failure-card mark:empty::before { content: "nothing here"; font-family: var(--font-ui); font-size: 12px; }
+.failure-card mark:empty { background: transparent; border: 1px dashed var(--gap); color: var(--gap); }
+.more-cards { font: inherit; font-size: 14px; margin-top: 14px; border: 1px solid var(--rule); background: var(--card); color: var(--accent); border-radius: 999px; padding: 6px 14px; cursor: pointer; }
+
+/* ---- the front page's opening: one failure, large ----------------------------- */
+.feature { margin-top: 30px; display: grid; grid-template-columns: minmax(0, 1fr) minmax(15rem, 20rem); gap: 24px 40px; align-items: start; }
+.feature .failure-card { border-left-width: 4px; padding: 20px 24px 20px 26px; }
+.feature .failure-card h3 { font-size: 1.4rem; }
+.feature .failure-card .compare-text { font-size: 17px; }
+.feature aside { border-left: 2px solid var(--diff); padding-left: 18px; font-size: 15px; }
+.feature aside b { display: block; font-family: var(--font-display); font-weight: 400; font-size: clamp(2.6rem, 6vw, 3.6rem); line-height: 1; font-variant-numeric: tabular-nums; }
+@media (max-width: 860px) { .feature { grid-template-columns: 1fr; } }
+
+.kind-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(15rem, 1fr)); gap: 18px 28px; margin-top: 22px; }
+.kind-grid > div { border-top: 2px solid var(--ink); padding-top: 10px; font-size: 15px; }
+.kind-grid b { display: block; font-family: var(--font-display); font-weight: 400; font-size: 1.2rem; margin-bottom: 4px; }
+.kind-grid ul { list-style: none; padding: 0; margin: 10px 0 0; font-size: 14px; display: grid; gap: 2px; }
+.kind-grid li { display: flex; justify-content: space-between; gap: 10px; border-bottom: 1px dotted var(--rule); }
+.kind-grid li span:last-child { font-variant-numeric: tabular-nums; color: var(--muted); }
+
+.datasets { display: grid; grid-template-columns: repeat(auto-fit, minmax(17rem, 1fr)); gap: 18px; margin-top: 20px; }
+.dataset-card { display: grid; gap: 6px; align-content: start; background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 16px 18px; color: var(--ink); text-decoration: none; }
+a.dataset-card:hover { border-color: var(--accent); }
+.dataset-card b { font-family: var(--font-display); font-weight: 400; font-size: 1.3rem; }
+.dataset-card span { font-size: 14px; color: var(--muted); }
+.dataset-card p { margin: 4px 0 0; font-size: 15px; }
+.dataset-card .go { color: var(--accent); font-size: 14px; }
+
+/* ---- the Supreme Court's Figure 1 --------------------------------------------- */
+.hero-tools { display: flex; flex-wrap: wrap; gap: 12px 20px; align-items: center; margin-top: 22px; }
+.hero { display: grid; grid-template-columns: minmax(0, 1fr) minmax(16rem, 23rem); gap: 28px 40px; margin-top: 22px; align-items: start; }
+.tally { border-left: 2px solid var(--diff); padding-left: 18px; }
+.tally .big { font-family: var(--font-display); font-size: clamp(3.2rem, 8vw, 5rem); line-height: 1; font-variant-numeric: tabular-nums; display: block; }
+.tally .of { font-size: 1.05rem; margin-top: 6px; }
+.tally .why { font-size: 14px; color: var(--muted); margin-top: 14px; }
+.who-qwen3 { color: var(--qwen3); font-weight: 600; }
+.who-whisper { color: var(--whisper); font-weight: 600; }
+.terms { display: flex; flex-wrap: wrap; gap: 6px; }
+.terms button { font: inherit; font-size: 13px; border: 1px solid var(--rule); background: var(--card); color: var(--ink); border-radius: 999px; padding: 4px 11px; cursor: pointer; }
+.terms button[aria-pressed="true"] { border-color: var(--ink); box-shadow: inset 0 0 0 1px var(--ink); font-weight: 600; }
+.terms .chip { display: inline-block; width: 9px; height: 9px; border-radius: 50%; margin-right: 6px; background: var(--c); }
+.listen-box { margin-top: 22px; background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 14px 16px; display: grid; gap: 10px; }
+.listen-box:empty { display: none; }
+.listen-box h3 { margin: 0; font-size: 1.05rem; }
+.listen-box .meta { font-size: 13px; color: var(--muted); margin: 0; }
+#figure { max-width: 40rem; }
+@media (max-width: 860px) { .hero { grid-template-columns: 1fr; } }
+.rules { display: grid; grid-template-columns: repeat(auto-fit, minmax(16rem, 1fr)); gap: 16px 28px; margin-top: 20px; max-width: 52rem; }
+.rules div { border-top: 2px solid var(--ink); padding-top: 10px; font-size: 15px; }
+.rules b { display: block; font-family: var(--font-display); font-weight: 400; font-size: 1.15rem; margin-bottom: 4px; }
+
+/* ---- how much is done ------------------------------------------------------- */
+.coverage { display: grid; grid-template-columns: repeat(auto-fill, minmax(8.5rem, 1fr)); gap: 10px; margin-top: 18px; }
+.term-cell { font: inherit; text-align: left; background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 10px 12px; display: grid; gap: 5px; color: var(--ink); }
+button.term-cell { cursor: pointer; }
+button.term-cell:hover { border-color: var(--accent); }
+.term-cell .year { font-family: var(--font-display); font-size: 1.15rem; }
+.term-cell .n { font-size: 12px; color: var(--muted); }
+.meter { height: 5px; background: var(--rule); border-radius: 3px; overflow: hidden; }
+.meter i { display: block; height: 100%; background: var(--c); }
+.key { font-size: 13px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 4px 16px; margin-top: 12px; }
+.key span::before { content: ""; display: inline-block; width: 14px; height: 5px; border-radius: 3px; background: var(--c); margin-right: 6px; vertical-align: 2px; }
+
+.switch-row { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; margin-top: 18px; }
+.roadmap { list-style: none; padding: 0; margin: 16px 0 0; display: grid; gap: 6px; }
+.roadmap li { display: grid; grid-template-columns: 5rem 1fr; gap: 10px; font-size: 15px; }
+.roadmap .state { font-size: 12px; color: var(--muted); padding-top: 3px; }
+.roadmap li.done .state { color: var(--done); font-weight: 600; }
+footer { margin-top: 90px; border-top: 1px solid var(--rule); padding-top: 16px; font-size: 13px; color: var(--muted); max-width: var(--measure); }
+footer p { margin: 6px 0 0; }
+
+/* ---- the link to the data set, the big picture, who wrote the record ---------- */
+.go-source { margin-top: 20px; }
+.source-button { display: inline-block; border: 1px solid var(--accent); border-radius: 6px; padding: 8px 14px; font-weight: 600; text-decoration: none; background: var(--accent-soft); }
+.source-button::after { content: " ↗"; }
+.big-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(min(100%, 24rem), 1fr)); gap: 24px 40px; margin-top: 26px; }
+.big-grid h3 { margin-top: 0; }
+.big-grid .table-wrap, .big-grid table { margin-top: 10px; }
+#classes { overflow-x: auto; }
+.plain-bars { margin-top: 12px; }
+.plain-bars .bar-row { grid-template-columns: minmax(5rem, 8rem) 1fr 4rem; }
+.truth { margin-top: 70px; background: var(--card); border: 1px solid var(--rule); border-left: 4px solid var(--record); border-radius: 6px; padding: 4px 22px 18px; max-width: 52rem; }
+.truth h2 { margin-top: 18px; font-size: clamp(1.3rem, 2.2vw, 1.6rem); }
+.truth ul { margin: 12px 0 0; padding-left: 20px; display: grid; gap: 4px; }
+.truth-small { font-size: 14px; color: var(--muted); }
+.truth-small b { color: var(--ink); font-weight: 600; }
+
+/* ---- back to the top ------------------------------------------------------------ */
+.to-top { position: fixed; right: max(16px, env(safe-area-inset-right, 0px)); bottom: 18px; z-index: 20; font: inherit; font-size: 14px; font-weight: 600;
+          border: 1px solid var(--rule); background: var(--card); color: var(--accent); border-radius: 999px; padding: 8px 14px; cursor: pointer; box-shadow: 0 2px 8px rgb(20 33 61 / .15); }
+.to-top:hover { border-color: var(--accent); }
+.to-top[hidden] { display: none; }
+.dataset-card .go + .go { margin-top: -2px; }
+.across { display: flex; flex-wrap: wrap; gap: 12px; margin-top: 20px; }
+.across .source-button::after { content: none; }
+
+/* ---- who made what, under what licence ------------------------------------------- */
+.credit-list { display: grid; gap: 16px; margin-top: 12px; font-size: 13.5px; color: var(--muted); max-width: var(--measure); }
+.credit-one h3 { font-size: 14px; margin: 0; color: var(--ink); }
+.credit-one p { margin: 4px 0 0; }
+.credit-one ul { margin: 6px 0 0; padding-left: 18px; display: grid; gap: 4px; }
+.credit-one summary { cursor: pointer; margin-top: 6px; color: var(--accent); }
+
+/* The explorer's own layout. Colours, type, tables and the word marks come from
+   web/widget/tokens.css and tools/site_page/site.css, so it reads as the same site. */
+
+body::before { content: ""; position: fixed; inset: 0 0 auto; height: env(safe-area-inset-top, 0px); z-index: 10; background: var(--bg); }
+.loading { color: var(--muted); margin-top: 40px; }
+.problem { color: var(--warn); margin-top: 40px; }
+.back { display: inline-block; margin-top: 18px; font-size: 14px; text-decoration: none; }
+.crumb { font-size: 14px; color: var(--muted); margin-top: 22px; }
+.sub { color: var(--muted); margin-top: 8px; }
+
+/* ---- the picker ---------------------------------------------------------------- */
+.filters { display: grid; gap: 12px; margin-top: 26px; }
+.filter-row { display: flex; flex-wrap: wrap; gap: 10px 16px; align-items: center; }
+.filter-row label { font-size: 14px; color: var(--muted); display: inline-flex; gap: 6px; align-items: center; }
+.filter-row select, .filter-row input[type="search"], .csv-tools input[type="search"] {
+  font: inherit; font-size: 14px; color: var(--ink); background: var(--card); border: 1px solid var(--rule);
+  border-radius: 4px; padding: 5px 8px; min-width: 0; }
+.filter-row input[type="search"] { width: min(20rem, 100%); }
+.count-line { font-size: 14px; color: var(--muted); margin-top: 18px; }
+.picker-table { margin-top: 8px; }
+.picker-table td:first-child { min-width: 14rem; }
+.picker-table a.rec { font-weight: 600; text-decoration: none; }
+.picker-table a.rec:hover { text-decoration: underline; }
+.picker-table .id { display: block; font-size: 12px; color: var(--muted); }
+.pill { display: inline-block; font-size: 12px; border-radius: 999px; padding: 1px 8px; border: 1px solid var(--rule); color: var(--muted); white-space: nowrap; }
+.pill.full { border-color: var(--done); color: var(--done); background: var(--done-soft); }
+
+/* ---- one recording -------------------------------------------------------------- */
+.rec-head { display: grid; gap: 4px; }
+.rec-scores { max-width: 44rem; margin-top: 22px; }
+.player { position: sticky; top: env(safe-area-inset-top, 0px); z-index: 5; background: var(--bg); border-bottom: 1px solid var(--rule);
+          padding-block: 10px; margin-top: 30px; display: grid; gap: 8px; }
+.player-row { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; }
+.player .btn.big { font-size: 14px; padding: 6px 14px; min-width: 5.5rem; font-weight: 600; }
+.player .clock { font-variant-numeric: tabular-nums; font-size: 14px; color: var(--muted); }
+.player input[type="range"] { flex: 1 1 14rem; min-width: 0; accent-color: var(--accent); }
+.player label { font-size: 13px; color: var(--muted); display: inline-flex; gap: 5px; align-items: center; }
+.player select { font: inherit; font-size: 13px; background: var(--card); color: var(--ink); border: 1px solid var(--rule); border-radius: 4px; padding: 3px 6px; }
+.player .note { font-size: 13px; color: var(--muted); margin: 0; }
+.lines-pick { display: flex; flex-wrap: wrap; gap: 4px 12px; }
+.lines-pick label b { color: var(--who); font-weight: 600; }
+
+.strip-box { margin-top: 14px; }
+.strip { display: block; width: 100%; height: 56px; cursor: pointer; border-radius: 4px; background: var(--card); border: 1px solid var(--rule); }
+.strip-key { font-size: 12.5px; color: var(--muted); display: flex; flex-wrap: wrap; gap: 4px 14px; margin-top: 6px; }
+.strip-key span::before { content: ""; display: inline-block; width: 10px; height: 10px; border-radius: 2px; background: var(--c); margin-right: 5px; vertical-align: -1px; }
+
+details.panel { margin-top: 26px; border-top: 1px solid var(--rule); padding-top: 10px; }
+details.panel > summary { cursor: pointer; font-family: var(--font-display); font-size: 1.25rem; }
+details.panel > summary small { font-family: var(--font-ui); font-size: 13px; color: var(--muted); margin-left: 8px; }
+.cases-table td.what { min-width: 16rem; }
+.cases-table .kind { font-size: 12px; font-weight: 600; white-space: nowrap; }
+.cases-table .quote { font-family: var(--font-transcript); font-size: 13.5px; }
+.cases-table .note { font-size: 13px; color: var(--muted); display: block; margin-top: 2px; }
+.jump { font: inherit; font-size: 13px; font-variant-numeric: tabular-nums; border: 0; background: none; color: var(--accent); padding: 0; cursor: pointer; text-decoration: underline; text-underline-offset: 3px; }
+.file-list { list-style: none; padding: 0; margin: 12px 0 0; display: grid; gap: 8px; }
+.file-list li { display: grid; grid-template-columns: minmax(10rem, 16rem) 1fr; gap: 4px 14px; font-size: 14px; min-width: 0; }
+.file-list code { overflow-wrap: anywhere; color: var(--muted); }
+@media (max-width: 640px) { .file-list li { grid-template-columns: 1fr; } }
+
+.transcript { margin-top: 28px; }
+/* A jump lands just below the sticky player, however tall it is on this screen. */
+.block { border-top: 1px solid var(--rule); padding-top: 8px; margin-top: 14px; min-height: 9rem;
+         scroll-margin-top: calc(var(--player-h, 9rem) + env(safe-area-inset-top, 0px) + 8px); }
+.compare-line[hidden] { display: none; }
+.block.drawn { min-height: 0; }
+.block-time { font-size: 13px; }
+.block .compare { border-top: 0; }
+.block .compare-text { font-size: 14.5px; line-height: 1.7; }
+.spk { font-family: var(--font-ui); font-size: 11.5px; font-weight: 700; letter-spacing: .03em; color: var(--muted); margin-right: 4px; }
+.plain .word { cursor: default; }
+.legend { font-size: 12.5px; color: var(--muted); margin-top: 8px; max-width: var(--measure); }
+
+/* ---- the data -------------------------------------------------------------------- */
+.data-folder { margin-top: 34px; }
+.data-folder h3 { font-family: var(--font-transcript); font-size: 1rem; margin-top: 0; }
+.data-list { list-style: none; padding: 0; margin: 8px 0 0; display: grid; gap: 6px; }
+.data-list li { display: grid; grid-template-columns: minmax(12rem, 20rem) 1fr; gap: 2px 16px; font-size: 14px; border-bottom: 1px dotted var(--rule); padding-bottom: 6px; }
+.data-list .meta { font-size: 12.5px; color: var(--muted); font-variant-numeric: tabular-nums; }
+@media (max-width: 640px) { .data-list li { grid-template-columns: 1fr; } }
+.csv-tools { display: flex; flex-wrap: wrap; gap: 8px 12px; align-items: center; margin-top: 20px; }
+.csv-tools input[type="search"] { width: min(22rem, 100%); }
+.csv-tools .status { font-size: 13px; color: var(--muted); }
+.csv-table { margin-top: 12px; }
+.csv-table table.sortable { font-size: 13px; }
+.csv-table td { max-width: 28rem; overflow-wrap: anywhere; }
+
+/* ---- what differs from the record, the same on the record's line and an engine's.
+   Weakest first, because a word can be several at once and the strongest must show:
+   a highlighter for any difference, a louder one where every engine differs, and a
+   solid colour for the errors the searches found. */
+.case { border-radius: 2px; }
+.case-opposite { --c: var(--e-meaning); }
+.case-fact { --c: var(--e-fact); }
+.case-invented { --c: var(--e-invented); }
+.case-skips { --c: var(--e-skips); }
+.case-edits { --c: var(--e-edits); }
+.case-minor, .word.miss { background: var(--mark); color: var(--mark-ink); box-shadow: 0 0 0 1px var(--mark); }
+.case-all, .word.miss-all { background: var(--mark-strong); color: var(--mark-strong-ink); box-shadow: 0 0 0 1px var(--mark-strong); }
+.case-opposite, .case-fact, .case-invented, .case-skips, .case-edits,
+.word.case:not(.case-minor) { background: var(--c); color: var(--e-ink); font-weight: 700; box-shadow: 0 0 0 1px var(--c); }
+.word.miss.now, .word.miss-all.now, .word.case.now { background: var(--now); color: var(--ink); box-shadow: 0 0 0 2px var(--now); }
+.word.flash { outline: 3px solid var(--c, var(--accent)); outline-offset: 2px; }
+.case-key { display: flex; flex-wrap: wrap; gap: 6px 10px; align-items: center; font-size: 13px; color: var(--muted); margin-top: 12px; }
+.case-key .case { padding: 1px 6px; }
+.cases-table .kind.case { padding: 1px 5px; }
+.player .keys { font-size: 12px; }
+.player .btn:disabled { opacity: .5; cursor: default; }
+
+/* The key to the record's speakers, under the recording's title. */
+.who-speaks { list-style: none; padding: 0; margin: 10px 0 0; display: grid; gap: 3px; font-size: 14px; color: var(--muted); }
+.who-speaks b { color: var(--ink); font-weight: 600; }
+.who-speaks .code { font-size: 12px; }
+
+</style>
+
+<!-- One data set's whole-recording page, built by tools/build_explorer.py. Two
+     views, chosen by the address's #: the list (no #) and one recording
+     (#r-<data set>-<seconds>-<recording>; explorer.js has the details). The data
+     it shows is fetched from files beside it: catalog.json, rec/*.txt, audio/. -->
+<div class="wrap">
+  <nav class="site-nav" id="nav" aria-label="Explorer"></nav>
+  <main id="view" aria-live="polite"></main>
+  <footer id="footer"></footer>
+</div>
+
+<script>
+// Table: scores with sortable columns. Click a heading to sort by it, again to
+// reverse. A row can carry an action (a button that plays it, say).
+//
+//   Table.sortable(root, {
+//     columns: [{key: "engine", label: "Engine"}, {key: "rate", label: "Error rate", num: true, fmt: v => v + "%"}],
+//     rows: [{engine: "Qwen3", rate: 4.44}, ...],
+//     sort: {key: "rate", dir: 1},
+//     onSort: sort => {},                // told when the reader sorts, to remember it
+//     rowClass: row => "",
+//     caption: "...",
+//   });
+
+const Table = (() => {
+  function el(tag, attrs = {}, ...kids) {
+    const n = document.createElement(tag);
+    for (const [k, v] of Object.entries(attrs)) n.setAttribute(k, v);
+    for (const k of kids) n.append(k);
+    return n;
+  }
+
+  function sortable(root, opts) {
+    let sort = opts.sort || null;
+    const table = el("table", { class: "sortable" });
+    if (opts.caption) table.append(el("caption", { class: "sr-only" }, opts.caption));
+    const head = el("tr");
+    const body = el("tbody");
+    table.append(el("thead", {}, head), body);
+
+    function draw() {
+      head.textContent = "";
+      opts.columns.forEach((c, at) => {
+        const th = el("th", { scope: "col", class: c.num ? "num" : "" });
+        if (sort && sort.key === c.key) th.setAttribute("aria-sort", sort.dir > 0 ? "ascending" : "descending");
+        if (c.sort === false) th.append(c.label);
+        else {
+          const b = el("button", { type: "button" }, c.label);
+          b.addEventListener("click", () => {
+            sort = { key: c.key, dir: sort && sort.key === c.key ? -sort.dir : (c.num ? 1 : 1) };
+            draw();
+            if (opts.onSort) opts.onSort(sort);
+            // The headings were drawn again, so the button that had the keyboard is gone.
+            head.children[at].querySelector("button").focus();
+          });
+          th.append(b);
+        }
+        head.append(th);
+      });
+      const rows = [...opts.rows];
+      if (sort) {
+        rows.sort((a, b) => {
+          const x = a[sort.key], y = b[sort.key];
+          if (x === y) return 0;
+          if (x === null || x === undefined) return 1;
+          if (y === null || y === undefined) return -1;
+          return (x < y ? -1 : 1) * sort.dir;
+        });
+      }
+      body.textContent = "";
+      for (const r of rows) {
+        const tr = el("tr", { class: opts.rowClass ? opts.rowClass(r) : "" });
+        for (const c of opts.columns) {
+          const v = r[c.key];
+          const td = el("td", { class: c.num ? "num" : "" });
+          const shown = c.fmt ? c.fmt(v, r) : (v === null || v === undefined ? "" : v);
+          td.append(shown);
+          tr.append(td);
+        }
+        body.append(tr);
+      }
+    }
+    draw();
+    root.append(el("div", { class: "table-wrap" }, table));
+    return { redraw: draw, table };
+  }
+
+  return { sortable };
+})();
+
+// Credits: who made the audio and transcripts on a page, under what licence, and what
+// was changed. Written once here and inlined by every page that shows them, from
+// CREDITS in tools/build_site.py.
+//
+//   Credits.list(root, [{name, uses, licence, licenceUrl, source: [label, url], changed,
+//                        cite: [...], more: [...]}]);
+
+const Credits = (() => {
+  function el(tag, attrs = {}, ...kids) {
+    const n = document.createElement(tag);
+    for (const [k, v] of Object.entries(attrs)) n.setAttribute(k, v);
+    for (const k of kids) n.append(k);
+    return n;
+  }
+
+  function one(c) {
+    const licence = c.licenceUrl ? el("a", { href: c.licenceUrl, target: "_blank", rel: "noopener" }, c.licence) : c.licence;
+    const box = el("div", { class: "credit-one" }, el("h3", {}, c.name),
+      el("p", {}, `${c.uses} Licence: `, licence, ". ", el("a", { href: c.source[1], target: "_blank", rel: "noopener" }, c.source[0]), "."));
+    if (c.changed) box.append(el("p", {}, c.changed));
+    box.append(el("ul", {}, ...c.cite.map(t => el("li", {}, t))));
+    if (c.more && c.more.length) {
+      box.append(el("details", {}, el("summary", {}, `The citations for each part (${c.more.length})`),
+        el("ul", {}, ...c.more.map(t => el("li", {}, t)))));
+    }
+    return box;
+  }
+
+  function list(root, items) {
+    root.append(el("div", { class: "credit-list" }, ...items.map(one)));
+  }
+
+  return { list };
+})();
+
+</script>
+<script>
+const META = {"built": "2026-11-07", "corpus": "scotus", "names": {"scotus": "Supreme Court", "edacc": "EdAcc", "coraal": "CORAAL", "earnings22": "Earnings-22"}, "parts": {"test": "Test", "dev": "Dev", "ROC": "Rochester", "PRV": "Princeville", "DCB": "Washington DC", "DCA": "Washington DC 1968", "DTA": "Detroit", "ATL": "Atlanta", "VLD": "Valdosta", "LES": "Lower East Side"}, "kinds": ["meaning", "invented", "edits", "skips"], "siteUrl": "https://claude.ai/artifact/3Q9MW1VB1ZgMNPPkLsTELX", "explorers": {"scotus": "https://claude.ai/artifact/3pzYvWbX1WtcdLqqycpPQS", "edacc": "https://claude.ai/artifact/Tkzb4Nj8s7hyqTGUS8D9E7", "coraal": "https://claude.ai/artifact/UmA8KeREAGjcBPok4pjMZr", "earnings22": "https://claude.ai/artifact/M5Q1JCD8EWz9wwr8FMMkXa"}, "pages": {"scotus": "scotus.html", "edacc": "edacc.html", "coraal": "coraal.html", "earnings22": "earnings22.html"}, "speakers": {}, "interviewer": {}, "home": ["supremecourt.gov: oral argument transcripts", "https://www.supremecourt.gov/oral_arguments/argument_transcript/2025"], "credits": [{"name": "Supreme Court", "uses": "Audio and transcripts of oral arguments.", "licence": "the Court's pages state none; U.S. government works are not under copyright", "licenceUrl": null, "source": ["supremecourt.gov", "https://www.supremecourt.gov/oral_arguments/"], "changed": "Audio cut into clips, joined into longer files or kept whole, and re-encoded at lower quality.", "cite": ["Supreme Court of the United States, oral argument audio and transcripts, 2010-2025 terms."]}], "sections": [["opposite", "Says the opposite"], ["fact", "Gets a fact wrong"], ["invented", "Adds words nobody said"], ["skips", "Leaves out what was said"], ["edits", "Rewrites how the speaker talks"]]};
+// The whole-recording page of one data set: pick any recording, then read the
+// reference and every engine's words side by side, listen where the audio is here,
+// and step from one highlighted error to the next. Everything shown is fetched
+// from files beside the page, written by tools/build_explorer.py.
+//
+// A whole argument is about 10,000 words a transcript, so the transcript is drawn
+// in 30-second blocks as they scroll into view, and the word being spoken is found
+// by time within the current block, never by walking every word on the page.
+//
+// The address picks the view: no # for the list, or #r-<data set>-<seconds>-<recording>
+// for one recording, opened at that moment ("x" for no moment). claude.ai passes only
+// letters, digits and hyphens from a link to the page, so in the recording's name "-"
+// is written "-h" and "_" "-u". The website's links are made the same way (site.js).
+function recordingHash(c, id, at) {
+  return `r-${c}-${at === undefined ? "x" : Math.floor(at)}-${id.replace(/-/g, "-h").replace(/_/g, "-u")}`;
+}
+function readHash(text) {
+  const m = text.match(/^r-([a-z0-9]+)-(x|\d+)-(.+)$/);
+  if (m) return { c: m[1], at: m[2] === "x" ? undefined : Number(m[2]), id: m[3].replace(/-([hu])/g, (_, k) => k === "h" ? "-" : "_") };
+  // The old form, #r.<data set>.<recording>@<seconds>, still works where it reaches the page.
+  if (!text.startsWith("r.")) return null;
+  const [, c, ...rest] = text.split(".");
+  const [id, at] = rest.join(".").split("@");
+  return { c, id, at: at === undefined ? undefined : Number(at) };
+}
+const hashNow = () => readHash(decodeURIComponent(location.hash.slice(1)));
+
+
+// On the laptop (tools/explore_local.py) every recording plays from its own file.
+// "?web" makes the laptop behave like the published page, for tools/check_explorer.py.
+const LOCAL = ["localhost", "127.0.0.1"].includes(location.hostname) && !location.search.includes("web");
+const ENGINE_ORDER = ["Qwen3", "Whisper", "Parakeet", "Canary", "Granite"];
+const COLOUR = { Record: "--record", Qwen3: "--qwen3", Whisper: "--whisper", Parakeet: "--parakeet",
+                 Canary: "--canary", Granite: "--granite" };
+const KIND = { meaning: ["Meaning change", "--k-misheard"], invented: ["Invented words", "--k-notreal"],
+               edits: ["Edits the speaker", "--k-disfluency"], skips: ["Silent skip", "--k-leftout"] };
+// The website's sections, in its words, each with a colour; "minor" is a plain
+// mishearing, marked more quietly.
+const SECTION = Object.fromEntries([...META.sections, ["minor", "Another word (a plain mishearing)"]]
+  .map(([k, t]) => [k, { label: t, colour: { opposite: "--e-meaning", fact: "--e-fact", invented: "--e-invented",
+    skips: "--e-skips", edits: "--e-edits", minor: "--mark" }[k] }]));
+const BLOCK = 30;          // seconds of recording in one block of transcript
+
+const $ = s => document.querySelector(s);
+function el(tag, attrs = {}, ...kids) {
+  const n = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) if (v !== null && v !== undefined && v !== false) n.setAttribute(k, v);
+  for (const k of kids) if (k !== null && k !== undefined) n.append(k);
+  return n;
+}
+const clock = s => {
+  s = Math.max(0, Math.floor(s));
+  const h = Math.floor(s / 3600), m = Math.floor((s % 3600) / 60), x = s % 60;
+  return (h ? h + ":" + String(m).padStart(2, "0") : m) + ":" + String(x).padStart(2, "0");
+};
+const pct = v => (v === null || v === undefined) ? "–" : Number(v).toFixed(2) + "%";
+const css = name => getComputedStyle(document.documentElement).getPropertyValue(name).trim();
+const store = {
+  get(k, d) { try { const v = localStorage.getItem("explorer." + k); return v === null ? d : JSON.parse(v); } catch { return d; } },
+  set(k, v) { try { localStorage.setItem("explorer." + k, JSON.stringify(v)); } catch { /* private window */ } },
+};
+
+// Files beside the page. The transcripts (rec/*.txt) are gzipped and then written
+// as base64 text, because the website serves only a fixed list of file types and
+// a compressed file is not one of them.
+async function fetchJSON(url) {
+  const r = await fetch(url);
+  if (!r.ok) throw new Error(`${url} answered ${r.status}`);
+  let buf = new Uint8Array(await r.arrayBuffer());
+  if (url.endsWith(".txt")) buf = Uint8Array.from(atob(new TextDecoder().decode(buf).trim()), c => c.charCodeAt(0));
+  if (buf[0] === 0x1f && buf[1] === 0x8b) {
+    const stream = new Blob([buf]).stream().pipeThrough(new DecompressionStream("gzip"));
+    return JSON.parse(await new Response(stream).text());
+  }
+  return JSON.parse(new TextDecoder().decode(buf));
+}
+
+let catalog = [];
+const shards = new Map();
+const view = $("#view");
+let leave = () => {};      // stops whatever the last view was playing
+const NAME = META.names[META.corpus];
+
+// --- the bar across the top, the footer, and back to the top ----------------------------
+
+// The website and the other recording pages are separate pages, so they open in a
+// new tab; #go-data, say, asks the website's home page to open one of its own pages.
+function nav(current) {
+  const bar = $("#nav");
+  const out = (href, text) => el("a", { href, target: "_blank", rel: "noopener" }, text);
+  const site = el("span", { class: "links" }, out(META.siteUrl, "Home"));
+  Object.entries(META.pages).forEach(([c, file]) => site.append(out(`${META.siteUrl}#go-${file.replace(".html", "")}`, META.names[c])));
+  site.append(out(`${META.siteUrl}#go-compare`, "Big picture"), out(`${META.siteUrl}#go-data`, "Search the data"),
+    out(`${META.siteUrl}#go-ai`, "How AI was used"));
+  const rec = el("span", { class: "recordings" }, "Whole recordings:");
+  Object.entries(META.explorers).forEach(([c, url]) => rec.append(c === META.corpus
+    ? el("a", { href: "#", "aria-current": current === "picker" ? "page" : "true" }, META.names[c])
+    : out(url, META.names[c])));
+  bar.replaceChildren(out(META.siteUrl, "Where speech recognition goes wrong"), site, rec,
+    el("span", { class: "own" }, out(META.home[1], `${NAME}: the data set's own site`)));
+  bar.firstChild.classList.add("home");
+}
+
+function footer() {
+  const credits = el("div", {});
+  Credits.list(credits, META.credits);
+  $("#footer").replaceChildren(
+    credits,
+    el("p", {}, LOCAL ? "This is the local copy: every recording plays in full, from the laptop's own files."
+      : "Full audio is here for as many recordings as the page can hold; the local copy on the 5090 laptop (tools/explore_local.py) plays every one."),
+    el("p", {}, "This page was built with a lot of help from AI: the engines' transcripts are AI, the error labels come from an AI judge, and an AI assistant wrote the code. ",
+      el("a", { href: `${META.siteUrl}#go-ai`, target: "_blank", rel: "noopener" }, "How AI was used"), "."),
+    el("p", {}, `Built ${META.built} by tools/build_explorer.py.`));
+}
+
+(function backToTop() {
+  const b = el("button", { type: "button", class: "to-top", "aria-label": "Back to top" }, "↑ Top");
+  b.hidden = true;
+  b.addEventListener("click", () => window.scrollTo({ top: 0, behavior: matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth" }));
+  document.body.append(b);
+  const check = () => { b.hidden = window.scrollY < window.innerHeight * 0.8; };
+  window.addEventListener("scroll", check, { passive: true });
+  check();
+})();
+
+// --- the picker ------------------------------------------------------------------------
+
+function audioOf(row) {
+  if (LOCAL) return `local/audio/${encodeURIComponent(row.id)}`;
+  return row.audio || null;
+}
+const partLabel = p => META.parts[p] || p;
+const casesOf = row => Object.values(row.k).reduce((a, b) => a + b, 0);
+
+function showPicker() {
+  nav("picker");
+  const st = Object.assign({ part: "all", kind: "any", audio: false, q: "" }, store.get("picker." + META.corpus, {}));
+  const save = () => store.set("picker." + META.corpus, st);
+  const withAudio = catalog.filter(r => audioOf(r));
+  const hours = withAudio.reduce((n, r) => n + r.min, 0) / 60;
+  const part = el("select", { id: "pick-part" });
+  const kind = el("select", { id: "pick-kind" },
+    el("option", { value: "any" }, "Any"),
+    ...Object.entries(KIND).map(([k, [label]]) => el("option", { value: k }, label)));
+  kind.value = st.kind;
+  const audio = el("input", { type: "checkbox", id: "pick-audio" });
+  audio.checked = st.audio;
+  const q = el("input", { type: "search", id: "pick-q", placeholder: "Case name, docket or recording", value: st.q });
+  const count = el("p", { class: "count-line", role: "status" });
+  const host = el("div", { class: "picker-table" });
+
+  function fillParts() {
+    const parts = [...new Set(catalog.map(r => r.p))];
+    part.replaceChildren(el("option", { value: "all" }, "Every part"),
+      ...parts.map(p => el("option", { value: p }, partLabel(p))));
+    part.value = parts.includes(st.part) ? st.part : "all";
+  }
+  part.addEventListener("change", () => { st.part = part.value; save(); apply(); });
+  kind.addEventListener("change", () => { st.kind = kind.value; save(); apply(); });
+  audio.addEventListener("change", () => { st.audio = audio.checked; save(); apply(); });
+  q.addEventListener("input", () => { st.q = q.value; save(); apply(); });
+
+  const columns = [
+    { key: "title", label: "Recording", fmt: (v, r) => el("span", {},
+        el("a", { class: "rec", href: "#" + recordingHash(r.row.c, r.row.id) }, v),
+        el("span", { class: "id" }, [r.row.id, r.row.sub].filter(Boolean).join(" · "))) },
+    { key: "set", label: "Part" },
+    { key: "min", label: "Minutes", num: true, fmt: v => v.toFixed(0) },
+    ...["Qwen3", "Whisper", "Parakeet"].map(e => ({ key: e, label: e, num: true, fmt: pct })),
+    { key: "cases", label: "Errors found", num: true },
+    { key: "cards", label: "On the website", num: true, fmt: v => v ? String(v) : "" },
+    { key: "audio", label: "Audio", fmt: v => v ? el("span", { class: "pill full" }, "full") : el("span", { class: "pill" }, "text only") },
+  ];
+  // Unsorted to begin with: the catalog's own order, Supreme Court first.
+  // The reader's own sort, if they made one, is kept for when they come back to the list.
+  const opts = { columns, rows: [], caption: "Recordings",
+                 sort: columns.some(c => c.key === st.sort?.key) ? st.sort : null,
+                 onSort: sort => { st.sort = sort; save(); } };
+  let table = null;
+
+  function apply() {
+    const words = st.q.trim().toLowerCase().split(/\s+/).filter(Boolean);
+    const rows = catalog.filter(r =>
+      (st.part === "all" || r.p === st.part) &&
+      (st.kind === "any" || r.k[st.kind] > 0) &&
+      (!st.audio || audioOf(r)) &&
+      words.every(w => `${r.title} ${r.id} ${r.sub}`.toLowerCase().includes(w)));
+    opts.rows.length = 0;
+    for (const r of rows) {
+      opts.rows.push({ row: r, title: r.title, set: partLabel(r.p), min: r.min, cards: r.cards,
+        Qwen3: r.sc.Qwen3?.benchmark, Whisper: r.sc.Whisper?.benchmark, Parakeet: r.sc.Parakeet?.benchmark,
+        cases: casesOf(r), audio: audioOf(r) ? 1 : 0 });
+    }
+    count.textContent = `${rows.length} of ${catalog.length} recordings. Error rates are the benchmark rule. ` +
+      "“On the website” counts the cards about it there. Click a heading to sort, a name to open it.";
+    if (!table) table = Table.sortable(host, opts);
+    else table.redraw();
+  }
+
+  view.replaceChildren(
+    el("h1", {}, `Every ${NAME} recording`),
+    el("p", { class: "lede" }, `All ${catalog.length} recordings, each transcribed by ${catalog[0]?.engines.length || 3} speech engines. ` +
+      "Open one to read the reference and every engine's words side by side, with every error the searches found highlighted before you reach it. " +
+      (withAudio.length ? `The audio is here for ${withAudio.length} of them (${hours.toFixed(0)} hours): tick “Full audio only” to list just those.`
+                        : "None of the audio is on this page: " + (META.corpus === "earnings22" ? "the calls have no stated licence." : "it would not fit."))),
+    el("p", {}, el("a", { class: "source-button", href: META.home[1], target: "_blank", rel: "noopener" }, `Go to the data set: ${META.home[0]}`)),
+    el("div", { class: "filters" },
+      el("div", { class: "filter-row" },
+        el("label", { for: "pick-part" }, "Part", part),
+        el("label", { for: "pick-kind" }, "Has a failure of this kind", kind),
+        el("label", { for: "pick-audio" }, audio, "Full audio only"),
+        el("label", { for: "pick-q", class: "sr-only" }, "Search"), q)),
+    count, host);
+  fillParts();
+  apply();
+}
+
+// --- one recording ----------------------------------------------------------------------
+
+async function showRecording(c, id, at, ticket) {
+  nav("rec");
+  const row = catalog.find(r => r.c === c && r.id === id);
+  if (!row) {
+    view.replaceChildren(el("a", { class: "back", href: "#" }, "← All recordings"),
+      el("p", { class: "problem" }, `There is no recording called ${id} in ${META.names[c] || c}.`));
+    return;
+  }
+  view.replaceChildren(el("p", { class: "loading" }, "Loading the transcripts…"));
+  let rec;
+  try {
+    if (!shards.has(row.shard)) shards.set(row.shard, await fetchJSON(row.shard));
+    rec = shards.get(row.shard)[id];
+  } catch (e) {
+    if (ticket !== routes) return;
+    view.replaceChildren(el("a", { class: "back", href: "#" }, "← All recordings"),
+      el("p", { class: "problem" }, "The transcripts didn't load: " + e.message));
+    return;
+  }
+  // The reader moved on while it loaded, perhaps out and back to this same recording.
+  if (ticket !== routes) return;
+  drawRecording(row, rec, at);
+}
+
+function decodeLine(line, last) {
+  const words = line.t.split(" ");
+  const n = words.length;
+  const s = new Float64Array(n), e = new Float64Array(n);
+  let acc = 0;
+  for (let i = 0; i < n; i++) { acc += line.s[i]; s[i] = acc / 100; }
+  for (let i = 0; i < n; i++) {
+    // The reference has no ends of its own: a word lasts until the next begins.
+    e[i] = line.d ? s[i] + line.d[i] / 100 : (i + 1 < n ? Math.max(s[i] + 0.05, s[i + 1]) : Math.min(s[i] + 0.4, last));
+  }
+  return { words, s, e, off: line.off || "", missed: line.missed || "" };
+}
+
+// The record's speakers. The transcripts name them by code (CORAAL's
+// ROC_se0_ag1_f_01, EdAcc's EDACC-C01-A, Earnings-22's 0, 1, 2); META.speakers
+// gives a plain name for each, from the corpus's own metadata. CORAAL starts a
+// new row at every pause, so a name is shown only when the speaker changes.
+function speakersOf(ref, recording) {
+  META.speakers = META.speakers || {};
+  const at = new Map();
+  let last = null;
+  for (const [i, t] of ref.turns) {
+    const code = ref.speakers[t];
+    if (code !== last) at.set(i, code);
+    last = code;
+  }
+  const codes = [...new Set(at.values())];
+  const asks = code => (META.interviewer?.[code] || []).includes(recording);
+  const base = code => asks(code) ? "Interviewer" : (META.speakers[code] || [])[0]
+    || (/^\d+$/.test(code) ? `Speaker ${Number(code) + 1}` : `Speaker ${code}`);
+  const count = {};
+  codes.forEach(c => { count[base(c)] = (count[base(c)] || 0) + 1; });
+  const seen = {};
+  const name = new Map(codes.map(c => {
+    const b = base(c);
+    if (count[b] < 2 || /\d$/.test(b) || /^Speaker [A-Z]$/.test(b)) return [c, b];
+    seen[b] = (seen[b] || 0) + 1;
+    return [c, `${b} ${seen[b]}`];
+  }));
+  const about = code => (META.speakers[code] || [])[1] || "";
+  const title = code => [about(code), `code ${code}`].filter(Boolean).join("; ");
+  const key = () => {
+    if (!codes.some(c => META.speakers[c])) return null;
+    return el("ul", { class: "who-speaks", "aria-label": "Who speaks" }, el("li", { class: "label" }, "Who speaks:"),
+      ...codes.map(c => el("li", {}, el("b", {}, name.get(c)), about(c) ? `: ${about(c)}` : "", el("span", { class: "code" }, ` (${c})`))));
+  };
+  return { at, name, title, key };
+}
+
+function drawRecording(row, rec, at) {
+  const duration = row.min * 60;
+  const engines = ENGINE_ORDER.filter(e => rec.engines[e]);
+  const lines = [{ who: "Record", ...decodeLine(rec.ref, duration) },
+                 ...engines.map(e => ({ who: e, ...decodeLine(rec.engines[e], duration) }))];
+  const voices = speakersOf(rec.ref, row.id);
+  const nBlocks = Math.max(1, Math.ceil(duration / BLOCK),
+    ...lines.map(l => l.s.length ? Math.floor(l.s[l.s.length - 1] / BLOCK) + 1 : 1));
+  for (const l of lines) {
+    l.buckets = Array.from({ length: nBlocks }, () => []);
+    for (let i = 0; i < l.s.length; i++) l.buckets[Math.min(nBlocks - 1, Math.floor(l.s[i] / BLOCK))].push(i);
+  }
+  const hidden = new Set(store.get("hidden", []));
+  const src = audioOf(row);
+
+  // ---- the head: what it is, and how each engine scored
+  const scoreCols = [{ key: "engine", label: "Engine" }, { key: "benchmark", label: "Error rate", num: true, fmt: pct },
+    { key: "swapped", label: "Words swapped", num: true, fmt: pct }, { key: "dropped", label: "Words dropped", num: true, fmt: pct },
+    { key: "added", label: "Words added", num: true, fmt: pct }];
+  const scoreBox = el("div", { class: "rec-scores" });
+  Table.sortable(scoreBox, { columns: scoreCols, rows: engines.map(e => ({ engine: e, ...(row.sc[e] || {}) })),
+                             sort: { key: "benchmark", dir: 1 }, caption: "Error rates" });
+
+  // ---- the player
+  const audio = el("audio", { preload: "none" });
+  const playBtn = el("button", { type: "button", class: "btn big", "aria-pressed": "false", title: "Play or pause (Space)" }, "Play");
+  const backBtn = el("button", { type: "button", class: "btn", title: "Back 10 seconds (left arrow)" }, "−10 s");
+  const fwdBtn = el("button", { type: "button", class: "btn", title: "Forward 10 seconds (right arrow)" }, "+10 s");
+  const prevErr = el("button", { type: "button", class: "btn", title: "The error before this point (J)" }, "◂ Previous error");
+  const nextErr = el("button", { type: "button", class: "btn", title: "The next error (K)" }, "Next error ▸");
+  const errWhich = el("select", { id: "err-which", "aria-label": "Which errors to step through" },
+    el("option", { value: "serious" }, "the serious ones"), el("option", { value: "all" }, "every one"));
+  errWhich.value = store.get("errWhich", "serious");
+  errWhich.addEventListener("change", () => store.set("errWhich", errWhich.value));
+  const time = el("span", { class: "clock" }, `0:00 / ${clock(duration)}`);
+  const seek = el("input", { type: "range", min: "0", max: String(Math.ceil(duration)), step: "1", value: "0", "aria-label": "Position" });
+  const speed = el("select", { id: "speed" }, ...[1, 1.25, 1.5, 2].map(v => el("option", { value: String(v) }, v + "×")));
+  const follow = el("input", { type: "checkbox", id: "follow" });
+  follow.checked = store.get("follow", true);
+  follow.addEventListener("change", () => store.set("follow", follow.checked));
+  speed.addEventListener("change", () => { audio.playbackRate = Number(speed.value); });
+  const linesPick = el("div", { class: "lines-pick", role: "group", "aria-label": "Lines shown" },
+    ...engines.map(e => {
+      const box = el("input", { type: "checkbox", id: `show-${e}` });
+      box.checked = !hidden.has(e);
+      box.addEventListener("change", () => {
+        box.checked ? hidden.delete(e) : hidden.add(e);
+        store.set("hidden", [...hidden]);
+        transcript.querySelectorAll(`[data-who="${e}"]`).forEach(n => { n.hidden = hidden.has(e); });
+      });
+      const label = el("label", { for: `show-${e}` }, box, el("b", {}, e));
+      label.style.setProperty("--who", `var(${COLOUR[e]})`);
+      return label;
+    }));
+  const player = el("div", { class: "player" });
+  const errRow = el("div", { class: "player-row" }, prevErr, nextErr, el("label", { for: "err-which" }, "Step through", errWhich));
+  if (src) {
+    audio.src = src;
+    player.append(audio, el("div", { class: "player-row" }, playBtn, backBtn, fwdBtn, time, seek), errRow,
+      el("div", { class: "player-row" },
+        el("label", { for: "speed" }, "Speed", speed),
+        el("label", { for: "follow" }, follow, "Keep the words in view"),
+        linesPick),
+      el("p", { class: "note keys" }, "Keys: Space play or pause, ← and → ten seconds, J and K the previous and next error."));
+  } else {
+    player.append(el("p", { class: "note" }, noAudioNote(row)), errRow, el("div", { class: "player-row" }, linesPick));
+  }
+  backBtn.addEventListener("click", () => jump((audio.currentTime || pos) - 10, !audio.paused));
+  fwdBtn.addEventListener("click", () => jump((audio.currentTime || pos) + 10, !audio.paused));
+  prevErr.addEventListener("click", () => stepError(-1));
+  nextErr.addEventListener("click", () => stepError(1));
+  playBtn.addEventListener("click", () => { audio.paused ? audio.play().catch(playFailed) : audio.pause(); });
+  const status = el("p", { class: "note", role: "status" });
+  player.append(status);
+  function playFailed(e) { if (e.name !== "AbortError") status.textContent = `The audio didn't play (${e.name}: ${e.message}).`; }
+  audio.addEventListener("error", () => { status.textContent = "The audio didn't load from " + audio.src + "."; });
+  audio.addEventListener("play", () => { playBtn.textContent = "Pause"; playBtn.setAttribute("aria-pressed", "true"); frame(); });
+  audio.addEventListener("pause", () => { playBtn.textContent = "Play"; playBtn.setAttribute("aria-pressed", "false"); });
+  seek.addEventListener("input", () => { jump(Number(seek.value), false); });
+  // The slider follows the audio unless the reader is holding it. Having been touched
+  // isn't enough: it keeps the keyboard afterwards, and must not freeze.
+  let dragging = false;
+  seek.addEventListener("pointerdown", () => { dragging = true; });
+  const letGo = () => { dragging = false; };
+  addEventListener("pointerup", letGo);
+  addEventListener("pointercancel", letGo);
+
+  // ---- the strip: where the engines differ, and where the failure cases are
+  const strip = el("canvas", { class: "strip", role: "img",
+    "aria-label": "How much of each 30 seconds the engines got differently from the record, with the failure cases marked below" });
+  const share = Array.from({ length: nBlocks }, (_, k) => {
+    let off = 0, all = 0;
+    for (const l of lines.slice(1)) for (const i of l.buckets[k]) { all++; if (l.off[i] === "1") off++; }
+    return all ? off / all : 0;
+  });
+  function drawStrip(t = src ? audio.currentTime : pos) {
+    const w = strip.clientWidth, h = strip.clientHeight, dpr = window.devicePixelRatio || 1;
+    if (!w) return;
+    strip.width = w * dpr; strip.height = h * dpr;
+    const g = strip.getContext("2d");
+    g.scale(dpr, dpr);
+    const bw = w / nBlocks, top = 4, room = h - 18;
+    g.fillStyle = css("--diff");
+    share.forEach((v, k) => { const bh = Math.min(1, v / 0.4) * room; g.fillRect(k * bw, top + room - bh, Math.max(1, bw - 0.5), bh); });
+    for (const c of rec.cases) {
+      if (c.sec === "minor") continue;
+      g.fillStyle = css(SECTION[c.sec].colour);
+      g.fillRect((c.s / duration) * w - 1, h - 10, 2, 8);
+    }
+    g.fillStyle = css("--ink");
+    g.fillRect((t / duration) * w - 1, 0, 2, h);
+  }
+  strip.addEventListener("click", ev => {
+    const r = strip.getBoundingClientRect();
+    jump(((ev.clientX - r.left) / r.width) * duration, !audio.paused);
+  });
+  const stripKey = el("div", { class: "strip-key" },
+    el("span", { style: "--c: var(--diff)" }, "Bars: share of the engines' words that differ from the record, per 30 seconds"),
+    el("span", { style: "--c: var(--faint)" }, "Ticks below: the errors, coloured as in the transcript"));
+
+  // ---- which words each error covers, so they can be highlighted before they are heard
+  const serious = c => c.sec !== "minor";
+  const casesSorted = [...rec.cases].sort((a, b) => a.s - b.s);
+  const marks = lines.map(() => new Map());
+  const lineOf = Object.fromEntries(lines.map((l, i) => [l.who, i]));
+  const labelOf = c => `${SECTION[c.sec].label}: the record has “${c.record || "(nothing)"}”, ${c.engine} wrote “${c.wrote || "(nothing)"}”.` +
+    (c.judge ? ` ${c.judge}.` : "") + (c.note ? ` ${c.note}` : "");
+  const better = (old, c) => !old || (old.sec === "minor" && c.sec !== "minor");
+  // The words of an engine's line that a case is about: the ones it quotes, found
+  // inside its time span. The span alone won't do: an aligner can give hundreds of
+  // words one time, and a case that lost its place spans the whole recording.
+  const plainWord = w => w.toLowerCase().replace(/[^\p{L}\p{N}]/gu, "");
+  function wordsOfCase(l, c) {
+    const goal = plainWord(c.wrote || "");
+    if (!goal) return [0, 0];                 // the engine wrote nothing here
+    const from = lowerBound(l.s, c.s - 0.05);
+    let to = from;
+    while (to < l.s.length && l.s[to] <= c.e + 0.05) to++;
+    for (let i = from; i < to; i++) {
+      let got = "", k = i;
+      while (k < to && got.length < goal.length) got += plainWord(l.words[k++]);
+      if (got === goal) return [i, k];
+    }
+    return [from, Math.min(to, from + c.wrote.trim().split(/\s+/).length)];
+  }
+  for (const c of casesSorted) {
+    const li = lineOf[c.engine];
+    if (li !== undefined) {
+      const [from, to] = wordsOfCase(lines[li], c);
+      for (let i = from; i < to; i++) if (better(marks[li].get(i), c)) marks[li].set(i, c);
+    }
+    if (c.ri) for (let i = c.ri[0]; i < c.ri[1]; i++) if (better(marks[0].get(i), c)) marks[0].set(i, c);
+  }
+  const legend = el("div", { class: "case-key" }, "Key: ",
+    ...Object.entries(SECTION).filter(([k]) => k !== "minor").map(([k, v]) => {
+      const n = rec.cases.filter(c => c.sec === k).length;
+      return n ? el("span", { class: `case case-${k}` }, `${v.label} (${n})`) : null;
+    }).filter(Boolean),
+    el("span", { class: "case case-minor" }, "Differs from the record"),
+    el("span", { class: "case case-all" }, "Every engine differs"));
+
+  // ---- the failure cases, in time order
+  const cases = [...rec.cases].sort((a, b) => a.s - b.s);
+  const casesPanel = el("details", { class: "panel", open: cases.length ? "" : null },
+    el("summary", {}, "Failure cases found here", el("small", {}, `${cases.length}`)));
+  if (cases.length) {
+    const host = el("div", { class: "cases-table" });
+    Table.sortable(host, {
+      columns: [
+        { key: "s", label: "At", num: true, fmt: v => jumpButton(v) },
+        { key: "sec", label: "What it does", fmt: v => el("span", { class: `kind case case-${v}` }, SECTION[v].label) },
+        { key: "engine", label: "Engine" },
+        { key: "record", label: "Record, then what the engine wrote", sort: false, fmt: (v, r) => el("span", {},
+            el("span", { class: "quote" }, `“${r.record || "(nothing)"}” → “${r.wrote || "(nothing)"}”`),
+            el("span", { class: "note" }, [r.note || r.why || "", r.judge || ""].filter(Boolean).join(" "))) },
+      ],
+      rows: cases, sort: { key: "s", dir: 1 }, caption: "Failure cases" });
+    casesPanel.append(el("p", { class: "hint" }, "Every case the four failure searches found in this recording " +
+      "(findings/failures/), with what the AI judge, Claude Sonnet, said about it (preliminary, not checked by a person; a second AI judge, Qwen, is still running and not shown). The ones with a written explanation were read through by Claude (AI), from the text, for the website; the rest are the searches' raw finds."), host);
+  } else {
+    casesPanel.append(el("p", { class: "hint" }, "The four failure searches found nothing in this recording."));
+  }
+
+  // ---- the files behind it
+  const fileList = el("ul", { class: "file-list" });
+  for (const f of rec.files) {
+    const where = el("span", {});
+    if (f.path) where.append(LOCAL ? el("a", { href: `local/file?p=${encodeURIComponent(f.path)}`, target: "_blank" }, el("code", {}, f.path))
+                                   : el("code", {}, f.path));
+    if (f.url) where.append(f.path ? " " : "", el("a", { href: f.url, target: "_blank", rel: "noopener" }, f.path ? "(online)" : f.url));
+    fileList.append(el("li", {}, el("span", {}, f.what), where));
+  }
+  const filesPanel = el("details", { class: "panel" }, el("summary", {}, "Every file behind it", el("small", {}, `${fileList.children.length}`)),
+    el("p", { class: "hint" }, LOCAL ? "Click a path to open the file itself."
+      : "Paths are on the 5090 laptop, where the runs and corpora live; the local copy of this page opens them. Its rows in the big tables are on the website's data page."),
+    fileList);
+
+  // ---- the transcript, block by block
+  const transcript = el("div", { class: "transcript" });
+  const drawn = new Map();
+  const blocks = [];
+  for (let k = 0; k < nBlocks; k++) {
+    const b = el("section", { class: "block", id: `b-${k}`, "data-k": String(k) },
+      el("h3", { class: "block-time" }, jumpButton(k * BLOCK, `${clock(k * BLOCK)} – ${clock(Math.min(duration, (k + 1) * BLOCK))}`)));
+    blocks.push(b);
+    transcript.append(b);
+  }
+  function drawBlock(k) {
+    if (drawn.has(k)) return drawn.get(k);
+    const box = el("div", { class: "compare" + (src ? "" : " plain") });
+    const spans = [];
+    for (const [li, l] of lines.entries()) {
+      const text = el("div", { class: "compare-text" });
+      const mine = [];
+      l.buckets[k].forEach((i, n) => {
+        // A new speaker starts a new line, as in a transcript.
+        if (li === 0 && voices.at.has(i)) {
+          const code = voices.at.get(i);
+          text.append(n ? el("br") : "", el("span", { class: "spk", title: voices.title(code) }, voices.name.get(code)));
+        }
+        // Whisper splits a hyphenated word ("dope", "-themed"): no space between the pieces.
+        else if (n && !(l.who === "Whisper" && /^-[\w$]/.test(l.words[i]))) text.append(" ");
+        let cls = "word";
+        if (li > 0 && l.off[i] === "1") cls += " off";
+        if (li === 0 && l.missed[i] && l.missed[i] !== "0") cls += Number(l.missed[i]) >= engines.length ? " miss-all" : " miss";
+        const mark = marks[li].get(i);
+        if (mark) cls += ` case case-${mark.sec}`;
+        const span = el("span", { class: cls, "data-l": String(li), "data-i": String(i), title: mark ? labelOf(mark) : null }, l.words[i]);
+        text.append(span);
+        mine.push([span, l.s[i], l.e[i]]);
+      });
+      if (!l.buckets[k].length) text.append(el("span", { class: "spk" }, "(nothing)"));
+      const who = el("div", { class: "compare-who" }, l.who);
+      who.style.setProperty("--who", `var(${COLOUR[l.who]})`);
+      const lineEl = el("div", { class: "compare-line", "data-who": l.who }, who, text);
+      if (hidden.has(l.who)) lineEl.hidden = true;
+      box.append(lineEl);
+      spans.push(mine);
+    }
+    blocks[k].append(box);
+    blocks[k].classList.add("drawn");
+    drawn.set(k, spans);
+    return spans;
+  }
+  const keepClear = new ResizeObserver(() => transcript.style.setProperty("--player-h", `${player.offsetHeight}px`));
+  keepClear.observe(player);
+  const seen = new IntersectionObserver(entries => {
+    for (const en of entries) if (en.isIntersecting) { drawBlock(Number(en.target.dataset.k)); seen.unobserve(en.target); }
+  }, { rootMargin: "1200px 0px" });
+  blocks.forEach(b => seen.observe(b));
+  transcript.addEventListener("click", ev => {
+    const w = ev.target.closest(".word");
+    if (!w || !src) return;
+    const l = lines[Number(w.dataset.l)], i = Number(w.dataset.i);
+    jump(l.s[i], true);
+  });
+
+  // ---- moving about, and the word being spoken
+  function jumpButton(t, label) {
+    const b = el("button", { type: "button", class: "jump", title: src ? "Play from here" : "Go to this point" }, label || clock(t));
+    b.addEventListener("click", () => jump(t, Boolean(src)));
+    return b;
+  }
+  function jump(t, play) {
+    t = Math.max(0, Math.min(duration, t));
+    pos = t;
+    const k = Math.min(nBlocks - 1, Math.floor(t / BLOCK));
+    // Draw the blocks around it first: a block grows when it is drawn, and blocks
+    // drawn above it after the jump would push it down out of view.
+    for (let j = Math.max(0, k - 3); j <= Math.min(nBlocks - 1, k + 2); j++) drawBlock(j);
+    blocks[k].scrollIntoView({ block: "start", behavior: "auto" });
+    setTimeout(() => { if (audio.paused || !follow.checked) blocks[k].scrollIntoView({ block: "start", behavior: "auto" }); }, 350);
+    if (src) {
+      audio.currentTime = t;
+      if (play) audio.play().catch(playFailed);
+      show(t);
+    } else drawStrip(t);
+  }
+  // Bring something to the middle of the screen that's left below the sticky player.
+  // The player can cover half of a phone, so the screen's own middle may be behind it.
+  function centre(node, behavior = "auto") {
+    const r = node.getBoundingClientRect(), top = Math.max(0, player.getBoundingClientRect().bottom);
+    window.scrollBy({ top: (r.top + r.bottom) / 2 - (top + innerHeight) / 2, behavior });
+  }
+  let lit = [], raf = null, lastScroll = 0, lastStrip = 0, litBlock = -1;
+  let pos = 0;   // where the reader is, for a recording with no audio here
+  function show(t) {
+    lit.forEach(n => n.classList.remove("now"));
+    lit = [];
+    const k = Math.min(nBlocks - 1, Math.floor(t / BLOCK));
+    const spans = drawBlock(k);
+    for (const mine of spans) {
+      let hit = null;
+      for (const [span, s, e] of mine) if (t >= s && t < e + 0.12) hit = span;
+      if (hit) { hit.classList.add("now"); lit.push(hit); }
+    }
+    time.textContent = `${clock(t)} / ${clock(duration)}`;
+    if (!dragging) seek.value = String(Math.floor(t));
+    const now = performance.now();
+    if (now - lastStrip > 250) { drawStrip(t); lastStrip = now; }
+    if (follow.checked && !audio.paused && now - lastScroll > 800) {
+      const target = lit.find(n => !n.closest("[hidden]")) || blocks[k];
+      const r = target.getBoundingClientRect(), top = player.getBoundingClientRect().bottom;
+      if (r.top < top + 8 || r.bottom > innerHeight - 40 || k !== litBlock) {
+        centre(target, matchMedia("(prefers-reduced-motion: reduce)").matches ? "auto" : "smooth");
+        lastScroll = now;
+      }
+      litBlock = k;
+    }
+  }
+  function frame() {
+    show(audio.currentTime);
+    raf = audio.paused ? null : requestAnimationFrame(frame);
+  }
+  // The next or previous error from here, two seconds before it so it can be heard coming.
+  function stepError(dir) {
+    const now = src ? audio.currentTime : pos;
+    const pool = casesSorted.filter(c => (errWhich.value === "all" || serious(c)) && !hidden.has(c.engine));
+    const target = dir > 0 ? pool.find(c => c.s - 2 > now + 0.5) : [...pool].reverse().find(c => c.s - 2 < now - 1);
+    if (!target) { status.textContent = dir > 0 ? "No more errors after this point." : "No errors before this point."; return; }
+    status.textContent = "";
+    jump(target.s - 2, Boolean(src) && !audio.paused);
+    flash(target);
+  }
+  // Make the error's first word blink once, and bring it to the middle of the screen.
+  function flash(c) {
+    const k = Math.min(nBlocks - 1, Math.floor(c.s / BLOCK));
+    drawBlock(k);
+    const li = lineOf[c.engine];
+    const n = [...blocks[k].querySelectorAll(`.word.case[data-l="${li}"]`)]
+      .find(x => lines[li].s[Number(x.dataset.i)] >= c.s - 0.05);
+    if (n) {
+      n.classList.add("flash");
+      setTimeout(() => n.classList.remove("flash"), 1600);
+      centre(n);
+      setTimeout(() => centre(n), 400);
+    }
+  }
+  const onKey = ev => {
+    if (ev.ctrlKey || ev.metaKey || ev.altKey || !ev.target.closest) return;
+    // Only typing keeps every key. After a click on a tick box or a menu the keyboard
+    // stays there, and the player's keys should still work; each control keeps just the
+    // keys it needs. Space presses a button, opens a panel or ticks a box; a menu's
+    // arrows change its choice. The slider's arrows move ten seconds, as everywhere.
+    if (ev.target.closest("textarea, input:not([type=checkbox], [type=range])")) return;
+    const menu = ev.target.closest("select");
+    if (ev.key === " ") {
+      if (src && !ev.target.closest("button, summary, a, select, input[type=checkbox]")) { ev.preventDefault(); playBtn.click(); }
+    } else if (ev.key === "ArrowLeft" && src && !menu) { ev.preventDefault(); backBtn.click(); }
+    else if (ev.key === "ArrowRight" && src && !menu) { ev.preventDefault(); fwdBtn.click(); }
+    else if (ev.key === "j" || ev.key === "J") { ev.preventDefault(); stepError(-1); }
+    else if (ev.key === "k" || ev.key === "K") { ev.preventDefault(); stepError(1); }
+  };
+  addEventListener("keydown", onKey);
+  audio.addEventListener("seeked", () => show(audio.currentTime));
+  leave = () => { audio.pause(); audio.removeAttribute("src"); seen.disconnect(); keepClear.disconnect(); if (raf) cancelAnimationFrame(raf);
+                  removeEventListener("resize", onResize); removeEventListener("keydown", onKey);
+                  removeEventListener("pointerup", letGo); removeEventListener("pointercancel", letGo); };
+  const onResize = () => drawStrip();
+  addEventListener("resize", onResize);
+
+  view.replaceChildren(
+    el("a", { class: "back", href: "#" }, "← All recordings"),
+    el("p", { class: "crumb" }, `${META.names[row.c]} · ${partLabel(row.p)} · ${row.id}`),
+    el("div", { class: "rec-head" }, el("h1", {}, row.title), row.sub ? el("p", { class: "sub" }, row.sub) : null, voices.key()),
+    el("div", { class: "facts" },
+      el("div", {}, el("b", {}, clock(duration)), "long"),
+      el("div", {}, el("b", {}, lines[0].words.length.toLocaleString()), "words in the reference"),
+      el("div", {}, el("b", {}, String(engines.length)), "engines"),
+      el("div", {}, el("b", {}, String(cases.length)), "failure cases found")),
+    scoreBox,
+    el("p", { class: "source" }, "Error rates on the benchmark rule (case, punctuation and fillers ignored), as a share of the reference's words; from the website's recordings table."),
+    player,
+    el("div", { class: "strip-box" }, strip, stripKey),
+    casesPanel, filesPanel,
+    el("h2", {}, "The transcripts"),
+    legend,
+    el("p", { class: "legend" }, "The record first, then each engine, 30 seconds at a time. The bold solid colours are the errors the searches found, on the engine's words and on the record's; hover over one to see what it is. " +
+      "Yellow on an engine's line is any other word that differs from the record. Yellow on the record's line is a word at least one engine got wrong, and bright yellow is one that every engine did. " +
+      "A word an engine left out has nothing to highlight on that engine's line, so it shows on the record's line only. " +
+      (src ? "Click any word to play from it; the word being spoken lights up." : "") +
+      (row.c === "scotus" ? " The record has no times of its own: each of its words takes the time of the engine word it lines up with." : "")),
+    transcript);
+  requestAnimationFrame(() => drawStrip(0));
+  if (at !== undefined && !isNaN(at)) requestAnimationFrame(() => jump(at, false));
+}
+
+// The first index of a sorted array whose value is at least v.
+function lowerBound(a, v) {
+  let lo = 0, hi = a.length;
+  while (lo < hi) { const m = (lo + hi) >> 1; if (a[m] < v) lo = m + 1; else hi = m; }
+  return lo;
+}
+
+function noAudioNote(row) {
+  if (row.c === "earnings22") return "Earnings-22's audio has no stated licence, so it is not published here; the local copy on the laptop plays it.";
+  if (row.c === "scotus" && row.ext) return el("span", {}, "This argument's audio did not fit on this page. ",
+    el("a", { href: row.ext.audio, target: "_blank", rel: "noopener" }, "Listen on supremecourt.gov"),
+    " or open the local copy on the laptop, where the words light up as it plays.");
+  return "This recording's audio did not fit on this page; the local copy on the laptop plays it.";
+}
+
+// --- which view ---------------------------------------------------------------------------
+
+let routes = 0;   // counts the views asked for, so a slow one can tell it was left behind
+function route() {
+  leave();
+  leave = () => {};
+  routes++;
+  const h = hashNow();
+  if (h) showRecording(h.c, h.id, h.at, routes);
+  else showPicker();
+  window.scrollTo(0, 0);
+}
+
+footer();
+nav("picker");
+view.replaceChildren(el("p", { class: "loading" }, "Loading the list of recordings…"));
+fetchJSON("catalog.json").then(c => {
+  catalog = c;
+  addEventListener("hashchange", route);
+  route();
+}).catch(e => {
+  view.replaceChildren(el("p", { class: "problem" }, "The list of recordings didn't load: " + e.message));
+});
+
+</script>

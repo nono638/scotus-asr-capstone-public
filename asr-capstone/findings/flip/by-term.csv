@@ -1,0 +1,6 @@
+term,arguments,qwen3_beats_whisper_benchmark,whisper_beats_qwen3_verbatim,flips,parakeet_last_benchmark,parakeet_last_verbatim
+OT2010,77,69,64,56,46,63
+OT2017,61,60,52,51,36,60
+OT2021,62,62,46,46,8,58
+OT2025,58,58,37,37,11,55
+all four,258,249,199,190,101,236

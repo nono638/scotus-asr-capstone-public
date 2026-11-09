@@ -1,0 +1,11 @@
+# EdAcc's other half: the 36 dev recordings, after the 40 test ones. Given after
+# edacc.yaml, which it changes in this one place only:
+#
+#   python -m scotus_asr.cli run --config config/qwen3.yaml --config config/corpora/edacc.yaml \
+#       --config config/corpora/edacc-dev.yaml --run-id run-edacc-qwen3
+#
+# Same run folders as the test split, so each engine's EdAcc is in one place and
+# the analysis tools see all 76 recordings.
+
+corpus:
+  split: dev

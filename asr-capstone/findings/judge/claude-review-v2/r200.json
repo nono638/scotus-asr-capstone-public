@@ -1,0 +1,1 @@
+{"case": "r200", "own": {"reason": "The engine writes \"sick\" for \"seek\" inside \"play how I go sick\", so the game hide and go seek is unreadable at this spot.", "meaning": "garbled", "severity": 2, "follow_up": "garble", "reference_doubt": "no"}}

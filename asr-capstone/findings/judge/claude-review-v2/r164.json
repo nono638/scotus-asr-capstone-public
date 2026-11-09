@@ -1,0 +1,1 @@
+{"case": "r164", "own": {"reason": "The engine writes 'gender' for 'genre', so the question becomes 'what kind of gender do you like'. The movie context helps, but the words now ask something different.", "meaning": "changed", "severity": 2, "follow_up": "changes meaning", "reference_doubt": "no"}}

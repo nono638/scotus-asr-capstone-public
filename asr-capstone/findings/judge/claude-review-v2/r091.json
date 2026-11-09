@@ -1,0 +1,1 @@
+{"case": "r091", "own": {"reason": "The engine adds the dropped \"are\", writing \"you're looking\" for \"you looking\". A dropped \"are\" carries no meaning, so nothing changes.", "meaning": "same", "severity": 0, "follow_up": "meaning kept", "reference_doubt": "no"}}

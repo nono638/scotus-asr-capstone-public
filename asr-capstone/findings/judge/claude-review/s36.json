@@ -1,0 +1,41 @@
+{
+ "case": "s36",
+ "own": {
+  "meaning": "changed",
+  "severity": 3,
+  "noticeable": "no",
+  "follow_up": "content lost, gap hidden",
+  "stakes": "yes",
+  "reason": "The engine left out \"that actually was not even enough\", the speaker's complaint that the money she was given fell short, and the next words (\"So because accommodation here is so expensive...\") still read on smoothly.",
+  "rule_right": "yes",
+  "rule_reason": "Six words are missing from the engine at the spot and all four other engines wrote all six.",
+  "more_plausible": "reference",
+  "plausible_how_clear": "Fairly clear: \"so because accommodation here is so expensive\" is a reason that only makes full sense after \"that was not even enough\"; four engines agree with the reference.",
+  "my_misses": [
+   {"reference": "THAT ACTUALLY WAS NOT EVEN ENOUGH", "engine": "", "severity": 3},
+   {"reference": "TWENTY TWO HUNDRED POUNDS", "engine": "20 200 pounds", "severity": 2},
+   {"reference": "THE TENANTS HERE", "engine": "the tents here", "severity": 1},
+   {"reference": "HOSPITAL HOSPITABLE", "engine": "hospital, hospital", "severity": 1}
+  ]
+ },
+ "review": {
+  "labelled/line": {"verdict": "partly", "why": "changed / 3 / stakes yes are right, but \"me to find a new place. So because accommodation here is so...\" reads on smoothly, so \"gap shows\" and \"noticeable: yes\" overstate what a reader would see."},
+  "labelled/minute": {"verdict": "partly", "why": "Good stakes_how (the lost complaint that the money was not enough), but again \"gap shows\" and \"noticeable\" when the engine's minute reads on without a visible break."},
+  "labelled/whole": {"verdict": "partly", "why": "Same: right on content and severity, but calling the result a \"fragmented and incomplete thought\" overstates it; the gap is hidden."},
+  "rule/minute": {"verdict": "agree", "why": "Copied both sides correctly and confirmed six words dropped."},
+  "blind/order1": {"verdict": "agree", "why": "Picked A, the reference, because the clause links the money to the cost of rooms: the right clue."},
+  "blind/order2": {"verdict": "agree", "why": "Picked B, the reference again; consistent across both orders."},
+  "rank/minute": {"verdict": "partly", "why": "Parakeet last is right, but it split the other four on \"new place\" vs \"a place\", which is outside the spot and changes nothing; all four wrote the clause and should share first place."}
+  ,"misses": [
+   {"reference": "IS THE THE THE APARTMENT", "engine": "herself is the apartment", "is_real": "yes", "matters": "no", "severity_fair": "too high", "note": "The start of the minute (the edges were to be ignored); \"herself\" is probably the end of an earlier word cut off. 3 is far too high."},
+   {"reference": "SHE JUST RENT IT TO ME", "engine": "she just rented to me", "is_real": "yes", "matters": "no", "severity_fair": "too high", "note": "Same meaning; 0."},
+   {"reference": "TWENTY TWO HUNDRED POUNDS", "engine": "20 200 pounds", "is_real": "yes", "matters": "yes", "severity_fair": "yes", "note": "The amount becomes unclear (20? 200? 20,200?); 2 is fair, though \"number format\" undersells it."},
+   {"reference": "THAT ACTUALLY WAS NOT EVEN ENOUGH", "engine": "", "is_real": "yes", "matters": "yes", "severity_fair": "yes", "note": "The flagged skip, correctly listed."},
+   {"reference": "THE TENANTS HERE", "engine": "the tents here", "is_real": "yes", "matters": "yes", "severity_fair": "too high", "note": "A wrong word, but obvious nonsense a reader would repair; 1 or 2, not 4 (it is rated above the lost clause)."},
+   {"reference": "HOSPITAL HOSPITABLE", "engine": "hospital, hospital", "is_real": "yes", "matters": "no", "severity_fair": "too high", "note": "The self-correction to \"hospitable\" is lost, but \"welcoming\" is right beside it; 1."}
+  ],
+  "overlooked": []
+ },
+ "worth_a_listen": {"yes": false, "why": "Four engines wrote the clause and the text makes the skip plain; at most a listen could settle \"twenty two hundred\", which several engines garbled."},
+ "summary": "Gemma got the substance right: an important clause (\"that actually was not even enough\") lost, severity 3, rule right, blind pair right. It overstated how visible the gap is, ranked engines on a detail outside the spot, and rated \"tents\" for \"tenants\" (4) above the lost clause."
+}

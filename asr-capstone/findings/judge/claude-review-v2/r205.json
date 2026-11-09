@@ -1,0 +1,1 @@
+{"case": "r205", "own": {"reason": "The engine writes \"they're going\" for \"they going\"; the dropped \"are\" is just written back in, and the meaning is the same.", "meaning": "same", "severity": 0, "follow_up": "meaning kept", "reference_doubt": "no"}}

@@ -1,0 +1,185 @@
+{
+ "case": "s27",
+ "X": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "different quantity",
+    "reason": "The engine changed the word 'SIX' to 'sixty', which alters the numerical value provided in the reference."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "different quantity",
+    "reason": "The engine incorrectly identifies the number of hours as 'sixty' instead of 'six'."
+   },
+   "whole": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "different quantity",
+    "reason": "The engine incorrectly transcribed the number 'six' as 'sixty'."
+   }
+  },
+  "noticeable": "no",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The difference between 'six' and 'sixty' fundamentally changes the scale of the comparison, making the speaker's claim about earning a monthly salary in a few hours seem much less impressive or even logically inconsistent."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The evidence correctly identifies that the reference contains 'SIX' and the engine contains 'sixty'."
+  },
+  "blind": {
+   "order1 (reference shown as B)": {
+    "picked": "engine",
+    "sure": 2,
+    "reason": "The speaker is comparing a monthly salary from a nine-to-five job to a single day's earnings from a freelance gig. 'Sixty hours' makes much more sense in the context of comparing a monthly wage to a specific amount of time worked in a day, whereas 'six hours' would imply the monthly pay was earned in just six hours, which is less likely to be the intended comparison for a 'no brainer' scenario involving a monthly salary."
+   },
+   "order2 (reference shown as A)": {
+    "picked": "engine",
+    "sure": 2,
+    "reason": "Version B makes much more sense in the context of comparing a monthly salary to a workload. Comparing a monthly salary to 'six hours' (Version A) is an extreme outlier, whereas comparing it to 'sixty hours' (Version B) provides a more logical comparison of workload/time spent."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Parakeet": 5,
+    "Canary": 1,
+    "Qwen3": 1,
+    "Granite": 1,
+    "Whisper": 1
+   },
+   "reason": "Engine 1 is the only one that incorrectly changes the word 'six' to 'sixty', while the others all correctly identify the word 'six'."
+  },
+  "misses": [
+   {
+    "reference": "working your own gig",
+    "engine": "working your own week",
+    "severity": 2,
+    "what": "working your own gig/week"
+   },
+   {
+    "reference": "freelancing gig",
+    "engine": "freelancing gift",
+    "severity": 2,
+    "what": "freelancing gig/gift"
+   },
+   {
+    "reference": "attains their results",
+    "engine": "attains that results",
+    "severity": 1,
+    "what": "attains their results/that results"
+   },
+   {
+    "reference": "the person results",
+    "engine": "the person is to the result",
+    "severity": 2,
+    "what": "the person results/the person is to the result"
+   },
+   {
+    "reference": "is there any people",
+    "engine": "if any other thing are there any people",
+    "severity": 1,
+    "what": "is there any people/if any other thing are there any people"
+   }
+  ]
+ },
+ "Y": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "different quantity",
+    "reason": "The engine added a syllable to the number, changing 'six' to 'sixty'."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "different quantity",
+    "reason": "The speech recognition engine added a zero to the number, changing 'six' to 'sixty'."
+   },
+   "whole": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "different quantity",
+    "reason": "The speech recognition engine misheard the number 'six' as 'sixty'."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The error changes the core point of the anecdote, turning a comparison of 6 hours to a monthly salary into a comparison of 60 hours."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The reference specifies the number six, while the engine incorrectly transcribed it as sixty."
+  },
+  "blind": {
+   "order1 (reference shown as B)": {
+    "picked": "engine",
+    "sure": 3,
+    "reason": "The context compares a monthly salary from a nine-to-five job to a single gig earned in six hours, making 'sixty hours' a logical comparison for a monthly workload, whereas 'six hours' would make the comparison nonsensical."
+   },
+   "order2 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "The speaker is comparing a single day's work (six hours) to a monthly salary, and 'six hours' makes logical sense in the context of the comparison, whereas 'sixty hours' is an unlikely way to refer to a monthly workload in this context."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Parakeet": 5,
+    "Canary": 1,
+    "Qwen3": 2,
+    "Granite": 4,
+    "Whisper": 3
+   },
+   "reason": "Engine 2 is the most accurate as it preserves the correct number 'six', while Engine 1 changes the meaning to 'sixty', and Engine 4 introduces nonsensical errors like 'old brain'."
+  },
+  "misses": [
+   {
+    "reference": "YOUR OWN GIG",
+    "engine": "your own week",
+    "severity": 3,
+    "what": "wrong word, changes meaning of the work type"
+   },
+   {
+    "reference": "I GOT A FREELANCING GIG",
+    "engine": "i got a freelancing gift",
+    "severity": 3,
+    "what": "wrong word, changes context from work to a present"
+   },
+   {
+    "reference": "IN A MONTH",
+    "engine": "in the months",
+    "severity": 2,
+    "what": "changed number/plurality"
+   },
+   {
+    "reference": "ALL WHAT HE SHOULD BE AFTER",
+    "engine": "all what you should be after",
+    "severity": 1,
+    "what": "changed pronoun"
+   },
+   {
+    "reference": "THE PERSON RESULTS SO I DON'T THINK PEOPLE SHOULD KICK AGAINST WORKING FROM HOME",
+    "engine": "the person is to the result so i don't think we should kick against working from home",
+    "severity": 3,
+    "what": "garbled phrase and changed subject pronoun"
+   },
+   {
+    "reference": "IS THERE ANY PEOPLE ARE THERE ANY PEOPLE SAYING",
+    "engine": "if any other thing are there any people saying",
+    "severity": 3,
+    "what": "added/changed words that alters the question structure"
+   },
+   {
+    "reference": "THE STORY YOU GIVE ABOUT A BOY",
+    "engine": "the story you gave about the",
+    "severity": 3,
+    "what": "omitted the subject of the story"
+   }
+  ]
+ }
+}

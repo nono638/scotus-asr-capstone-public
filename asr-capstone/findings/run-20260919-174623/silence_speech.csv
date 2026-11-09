@@ -1,0 +1,16 @@
+docket,engine,silence_start,silence_seconds,speech_seconds,speech_share,holds_speech,start_clock
+17-530,qwen3-asr-Qwen3-ASR-1.7B-hf,269.2,6.8,5.68,0.835,True,0:04:29
+17-530,qwen3-asr-Qwen3-ASR-1.7B-hf,540.64,7.44,7.28,0.978,True,0:09:00
+17-530,qwen3-asr-Qwen3-ASR-1.7B-hf,796.32,2.56,0.48,0.187,True,0:13:16
+17-530,qwen3-asr-Qwen3-ASR-1.7B-hf,812.16,7.84,7.55,0.963,True,0:13:32
+17-530,qwen3-asr-Qwen3-ASR-1.7B-hf,1088.64,3.36,3.36,1.0,True,0:18:08
+17-530,qwen3-asr-Qwen3-ASR-1.7B-hf,1551.6,3.36,0.11,0.033,False,0:25:51
+17-530,qwen3-asr-Qwen3-ASR-1.7B-hf,1623.84,12.16,11.84,0.974,True,0:27:03
+17-530,qwen3-asr-Qwen3-ASR-1.7B-hf,1772.72,2.16,1.23,0.569,True,0:29:32
+17-530,qwen3-asr-Qwen3-ASR-1.7B-hf,1904.64,3.36,2.66,0.792,True,0:31:44
+17-530,qwen3-asr-Qwen3-ASR-1.7B-hf,2174.32,5.76,5.6,0.972,True,0:36:14
+17-530,qwen3-asr-Qwen3-ASR-1.7B-hf,2259.36,2.8,0.51,0.182,True,0:37:39
+17-530,qwen3-asr-Qwen3-ASR-1.7B-hf,2348.64,2.16,0.86,0.398,True,0:39:08
+17-530,qwen3-asr-Qwen3-ASR-1.7B-hf,2377.12,4.16,0.0,0.0,False,0:39:37
+17-530,qwen3-asr-Qwen3-ASR-1.7B-hf,2448.64,3.52,3.52,1.0,True,0:40:48
+17-530,qwen3-asr-Qwen3-ASR-1.7B-hf,2719.04,4.96,4.96,1.0,True,0:45:19

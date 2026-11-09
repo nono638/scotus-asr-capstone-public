@@ -1,0 +1,1 @@
+{"case": "r258", "own": {"reason": "The engine writes \"usually\" for \"U Street\", losing the name of the street that was the strip of theaters. \"U Street\" is said just before, so a reader may still follow.", "meaning": "changed", "severity": 2, "follow_up": "changes meaning", "reference_doubt": "no"}}

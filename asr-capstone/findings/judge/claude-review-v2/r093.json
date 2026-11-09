@@ -1,0 +1,1 @@
+{"case": "r093", "own": {"reason": "The engine has \"Do you play anyway?\" for \"Do you play any instrument?\". The question no longer says what is being played, so the answer \"No\" loses its point.", "meaning": "garbled", "severity": 2, "follow_up": "garble", "reference_doubt": "no"}}

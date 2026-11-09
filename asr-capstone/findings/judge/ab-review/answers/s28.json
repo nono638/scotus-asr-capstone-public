@@ -1,0 +1,143 @@
+{
+ "case": "s28",
+ "X": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "different quantity",
+    "reason": "The engine replaces the word 'FIFTY' with the numeral '15', which changes the number being stated."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "different quantity",
+    "reason": "The engine incorrectly transcribed the number 'FIFTY' as '15'."
+   },
+   "whole": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "different quantity",
+    "reason": "The engine incorrectly transcribed the number 'FIFTY' as '15'."
+   }
+  },
+  "noticeable": "no",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The engine incorrectly identifies the number as '15' instead of 'FIFTY', which changes the fundamental meaning of the question being asked."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The evidence correctly identifies that the reference contains the word 'FIFTY' while the engine contains the number '15'."
+  },
+  "blind": {
+   "order1 (reference shown as B)": {
+    "picked": "engine",
+    "sure": 3,
+    "reason": "In Version A, the speaker asks about the last 15 years and then corrects themselves to 'fifty'. In Version B, the speaker asks about the last fifty years and then the transcript shows the correction 'fifty' as if it were a new thought, but the follow-up line 'fifty' makes more sense as a correction to a previous mistake. Looking at the flow, Version A shows the initial error (15) and the correction (fifty), which is a natural conversational pattern."
+   },
+   "order2 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "In Version A, the speaker says 'fifty', which is then corrected/confirmed by the subsequent dialogue where Speaker B says 'last fifteen years' and Speaker A repeats 'fifty'. In Version B, the marked text is '15', which contradicts the immediate follow-up dialogue where the speakers are clearly debating between 'fifteen' and 'fifty'."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Whisper": 1,
+    "Granite": 1,
+    "Qwen3": 1,
+    "Canary": 2,
+    "Parakeet": 1
+   },
+   "reason": "The engines are ranked based on whether they correctly identified the word 'FIFTY' as written in the reference, with numerical digits being considered equivalent to the word."
+  },
+  "misses": [
+   {
+    "reference": "be going",
+    "engine": "be good",
+    "severity": 2,
+    "what": "be going vs be good"
+   },
+   {
+    "reference": "we do so much with it",
+    "engine": "do so much with it",
+    "severity": 1,
+    "what": "we do so much with it vs do so much with it"
+   }
+  ]
+ },
+ "Y": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "different quantity",
+    "reason": "The engine transcribed the number '15' instead of the word 'FIFTY'."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "different quantity",
+    "reason": "The engine transcribed the number as '15' instead of 'FIFTY'."
+   },
+   "whole": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "different quantity",
+    "reason": "The speech recognition engine misidentified the spoken word 'fifty' as the number '15'."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The error changes the specific timeframe being discussed from fifty years to fifteen years, which is a significant factual discrepancy."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The reference specifies the word 'FIFTY' while the engine incorrectly transcribed it as the number '15'."
+  },
+  "blind": {
+   "order1 (reference shown as B)": {
+    "picked": "engine",
+    "sure": 3,
+    "reason": "In Version B, the speaker asks about the best invention of the last 'fifty' years, but then immediately corrects themselves to 'fifty' after the listener repeats 'fifteen', which makes no sense; Version A follows a logical flow where the speaker starts with 'fifteen', the listener repeats it, and the speaker then corrects it to 'fifty'."
+   },
+   "order2 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "Version A is more likely because the subsequent dialogue shows the speakers correcting and agreeing on the number 'fifty', whereas Version B's use of '15' contradicts the immediate follow-up dialogue."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Whisper": 3,
+    "Granite": 4,
+    "Qwen3": 1,
+    "Canary": 5,
+    "Parakeet": 2
+   },
+   "reason": "Engine 3 is the most accurate as it preserves the word 'fifty' and the subsequent dialogue correctly, while Engine 4 is the worst because it incorrectly changes the core subject of the question from 'fifty' to '15'."
+  },
+  "misses": [
+   {
+    "reference": "BRAXTON",
+    "engine": "Brixton",
+    "severity": 2,
+    "what": "different proper noun"
+   },
+   {
+    "reference": "WILL YOU BE GOING",
+    "engine": "will you be good",
+    "severity": 3,
+    "what": "changed verb/meaning"
+   },
+   {
+    "reference": "WE DO SO MUCH WITH IT",
+    "engine": "do so much with it",
+    "severity": 1,
+    "what": "missing subject"
+   }
+  ]
+ }
+}

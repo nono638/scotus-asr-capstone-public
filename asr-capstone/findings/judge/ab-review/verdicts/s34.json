@@ -1,0 +1,15 @@
+{"case": "s34",
+ "parts": {
+  "meaning/line": {"X": "right", "Y": "partly", "better": "X", "why": "An added 'Really?' after 'it's just uncomfortable' reads like the listener reacting. X calls it changed/2/continues the talk. Y calls it 'unrelated', but the word fits the talk well."},
+  "meaning/minute": {"X": "right", "Y": "partly", "better": "X", "why": "Same split: changed/2 for both, but Y's 'unrelated' does not match the text."},
+  "meaning/whole": {"X": "partly", "Y": "partly", "better": "tie", "why": "Both: changed/2/unrelated. The verdict is fine, but 'unrelated' is wrong for an interjection that fits the conversation."},
+  "noticeable": {"X": "right", "Y": "wrong", "better": "X", "why": "'...uncomfortable. Really? Yeah.' reads as normal back-and-forth. X says no, Y says yes."},
+  "stakes": {"X": "right", "Y": "right", "better": "tie", "why": "Both say maybe: an invented reaction, low stakes."},
+  "rule": {"X": "right", "Y": "right", "better": "tie", "why": "Both say yes: a word where the reference has nothing, with silence evidence."},
+  "blind": {"X": "wrong", "Y": "wrong", "better": "tie", "why": "The reference has nothing at the spot. Both pick the 'really' version in both orders, reading it as an intensifier."},
+  "rank": {"X": "right", "Y": "wrong", "better": "X", "why": "At the spot, only Parakeet left the word out; the other four all wrote 'Really'. X: Parakeet 1, the rest 2. Y ranks Parakeet last because of errors outside the spot ('Don't die'), which the task said to ignore."},
+  "misses": {"X": {"real_and_matter": 2, "trivial": 0, "not_real": 0, "important_missed": 0},
+             "Y": {"real_and_matter": 2, "trivial": 2, "not_real": 0, "important_missed": 0},
+             "better": "X", "why": "Both catch 'not socks' to 'but socks' and the invented 'Really? ... It's just like, you know' in place of 'what's the stop no'. Y adds 'would/will' and a dropped 'at', which change nothing."}
+ },
+ "overall": {"better": "X", "why": "X judges the spot on its own terms (rank, noticeable, follow-up) while Y ranks on text outside the spot and calls a natural interjection 'unrelated'."}}

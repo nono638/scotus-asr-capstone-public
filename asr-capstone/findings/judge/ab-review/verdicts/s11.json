@@ -1,0 +1,15 @@
+{"case": "s11",
+ "parts": {
+  "meaning/line": {"X": "right", "Y": "right", "better": "tie", "why": "Both: same, 0, only the stumble lost. Correct: 'I I' to 'I' is a stutter dropped."},
+  "meaning/minute": {"X": "right", "Y": "right", "better": "tie", "why": "Same answer and a fair reason in both."},
+  "meaning/whole": {"X": "right", "Y": "right", "better": "tie", "why": "Same answer in both; nothing in the minute suggests more."},
+  "noticeable": {"X": "right", "Y": "right", "better": "tie", "why": "Both say no; a single 'I' reads naturally."},
+  "stakes": {"X": "right", "Y": "right", "better": "tie", "why": "Both say no, with the right reason."},
+  "rule": {"X": "right", "Y": "right", "better": "tie", "why": "Both confirm the repeat label; the evidence matches the texts."},
+  "blind": {"X": "partly", "Y": "right", "better": "Y", "why": "X picks the reference in order 1 but the engine in order 2, so its pick follows the position. Y picks the reference both times with the same reason."},
+  "rank": {"X": "partly", "Y": "partly", "better": "Y", "why": "The meaning at the spot is the same for all five, so a full tie fits best. Both rank on keeping the repeat. X also drops Granite to 2 over a comma, which the task says to ignore, and skips rank 3. Y is at least internally consistent."},
+  "misses": {"X": {"real_and_matter": 0, "trivial": 4, "not_real": 0, "important_missed": 0},
+             "Y": {"real_and_matter": 0, "trivial": 3, "not_real": 0, "important_missed": 0},
+             "better": "tie", "why": "Both list the misheard names (Zurg to 'sort'/'Sora', Buzz to 'Boss'), which count as names. X also lists the dropped 'know' in 'you know that I am your father', which is a filler. X rates the names severity 3, which is too high. Neither misses a real meaning change."}
+ },
+ "overall": {"better": "Y", "why": "The two match on everything except the blind test, where X's pick flips with the order, and the rank, where X penalises punctuation."}}

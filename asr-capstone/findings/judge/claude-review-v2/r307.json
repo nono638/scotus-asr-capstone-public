@@ -1,0 +1,1 @@
+{"case": "r307", "own": {"reason": "The interviewer's whole question about school and subjects is missing; the engine runs on into the answer as if the speaker changed topic on his own, though the answer restates the topic.", "meaning": "changed", "severity": 2, "follow_up": "content lost, gap hidden", "reference_doubt": "no", "misspoke": "no"}}

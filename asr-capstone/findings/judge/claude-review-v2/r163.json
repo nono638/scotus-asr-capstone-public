@@ -1,0 +1,1 @@
+{"case": "r163", "own": {"reason": "The engine writes 'person' for 'pistol', so 'He had a pistol in his belt' becomes 'He had a person in his belt', which is nonsense. The key fact, a fourteen-year-old carrying a gun, is lost.", "meaning": "garbled", "severity": 3, "follow_up": "garble", "reference_doubt": "no"}}

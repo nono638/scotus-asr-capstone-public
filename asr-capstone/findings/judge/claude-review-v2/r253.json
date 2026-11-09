@@ -1,0 +1,1 @@
+{"case": "r253", "own": {"reason": "The engine writes \"dress a light\" for \"dress alike\", which is nonsense. It hides the detail that she and her dad wore matching clothes, though a reader might guess it from the sound.", "meaning": "garbled", "severity": 1, "follow_up": "garble", "reference_doubt": "no"}}

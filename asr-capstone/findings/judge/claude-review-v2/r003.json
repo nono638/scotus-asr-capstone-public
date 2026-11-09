@@ -1,0 +1,1 @@
+{"case": "r003", "own": {"reason": "The engine writes \"I quote my daughter\" for \"I caught my daughter\"; it reads as nonsense and loses that he caught her talking that way.", "meaning": "garbled", "severity": 2, "follow_up": "garble", "reference_doubt": "no"}}

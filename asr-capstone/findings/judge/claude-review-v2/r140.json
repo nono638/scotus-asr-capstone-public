@@ -1,0 +1,1 @@
+{"case": "r140", "own": {"reason": "The engine says the uncle \"wouldn't touch the wall\" where the reference says he \"went and touched\" it, reversing what he did. The next sentence about pressing his hand into it contradicts the engine.", "meaning": "opposite", "severity": 3, "follow_up": "negation added", "reference_doubt": "no"}}

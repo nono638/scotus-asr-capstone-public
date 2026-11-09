@@ -1,0 +1,1 @@
+{"case": "r066", "own": {"reason": "The engine writes 'a lean?' where the reference has 'a lien?', a homophone misspelling of the key legal term. A legal reader would likely still understand.", "meaning": "same", "severity": 1, "follow_up": "same thing", "reference_doubt": "no"}}

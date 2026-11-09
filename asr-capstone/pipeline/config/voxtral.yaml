@@ -1,0 +1,68 @@
+# The same corpus, the same scoring, a fifth model - and the first from a vendor
+# with no stake in any of the others.
+#
+# Four models in, two were NVIDIA's and trained on overlapping data, so where
+# Parakeet and Canary agreed against the rest, shared training explained it as
+# well as shared hearing. Mistral is independent of all four.
+#
+#   python -m scotus_asr.cli run --config config/voxtral.yaml --term 2017
+#
+# The engine can also run Mistral's streaming model (set model to
+# Voxtral-Mini-4B-Realtime-2602). That was never run: streaming is out of scope.
+
+paths:
+  sample_dir: "{scotus_corpus}/cases"
+  runs_dir: "{scotus_corpus}/runs"
+
+asr:
+  engine: voxtral
+
+  # July 2025, and built for transcribing recordings afterwards - which is what
+  # this pipeline does. 4.7 billion parameters, the largest model in the study.
+  #
+  # Not Mistral's newest and not their most accurate. The most accurate,
+  # `Voxtral Mini Transcribe 2`, is API-only at $0.003 a minute, about $11 for
+  # this corpus. Left out on purpose: a hosted model can change without notice,
+  # which would leave a number here that nobody could reproduce, its author
+  # included.
+  model: Voxtral-Mini-3B-2507
+  device: cuda
+  compute_type: bfloat16
+  language: en
+
+  # Voxtral produces text and no timings, so word timings come from
+  # Qwen3-ForcedAligner-0.6B-hf - the same aligner the Qwen3 and Canary runs
+  # used. That aligner also sets the chunk size: it takes five minutes at a time,
+  # and Voxtral itself would happily take thirty.
+  word_timestamps: true
+
+  # Decoding temperatures, and they are not Whisper's any more.
+  #
+  # This list used to be ignored here, on the view that temperature was a
+  # Whisper setting. That was wrong, and it made the comparison unfair.
+  # Detecting a repetition loop and re-decoding it hotter is a decoder-level
+  # technique - Whisper ships it, but nothing about it is Whisper-specific -
+  # and leaving it to Whisper alone meant Whisper was quietly allowed to retry
+  # its worst segments while this model was scored on its first attempt.
+  #
+  # The first value is used normally. The rest are only reached when a chunk
+  # comes back looking like a loop, which is measured three ways: over 250 words
+  # a minute (nobody speaks that fast; the loop that prompted this ran at 341)
+  # or a compression ratio over 4.0. See `asr/base.py` for where those numbers
+  # come from.
+  #
+  # Note the threshold is 4.0 and not Whisper's 2.4. 2.4 is calibrated for
+  # Whisper's 30-second segments, and these chunks are far longer - longer
+  # natural prose compresses better whatever it says. Scored at 2.4, 71% of
+  # the finished Qwen3 run and 92% of Parakeet's would be flagged, and every
+  # one of them reads as ordinary argument.
+  temperatures: [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
+
+  # Still Whisper's, still ignored here rather than faked:
+  #
+  #   beam_size, compression_ratio_threshold, log_prob_threshold,
+  #   no_speech_threshold, condition_on_previous_text, vad_filter
+
+scoring:
+  omission_min_words: 25
+  omission_merge_gap: 2

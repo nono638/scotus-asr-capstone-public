@@ -1,0 +1,37 @@
+{
+ "canary-1b-v2": {
+  "run": "run-20260921-033436",
+  "config": "config/canary.yaml",
+  "cases": [
+   "16-111",
+   "17-312"
+  ]
+ },
+ "granite-speech-4.1-2b": {
+  "run": "run-20260923-011250",
+  "config": "config/granite.yaml",
+  "cases": [
+   "15-1439",
+   "17-459",
+   "17-494"
+  ]
+ },
+ "granite-speech-4.1-2b-plus": {
+  "run": "run-20260924-164308",
+  "config": "config/granite-plus.yaml",
+  "cases": [
+   "16-111",
+   "16-1371",
+   "16-285",
+   "16-498",
+   "17-459"
+  ]
+ },
+ "parakeet-tdt-0.6b-v3": {
+  "run": "run-20260924-064733",
+  "config": "config/parakeet.yaml",
+  "cases": [
+   "16-498"
+  ]
+ }
+}

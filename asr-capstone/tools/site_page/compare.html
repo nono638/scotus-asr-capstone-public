@@ -1,0 +1,77 @@
+<!doctype html>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>/*TITLE*/</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Libre+Caslon+Text:ital,wght@0,400;0,700;1,400&family=Public+Sans:wght@400;500;600;700&family=Courier+Prime:wght@400;700&display=swap">
+<style>
+/*TOKENS*/
+/*SITECSS*/
+</style>
+
+<!-- Every data set side by side: the engines' error rates, and the kinds of
+     failure per hour. Filled by tools/build_site.py. -->
+<div class="wrap">
+  <nav class="site-nav" id="nav" aria-label="Pages"></nav>
+  <h1>The big picture: four data sets side by side</h1>
+  <p class="lede">The same engines on four kinds of speech. The error rate says how many words they get wrong; the kinds of failure say what the wrong words do.</p>
+
+  <section>
+    <h2 class="column">Error rate by engine and data set</h2>
+    <p class="column">Errors over every reference word, in percent, on the benchmark rule (case, punctuation and fillers ignored). Canary and Granite were run on EdAcc only.</p>
+    <div class="switch-row"><div class="switch" id="ds-switch" role="group" aria-label="Data set"></div></div>
+    <div id="rate-chart" style="max-width: 46rem; margin-top: 14px"></div>
+    <div id="rate-table" style="max-width: 52rem; margin-top: 22px"></div>
+    <p class="source">The “All” columns of each data set's error-rate table; the Supreme Court's is the average over its four terms, weighted by arguments.</p>
+  </section>
+
+  <section>
+    <h2 class="column">Kinds of failure per hour, by data set</h2>
+    <p class="column">What the Python rules found per hour of audio, averaged over Qwen3, Whisper and Parakeet, before any judge or ear has looked. The last two columns say how many of the rule's “not” cases Claude Sonnet has judged, and what share of them it says really reverse the meaning: the rule's count times that share is a rough rate of real reversals.</p>
+    <div id="class-table" style="max-width: 70rem; margin-top: 14px"></div>
+    <p class="source">From <code>findings/failures/&lt;kind&gt;/counts.csv</code> and <code>findings/judge/answers-claude-sonnet-5-5-full-v1.csv</code>. Preliminary: the judged cases are not a random sample of every data set's “not” cases in the same proportions.</p>
+  </section>
+
+  <footer><p id="built"></p></footer>
+</div>
+
+<script>
+/*CHART*/
+</script>
+<script>
+/*TABLE*/
+</script>
+<script>
+/*SITEJS*/
+</script>
+<script>
+const D = /*DATA*/{};
+const engineColour = e => `var(--${e.toLowerCase()}, var(--accent))`;
+siteNav($("#nav"), D.pages, "compare.html");
+
+function rateChart(key) {
+  const box = $("#rate-chart");
+  box.textContent = "";
+  Chart.plain(box, {
+    rows: D.rates.filter(r => r[key] !== null).sort((a, b) => a[key] - b[key])
+      .map(r => ({ label: r.engine, value: r[key], colour: engineColour(r.engine) })),
+    fmt: v => v.toFixed(1) + "%",
+  });
+}
+switchOf($("#ds-switch"), D.datasets.map(d => [d.key, d.name]), D.datasets[0].key, rateChart);
+rateChart(D.datasets[0].key);
+Table.sortable($("#rate-table"), {
+  columns: [{ key: "engine", label: "Engine" }, ...D.datasets.map(d => ({ key: d.key, label: d.name, num: true, fmt: pct }))],
+  rows: D.rates,
+});
+
+const two = v => (v === null || v === undefined) ? "–" : v.toFixed(2);
+Table.sortable($("#class-table"), {
+  columns: [{ key: "dataset", label: "Data set" },
+    ...D.classColumns.map(c => ({ key: c.key, label: c.label + ", per hour", num: true, fmt: two })),
+    { key: "judged", label: "“Not” cases judged", num: true },
+    { key: "share", label: "Judged a real reversal", num: true, fmt: v => v === null ? "–" : v + "%" }],
+  rows: D.classes,
+});
+$("#built").textContent = `Built ${D.built} by tools/build_site.py from the files in findings/.`;
+</script>

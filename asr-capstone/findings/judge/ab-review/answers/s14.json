@@ -1,0 +1,169 @@
+{
+ "case": "s14",
+ "X": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 2,
+    "follow_up": "meaning changed",
+    "reason": "The speech recognition engine added an '-ed' suffix to the verb, changing the tense from present to past."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 2,
+    "follow_up": "meaning changed",
+    "reason": "The engine added an '-ed' suffix to the verb, changing the tense from the speaker's original grammar to standard past tense."
+   },
+   "whole": {
+    "meaning": "changed",
+    "severity": 1,
+    "follow_up": "meaning changed",
+    "reason": "The engine incorrectly applied standard English past tense morphology to a speaker using African American English present tense."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The engine changed the speaker's use of African American English (zero copula/subject-verb agreement) to standard past tense, which erases the sociolinguistic feature being studied."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The reference contains the AAE feature of zero copula/third-person singular -s ('He work'), while the engine incorrectly regularized it to the standard past tense ('he worked')."
+  },
+  "blind": {
+   "order1 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 2,
+    "reason": "In African American Vernacular English (AAVE), the zero-marking of the third-person singular present tense (e.g., 'he work' instead of 'he worked' or 'he works') is a common feature, making 'he work' more sociolinguistically plausible in this corpus."
+   },
+   "order2 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "In African American Vernacular English (AAVE), the zero copula or zero marker for third-person singular present tense (e.g., 'he work') is a common feature, making 'he work' more sociolinguistically consistent with the rest of the transcript than the standard 'he worked'."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Whisper": 1,
+    "Parakeet": 2,
+    "Qwen3": 2
+   },
+   "reason": "Engine 1 is the only one that preserves the present tense 'work' used in the reference, whereas Engines 2 and 3 incorrectly change the tense to 'worked'."
+  },
+  "misses": [
+   {
+    "reference": "in they life",
+    "engine": "in their life",
+    "severity": 2,
+    "what": "changed dialectal 'they' to standard 'their'"
+   },
+   {
+    "reference": "after like once they go there",
+    "engine": "after? Yeah. Once they go there",
+    "severity": 3,
+    "what": "removed speaker's affirmation and restructured sentence"
+   },
+   {
+    "reference": "He work for Home Depot",
+    "engine": "he worked for Home Depot",
+    "severity": 2,
+    "what": "changed dialectal present tense to standard past tense"
+   },
+   {
+    "reference": "I'm'a I'm'a",
+    "engine": "I'm gonna I'm gonna",
+    "severity": 1,
+    "what": "transcribed phonetic contraction as standard English"
+   },
+   {
+    "reference": "I just wanna get",
+    "engine": "I just want to get",
+    "severity": 1,
+    "what": "transcribed 'wanna' as 'want to'"
+   },
+   {
+    "reference": "I don't wanna be here",
+    "engine": "I don't want to be here",
+    "severity": 1,
+    "what": "transcribed 'wanna' as 'want to'"
+   }
+  ]
+ },
+ "Y": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 2,
+    "follow_up": "meaning changed",
+    "reason": "The engine added a past tense suffix '-ed' to the verb 'work', changing the tense from present to past."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 2,
+    "follow_up": "meaning changed",
+    "reason": "The engine added an '-ed' suffix to the verb 'work', changing the tense from present to past."
+   },
+   "whole": {
+    "meaning": "changed",
+    "severity": 2,
+    "follow_up": "meaning changed",
+    "reason": "The engine added an '-ed' suffix to the verb 'work', changing the tense from present to past."
+   }
+  },
+  "noticeable": "no",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The engine adds an '-ed' suffix, which changes the grammatical feature from the speaker's use of zero-marked present tense (typical of AAE) to the standard past tense."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The evidence correctly identifies that the reference uses the AAE form 'He work' (no -s) while the engine incorrectly applied standard past tense 'he worked'."
+  },
+  "blind": {
+   "order1 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 2,
+    "reason": "The speaker is discussing their father's current or general occupation ('what does your dad do'). In African American Vernacular English (AAVE), the zero-marked present tense ('he work') is a common feature for habitual actions or general truths, whereas 'he worked' implies a completed past action. Given the context of the interviewer asking about his current job, 'he work' is a highly plausible grammatical construction for this dialect."
+   },
+   "order2 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 2,
+    "reason": "The speaker is describing their father's current employment status ('that's all i know'), and in African American Vernacular English (AAVE), the zero copula or habitual 'he work' is a common feature, whereas 'he worked' implies he no longer works there. Given the context of the conversation, 'he work' is a more natural fit for the dialect and the present-tense implication of the question."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Whisper": 1,
+    "Parakeet": 2,
+    "Qwen3": 2
+   },
+   "reason": "The reference uses the non-standard 'He work', so Engine 1 is the most accurate for preserving the speaker's grammar, while Engines 2 and 3 incorrectly change the tense to 'worked'."
+  },
+  "misses": [
+   {
+    "reference": "He work for Home Depot",
+    "engine": "he worked for Home Depot",
+    "severity": 2,
+    "what": "tense change for dad's job"
+   },
+   {
+    "reference": "in they life",
+    "engine": "in their life",
+    "severity": 1,
+    "what": "pronoun change in life context"
+   },
+   {
+    "reference": "after like once they go there?",
+    "engine": "after?",
+    "severity": 1,
+    "what": "omission of 'after like once they go there'"
+   },
+   {
+    "reference": "I'm'a I'm'a",
+    "engine": "I'm gonna I'm gonna",
+    "severity": 0,
+    "what": "standardization of 'I'm'a'"
+   }
+  ]
+ }
+}

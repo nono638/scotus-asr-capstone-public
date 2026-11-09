@@ -1,0 +1,6 @@
+when_this_model_misses,Qwen3-ASR-1.7B-hf,canary-1b-v2,granite-speech-4.1-2b,parakeet-tdt-0.6b-v3,whisper-large-v3
+Qwen3-ASR-1.7B-hf,1.0,0.817,0.84,0.801,0.823
+canary-1b-v2,0.527,1.0,0.759,0.608,0.646
+granite-speech-4.1-2b,0.478,0.669,1.0,0.541,0.604
+parakeet-tdt-0.6b-v3,0.634,0.746,0.753,1.0,0.72
+whisper-large-v3,0.617,0.75,0.796,0.682,1.0

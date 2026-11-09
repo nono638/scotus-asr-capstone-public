@@ -1,0 +1,25 @@
+part,engine,recordings,words,benchmark,verbatim
+Spanish/Portuguese,Whisper,31,235993,13.22,25.53
+Spanish/Portuguese,Qwen3,31,235993,10.96,25.1
+Spanish/Portuguese,Parakeet,31,235993,12.33,28.74
+English,Whisper,26,211688,9.76,23.31
+English,Qwen3,26,211688,7.1,22.35
+English,Parakeet,26,211688,7.7,23.51
+Asian,Whisper,28,177628,15.56,27.2
+Asian,Qwen3,28,177628,18.1,29.47
+Asian,Parakeet,28,177628,16.75,30.59
+Germanic,Whisper,12,129311,9.73,23.47
+Germanic,Qwen3,12,129311,7.04,22.04
+Germanic,Parakeet,12,129311,8.88,25.0
+Other Romance,Whisper,13,131940,14.29,29.03
+Other Romance,Qwen3,13,131940,12.44,28.4
+Other Romance,Parakeet,13,131940,13.9,34.0
+African,Whisper,5,44600,12.34,23.51
+African,Qwen3,5,44600,10.6,23.79
+African,Parakeet,5,44600,11.26,25.4
+Slavic,Whisper,10,57949,11.13,27.99
+Slavic,Qwen3,10,57949,9.64,26.22
+Slavic,Parakeet,10,57949,11.4,30.61
+all,Whisper,125,989109,12.42,25.62
+all,Qwen3,125,989109,11.01,25.35
+all,Parakeet,125,989109,11.79,28.15

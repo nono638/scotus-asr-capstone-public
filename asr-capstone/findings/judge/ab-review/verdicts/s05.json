@@ -1,0 +1,15 @@
+{"case": "s05",
+ "parts": {
+  "meaning/line": {"X": "right", "Y": "right", "better": "tie", "why": "Both say opposite, severity 4, negation lost; taking the reference as what was said, weren't -> were is a literal reversal."},
+  "meaning/minute": {"X": "right", "Y": "right", "better": "tie", "why": "Same answer from both. Neither notices that in the minute the engine's 'were going to have in 2023. Now we kick that off into the future' reads more naturally than the reference, but the label holds against the reference."},
+  "meaning/whole": {"X": "right", "Y": "right", "better": "tie", "why": "Both correct by the reference."},
+  "noticeable": {"X": "wrong", "Y": "right", "better": "Y", "why": "The engine's sentence fits smoothly with 'Now we kick that off into the future', so a reader would not notice anything; Y says no, X says yes."},
+  "stakes": {"X": "partly", "Y": "partly", "better": "tie", "why": "Both say yes, but both reasons misdescribe the engine's text: it does not claim the 2023 expiry was kept ('a liability being present') or not removed; it still says it was pushed into the future. Maybe was the fairer answer."},
+  "rule": {"X": "right", "Y": "right", "better": "tie", "why": "Both confirm the literal weren't/were evidence."},
+  "blind": {"X": "partly", "Y": "partly", "better": "tie", "why": "Both pick Version A in both orders (the engine first, then the reference), each time sure 3, so the pick follows position, not the text."},
+  "rank": {"X": "right", "Y": "right", "better": "tie", "why": "Both put Whisper (the only 'weren't') first and the other two tied second."},
+  "misses": {"X": {"real_and_matter": 1, "trivial": 2, "not_real": 1, "important_missed": 0},
+             "Y": {"real_and_matter": 1, "trivial": 2, "not_real": 0, "important_missed": 0},
+             "better": "Y", "why": "Both find the reversal, the added 'if you will' and the added 'Ecopetrol' (a filled-in subject that changes little; Y over-scores it at 3). X also lists 'we're operating in' as a difference with 'no difference' as its own note."}
+ },
+ "overall": {"better": "Y", "why": "Same on most parts; Y is right that a reader would not notice the slip and its list has no empty item."}}

@@ -1,0 +1,1 @@
+{"case": "a001", "own": {"reason": "The engine writes the noun 'lockdown' where the reference has 'locked down'; it is the same word, and the engine's form is the correct one for a noun here.", "meaning": "same", "severity": 0, "follow_up": "same thing", "reference_doubt": "maybe", "misspoke": "no"}}

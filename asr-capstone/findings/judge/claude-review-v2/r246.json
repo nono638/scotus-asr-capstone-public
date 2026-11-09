@@ -1,0 +1,1 @@
+{"case": "r246", "own": {"reason": "The engine writes \"high school\" for \"middle school\". That is a wrong detail, and it clashes with the \"fifth to sixth grade\" that follows.", "meaning": "changed", "severity": 2, "follow_up": "changes meaning", "reference_doubt": "no"}}

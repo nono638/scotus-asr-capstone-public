@@ -1,0 +1,820 @@
+list,docket,clock,record,machines_wrote,judge_primary,judge_secondary,judge_reason
+against,15-1204_OT2017,0:17:42,only,,words left out or added,,The word 'only' appears in the official transcript but is missing from the machine output.
+against,15-1204_OT2017,0:19:22,him to,into,words left out or added,misheard word,The machines replaced the phrase 'him to' with the single word 'into'.
+against,15-1204_OT2017,0:27:30,alien is,aliens,small word or ending,,The machine replaced the phrase 'alien is' with the plural noun 'aliens'.
+against,15-1204_OT2017,0:31:44,relief,belief,misheard word,,The word 'relief' was replaced by the phonetically similar word 'belief'.
+against,15-1204_OT2017,0:39:51,"Well,",why,words left out or added,disfluency,The machines replaced a filler word and a restart with a different word.
+against,15-1204_OT2017,0:41:48,"know,",,disfluency,words left out or added,"The machine omitted the filler phrase 'you know,' which is a classic disfluency."
+against,15-1204_OT2017,0:47:52,"Counsel,",so,words left out or added,speaker change or overlap,The machines replaced the name of the speaker with a filler word during a transition.
+against,15-1204_OT2017,0:48:16,classes that,as what,words left out or added,misheard word,"The machines replaced 'classes that' with 'as what', involving both missing words and a phonetic substitution."
+against,15-1204_OT2017,0:48:34,we've foreclosed,foreclose,words left out or added; small word or ending,disfluency,The machines omitted the contraction 'we've' and changed the verb tense/ending of 'foreclosed'.
+against,15-1204_OT2017,0:48:36,foreclosed,,words left out or added,disfluency,The machine omitted a word that followed a speaker's self-correction/restart.
+against,15-1204_OT2017,0:50:40,excludeables.,excludables,not a real difference,,The difference is only in the spelling of the word 'excludables'.
+against,15-1204_OT2017,0:58:13,or a,of,words left out or added,misheard word,The machines replaced the phrase 'or a' with the single word 'of'.
+against,15-1204_OT2017,0:58:21,or a,of,words left out or added,small word or ending,The machines replaced the phrase 'or a' with the single word 'of'.
+against,15-1204_OT2017,0:37:28,,like,words left out or added,,The machine inserted the word 'like' where the official transcript has no text.
+against,15-1204_OT2017,0:56:12,,little,words left out or added,misheard word,"The machines replaced a specific legal citation with a completely different, unrelated word."
+against,15-1439,0:05:21,"""except""",accept,misheard word,,The words 'except' and 'accept' are homophones in this context.
+against,15-1439,0:07:10,"""except""",accept,misheard word,,The words 'except' and 'accept' are homophones in this context.
+against,15-1439,0:07:33,"""except""",accept,misheard word,,The words 'except' and 'accept' are homophones in this context.
+against,15-1439,0:15:42,purposeful,purposive,name or legal term,small word or ending,The difference is between a common adjective and a specific legal term of art ('purposive' interpretation).
+against,15-1439,0:20:09,reply,apply,misheard word,,The words 'reply' and 'apply' sound similar in clear speech.
+against,15-1439,0:21:12,ousted,of,words left out or added,,The word 'ousted' is present in the official transcript but missing from the machine output.
+against,15-1439,0:23:47,tell,sell,misheard word,,The words 'tell' and 'sell' sound similar in clear speech.
+against,15-1439,0:26:10,reserve.,preserve,misheard word,,The word 'reserve' was replaced with the phonetically similar word 'preserve'.
+against,15-1439,0:30:44,except,accept,misheard word,,The words 'except' and 'accept' are homophones in this context.
+against,15-1439,0:39:16,"""except""",accept,misheard word,,The words 'except' and 'accept' are homophones in this context.
+against,15-1439,0:40:10,"""except""",accept,misheard word,,The words 'except' and 'accept' are homophones in this context.
+against,15-1439,0:40:18,"""except",accept,misheard word,,The words 'except' and 'accept' are homophones.
+against,15-1439,0:41:26,"""except""",accept,misheard word,,The words 'except' and 'accept' are homophones in this context.
+against,15-1439,0:45:07,"securities.""",security,small word or ending,,The difference is between the plural 'securities' and the singular 'security'.
+against,15-1439,0:47:55,represented,representative,small word or ending,,The difference is between two forms of the same root word (represented vs representative).
+against,15-1439,0:51:55,applied,apply,small word or ending,,The difference is between the past tense 'applied' and the present tense 'apply'.
+against,15-1439,0:57:36,"""except""",accept,misheard word,,The words 'except' and 'accept' are homophones in this context.
+against,15-1439,0:57:46,except,accept,misheard word,,The word 'except' was replaced with the homophone 'accept'.
+against,15-1439,0:57:50,"""except""",accept,misheard word,,The words 'except' and 'accept' are homophones in this context.
+against,15-1439,1:05:48,statute is,statutes,small word or ending,words left out or added,The machine replaced the phrase 'statute is' with the plural noun 'statutes'.
+against,15-1439,0:12:48,,look,words left out or added,,The machine inserted a word that does not appear in the official transcript.
+against,15-1485,0:27:07,know,no,misheard word,,The word 'know' was transcribed as the similar-sounding word 'no'.
+against,15-1485,0:34:35,"thirdhand,",hand,words left out or added,not a real difference,The machines omitted the prefix 'third' and only captured the root 'hand'.
+against,15-1485,0:44:27,where -- or,or that,words left out or added,disfluency,The machine replaced a disfluent restart ('where -- or') with different words ('or that').
+against,15-1485,0:47:28,if I work,,words left out or added,disfluency,The machine omitted a parenthetical phrase that functions as a spoken stumble or aside.
+against,15-1498_OT2017,0:12:15,know,,words left out or added,,The word 'know' appears in the official transcript but is missing from the machine output.
+against,15-1498_OT2017,0:14:36,report or,reporter,words left out or added,misheard word,The machines replaced the phrase 'report or' with the single word 'reporter'.
+against,15-1498_OT2017,0:17:02,course,case,misheard word,,The word 'course' was replaced by the similar-sounding word 'case'.
+against,15-1498_OT2017,0:17:53,Now,no,misheard word,disfluency,The machine replaced the word 'Now' with 'no' and the sequence occurs during a speaker transition and a stumble.
+against,15-1498_OT2017,0:19:33,am,,words left out or added,disfluency,The machine omitted the word 'am' following a speaker's restart.
+against,15-1498_OT2017,0:46:25,issue,,words left out or added,,The word 'issue' appears in the official transcript but is completely missing from the machine output.
+against,15-1498_OT2017,0:49:56,aggregated,aggravated,misheard word,,The machine replaced the spoken 'aggregated' with 'aggravated'.
+against,15-1509,0:02:53,standard is,standards,small word or ending,,The difference is between the singular 'standard is' and the plural 'standards'.
+against,15-1509,0:03:11,seamen,semen,name or legal term,misheard word,The legal term 'seamen' was transcribed as a phonetically similar but different word.
+against,15-1509,0:03:18,"seaman,",semen,name or legal term,misheard word,The legal term 'seaman' was transcribed as a phonetically similar but different word.
+against,15-1509,0:03:25,seaman,semen,misheard word,,The machine replaced a specific legal term with a phonetically similar but different word.
+against,15-1509,0:06:05,"Now,",no,misheard word,,The word 'Now' was misheard as 'no'.
+against,15-1509,0:08:46,arm's-length,arms,not a real difference,,The difference is only the presence of a hyphen and an apostrophe in a standard term.
+against,15-1509,0:12:07,knew,known,small word or ending,,The difference is between two forms of the same verb (knew vs. known).
+against,15-1509,0:17:12,weighting.,waiting,misheard word,,The word 'weighting' was replaced by the phonetically similar word 'waiting'.
+against,15-1509,0:29:09,say,said,small word or ending,,The difference is between the present tense 'say' and the past tense 'said'.
+against,15-1509,0:38:27,"though,",that,words left out or added,small word or ending,The word 'though' was replaced by 'that'.
+against,15-1509,0:49:50,taint,,words left out or added,disfluency,"The word 'taint' was omitted by the machine, following a disfluent restart."
+against,15-1509,0:53:12,arm's-length,arms,small word or ending,not a real difference,The machine omitted the hyphenated suffix and the word 'length'.
+against,15-1509,0:53:48,ejusdem generis,houston generous,name or legal term; misheard word,,The legal term 'ejusdem generis' was misheard as the phonetically similar 'houston generous'.
+against,15-1509,0:54:08,arm's-length,arms,small word or ending,not a real difference,The machine omitted the hyphenated suffix '-length' and the possessive apostrophe.
+against,15-1509,0:56:01,arm's-length,arms,small word or ending,not a real difference,"The machine omitted the hyphen and the word 'length', reducing the compound adjective to a plural noun."
+against,15-1509,0:56:19,arm's-length,arms,small word or ending,not a real difference,The machine omitted the hyphenated second part of the compound adjective 'arm's-length'.
+against,15-1509,0:57:16,arm's-length,arms,not a real difference,small word or ending,The difference is between a hyphenated compound adjective and a plural noun form of the same word.
+against,16-1011,0:09:52,increase,inquiries,misheard word,,The word 'increase' was replaced by the phonetically similar word 'inquiries'.
+against,16-1011,0:20:20,"profit,",,words left out or added,disfluency,The machines omitted the word 'profit' which occurs during a spoken restart/stumble.
+against,16-1011,1:00:12,complimented,complemented,not a real difference,,"The words are homophones with different meanings, but in this context, it is a matter of spelling/word choice for the same sound."
+against,16-1011,0:51:16,,pauls,name or legal term,,The machine misidentified the case name 'Palsgraf' as 'pauls'.
+against,16-1027,0:02:40,And,mean,words left out or added,misheard word,The word 'And' was replaced by the entirely different word 'mean'.
+against,16-1027,0:20:36,tarp.,top,misheard word,,The word 'tarp' was replaced with the phonetically similar word 'top'.
+against,16-1027,0:32:17,there's,as,words left out or added,misheard word,The machines replaced the phrase 'there's' with the word 'as'.
+against,16-1027,0:34:24,and now,,words left out or added,,The machines completely omitted the phrase 'and now'.
+against,16-1027,0:40:38,in our,on,words left out or added,small word or ending,The machines replaced the phrase 'in our' with the single word 'on'.
+against,16-1027,0:50:54,and opened,into open,misheard word; words left out or added,,"The machines replaced 'and opened' with 'into open', involving both a word swap and a change in word count."
+against,16-1027,0:54:23,"I mean,",,disfluency,words left out or added,The machines omitted a filler phrase used as a self-correction.
+against,16-1067,0:08:59,"know, you mention",mentioned,disfluency; words left out or added,,The machine replaced a filler phrase and a repeated pronoun with a single word.
+against,16-1067,0:10:01,minimal,minimum,small word or ending,,The difference is between two forms of the same root word (minimal vs. minimum).
+against,16-1067,0:32:13,"""satisfy""",satisfied,small word or ending,,The difference is only the ending of the word 'satisfy'.
+against,16-1067,0:37:33,"See,",so,words left out or added,misheard word,The word 'See' was replaced by the word 'so'.
+against,16-1067,0:39:01,inclusion,conclusion,misheard word,,The words 'inclusion' and 'conclusion' sound very similar in clear speech.
+against,16-1067,0:44:31,he -- I,we,disfluency; words left out or added,,The machine replaced a stuttered self-correction ('he -- I') with a single different word ('we').
+against,16-1067,0:48:06,under,in,words left out or added,,The word 'under' is missing from the machine output.
+against,16-1067,0:26:47,,parenthetical,words left out or added,,The machine replaced the actual content of the parenthetical with the word 'parenthetical'.
+against,16-1067,0:39:08,,got,words left out or added,disfluency,The machine inserted a word where the official transcript shows a gap following a disfluent restart.
+against,16-111,0:00:17,violate,,words left out or added,,The word 'violate' is present in the official transcript but completely missing from the machine output.
+against,16-111,0:13:19,"functionable,",functional,small word or ending,,The difference is between two forms of the same root word (functionable vs functional).
+against,16-111,0:13:50,"All right,",well,words left out or added,disfluency,The machines replaced the phrase 'All right' with a filler word 'well' and omitted the rest of the phrase.
+against,16-111,0:21:42,a,cross,words left out or added,,The machine omitted the indefinite article 'a' before the word 'cross'.
+against,16-111,0:23:00,abstention,exemption,name or legal term,,The difference is between two distinct legal doctrines that sound similar.
+against,16-111,0:34:03,ask you,,words left out or added,disfluency,The machines omitted the phrase 'ask you' which follows a speaker's restart/stumble.
+against,16-111,0:34:06,forums.,forms,misheard word,,The word 'forums' was replaced by the phonetically similar word 'forms'.
+against,16-111,0:37:46,afford,avoid,misheard word,,The words 'afford' and 'avoid' sound similar in speech.
+against,16-111,0:43:00,accept,except,misheard word,,The words 'accept' and 'except' sound nearly identical in speech.
+against,16-111,0:51:14,say,,disfluency,words left out or added,The machine omitted a word that is part of a spoken stumble/restart.
+against,16-111,1:17:34,"Your Honor,",,words left out or added,,The machines completely omitted the address to the judge.
+against,16-111,0:00:17,,violate,words left out or added,,The machine omitted the word 'their' before 'violate'.
+against,16-111,0:32:02,,master,name or legal term,misheard word,The machine replaced a specific case name with a phonetically similar common word.
+against,16-1140,0:00:41,taking,take,small word or ending,,"The word 'taking' is replaced by 'take', which is a change in the word ending."
+against,16-1140,0:11:38,comments on its,common sense,words left out or added,,The machine replaced a multi-word phrase with a completely different phrase.
+against,16-1140,0:22:45,tied,time,misheard word,,The word 'tied' was transcribed as the phonetically similar word 'time'.
+against,16-1140,0:24:19,sauce is,sauces,words left out or added,small word or ending,The machines omitted the word 'is' and changed the singular 'sauce' to the plural 'sauces'.
+against,16-1140,0:28:53,"expires,",expired,small word or ending,disfluency,The word ending changed from 'expires' to 'expired' and it occurs immediately before a speaker's restart.
+against,16-1140,0:29:10,"mean,",,disfluency,words left out or added,The machines omitted a filler phrase ('I mean') following a stutter.
+against,16-1140,0:42:22,all together,altogether,not a real difference,,The difference is between the two-word phrase 'all together' and the single-word adverb 'altogether'.
+against,16-1140,0:51:23,"is. I mean,",,disfluency; words left out or added,,The machine omitted a filler phrase ('I mean') and the verb 'is'.
+against,16-1140,0:51:24,it's,means,misheard word,,"The machine replaced 'it's' with 'means', which are phonetically distinct but occur in a similar rhythmic position."
+against,16-1140,0:23:27,,sauce,words left out or added,small word or ending,"The machine wrote 'sauce' instead of 'sauces for the goose', omitting several words and changing the word ending."
+against,16-1144,0:05:15,government is,governments,small word or ending,,The machine replaced the phrase 'government is' with the plural noun 'governments'.
+against,16-1144,0:07:27,excuse me -- always,,disfluency,words left out or added,The machine omitted a self-correction and a repeated word.
+against,16-1144,0:12:29,concede,see,misheard word,,The word 'concede' was replaced by the phonetically similar word 'see'.
+against,16-1144,0:26:19,role,roll,misheard word,,"The word 'role' was swapped for 'roll', which are homophones."
+against,16-1144,0:28:19,exacting. So,exact,words left out or added,small word or ending,The machines omitted the sentence-ending punctuation and the subsequent word 'So'.
+against,16-1150,0:04:04,proceed to,preceded,misheard word,small word or ending,The machine replaced 'proceed to' with the phonetically similar 'preceded'.
+against,16-1150,0:12:36,exercised,exercises,small word or ending,,The difference is only in the verb tense ending of the word 'exercise'.
+against,16-1150,0:18:32,"laymen,",layman,small word or ending,,The difference is between the plural 'laymen' and the singular 'layman'.
+against,16-1150,0:21:21,But there,is it,words left out or added,can't tell,"The machine replaced 'But there' with 'is it', which are entirely different words."
+against,16-1150,0:24:11,of the,and,words left out or added,small word or ending,The machines replaced the phrase 'of the' with the word 'and'.
+against,16-1150,0:25:15,wants,once,misheard word,,The word 'wants' was replaced by the phonetically similar word 'once'.
+against,16-1150,0:29:59,until,till,not a real difference,,The words 'until' and 'till' are different spellings/forms of the same word.
+against,16-1150,0:31:10,"and say,",he said,words left out or added,disfluency,The machines replaced a phrase and a filler word with a different short phrase.
+against,16-1150,0:36:28,"you know,",,disfluency,words left out or added,"The machines omitted the filler phrase 'you know,' which is a classic disfluency."
+against,16-1150,0:42:38,"Well, in",you to,words left out or added,speaker change or overlap,The machines replaced a speaker interruption and disfluency with different words entirely.
+against,16-1150,0:45:46,mine,mind,misheard word,,"The word 'mine' was transcribed as 'mind', which is a phonetically similar word."
+against,16-1150,0:46:57,"I mean, if",,disfluency,words left out or added,The machines omitted a filler phrase and a restart.
+against,16-1150,0:57:33,"No,",than,words left out or added,misheard word,"The word 'No' is replaced by 'than', which is a different word and may be a mishearing of the speaker's utterance."
+against,16-1161,0:03:29,it was,is,words left out or added,small word or ending,The machines replaced the phrase 'it was' with the single word 'is'.
+against,16-1161,0:19:22,the tests,a test,small word or ending; words left out or added,,The machines changed the plural 'tests' to singular 'test' and swapped the definite article 'the' for the indefinite article 'a'.
+against,16-1161,0:34:14,redistricting,districting,name or legal term,,"The term 'redistricting' is a specific legal/political process, and 'districting' is a related but distinct term."
+against,16-1161,0:35:39,burden,it,words left out or added,disfluency,The machine replaced the word 'burden' with 'it' and missed the subsequent restart/interruption.
+against,16-1161,0:40:57,you're equalizing to,equalize them at,words left out or added; small word or ending,misheard word,The machine replaced a phrase and a verb form with a different verb and preposition.
+against,16-1161,0:44:49,though,of,misheard word,small word or ending,The word 'though' was replaced by the word 'of'.
+against,16-1161,0:46:22,substantive,substance,small word or ending,,The difference is between the adjective 'substantive' and the noun 'substance'.
+against,16-1215,0:03:44,breadth,breath,misheard word,,The word 'breadth' was replaced by the homophone 'breath'.
+against,16-1215,0:12:41,thought,obviously,words left out or added,disfluency,The machines replaced a repeated word and a stumble with a completely different word.
+against,16-1215,0:21:29,have,want,words left out or added; small word or ending,,The machine replaced the perfect tense 'have wanted' with the simple present 'want'.
+against,16-1215,0:34:03,re,ray,misheard word,,The Latin legal term 're' was transcribed as the phonetically similar word 'ray'.
+against,16-1215,0:36:19,tells,told,small word or ending,,The difference is between the present tense 'tells' and the past tense 'told'.
+against,16-1215,0:55:16,either,neither,small word or ending,,The word 'either' was swapped for 'neither'.
+against,16-1220,0:00:00,We'll hear,,words left out or added,,The machines completely omitted the phrase 'We'll hear'.
+against,16-1220,0:20:57,accept,except,misheard word,,The words 'accept' and 'except' are homophones that are frequently confused by speech recognition models.
+against,16-1220,0:23:40,certainly think,mean,words left out or added; disfluency,,The machines omitted the phrase 'certainly think' and the subsequent restart/filler.
+against,16-1220,0:23:40,"mean, what?",certainly think,words left out or added,disfluency,The machines omitted a parenthetical interjection and a restart in the speaker's flow.
+against,16-1220,0:41:27,suggests that,suggested,small word or ending,words left out or added,The machine replaced the phrase 'suggests that' with the single word 'suggested'.
+against,16-1220,0:43:18,"well,",whether,words left out or added,disfluency,The machine replaced the filler word 'well' with the word 'whether'.
+against,16-1220,0:43:59,"I mean,",and,words left out or added,disfluency,The machines replaced the filler phrase 'I mean' with the word 'and'.
+against,16-1276,0:13:06,concededly,conceitedly,misheard word,,The machine replaced the legal/formal term 'concededly' with a phonetically similar but different word 'conceitedly'.
+against,16-1276,0:18:35,dah-dah-dah.,da da da,disfluency,not a real difference,The machine transcribed a filler/stumble using a different spelling convention.
+against,16-1276,0:24:14,"well,",where,words left out or added,disfluency,The machine replaced the filler word 'well' with 'where'.
+against,16-1276,0:46:16,"You know,",,disfluency,,"The machines omitted the filler phrase 'You know,' which is a classic disfluency."
+against,16-1276,0:48:17,"rule-making,",making,not a real difference,,The difference is only a hyphen and a comma.
+against,16-1276,0:54:21,overbreadth,overbreath,misheard word,,The machine replaced the legal term 'overbreadth' with the phonetically similar word 'overbreath'.
+against,16-1348,0:01:57,take,,disfluency,words left out or added,The machine omitted a repeated word that is part of a spoken stumble.
+against,16-1348,0:07:03,under,into,misheard word,,The word 'under' was replaced by the phonetically similar word 'into'.
+against,16-1348,0:21:44,question's,is,words left out or added,small word or ending,The word 'question's' was replaced by the word 'is'.
+against,16-1348,0:26:28,begs,,words left out or added,disfluency,The machine omitted a repeated word that occurred during a speaker's restart.
+against,16-1348,0:33:16,consistent,,words left out or added,,The word 'consistent' appears in the official transcript but is missing from the machine output.
+against,16-1348,0:40:05,and I'll just do it again,,words left out or added,,The machine model omitted a whole phrase present in the official transcript.
+against,16-1348,0:53:54,included,includer,small word or ending,,"The word 'included' was written as 'includer', changing the word ending."
+against,16-1348,0:57:27,We're,where,misheard word,,The word 'We're' was replaced by the phonetically similar word 'where'.
+against,16-1362,0:00:51,"partsmen,",partsman,small word or ending,,The difference is only the plural ending 's'.
+against,16-1362,0:01:00,salesmen.,salesman,small word or ending,,The difference is between the plural 'salesmen' and the singular 'salesman'.
+against,16-1362,0:09:14,concession,conception,misheard word,,The words 'concession' and 'conception' sound similar and are swapped.
+against,16-1362,0:16:22,got it,gotten,small word or ending,,The difference is between the past participle 'got' and 'gotten'.
+against,16-1362,0:22:14,anything is,anythings,small word or ending,not a real difference,The machine condensed two words into one with a different ending.
+against,16-1362,0:22:21,reddendo,redendo,not a real difference,,The difference is a matter of spelling/orthography for the same word.
+against,16-1362,0:24:59,count it,counted,small word or ending,disfluency,The machine changed the verb ending and removed the following word 'it' which precedes a restart.
+against,16-1362,0:31:57,"salesmen,",salesman,small word or ending,,The difference is between the plural 'salesmen' and the singular 'salesman'.
+against,16-1362,0:33:32,works,worked,small word or ending,,The difference is only in the verb tense ending (works vs worked).
+against,16-1362,0:34:06,partsmen,partsman,small word or ending,,The difference is between the plural 'partsmen' and the singular 'partsman'.
+against,16-1362,0:54:33,fender,,words left out or added,,The word 'fender' appears in the official transcript but is completely missing from the machine output.
+against,16-1371,0:03:36,When,well,words left out or added,disfluency,The machine replaced the word 'When' with the filler word 'well'.
+against,16-1371,0:06:09,his,its,small word or ending,,The word 'his' was swapped for the similar small word 'its'.
+against,16-1371,0:22:55,Your,sir,misheard word,,"The machine replaced 'Your Honor' with 'sir', which is a phonetically similar address."
+against,16-1371,0:25:12,right. And,,words left out or added,,The machine model omitted the words 'right. And' entirely.
+against,16-1371,0:35:56,"look,",,words left out or added,disfluency,The machine omitted a filler word used as a conversational transition.
+against,16-1371,0:37:07,et cetera.,,words left out or added,,The machines completely omitted the phrase 'et cetera.'
+against,16-1371,0:43:14,illegal,legal,misheard word,,The machine replaced 'illegal' with the similar-sounding word 'legal'.
+against,16-1371,0:48:10,"you know,",,disfluency,words left out or added,"The machines omitted the filler phrase 'you know,' which is a classic disfluency."
+against,16-1371,0:52:07,friend is,friends,small word or ending,,The machine replaced the phrase 'friend is' with the plural noun 'friends'.
+against,16-1371,0:52:09,friend is,friends,small word or ending,,The singular 'friend is' was replaced by the plural 'friends'.
+against,16-1371,0:53:04,writ,at,misheard word,,The word 'writ' was replaced by the phonetically similar word 'at'.
+against,16-1432,0:05:53,inconsistent,consistent,words left out or added,small word or ending,"The prefix 'in-' was omitted, changing the word from 'inconsistent' to 'consistent'."
+against,16-1432,0:07:24,a person,person is,words left out or added,disfluency,The machines omitted the article 'a' and the preceding disfluency 'the --'.
+against,16-1432,0:07:35,"right,",write,speaker change or overlap,misheard word,"The official transcript records a brief interjection ('right') during the speaker's turn, which the machine misheard as 'write'."
+against,16-1432,0:12:18,kind of,,words left out or added,,The machines omitted the phrase 'kind of' entirely.
+against,16-1432,0:22:10,parties',partys,not a real difference,,The difference is only in the spelling/punctuation of the possessive form of the word 'party'.
+against,16-1432,0:39:42,"Well, I said",it is,words left out or added,disfluency,The machine replaced a filler word and a phrase with entirely different words.
+against,16-1432,0:44:50,took,,disfluency,words left out or added,The machine omitted a repeated word that constitutes a speech restart/stumble.
+against,16-1432,0:57:21,"all together,",altogether,not a real difference,,The difference is between the phrase 'all together' and the single word 'altogether'.
+against,16-1435,0:00:43,"I was just going to ask you,",,disfluency,words left out or added,The machine omitted a repeated phrase that constitutes a speaker restart.
+against,16-1435,0:07:35,proscribe,prescribe,misheard word,,The words 'proscribe' and 'prescribe' sound very similar but have opposite meanings.
+against,16-1435,0:11:08,challenged,tailored,misheard word,,The words 'challenged' and 'tailored' are different words that sound somewhat similar in a legal context.
+against,16-1435,0:20:28,say,so,misheard word,,The word 'say' was replaced with the phonetically similar word 'so'.
+against,16-1435,0:23:49,parties.,party,small word or ending,,The difference is between the plural 'parties' and the singular 'party'.
+against,16-1435,0:27:12,"proscribable,",prescribable,misheard word,name or legal term,The machine replaced a legal term with a phonetically similar word.
+against,16-1435,0:29:24,pin that,,words left out or added,disfluency,The machines omitted the phrase 'pin that' following a disfluent restart.
+against,16-1435,0:41:22,country's.,countries,small word or ending,,The difference is between the singular possessive 'country's' and the plural 'countries'.
+against,16-1435,0:57:53,overbreadth,overbreath,name or legal term; misheard word,,The legal term 'overbreadth' was transcribed as the phonetically similar 'overbreath'.
+against,16-1435,0:55:11,,hashtag,not a real difference,,The machine wrote the word for the symbol used in the official transcript.
+against,16-1454,0:03:57,intrabrand,interbrand,name or legal term,,The difference is between two distinct legal terms of art in antitrust law.
+against,16-1454,0:13:29,antitrust,trust,words left out or added,name or legal term,The machines omitted the prefix 'anti-' from the legal term 'antitrust'.
+against,16-1454,0:39:18,may have been,is,words left out or added,small word or ending,The phrase 'may have been' is replaced by the single word 'is'.
+against,16-1454,0:52:16,benefitting,benefiting,not a real difference,,This is a difference in spelling convention (double 't' vs single 't').
+against,16-1454,1:00:13,rising,arising,misheard word,,The word 'rising' was replaced with the phonetically similar word 'arising'.
+against,16-1454,1:00:51,anticompetitive,competitive,words left out or added,name or legal term,The prefix 'anti-' was omitted from a legal term.
+against,16-1466,0:05:27,marketing,bargaining,misheard word,,The words 'marketing' and 'bargaining' are different words that sound similar in this context.
+against,16-1466,0:15:46,But,well,disfluency; words left out or added,,The machine replaced a spoken word and a stutter/restart with a filler word.
+against,16-1466,0:20:41,Yes.,yeah,misheard word,,The machine replaced the affirmative 'Yes' with the similar-sounding informal 'yeah'.
+against,16-1466,0:30:50,"You know,",,disfluency,words left out or added,"The machines omitted the filler phrase 'You know,' which is a disfluency."
+against,16-1466,0:32:38,Your Honor.,right no,misheard word; words left out or added,speaker change or overlap,The machines replaced 'Your Honor' with 'right no' and missed the transition between speakers.
+against,16-1466,0:49:47,rein,reign,not a real difference,,"The words 'rein' and 'reign' are homophones used in a similar idiomatic context, representing a spelling/convention difference."
+against,16-1466,0:51:51,to either,do we,misheard word,,The phrase 'to either' was misheard as 'do we'.
+against,16-1466,0:53:44,the -- and,then,disfluency; words left out or added,,The machine replaced a spoken restart and repetition with a single word.
+against,16-1466,0:58:49,Now,and,words left out or added,,The word 'Now' was replaced by the word 'and'.
+against,16-1495,0:08:34,defendant's,defense,small word or ending,,The machine replaced the possessive noun 'defendant's' with the noun 'defense'.
+against,16-1495,0:10:58,its,his,small word or ending,,The word 'its' was swapped for 'his'.
+against,16-1495,0:16:53,Yeah.,yes,misheard word,small word or ending,The machine replaced the informal 'Yeah' with the formal 'yes'.
+against,16-1495,0:19:15,that a,the,words left out or added,small word or ending,The machines replaced the phrase 'that a' with the single word 'the'.
+against,16-1495,0:22:31,spent,spend,small word or ending,,The difference is between the past tense 'spent' and the present tense 'spend'.
+against,16-1495,0:25:24,variants,variance,small word or ending,,The difference is between the plural 'variants' and the singular 'variance'.
+against,16-1495,0:27:33,"in order,",and orders,misheard word,small word or ending,"The phrase 'in order' was misheard as 'and orders', involving both a word swap and a change in word ending."
+against,16-1495,0:29:00,And,again,words left out or added,misheard word,The machine replaced the word 'And' with the entirely different word 'again'.
+against,16-1495,0:32:17,different,difference,small word or ending,,The difference is between the adjective 'different' and the noun 'difference'.
+against,16-1495,0:35:31,concurrent,concurrence,name or legal term,small word or ending,The difference is between the adjective 'concurrent' and the legal noun 'concurrence'.
+against,16-1495,0:35:52,the question,,disfluency,words left out or added,The machine omitted a repeated phrase that constitutes a speech restart.
+against,16-1495,0:37:26,injuries.,juries,misheard word,,"The word 'injuries' was swapped for 'juries', which sound similar in this context."
+against,16-1495,0:40:06,"Well,",but,words left out or added,disfluency,The machine replaced a filler word ('Well') with a different word ('but').
+against,16-1495,0:54:02,wanted,at,misheard word,,The word 'wanted' was replaced by the phonetically similar word 'at'.
+against,16-1495,0:56:01,"injures,",juries,misheard word,,The word 'injures' in the transcript and 'juries' in the machine output sound similar in context.
+against,16-1495,0:54:02,,won,misheard word,,"The machine replaced 'He' with 'won', which are phonetically distinct but represent a substitution of a single word."
+against,16-1519,0:04:54,they're a,the,words left out or added,,The machines omitted the phrase 'they're a' entirely.
+against,16-1519,0:14:15,the -- the -- the federal,,disfluency,words left out or added,The machine omitted a repeated word stumble.
+against,16-1519,0:53:56,3663A(a).,capa,words left out or added,number or citation,The machine replaced a specific statutory citation with a completely unrelated word.
+against,16-1519,0:09:46,,period,words left out or added,,The machine inserted the word 'period' where the transcript has no text.
+against,16-285,0:12:19,take -- let's take,say,words left out or added,disfluency,The machines replaced a repeated phrase and a restart with a single different word.
+against,16-285,0:16:28,action. So,actions,words left out or added,small word or ending,The machines omitted the words 'So if I could reserve the remainder of my time' and changed 'action' to 'actions'.
+against,16-285,0:16:49,forgo,forego,not a real difference,,The words 'forgo' and 'forego' are spelling variants of the same word.
+against,16-285,0:25:04,non-waiveable.,waivable,small word or ending,,"The difference is between 'non-waiveable' and 'waivable', involving a prefix and a spelling variation of the same root word."
+against,16-285,0:27:39,"activity,",activities,small word or ending,,The difference is between the singular 'activity' and the plural 'activities'.
+against,16-285,0:30:00,forum,form,misheard word,,The word 'forum' was transcribed as the phonetically similar word 'form'.
+against,16-285,0:31:03,forum.,form,misheard word,small word or ending,"The word 'forum' was transcribed as 'form', which is a phonetically similar word with a different ending."
+against,16-285,0:31:33,said,say,small word or ending,,The difference is between two forms of the same verb (say/said).
+against,16-285,0:32:03,They're,it is,words left out or added,misheard word,The machines replaced the word 'They're' with the phrase 'it is'.
+against,16-285,0:32:46,dah-dah-dah,da da da,not a real difference,,The difference is purely a matter of orthographic representation of the same sounds.
+against,16-285,0:49:02,"research says,",restrictions,misheard word,,"The machine replaced the phrase 'research says' with the single word 'restrictions', which shares some phonetic similarities."
+against,16-299,0:02:56,"I mean,",,disfluency,words left out or added,The machines omitted a filler phrase used as a restart.
+against,16-299,0:08:24,agency is,agencies or,small word or ending; misheard word,,The singular 'agency is' was changed to the plural 'agencies' and the word 'is' was swapped for 'or'.
+against,16-299,0:10:41,effluent,affluent,name or legal term; misheard word,,The legal term 'effluent' was replaced with the phonetically similar word 'affluent'.
+against,16-299,0:24:43,an effluent,a fluent,misheard word,,The machines replaced the legal term 'effluent' with the phonetically similar phrase 'a fluent'.
+against,16-299,0:31:59,canvass,,words left out or added,disfluency,The machine omitted a word that followed a series of stutters.
+against,16-299,0:43:58,agencies,agency,small word or ending,,The difference is between the plural 'agencies' and the singular 'agency'.
+against,16-299,0:45:33,we need an end,you win even then,misheard word,words left out or added,"The phrase 'we need an end' was misheard as 'you win even then', involving both phonetic similarity and a change in word count."
+against,16-299,0:52:56,a,awarded,misheard word,,"The machine replaced the word 'a' with 'awarded', which is a different word entirely."
+against,16-299,0:54:44,imposes,proposes,misheard word,,The words 'imposes' and 'proposes' sound similar and are swapped.
+against,16-402,0:14:56,company's,companies,not a real difference,,The difference is only between a possessive and a plural form of the same word.
+against,16-402,0:17:31,mean,,words left out or added,disfluency,The machines omitted a repeated word that occurred during a speaker's stumble.
+against,16-402,0:41:23,different,difference,small word or ending,,The difference is only in the word ending (different vs difference).
+against,16-402,0:48:10,"You know,",,disfluency,words left out or added,"The machines omitted the filler phrase 'You know,' which is a classic disfluency."
+against,16-402,0:56:19,yea,yay,not a real difference,,This is a difference in the spelling of the same spoken word.
+against,16-402,0:59:17,and,now,words left out or added,disfluency,The machine replaced the word 'and' with 'now' amidst a series of speaker restarts and stumbles.
+against,16-402,1:14:24,"You know,",,disfluency,words left out or added,The machines omitted a filler phrase ('You know') used by the speaker.
+against,16-402,1:14:54,party's,is,words left out or added,small word or ending,The machine replaced the noun 'party's' with the verb 'is'.
+against,16-402,1:18:37,concurrences,is,words left out or added,misheard word,The machine replaced the specific legal term 'concurrences' with the common word 'is'.
+against,16-402,1:19:41,cases,is,words left out or added,misheard word,The word 'cases' was replaced by the word 'is'.
+against,16-424,0:01:53,"et al.,",and else,name or legal term; misheard word,,The Latin legal term 'et al.' was misheard as the common phrase 'and else'.
+against,16-424,0:02:07,waiveable.,waivable,not a real difference,,This is a difference in spelling convention for the same word.
+against,16-424,0:14:55,waiveable.,waivable,not a real difference,,This is a difference in spelling/convention for the same word.
+against,16-424,0:20:03,waiveable.,waivable,not a real difference,,This is a difference in spelling convention for the same word.
+against,16-424,0:25:10,proscribe.,prescribe,misheard word,,The words 'proscribe' and 'prescribe' sound very similar but have different meanings.
+against,16-424,0:26:06,proscribe,prescribe,misheard word,,The words 'proscribe' and 'prescribe' sound very similar but have opposite meanings.
+against,16-424,0:29:12,you're,of your,small word or ending,misheard word,"The word 'you're' is replaced by 'of your', involving a change in a small word and a potential phonetic mishearing."
+against,16-424,0:37:55,said,,words left out or added,,The word 'said' appears in the official transcript but is missing from the machine output.
+against,16-424,0:51:43,uncumbent upon,incumbent on,name or legal term; small word or ending,,The legal term 'incumbent' is spelled differently and the preposition 'upon' is swapped for 'on'.
+against,16-424,0:52:16,hailed,held,misheard word,,The words 'hailed' and 'held' sound similar in speech but have different meanings.
+against,16-424,0:54:10,,clear,words left out or added,,The machine inserted the word 'clear' where the official transcript has nothing.
+against,16-460,0:01:12,have concern,are concerned,small word or ending,words left out or added,"The phrase 'have concern' is replaced by 'are concerned', involving a change in word form and a swap of the verb."
+against,16-460,0:04:15,"out,",up,misheard word,,The word 'out' was replaced by the phonetically similar word 'up'.
+against,16-460,0:14:25,does not have to,is,words left out or added,disfluency,"The machines replaced a multi-word phrase with a single word, and the official transcript shows a mid-sentence break/interruption."
+against,16-460,0:23:29,concede,see,misheard word,,The word 'concede' was replaced by the phonetically similar word 'see'.
+against,16-460,0:31:10,"Sorry,",well,disfluency; words left out or added,,The machine replaced a spoken apology and a restart with a filler word.
+against,16-460,0:36:29,"Well,",will,misheard word,,The word 'Well' was replaced with the phonetically similar word 'will'.
+against,16-460,0:38:20,resolved,,words left out or added,,The machine model omitted the word 'resolved' entirely.
+against,16-460,0:43:16,under,on,misheard word,,The word 'under' was replaced by the phonetically similar word 'on'.
+against,16-476,0:20:30,"in force,",enforced,words left out or added,,"The machines omitted the phrase 'in force,' entirely."
+against,16-476,0:27:39,"I mean,",,disfluency,words left out or added,The machines omitted a filler phrase used during a speaker's restart.
+against,16-476,0:49:42,gambling,gaming,small word or ending,,The words 'gambling' and 'gaming' are closely related terms often used interchangeably in a legal context.
+against,16-476,0:50:36,point's,is,words left out or added,small word or ending,"The machine replaced the word 'point's' with 'is', changing both the word and the grammatical structure."
+against,16-476,0:51:27,"enact, it",enactment,words left out or added,small word or ending,"The machines replaced two words ('enact, it') with a single noun ('enactment')."
+against,16-498,0:25:54,this,his,small word or ending,,The word 'this' was replaced by 'his'.
+against,16-498,0:57:07,said,,words left out or added,,The word 'said' appears in the official transcript but is completely missing from the machine output.
+against,16-499,0:00:33,formulations,relations,misheard word,,The words 'formulations' and 'relations' sound similar in certain contexts but are distinct words.
+against,16-499,0:11:20,forum.,form,misheard word,small word or ending,"The word 'forum' was transcribed as 'form', which is a phonetically similar word with a different ending."
+against,16-499,0:12:52,numerable,innumerable,small word or ending,,The difference is between two similar words where one is a variation of the other's root/prefix.
+against,16-499,0:18:06,"forum,",form,misheard word,,The word 'forum' was replaced with the phonetically similar word 'form'.
+against,16-499,0:30:43,respondeat,at,words left out or added,name or legal term,The machines replaced a specific legal term with a common small word.
+against,16-499,0:36:05,"But,",well,words left out or added,disfluency,The machine replaced the word 'But' with the filler word 'well'.
+against,16-499,0:41:44,signs,signed,small word or ending,,The difference is between the present tense 'signs' and the past tense 'signed'.
+against,16-499,0:50:13,I guess,because,words left out or added,misheard word,The machines replaced the phrase 'I guess' with the word 'because'.
+against,16-499,0:52:42,forum,form,small word or ending,,"The word 'forum' is written as 'form', which is a difference in the word ending."
+against,16-499,0:53:26,I'm not -- I,,disfluency,words left out or added,The machine omitted a false start and a repeated word.
+against,16-499,0:54:51,company -- a,,disfluency,words left out or added,The machine omitted a false start/restart where the speaker switched from 'company' to 'corporation'.
+against,16-499,0:55:21,there was a substantial,,words left out or added,disfluency,The machine omitted a repeated phrase that functioned as a restart in the speaker's speech.
+against,16-499,0:59:01,under,into,small word or ending,,The preposition 'under' was swapped for 'into'.
+against,16-499,0:43:50,,slash,not a real difference,,The machines transcribed the slash symbol as the word 'slash'.
+against,16-534,0:22:12,it was,as,words left out or added,misheard word,The machines replaced the phrase 'it was' with the single word 'as'.
+against,16-534,0:22:30,"So,",because,words left out or added,misheard word,The word 'So' was replaced by the word 'because'.
+against,16-534,0:25:53,are preventing,have prevented,small word or ending,words left out or added,The verb 'prevent' is changed from present continuous ('are preventing') to present perfect ('have prevented').
+against,16-534,0:30:23,other,,words left out or added,,The word 'other' appears in the official transcript but is missing from the machine output.
+against,16-534,0:34:45,"rigs,",rings,misheard word,,The word 'rigs' was replaced with the phonetically similar word 'rings'.
+against,16-534,0:38:04,combatting,combating,not a real difference,,This is a difference in spelling convention for the same word.
+against,16-534,0:38:58,using,in,words left out or added,misheard word,"The word 'using' was replaced by 'in', which could be a substitution or a failure to capture the original word."
+against,16-534,0:26:37,,section,words left out or added,,The machines omitted the specific section number '1610' present in the official transcript.
+against,16-534,0:36:23,,capital,words left out or added,name or legal term,The machine replaced a specific legal citation with a different word.
+against,16-534,0:37:09,,big,words left out or added,can't tell,The machine replaced a specific reference with a completely unrelated word.
+against,16-534,0:37:15,,big,misheard word,,The word 'what' was replaced by the phonetically similar word 'big'.
+against,16-534,0:37:28,,big,misheard word,,The machine replaced a specific legal citation number with a common word that sounds vaguely similar.
+against,16-534,0:37:39,,big,misheard word,,"The machine replaced 'mine-run' with 'big', which is a phonetic misinterpretation of the spoken phrase."
+against,16-534,0:40:34,,capital,words left out or added,can't tell,The machine inserted a word that does not appear in the official transcript.
+against,16-534,0:40:36,,lowercase,words left out or added,,The machines replaced the specific section number with the word 'lowercase'.
+against,16-534,0:40:55,,capital,words left out or added,can't tell,The machine inserted a word not present in the official transcript.
+against,16-534,0:40:56,,lowercase a,number or citation,,The machine replaced a subsection citation '(a)' with the spoken description of that letter.
+against,16-534,0:43:36,,comma,words left out or added,,The machine inserted a punctuation word 'comma' where the transcript has no text.
+against,16-658,0:08:43,proscribed,prescribed,name or legal term,misheard word,"The word 'prescribed' is a standard legal term in this context, and 'proscribed' is a phonetically similar but legally opposite word."
+against,16-658,0:34:20,neglect,,words left out or added,name or legal term,"The machine omitted the word 'neglect', which is part of the legal term 'excusable neglect'."
+against,16-658,0:41:40,"mean,",,disfluency,words left out or added,"The machines omitted the filler phrase 'mean,' which is a disfluency."
+against,16-6795,0:01:08,they may well,the inmate will,misheard word; words left out or added,,"The machines replaced 'they may well' with 'the inmate will', involving both a phonetic mishearing and a change in word count/identity."
+against,16-6795,0:02:29,said,says,small word or ending,,The difference is between the past tense 'said' and the present tense 'says'.
+against,16-6795,0:03:30,director has,directors,small word or ending,words left out or added,"The machine replaced 'director has' with the plural 'directors', changing both the word ending and omitting the auxiliary verb."
+against,16-6795,0:05:14,excuse me,assuming,words left out or added,disfluency,The machine replaced a spoken correction/filler with a completely different word.
+against,16-6795,0:01:57,,quoteunquote,words left out or added,not a real difference,The machines inserted a word representing quotation marks that are present as symbols in the official transcript.
+against,16-6855,0:00:24,cited,silent,misheard word,,The word 'cited' was misheard as 'silent'.
+against,16-6855,0:02:58,says,said,small word or ending,,The difference is a change in the verb tense/ending of the word 'say'.
+against,16-6855,0:12:16,"mean,",,disfluency,words left out or added,The machines omitted a filler phrase used as a restart.
+against,16-6855,0:12:50,note,know,misheard word,,The word 'note' was replaced with the phonetically similar word 'know'.
+against,16-6855,0:14:12,"in any event, it's",and anyway there,words left out or added,misheard word,"The machines replaced the phrase 'in any event, it's' with 'and anyway there'."
+against,16-6855,0:18:57,said,say,small word or ending,,"The difference is between 'said' and 'say', which is the same word with a different ending."
+against,16-6855,0:19:50,"irrelevancy,",irrelevance,small word or ending,,The difference is between two forms of the same word (irrelevancy vs. irrelevance).
+against,16-6855,0:22:30,to support,,disfluency,words left out or added,The machine omitted a restart/correction in the speaker's phrasing.
+against,16-6855,0:23:13,has,applies,small word or ending,,The difference is between two forms of the same verb (has applied vs applies).
+against,16-6855,0:25:07,imminently,eminently,misheard word,,The words 'imminently' and 'eminently' are homophones or near-homophones that differ in meaning.
+against,16-6855,0:25:32,couldn't it?,correct,words left out or added,speaker change or overlap,"The machines replaced a question and a response with a single word, omitting the transition between speakers."
+against,16-6855,0:47:35,"mean,",,disfluency,words left out or added,"The machines omitted the filler phrase 'I mean,' which is a disfluency."
+against,16-6855,0:54:22,higher,highest,small word or ending,,The difference is between the comparative 'higher' and the superlative 'highest'.
+against,16-6855,0:00:56,,close quote,words left out or added,,The machine inserted a descriptive phrase for punctuation instead of the actual spoken words.
+against,16-712,0:18:07,"Your Honor, the",you are right,words left out or added; misheard word,,The machine replaced a formal address to the judge with a completely different phrase.
+against,16-712,0:23:37,"Your Honor,",,words left out or added,,The machines completely omitted the address to the judge.
+against,16-712,0:33:18,its,his,small word or ending,,The difference is between two short common pronouns ('its' vs 'his').
+against,16-712,0:45:57,reissuance.,reissue,small word or ending,,"The difference is between 'reissuance' and 'reissue', which are the same word with different endings."
+against,16-784,0:16:31,response was,is responsible,words left out or added,misheard word,"The machine replaced 'response was' with 'is responsible', which involves both adding/removing words and substituting words with similar sounds."
+against,16-784,0:21:32,"I mean,",,disfluency,words left out or added,The machines omitted a filler phrase used as a conversational restart.
+against,16-784,0:21:47,where,well,words left out or added,disfluency,The machine replaced the word 'where' with the filler word 'well'.
+against,16-784,0:22:07,called,hauled,misheard word,,The words 'called' and 'hauled' sound similar in speech.
+against,16-784,0:28:36,"though,",so,words left out or added,misheard word,The word 'though' was replaced by the word 'so'.
+against,16-784,0:40:10,That's,as,words left out or added,misheard word,The machine replaced the word 'That's' with 'as'.
+against,16-784,0:47:44,"I mean,",,disfluency,words left out or added,The machines omitted a filler phrase ('I mean') used as a conversational bridge.
+against,16-784,0:50:18,"I mean,",,disfluency,words left out or added,The machines omitted a filler phrase used as a spoken restart.
+against,16-8255,0:04:26,"offense,",defense,misheard word,,The word 'offense' was replaced with the phonetically similar word 'defense'.
+against,16-8255,0:09:48,I -- I,would,words left out or added,disfluency,The machines replaced a stuttered repetition of 'I' with a completely different word.
+against,16-8255,0:24:42,controversion,controversy,misheard word,small word or ending,The machine replaced the noun 'controversion' with the similar-sounding 'controversy'.
+against,16-8255,0:27:40,"classes,",cases,misheard word,,The word 'classes' was replaced by the phonetically similar word 'cases'.
+against,16-8255,0:35:44,time.,,words left out or added,,The word 'time' is present in the official transcript but missing from the machine output.
+against,16-8255,0:49:09,He said,instead,words left out or added,misheard word,"The machines replaced a two-word phrase with a single, different word."
+against,16-8255,0:51:37,until,till,not a real difference,,The difference is between a formal word and its common shortened version.
+against,16-8255,0:04:17,,look,words left out or added,,The machine inserted a word that does not appear in the official transcript.
+against,16-8255,0:45:29,,world,words left out or added,misheard word,The machine inserted a word that does not appear in the official transcript and likely misheard a sound or silence as 'world'.
+against,16-9493,0:22:04,judiciary's,is,words left out or added,small word or ending,The machine replaced the possessive noun 'judiciary's' with the verb 'is'.
+against,16-9493,0:26:53,sort of,,disfluency,words left out or added,The machines omitted a filler phrase ('sort of') that constitutes a disfluency.
+against,16-9493,0:40:34,all together?,altogether,not a real difference,,The difference is between the two-word phrase 'all together' and the single word 'altogether'.
+against,16-9493,0:42:26,reason is,reasons,small word or ending,,The difference is between the singular 'reason is' and the plural 'reasons'.
+against,16-9493,0:46:19,this,his,misheard word,,The words 'this' and 'his' sound similar in spoken speech.
+against,16-9493,0:48:39,"all together,",altogether,not a real difference,,The difference is between the phrase 'all together' and the single word 'altogether'.
+against,16-961,0:24:09,standard,standing,misheard word,,The words 'standard' and 'standing' sound similar in this context.
+against,16-961,0:26:12,principal,principle,not a real difference,,"The words 'principal' and 'principle' are homophones often confused in transcription, but here it is a matter of spelling/usage convention for the same spoken sound."
+against,16-961,0:33:59,that's,of,words left out or added,misheard word,"The machine replaced the word 'that's' with 'of', which is a different word entirely."
+against,16-961,0:46:44,under,of,misheard word,,The word 'under' was replaced by the word 'of'.
+against,16-961,0:56:37,on that,in the,small word or ending,words left out or added,The word 'that' was replaced by 'the' and 'on' was replaced by 'in'.
+against,16-961,1:03:04,read-in,reading,small word or ending,,"The difference is between 'read-in' and 'reading', which are variations of the same word root with different endings."
+against,16-961,1:03:19,civilians' fear,civilian sphere,misheard word,,"The words 'fear' and 'sphere' sound similar, leading to a substitution of one word for another."
+against,16-969,0:04:06,estopping.,a,words left out or added,misheard word,The machine replaced a multi-syllable legal term with a single letter/word.
+against,16-969,0:19:47,"I mean,",,disfluency,words left out or added,The machines omitted a filler phrase and a restart.
+against,16-969,0:24:53,"Yeah,",know,misheard word,,The word 'Yeah' was replaced by the phonetically similar word 'know'.
+against,16-969,0:25:22,estop,stop,small word or ending,,"The difference is between 'estop' and 'stop', which is a change in the word's prefix/ending."
+against,16-969,0:40:45,gray,great,misheard word,,"The word 'gray' was transcribed as 'great', which is a phonetically similar word."
+against,16-969,0:41:33,proscribe,prescribe,misheard word,name or legal term,"The words 'proscribe' and 'prescribe' sound similar and are often confused, and 'proscribe' is a specific legal term."
+against,16-969,0:43:19,purpose as,purposes,small word or ending,words left out or added,The machine changed the singular 'purpose' to plural 'purposes' and omitted the word 'as'.
+against,16-969,0:55:57,"via estopping,",a stopping,name or legal term,misheard word,The legal term 'estopping' was transcribed as the phonetically similar 'a stopping'.
+against,16-969,0:56:09,estopping,stopping,name or legal term,misheard word,The legal term 'estopping' was transcribed as the common word 'stopping'.
+against,16-980,0:01:38,except,accept,misheard word,,The words 'except' and 'accept' are homophones in this context.
+against,16-980,0:17:28,"minimum,",minimal,small word or ending,,The difference is between two forms of the same root word (minimum vs minimal).
+against,16-980,0:17:31,say,see,misheard word,,The words 'say' and 'see' are phonetically similar and swapped in clear speech.
+against,16-980,0:49:38,to,through,misheard word,,The word 'to' was replaced by the phonetically distinct but contextually plausible word 'through'.
+against,16-980,0:58:00,Honor.,,words left out or added,,The machines completely omitted the phrase 'Honor.'
+against,16-980,0:58:43,except,accept,name or legal term,misheard word,The legal term 'except clause' was replaced with the phonetically similar word 'accept'.
+against,16-980,0:59:09,notices,that,words left out or added,,The word 'notices' is replaced by the word 'that'.
+against,17-130,0:00:49,director,direction,small word or ending,,"The difference is between the noun 'director' and the noun 'direction', which is a change in the word ending/suffix."
+against,17-130,0:02:34,adviser,advisor,not a real difference,,This is a difference in spelling convention for the same word.
+against,17-130,0:14:22,know,knew,small word or ending,,"The word 'know' was changed to 'knew', which is a difference in the word's ending/tense."
+against,17-130,0:36:46,what,law,words left out or added,can't tell,"The machine replaced the word 'what' with 'law', which are entirely different words."
+against,17-130,0:51:21,say,a,words left out or added,,The word 'say' is replaced by the word 'a'.
+against,17-130,0:56:52,required,inquired,misheard word,,The words 'required' and 'inquired' sound similar and are swapped.
+against,17-155,0:17:42,the,ray,misheard word,name or legal term,The machine replaced the word 'the' and the start of the case name 'Re' with the phonetic equivalent 'ray'.
+against,17-155,0:20:08,the,ray,misheard word,small word or ending,The machine replaced the definite article 'the' with a phonetically similar but incorrect word 'ray'.
+against,17-155,0:44:10,know,,words left out or added,disfluency,"The word 'know' is missing from the machine output, occurring within a mid-sentence restart."
+against,17-155,0:47:01,the,ray,misheard word,,The word 'the' was replaced by the phonetically similar but contextually incorrect word 'ray'.
+against,17-155,0:47:02,the,ray,misheard word,words left out or added,"The machine replaced the word 'the' with 'ray', which sounds similar in some contexts or represents a mishearing of the surrounding phrase."
+against,17-155,0:47:12,the,ray,misheard word,disfluency,The machine replaced a repeated filler word 'the' with a phonetically similar but incorrect word 'ray'.
+against,17-2,0:32:38,"I mean,",,disfluency,words left out or added,The machines omitted a filler phrase used as a conversational restart.
+against,17-2,0:54:47,described,prescribed,small word or ending,,"The words 'described' and 'prescribed' are similar in meaning and sound, differing primarily by a prefix/ending in this legal context."
+against,17-21,0:26:24,concededly,conceitedly,misheard word,,The machine replaced the legal term 'concededly' with a phonetically similar but different word 'conceitedly'.
+against,17-21,0:30:28,at issue,issued,small word or ending,,"The phrase 'at issue' was reduced to the single word 'issued', changing the word ending and removing a small word."
+against,17-21,0:36:41,forum.,form,misheard word,,"The word 'forum' was transcribed as 'form', which is a phonetically similar word."
+against,17-21,0:37:01,forum,form,misheard word,,The word 'forum' was replaced by the phonetically similar word 'form'.
+against,17-21,0:37:35,protestors,protesters,not a real difference,,This is a difference in spelling convention for the same word.
+against,17-21,0:48:52,mine-run,minor,misheard word,,The machine replaced the phrase 'mine-run' with the phonetically similar word 'minor'.
+against,17-269,0:05:30,a stream,an upstream,misheard word,small word or ending,"The phrase 'a stream' was misheard as 'upstream', involving both a word swap and a change in word structure."
+against,17-269,0:13:29,cession,session,name or legal term,misheard word,The legal term 'cession' was replaced with the homophone 'session'.
+against,17-269,0:18:40,parties',partys,not a real difference,,The difference is only in the spelling/punctuation of the possessive form of the word 'parties'.
+against,17-269,0:26:26,barrier,burial,misheard word,,The words 'barrier' and 'burial' sound similar in speech but have different meanings.
+against,17-269,0:32:41,estopped,stopped,name or legal term; misheard word,,The legal term 'estopped' was transcribed as the common word 'stopped'.
+against,17-269,0:33:46,rein,reign,name or legal term,,"The words 'rein' and 'reign' are homophones, and 'free rein' is a specific idiomatic expression."
+against,17-269,0:38:12,Treaty,treaties,small word or ending,,The difference is between the singular 'Treaty' and the plural 'treaties'.
+against,17-269,0:45:33,I'm,,disfluency,,The machine omitted a spoken apology/restart.
+against,17-269,0:51:22,more than,,words left out or added,,The machines completely omitted the phrase 'more than'.
+against,17-269,0:51:55,Court's,course,misheard word,,The word 'Court's' was misheard as the phonetically similar word 'course'.
+against,17-269,0:57:47,standing.,standard,misheard word,,The word 'standing' was replaced by the phonetically similar word 'standard'.
+against,17-269,0:58:16,find,showing,misheard word,,The word 'find' was replaced by the phonetically distinct but contextually plausible word 'showing'.
+against,17-312,0:12:29,and so forth.,,words left out or added,,The phrase 'and so forth' appears in the official transcript but is entirely missing from the machine output.
+against,17-312,0:34:56,"I mean,",,disfluency,words left out or added,The machines omitted a filler phrase used as a speech restart.
+against,17-333,0:05:12,case is,cases,small word or ending,words left out or added,The machine replaced the phrase 'case is' with the plural noun 'cases'.
+against,17-333,0:12:53,party's,is,words left out or added,small word or ending,The machine replaced the noun 'party's' with the verb 'is'.
+against,17-333,0:21:16,All right.,or,words left out or added,speaker change or overlap,"The machines replaced a speaker's confirmation with a different word, occurring at the transition between speakers."
+against,17-333,0:21:22,standing,standard,misheard word,,The word 'standing' was replaced by the phonetically similar word 'standard'.
+against,17-333,0:32:32,"forum,",form,misheard word,,The word 'forum' was replaced by the phonetically similar word 'form'.
+against,17-333,0:36:37,until,till,not a real difference,,The difference is between a formal word and its common contraction/informal variant.
+against,17-333,0:37:08,"therefore,",it,words left out or added,misheard word,The word 'therefore' is replaced by the word 'it'.
+against,17-333,0:37:09,And -- and -- and,in,words left out or added,disfluency,"The machines replaced a series of repeated filler words with a single, unrelated word."
+against,17-333,0:39:37,metes,meets,name or legal term,misheard word,"The term 'metes and bounds' is a specific legal description of land, which the machine misheard as 'meets'."
+against,17-333,0:39:53,"Yes,",yeah,misheard word,small word or ending,The machine replaced the affirmative 'Yes' with the more colloquial 'yeah'.
+against,17-333,0:49:17,amended,amendment,small word or ending,,"The word 'amended' was changed to 'amendment', which is a difference in the word ending."
+against,17-333,0:58:37,has said,says,small word or ending,,"The difference is between 'has said' and 'says', which is a change in verb tense/ending."
+against,17-387,0:05:12,"look,",,words left out or added,disfluency,"The machine omitted the word 'look', which serves as a filler or discourse marker."
+against,17-387,0:06:57,there,therefore,misheard word,,The word 'there' was replaced by the phonetically similar word 'therefore'.
+against,17-387,0:09:41,taking,taken,small word or ending,,The difference is between the present participle 'taking' and the past participle 'taken'.
+against,17-387,0:14:35,other,holder,misheard word,,The word 'other' was replaced by the phonetically similar word 'holder'.
+against,17-387,0:31:51,"know,",,disfluency,words left out or added,"The machines omitted the filler phrase 'you know,' which is a classic disfluency."
+against,17-387,0:32:27,"you know,",,disfluency,words left out or added,"The machines omitted the filler phrase 'you know,' which is a classic disfluency."
+against,17-387,0:33:05,"you know,",,disfluency,words left out or added,"The machine omitted the filler phrase 'you know,' which is a classic disfluency."
+against,17-387,0:33:15,"you know,",,disfluency,words left out or added,The machine omitted a filler phrase ('you know') used by the speaker.
+against,17-387,0:37:03,foreign,forum,misheard word,,The words 'foreign' and 'forum' sound similar in this context.
+against,17-387,0:38:48,"you know,",,disfluency,words left out or added,"The machines omitted the filler phrase 'you know,' which is a classic disfluency."
+against,17-387,0:38:53,foreign,forum,misheard word,,The words 'foreign' and 'forum' sound similar in a legal context.
+against,17-387,0:39:47,"you know,",,disfluency,words left out or added,"The machines omitted the filler phrase 'you know,' which is a classic disfluency."
+against,17-387,0:43:58,"you know,",,disfluency,words left out or added,"The machines omitted the filler phrase 'you know,' which is a classic disfluency."
+against,17-387,0:44:53,"you know,",,disfluency,words left out or added,"The machine omitted the filler phrase 'you know,' which is a classic disfluency."
+against,17-387,0:45:46,and,into,misheard word,,The word 'and' was replaced by the phonetically similar word 'into'.
+against,17-387,0:45:49,"you know,",,disfluency,words left out or added,The machines omitted a filler phrase used as a speech stumble.
+against,17-387,0:46:27,"you know,",,disfluency,,The machines omitted filler phrases and stumbles present in the official transcript.
+against,17-387,0:46:28,"you know,",,disfluency,words left out or added,The machine omitted a filler phrase used as a verbal stumble.
+against,17-387,0:46:50,"you know,",,disfluency,words left out or added,The machines omitted filler words and a stumble.
+against,17-387,0:47:59,"you know,",,disfluency,words left out or added,The machines omitted a filler phrase ('you know') which is a characteristic disfluency.
+against,17-387,0:48:05,"you know,",,disfluency,words left out or added,"The machines omitted the filler phrase 'you know,' which is a classic disfluency."
+against,17-387,0:48:24,"you know,",,disfluency,words left out or added,"The machines omitted the filler phrase 'you know,' which is a classic disfluency."
+against,17-387,0:49:45,"you know,",,disfluency,,"The machines omitted the filler phrase 'you know,' which is a classic disfluency."
+against,17-387,0:50:16,"you know,",,disfluency,,"The machines omitted the filler phrase 'you know,' which is a classic disfluency."
+against,17-387,0:50:29,"you know,",,disfluency,words left out or added,"The machine omitted the filler phrase 'you know,' which is a classic disfluency."
+against,17-387,0:50:33,"you know,",,disfluency,words left out or added,"The machines omitted the filler phrase 'you know,' which is a classic disfluency."
+against,17-387,0:52:36,I think,,disfluency,words left out or added,The machines omitted a filler phrase and a restart.
+against,17-387,0:53:19,"you know,",,disfluency,,"The machines omitted the filler phrase 'you know,' which is a classic disfluency."
+against,17-387,0:21:21,,certainly,words left out or added,,"The machines omitted the name 'Lauterpacht' and the phrase 'who's certainly big authority', leaving only 'certainly'."
+against,17-43,0:08:03,Who are,or were,misheard word,,The words 'Who are' and 'or were' sound similar in spoken speech.
+against,17-43,0:10:40,"cite,",said,words left out or added,,The word 'cite' is present in the official transcript but missing from the machine output.
+against,17-43,0:17:26,concededly,conceitedly,misheard word,,The machine replaced 'concededly' with a phonetically similar but different word 'conceitedly'.
+against,17-43,0:21:49,"look,",,disfluency,words left out or added,The machine omitted a filler word used during a speaker's restart.
+against,17-43,0:39:01,hadn't,has,small word or ending,,The difference is between two forms of the verb 'have' (hadn't vs has).
+against,17-43,0:40:26,(ii),i,number or citation,,The difference is between a Roman numeral subsection (ii) and a lowercase letter or numeral i.
+against,17-43,0:40:27,"(iii),",i,number or citation,,The machine replaced the Roman numeral (iii) with (i).
+against,17-43,0:41:29,(ii),i,number or citation,,The machine replaced the Roman numeral (ii) with (i).
+against,17-43,0:41:30,(iii).,i,number or citation,words left out or added,The machine replaced the Roman numeral (iii) with the Roman numeral i and omitted the punctuation.
+against,17-43,0:43:07,"say,",said,small word or ending,,"The word 'say' was changed to 'said', which is a difference in the word ending."
+against,17-43,0:53:46,I'm,,words left out or added,,The machine omitted the word 'I'm' entirely.
+against,17-43,0:27:05,,sub,words left out or added,can't tell,"The machine output 'sub' is a fragment that does not appear in the official transcript, replacing a large section of text."
+against,17-43,0:40:27,,triple,number or citation,,The Roman numeral (iii) was transcribed as the word 'triple'.
+against,17-43,0:41:29,,double,words left out or added,,The machine inserted the word 'double' where the transcript has a blank or omitted text.
+against,17-43,0:41:30,,triple,number or citation,,The Roman numeral (iii) was transcribed as the word 'triple'.
+against,17-432,0:00:00,We'll hear,,words left out or added,,The machines completely omitted the phrase 'We'll hear'.
+against,17-432,0:04:18,diligence,diligent,small word or ending,,The difference is between the noun 'diligence' and the adjective 'diligent'.
+against,17-432,0:04:48,represent -- best,,disfluency,words left out or added,The machine omitted a false start and a repeated word.
+against,17-432,0:09:37,"I mean,",and,words left out or added,disfluency,The machines replaced the filler phrase 'I mean' with the word 'and'.
+against,17-432,0:12:48,abrogated.,aggregated,misheard word,,The words 'abrogated' and 'aggregated' sound similar but have different meanings.
+against,17-432,0:14:23,named,unnamed,misheard word,,The words 'named' and 'unnamed' sound similar but have opposite meanings.
+against,17-432,0:14:52,bind,find,misheard word,,The words 'bind' and 'find' sound similar in clear speech.
+against,17-432,0:26:20,don't think they,,words left out or added,disfluency,The machine omitted a repeated phrase that followed a speaker's restart.
+against,17-432,0:26:57,the case -- the,,disfluency,words left out or added,The machine omitted a repeated word and a false start.
+against,17-432,0:39:11,"dah, dah,",da da,disfluency,not a real difference,The machine simplified the verbatim representation of filler sounds/stumbles.
+against,17-432,0:43:57,abuse of,abusive,small word or ending,misheard word,"The phrase 'abuse of' is replaced by the single word 'abusive', changing the grammatical ending and the word structure."
+against,17-432,0:45:51,backhand,backend,misheard word,,The words 'backhand' and 'backend' sound similar but have different meanings.
+against,17-459,0:07:50,"something -- and,",,disfluency; words left out or added,,The machine omitted a spoken stumble and a conjunction.
+against,17-459,0:11:28,delay is rightfully,delays lie fully,misheard word,small word or ending,"The phrase 'is rightfully' was heard as 'lie fully', involving both a word swap and a change in word ending/form."
+against,17-459,0:12:55,"say,",said,small word or ending,,"The word 'say' is changed to 'said', which is a difference in word ending."
+against,17-459,0:26:30,parties,party,small word or ending,,The difference is between the plural 'parties' and the singular 'party'.
+against,17-459,0:26:32,parties',partys,not a real difference,,The difference is only in the punctuation of the possessive plural.
+against,17-459,0:46:04,"in absentia,",and abstention,misheard word,name or legal term,The legal term 'in absentia' was misheard as 'and abstention'.
+against,17-459,0:48:49,giving,given,small word or ending,,"The word 'giving' is replaced by 'given', which is the same word with a different ending."
+against,17-459,0:50:26,that lacked a,at lack to,misheard word; words left out or added,small word or ending,"The machine replaced 'that lacked a' with 'at lack to', involving both misheard words and a change in word count."
+against,17-459,0:53:41,government is,governments,small word or ending,words left out or added,"The machine replaced 'government is' with the plural noun 'governments', changing both the word ending and omitting the verb."
+against,17-459,0:54:31,government -- when,,disfluency,words left out or added,The machine omitted a false start and a repeated word.
+against,17-459,0:20:34,,held,words left out or added,,"The machines omitted the entire sentence 'Or no -- I mean, no, once the government is'."
+against,17-494,0:16:19,that doesn't do anything,,words left out or added,disfluency,The machine omitted a repeated phrase that followed a speaker's restart.
+against,17-494,0:16:58,inadvertent,advertent,small word or ending,,The difference is the prefix 'in-' on the word 'advertent'.
+against,17-494,0:18:35,company -- a,,disfluency,words left out or added,The machine omitted a false start/repetition of the word 'company'.
+against,17-494,0:29:46,where,whether,misheard word,,The words 'where' and 'whether' sound similar in this context.
+against,17-494,0:34:45,differences?,different,small word or ending,,The word 'differences' was changed to the singular 'different'.
+against,17-494,0:39:54,relay,relate,small word or ending,,"The difference is between 'relay' and 'relate', which are the same root word with a different ending."
+against,17-494,0:50:50,adoption,doctrine,words left out or added,misheard word,"The machine replaced the word 'adoption' with 'doctrine', which is a different word that may sound similar in context."
+against,17-494,0:54:15,$10,,words left out or added,,The machines completely omitted the phrase '$10'.
+against,17-530,0:19:50,basis,bases,small word or ending,,The difference is between the singular 'basis' and the plural 'bases'.
+against,17-530,0:25:57,the Court:,report,words left out or added,,The machines replaced the phrase 'the Court:' with a completely unrelated word 'report'.
+against,17-530,0:37:29,this statute,these statutes,small word or ending,,The difference is between the singular 'this statute' and the plural 'these statutes'.
+against,17-530,0:20:51,,new,words left out or added,,The machine replaced the phrase 'federal regime' with the word 'new'.
+against,17-5639,0:08:33,Let's,but,disfluency; words left out or added,,The machine omitted a repeated word and a filler/restart sequence.
+against,17-5639,0:12:04,under,in,small word or ending,,The word 'under' was swapped for the word 'in'.
+against,17-5639,0:32:14,"Remember,",,words left out or added,disfluency,The machine omitted a word that functions as a conversational restart or filler.
+against,17-5639,0:34:46,if there's a,at this,words left out or added,misheard word,The machine replaced a multi-word conditional phrase with a different short phrase.
+against,17-5639,0:36:26,statutory,statute,small word or ending,disfluency,The machine changed the adjective 'statutory' to the noun 'statute' and omitted the subsequent disfluency.
+against,17-5639,0:37:00,there,actually,words left out or added,,The word 'there' is present in the official transcript but missing from the machine output.
+against,17-5639,0:37:57,I guess,is,words left out or added,speaker change or overlap,The machines replaced a phrase from an interrupting speaker with a single word.
+against,17-5639,0:53:52,"Honor, is",honors,small word or ending,words left out or added,"The machines replaced 'Honor, is' with the plural 'honors', changing both the word ending and omitting the verb."
+against,17-5716,0:02:19,assistant,assistance,small word or ending,,"The difference is between the noun 'assistant' and the noun 'assistance', which is a change in the word ending."
+against,17-5716,0:09:11,satisfied,satisfy,small word or ending,,The difference is between the past tense 'satisfied' and the present tense 'satisfy'.
+against,17-5716,0:13:42,"stated,",say,misheard word,,The word 'stated' was replaced by the phonetically similar word 'say'.
+against,17-5716,0:24:01,"""reflects""",reflex,misheard word,small word or ending,The machine replaced 'reflects' with the phonetically similar 'reflex'.
+against,17-5716,0:24:15,other,the,small word or ending,,The word 'other' was replaced by the word 'the'.
+against,17-5716,0:25:55,to,into,misheard word,,The word 'to' was replaced by the phonetically similar word 'into'.
+against,17-5716,0:33:09,benefitted,benefited,not a real difference,,This is a difference in spelling convention for the same word.
+against,17-5716,0:37:33,benefitted,benefited,not a real difference,,This is a difference in spelling convention for the same word.
+against,17-5716,0:39:08,substantively,substantially,small word or ending,,The difference is between two forms of the same root word (substantively vs substantially).
+against,17-5716,0:57:00,depart it,departed,small word or ending,,The difference is between the base form 'depart' and the past tense 'departed'.
+against,17-5716,0:30:59,,ah,disfluency,,The machine captured a filler word 'ah' that is absent from the official transcript.
+against,17-586,0:03:03,stayed,state,small word or ending,,"The word 'stayed' was replaced with 'state', which is a change in the word ending/form."
+against,17-586,0:25:21,important,,words left out or added,,The word 'important' appears in the official transcript but is missing from the machine output.
+against,17-586,0:35:39,"I mean,",,disfluency,words left out or added,"The machines omitted the filler phrase 'I mean,' which is a disfluency."
+against,17-586,0:37:58,before,for,misheard word,,The word 'before' was replaced by the similar-sounding word 'for'.
+against,17-586,0:45:31,ratified,ratify,small word or ending,,The difference is only in the verb ending (ratified vs ratify).
+against,17-586,0:49:17,note.,know,misheard word,small word or ending,The word 'note' was replaced with the phonetically similar word 'know'.
+against,17-586,1:11:58,up,,words left out or added,,The word 'up' appears in the official transcript but is missing from the machine output.
+against,17-586,1:16:41,title actions,tight elections,misheard word,,The phrase 'title actions' and 'tight elections' sound similar but are different words.
+against,17-965,0:05:42,Once,when,misheard word,,The word 'Once' was replaced by the phonetically similar word 'when'.
+against,17-965,0:08:41,consular,counselor,name or legal term,misheard word,The legal term 'consular' was replaced with the phonetically similar word 'counselor'.
+against,17-965,0:26:37,"all together,",altogether,not a real difference,,The difference is between the two-word phrase 'all together' and the single-word adverb 'altogether'.
+against,17-965,0:27:31,we're,were on,words left out or added,small word or ending,The machine added the word 'on' and changed the contraction 'we're' to 'were'.
+against,17-965,0:33:18,asked,asks,small word or ending,,The difference is only in the tense/ending of the word 'ask'.
+against,17-965,0:39:25,"understand,",understood,small word or ending,,"The word 'understand' was changed to 'understood', which is a difference in the word ending."
+against,17-965,0:46:52,about,,words left out or added,disfluency,The machines omitted a word that is part of a spoken restart/stumble.
+against,17-965,0:53:15,of,quote,words left out or added,not a real difference,"The machine replaced the word 'of' with 'quote', likely interpreting the start of the quotation as a spoken marker."
+hard,15-1204_OT2017,0:19:03,"dah-dah-dah,",da da da,disfluency,not a real difference,"The speaker is stuttering or using filler sounds, which some models omitted or transcribed as punctuation."
+hard,15-1204_OT2017,0:25:27,a particular -- if,a particular if,disfluency,words left out or added,The official transcript records a restart/stumble that the models either omitted or smoothed over.
+hard,15-1204_OT2017,0:28:32,balance of my,,words left out or added; misheard word,small word or ending,"Models either omitted the phrase entirely, substituted 'balance' with 'remainder' or 'repeat', or hallucinated entirely different words."
+hard,15-1204_OT2017,0:33:51,Can it be,really,misheard word; words left out or added,,The models either omit the phrase entirely or substitute it with phonetically similar or contextually guessed words.
+hard,15-1204_OT2017,0:46:01,"has, you know,",a you know,disfluency; words left out or added,small word or ending,The models either omit the filler 'you know' or swap the verb 'has' for 'is' or 'a'.
+hard,15-1204_OT2017,0:49:26,To get before,before,words left out or added; misheard word,,"Some models omitted the phrase entirely, while others substituted 'to get before' with 'for'."
+hard,15-1204_OT2017,0:51:55,I don't think the government,i do not think the government,disfluency,words left out or added,The models either omitted the repeated phrase or normalized the contraction 'don't' to 'do not'.
+hard,15-1204_OT2017,0:55:01,"I mean, for sure",your honor,misheard word; words left out or added,disfluency,The models either omit the phrase entirely or replace the filler 'I mean' and the phrase 'for sure' with phonetically similar or entirely different words.
+hard,15-1204_OT2017,0:58:35,when you get out of,when you get out of,disfluency,words left out or added,"The phrase is a repeated restart, which some models omitted."
+hard,15-1439,0:03:30,to -- were being brought,to were being brought,disfluency,words left out or added,The official transcript records a restart/stumble that some models omitted and others transcribed without the disfluency markers.
+hard,15-1439,0:12:04,and you look to,,words left out or added,misheard word,"Most models omitted the phrase entirely, while others substituted it with different words."
+hard,15-1439,0:13:10,Under your reading -- under,under your reading,disfluency; words left out or added,,The official transcript contains a restart/stumble that the models either smoothed over or completely misheard.
+hard,15-1439,0:15:52,"et cetera, and",etc cover,words left out or added; misheard word,disfluency,The models either replace the phrase with entirely different words or omit the conjunction and the filler 'et cetera'.
+hard,15-1439,0:16:41,okay. I'll ask,am going to rest,words left out or added; misheard word,disfluency,The models replaced the speaker's repetition and intent to ask a question with entirely different phrases.
+hard,15-1439,0:50:16,this provision does.,okay,words left out or added; misheard word,disfluency,"The models either omit the phrase, replace it with 'okay' (likely capturing the preceding disfluency), or substitute it with phonetically similar but incorrect words."
+hard,15-1439,0:53:00,wanted to -- they wanted to resolve,wanted to they wanted to resolve,disfluency; words left out or added,small word or ending,"The official transcript contains a restart ('wanted to -- they wanted to') which the models either smoothed over, omitted, or misheard."
+hard,15-1439,0:57:26,Its reading -- its,is reading is,disfluency,small word or ending,"The official transcript records a stutter/restart ('Its reading -- its'), which the models have smoothed over or misidentified."
+hard,15-1485,0:07:58,supposedly gave them,is supposed to,words left out or added; small word or ending,misheard word,"The models vary between 'supposedly gave' and 'to give', and swap pronouns like 'them', 'me', and 'him'."
+hard,15-1498_OT2017,0:03:16,a number of,a number of,disfluency,words left out or added,"The models mostly omitted a repeated phrase, which is a characteristic of a spoken disfluency."
+hard,15-1498_OT2017,0:16:35,we're -- right.,we are not,disfluency; speaker change or overlap,words left out or added,"The transcript shows a speaker restart and an interruption ('right'), which the models either smoothed over, omitted, or misidentified."
+hard,15-1498_OT2017,0:19:04,accomplished -- it's,accom it,disfluency,words left out or added,The official transcript records a restart/stumble ('accomplished -- it's') which the models either omitted or smoothed over.
+hard,15-1498_OT2017,0:21:24,from an officer - but I'm not,clerks are excellent but i am not,words left out or added; misheard word,disfluency,The models either omit the phrase 'but I'm not' or mishear 'officer' as 'office' or 'clerks'.
+hard,15-1498_OT2017,0:37:34,get -- didn't,get did not,disfluency,words left out or added,"The official transcript records a false start and restart, which the models either omitted or smoothed over."
+hard,15-1509,0:07:48,But what if the definition,what if the definition,words left out or added,disfluency,"The models either omitted the parenthetical phrase entirely or replaced it with a single word, while the transcript shows a disfluent restart."
+hard,15-1509,0:19:21,why would it be more accurate,why would it be more accurate,words left out or added,,Several models completely omitted the repeated phrase.
+hard,15-1509,0:22:13,there - where forum,there where form,disfluency; misheard word,words left out or added,The models either omit the repeated 'where' (disfluency) or mishear 'forum' as 'form' (misheard word).
+hard,15-1509,0:22:20,where the most,let us let,words left out or added; disfluency,misheard word,"The models either omit the phrase, replace it with filler words, or produce fragmented repetitions."
+hard,15-1509,0:23:51,court -- it took the,court it took the,disfluency,words left out or added,The official transcript records a restart/stumble that the models either smoothed over or omitted entirely.
+hard,15-1509,0:37:40,case as improvidently,cases and providently,small word or ending; misheard word,name or legal term,"The models swap 'as' for 'and' and 'improvidently' for 'providently' or 'providentially', which is a specific legal term."
+hard,15-1509,0:43:31,"you know, the",you know the,disfluency,words left out or added,"The models either omitted the filler phrase 'you know, the' entirely or removed the comma representing the disfluency."
+hard,16-1011,0:20:13,I'm not sure,,words left out or added,,Most models completely omitted the phrase 'I'm not sure'.
+hard,16-1011,0:36:15,tell me why,very briefly,words left out or added; misheard word,disfluency,"Models either omit the phrase, replace it with 'briefly' (which appears just before the spot), or mangle the words."
+hard,16-1027,0:09:47,there's a person,,words left out or added,misheard word,"Most models omitted the phrase entirely, while others substituted it with phonetically similar but incorrect words."
+hard,16-1027,0:11:24,knows -- which he,is which he,disfluency; words left out or added,small word or ending; misheard word,The official transcript contains a restart/stumble that the models either omitted entirely or replaced with different words.
+hard,16-1027,0:28:12,it at the firm,it,words left out or added; misheard word,disfluency,"Models either omitted words, substituted them with phonetically similar but incorrect words, or failed to capture the transition to the next speaker."
+hard,16-1027,0:44:55,do you -- does,do you is,disfluency; words left out or added,small word or ending,The official transcript records a restart/stumble ('do you -- does') which the models either omitted or replaced with a different word.
+hard,16-1067,0:01:11,the portion of the judgment -- is that,a portion of the judgment is that,disfluency; words left out or added,,The models either omitted the stumble entirely or smoothed over the restart and the dash.
+hard,16-1067,0:04:03,"that appears in the statute,",that appears in the statute,disfluency,,"The phrase is a repetition of the preceding clause, which speech recognition models often omit as a disfluency."
+hard,16-111,0:07:55,It's called,quote,misheard word; words left out or added,disfluency,The models vary between expanding the contraction 'It's' and completely mishearing the phrase as 'quote' or 'what'.
+hard,16-111,0:09:55,Does it depend,does it depend,words left out or added; misheard word,,The models either omitted the phrase entirely or replaced it with phonetically similar but incorrect words.
+hard,16-111,0:22:01,would not cross that threshold.,,words left out or added,misheard word,The models either omit the phrase entirely or replace it with unrelated words and fragments.
+hard,16-111,0:28:27,in applying it,in that,words left out or added,misheard word,The models either omitted the phrase entirely or replaced it with phonetically similar or unrelated words.
+hard,16-111,0:34:39,"dah, dah, dah.",got it on,disfluency,misheard word; words left out or added,"The official transcript records non-lexical filler sounds, which the models either transcribe as nonsense words, mishear as actual words, or omit entirely."
+hard,16-111,1:09:28,On what -- what principle do,principle,words left out or added; disfluency,misheard word,"The models omit the restart and the specific phrasing of the question, with some substituting 'think' for 'do'."
+hard,16-111,1:12:05,I'm not sure it's,,words left out or added,small word or ending,"Most models omitted the phrase entirely, while one substituted it with a different phrase and Whisper changed the contraction."
+hard,16-1140,0:17:27,this doc -- to,this doc to,disfluency; words left out or added,small word or ending,The models either omit the stuttered 'doc -- to' or smooth it into a single word/phrase.
+hard,16-1140,0:38:43,"you know, we're",you know we are,disfluency,words left out or added,"The phrase 'you know' is a filler and 'we're' is a restart, which some models omitted entirely."
+hard,16-1140,0:39:21,"you know, that the",you know that the,disfluency,words left out or added,"The phrase 'you know' is a filler, and several models omitted the entire disfluent sequence."
+hard,16-1140,0:57:07,information -- or get,information or get,disfluency; words left out or added,small word or ending,The models either omitted the repeated phrase entirely or smoothed over the disfluent restart and word ending.
+hard,16-1144,0:01:33,question -- at that,question at that,disfluency,words left out or added,The official transcript records a restart/stumble ('question -- at that') which the models either smoothed over or omitted entirely.
+hard,16-1144,0:02:44,presence of -- press -- in the,presence of press in the,disfluency,words left out or added,"The official transcript records a spoken stumble and restart, which some models omitted and others transcribed literally."
+hard,16-1144,0:03:21,investigation -- closes the,invest closes the,disfluency,words left out or added,"The official transcript records a restart and a cut-off word, which the models either omitted or truncated."
+hard,16-1144,0:08:09,"Well, suppose -- to",to,disfluency,words left out or added,"The official transcript contains a filler word and a restart, which the models have either smoothed over or replaced with different words."
+hard,16-1144,0:46:06,than - something more,something more,disfluency,words left out or added,"The official transcript records a spoken repetition and restart, which the models have either omitted or smoothed over."
+hard,16-1150,0:30:14,of the son's,of the son,disfluency; words left out or added,not a real difference; misheard word,"The official transcript records a repeated phrase ('of the') and a possessive, which the models either omit, simplify, or mishear as a single word."
+hard,16-1150,0:50:56,say something different.,something,words left out or added; misheard word,number or citation,"Models either omitted the phrase entirely, replaced it with unrelated words, or hallucinated a citation."
+hard,16-1150,0:51:54,have -- you have,had you had,disfluency,words left out or added,The official transcript records a repeated word stumble which the models either smoothed over or omitted entirely.
+hard,16-1150,0:53:07,"waived in multiple different ways, but",waived in multiple different ways,words left out or added; misheard word,disfluency,"Models omit the trailing 'but' and the phrase 'different ways', while some mishear 'waived' as 'wave' or 'waved'."
+hard,16-1161,0:40:36,we're going to go,we are going to go,disfluency,words left out or added,"The official transcript records a repeated phrase (restart), which some models omitted and others expanded."
+hard,16-1161,0:50:46,to the challenge.,the challenge,small word or ending; words left out or added; misheard word,,"Models swapped 'to the' for 'as a', omitted words entirely, or misheard 'challenge' as 'state'."
+hard,16-1161,0:54:09,has been doing.,did,words left out or added; misheard word; small word or ending,can't tell,"The models show a mix of omitting words, swapping verb tenses, and completely mishearing the phrase."
+hard,16-1215,0:27:41,what it directly relates,what direct relationship,words left out or added; small word or ending,misheard word,The models omit words and change the grammatical form of 'relates' to 'relationship' or 'directly'.
+hard,16-1220,0:02:21,district court had,district court had,disfluency,words left out or added,The models are omitting a repeated phrase that follows a series of stumbles and restarts.
+hard,16-1220,0:20:26,"are -- look, what",look what,disfluency; words left out or added,,The official transcript contains a restart and a filler word ('are -- look') which most models omitted entirely or partially.
+hard,16-1220,0:25:14,it's a brief submitted,it is a brief submitted,disfluency,words left out or added,"The official transcript records a repeated phrase (a restart), which some models omitted and others expanded from 'it's' to 'it is'."
+hard,16-1220,0:32:59,entirety of this case.,,words left out or added; small word or ending,misheard word,"Models either omitted words, simplified the phrase 'entirety of this case', or completely misheard the phrase."
+hard,16-1220,0:34:20,let's -- can -- let,let us can let,disfluency,words left out or added,The official transcript records a series of stumbles and restarts that most models omitted entirely or smoothed over.
+hard,16-1220,0:42:33,consider -- we will,consider we will,disfluency,words left out or added,The official transcript records a restart/stumble that the models either omitted or smoothed over.
+hard,16-1276,0:16:52,But aren't,were,misheard word,small word or ending,The models replaced the interrogative 'But aren't' with phonetically similar but grammatically different words like 'were' or 'where'.
+hard,16-1276,0:36:22,"we broaden it, should we change",but again it should be broadened,disfluency; words left out or added,small word or ending,"The official transcript contains a restart and repetition ('should we broaden it, should we change') which the models either smoothed over, omitted, or misheard as a passive verb form."
+hard,16-1348,0:13:08,Just to - just to,that is the,disfluency; words left out or added,misheard word,"The official transcript contains a repeated phrase ('Just to - just to') which the models either omitted, simplified, or replaced with entirely different words."
+hard,16-1348,0:27:46,"in a sense,",in a sense,misheard word; words left out or added,,"Some models misheard 'in a sense' as 'since', while others omitted the phrase entirely."
+hard,16-1348,0:29:42,"Well, it went",went,disfluency; words left out or added,misheard word,"The official transcript records a spoken restart/stumble ('Well, it went') which the models either omit, simplify, or misinterpret as different words."
+hard,16-1348,0:57:14,courts are wrong.,,misheard word; words left out or added,small word or ending,"Models vary between swapping 'wrong' for 'right', omitting the phrase entirely, or substituting it with different nouns and adjectives."
+hard,16-1362,0:13:23,"partsmen, they're",partsman that,disfluency; small word or ending,words left out or added,"The models differ on the contraction 'they're' and the pluralization of 'partsmen', while some omit the phrase entirely."
+hard,16-1362,0:18:25,agency -- what the industry's,agency what the is,disfluency; small word or ending,words left out or added,The official transcript contains a restart/stumble ('agency -- what the') and a possessive ('industry's') which the models either smoothed over or misidentified.
+hard,16-1362,0:31:13,suppose -- suppose I -- I,suppose suppose i,disfluency,words left out or added,The official transcript records a stuttered restart and repetition which most models omitted or simplified.
+hard,16-1362,0:39:51,interest -- it was,it was,disfluency; words left out or added,,The official transcript contains a false start and repetition ('interest -- it was') which most models omitted entirely or partially.
+hard,16-1362,0:44:20,the service advisors,the service advisors,disfluency,,"The phrase is a repetition of the subject, which is a common speech disfluency often omitted by ASR models."
+hard,16-1371,0:05:33,we -- we authorize,we we authorized,disfluency,small word or ending,The models either omit the repeated 'we' or change the verb ending from 'authorize' to 'authorized'.
+hard,16-1371,0:27:02,an expectation -- a,expectation of a,disfluency,words left out or added,The official transcript records a false start and repetition ('an expectation -- a') which the models either omitted or smoothed over.
+hard,16-1371,0:27:20,"In your brief, you",you,words left out or added; misheard word,can't tell,"The models provide wildly different word sequences, some omitting the phrase entirely and others substituting it with phonetically similar or unrelated words."
+hard,16-1371,0:32:27,this Court held,the,words left out or added; misheard word,speaker change or overlap,"The models either omit the phrase entirely, replace it with 'the', or mishear it as 'sort of' or 'school is' right as the speaker is interrupted."
+hard,16-1371,0:52:19,How about when they,tell them,words left out or added; misheard word,disfluency,The models provide wildly different word sequences for a segment that contains a speaker interruption and a restart.
+hard,16-1371,1:00:59,before it in,before it in,words left out or added; misheard word,name or legal term,"The models vary between omitting 'in', swapping 'in' for 'and', or completely mishearing the case name 'Jones' as 'fort' or 'forton'."
+hard,16-1432,0:01:34,"in other words,",now there was,misheard word; words left out or added,,The models either correctly identified the phrase or replaced it with phonetically similar but different words like 'now there is'.
+hard,16-1432,0:07:21,"days -- excuse me,",designation,disfluency; words left out or added,misheard word,The official transcript contains a stumble and a self-correction ('days -- excuse me') which the models either omitted or replaced with different words.
+hard,16-1432,0:11:26,whether he wants,,words left out or added; misheard word,can't tell,"Models either omitted the phrase, swapped 'whether' for 'what', or produced completely unrelated hallucinations."
+hard,16-1432,0:34:15,simply -- it's,simply it is,disfluency,words left out or added,The official transcript records a restart/stumble ('simply -- it's') which the models either smoothed over or omitted entirely.
+hard,16-1432,0:40:54,to file the form.,know that they need,words left out or added; misheard word,small word or ending,"The models either omit the phrase, substitute 'form' with 'court' or 'lawyer', or replace the entire phrase with unrelated words."
+hard,16-1432,0:46:02,They have to,now,words left out or added,misheard word,The models either omit the phrase 'they have to' or replace it with 'now'.
+hard,16-1432,0:48:53,yet -- that is,yeah that is,disfluency,words left out or added,The official transcript records a restart/stumble ('yet -- that is') which the models either omitted or replaced with a filler word ('yeah').
+hard,16-1432,0:48:53,case where the,case where the,words left out or added,,Several models completely omitted the phrase 'case where the'.
+hard,16-1432,0:54:46,the revocation-on-divorce,revocation,disfluency; small word or ending,words left out or added,"The official transcript contains a stutter ('the -- the') and a hyphenated phrase, while models vary in how they handle the repetition and the preposition 'on'."
+hard,16-1432,0:57:51,century -- over the,century over the,disfluency,words left out or added,The transcript records a spoken restart/repetition which the models either omitted or smoothed over.
+hard,16-1435,0:24:05,that's a,that is the,words left out or added,small word or ending,The models either omitted the phrase entirely or replaced the contraction 'that's a' with 'that is the'.
+hard,16-1435,0:32:13,"well, it's",well it is,disfluency; words left out or added,misheard word,"The official transcript contains a filler/restart ('well, it's') which some models omitted entirely and others misheard."
+hard,16-1435,0:36:56,in a -- in a,in a in a,disfluency,words left out or added,"The official transcript contains a repeated phrase (stutter), which most models smoothed over or replaced with a single word."
+hard,16-1435,0:47:57,it would be resolved,,disfluency,words left out or added,"The models mostly omitted a repeated phrase, which is a characteristic of a speech disfluency."
+hard,16-1435,0:50:25,the -- the interests,the the interest,disfluency; small word or ending,,The models omit the repeated words and the plural ending of 'interests'.
+hard,16-1454,0:57:23,what the consumer's,what the consumer,words left out or added,disfluency,The models omitted the repeated 'what the' and the possessive 's' from the original transcript's restart.
+hard,16-1466,0:12:26,union -- come to the,come to the,disfluency,words left out or added,The official transcript records a restart/stumble ('union -- come to the') which most models omitted or simplified.
+hard,16-1466,0:31:03,"If you -- you know,",if you you know,disfluency,words left out or added,The models either omitted the filler and restart or transcribed them without the punctuation used in the official record.
+hard,16-1466,0:32:39,understand that and,am,words left out or added,small word or ending,The models either omit the phrase entirely or replace it with different words and verbs.
+hard,16-1466,0:45:55,man -- is a,man is a,disfluency,words left out or added,The official transcript records a false start/stumble ('man -- is a') which the models either smoothed over or omitted entirely.
+hard,16-1495,0:18:44,as a witness,,words left out or added; misheard word,disfluency,"Some models omitted the phrase entirely, one swapped 'witness' for 'judge', and one shifted the start point to the subsequent apology."
+hard,16-1495,0:33:18,the -- to take,the to take,disfluency,words left out or added,The official transcript records a restart/stumble which the models either omitted or smoothed over.
+hard,16-1495,0:42:38,assisting his defense.,assisting,words left out or added; misheard word,small word or ending,"Most models omitted words, while others substituted 'assisting' or 'defense' with phonetically similar or contextually related words."
+hard,16-1495,0:47:48,and with response to or,in with response to or,disfluency,words left out or added,The official transcript records a false start/stumble that the models either omitted or slightly misheard.
+hard,16-1519,0:02:04,excuse me. Is there a difference,excuse me is there a difference,disfluency,words left out or added,The models either omit or include a self-correction and a repeated phrase.
+hard,16-1519,0:12:08,"I mean, you're",i mean you are,disfluency; words left out or added,small word or ending,"The phrase 'I mean' is a filler/disfluency that some models omitted entirely, while one model swapped 'I' for 'you'."
+hard,16-1519,0:20:57,noscitur a sociis,no siderososis,name or legal term; misheard word,,The models misheard the Latin legal canon 'noscitur a sociis' as phonetically similar but nonsensical phrases.
+hard,16-1519,0:25:17,I don't think that's,i do not think that is,disfluency; words left out or added,not a real difference,The models either omitted the repeated phrase entirely or expanded the contractions.
+hard,16-1519,0:45:56,how is a,how is the,words left out or added; small word or ending,,The models either omit the phrase 'how is a' entirely or swap the indefinite article 'a' for the definite article 'the'.
+hard,16-285,0:02:21,Where does -- where does,where does,disfluency,small word or ending; words left out or added,The official transcript records a stutter/restart ('Where does -- where does') which the models have smoothed over or misidentified.
+hard,16-285,0:14:12,you're subject to,subject to,words left out or added; disfluency,not a real difference,"Models either omit the phrase entirely, omit the contraction 'you're', or expand the contraction to 'you are'."
+hard,16-285,0:37:30,"Well, wait a minute.",well when but what,words left out or added; disfluency,misheard word,The models replaced a distinct interjection and pause with different words or omitted them entirely.
+hard,16-285,0:37:50,"Well, I want",,disfluency; words left out or added,misheard word,"The official transcript contains a restart and a filler phrase ('Well, I want') which the models either omitted or replaced with different words."
+hard,16-299,0:24:59,But how about,mean i think,words left out or added,disfluency,The models replaced the official text with various filler phrases or omitted the words entirely.
+hard,16-299,0:42:14,courts of appeals.,court,name or legal term; words left out or added,misheard word,The models either truncated the legal term 'courts of appeals' or replaced it with phonetically similar but incorrect phrases.
+hard,16-299,0:46:48,"no disincumbent, and",and comment and,misheard word,words left out or added,"The models consistently mishear 'disincumbent' as 'comment' or 'notice', while also adding or omitting surrounding words."
+hard,16-299,0:47:33,All right. So,so,words left out or added,disfluency,The models either omitted the filler 'All right' or added/changed words following 'so'.
+hard,16-299,0:51:49,it -- I think,i think,disfluency,words left out or added,The official transcript contains a restart/stumble ('it -- I think') which the models either omitted or smoothed over.
+hard,16-299,0:52:24,"a ""waters of",waters of,misheard word; words left out or added,name or legal term,"Models either omit the article 'a', mishear the legal term 'waters of' as 'what is' or 'where does', or omit words entirely."
+hard,16-299,0:54:06,courts of appeals.,,words left out or added; small word or ending,,Models either omitted the phrase entirely or truncated 'courts of appeals' to 'courts' or 'court'.
+hard,16-402,0:05:26,at a particular -- was,at a particular was,disfluency; words left out or added,,The models either omitted the stuttered restart entirely or failed to capture the cut-off word and the repetition.
+hard,16-402,0:22:05,in its -- its,in its its,disfluency,misheard word; words left out or added,"The official transcript contains a repeated word (stutter), which the models either omitted, smoothed over, or misheard as different words."
+hard,16-402,0:40:07,You -- we can beep,we cannot keep,misheard word; words left out or added,disfluency,"The models replace the disfluent 'You -- we can beep' with various phrases, some sounding similar and some entirely different."
+hard,16-402,0:56:02,are given a broad range,there is,words left out or added; misheard word,small word or ending,The models provide various substitutions and omissions of the phrase 'are given a broad range'.
+hard,16-402,1:01:36,you draw several,you draw several,disfluency,words left out or added,The official transcript contains a restart/repetition that most models omitted.
+hard,16-424,0:14:59,"it, thus, falls in the",it thus falls in,words left out or added; small word or ending,disfluency,"Models either omit the phrase entirely, omit specific words, or swap 'in the' for 'within the' amidst a disfluent sentence structure."
+hard,16-424,0:26:02,this -- on the,this,disfluency,words left out or added,The official transcript records a restart/stumble ('this -- on the') which the models have either simplified or partially omitted.
+hard,16-424,0:37:41,at issue in,at issue,misheard word; words left out or added,small word or ending,"The models consistently swap 'at issue in' for 'that issued' or 'at issue', involving both phonetic substitutions and missing words."
+hard,16-424,0:37:42,there's logic.,there is logical,disfluency; small word or ending,words left out or added,"The official transcript shows a restart ('There's a -- there's logic') which the models either omit, smooth over, or misinterpret."
+hard,16-424,0:56:18,that. You think it's,any,words left out or added,misheard word,The models have replaced the specific phrase 'that. You think it's' with entirely different words or omitted them entirely.
+hard,16-460,0:51:55,It's -- when -- when,it is when,disfluency,words left out or added,The official transcript contains restarts and stumbles that the models have either smoothed over or replaced with different words.
+hard,16-476,0:09:24,when govern -- when,when government when,disfluency,words left out or added,"The official transcript shows a speaker stumbling and restarting, which the models either omitted or simplified."
+hard,16-476,0:51:36,But we have,there is,words left out or added; misheard word,disfluency,"The models either omit words, substitute 'But we have' with 'there is', or add filler/incorrect words like 'well' or 'mistake'."
+hard,16-476,0:56:05,"dah, dah, dah, dah, dah.",da da da da da,disfluency,not a real difference; words left out or added,The repetition of 'dah' is a disfluency; differences in spelling and count are secondary.
+hard,16-476,0:56:27,because it's,,words left out or added,can't tell,"Most models omitted the phrase entirely, while others substituted it with unrelated words."
+hard,16-498,0:06:03,constitutionally assigned responsibilities?,constitutionally assigned,small word or ending; words left out or added; misheard word,name or legal term,"The models vary between dropping words, changing word endings, and substituting entirely different words for the legal phrase."
+hard,16-498,0:10:08,it's giving,it is giving,disfluency; small word or ending,words left out or added,The models omit the repeated 'it's' and vary on the verb tense/form of 'giving'.
+hard,16-498,0:38:00,to jurisdictional terms.,,small word or ending; words left out or added; misheard word,name or legal term,"Models show a mix of singular/plural endings, complete omissions, and phonetic hallucinations of the legal phrase."
+hard,16-498,0:46:08,exercised its own,exercise,small word or ending; words left out or added; misheard word,disfluency,"The models vary between changing the verb ending, omitting words entirely, or substituting words during a spoken restart."
+hard,16-498,0:51:49,it's doing is,is,words left out or added; small word or ending,,"Some models omitted the phrase entirely, while others swapped the contraction 'it's' for 'it is'."
+hard,16-498,0:51:58,of the -- because,of the because,disfluency,words left out or added,The models either removed the stuttered restart entirely or smoothed it into a continuous phrase.
+hard,16-498,0:57:06,"So, if this had",if this had,words left out or added,can't tell,"The models either omit the phrase entirely, repeat the previous clause, or produce unrelated hallucinations."
+hard,16-499,0:04:52,this brings me,just going,misheard word; words left out or added,small word or ending,Models vary between mishearing 'this brings me' as 'just moving/going' and altering the verb form to 'to bring me'.
+hard,16-499,0:05:06,an -- it's sort of,an it is sort of,disfluency,words left out or added,The official transcript records a restart and a stutter that the models either omitted or smoothed into a grammatical sentence.
+hard,16-499,0:33:32,"When you say that, I",when you say that i,words left out or added; misheard word,small word or ending,"The models vary between omitting the phrase, substituting 'have' for 'say', and changing the verb tense."
+hard,16-499,0:39:15,was enforcement of,be enforced under,small word or ending; words left out or added,misheard word,"The models swap 'was' for 'be/would' and 'of' for 'under/in', while some omit words entirely."
+hard,16-499,0:50:04,but let's talk about a,,disfluency; words left out or added,small word or ending,The models either omitted the repeated phrase entirely or changed 'let's' to 'let us'.
+hard,16-534,0:05:15,Your Honor there,there,words left out or added,disfluency,"The models omit either 'Your Honor' or 'there', and the surrounding text contains a restart/stumble."
+hard,16-534,0:14:45,The property can be divided up.,property can be divided up,words left out or added; misheard word,can't tell,Models range from omitting the phrase entirely to substituting it with completely different words.
+hard,16-534,0:16:39,I'm -- I'm,am i am,disfluency,words left out or added,The official transcript contains a stuttered repetition that the models either smoothed over or transcribed as different words.
+hard,16-534,0:20:08,the -- the sponsors -- the,the the spon the,disfluency,words left out or added,"The official transcript contains repeated words and a restart, which the models either partially captured or omitted entirely."
+hard,16-534,0:32:23,have a judge -- if you,have the if you,disfluency,words left out or added,"The official transcript records a false start and restart, which the models either omitted or partially captured as fragments."
+hard,16-534,0:44:33,about foreign -- foreign,about foreign foreign,disfluency,words left out or added,"The official transcript records a repeated word and a restart, which some models omitted and others smoothed over."
+hard,16-658,0:26:31,made -- we -- we,may we we,disfluency,misheard word,The official transcript records a stutter/restart which the models either omit or misinterpret as different words.
+hard,16-658,0:28:36,that this is a jurisdictional,that this is a jurisdictional,disfluency,words left out or added,The official transcript records a restart/repetition that several models omitted.
+hard,16-6795,0:07:47,it's up to the,it is up to the,disfluency,words left out or added,The official transcript records a restart/repetition that the models either omitted or smoothed into a standard phrase.
+hard,16-6795,0:28:54,"dah-dah-dah,",da da da,disfluency,words left out or added,The transcript records filler/placeholder speech ('dah-dah-dah') which some models omitted and others transcribed as 'da da da' or replaced with actual words.
+hard,16-6795,0:28:59,"dah-dah-dah-dah-dah,",da da da da da,disfluency,words left out or added,The transcript records a series of filler sounds/stumbles which some models omitted and others transcribed phonetically.
+hard,16-6795,0:45:55,To go back to,you go back,words left out or added,can't tell,The models provide entirely different phrases or single words that do not match the transcript's phrase.
+hard,16-6795,0:49:31,that reliable. But,the right,misheard word; words left out or added,small word or ending,"The models consistently replace 'that reliable. But' with phrases like 'the right', indicating a mishearing of the phonetic sounds and the omission of the word 'reliable'."
+hard,16-6795,0:54:14,"Well, we said all",we said all,words left out or added; misheard word,disfluency,"Models either omitted words, replaced them with phonetically similar but incorrect phrases, or captured only the filler word."
+hard,16-6855,0:05:13,that's a question of,,disfluency; words left out or added,small word or ending,The models either omitted the repeated phrase entirely or expanded the contraction 'that's' to 'that is'.
+hard,16-6855,0:07:31,the brief -- in,the brief in,disfluency,words left out or added,The official transcript records a restart/stumble ('the brief -- in') which the models either smoothed over or omitted entirely.
+hard,16-6855,0:10:56,viewed -- ought to be,be ought to be,disfluency,words left out or added,The official transcript records a restart/stumble that the models either omitted or misheard.
+hard,16-6855,0:20:10,that's what this order,that is what this order,words left out or added,disfluency,The models either omit words or fail to capture the fragmented nature of the speaker's restart.
+hard,16-6855,0:20:12,so let me,let me,words left out or added; misheard word,small word or ending,The models vary from omitting the phrase entirely to substituting words with similar sounds or different meanings.
+hard,16-712,0:22:17,even in -- in,even in in,disfluency,words left out or added,"The official transcript records a repeated word and a restart, which the models either omitted or smoothed over."
+hard,16-784,0:15:37,rationale. It's a,rationale,misheard word; words left out or added,small word or ending,"Models confuse 'rationale' with 'rationality' or 'rational', and some omit the subsequent sentence fragment."
+hard,16-784,0:55:25,Sorry. I thought that,i saw at 5,words left out or added; misheard word,disfluency,The models either omit the apology or mishear the words as legal terms like 'trustee' or 'transfer'.
+hard,16-8255,0:18:58,I -- I understand,i understand,disfluency; words left out or added,misheard word,The models either omitted the stuttered 'I -- I' or replaced the phrase entirely with 'in prison'.
+hard,16-8255,0:38:40,what about the issue of,what about the issue of,disfluency,words left out or added,"The official transcript records a repeated phrase (a restart), which some models omitted."
+hard,16-8255,0:40:46,the penalty phase,the,words left out or added,misheard word,"Most models omitted the phrase entirely, while others substituted it with incorrect words or fragments."
+hard,16-8255,0:49:40,I think at,i think that,disfluency,words left out or added,The official transcript records a restart/stumble that the models either omitted or attempted to smooth over.
+hard,16-9493,0:08:37,hear -- it's,here it is,disfluency,words left out or added,"The official transcript records a false start and restart, which the models either omitted or smoothed into a coherent phrase."
+hard,16-9493,0:27:24,"I -- I mean,",i am,disfluency; words left out or added,misheard word,"The official transcript contains a stutter/restart ('I -- I mean') which the models either omitted, simplified, or completely misheard as unrelated words."
+hard,16-9493,0:30:06,bright-line rules.,right,misheard word; words left out or added,small word or ending,Models consistently mishear 'bright-line' as 'right' and frequently omit the word 'rules'.
+hard,16-961,0:41:43,Okay. So it creates,so it creates,words left out or added,disfluency,The models either omit the words entirely or replace the short confirmation and transition with entirely different phrases.
+hard,16-969,0:22:36,"dah, dah, dah.",da da da,disfluency; words left out or added,not a real difference,The models either omit the filler sounds entirely or transcribe the phonetic 'dah' as 'da'.
+hard,16-969,0:23:54,it's -- I think,it is i think,disfluency,words left out or added,The official transcript records a restart/stumble that some models omitted and others smoothed over.
+hard,16-969,0:29:14,we don't want it.,we do not want it,words left out or added; small word or ending,disfluency,"The models either omit the phrase entirely, replace it with single words, or expand the contraction 'don't' to 'do not'."
+hard,16-969,0:40:00,director is proscribed,directors prescribed,small word or ending; misheard word,,"The models vary between 'is', 'has', and 'directors', and swap 'proscribed' for 'prescribed'."
+hard,16-969,0:59:34,"in rebuttal, but",and rebuttal,misheard word; words left out or added,small word or ending,The models consistently mishear 'in rebuttal' as 'and remodeled' or omit the phrase entirely.
+hard,16-980,0:08:16,"more -- you know,",you know,disfluency,words left out or added,The official transcript contains a restart and a filler phrase which the models either omitted or partially captured.
+hard,16-980,0:08:16,there's more - there,is more there,disfluency; words left out or added,small word or ending,The models either omitted the repeated phrase or replaced the disfluent restart with different words.
+hard,16-980,0:09:51,"sole -- you know,",so you know,disfluency; words left out or added,misheard word,The models either omitted the stumble and filler or misheard 'sole' as 'so'.
+hard,16-980,0:12:43,because it was in,because it was in,words left out or added,small word or ending,"Some models omitted the phrase entirely, while one substituted 'that is' for 'because it was'."
+hard,16-980,0:15:03,of voter -- of,of voter of,disfluency,words left out or added,The official transcript records a restart/stumble ('of voter -- of') which the models either omitted or smoothed over.
+hard,16-980,0:36:41,want - if they,want if they,disfluency,words left out or added,The official transcript records a restart/stumble ('want - if they') which the models either smoothed over or omitted entirely.
+hard,16-980,0:51:22,"Well, but they",,words left out or added; misheard word,disfluency,"The models either omit the words entirely, mishear the specific words, or remove the disfluent 'Well, but' prefix."
+hard,17-130,0:02:30,we're not going to,we are not going to,disfluency,words left out or added,"The official transcript records a repeated phrase (a restart), which some models omitted and others expanded into full words."
+hard,17-130,0:02:45,this -- these -- these judgments,these are,disfluency; words left out or added,misheard word,"The official transcript shows a restart/stumble that the models either smoothed over, omitted, or misheard as different words."
+hard,17-130,0:04:15,the note -- the hearing,the note the hearing,disfluency,words left out or added,The official transcript contains a restart/stumble ('the note -- the hearing') which the models either omitted or smoothed over.
+hard,17-130,0:12:46,a lot of,a lot of,disfluency,words left out or added,"The phrase is a repetition of a previous fragment, which is a disfluency that some models omitted."
+hard,17-130,0:25:27,"know, you - you",know you you,disfluency,words left out or added,The official transcript contains a filler word and a restart that most models omitted and others smoothed over.
+hard,17-130,0:26:54,"So, I'm",i am,speaker change or overlap; words left out or added,disfluency,"The models struggle with the transition between speakers and the filler 'So,' resulting in either speaker labels, omissions, or hallucinations."
+hard,17-130,0:46:17,"you know, was",you know was,disfluency,words left out or added,"The phrase 'you know, was' consists of a filler and a restart, which several models omitted entirely."
+hard,17-130,0:48:35,and you seem to be,seem we are,words left out or added; misheard word,small word or ending,"The models replaced 'seem to be' with various combinations of 'saying', 'seeing', and 'we are/were'."
+hard,17-155,0:13:43,sense -- a great,sense a great,disfluency,words left out or added,The official transcript records a restart/stumble ('sense -- a great') which the models either omitted or smoothed over.
+hard,17-155,0:17:13,is the -- why is the confusion,is the why is the confusion,disfluency,words left out or added,The models either omitted the stuttered restart or smoothed it into a repetitive phrase.
+hard,17-155,0:25:54,and then reserve the,and then reserve the,words left out or added; misheard word,disfluency,"Models either omitted the phrase entirely, misheard 'reserve' as 'refer' or 'out', or failed to capture the repeated 'and then' disfluency."
+hard,17-155,0:40:09,"the -- you know, that",the you know that,disfluency,words left out or added,The official transcript contains a restart and a filler phrase that some models omitted and others transcribed without the disfluency markers.
+hard,17-155,0:50:29,guide -- is applying,is applying,disfluency,misheard word; words left out or added,The official transcript shows a restart/stumble ('guide -- is applying') which the models either omitted or misheard as 'guy' or 'g'.
+hard,17-2,0:18:59,do you think,,disfluency,words left out or added,The models mostly omitted a repeated phrase that follows a stutter/restart.
+hard,17-2,0:26:42,I'm -- I'm,i am i am,disfluency,words left out or added,The official transcript records a stuttered repetition that most models omitted or smoothed over.
+hard,17-2,0:41:06,you push the,,words left out or added; small word or ending,,"Several models omitted the phrase entirely, while one model swapped 'the' for 'a'."
+hard,17-2,0:43:40,unconstitutional -- in these,unconstituted in these,disfluency; words left out or added,misheard word,The models either omitted the stuttered restart or misheard 'unconstitutional' as 'unconstituted' or 'unconstitut'.
+hard,17-2,0:50:03,and isolate it,isolated,small word or ending,disfluency,The models differ on the verb ending and whether the repeated 'and' was spoken.
+hard,17-21,0:02:37,can't quite,can not quite,words left out or added,disfluency,The models either omitted the phrase entirely or modified the disfluent restart 'can't quite' into 'can not quite'.
+hard,17-21,0:38:49,unlawful -- that some,unlawful that some,disfluency,words left out or added,The official transcript records a restart/stumble ('unlawful -- that some') which most models omitted or smoothed over.
+hard,17-269,0:14:38,in the - there's,he has,disfluency; words left out or added,misheard word,"The models replaced a spoken restart/stumble ('in the - there's') with different words, some of which sound similar to the original."
+hard,17-269,0:17:32,in the cession,in the session,name or legal term,words left out or added,"The legal term 'cession' was misheard as 'session', and some models omitted the preceding words 'in the'."
+hard,17-269,0:20:18,But to be,to be,disfluency; words left out or added,,The official transcript records a restart/stumble ('But to be --') which the models either omitted or misidentified.
+hard,17-269,0:40:20,it got to this -- until,it got to this until,disfluency; words left out or added,,The models either omitted the repeated phrase and the stutter entirely or failed to capture the restart.
+hard,17-269,0:46:42,it -- and it - that's not right,8 and it that is not right,disfluency; words left out or added,,"The official transcript contains a restart and a self-correction, which the models either omitted entirely or smoothed over."
+hard,17-269,0:48:06,determine -- what would be the,determine what would be the,disfluency,words left out or added,"The official transcript records a false start and restart, which most models omitted or smoothed over."
+hard,17-269,0:51:22,add up to,,words left out or added; misheard word,,"Some models omitted the phrase entirely, while others substituted it with entirely different words."
+hard,17-312,0:08:29,their proceedings unfolded,they are proceeding,small word or ending; words left out or added,disfluency,The models swap the noun 'proceedings' for a verb phrase and omit the word 'unfolded' right before a speaker interruption.
+hard,17-312,0:11:03,it's only a partial,,words left out or added,disfluency,The models either omitted the phrase entirely or expanded the contraction 'it's' to 'it is' during a spoken restart.
+hard,17-312,0:14:07,You're -- you're,you,disfluency,words left out or added,"The official transcript shows a repeated word and a stumble, which the models either smoothed over or replaced entirely."
+hard,17-312,0:14:32,it's discrete.,it is discrete,name or legal term; not a real difference,small word or ending,The models confuse the legal term 'discrete' with 'discreet' and vary on the contraction 'it's'.
+hard,17-312,0:28:25,"of where I was,",way was,misheard word; words left out or added,small word or ending,The models produce a variety of phonetically similar but incorrect words or omit parts of the phrase entirely.
+hard,17-333,0:07:59,I think that's exactly,i think that is exactly,disfluency; words left out or added,small word or ending,The models either omitted the repeated phrase entirely or expanded the contraction 'that's' to 'that is'.
+hard,17-333,0:23:04,"circumstances, dah-dah-dah.",sort da da da,disfluency,words left out or added,The models are attempting to transcribe non-lexical filler sounds ('dah-dah-dah') as either repetitions or different words.
+hard,17-333,0:43:59,"to clear up,",clarify,words left out or added,not a real difference,"Several models omitted the phrase entirely, while others swapped the multi-word phrase for a single synonym."
+hard,17-333,0:45:47,I wasn't suggesting that,election or,words left out or added; misheard word,can't tell,"The models provide wildly different phrases, some of which are completely unrelated to the official text."
+hard,17-333,0:48:05,question -- the -- the,question the the,disfluency,words left out or added,The official transcript records a restart and repeated words which the models either omitted or simplified.
+hard,17-387,0:23:20,an exception applies.,an,words left out or added; misheard word,small word or ending,The models range from omitting the phrase entirely to substituting it with completely different words or slightly altering the verb ending.
+hard,17-387,0:44:46,"I mean, you already",i mean you already,disfluency,words left out or added,The phrase 'I mean' is a filler/disfluency that some models omitted entirely.
+hard,17-387,0:45:49,the existence of this,the existence of this,disfluency,words left out or added,"The phrase is a repetition following a filler, which some models omitted."
+hard,17-387,0:50:58,"you know, the",the,disfluency,words left out or added,"The models either omitted or partially captured the filler phrase 'you know, the'."
+hard,17-43,0:12:07,could not be granted.,,misheard word; words left out or added,,The models either omitted the phrase entirely or replaced the words with phonetically similar but legally different phrases.
+hard,17-43,0:13:41,government would take the,government would take the,words left out or added,disfluency,"The models either omitted the phrase entirely or captured it, while the official transcript shows it follows a restart/stumble."
+hard,17-43,0:19:00,from valid ones.,from the statute,words left out or added; misheard word,small word or ending,"Models either omitted the phrase entirely, substituted it with unrelated words, or dropped the final word."
+hard,17-43,0:21:48,"I mean, but",,disfluency; words left out or added,,"The official transcript contains a filler phrase and a restart ('I mean, but') which the models either omitted or replaced with different words."
+hard,17-43,0:27:34,"our gray brief,",grayberry,misheard word; words left out or added,disfluency,"Models produced phonetically similar errors ('grayberry', 'very brief'), omitted the phrase entirely, or captured a stutter ('our our our') instead of the words."
+hard,17-432,0:04:44,determinations early on.,determination early on,small word or ending; words left out or added,misheard word,"Models vary between singular/plural forms, omitting words entirely, or substituting 'decision' for 'determinations'."
+hard,17-432,0:13:37,Rule -- from -- from,rule from from,disfluency,words left out or added,The official transcript records a stutter/restart ('Rule -- from -- from') which the models either smoothed over or omitted entirely.
+hard,17-432,0:20:01,A statute of,a statute of,words left out or added; misheard word,,"Some models match the transcript, while others replace the phrase with entirely different words like 'essential' or 'session'."
+hard,17-432,0:55:39,but not both.,but not both,disfluency,words left out or added,"The speaker repeated the phrase 'but not both', which some models omitted."
+hard,17-459,0:01:54,if -- if -- unlike,if if unlike,disfluency,words left out or added,The transcript contains repeated words (stumbles) that some models captured and others omitted.
+hard,17-459,0:01:54,provision that just,provision that just,words left out or added,,Several models completely omitted the phrase 'provision that just'.
+hard,17-459,0:08:08,the system -- any kind,the system any kind,disfluency,words left out or added,The official transcript records a restart/stumble ('the system -- any kind') which the models either omitted or smoothed over.
+hard,17-459,0:19:55,"you know, to -- to",you know to to,disfluency,words left out or added,The models either omit or simplify the speaker's stumbles and filler words.
+hard,17-494,0:02:29,be -- to put,to put,disfluency,words left out or added,The official transcript records a false start/stumble ('be --') which most models omitted or misheard.
+hard,17-494,0:27:03,ability of -- the,ability of the,disfluency,words left out or added,The official transcript shows a restart/stumble ('ability of -- the') which some models omitted and others smoothed over.
+hard,17-494,0:55:56,But where -- what,what the,disfluency; words left out or added,,"The official transcript records a restart/stumble ('But where -- what') which the models either smoothed over, omitted, or misheard."
+hard,17-530,0:40:14,"the - you know,",the you know,disfluency,words left out or added,The models either omitted or smoothed over a filler phrase and a restart.
+hard,17-5639,0:17:42,I think you'd be,i think you would be,disfluency; words left out or added,small word or ending,The models either omitted the repeated phrase entirely or expanded the contraction 'you'd' to 'you would'.
+hard,17-5639,0:52:08,defense -- of the,defense of the,disfluency,words left out or added,The official transcript records a restart/stumble ('defense -- of the') which most models omitted entirely or truncated.
+hard,17-5716,0:10:19,every -- and in,every and in,disfluency; words left out or added,,The models either omitted the repeated word and dash or removed the filler/restart entirely.
+hard,17-5716,0:26:03,to district courts,district courts,words left out or added; small word or ending,misheard word,"The models vary between omitting 'district', swapping 'courts' for 'judge', or replacing the phrase entirely."
+hard,17-5716,0:47:06,that allow sentencing below a minimum,that allow sentencing below a minimum,words left out or added; small word or ending,,"Most models omitted the phrase entirely, while one model changed the verb ending from 'allow' to 'allows'."
+hard,17-5716,0:52:03,the -- so the government -- so,the so the so,disfluency,words left out or added,The official transcript contains a series of restarts and stumbles that the models either omitted or failed to transcribe accurately.
+hard,17-586,0:35:18,I mean insofar,i mean far,disfluency; words left out or added,small word or ending,"The models either omit the filler 'I mean' or the word 'insofar', or they misinterpret 'insofar' as 'far'."
+hard,17-586,0:43:29,I -- and though,i and,disfluency; words left out or added,small word or ending,The models either omitted the stuttered restart or smoothed it into a standard phrase.
+hard,17-586,0:43:42,district -- as to the,district as to the,disfluency,words left out or added,The official transcript records a restart/stumble that most models omitted or smoothed over.
+hard,17-586,0:56:29,race -- if it's,race if it is,disfluency,words left out or added,The models removed the repeated phrase and the stutter/restart characteristic of a disfluency.
+hard,17-965,0:50:22,"disclaimed -- you know,",you know,disfluency,words left out or added,The models either omitted or partially captured a restart and a filler phrase.
+hard,17-965,0:51:05,"what's -- that's -- you know, that's what",is that is you know that is what,disfluency; words left out or added,small word or ending,"The models either omit the phrase entirely or replace the stuttered restarts and filler with a smoother, slightly different sequence of words."
+hard,17-965,0:53:12,it's a religious -- it,is a religion it,disfluency; words left out or added,misheard word,The models either omitted the stuttered phrase entirely or misheard the repeated 'it's a religious' as 'is a religion'.

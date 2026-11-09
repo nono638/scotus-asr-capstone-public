@@ -1,0 +1,547 @@
+docket,engine,kind,text,page,line,audio_seconds,audio_clock,model_was_silent,silence_seconds
+08-1314,whisper-large-v3,laughter,(Laughter.),30,14,1962.42,0:32:42,False,0.0
+08-1314,whisper-large-v3,end,"(Whereupon, at 12:03 p.m., the case in the",52,22,3461.98,0:57:41,False,0.0
+08-1423,whisper-large-v3,laughter,(Laughter.),20,18,1205.88,0:20:05,True,2.3
+08-1423,whisper-large-v3,laughter,(Laughter.),20,21,1216.86,0:20:16,True,4.7
+08-1423,whisper-large-v3,laughter,(Laughter.),37,24,2529.78,0:42:09,True,2.4
+08-1423,whisper-large-v3,end,"(Whereupon, at 11:00 a.m., the case in the",51,25,3489.1,0:58:09,False,0.0
+08-1438,whisper-large-v3,end,"(Whereupon, at 11:58 a.m., the case in the",49,8,3106.32,0:51:46,True,2.3
+08-1448,whisper-large-v3,laughter,(Laughter.),4,23,108.9,0:01:48,False,0.0
+08-1448,whisper-large-v3,laughter,(Laughter.),11,8,541.4,0:09:01,True,2.3
+08-1448,whisper-large-v3,laughter,(Laughter.),13,20,710.98,0:11:50,False,0.0
+08-1448,whisper-large-v3,laughter,(Laughter.),15,13,841.24,0:14:01,False,0.0
+08-1448,whisper-large-v3,laughter,(Laughter.),17,6,972.42,0:16:12,True,3.8
+08-1448,whisper-large-v3,laughter,(Laughter.),22,5,1308.7,0:21:48,False,0.0
+08-1448,whisper-large-v3,laughter,(Laughter.),24,23,1488.28,0:24:48,False,0.0
+08-1448,whisper-large-v3,laughter,(Laughter.),28,3,1672.76,0:27:52,False,0.0
+08-1448,whisper-large-v3,laughter,(Laughter.),32,22,1963.02,0:32:43,False,0.0
+08-1448,whisper-large-v3,laughter,(Laughter.),44,24,2693.74,0:44:53,False,0.0
+08-1448,whisper-large-v3,laughter,(Laughter.),52,6,3089.86,0:51:29,False,0.0
+08-1448,whisper-large-v3,laughter,(Laughter.),59,3,3510.58,0:58:30,True,2.6
+08-1448,whisper-large-v3,laughter,(Laughter.),59,7,3515.2,0:58:35,True,2.6
+08-1448,whisper-large-v3,end,"(Whereupon, at 11:04 a.m., the case in the",61,5,3632.52,1:00:32,True,2.3
+09-10245,whisper-large-v3,laughter,(Laughter.),20,22,1177.46,0:19:37,False,0.0
+09-10245,whisper-large-v3,end,"(Whereupon, at 11:12 a.m., the case in the",55,25,3490.98,0:58:10,True,4.2
+09-1036,whisper-large-v3,laughter,(Laughter.),34,12,2016.56,0:33:36,False,0.0
+09-1036,whisper-large-v3,end,"(Whereupon, at 11:04 a.m., the case in the",59,6,3630.96,1:00:30,True,6.6
+09-10876,whisper-large-v3,end,"(Whereupon, at 11:16 a.m., the case in the",60,23,3660.4,1:01:00,True,2.6
+09-1088,whisper-large-v3,laughter,(Laughter.),27,10,1745.9,0:29:05,False,0.0
+09-1088,whisper-large-v3,laughter,(Laughter.),34,6,2289.78,0:38:09,True,2.2
+09-1088,whisper-large-v3,laughter,(Laughter.),34,19,2326.88,0:38:46,False,0.0
+09-1088,whisper-large-v3,end,"(Whereupon, at 12:05 p.m., the case in the",54,16,3660.4,1:01:00,False,0.0
+09-11121,whisper-large-v3,laughter,(Laughter.),8,2,360.98,0:06:00,False,0.0
+09-11121,whisper-large-v3,laughter,(Laughter.),12,22,674.66,0:11:14,True,2.1
+09-11121,whisper-large-v3,laughter,(Laughter.),14,3,770.26,0:12:50,True,4.4
+09-11121,whisper-large-v3,laughter,(Laughter.),30,23,1882.54,0:31:22,True,2.4
+09-11121,whisper-large-v3,laughter,(Laughter.),39,6,2457.9,0:40:57,False,0.0
+09-11121,whisper-large-v3,laughter,(Laughter.),48,18,3108.94,0:51:48,True,2.5
+09-11121,whisper-large-v3,end,"(Whereupon, at 12:12 p.m., the case in the",55,6,3515.24,0:58:35,False,0.0
+09-11311,whisper-large-v3,laughter,(Laughter.),6,5,202.86,0:03:22,False,0.0
+09-11311,whisper-large-v3,laughter,(Laughter.),10,10,488.02,0:08:08,False,0.0
+09-11311,whisper-large-v3,laughter,(Laughter.),32,11,2045.64,0:34:05,False,0.0
+09-11311,whisper-large-v3,laughter,(Laughter.),32,15,2048.78,0:34:08,False,0.0
+09-11311,whisper-large-v3,end,"(Whereupon, at 10:58 a.m., the case in the",54,1,3404.3,0:56:44,True,4.8
+09-11328,whisper-large-v3,laughter,(Laughter.),22,18,1447.08,0:24:07,True,3.9
+09-11328,whisper-large-v3,laughter,(Laughter.),27,25,1831.66,0:30:31,True,2.0
+09-11328,whisper-large-v3,laughter,(Laughter.),31,13,2092.72,0:34:52,False,0.0
+09-11328,whisper-large-v3,laughter,(Laughter.),31,18,2102.38,0:35:02,False,0.0
+09-11328,whisper-large-v3,end,"(Whereupon, at 11:02 a.m., the case in the",49,24,3459.26,0:57:39,True,2.4
+09-115,whisper-large-v3,end,"(Whereupon, at 12:02 p.m., the case in the",58,23,3641.3,1:00:41,True,2.7
+09-11556,whisper-large-v3,laughter,(Laughter.),28,12,1838.92,0:30:38,False,0.0
+09-11556,whisper-large-v3,end,"(Whereupon, at 12:04 p.m., the case in the",56,14,3663.72,1:01:03,False,0.0
+09-1156,whisper-large-v3,laughter,(Laughter.),17,8,857.5,0:14:17,False,0.0
+09-1156,whisper-large-v3,laughter,(Laughter.),22,7,1145.08,0:19:05,False,0.0
+09-1156,whisper-large-v3,laughter,(Laughter.),40,16,2332.2,0:38:52,False,0.0
+09-1156,whisper-large-v3,laughter,(Laughter.),40,22,2337.7,0:38:57,False,0.0
+09-1156,whisper-large-v3,laughter,(Laughter.),48,18,2868.2,0:47:48,True,2.9
+09-1156,whisper-large-v3,end,"(Whereupon, at 10:59 a.m., the case in the",60,3,3589.8,0:59:49,False,0.0
+09-1159,whisper-large-v3,laughter,(Laughter.),48,3,2999.66,0:49:59,False,0.0
+09-1163,whisper-large-v3,laughter,(Laughter.),10,4,534.98,0:08:54,False,0.0
+09-1163,whisper-large-v3,laughter,(Laughter.),11,6,608.44,0:10:08,False,0.0
+09-1163,whisper-large-v3,laughter,(Laughter.),36,4,2385.32,0:39:45,False,0.0
+09-1163,whisper-large-v3,laughter,(Laughter.),36,6,2389.66,0:39:49,False,0.0
+09-1163,whisper-large-v3,laughter,(Laughter.),48,6,3161.46,0:52:41,False,0.0
+09-1163,whisper-large-v3,laughter,(Laughter.),50,6,3260.96,0:54:20,False,0.0
+09-1163,whisper-large-v3,end,"(Whereupon, at 10:59 a.m., the case in the",52,25,3476.3,0:57:56,True,3.3
+09-1205,whisper-large-v3,end,"(Whereupon at 12:05 p.m., the case in the",51,18,3658.92,1:00:58,False,0.0
+09-1227,whisper-large-v3,end,"(Whereupon, at 11:19 a.m., the case in the",56,1,3635.36,1:00:35,True,5.6
+09-1233,whisper-large-v3,laughter,(Laughter.),15,18,798.98,0:13:18,False,0.0
+09-1233,whisper-large-v3,laughter,(Laughter.),50,8,3090.73,0:51:30,True,3.2
+09-1233,whisper-large-v3,laughter,(Laughter.),50,10,3095.48,0:51:35,True,3.2
+09-1233,whisper-large-v3,laughter,(Laughter.),72,5,4384.72,1:13:04,False,0.0
+09-1233,whisper-large-v3,laughter,(Laughter.),72,21,4404.92,1:13:24,False,0.0
+09-1233,whisper-large-v3,end,"(Whereupon, at 12:31 p.m., the case in the",80,9,4877.1,1:21:17,False,0.0
+09-1272,whisper-large-v3,laughter,(Laughter.),10,7,463.34,0:07:43,False,0.0
+09-1272,whisper-large-v3,laughter,(Laughter.),14,11,763.62,0:12:43,False,0.0
+09-1272,whisper-large-v3,laughter,(Laughter.),16,15,862.6,0:14:22,False,0.0
+09-1272,whisper-large-v3,laughter,(Laughter.),20,8,1070.86,0:17:50,True,2.4
+09-1272,whisper-large-v3,laughter,(Laughter.),34,8,1988.14,0:33:08,False,0.0
+09-1272,whisper-large-v3,laughter,(Laughter.),39,15,2375.82,0:39:35,False,0.0
+09-1272,whisper-large-v3,laughter,(Laughter.),54,25,3460.62,0:57:40,False,0.0
+09-1272,whisper-large-v3,end,"(Whereupon, at 11:58 a.m., the case in the",55,22,3513.16,0:58:33,False,0.0
+09-1273,whisper-large-v3,laughter,(Laughter.),53,18,3434.26,0:57:14,False,0.0
+09-1273,whisper-large-v3,end,"(Whereupon, at 12:05 p.m., the case in the",53,22,3436.64,0:57:16,False,0.0
+09-1279,whisper-large-v3,laughter,(Laughter.),16,11,971.26,0:16:11,False,0.0
+09-1279,whisper-large-v3,laughter,(Laughter.),35,24,2373.6,0:39:33,False,0.0
+09-1279,whisper-large-v3,end,"(Whereupon, at 11:07 a.m., the case in the",42,22,2913.92,0:48:33,False,0.0
+09-1298,whisper-large-v3,laughter,(Laughter.),18,10,993.78,0:16:33,False,0.0
+09-1298,whisper-large-v3,laughter,(Laughter.),18,12,995.52,0:16:35,False,0.0
+09-1298,whisper-large-v3,laughter,(Laughter.),18,17,999.52,0:16:39,False,0.0
+09-1298,whisper-large-v3,laughter,(Laughter.),41,10,2355.84,0:39:15,False,0.0
+09-1298,whisper-large-v3,laughter,(Laughter.),45,17,2617.02,0:43:37,False,0.0
+09-1298,whisper-large-v3,laughter,(Laughter.),46,3,2643.16,0:44:03,False,0.0
+09-1298,whisper-large-v3,laughter,(Laughter.),48,17,2800.66,0:46:40,False,0.0
+09-1298,whisper-large-v3,laughter,(Laughter.),48,22,2805.78,0:46:45,False,0.0
+09-1298,whisper-large-v3,laughter,(Laughter.),60,15,3524.6,0:58:44,False,0.0
+09-1298,whisper-large-v3,end,"(Whereupon, at 11:02 a.m., the case in the",61,15,3579.02,0:59:39,True,2.7
+09-1343,whisper-large-v3,laughter,(Laughter.),39,20,2429.9,0:40:29,False,0.0
+09-1343,whisper-large-v3,laughter,(Laughter.),40,22,2478.52,0:41:18,False,0.0
+09-1343,whisper-large-v3,end,"(Whereupon, at 11:13 a.m., the case in the",62,11,3624.92,1:00:24,True,4.2
+09-1403,whisper-large-v3,laughter,(Laughter.),42,23,2880.36,0:48:00,False,0.0
+09-1403,whisper-large-v3,end,"(Whereupon, at 10:58 a.m., the case in the",49,12,3369.74,0:56:09,True,3.9
+09-1454,whisper-large-v3,laughter,(Laughter.),4,24,54.5,0:00:54,True,2.5
+09-1454,whisper-large-v3,laughter,(Laughter.),13,12,698.44,0:11:38,False,0.0
+09-1454,whisper-large-v3,laughter,(Laughter.),19,5,1049.3,0:17:29,False,0.0
+09-1454,whisper-large-v3,laughter,(Laughter.),23,2,1289.88,0:21:29,True,2.6
+09-1454,whisper-large-v3,laughter,(Laughter.),27,18,1581.28,0:26:21,False,0.0
+09-1454,whisper-large-v3,laughter,(Laughter.),27,24,1589.94,0:26:29,True,2.0
+09-1454,whisper-large-v3,laughter,(Laughter.),28,2,1595.02,0:26:35,True,2.0
+09-1454,whisper-large-v3,laughter,(Laughter.),28,5,1596.18,0:26:36,True,2.0
+09-1454,whisper-large-v3,laughter,(Laughter.),43,18,2714.46,0:45:14,False,0.0
+09-1454,whisper-large-v3,laughter,(Laughter.),45,13,2838.06,0:47:18,True,4.1
+09-1454,whisper-large-v3,laughter,(Laughter.),46,4,2880.36,0:48:00,True,4.7
+09-1454,whisper-large-v3,laughter,(Laughter.),54,18,3453.46,0:57:33,False,0.0
+09-1454,whisper-large-v3,end,"(Whereupon, at 11:18 a.m., the case in the",58,16,3704.6,1:01:44,True,2.3
+09-1476,whisper-large-v3,end,"(Whereupon, at 11:09 a.m., the case in the",52,7,3540.18,0:59:00,True,3.8
+09-1498,whisper-large-v3,laughter,(Laughter.),21,7,1287.82,0:21:27,False,0.0
+09-1498,whisper-large-v3,laughter,(Laughter.),22,4,1345.74,0:22:25,False,0.0
+09-1498,whisper-large-v3,laughter,(Laughter.),47,5,3094.78,0:51:34,False,0.0
+09-1498,whisper-large-v3,end,"(Whereupon, at 12:19 p.m., the case in the",53,11,3531.26,0:58:51,False,0.0
+09-150,whisper-large-v3,laughter,(Laughter.),32,23,1832.74,0:30:32,False,0.0
+09-150,whisper-large-v3,laughter,(Laughter.),33,9,1844.56,0:30:44,True,4.7
+09-150,whisper-large-v3,laughter,(Laughter.),50,17,2965.04,0:49:25,True,2.4
+09-150,whisper-large-v3,end,"(Whereupon, at 12:06 p.m., the case in the",63,22,3713.66,1:01:53,True,14.8
+09-152,whisper-large-v3,laughter,(Laughter.),19,2,1144.96,0:19:04,False,0.0
+09-152,whisper-large-v3,laughter,(Laughter.),19,7,1154.2,0:19:14,False,0.0
+09-152,whisper-large-v3,laughter,(Laughter.),19,10,1156.9,0:19:16,False,0.0
+09-152,whisper-large-v3,laughter,(Laughter.),33,7,2059.74,0:34:19,False,0.0
+09-152,whisper-large-v3,end,"(Whereupon, at 2:02 p.m., the case in the",59,15,3760.2,1:02:40,False,0.0
+09-1533,whisper-large-v3,laughter,(Laughter.),38,7,2345.02,0:39:05,False,0.0
+09-1533,whisper-large-v3,end,"(Whereupon, at 11:05 a.m., the case in the",54,22,3407.72,0:56:47,True,4.9
+09-291,whisper-large-v3,laughter,(Laughter.),29,25,1709.06,0:28:29,True,4.2
+09-291,whisper-large-v3,laughter,(Laughter.),30,5,1715.88,0:28:35,False,0.0
+09-291,whisper-large-v3,laughter,(Laughter.),32,11,1848.72,0:30:48,False,0.0
+09-291,whisper-large-v3,laughter,(Laughter.),33,13,1895.2,0:31:35,False,0.0
+09-291,whisper-large-v3,laughter,(Laughter.),33,24,1918.92,0:31:58,False,0.0
+09-291,whisper-large-v3,laughter,(Laughter.),37,19,2164.78,0:36:04,False,0.0
+09-291,whisper-large-v3,laughter,(Laughter.),43,6,2531.7,0:42:11,True,2.4
+09-291,whisper-large-v3,laughter,(Laughter.),43,18,2566.3,0:42:46,False,0.0
+09-291,whisper-large-v3,laughter,(Laughter.),44,12,2624.16,0:43:44,False,0.0
+09-291,whisper-large-v3,end,"(Whereupon at 12:00 p.m., the case in the",56,4,3428.4,0:57:08,False,0.0
+09-329,whisper-large-v3,laughter,(Laughter.),4,22,124.1,0:02:04,False,0.0
+09-329,whisper-large-v3,laughter,(Laughter.),9,10,477.58,0:07:57,True,2.8
+09-329,whisper-large-v3,laughter,(Laughter.),11,9,612.54,0:10:12,False,0.0
+09-329,whisper-large-v3,laughter,(Laughter.),12,14,695.1,0:11:35,False,0.0
+09-329,whisper-large-v3,laughter,(Laughter.),42,14,2763.9,0:46:03,False,0.0
+09-329,whisper-large-v3,end,"(Whereupon, at 10:59 a.m., the case in the",52,24,3485.48,0:58:05,True,2.8
+09-350,whisper-large-v3,end,"(Whereupon, at 1:56 p.m., the case in the",56,21,3329.16,0:55:29,True,2.1
+09-400,whisper-large-v3,laughter,(Laughter.),37,21,2486.04,0:41:26,False,0.0
+09-400,whisper-large-v3,end,"(Whereupon, at 1:59 p.m., the case in the",51,20,3532.2,0:58:52,False,0.0
+09-479,whisper-large-v3,end,"(Whereupon, at 12:06 p.m., the case in the",57,2,3612.14,1:00:12,False,0.0
+09-520,whisper-large-v3,laughter,(Laughter.),25,21,1561.62,0:26:01,False,0.0
+09-520,whisper-large-v3,laughter,(Laughter.),45,18,2777.52,0:46:17,False,0.0
+09-520,whisper-large-v3,laughter,(Laughter.),46,14,2822.16,0:47:02,False,0.0
+09-520,whisper-large-v3,laughter,(Laughter.),49,8,2985.68,0:49:45,False,0.0
+09-520,whisper-large-v3,end,"(Whereupon, at 11:04 a.m., the case in the",60,21,3696.3,1:01:36,True,3.1
+09-525,whisper-large-v3,laughter,(Laughter.),21,19,1131.58,0:18:51,False,0.0
+09-525,whisper-large-v3,end,"(Whereupon, at 11:02 a.m., the case in the",65,11,3671.1,1:01:11,False,0.0
+09-529,whisper-large-v3,laughter,(Laughter.),14,8,761.22,0:12:41,False,0.0
+09-529,whisper-large-v3,laughter,(Laughter.),15,3,818.46,0:13:38,False,0.0
+09-529,whisper-large-v3,laughter,(Laughter.),29,11,1696.36,0:28:16,False,0.0
+09-529,whisper-large-v3,laughter,(Laughter.),31,1,1829.54,0:30:29,False,0.0
+09-529,whisper-large-v3,laughter,(Laughter.),31,4,1833.9,0:30:33,False,0.0
+09-529,whisper-large-v3,laughter,(Laughter.),31,20,1887.16,0:31:27,False,0.0
+09-529,whisper-large-v3,end,"(Whereupon, at 12:01 p.m., the case in the",55,18,3642.46,1:00:42,False,0.0
+09-530,whisper-large-v3,laughter,(Laughter.),16,20,818.8,0:13:38,False,0.0
+09-530,whisper-large-v3,laughter,(Laughter.),38,13,2213.1,0:36:53,False,0.0
+09-530,whisper-large-v3,laughter,(Laughter.),39,23,2292.6,0:38:12,False,0.0
+09-530,whisper-large-v3,laughter,(Laughter .),44,12,2587.32,0:43:07,True,2.8
+09-530,whisper-large-v3,laughter,(Laughter.),47,23,2789.78,0:46:29,False,0.0
+09-530,whisper-large-v3,end,"(Whereupon, at 11:03 a.m., the case in the",59,3,3534.46,0:58:54,True,3.1
+09-571,whisper-large-v3,laughter,(Laughter.),9,2,460.94,0:07:40,True,2.3
+09-571,whisper-large-v3,laughter,{Laughter.),9,7,467.12,0:07:47,False,0.0
+09-571,whisper-large-v3,laughter,(Laughter.),42,12,2466.16,0:41:06,False,0.0
+09-571,whisper-large-v3,end,"(Whereupon, at 12:05 p.m., the case in the",61,21,3672.98,1:01:12,False,0.0
+09-5801,whisper-large-v3,end,"(Whereupon, at 12:06 p.m., the case in the",55,12,3648.16,1:00:48,False,0.0
+09-587,whisper-large-v3,laughter,(Laughter.),15,9,763.2,0:12:43,False,0.0
+09-587,whisper-large-v3,laughter,(Laughter.),31,11,1836.28,0:30:36,False,0.0
+09-587,whisper-large-v3,laughter,(Laughter.),43,8,2614.04,0:43:34,False,0.0
+09-587,whisper-large-v3,laughter,(Laughter.),45,13,2738.94,0:45:38,False,0.0
+09-587,whisper-large-v3,laughter,(Laughter.),46,12,2785.28,0:46:25,False,0.0
+09-587,whisper-large-v3,end,"(Whereupon at 11:05 a.m., the case in the",60,20,3650.14,1:00:50,True,7.0
+09-658,whisper-large-v3,end,"(Whereupon, at 11:54 a.m., the case in the",41,8,2921.8,0:48:41,True,2.1
+09-6822,whisper-large-v3,laughter,(Laughter.),26,2,1460.74,0:24:20,False,0.0
+09-6822,whisper-large-v3,end,"(Whereupon, at 12:04 p.m., the case in the",56,13,3551.02,0:59:11,True,6.5
+09-737,whisper-large-v3,end,"(Whereupon, at 11:04 a.m., the case in the",56,10,3656.96,1:00:56,False,0.0
+09-751,whisper-large-v3,laughter,(Laughter.),13,9,701.0,0:11:41,False,0.0
+09-751,whisper-large-v3,laughter,(Laughter.),14,4,739.64,0:12:19,False,0.0
+09-751,whisper-large-v3,laughter,(Laughter.),32,19,2033.5,0:33:53,True,6.5
+09-751,whisper-large-v3,end,"(Whereupon, at 11:03 a.m., the case in the",57,20,3649.9,1:00:49,True,2.8
+09-804,whisper-large-v3,laughter,(Laughter.),23,3,1446.48,0:24:06,False,0.0
+09-804,whisper-large-v3,laughter,(Laughter.),48,3,3251.04,0:54:11,False,0.0
+09-804,whisper-large-v3,end,"(Whereupon, at 11:08 a.m., the case in the",56,1,3713.14,1:01:53,False,0.0
+09-834,whisper-large-v3,laughter,(Laughter.),13,19,737.28,0:12:17,True,4.0
+09-834,whisper-large-v3,laughter,(Laughter. ),22,1,1274.16,0:21:14,False,0.0
+09-834,whisper-large-v3,end,"(Whereupon, at 12:01 p.m., the case in the",54,24,3367.56,0:56:07,True,3.4
+09-837,whisper-large-v3,laughter,(Laughter.),17,9,1061.92,0:17:41,False,0.0
+09-837,whisper-large-v3,laughter,(Laughter.),17,12,1063.42,0:17:43,False,0.0
+09-837,whisper-large-v3,laughter,(Laughter.),22,15,1440.92,0:24:00,False,0.0
+09-837,whisper-large-v3,end,"(Whereupon, at 11:46 a.m., the case in the",39,10,2655.22,0:44:15,False,0.0
+09-846,whisper-large-v3,laughter,(Laughter.),34,17,2310.36,0:38:30,False,0.0
+09-846,whisper-large-v3,end,"(Whereupon, at 12:05 p.m., the case in the",50,21,3612.86,1:00:12,True,3.3
+09-868,whisper-large-v3,laughter,(Laughter.),29,21,1629.52,0:27:09,False,0.0
+09-868,whisper-large-v3,end,"(Whereupon, at 11:01 a.m., the case in the",57,24,3640.88,1:00:40,True,2.9
+09-893,whisper-large-v3,end,"(Whereupon, at 11:03 a.m., the case in the",55,21,3629.96,1:00:29,True,3.5
+09-9000,whisper-large-v3,laughter,(Laughter.),21,24,1158.24,0:19:18,False,0.0
+09-9000,whisper-large-v3,laughter,(Laughter.),27,23,1528.1,0:25:28,False,0.0
+09-9000,whisper-large-v3,laughter,(Laughter.),32,5,1861.81,0:31:01,True,3.4
+09-9000,whisper-large-v3,end,"(Whereupon at 11:04 a.m., the case in the",57,23,3743.07,1:02:23,True,4.3
+09-907,whisper-large-v3,laughter,(Laughter.),7,5,300.02,0:05:00,True,2.5
+09-907,whisper-large-v3,laughter,(Laughter.),10,22,550.78,0:09:10,False,0.0
+09-907,whisper-large-v3,end,"(Whereupon, at 11:04 a.m., the case in the",57,5,3513.98,0:58:33,False,0.0
+09-987,whisper-large-v3,laughter,(Laughter.),31,16,1942.86,0:32:22,False,0.0
+09-987,whisper-large-v3,laughter,(Laughter. ),31,22,1961.6,0:32:41,True,2.7
+09-987,whisper-large-v3,laughter,(Laughter.),37,3,2275.36,0:37:55,False,0.0
+09-987,whisper-large-v3,laughter,(Laughter.),49,3,3015.46,0:50:15,False,0.0
+09-987,whisper-large-v3,laughter,(Laughter.),56,3,3441.58,0:57:21,False,0.0
+09-987,whisper-large-v3,end,"(Whereupon, at 11:04 a.m., the case in the",59,11,3665.68,1:01:05,True,2.5
+09-993,whisper-large-v3,laughter,(Laughter.),43,14,2741.12,0:45:41,True,2.2
+09-993,whisper-large-v3,end,"(Whereupon, at 11:05 a.m., the case in the",58,12,3706.82,1:01:46,False,0.0
+09-996,whisper-large-v3,end,"(Whereupon, at 11:59 a.m., the case in the",50,6,3345.12,0:55:45,False,0.0
+10-10,whisper-large-v3,laughter,(Laughter.),29,16,1933.9,0:32:13,False,0.0
+10-10,whisper-large-v3,end,"(Whereupon, at 11:12 a.m., the case in the",62,19,4173.32,1:09:33,False,0.0
+10-114,whisper-large-v3,laughter,(Laughter.),11,5,574.6,0:09:34,False,0.0
+10-114,whisper-large-v3,end,"(Whereupon, at 12:11 p.m., the case in the",56,3,3603.92,1:00:03,False,0.0
+10-174,whisper-large-v3,laughter,(Laughter.),35,5,2063.62,0:34:23,False,0.0
+10-174,whisper-large-v3,laughter,(Laughter.),60,22,3934.24,1:05:34,True,3.2
+10-174,whisper-large-v3,laughter,(Laughter.),63,10,4098.42,1:08:18,True,7.8
+10-174,whisper-large-v3,laughter,(Laughter.),65,19,4301.38,1:11:41,False,0.0
+10-174,whisper-large-v3,end,"(Whereupon, at 11:28 a.m., the case in the",69,12,4549.08,1:15:49,False,0.0
+10-179,whisper-large-v3,laughter,(Laughter.),47,14,3274.32,0:54:34,False,0.0
+10-179,whisper-large-v3,laughter,(Laughter.),48,7,3308.82,0:55:08,False,0.0
+10-179,whisper-large-v3,end,"(Whereupon, at 2:01 p.m., the case in the",53,12,3670.46,1:01:10,False,0.0
+10-188,whisper-large-v3,end,"(Whereupon, at 12:12 p.m., the case in the",47,24,3131.84,0:52:11,False,0.0
+10-235,whisper-large-v3,laughter,(Laughter.),17,25,928.7,0:15:28,False,0.0
+10-235,whisper-large-v3,laughter,(Laughter.),19,5,985.24,0:16:25,False,0.0
+10-235,whisper-large-v3,laughter,(Laughter.),49,7,3054.36,0:50:54,False,0.0
+10-235,whisper-large-v3,end,"(Whereupon, at 12:02 p.m., the case in the",56,23,3499.44,0:58:19,False,0.0
+10-238,whisper-large-v3,laughter,(Laughter.),15,1,766.16,0:12:46,True,4.2
+10-238,whisper-large-v3,laughter,(Laughter.),24,9,1457.44,0:24:17,True,3.2
+10-238,whisper-large-v3,laughter,(Laughter.),24,11,1459.62,0:24:19,True,3.2
+10-238,whisper-large-v3,laughter,(Laughter.),49,18,3109.74,0:51:49,False,0.0
+10-238,whisper-large-v3,end,"(Whereupon, at 11:03 a.m., the case in the",57,15,3597.62,0:59:57,True,2.5
+10-277,whisper-large-v3,end,"(Whereupon, at 11:20 a.m., the case in the",56,9,3671.94,1:01:11,False,0.0
+10-290,whisper-large-v3,laughter,(Laughter.),22,17,1423.16,0:23:43,False,0.0
+10-290,whisper-large-v3,laughter,(Laughter.),22,25,1437.7,0:23:57,False,0.0
+10-290,whisper-large-v3,laughter,(Laughter.),24,21,1584.08,0:26:24,False,0.0
+10-290,whisper-large-v3,end,"(Whereupon at 12:02 p.m., the case in the",50,6,3529.52,0:58:49,False,0.0
+10-313,whisper-large-v3,laughter,(Laughter.),27,19,1504.46,0:25:04,True,3.2
+10-313,whisper-large-v3,laughter,(Laughter.),28,7,1539.56,0:25:39,False,0.0
+10-313,whisper-large-v3,laughter,(Laughter.),42,15,2437.74,0:40:37,True,4.7
+10-313,whisper-large-v3,laughter,(Laughter.),52,18,3041.68,0:50:41,True,2.1
+10-313,whisper-large-v3,end,"(Whereupon, at 12:05 p.m., the case in the",60,1,3517.92,0:58:37,False,0.0
+10-382,whisper-large-v3,end,"(Whereupon, at 11:06 a.m., the case in the",52,15,3649.64,1:00:49,False,0.0
+10-5258,whisper-large-v3,laughter,(Laughter.),14,25,1000.72,0:16:40,False,0.0
+10-5258,whisper-large-v3,laughter,(Laughter.),20,14,1428.62,0:23:48,False,0.0
+10-5258,whisper-large-v3,end,"(Whereupon, at 11:40 a.m., the case in the",35,4,2477.54,0:41:17,False,0.0
+10-5400,whisper-large-v3,laughter,(Laughter.),35,1,2244.2,0:37:24,False,0.0
+10-5400,whisper-large-v3,end,"(Whereupon, at 11:02 a.m., the case in the",51,19,3490.02,0:58:10,False,0.0
+10-5443,whisper-large-v3,laughter,(Laughter.),21,14,1242.88,0:20:42,True,5.2
+10-5443,whisper-large-v3,laughter,(Laughter.),23,17,1367.96,0:22:47,False,0.0
+10-5443,whisper-large-v3,laughter,(Laughter.),44,1,2596.44,0:43:16,False,0.0
+10-5443,whisper-large-v3,laughter,(Laughter.),45,2,2664.7,0:44:24,True,3.7
+10-5443,whisper-large-v3,end,"(Whereupon, at 12:17 p.m., the case in the",56,17,3365.16,0:56:05,True,2.2
+10-568,whisper-large-v3,laughter,(Laughter.),20,3,1137.84,0:18:57,False,0.0
+10-568,whisper-large-v3,laughter,(Laughter.),29,3,1705.4,0:28:25,False,0.0
+10-568,whisper-large-v3,laughter,(Laughter.),30,6,1784.94,0:29:44,False,0.0
+10-568,whisper-large-v3,laughter,(Laughter.),47,1,2931.86,0:48:51,False,0.0
+10-568,whisper-large-v3,end,"(Whereupon, at 11:06 a.m., the case in the",55,2,3469.6,0:57:49,False,0.0
+10-6,whisper-large-v3,laughter,(Laughter.),15,6,802.78,0:13:22,False,0.0
+10-6,whisper-large-v3,laughter,(Laughter.),15,17,816.38,0:13:36,False,0.0
+10-6,whisper-large-v3,laughter,(Laughter.),49,15,3106.48,0:51:46,False,0.0
+10-6,whisper-large-v3,laughter,(Laughter.),51,18,3226.02,0:53:46,False,0.0
+10-6,whisper-large-v3,end,"(Whereupon, at 12:14 p.m., the case in the",57,11,3635.92,1:00:35,False,0.0
+10-76,whisper-large-v3,laughter,(Laughter.),20,8,1450.66,0:24:10,True,2.1
+10-76,whisper-large-v3,laughter,(Laughter.),20,12,1456.08,0:24:16,True,2.1
+10-76,whisper-large-v3,laughter,(Laughter.),21,21,1551.3,0:25:51,False,0.0
+10-76,whisper-large-v3,laughter,(Laughter.),22,2,1570.82,0:26:10,True,2.1
+10-76,whisper-large-v3,laughter,(Laughter.),22,4,1574.02,0:26:14,True,2.1
+10-76,whisper-large-v3,laughter,(Laughter.),25,7,1799.64,0:29:59,False,0.0
+10-76,whisper-large-v3,laughter,(Laughter.),25,14,1810.4,0:30:10,True,2.9
+10-76,whisper-large-v3,laughter,(Laughter.),49,25,3557.54,0:59:17,True,2.4
+10-76,whisper-large-v3,laughter,(Laughter.),50,3,3562.78,0:59:22,True,2.4
+10-76,whisper-large-v3,end,"(Whereupon, at 12:16 p.m., the case in the",51,12,3657.84,1:00:57,False,0.0
+10-779,whisper-large-v3,laughter,(Laughter.),41,16,2455.44,0:40:55,True,3.9
+10-779,whisper-large-v3,laughter,(Laughter.),52,5,3083.58,0:51:23,False,0.0
+10-779,whisper-large-v3,laughter,(Laughter.),55,6,3268.14,0:54:28,False,0.0
+10-779,whisper-large-v3,laughter,(Laughter.),60,17,3578.98,0:59:38,False,0.0
+10-779,whisper-large-v3,end,"(Whereupon, at 11:14 a.m., the case in the",68,18,4112.28,1:08:32,False,0.0
+10-98,whisper-large-v3,end,"(Whereupon, at 12:14 p.m., the case in the",53,12,3414.92,0:56:54,True,2.1
+15-1204_OT2017,whisper-large-v3,laughter,(Laughter.),27,4,1428.92,0:23:48,False,0.0
+15-1204_OT2017,whisper-large-v3,end,"(Whereupon, at 12:05 p.m. the case was",70,20,3655.06,1:00:55,False,0.0
+15-1439,whisper-large-v3,laughter,(Laughter.),12,13,487.2,0:08:07,False,0.0
+15-1439,whisper-large-v3,laughter,(Laughter.),43,16,2067.66,0:34:27,False,0.0
+15-1439,whisper-large-v3,laughter,(Laughter.),47,21,2287.82,0:38:07,False,0.0
+15-1439,whisper-large-v3,laughter,(Laughter.),77,18,3636.98,1:00:36,False,0.0
+15-1439,whisper-large-v3,end,"(Whereupon, at 11:10 a.m., the case",84,9,3965.64,1:06:05,False,0.0
+15-1485,whisper-large-v3,laughter,(Laughter.),11,12,339.38,0:05:39,True,2.0
+15-1485,whisper-large-v3,laughter,(Laughter.),30,10,1364.28,0:22:44,False,0.0
+15-1485,whisper-large-v3,laughter,(Laughter.),58,23,2957.9,0:49:17,False,0.0
+15-1485,whisper-large-v3,laughter,(Laughter.),60,6,3012.6,0:50:12,True,2.7
+15-1485,whisper-large-v3,end,"(Whereupon, at 10:59 a.m., the case",66,11,3347.38,0:55:47,False,0.0
+15-1498_OT2017,whisper-large-v3,laughter,(Laughter.),30,13,1515.12,0:25:15,False,0.0
+15-1498_OT2017,whisper-large-v3,laughter,(Laughter).,40,21,2142.68,0:35:42,False,0.0
+15-1498_OT2017,whisper-large-v3,laughter,(Laughter.),42,23,2258.92,0:37:38,False,0.0
+15-1498_OT2017,whisper-large-v3,end,"(Whereupon, 12:08 p.m. the case was",63,2,3492.4,0:58:12,False,0.0
+15-1509,whisper-large-v3,laughter,(Laughter.),46,15,2263.56,0:37:43,False,0.0
+15-1509,whisper-large-v3,laughter,(Laughter.),70,6,3520.44,0:58:40,False,0.0
+15-1509,whisper-large-v3,end,"(Whereupon, at 11:03 a.m., the case",71,18,3592.48,0:59:52,False,0.0
+16-1011,whisper-large-v3,laughter,(Laughter.),13,18,568.86,0:09:28,False,0.0
+16-1011,whisper-large-v3,laughter,(Laughter.),55,20,2978.52,0:49:38,False,0.0
+16-1011,whisper-large-v3,laughter,(Laughter.),65,19,3539.88,0:58:59,False,0.0
+16-1011,whisper-large-v3,end,"(Whereupon, at 11:57 a.m., the case",68,7,3682.2,1:01:22,False,0.0
+16-1027,whisper-large-v3,laughter,(Laughter.),19,2,818.46,0:13:38,True,3.4
+16-1027,whisper-large-v3,laughter,(Laughter.),25,1,1190.74,0:19:50,False,0.0
+16-1027,whisper-large-v3,laughter,(Laughter.),38,25,1855.52,0:30:55,False,0.0
+16-1027,whisper-large-v3,laughter,(Laughter.),40,12,1928.42,0:32:08,False,0.0
+16-1027,whisper-large-v3,laughter,(Laughter.),54,25,2734.66,0:45:34,False,0.0
+16-1027,whisper-large-v3,end,"(Whereupon, at 12:03 p.m., the case",65,20,3314.5,0:55:14,False,0.0
+16-1067,whisper-large-v3,laughter,(Laughter.),45,1,2301.98,0:38:21,False,0.0
+16-1067,whisper-large-v3,laughter,(Laughter.),52,17,2727.62,0:45:27,False,0.0
+16-1067,whisper-large-v3,laughter,(Laughter.),53,1,2745.88,0:45:45,False,0.0
+16-1067,whisper-large-v3,laughter,(Laughter.),53,9,2754.98,0:45:54,False,0.0
+16-1067,whisper-large-v3,laughter,(Laughter.),53,13,2759.44,0:45:59,True,3.0
+16-1067,whisper-large-v3,laughter,(Laughter.),53,16,2769.44,0:46:09,False,0.0
+16-1067,whisper-large-v3,laughter,(Laughter.),54,2,2789.64,0:46:29,True,2.6
+16-1067,whisper-large-v3,end,"(Whereupon, at 10:57 a.m., the case",60,10,3182.08,0:53:02,True,3.4
+16-111,whisper-large-v3,laughter,(Laughter.),13,22,479.64,0:07:59,True,2.4
+16-111,whisper-large-v3,laughter,(Laughter.),23,4,1032.78,0:17:12,True,8.1
+16-111,whisper-large-v3,laughter,(Laughter.),36,14,1709.38,0:28:29,False,0.0
+16-111,whisper-large-v3,laughter,(Laughter.),38,14,1787.32,0:29:47,False,0.0
+16-111,whisper-large-v3,laughter,(Laughter.),42,11,1947.04,0:32:27,False,0.0
+16-111,whisper-large-v3,laughter,(Laughter.),68,6,3153.12,0:52:33,True,2.4
+16-111,whisper-large-v3,laughter,(Laughter.),80,18,3856.04,1:04:16,False,0.0
+16-111,whisper-large-v3,laughter,(Laughter.),81,18,3906.74,1:05:06,False,0.0
+16-111,whisper-large-v3,end,"(Whereupon, 11:31 a.m., the case was",106,6,5259.72,1:27:39,False,0.0
+16-1140,whisper-large-v3,laughter,(Laughter.),53,21,2796.64,0:46:36,False,0.0
+16-1140,whisper-large-v3,laughter,(Laughter.),61,3,3177.16,0:52:57,False,0.0
+16-1140,whisper-large-v3,end,"(Whereupon, at 11:10 a.m., the case in",69,4,3609.36,1:00:09,False,0.0
+16-1144,whisper-large-v3,laughter,(Laughter.),19,10,858.98,0:14:18,False,0.0
+16-1144,whisper-large-v3,laughter,(Laughter.),19,16,865.98,0:14:25,False,0.0
+16-1144,whisper-large-v3,laughter,(Laughter.),19,23,879.2,0:14:39,True,3.4
+16-1144,whisper-large-v3,laughter,(Laughter.),29,5,1393.58,0:23:13,True,2.7
+16-1144,whisper-large-v3,laughter,(Laughter.),30,15,1472.38,0:24:32,False,0.0
+16-1144,whisper-large-v3,laughter,(Laughter.),33,24,1631.78,0:27:11,False,0.0
+16-1144,whisper-large-v3,laughter,(Laughter.),35,9,1684.38,0:28:04,False,0.0
+16-1144,whisper-large-v3,end,"(Whereupon, at 11:59 a.m., the case in",70,13,3650.88,1:00:50,False,0.0
+16-1150,whisper-large-v3,laughter,(Laughter.),60,7,3109.98,0:51:49,False,0.0
+16-1150,whisper-large-v3,end,"(Whereupon, at 11:03 a.m., the case",68,6,3532.28,0:58:52,False,0.0
+16-1161,whisper-large-v3,laughter,(Laughter.),7,4,160.72,0:02:40,False,0.0
+16-1161,whisper-large-v3,laughter,(Laughter.),14,15,623.8,0:10:23,False,0.0
+16-1161,whisper-large-v3,laughter,(Laughter.),42,7,2175.16,0:36:15,False,0.0
+16-1161,whisper-large-v3,laughter,(Laughter.),45,21,2397.68,0:39:57,False,0.0
+16-1161,whisper-large-v3,laughter,(Laughter.),46,4,2409.92,0:40:09,False,0.0
+16-1161,whisper-large-v3,laughter,(Laughter.),63,3,3298.76,0:54:58,False,0.0
+16-1161,whisper-large-v3,end,"(Whereupon, at 11:03 a.m., the hearing",66,18,3490.6,0:58:10,False,0.0
+16-1215,whisper-large-v3,laughter,(Laughter.),10,19,384.98,0:06:24,False,0.0
+16-1215,whisper-large-v3,laughter,(Laughter.),12,4,448.7,0:07:28,False,0.0
+16-1215,whisper-large-v3,laughter,(Laughter.),20,1,851.0,0:14:11,False,0.0
+16-1215,whisper-large-v3,laughter,(Laughter.),42,17,2103.08,0:35:03,False,0.0
+16-1215,whisper-large-v3,end,"(Whereupon, at 12:15 p.m., the case",68,20,3445.7,0:57:25,False,0.0
+16-1220,whisper-large-v3,laughter,(Laughter.),47,5,2183.0,0:36:23,False,0.0
+16-1220,whisper-large-v3,laughter,(Laughter.),63,11,3099.7,0:51:39,True,2.8
+16-1220,whisper-large-v3,laughter,(Laughter.),63,14,3104.54,0:51:44,True,3.9
+16-1220,whisper-large-v3,end,"(Whereupon, at 12:40 p.m., the case",72,1,3631.72,1:00:31,False,0.0
+16-1276,whisper-large-v3,laughter,(Laughter.),44,21,2262.54,0:37:42,False,0.0
+16-1276,whisper-large-v3,laughter,(Laughter.),61,14,3078.7,0:51:18,True,2.7
+16-1276,whisper-large-v3,end,"(Whereupon, at 12:07 p.m., the case",66,13,3348.82,0:55:48,False,0.0
+16-1348,whisper-large-v3,laughter,(Laughter.),15,6,552.9,0:09:12,False,0.0
+16-1348,whisper-large-v3,laughter,(Laughter.),68,23,3208.76,0:53:28,False,0.0
+16-1348,whisper-large-v3,laughter,(Laughter.),74,20,3467.44,0:57:47,False,0.0
+16-1348,whisper-large-v3,end,"(Whereupon, at 11:05 a.m., the case in",77,1,3578.2,0:59:38,False,0.0
+16-1362,whisper-large-v3,laughter,(Laughter.),16,9,702.1,0:11:42,False,0.0
+16-1362,whisper-large-v3,laughter,(Laughter.),17,19,775.7,0:12:55,False,0.0
+16-1362,whisper-large-v3,laughter,(Laughter.),38,24,1910.38,0:31:50,True,2.3
+16-1362,whisper-large-v3,end,"(Whereupon, at 11:02 a.m., the case",65,23,3416.62,0:56:56,False,0.0
+16-1371,whisper-large-v3,laughter,(Laughter.),17,17,716.02,0:11:56,False,0.0
+16-1371,whisper-large-v3,laughter,(Laughter.),23,6,1046.88,0:17:26,False,0.0
+16-1371,whisper-large-v3,laughter,(Laughter.),37,5,1835.0,0:30:35,False,0.0
+16-1371,whisper-large-v3,laughter,(Laughter.),41,25,2105.34,0:35:05,False,0.0
+16-1371,whisper-large-v3,laughter,(Laughter.),62,13,3173.98,0:52:53,False,0.0
+16-1371,whisper-large-v3,laughter,(Laughter.),65,20,3328.9,0:55:28,False,0.0
+16-1371,whisper-large-v3,end,"(Whereupon, at 11:06 a.m., the case",73,8,3713.24,1:01:53,False,0.0
+16-1432,whisper-large-v3,laughter,(Laughter.),25,2,969.44,0:16:09,True,2.7
+16-1432,whisper-large-v3,laughter,(Laughter.),34,2,1384.86,0:23:04,True,5.1
+16-1432,whisper-large-v3,laughter,(Laughter.),34,5,1387.22,0:23:07,True,5.1
+16-1432,whisper-large-v3,laughter,(Laughter.),43,6,1949.94,0:32:29,False,0.0
+16-1432,whisper-large-v3,laughter,(Laughter.),50,18,2367.3,0:39:27,True,2.1
+16-1432,whisper-large-v3,laughter,(Laughter.),57,16,2760.44,0:46:00,False,0.0
+16-1432,whisper-large-v3,laughter,(Laughter.),57,23,2769.02,0:46:09,False,0.0
+16-1432,whisper-large-v3,laughter,(Laughter.),58,6,2775.02,0:46:15,False,0.0
+16-1432,whisper-large-v3,end,"(Whereupon, 11:06 a.m., the hearing",74,19,3639.7,1:00:39,False,0.0
+16-1435,whisper-large-v3,laughter,(Laughter.),7,21,197.38,0:03:17,False,0.0
+16-1435,whisper-large-v3,laughter,(Laughter.),41,12,2040.8,0:34:00,True,3.6
+16-1435,whisper-large-v3,laughter,(Laughter.),42,19,2088.36,0:34:48,False,0.0
+16-1435,whisper-large-v3,laughter,(Laughter.),66,19,3374.0,0:56:14,True,2.5
+16-1435,whisper-large-v3,end,"(Whereupon, at 11:06 a.m., the case in",71,24,3698.0,1:01:38,False,0.0
+16-1454,whisper-large-v3,laughter,(Laughter.),57,11,3009.74,0:50:09,False,0.0
+16-1454,whisper-large-v3,laughter,(Laughter.),59,2,3096.5,0:51:36,False,0.0
+16-1454,whisper-large-v3,laughter,(Laughter.),59,21,3127.42,0:52:07,False,0.0
+16-1454,whisper-large-v3,end,"(Whereupon, at 12:12 p.m., the case in",71,12,3710.56,1:01:50,False,0.0
+16-1466,whisper-large-v3,laughter,(Laughter.),41,2,1955.98,0:32:35,False,0.0
+16-1466,whisper-large-v3,laughter,(Laughter.),56,25,2890.9,0:48:10,False,0.0
+16-1466,whisper-large-v3,laughter,(Laughter.),61,9,3131.88,0:52:11,False,0.0
+16-1466,whisper-large-v3,end,"(Whereupon, at 11:08 a.m., the case",72,22,3735.2,1:02:15,False,0.0
+16-1495,whisper-large-v3,laughter,(Laughter.),42,23,1871.48,0:31:11,False,0.0
+16-1495,whisper-large-v3,laughter,(Laughter.),48,17,2148.98,0:35:48,False,0.0
+16-1495,whisper-large-v3,end,"(Whereupon, at 12:04 p.m., the case in",75,11,3504.16,0:58:24,False,0.0
+16-1519,whisper-large-v3,laughter,(Laughter.),35,16,1671.38,0:27:51,False,0.0
+16-1519,whisper-large-v3,end,"(Whereupon, at 11:05 a.m., the case",70,3,3474.26,0:57:54,False,0.0
+16-285,whisper-large-v3,laughter,(Laughter.),61,11,3216.06,0:53:36,False,0.0
+16-285,whisper-large-v3,laughter,(Laughter.),63,24,3344.24,0:55:44,False,0.0
+16-285,whisper-large-v3,end,"(Whereupon, at 11:09 a.m., the case",72,3,3779.04,1:02:59,False,0.0
+16-299,whisper-large-v3,end,"(Whereupon, at 11:02 a.m., the case",64,23,3453.6,0:57:33,True,2.2
+16-402,whisper-large-v3,laughter,(Laughter.),28,6,1459.24,0:24:19,False,0.0
+16-402,whisper-large-v3,laughter,(Laughter.),44,11,2354.48,0:39:14,False,0.0
+16-402,whisper-large-v3,laughter,(Laughter.),54,14,2959.3,0:49:19,False,0.0
+16-402,whisper-large-v3,laughter,(Laughter.),56,23,3052.04,0:50:52,False,0.0
+16-402,whisper-large-v3,laughter,(Laughter.),68,4,3612.56,1:00:12,False,0.0
+16-402,whisper-large-v3,laughter,(Laughter.),79,5,4237.2,1:10:37,False,0.0
+16-402,whisper-large-v3,laughter,(Laughter.),92,3,4856.08,1:20:56,False,0.0
+16-402,whisper-large-v3,end,"(Whereupon, at 11:27 a.m., the case in",93,11,4920.94,1:22:00,False,0.0
+16-424,whisper-large-v3,laughter,(Laughter.),30,14,1549.22,0:25:49,True,2.1
+16-424,whisper-large-v3,end,"(Whereupon, at 12:00 noon, the case",67,13,3563.06,0:59:23,False,0.0
+16-460,whisper-large-v3,laughter,(Laughter.),52,12,2377.96,0:39:37,False,0.0
+16-460,whisper-large-v3,end,"(Whereupon, at 10:56 a.m., the case was",67,22,3145.96,0:52:25,False,0.0
+16-476,whisper-large-v3,laughter,(Laughter.),13,3,452.44,0:07:32,False,0.0
+16-476,whisper-large-v3,laughter,(Laughter.),13,24,509.58,0:08:29,False,0.0
+16-476,whisper-large-v3,laughter,(Laughter.),50,15,2505.84,0:41:45,False,0.0
+16-476,whisper-large-v3,laughter,(Laughter.),69,13,3451.38,0:57:31,False,0.0
+16-476,whisper-large-v3,end,"(Whereupon, at 11:09 a.m., the case in",75,24,3817.06,1:03:37,False,0.0
+16-498,whisper-large-v3,laughter,(Laughter.),29,23,1432.58,0:23:52,True,2.5
+16-498,whisper-large-v3,laughter,(Laughter.),30,1,1436.44,0:23:56,True,2.5
+16-498,whisper-large-v3,laughter,(Laughter.),33,20,1619.68,0:26:59,False,0.0
+16-498,whisper-large-v3,laughter,(Laughter.),61,6,3040.44,0:50:40,False,0.0
+16-498,whisper-large-v3,end,"(Whereupon, at 11:06 a.m., the case",76,14,3773.4,1:02:53,False,0.0
+16-499,whisper-large-v3,laughter,(Laughter.),46,17,2177.88,0:36:17,False,0.0
+16-499,whisper-large-v3,laughter,(Laughter.),48,1,2254.2,0:37:34,True,2.4
+16-499,whisper-large-v3,end,"(Whereupon, at 12:03 p.m., the case",74,4,3619.5,1:00:19,False,0.0
+16-534,whisper-large-v3,end,"(Whereupon, at 11:56 a.m., the case in",50,8,2716.0,0:45:16,False,0.0
+16-658,whisper-large-v3,end,"(Whereupon, at 10:51 a.m., the case",51,3,2751.54,0:45:51,False,0.0
+16-6795,whisper-large-v3,laughter,(Laughter.),19,20,860.18,0:14:20,False,0.0
+16-6795,whisper-large-v3,laughter,(Laughter.),20,1,869.56,0:14:29,False,0.0
+16-6795,whisper-large-v3,laughter,(Laughter.),30,9,1438.88,0:23:58,False,0.0
+16-6795,whisper-large-v3,laughter,(Laughter.),38,19,1914.12,0:31:54,False,0.0
+16-6795,whisper-large-v3,laughter,(Laughter.),40,16,2013.76,0:33:33,False,0.0
+16-6795,whisper-large-v3,laughter,(Laughter.),44,9,2199.72,0:36:39,False,0.0
+16-6795,whisper-large-v3,laughter,(Laughter.),55,11,2812.56,0:46:52,True,2.3
+16-6795,whisper-large-v3,laughter,(Laughter.),58,16,2967.98,0:49:27,False,0.0
+16-6795,whisper-large-v3,end,"(Whereupon, at 11:03 a.m., the case",69,7,3542.78,0:59:02,True,2.1
+16-6855,whisper-large-v3,laughter,(Laughter.),35,11,1894.88,0:31:34,False,0.0
+16-6855,whisper-large-v3,laughter,(Laughter.),36,12,1952.34,0:32:32,False,0.0
+16-6855,whisper-large-v3,laughter,(Laughter.),63,11,3480.06,0:58:00,False,0.0
+16-6855,whisper-large-v3,laughter,(Laughter.),63,19,3488.56,0:58:08,True,2.4
+16-6855,whisper-large-v3,end,"(Whereupon, at 12:02 p.m., the case",63,22,3490.18,0:58:10,True,2.4
+16-712,whisper-large-v3,laughter,(Laughter.),32,4,1713.62,0:28:33,True,2.6
+16-712,whisper-large-v3,laughter,(Laughter.),48,13,2491.12,0:41:31,False,0.0
+16-712,whisper-large-v3,laughter,(Laughter.),48,19,2501.92,0:41:41,True,3.1
+16-712,whisper-large-v3,end,"(Whereupon, at 11:07 a.m., the case was",71,19,3744.62,1:02:24,False,0.0
+16-784,whisper-large-v3,laughter,(Laughter.),59,4,2986.7,0:49:46,False,0.0
+16-784,whisper-large-v3,end,"(Whereupon, 11:02 a.m., the case was",69,23,3537.42,0:58:57,False,0.0
+16-8255,whisper-large-v3,laughter,(Laughter.),8,8,249.88,0:04:09,False,0.0
+16-8255,whisper-large-v3,laughter,(Laughter.),48,24,2680.6,0:44:40,False,0.0
+16-8255,whisper-large-v3,end,"(Whereupon, at 12:04 p.m., the case",64,13,3659.52,1:00:59,False,0.0
+16-9493,whisper-large-v3,laughter,(Laughter.),27,3,1541.0,0:25:41,True,3.8
+16-9493,whisper-large-v3,laughter,(Laughter.),27,7,1545.06,0:25:45,False,0.0
+16-9493,whisper-large-v3,laughter,(Laughter.),29,1,1646.18,0:27:26,True,2.1
+16-9493,whisper-large-v3,laughter,(Laughter.),29,6,1649.18,0:27:29,False,0.0
+16-9493,whisper-large-v3,laughter,(Laughter.),33,6,1842.66,0:30:42,False,0.0
+16-9493,whisper-large-v3,laughter,(Laughter.),46,24,2539.38,0:42:19,False,0.0
+16-9493,whisper-large-v3,end,"(Whereupon, at 11:11 a.m., the case",58,24,3190.26,0:53:10,True,4.3
+16-961,whisper-large-v3,laughter,(Laughter.),5,7,11.22,0:00:11,True,2.4
+16-961,whisper-large-v3,laughter,(Laughter.),28,17,1338.08,0:22:18,False,0.0
+16-961,whisper-large-v3,laughter,(Laughter.),28,20,1342.38,0:22:22,False,0.0
+16-961,whisper-large-v3,laughter,(Laughter.),31,19,1499.5,0:24:59,True,7.5
+16-961,whisper-large-v3,laughter,(Laughter.),58,19,2905.86,0:48:25,False,0.0
+16-961,whisper-large-v3,laughter,(Laughter.),64,19,3204.62,0:53:24,False,0.0
+16-961,whisper-large-v3,end,"(Whereupon, at 12:10 p.m., the case",79,5,3937.92,1:05:37,False,0.0
+16-969,whisper-large-v3,laughter,(Laughter.),7,22,198.56,0:03:18,False,0.0
+16-969,whisper-large-v3,laughter,(Laughter.),41,2,2023.7,0:33:43,False,0.0
+16-969,whisper-large-v3,laughter,(Laughter.),73,5,3576.98,0:59:36,False,0.0
+16-969,whisper-large-v3,laughter,(Laughter.),73,8,3578.46,0:59:38,False,0.0
+16-969,whisper-large-v3,end,"(Whereupon, at 12:09 p.m., the case",73,12,3580.42,0:59:40,False,0.0
+16-980,whisper-large-v3,laughter,(Laughter.),62,21,3115.64,0:51:55,False,0.0
+16-980,whisper-large-v3,end,"(Whereupon, at 11:10 a.m., the case",81,22,3982.4,1:06:22,False,0.0
+17-130,whisper-large-v3,laughter,(Laughter.),18,21,852.14,0:14:12,False,0.0
+17-130,whisper-large-v3,laughter,(Laughter.),19,15,878.62,0:14:38,False,0.0
+17-130,whisper-large-v3,laughter,(Laughter.),19,23,895.3,0:14:55,False,0.0
+17-130,whisper-large-v3,laughter,(Laughter.),22,21,1047.08,0:17:27,False,0.0
+17-130,whisper-large-v3,end,"(Whereupon, at 11:03 a.m., the case",70,15,3598.84,0:59:58,False,0.0
+17-155,whisper-large-v3,laughter,(Laughter.),34,11,1876.74,0:31:16,False,0.0
+17-155,whisper-large-v3,laughter,(Laughter.),34,21,1886.8,0:31:26,False,0.0
+17-155,whisper-large-v3,laughter,(Laughter.),34,25,1891.98,0:31:31,False,0.0
+17-155,whisper-large-v3,laughter,(Laughter.),35,6,1905.82,0:31:45,False,0.0
+17-155,whisper-large-v3,end,"(Whereupon, at 11:03 a.m., the case",59,6,3143.5,0:52:23,False,0.0
+17-2,whisper-large-v3,laughter,(Laughter.),46,23,2494.9,0:41:34,False,0.0
+17-2,whisper-large-v3,laughter,(Laughter.),56,5,3057.6,0:50:57,False,0.0
+17-2,whisper-large-v3,laughter,(Laughter.),60,16,3327.6,0:55:27,False,0.0
+17-2,whisper-large-v3,end,"(Whereupon, at 11:22 a.m., the case",65,17,3630.38,1:00:30,False,0.0
+17-21,whisper-large-v3,laughter,(Laughter.),13,11,575.53,0:09:35,False,0.0
+17-21,whisper-large-v3,laughter,(Laughter.),32,11,1670.6,0:27:50,False,0.0
+17-21,whisper-large-v3,laughter,(Laughter.),32,24,1707.66,0:28:27,False,0.0
+17-21,whisper-large-v3,laughter,(Laughter.),45,10,2464.44,0:41:04,False,0.0
+17-21,whisper-large-v3,laughter,(Laughter.),60,9,3263.98,0:54:23,False,0.0
+17-21,whisper-large-v3,end,"(Whereupon, at 12:23 p.m., the case",66,3,3583.34,0:59:43,False,0.0
+17-269,whisper-large-v3,laughter,(Laughter.),32,7,1350.32,0:22:30,False,0.0
+17-269,whisper-large-v3,end,"(Whereupon, at 12:08 p.m., the case",78,9,3691.7,1:01:31,False,0.0
+17-312,whisper-large-v3,end,"(Whereupon, at 11:07 a.m., the case",73,18,3695.68,1:01:35,False,0.0
+17-333,whisper-large-v3,laughter,(Laughter.),14,17,564.76,0:09:24,False,0.0
+17-333,whisper-large-v3,laughter,(Laughter.),40,23,1969.94,0:32:49,False,0.0
+17-333,whisper-large-v3,laughter,(Laughter.),44,6,2173.38,0:36:13,False,0.0
+17-333,whisper-large-v3,laughter,(Laughter.),49,16,2440.14,0:40:40,True,2.3
+17-333,whisper-large-v3,laughter,(Laughter.),50,10,2475.68,0:41:15,False,0.0
+17-333,whisper-large-v3,laughter,(Laughter.),50,14,2478.76,0:41:18,False,0.0
+17-333,whisper-large-v3,laughter,(Laughter.),59,3,2944.8,0:49:04,False,0.0
+17-333,whisper-large-v3,end,"(Whereupon, at 11:06 a.m., the hearing",73,18,3757.56,1:02:37,False,0.0
+17-387,whisper-large-v3,laughter,(Laughter.),9,22,334.2,0:05:34,False,0.0
+17-387,whisper-large-v3,laughter,(Laughter.),32,17,1638.18,0:27:18,False,0.0
+17-387,whisper-large-v3,laughter,(Laughter.),46,11,2404.22,0:40:04,False,0.0
+17-387,whisper-large-v3,laughter,(Laughter.),48,22,2519.92,0:41:59,False,0.0
+17-387,whisper-large-v3,laughter,(Laughter.),49,3,2527.16,0:42:07,False,0.0
+17-387,whisper-large-v3,laughter,(Laughter.),55,20,2927.88,0:48:47,False,0.0
+17-387,whisper-large-v3,end,"(Whereupon, at 11:07 a.m., the case",62,19,3330.88,0:55:30,False,0.0
+17-43,whisper-large-v3,laughter,(Laughter.),30,20,1461.74,0:24:21,False,0.0
+17-43,whisper-large-v3,end,"(Whereupon, at 12:11 p.m., the case",69,3,3528.44,0:58:48,False,0.0
+17-432,whisper-large-v3,end,"(Whereupon, at 12:06 p.m., the case",63,2,3430.64,0:57:10,False,0.0
+17-459,whisper-large-v3,laughter,(Laughter.),27,17,1136.96,0:18:56,True,2.1
+17-459,whisper-large-v3,laughter,(Laughter.),52,6,2361.78,0:39:21,False,0.0
+17-459,whisper-large-v3,end,"(Whereupon, at 11:59 a.m., the case",69,8,3286.6,0:54:46,False,0.0
+17-494,whisper-large-v3,laughter,(Laughter.),16,10,728.9,0:12:08,False,0.0
+17-494,whisper-large-v3,laughter,(Laughter.),38,9,2056.9,0:34:16,False,0.0
+17-494,whisper-large-v3,end,"(Whereupon, at 11:16 a.m., the case",63,5,3608.06,1:00:08,False,0.0
+17-530,whisper-large-v3,laughter,(Laughter.),54,5,2716.0,0:45:16,False,0.0
+17-530,whisper-large-v3,end,"(Whereupon, at 10:55 a.m., the hearing",59,12,2956.38,0:49:16,False,0.0
+17-5639,whisper-large-v3,laughter,(Laughter.),66,20,3493.26,0:58:13,False,0.0
+17-5639,whisper-large-v3,end,"(Whereupon, at 1:59 p.m., the case was",67,12,3515.58,0:58:35,False,0.0
+17-5716,whisper-large-v3,laughter,(Laughter.),42,17,2221.22,0:37:01,False,0.0
+17-5716,whisper-large-v3,end,"(Whereupon, at 12:05 p.m., the hearing",67,24,3632.54,1:00:32,False,0.0
+17-586,whisper-large-v3,laughter,(Laughter.),26,14,1195.96,0:19:55,True,2.4
+17-586,whisper-large-v3,laughter,(Laughter.),40,19,1999.6,0:33:19,False,0.0
+17-586,whisper-large-v3,laughter,(Laughter.),50,9,2500.84,0:41:40,False,0.0
+17-586,whisper-large-v3,end,"(Whereupon, at 11:38 a.m., the case",88,1,4655.76,1:17:35,False,0.0
+17-965,whisper-large-v3,laughter,(Laughter.),19,8,869.3,0:14:29,True,2.6
+17-965,whisper-large-v3,laughter,(Laughter.),35,11,1652.98,0:27:32,False,0.0
+17-965,whisper-large-v3,laughter,(Laughter.),43,3,2000.0,0:33:20,False,0.0
+17-965,whisper-large-v3,laughter,(Laughter.),76,7,3661.04,1:01:01,True,5.9
+17-965,whisper-large-v3,laughter,(Laughter.),76,10,3663.62,1:01:03,True,5.9
+17-965,whisper-large-v3,end,"(Whereupon, at 11:09 a.m., the case",83,6,4012.46,1:06:52,False,0.0

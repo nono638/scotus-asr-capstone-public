@@ -1,0 +1,1 @@
+{"case": "r120", "own": {"reason": "The engine names the \"iron\" business instead of the \"oil\" business as one with higher costs, so it blames the wrong business unit.", "meaning": "changed", "severity": 3, "follow_up": "changes meaning", "reference_doubt": "no"}}

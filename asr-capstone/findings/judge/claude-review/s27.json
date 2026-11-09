@@ -1,0 +1,148 @@
+{
+ "case": "s27",
+ "own": {
+  "meaning": "changed",
+  "severity": 3,
+  "noticeable": "maybe",
+  "follow_up": "different quantity",
+  "stakes": "maybe",
+  "reason": "The speaker stressed that a six-hour gig paid as much as a month at his job, and the engine turned 'six hours' into 'sixty hours'.",
+  "rule_right": "yes",
+  "rule_reason": "Six and sixty are different numbers, and all four other engines wrote six.",
+  "more_plausible": "reference",
+  "plausible_how_clear": "Clear: the same sentence already says 'in span of six hours in a day', so 'six hours' is him repeating the figure for effect.",
+  "my_misses": [
+   {
+    "reference": "SIX HOURS",
+    "engine": "sixty hours",
+    "severity": 3,
+    "note": "Number changed; blunts the six-hours-versus-a-month point, though 'six hours in a day' survives earlier."
+   },
+   {
+    "reference": "WORKING YOUR OWN GIG",
+    "engine": "working your own week",
+    "severity": 2,
+    "note": "Side gig becomes 'week', which makes little sense."
+   },
+   {
+    "reference": "I GOT A FREELANCING GIG",
+    "engine": "I got a freelancing gift",
+    "severity": 1,
+    "note": "Gig to gift; a reader would probably guess gig."
+   },
+   {
+    "reference": "I DON'T THINK PEOPLE SHOULD KICK AGAINST",
+    "engine": "i don't think we should kick against",
+    "severity": 1,
+    "note": "People to we."
+   },
+   {
+    "reference": "IS THERE ANY PEOPLE",
+    "engine": "if any other thing",
+    "severity": 1,
+    "note": "Garbled start of a question that is then repeated correctly."
+   }
+  ]
+ },
+ "review": {
+  "labelled/line": {
+   "verdict": "agree",
+   "why": "Different quantity, severity 3: right."
+  },
+  "labelled/minute": {
+   "verdict": "partly",
+   "why": "Severity is right, but saying it changes 'the core point of the anecdote' overstates it: the engine still has 'in space of six hours in a day' a moment earlier, and 'noticeable: yes' is doubtful because 'my nine to five sixty hours' can read as a long work week."
+  },
+  "labelled/whole": {
+   "verdict": "agree",
+   "why": "Severity 3 and the reading of the anecdote are fair."
+  },
+  "rule/minute": {
+   "verdict": "agree",
+   "why": "Six and sixty differ, and all four other engines wrote six."
+  },
+  "blind/order1": {
+   "verdict": "disagree",
+   "why": "Picked 'sixty' (the engine) at 'sure 3', claiming 'six hours' would make the comparison nonsensical, when the same sentence already says 'in span of six hours in a day'."
+  },
+  "blind/order2": {
+   "verdict": "agree",
+   "why": "Picked 'six' with the right reason, but chose slot A both times at 'sure 3', so its two answers contradict each other."
+  },
+  "rank/minute": {
+   "verdict": "partly",
+   "why": "Putting the 'sixty' engine last is right, but the four 'six' engines should tie at 1; Gemma ranked them on 'old brain' and '9-5', which are outside the spot, and gave no reason for Engine 3 in second place."
+  },
+  "misses": [
+   {
+    "reference": "YOUR OWN GIG",
+    "engine": "your own week",
+    "is_real": "yes",
+    "matters": "yes",
+    "severity_fair": "too high",
+    "note": "A real garble ('side gig' lost), but a reader gets the gist; 2."
+   },
+   {
+    "reference": "I GOT A FREELANCING GIG",
+    "engine": "i got a freelancing gift",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "A reader will read 'gift' as a slip for 'gig'; 'changes context from work to a present' overstates it; 1."
+   },
+   {
+    "reference": "IN A MONTH",
+    "engine": "in the months",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "Still means a month's pay; 0-1, not a 'changed number'."
+   },
+   {
+    "reference": "ALL WHAT HE SHOULD BE AFTER",
+    "engine": "all what you should be after",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "yes",
+    "note": "Generic 'he/you'; 1 is fine."
+   },
+   {
+    "reference": "THE PERSON RESULTS SO I DON'T THINK PEOPLE SHOULD KICK",
+    "engine": "the person is to the result so i don't think we should kick",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "A garbled phrase and people/we; the opinion is unchanged; 1."
+   },
+   {
+    "reference": "IS THERE ANY PEOPLE ARE THERE ANY PEOPLE SAYING",
+    "engine": "if any other thing are there any people saying",
+    "is_real": "yes",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "Only the abandoned first try is garbled; the real question survives; 0-1."
+   },
+   {
+    "reference": "THE STORY YOU GIVE ABOUT A BOY",
+    "engine": "the story you gave about the",
+    "is_real": "partly",
+    "matters": "no",
+    "severity_fair": "too high",
+    "note": "This is the edge of the minute (the engine's window ends one word sooner); the instructions say to ignore the edges."
+   }
+  ],
+  "overlooked": [
+   {
+    "reference": "SIX HOURS",
+    "engine": "sixty hours",
+    "severity": 3,
+    "note": "Gemma's misses list leaves out the flagged number change itself, the most important difference in the minute."
+   }
+  ]
+ },
+ "worth_a_listen": {
+  "yes": false,
+  "why": "'Six hours' is plain from the earlier 'span of six hours in a day'."
+ },
+ "summary": "Gemma's labelled answers got the number change right, but its misses list left that very change out while scoring small garbles and an edge word at severity 3; in the blind test it picked by position and argued for 'sixty' at full confidence."
+}

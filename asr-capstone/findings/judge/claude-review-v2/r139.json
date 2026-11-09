@@ -1,0 +1,1 @@
+{"case": "r139", "own": {"reason": "The engine writes \"and I'm part\" for \"and I'm partying\"; the word is cut short and the phrase makes no sense, though the dance-floor context hints at it.", "meaning": "garbled", "severity": 1, "follow_up": "garble", "reference_doubt": "no"}}

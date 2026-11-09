@@ -1,0 +1,1 @@
+{"case": "r241", "own": {"reason": "The engine writes \"resources\" for \"visitors\". The point is that AdSense pays only with heavy traffic; \"a lot of resources on your website\" says something different.", "meaning": "changed", "severity": 2, "follow_up": "changes meaning", "reference_doubt": "no"}}

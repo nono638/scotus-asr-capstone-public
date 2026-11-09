@@ -1,0 +1,44 @@
+{
+ "case": "s31",
+ "own": {
+  "meaning": "reworded",
+  "severity": 1,
+  "noticeable": "no",
+  "follow_up": "meaning kept",
+  "stakes": "maybe",
+  "reason": "The speaker said \"when you scared\" with no \"are\"; the engine wrote the standard \"when you're scared\", which means the same but hides the speaker's grammar (it did the same to \"you in fear\" just before).",
+  "rule_right": "yes",
+  "rule_reason": "The reference has \"you scared\" and the engine has \"you're scared\", so an \"are\" was added; the other two engines did not keep it either (Whisper \"you're scared\", Parakeet \"you scare\").",
+  "more_plausible": "reference",
+  "plausible_how_clear": "Fairly clear from the text: the same speaker says \"When you in fear\" a few words earlier, so leaving out \"are\" again fits; but \"you're\" and \"you\" sound nearly alike, so the text cannot prove it.",
+  "my_misses": [
+   {"reference": "When you in fear or when you scared", "engine": "when you're in fear or when you're scared", "severity": 1},
+   {"reference": "When? Can you tell me about it?", "engine": "When can you tell me about it?", "severity": 1},
+   {"reference": "they're just being scared", "engine": "just. just been scared", "severity": 1},
+   {"reference": "all they life", "engine": "all their life", "severity": 0},
+   {"reference": "And do you see that often like people are just in fear?", "engine": "And do you see that often? Like people are just in fear.", "severity": 1}
+  ]
+ },
+ "review": {
+  "labelled/line": {"verdict": "disagree", "why": "\"you scared\" and \"you're scared\" mean the same thing, so \"changed\" and follow_up \"meaning changed\" are wrong, \"you're scared\" reads perfectly normally so \"noticeable: yes\" is wrong, and severity 2 is too high for a grammar edit."},
+  "labelled/minute": {"verdict": "partly", "why": "The reason (an \"are\" added as \"'re\") and severity 1 are right, but it again calls the meaning \"changed\", picks \"meaning changed\" and says a reader would notice, none of which holds."},
+  "labelled/whole": {"verdict": "partly", "why": "same / 0 / not noticeable / meaning kept is right, but its stakes_how says the edit does not change \"the sociolinguistic significance\", when erasing the dropped \"are\" is exactly what a dialect researcher would lose; it also contradicts its own line and minute answers."},
+  "rule/minute": {"verdict": "agree", "why": "It copied both sides correctly and rightly says the engine turned \"you scared\" into \"you're scared\"."},
+  "blind/order1": {"verdict": "agree", "why": "Picked B, the reference, for a sound reason (the speaker's habit of leaving out \"are\")."},
+  "blind/order2": {"verdict": "agree", "why": "Picked A, the reference again, and pointed to the best clue in the text, \"when you in fear\" in the same sentence; consistent across both orders, so not a first-position pick."},
+  "rank/minute": {"verdict": "partly", "why": "Putting Qwen3 and Whisper (\"you're scared\") above Parakeet (\"you scare\") is sensible on meaning, but the reason is wrong: Parakeet did keep the zero copula; its fault is \"scare\" for \"scared\", which reads as frightening someone."}
+  ,"misses": [
+   {"reference": "your house or or your neighborhood ... Like s stuff like that", "engine": "your house or your neighborhood ... stuff like that", "is_real": "yes", "matters": "no", "severity_fair": "too high", "note": "A repeated \"or\" and a false start \"s\"; the prompt said to leave repeats out. Should be 0 or not listed."},
+   {"reference": "When you in fear or when you scared", "engine": "when you're in fear or when you're scared", "is_real": "yes", "matters": "no", "severity_fair": "yes", "note": "Grammar standardised twice; the meaning is the same, but it matters to the dialect study."},
+   {"reference": "all they life", "engine": "all their life", "is_real": "yes", "matters": "no", "severity_fair": "too high", "note": "Same meaning, a dialect form spelled in the standard way; 0."},
+   {"reference": "just they're just being scared", "engine": "just. just been scared", "is_real": "yes", "matters": "no", "severity_fair": "too high", "note": "\"being\" to \"been\" is a slip a reader reads past; 1, not 3."},
+   {"reference": "I say beginning of the summertime.", "engine": "I say beginning in the", "is_real": "partly", "matters": "no", "severity_fair": "too high", "note": "The engine's minute simply ends there; the prompt said to ignore the edges, so the missing \"summertime\" is a cut-off, not an error, and severity 3 is far too high."}
+  ],
+  "overlooked": [
+   {"reference": "When? Can you tell me about it?", "engine": "When can you tell me about it?", "severity": 1, "note": "Two questions (\"When did it happen? Tell me about it\") merged into one asking when the speaker can tell the story."},
+   {"reference": "And do you see that often like people are just in fear?", "engine": "And do you see that often? Like people are just in fear.", "severity": 1, "note": "The second half becomes a statement, which without speaker names could read as the speaker's words."}
+  ]
+ },
+ "worth_a_listen": {"yes": false, "why": "The text makes the case plain: an \"are\" added to the speaker's grammar with no change in meaning, and two other engines did the same."},
+ "summary": "Gemma read the spot correctly and got the rule, the blind pair and the full-transcript view right, but in the line and minute views it called a pure grammar edit a change of meaning that a reader would notice. Its misses list rated repeats, an edge cut-off and \"being/been\" far too high and missed the merged \"When? Can you tell me about it?\"."
+}

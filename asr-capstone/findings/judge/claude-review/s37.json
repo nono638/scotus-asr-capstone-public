@@ -1,0 +1,28 @@
+{
+ "case": "s37",
+ "own": {
+  "meaning": "same",
+  "severity": 0,
+  "noticeable": "no",
+  "follow_up": "no change",
+  "stakes": "no",
+  "reason": "Control: both texts say \"It can't include who you get pregnant with\"; nothing went wrong.",
+  "rule_right": "no",
+  "rule_reason": "The evidence says the engine wrote \"can\", but the engine text has \"can't\", exactly like the reference.",
+  "more_plausible": "cant tell",
+  "plausible_how_clear": "The two blind versions are identical (both \"can't\"), so there is nothing to choose between.",
+  "my_misses": []
+ },
+ "review": {
+  "labelled/line": {"verdict": "agree", "why": "same / 0 / no change: correct for an identical text."},
+  "labelled/minute": {"verdict": "agree", "why": "Correct, and the reason is accurate."},
+  "labelled/whole": {"verdict": "agree", "why": "Correct."},
+  "rule/minute": {"verdict": "agree", "why": "Rightly said the checker is wrong: its evidence claims \"can\" but the engine text has \"can't\"."},
+  "blind/order1": {"verdict": "agree", "why": "\"cant tell\" because the versions are identical: exactly right."},
+  "blind/order2": {"verdict": "agree", "why": "Same, consistent."},
+  "misses": [],
+  "overlooked": []
+ },
+ "worth_a_listen": {"yes": false, "why": "Control case; nothing to hear."},
+ "summary": "Gemma passed this control in every request: it saw that the texts are identical, that the rule's evidence is wrong, and listed no misses."
+}

@@ -1,0 +1,145 @@
+{
+ "case": "s33",
+ "X": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 1,
+    "follow_up": "stock phrase",
+    "reason": "The engine adds the phrase 'Thank you.' where the reference indicates there was no speech."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 2,
+    "follow_up": "stock phrase",
+    "reason": "The engine incorrectly includes Justice Kagan's 'Thank you' as part of the Chief Justice's speech, whereas the reference shows it was a separate interjection."
+   },
+   "whole": {
+    "meaning": "changed",
+    "severity": 1,
+    "follow_up": "stock phrase",
+    "reason": "The engine incorrectly attributes Justice Kagan's 'Thank you.' to the end of Mr. Joshi's speech, whereas the reference shows that 'Thank you.' was spoken by Justice Kagan after Mr. Joshi finished."
+   }
+  },
+  "noticeable": "no",
+  "stakes": {
+   "stakes": "maybe",
+   "reason": "The engine incorrectly attributes Justice Kagan's interjection to the Chief Justice's transition, which misrepresents the flow of the dialogue and the identity of the speaker."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The engine incorrectly included Justice Kagan's response 'Thank you.' within the marked area where the reference shows no speech."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "engine",
+    "sure": 2,
+    "reason": "In oral arguments, a Chief Justice typically transitions between speakers by saying 'thank you' or simply addressing the next justice. Version B's inclusion of 'thank you' is a very common conversational filler in this context, whereas Version A's abrupt transition is less natural given that Justice Kagan had just finished speaking."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "engine",
+    "sure": 3,
+    "reason": "In oral arguments, the Chief Justice typically acknowledges the previous speaker or transitions to the next. Version A includes 'thank you', which is a standard polite transition when moving from one justice's interjection to the next justice's turn."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Parakeet": 1,
+    "Whisper": 2,
+    "Qwen3": 1
+   },
+   "reason": "Engine 2 incorrectly includes the Justice's response inside the mark, while Engine 1 and Engine 3 correctly identify the silence, with Engine 3 being slightly better for matching the punctuation of the speaker transition."
+  },
+  "misses": [
+   {
+    "reference": "Dan's City",
+    "engine": "Dan City",
+    "severity": 2,
+    "what": "The name of the case 'Dan's City'"
+   }
+  ]
+ },
+ "Y": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 1,
+    "follow_up": "stock phrase",
+    "reason": "The engine inserted a polite stock phrase that does not appear in the official transcript."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 2,
+    "follow_up": "stock phrase",
+    "reason": "The engine incorrectly attributed Justice Kagan's 'Thank you' to the end of Mr. Joshi's statement instead of identifying it as a separate interjection."
+   },
+   "whole": {
+    "meaning": "changed",
+    "severity": 2,
+    "follow_up": "stock phrase",
+    "reason": "The engine inserted the phrase 'Thank you.' into the transcript, whereas the official record shows that the speaker (Mr. Joshi) finished his sentence and the next speaker (Justice Gorsuch) began immediately without a 'Thank you' being spoken."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "no",
+   "reason": "The error attributes Justice Kagan's interjection to the preceding speaker's argument, which is a minor attribution error but doesn't change the legal substance."
+  },
+  "rule": {
+   "rule_right": "no",
+   "reason": "The checker incorrectly flagged 'Thank you' as silence, but it is clearly present in the official transcript as spoken by Justice Kagan."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "In Supreme Court oral arguments, the Chief Justice typically transitions to the next justice by name without repeating a 'thank you' that was just spoken by the previous justice."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "engine",
+    "sure": 3,
+    "reason": "In Supreme Court oral arguments, the Chief Justice typically acknowledges the previous speaker or transitions to the next, and 'thank you justice gorsuch' is a standard, complete phrase for this transition, whereas Version B is an incomplete fragment."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Parakeet": 3,
+    "Whisper": 1,
+    "Qwen3": 2
+   },
+   "reason": "Engine 2 is the most accurate because it correctly identifies the inclusion of Justice Kagan's interjection, whereas Engine 1 omits it and Engine 3 misplaces it."
+  },
+  "misses": [
+   {
+    "reference": "Dan's City",
+    "engine": "Dan City",
+    "severity": 1,
+    "what": "missing possessive"
+   },
+   {
+    "reference": "every contextual clue, every oddity, every anomaly, Respondents' reading doesn't produce it",
+    "engine": "every contextual clue, every oddity, every anomaly. Respondents' reading doesn't produce it",
+    "severity": 2,
+    "what": "sentence fragment/punctuation change alters the grammatical structure of the list"
+   },
+   {
+    "reference": "That --\nJUSTICE KAGAN: Thank you.\nMR. JOSHI: -- that's our point.",
+    "engine": "That's our point. Thank you.",
+    "severity": 3,
+    "what": "attribution error; engine attributes the speaker's point and the Justice's thanks to the same flow, losing the interruption/dialogue structure"
+   },
+   {
+    "reference": "CHIEF JUSTICE ROBERTS: Justice Gorsuch?",
+    "engine": "Justice Gorsuch?",
+    "severity": 1,
+    "what": "missing speaker name"
+   },
+   {
+    "reference": "I -- I -- I wonder why",
+    "engine": "I wonder why that",
+    "severity": 2,
+    "what": "added word 'that' and removal of hesitation/stutter"
+   }
+  ]
+ }
+}

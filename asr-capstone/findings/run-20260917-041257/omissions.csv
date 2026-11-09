@@ -1,0 +1,2 @@
+docket,engine,rank,word_count,gap_seconds,expected_seconds,audio_start,audio_end,audio_start_clock,timing_disagrees,at_start,at_end,ref_start_token,ref_end_token,text
+24-856,whisper-large-v3,1,26,0.0,8.9,5031.64,5031.64,1:23:51,True,False,False,14067,14093,everybody's doing categorical rules we're we're we're on both sides here so you're no less than petitioners my only point is that the lower courts have

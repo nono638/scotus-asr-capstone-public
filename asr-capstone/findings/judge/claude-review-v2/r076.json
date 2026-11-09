@@ -1,0 +1,1 @@
+{"case": "r076", "own": {"reason": "The engine writes 'non ready' for 'non-resi' (non-residential), so the business segment the whole question is about becomes a meaningless phrase.", "meaning": "garbled", "severity": 2, "follow_up": "garble", "reference_doubt": "no"}}

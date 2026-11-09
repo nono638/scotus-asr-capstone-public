@@ -1,0 +1,32 @@
+{
+ "case": "s39",
+ "own": {
+  "meaning": "opposite",
+  "severity": 4,
+  "noticeable": "yes",
+  "follow_up": "negation added",
+  "stakes": "yes",
+  "reason": "Control: the engine text says \"the context is not making an adjustment\" where the lawyer said it is, reversing his own position; the very next words (\"our whole position in this case is that it means making an adjustment\") contradict it, so a careful reader would trip.",
+  "rule_right": "yes",
+  "rule_reason": "The texts match the evidence: reference \"is\", engine \"is not\", a negative on one side only.",
+  "more_plausible": "reference",
+  "plausible_how_clear": "Clear: the speaker immediately says his whole position is that it means making an adjustment.",
+  "my_misses": [
+   {"reference": "the context is making an adjustment", "engine": "the context is not making an adjustment", "severity": 4}
+  ]
+ },
+ "review": {
+  "labelled/line": {"verdict": "agree", "why": "opposite / 4 / negation added / stakes yes: correct."},
+  "labelled/minute": {"verdict": "agree", "why": "Correct; noticeable \"yes\" is honest, since the next clause contradicts \"is not\"."},
+  "labelled/whole": {"verdict": "agree", "why": "Correct, with an accurate reason."},
+  "rule/minute": {"verdict": "agree", "why": "Copied \"is\" and \"is not\" correctly and confirmed the added negative."},
+  "blind/order1": {"verdict": "agree", "why": "Picked A, the reference, for the right reason: \"is not\" contradicts \"our whole position ... is that it means making an adjustment\"."},
+  "blind/order2": {"verdict": "disagree", "why": "With the versions swapped it picked A again, now the \"is not\" version, and turned its own reasoning upside down (claiming \"is\" creates the contradiction): it took the first version, not the one that makes sense."}
+  ,"misses": [
+   {"reference": "the context is making an adjustment", "engine": "the context is not making an adjustment", "is_real": "yes", "matters": "yes", "severity_fair": "yes", "note": "The planted negative; the only difference in the minute."}
+  ],
+  "overlooked": []
+ },
+ "worth_a_listen": {"yes": false, "why": "Control case; the \"not\" was put in by hand."},
+ "summary": "Gemma caught the planted \"not\" everywhere it was labelled, but in the blind pair it chose the first version both times, arguing in the second order that the reversed sentence was the sensible one."
+}

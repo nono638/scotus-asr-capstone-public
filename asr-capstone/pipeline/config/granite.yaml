@@ -1,0 +1,63 @@
+# The same corpus, the same scoring, and IBM's model - with Granite Plus, the
+# newest in the study.
+#
+# IBM Granite Speech 4.1, April 2026. A fifth vendor, which matters for the
+# agreement measure: of Whisper, Parakeet, Qwen3, Canary and Voxtral, two were
+# NVIDIA's and trained on overlapping data.
+#
+#   python -m scotus_asr.cli run --config config/granite.yaml --term 2017
+#
+# One thing to know before reading any result from this model: the prompt decides
+# whether it writes capital letters at all. See below.
+
+paths:
+  sample_dir: "{scotus_corpus}/cases"
+  runs_dir: "{scotus_corpus}/runs"
+
+asr:
+  engine: granite
+
+  # 2.3 billion parameters, and the smallest model here since Parakeet.
+  #
+  # Not the largest Granite. `granite-speech-3.3-8b` is five times bigger, topped
+  # the Open ASR leaderboard, and cannot punctuate at all - four different
+  # prompts, including the wording used here and no system prompt at all,
+  # returned byte-identical lowercase text. Punctuation and truecasing are a 4.1
+  # capability. The engine refuses to pretend otherwise, so 3.3 is not wired up.
+  model: granite-speech-4.1-2b
+  device: cuda
+  compute_type: bfloat16
+  language: en
+
+  # Timings come from Qwen3-ForcedAligner-0.6B-hf, as for Qwen3, Canary and
+  # Voxtral. Granite produces none of its own.
+  word_timestamps: true
+
+  # The prompt is a constant in the engine, not a setting here, because it
+  # changes what the model writes rather than how fast it writes it. Asked IBM's
+  # default way the output has no capital letters; asked the way IBM document for
+  # 4.1 it has punctuation and truecasing. The strictest scoring rule counts
+  # capitals as part of the record, so the default prompt would report this model
+  # tidying the record away when it had been asked the wrong question.
+  #
+  # It is written into every run's config_used.yaml by settings_used().
+  #
+  # Chunks are 60 seconds, reduced from 100 after that turned out to be past
+  # the point where Granite starts repeating itself. The earlier measurement
+  # probed two minutes and four minutes and missed the boundary, which sits
+  # between 60 and 80 seconds. At 100 seconds a hard passage comes back as
+  # "It is under Section 73" several hundred times and the whole chunk is
+  # lost. See the note on CHUNK_SECONDS in granite_engine.py for the six
+  # chunks this was measured on.
+  #
+  # Decoding temperatures. Used here, not ignored - a chunk that comes back
+  # looking like a repetition loop is decoded again hotter. See voxtral.yaml
+  # for why this stopped being a Whisper-only setting.
+  temperatures: [0.0, 0.2, 0.4, 0.6, 0.8, 1.0]
+
+  # The genuinely Whisper-only settings are still ignored rather than faked -
+  # see voxtral.yaml.
+
+scoring:
+  omission_min_words: 25
+  omission_merge_gap: 2

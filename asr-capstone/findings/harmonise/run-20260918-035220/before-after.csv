@@ -1,0 +1,3 @@
+model,term,cases,leaderboard,standard_before,standard_after,standard_change,lowercase_nopunct_before,lowercase_nopunct_after,lowercase_nopunct_change,verbatim_before,verbatim_after,verbatim_change
+whisper-large-v3,OT2010,77,6.693,6.708,6.314,-0.394,7.309,6.922,-0.387,15.34,15.182,-0.158
+whisper-large-v3,OT2017,61,6.098,6.111,5.713,-0.398,6.234,5.865,-0.369,14.167,14.005,-0.162

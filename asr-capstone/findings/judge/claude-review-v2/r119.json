@@ -1,0 +1,1 @@
+{"case": "r119", "own": {"reason": "The reference keeps the speaker's unmarked past tense \"she believe\"; the engine writes the standard \"she believed\". Same meaning.", "meaning": "same", "severity": 0, "follow_up": "meaning kept", "reference_doubt": "no"}}

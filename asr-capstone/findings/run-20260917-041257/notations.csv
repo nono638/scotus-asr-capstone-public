@@ -1,0 +1,40 @@
+docket,engine,kind,text,page,line,audio_seconds,audio_clock,model_was_silent,silence_seconds
+24-1068,whisper-large-v3,end,"(Whereupon, at 1:21 p.m., the case was",85,6,4453.88,1:14:13,False,0.0
+24-856,whisper-large-v3,laughter,(Laughter.),20,18,1061.24,0:17:41,False,0.0
+24-856,whisper-large-v3,laughter,(Laughter.),77,12,4223.5,1:10:23,True,2.0
+24-856,whisper-large-v3,laughter,(Laughter.),93,11,5140.32,1:25:40,True,2.5
+24-856,whisper-large-v3,laughter,(Laughter.),121,13,6783.08,1:53:03,False,0.0
+24-856,whisper-large-v3,end,"(Whereupon, at 12:02 p.m., the case",126,9,7034.78,1:57:14,False,0.0
+24-889,whisper-large-v3,laughter,(Laughter.),52,14,2841.96,0:47:21,False,0.0
+24-889,whisper-large-v3,end,"(Whereupon, at 1:24 p.m., the case was",67,23,3618.76,1:00:18,False,0.0
+25-1083,whisper-large-v3,laughter,(Laughter.),22,13,971.76,0:16:11,False,0.0
+25-1083,whisper-large-v3,laughter,(Laughter.),22,22,992.34,0:16:32,False,0.0
+25-1083,whisper-large-v3,laughter,(Laughter.),36,17,1708.4,0:28:28,False,0.0
+25-1083,whisper-large-v3,laughter,(Laughter.),45,20,2131.5,0:35:31,False,0.0
+25-1083,whisper-large-v3,laughter,(Laughter.),72,23,3587.22,0:59:47,False,0.0
+25-1083,whisper-large-v3,laughter,(Laughter.),102,4,5181.42,1:26:21,True,7.6
+25-1083,whisper-large-v3,laughter,(Laughter.),109,8,5584.08,1:33:04,True,2.7
+25-1083,whisper-large-v3,laughter,(Laughter.),113,7,5778.4,1:36:18,False,0.0
+25-1083,whisper-large-v3,laughter,(Laughter.),113,10,5781.12,1:36:21,False,0.0
+25-1083,whisper-large-v3,end,"(Whereupon, at 12:21 p.m., the case",124,20,6382.88,1:46:22,False,0.0
+25-112,whisper-large-v3,laughter,(Laughter.),16,13,593.96,0:09:53,False,0.0
+25-112,whisper-large-v3,laughter,(Laughter.),67,7,2955.88,0:49:15,False,0.0
+25-112,whisper-large-v3,laughter,(Laughter.),100,16,4693.7,1:18:13,False,0.0
+25-112,whisper-large-v3,laughter,(Laughter.),117,18,5663.1,1:34:23,False,0.0
+25-112,whisper-large-v3,end,"(Whereupon, at 12:05 p.m., the case",147,6,7224.7,2:00:24,False,0.0
+25-406,whisper-large-v3,laughter,(Laughter.),23,3,950.64,0:15:50,False,0.0
+25-406,whisper-large-v3,end,"(Whereupon, at 11:28 a.m., the case",99,19,5070.2,1:24:30,False,0.0
+25-429,whisper-large-v3,laughter,(Laughter.),18,19,859.7,0:14:19,False,0.0
+25-429,whisper-large-v3,laughter,(Laughter.),18,23,862.98,0:14:22,False,0.0
+25-429,whisper-large-v3,laughter,(Laughter.),46,16,2332.12,0:38:52,False,0.0
+25-429,whisper-large-v3,laughter,(Laughter.),93,19,4844.74,1:20:44,False,0.0
+25-429,whisper-large-v3,laughter,(Laughter.),93,22,4844.74,1:20:44,False,0.0
+25-429,whisper-large-v3,laughter,(Laughter.),94,4,4853.84,1:20:53,False,0.0
+25-429,whisper-large-v3,end,"(Whereupon, at 11:42 a.m., the case",103,23,5371.76,1:29:31,False,0.0
+25-466,whisper-large-v3,laughter,(Laughter.),8,15,230.5,0:03:50,False,0.0
+25-466,whisper-large-v3,laughter,(Laughter.),34,18,1613.14,0:26:53,False,0.0
+25-466,whisper-large-v3,laughter,(Laughter.),37,9,1729.22,0:28:49,False,0.0
+25-466,whisper-large-v3,laughter,(Laughter.),37,21,1744.9,0:29:04,False,0.0
+25-466,whisper-large-v3,laughter,(Laughter.),40,4,1836.3,0:30:36,False,0.0
+25-466,whisper-large-v3,laughter,(Laughter.),46,21,2152.52,0:35:52,False,0.0
+25-466,whisper-large-v3,end,"(Whereupon, at 11:16 a.m., the case",84,22,4253.94,1:10:53,False,0.0

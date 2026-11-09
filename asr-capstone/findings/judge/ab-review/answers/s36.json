@@ -1,0 +1,173 @@
+{
+ "case": "s36",
+ "X": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "content lost, gap shows",
+    "reason": "The engine completely omits the clause 'THAT ACTUALLY WAS NOT EVEN ENOUGH' at the marked location."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "content lost, gap shows",
+    "reason": "The engine completely omits the clause 'THAT ACTUALLY WAS NOT EVEN ENOUGH', which provides a crucial evaluation of the compensation amount."
+   },
+   "whole": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "content lost, gap shows",
+    "reason": "The engine completely omits the clause 'THAT ACTUALLY WAS NOT EVEN ENOUGH', which provides essential context regarding the sufficiency of the compensation."
+   }
+  },
+  "noticeable": "no",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The engine completely omits the speaker's critical evaluation that the compensation provided was insufficient, which changes the meaning of the financial situation described."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The engine completely omitted the phrase present in the reference, which matches the evidence of 6 words dropped."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "Version A provides a logical continuation to the sentence, explaining that the compensation was insufficient given the high cost of accommodation. Version B leaves a grammatical gap between 'find new place' and 'so because'."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "Version B provides a logical continuation to the sentence, explaining why the compensation of 2200 pounds was problematic in the context of expensive accommodation. Version A's lack of words creates a grammatical gap between 'find new place' and 'so because'."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Whisper": 2,
+    "Granite": 1,
+    "Qwen3": 2,
+    "Parakeet": 4,
+    "Canary": 2
+   },
+   "reason": "Engine 2 is the most accurate as it includes the word 'new' from the reference, while Engines 1, 3, and 5 are tied for second because they omit 'new' but correctly capture the marked text, and Engine 4 is last because it misses the marked text entirely."
+  },
+  "misses": [
+   {
+    "reference": "IS THE THE THE APARTMENT",
+    "engine": "herself is the apartment",
+    "severity": 3,
+    "what": "the start of the sentence"
+   },
+   {
+    "reference": "TWENTY TWO HUNDRED",
+    "engine": "20 200",
+    "severity": 3,
+    "what": "the amount of money"
+   },
+   {
+    "reference": "THE TENANTS HERE",
+    "engine": "the tents here",
+    "severity": 2,
+    "what": "the description of the tenants"
+   },
+   {
+    "reference": "HOSPITABLE",
+    "engine": "hospital",
+    "severity": 2,
+    "what": "the description of the people"
+   }
+  ]
+ },
+ "Y": {
+  "meaning": {
+   "line": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "content lost, gap shows",
+    "reason": "The speech recognition engine failed to detect and transcribe the entire phrase present in the reference."
+   },
+   "minute": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "content lost, gap shows",
+    "reason": "The speech recognition engine completely failed to transcribe the phrase present in the reference."
+   },
+   "whole": {
+    "meaning": "changed",
+    "severity": 3,
+    "follow_up": "content lost, gap shows",
+    "reason": "The speech recognition engine failed to transcribe a whole clause of the sentence, creating a fragmented and incomplete thought."
+   }
+  },
+  "noticeable": "yes",
+  "stakes": {
+   "stakes": "yes",
+   "reason": "The engine omits the speaker's critical evaluation that the compensation was insufficient, which is a key detail of the narrative."
+  },
+  "rule": {
+   "rule_right": "yes",
+   "reason": "The engine completely omitted the phrase present in the reference, which matches the checker's claim of dropped words."
+  },
+  "blind": {
+   "order1 (reference shown as A)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "Version A provides a necessary clause that connects the compensation amount to the difficulty of finding a new place, making the sentence grammatically and logically complete."
+   },
+   "order2 (reference shown as B)": {
+    "picked": "reference",
+    "sure": 3,
+    "reason": "The phrase 'that actually was not even enough' provides necessary context and logical flow to the speaker's complaint about the high cost of accommodation."
+   }
+  },
+  "rank": {
+   "ranks": {
+    "Whisper": 2,
+    "Granite": 1,
+    "Qwen3": 2,
+    "Parakeet": 5,
+    "Canary": 2
+   },
+   "reason": "Engine 2 is ranked first for including the full phrase 'new place' from the reference, while Engines 1, 3, and 5 are tied for second as they omit 'new' but correctly capture the bracketed meaning; Engine 4 is last because it omitted the bracketed text entirely."
+  },
+  "misses": [
+   {
+    "reference": "IS THE THE THE APARTMENT",
+    "engine": "herself is the apartment",
+    "severity": 3,
+    "what": "added/changed word 'herself' at start"
+   },
+   {
+    "reference": "RENT IT TO ME",
+    "engine": "rented to me",
+    "severity": 2,
+    "what": "missing word 'it'"
+   },
+   {
+    "reference": "TWENTY TWO HUNDRED POUNDS",
+    "engine": "20 200 pounds",
+    "severity": 2,
+    "what": "different number format/repetition"
+   },
+   {
+    "reference": "THAT ACTUALLY WAS NOT EVEN ENOUGH SO BECAUSE",
+    "engine": "place. So because",
+    "severity": 3,
+    "what": "omitted content regarding insufficiency"
+   },
+   {
+    "reference": "THE TENANTS HERE",
+    "engine": "the tents here",
+    "severity": 4,
+    "what": "wrong word (tents instead of tenants)"
+   },
+   {
+    "reference": "HOSPITAL HOSPITABLE",
+    "engine": "hospital, hospital",
+    "severity": 3,
+    "what": "wrong word (hospital instead of hospitable)"
+   }
+  ]
+ }
+}

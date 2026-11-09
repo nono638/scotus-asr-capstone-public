@@ -1,0 +1,37 @@
+{
+ "case": "s07",
+ "own": {
+  "meaning": "changed",
+  "severity": 3,
+  "noticeable": "maybe",
+  "follow_up": "unrelated",
+  "stakes": "yes",
+  "reason": "Over silence, the engine invented a whole sentence, \"here since 1989 as he was going over to California\", putting a made-up year and place into the speaker's mouth.",
+  "rule_right": "yes",
+  "rule_reason": "The reference has nothing at the spot and the engine has a full sentence; the 0% speech figure fits the speaker pausing to think (\"let's see, somebody else. Um, ... Oh my\").",
+  "more_plausible": "reference",
+  "plausible_how_clear": "Fairly clear: she is trying to recall names (\"let's see, somebody else\", \"Why I cannot think?\"), and the sentence has no subject and doesn't connect to anything before or after.",
+  "my_misses": [
+   {"reference": "", "engine": "here since 1989 as he was going over to California.", "severity": 3},
+   {"reference": "Why I cannot think? A doctor that we had here.", "engine": "I can I think the doctors that we had here.", "severity": 2},
+   {"reference": "Turner Prince? / Turner Prince.", "engine": "Turn the Prince. Town of Prince.", "severity": 1}
+  ]
+ },
+ "review": {
+  "labelled/line": {"verdict": "partly", "why": "Changed, unrelated and stakes yes are right, but severity 4 is too high: an invented date and place is a wrong fact (3), not a reversal of the point; \"noticeable: yes\" is also generous, since the line reads like ordinary rambling recall."},
+  "labelled/minute": {"verdict": "partly", "why": "Same as the line: right description of an invented sentence, but severity 4 should be 3."},
+  "labelled/whole": {"verdict": "agree", "why": "Severity 3, unrelated, stakes yes and the reason (\"the speaker was actually just pausing\") all fit; judged against the minute text only."},
+  "rule/minute": {"verdict": "agree", "why": "Right; it wrote \"[[]]\" rather than an empty string for the reference, a harmless formatting slip."},
+  "blind/order1": {"verdict": "disagree", "why": "Picked A, the invented sentence, saying the empty version is \"nonsensical\", when the empty version is just a speaker pausing to recall a name."},
+  "blind/order2": {"verdict": "partly", "why": "Right pick with a sound reason (the clause is disconnected), but it picked A in order 1 too with the opposite reason, so position, not sense, drove both."},
+  "rank/minute": {"verdict": "agree", "why": "Parakeet's invented sentence is rightly last; putting Engine 1 below Engine 2 for \"A lot of people\" in place of \"Oh my\" is a fair tie-break, as that is a content change right next to the spot."},
+  "misses": [
+   {"reference": "Turner Prince?", "engine": "Turn the Prince. Town of Prince.", "is_real": "yes", "matters": "no", "severity_fair": "too high", "note": "A garbled name, which the prompt said to leave out; \"Town of Prince\" makes it sound like a place, but 1 at most, not 3."},
+   {"reference": "Mister Doctor uh Why I cannot think? A doctor that we had here.", "engine": "Mr Doctor um I can I think the doctors that we had here.", "is_real": "yes", "matters": "yes", "severity_fair": "too high", "note": "Correctly spotted: the speaker's \"I cannot think\" (of the name) is lost; a wrong detail, 2 rather than 3."},
+   {"reference": "", "engine": "here since 1989 as he was going over to California.", "is_real": "yes", "matters": "yes", "severity_fair": "too high", "note": "The main error; a made-up fact is 3, not 4."}
+  ],
+  "overlooked": []
+ },
+ "worth_a_listen": {"yes": true, "why": "A striking invented sentence with a date and a place is a showcase example; a listen should confirm the stretch really is silence and not quiet speech from someone else before it is quoted."},
+ "summary": "Gemma recognised the invented sentence and found all the real misses, but rated them a step too high throughout, and in the blind test it picked the first slot both times, once choosing the invented sentence as more natural."
+}

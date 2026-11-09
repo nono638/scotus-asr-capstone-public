@@ -1,0 +1,327 @@
+<meta charset="utf-8">
+<title>Judge Bench</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Courier+Prime:wght@400;700&family=Public+Sans:wght@400;500;600;700&display=swap">
+<style>
+/* One case at a time, as on the listening bench; colours, type, the player and the
+   record-beside-engine lines come from web/widget/ (tokens.css, listen.js, compare.js). */
+/*TOKENS*/
+body { background: var(--bg); color: var(--ink); font-family: var(--font-ui); font-size: 15px; line-height: 1.5; }
+.wrap { max-width: 800px; margin: 0 auto; padding-inline: 16px; padding-block: 24px 64px; display: grid; gap: 16px; }
+header { display: grid; gap: 10px; }
+h1 { font-size: 26px; line-height: 1.15; margin: 0; font-weight: 600; }
+.intro { display: grid; gap: 0; max-width: 68ch; font-size: 14px; }
+.intro p { margin: 0; }
+.intro > * + * { margin-top: 8px; }
+summary { cursor: pointer; color: var(--accent); font-weight: 500; font-size: 14px; }
+details .squares { margin-top: 8px; }
+.intro dl { margin: 0; display: grid; grid-template-columns: max-content 1fr; gap: 4px 12px; }
+.intro dt { font-weight: 600; }
+.intro dd { margin: 0; }
+.banner { background: var(--card); border: 1px solid var(--warn); color: var(--warn); border-radius: 6px; padding: 10px 12px; font-size: 13px; }
+
+.progress { display: grid; gap: 8px; background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 12px; }
+.progress-row { display: flex; flex-wrap: wrap; gap: 8px 14px; align-items: center; justify-content: space-between; font-size: 13px; }
+.progress-row b { font-variant-numeric: tabular-nums; }
+.buttons { display: flex; flex-wrap: wrap; gap: 6px; }
+.squares { display: flex; flex-wrap: wrap; gap: 3px; }
+.squares button { width: 14px; height: 14px; padding: 0; border: 1px solid var(--rule); background: var(--bg); border-radius: 2px; cursor: pointer; }
+.squares button.done { background: var(--done); border-color: var(--done); }
+.squares button[aria-current="true"] { outline: 2px solid var(--ink); outline-offset: 1px; }
+.small { font-size: 12px; color: var(--muted); margin: 0; }
+.small b { color: var(--ink); font-weight: 600; }
+
+.case { background: var(--card); border: 1px solid var(--rule); border-radius: 6px; padding: 18px; display: grid; gap: 14px; min-width: 0; }
+.case-head { display: flex; flex-wrap: wrap; justify-content: space-between; gap: 6px 16px; align-items: baseline; }
+.case-num { font-weight: 600; font-size: 16px; font-variant-numeric: tabular-nums; }
+.where { font-size: 13px; color: var(--muted); margin: 0; }
+.no-audio { font-size: 13px; color: var(--muted); margin: 0; font-style: italic; }
+.label-block { display: grid; gap: 8px; border-top: 1px solid var(--rule); padding-top: 12px; }
+.label-title { font-size: 13px; font-weight: 600; color: var(--muted); }
+.choices { display: grid; gap: 6px; grid-template-columns: repeat(auto-fit, minmax(136px, 1fr)); }
+.choice { text-align: left; display: grid; grid-template-columns: 1.6em 1fr; gap: 2px 8px; padding: 8px 10px; }
+.choice kbd { font-family: var(--font-ui); font-size: 12px; color: var(--faint); margin: 0; padding-top: 1px; }
+.choice span { font-weight: 600; }
+.choice small { grid-column: 2; margin: 0; }
+.choice[aria-pressed="true"] small { color: var(--accent); }
+textarea { font: inherit; font-size: 14px; width: 100%; min-height: 54px; box-sizing: border-box; border: 1px solid var(--rule); border-radius: 4px; padding: 6px 8px; background: var(--bg); color: var(--ink); resize: vertical; }
+.status { font-size: 12px; color: var(--muted); min-height: 1.5em; margin: 0; }
+.ok { color: var(--done); }
+.bad { color: var(--warn); }
+#copy-box { font-family: var(--font-transcript); font-size: 12px; min-height: 120px; }
+footer { font-size: 12px; color: var(--muted); border-top: 1px solid var(--rule); padding-top: 14px; }
+footer p { margin: 0 0 6px; max-width: 72ch; }
+</style>
+
+<div class="wrap">
+  <header>
+    <h1>Judge bench</h1>
+    <details class="intro" id="intro">
+      <summary>What this is, and what the labels mean</summary>
+      <p>300 spots where a speech recognition engine's text differs from the reference transcript, from all four data sets. Play each one and say, by ear, what it is. A small model will learn from these labels which of the language model's answers pick out the cases worth showing; its answers are not on this page, so they can't sway you.</p>
+      <p>The order is random and mixed across data sets, so stopping after 150 or 200 still gives a fair spread.</p>
+      <dl>
+        <dt>1 Interesting</dt><dd>The engine says something different from what was said, in a way worth showing someone: a reversed meaning, a wrong fact or number, or a fluent change a reader wouldn't catch.</dd>
+        <dt>2 Real but dull</dt><dd>The engine is wrong, but it hardly matters, or anyone would see it: a garble, a slip, a small word.</dd>
+        <dt>3 Record is wrong</dt><dd>By ear the engine is right, or closer, and the reference transcript is the one that's mistaken.</dd>
+        <dt>4 Not an error</dt><dd>Both say the same thing: a spelling, a name, a form of the same word, or nothing wrong at all.</dd>
+        <dt>0 Can't tell</dt><dd>The audio is unclear, or the spot isn't in the clip.</dd>
+      </dl>
+      <p class="small"><b>Keys:</b> 1–4 and 0 choose a label · Q the shorter clip, W the longer one · Space play again · ← → previous or next · N next unlabelled. Off while you type a note.</p>
+    </details>
+    <div class="banner" id="no-db" hidden>Labels are not reaching your claude.ai account from this view, so they are kept in this browser only. Use "Copy all labels" before you clear the browser or switch computers.</div>
+  </header>
+
+  <section class="progress" aria-label="Progress">
+    <div class="progress-row">
+      <span><b id="count-done">0</b> of <b id="count-all">0</b> labelled <span class="small" id="saving">· connecting to your account…</span></span>
+      <span class="buttons">
+        <button class="btn" type="button" id="copy-labels">Copy all labels</button>
+        <button class="btn" type="button" id="next-open">Next unlabelled</button>
+      </span>
+    </div>
+    <p class="status" id="copy-msg" aria-live="polite"></p>
+    <textarea id="copy-box" hidden readonly aria-label="All labels, to copy"></textarea>
+    <details>
+      <summary class="small">Jump to a case</summary>
+      <div class="squares" id="squares" role="group" aria-label="Jump to a case"></div>
+    </details>
+  </section>
+
+  <main id="case"></main>
+
+  <footer>
+    <p>Each case is a row of findings/judge/combo-v1.csv (75 per data set). The clip runs from 4 seconds before the spot to 4 seconds after, at least 10 seconds. The record line shows the reference's words around the spot, highlighted; the engine's words light up as they are spoken, and a yellow highlight marks a word that differs from the record. Earnings-22 has no audio here unless it was built with it: the calls have no stated licence.</p>
+    <p>Built by tools/build_judge_bench.py. Labels are saved to this page's database in your account, and in this browser.</p>
+  </footer>
+</div>
+
+<script>
+/*LISTEN*/
+/*COMPARE*/
+
+const CASES = /*CASES*/[];
+const GUIDE = "0.1";
+const COLLECTION = "combo-labels-v1";
+const LOCAL_KEY = "judge-bench-v1";
+const LABELS = [
+  ["interesting", "1", "Interesting", "worth showing someone"],
+  ["dull", "2", "Real but dull", "wrong, but it hardly matters"],
+  ["record", "3", "Record is wrong", "the engine is right, or closer"],
+  ["none", "4", "Not an error", "the same thing said"],
+  ["cant", "0", "Can't tell", "unclear audio, or not in the clip"],
+];
+
+function load(key, fallback) { try { const v = localStorage.getItem(key); return v ? JSON.parse(v) : fallback; } catch (e) { return fallback; } }
+function store(key, value) { try { localStorage.setItem(key, JSON.stringify(value)); } catch (e) {} }
+function el(tag, attrs = {}, ...kids) {
+  const n = document.createElement(tag);
+  for (const [k, v] of Object.entries(attrs)) n.setAttribute(k, v);
+  for (const k of kids) n.append(k);
+  return n;
+}
+
+// bench id -> {case, label, note, played, at}
+let labels = load(LOCAL_KEY, {});
+let db = null;
+let synced = false;
+let index = Math.min(load("judge-bench-index", 0), Math.max(0, CASES.length - 1));
+let player = null;
+
+const norm = l => ({ case: (l && l.case) || "", label: (l && l.label) || null, note: (l && l.note) || "",
+                     played: (l && l.played) || [], at: (l && l.at) || "" });
+const isDone = id => !!norm(labels[id]).label;
+
+// ---- saving: this browser at once, the account when it answers -------------
+function setStatus(text, cls) {
+  const s = document.getElementById("status");
+  if (s) { s.textContent = text; s.className = "status " + cls; }
+}
+function setSaving(text, cls) {
+  const w = document.getElementById("saving");
+  w.textContent = "· " + text; w.className = "small " + cls;
+}
+const chains = {};   // one write at a time per case
+function push(id) {
+  const l = norm(labels[id]);
+  const body = { guide: GUIDE, case: l.case, label: l.label, note: l.note, played: l.played, at: l.at };
+  chains[id] = (chains[id] || Promise.resolve()).catch(() => {}).then(() => db.collection(COLLECTION).doc(id).set(body));
+  return chains[id];
+}
+async function save(id, patch) {
+  const c = CASES.find(x => x.id === id);
+  labels[id] = { ...norm(labels[id]), ...patch, case: c.case, at: new Date().toISOString() };
+  store(LOCAL_KEY, labels);
+  renderProgress();
+  if (!db) { setStatus("Saved in this browser only.", "bad"); return; }
+  try {
+    await push(id);
+    setStatus("Saved to your account.", "ok");
+  } catch (e) {
+    setStatus("Saved in this browser only; the account refused it (" + (e && e.code || "error") + ").", "bad");
+    setSaving("account not saving, labels kept in this browser", "bad");
+  }
+}
+async function sendWaiting(ids) {
+  let sent = 0;
+  for (const id of ids) {
+    try { await push(id); sent++; } catch (e) { setSaving("account not saving, labels kept in this browser", "bad"); return; }
+  }
+  if (sent) setSaving("saving to your account (" + sent + " sent from this browser)", "ok");
+}
+
+document.getElementById("copy-labels").addEventListener("click", async () => {
+  const out = {};
+  CASES.forEach(c => { const l = norm(labels[c.id]); if (l.label || l.note) out[c.id] = { guide: GUIDE, ...l }; });
+  const text = JSON.stringify(out, null, 1);
+  const n = Object.keys(out).length;
+  const msg = document.getElementById("copy-msg");
+  const box = document.getElementById("copy-box");
+  try {
+    await navigator.clipboard.writeText(text);
+    box.hidden = true;
+    msg.textContent = "Copied " + n + " cases.";
+    msg.className = "status ok";
+  } catch (e) {
+    box.hidden = false; box.value = text; box.focus(); box.select();
+    msg.textContent = "Copying did not work in this view. All " + n + " cases are selected below: press Ctrl+C.";
+    msg.className = "status bad";
+  }
+});
+
+// ---- drawing -----------------------------------------------------------------
+function renderProgress() {
+  document.getElementById("count-all").textContent = CASES.length;
+  document.getElementById("count-done").textContent = CASES.filter(c => isDone(c.id)).length;
+  const squares = document.getElementById("squares");
+  if (squares.children.length !== CASES.length) {
+    squares.replaceChildren(...CASES.map((c, i) => {
+      const b = el("button", { type: "button", "aria-label": "Case " + (i + 1) });
+      b.addEventListener("click", () => go(i));
+      return b;
+    }));
+  }
+  CASES.forEach((c, i) => {
+    const b = squares.children[i];
+    b.className = isDone(c.id) ? "done" : "";
+    b.setAttribute("aria-current", String(i === index));
+  });
+}
+
+function choose(key) {
+  const c = CASES[index];
+  save(c.id, { label: key });
+  document.querySelectorAll(".choice").forEach(b => b.setAttribute("aria-pressed", String(b.dataset.key === key)));
+}
+
+function renderCase() {
+  const c = CASES[index];
+  const l = norm(labels[c.id]);
+  if (Listen.active) Listen.stop();
+  const box = el("article", { class: "case", "aria-label": "Case " + (index + 1) });
+  const prev = el("button", { class: "btn", type: "button" }, "← Previous");
+  const next = el("button", { class: "btn", type: "button" }, "Next →");
+  prev.addEventListener("click", () => go(index - 1));
+  next.addEventListener("click", () => go(index + 1));
+  box.append(el("div", { class: "case-head" },
+    el("span", { class: "case-num" }, "Case " + (index + 1) + " of " + CASES.length + " · " + c.corpus),
+    el("span", { class: "buttons" }, prev, next)));
+  box.append(el("p", { class: "where" }, c.where));
+
+  player = null;
+  if (c.clip) {
+    player = Listen.create(box, {
+      clip: c.clip, views: c.views, view: c.views[0].key,
+      onPlayed: key => { if (!norm(labels[c.id]).played.includes(key)) save(c.id, { played: [...norm(labels[c.id]).played, key] }); },
+      onStatus: (text, cls) => setStatus(text, cls),
+    });
+    box.append(player.controls("Hear"));
+  } else {
+    box.append(el("p", { class: "no-audio" }, "No audio for this data set on this page: label it from the text, or choose Can't tell."));
+  }
+  box.append(Compare.lines(player, c.lines));
+  if (player) player.fit();
+
+  const choices = el("div", { class: "choices", role: "group", "aria-label": "Label" });
+  for (const [key, k, name, hint] of LABELS) {
+    const b = el("button", { class: "btn choice", type: "button", "data-key": key, "aria-pressed": String(l.label === key) },
+      el("kbd", {}, k), el("span", {}, name), el("small", {}, hint));
+    b.addEventListener("click", () => choose(key));
+    choices.append(b);
+  }
+  box.append(el("div", { class: "label-block" }, el("div", { class: "label-title" }, "What is it, by ear?"), choices));
+
+  const note = el("textarea", { id: "note", placeholder: "Optional: what you heard, or why" });
+  note.value = l.note;
+  let timer = null;
+  note.addEventListener("input", () => { clearTimeout(timer); timer = setTimeout(() => save(c.id, { note: note.value }), 600); });
+  box.append(el("div", { class: "label-block" }, el("label", { class: "label-title", for: "note" }, "Note"), note,
+    el("p", { class: "status", id: "status", "aria-live": "polite" })));
+
+  document.getElementById("case").replaceChildren(box);
+  renderProgress();
+}
+
+function go(i) {
+  if (i < 0 || i >= CASES.length) return;
+  index = i;
+  store("judge-bench-index", index);
+  renderCase();
+}
+function nextOpen() {
+  for (let k = 1; k <= CASES.length; k++) {
+    const i = (index + k) % CASES.length;
+    if (!isDone(CASES[i].id)) { go(i); return; }
+  }
+}
+document.getElementById("next-open").addEventListener("click", nextOpen);
+
+document.addEventListener("keydown", e => {
+  if (e.target.closest("textarea, input") || e.ctrlKey || e.metaKey || e.altKey) return;
+  const k = e.key.toLowerCase();
+  const pick = LABELS.find(x => x[1] === k);
+  if (pick) { choose(pick[0]); e.preventDefault(); return; }
+  if (k === "q" && player) { player.play(CASES[index].views[0].key); e.preventDefault(); return; }
+  if (k === "w" && player) { player.play(CASES[index].views[1].key); e.preventDefault(); return; }
+  if (k === " " && player) { player.play(player.view); e.preventDefault(); return; }
+  if (k === "arrowright") { go(index + 1); e.preventDefault(); }
+  if (k === "arrowleft") { go(index - 1); e.preventDefault(); }
+  if (k === "n") { nextOpen(); e.preventDefault(); }
+});
+
+// The explanation starts open until the first label is made.
+document.getElementById("intro").open = !CASES.some(c => isDone(c.id));
+renderCase();
+
+// ---- the account's database, when the viewer provides it -----------------------
+(async () => {
+  db = window.claude && window.claude.use ? await window.claude.use("db") : null;
+  if (!db) {
+    document.getElementById("no-db").hidden = false;
+    setSaving("saving in this browser only", "bad");
+    return;
+  }
+  setSaving("saving to your account", "ok");
+  db.collection(COLLECTION).onSnapshot(snap => {
+    // Whichever copy of a label is newer wins, the account's or this browser's.
+    const remote = {};
+    snap.docs.forEach(d => { remote[d.id] = norm(d.data()); });
+    for (const [id, r] of Object.entries(remote)) {
+      const l = labels[id];
+      if (!l || (r.at || "") >= (l.at || "")) labels[id] = r;
+    }
+    store(LOCAL_KEY, labels);
+    if (!synced) {
+      synced = true;
+      const waiting = Object.keys(labels).filter(id => !remote[id] || (labels[id].at || "") > (remote[id].at || ""));
+      renderCase();
+      if (waiting.length) sendWaiting(waiting);
+    } else {
+      renderProgress();
+    }
+  }, e => {
+    document.getElementById("no-db").hidden = false;
+    setSaving("account not answering (" + (e && e.code || "error") + "), saving in this browser only", "bad");
+  });
+})();
+</script>

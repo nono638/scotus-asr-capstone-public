@@ -1,0 +1,47 @@
+paths:
+  capstone_dir: D:\Dropbox\NotWork\CUNYSPS\2026\Fall 2026\asr-capstone
+  sample_dir: D:\scotus-corpus\cases
+  runs_dir: D:\scotus-corpus\runs
+asr:
+  engine: granite-plus
+  engine_name: granite-speech-4.1-2b-plus
+  model: ibm-granite/granite-speech-4.1-2b-plus
+  aligner: null
+  device: cuda
+  compute_type: bfloat16
+  language: en
+  prompt: '<|audio|> Timestamps: Transcribe the speech. After each word, add a timestamp
+    tag showing the end time in centiseconds, e.g. hello [T:45] world [T:82]'
+  system_prompt: 'Knowledge Cutoff Date: April 2024.
+
+    Today''s Date: December 19, 2024.
+
+    You are Granite, developed by IBM. You are a helpful AI assistant'
+  chunk_seconds: 120.0
+  overlap_seconds: 8.0
+  max_tokens_per_second: 60.0
+  sample_rate: 16000
+  loop_remedy: split the chunk, not raise the temperature
+  max_split_depth: 3
+  min_split_seconds: 20.0
+  loop_words_per_minute: 250.0
+  loop_compression_ratio: 4.0
+  punctuation: none - IBM state this model omits punctuation and capitalization
+  timestamps: native, from the model
+scoring:
+  omission_min_words: 25
+  omission_merge_gap: 2
+  words_per_minute_min: 145.0
+  words_per_minute_max: 210.0
+ocr:
+  layout_engine: embedded
+  text_engine: glm-ocr
+  text_model: zai-org/GLM-OCR
+  render_dpi: 200
+  upscale: 1.0
+  expected_lines_per_page: 25
+  gutter_width_fraction: 0.12
+run:
+  max_attempts: 3
+  retry_backoff_seconds: 5.0
+  flush_every_row: true

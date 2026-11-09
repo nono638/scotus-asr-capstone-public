@@ -1,0 +1,13 @@
+engine,docket,chunk_seconds,words,words_per_minute,compression_ratio,verdict,seconds
+granite-speech-4.1-2b-plus,16-285,120,1139,569.5,12.25,LOOP,209.1
+granite-speech-4.1-2b-plus,16-285,60,161,161.0,1.91,ok,31.0
+granite-speech-4.1-2b-plus,16-285,30,79,158.0,1.75,ok,15.7
+granite-speech-4.1-2b-plus,16-285,120,344,172.0,2.31,ok,68.5
+granite-speech-4.1-2b-plus,16-285,60,172,172.0,2.08,ok,34.8
+granite-speech-4.1-2b-plus,16-285,30,83,166.0,1.83,ok,16.4
+granite-speech-4.1-2b-plus,16-285,120,890,445.0,7.37,LOOP,157.6
+granite-speech-4.1-2b-plus,16-285,60,565,565.0,5.32,LOOP,96.4
+granite-speech-4.1-2b-plus,16-285,30,71,142.0,1.95,ok,14.4
+granite-speech-4.1-2b-plus,16-285,120,342,171.0,2.56,ok,65.5
+granite-speech-4.1-2b-plus,16-285,60,191,191.0,2.38,ok,35.1
+granite-speech-4.1-2b-plus,16-285,30,105,210.0,2.07,ok,18.9

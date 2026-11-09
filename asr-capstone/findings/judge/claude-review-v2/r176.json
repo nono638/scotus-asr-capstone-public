@@ -1,0 +1,1 @@
+{"case": "r176", "own": {"reason": "The engine has 'the stove caught on fire' for 'the store caught on fire', changing what burns. The engine's 'I can't help if the stove caught on fire' also reads well beside the next line about arson, so the reference may be wrong.", "meaning": "changed", "severity": 2, "follow_up": "changes meaning", "reference_doubt": "maybe"}}

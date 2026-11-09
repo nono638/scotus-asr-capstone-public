@@ -1,0 +1,45 @@
+{
+ "case": "s35",
+ "own": {
+  "meaning": "changed",
+  "severity": 3,
+  "noticeable": "yes",
+  "follow_up": "content lost, gap shows",
+  "stakes": "maybe",
+  "reason": "The engine left out the interviewer's whole line \"Cause it gives you a very different perspective\", so the speaker's \"Yes, it does\" now follows \"they don't at all\" and answers nothing, and the idea that such programs give young people perspective is gone.",
+  "rule_right": "yes",
+  "rule_reason": "A whole 8-word interviewer turn is missing from the engine, and Whisper (7 words, without \"Cause\") and Qwen3 (\"Because it gives you...\") both wrote it.",
+  "more_plausible": "reference",
+  "plausible_how_clear": "Clear: \"Yes it does, seeing that...\" needs something to agree with, and \"they don't at all. Yes, it does.\" reads as a contradiction.",
+  "my_misses": [
+   {"reference": "Cause it gives you a very different perspective.", "engine": "", "severity": 3},
+   {"reference": "I met him at / From number eleven / number eleven, yeah.", "engine": "I met him.", "severity": 2},
+   {"reference": "And if you in a position to help", "engine": "And you're in a position to help", "severity": 1},
+   {"reference": "tee teen teen director ... the keen teens", "engine": "teaming teen director ... the king teen", "severity": 1},
+   {"reference": "He was?", "engine": "", "severity": 0}
+  ]
+ },
+ "review": {
+  "labelled/line": {"verdict": "agree", "why": "Right on changed, noticeable (\"they don't at all. Yes, it does.\" jars), gap shows and stakes; severity 4 is a notch above my 3 but defensible, though the reason calls the lost line \"reasoning for the previous statement\" when it is the interviewer speaking."},
+  "labelled/minute": {"verdict": "agree", "why": "Correctly says the interviewer's whole sentence is missing and that it gives the topic for the speaker's \"Yes it does\"; severity 4 vs my 3 is a judgement call."},
+  "labelled/whole": {"verdict": "agree", "why": "Same sound answers as the minute view."},
+  "rule/minute": {"verdict": "agree", "why": "Copied both sides correctly and confirmed a whole turn was left out."},
+  "blind/order1": {"verdict": "agree", "why": "Picked A, the reference, because \"yes it does\" needs something to answer: the right clue."},
+  "blind/order2": {"verdict": "agree", "why": "Picked B, the reference again; consistent across both orders."},
+  "rank/minute": {"verdict": "partly", "why": "Parakeet last is right, but Whisper's \"it gives you a very different perspective\" only drops \"Cause\" and keeps the meaning just as well as Qwen3, so the two should tie for first."}
+  ,"misses": [
+   {"reference": "are all police department cause they're all", "engine": "those are all police departments, because they're all", "is_real": "yes", "matters": "no", "severity_fair": "too high", "note": "Edge of the minute and a plural; 0."},
+   {"reference": "tee teen teen director", "engine": "teaming teen director", "is_real": "yes", "matters": "no", "severity_fair": "too high", "note": "A stammer heard as a word; 1 at most."},
+   {"reference": "the keen teens", "engine": "the king teen", "is_real": "yes", "matters": "no", "severity_fair": "too high", "note": "The name of a youth group written differently; names were to be left out."},
+   {"reference": "I met him at / From number eleven / number eleven, yeah.", "engine": "I met him.", "is_real": "yes", "matters": "yes", "severity_fair": "too high", "note": "Where they met (station number eleven) is lost, a wrong detail: 2 rather than 3."},
+   {"reference": "that super exceed yours", "engine": "that it super exceeds yours", "is_real": "yes", "matters": "no", "severity_fair": "yes", "note": "A slip a reader reads past."},
+   {"reference": "And if you in a position to help", "engine": "And you're in a position to help", "is_real": "yes", "matters": "yes", "severity_fair": "yes", "note": "The text differs as stated, but Gemma's note only mentions grammar; the bigger change is that \"if\" was dropped, turning a condition into a statement."},
+   {"reference": "both your worlds", "engine": "both your world", "is_real": "yes", "matters": "no", "severity_fair": "yes", "note": "Harmless; 0 is right, though it need not be listed."}
+  ],
+  "overlooked": [
+   {"reference": "Cause it gives you a very different perspective.", "engine": "", "severity": 3, "note": "The flagged skip itself, the biggest difference in the minute, is missing from Gemma's list."}
+  ]
+ },
+ "worth_a_listen": {"yes": false, "why": "The text is clear: the interviewer's line is missing and two engines wrote it, so a listen would only confirm what is already plain."},
+ "summary": "Gemma judged the skipped interviewer line well in every view and in the blind pair, only splitting two engines that keep the meaning equally. Its misses list, though, left out that very skip while rating a stammer and a group name at 2."
+}

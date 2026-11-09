@@ -1,0 +1,1 @@
+{"case": "r256", "own": {"reason": "The reference leaves out \"are\" (\"they doing\") and the engine puts it back in (\"they're doing\"). A dropped \"are\" carries no meaning, so this is the same statement.", "meaning": "same", "severity": 0, "follow_up": "meaning kept", "reference_doubt": "no"}}

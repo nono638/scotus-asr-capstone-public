@@ -1,0 +1,28 @@
+{"task_id": "02-763/transcript", "status": "ok", "finished_at": "2026-09-16T04:16:02+00:00", "duration_seconds": 0.036, "attempts": 1, "summary": "137 turns, 7579 words", "error": ""}
+{"task_id": "03-633/transcript", "status": "ok", "finished_at": "2026-09-16T04:16:02+00:00", "duration_seconds": 0.043, "attempts": 1, "summary": "238 turns, 9857 words", "error": ""}
+{"task_id": "04-104/transcript", "status": "ok", "finished_at": "2026-09-16T04:16:02+00:00", "duration_seconds": 0.062, "attempts": 1, "summary": "403 turns, 18682 words", "error": ""}
+{"task_id": "09-834/transcript", "status": "ok", "finished_at": "2026-09-16T04:16:02+00:00", "duration_seconds": 0.063, "attempts": 1, "summary": "252 turns, 9891 words", "error": ""}
+{"task_id": "24-316/transcript", "status": "ok", "finished_at": "2026-09-16T04:16:03+00:00", "duration_seconds": 0.146, "attempts": 1, "summary": "565 turns, 16946 words", "error": ""}
+{"task_id": "24-109/transcript", "status": "ok", "finished_at": "2026-09-16T04:16:03+00:00", "duration_seconds": 0.208, "attempts": 1, "summary": "621 turns, 24646 words", "error": ""}
+{"task_id": "09-834/asr/whisper-large-v3", "status": "ok", "finished_at": "2026-09-16T04:25:29+00:00", "duration_seconds": 171.999, "attempts": 1, "summary": "9704 words, 857 segments, 19.9 times_realtime", "error": ""}
+{"task_id": "09-834/score/whisper-large-v3", "status": "ok", "finished_at": "2026-09-16T04:25:54+00:00", "duration_seconds": 0.562, "attempts": 1, "summary": "0 omitted_spans, 8.72 percent_wer", "error": ""}
+{"task_id": "02-763/ocr", "status": "ok", "finished_at": "2026-09-16T04:27:32+00:00", "duration_seconds": 0.206, "attempts": 1, "summary": "40 pages, 82 misread_line_numbers", "error": ""}
+{"task_id": "03-633/ocr", "status": "ok", "finished_at": "2026-09-16T04:27:32+00:00", "duration_seconds": 0.286, "attempts": 1, "summary": "52 pages, 114 misread_line_numbers", "error": ""}
+{"task_id": "04-104/ocr", "status": "ok", "finished_at": "2026-09-16T04:27:33+00:00", "duration_seconds": 0.563, "attempts": 1, "summary": "110 pages, 0 misread_line_numbers", "error": ""}
+{"task_id": "09-834/ocr", "status": "ok", "finished_at": "2026-09-16T04:27:33+00:00", "duration_seconds": 0.511, "attempts": 1, "summary": "65 pages, 0 misread_line_numbers", "error": ""}
+{"task_id": "24-316/ocr", "status": "ok", "finished_at": "2026-09-16T04:27:34+00:00", "duration_seconds": 1.018, "attempts": 1, "summary": "124 pages, 92 misread_line_numbers", "error": ""}
+{"task_id": "24-109/ocr", "status": "ok", "finished_at": "2026-09-16T04:27:36+00:00", "duration_seconds": 1.69, "attempts": 1, "summary": "176 pages, 166 misread_line_numbers", "error": ""}
+{"task_id": "69-13/ocr", "status": "ok", "finished_at": "2026-09-16T04:27:37+00:00", "duration_seconds": 0.845, "attempts": 1, "summary": "104 pages, 449 misread_line_numbers", "error": ""}
+{"task_id": "02-763/ocr", "status": "ok", "finished_at": "2026-09-16T04:28:17+00:00", "duration_seconds": 0.2, "attempts": 1, "summary": "40 pages, 2 misread_line_numbers", "error": ""}
+{"task_id": "03-633/ocr", "status": "ok", "finished_at": "2026-09-16T04:28:18+00:00", "duration_seconds": 0.288, "attempts": 1, "summary": "52 pages, 4 misread_line_numbers", "error": ""}
+{"task_id": "04-104/ocr", "status": "ok", "finished_at": "2026-09-16T04:28:18+00:00", "duration_seconds": 0.553, "attempts": 1, "summary": "110 pages, 0 misread_line_numbers", "error": ""}
+{"task_id": "09-834/ocr", "status": "ok", "finished_at": "2026-09-16T04:28:19+00:00", "duration_seconds": 0.531, "attempts": 1, "summary": "65 pages, 0 misread_line_numbers", "error": ""}
+{"task_id": "24-316/ocr", "status": "ok", "finished_at": "2026-09-16T04:28:20+00:00", "duration_seconds": 0.997, "attempts": 1, "summary": "124 pages, 92 misread_line_numbers", "error": ""}
+{"task_id": "24-109/ocr", "status": "ok", "finished_at": "2026-09-16T04:28:21+00:00", "duration_seconds": 1.657, "attempts": 1, "summary": "176 pages, 166 misread_line_numbers", "error": ""}
+{"task_id": "69-13/ocr", "status": "ok", "finished_at": "2026-09-16T04:28:22+00:00", "duration_seconds": 0.863, "attempts": 1, "summary": "104 pages, 434 misread_line_numbers", "error": ""}
+{"task_id": "24-316/asr/whisper-large-v3", "status": "ok", "finished_at": "2026-09-16T04:30:41+00:00", "duration_seconds": 266.626, "attempts": 1, "summary": "15728 words, 1049 segments, 19.6 times_realtime", "error": ""}
+{"task_id": "69-13/ocr", "status": "ok", "finished_at": "2026-09-16T04:38:58+00:00", "duration_seconds": 38.895, "attempts": 1, "summary": "3 pages, 9 misread_line_numbers", "error": ""}
+{"task_id": "24-109/asr/whisper-large-v3", "status": "ok", "finished_at": "2026-09-16T04:39:29+00:00", "duration_seconds": 527.589, "attempts": 1, "summary": "23453 words, 1679 segments, 17.2 times_realtime", "error": ""}
+{"task_id": "24-316/score/whisper-large-v3", "status": "ok", "finished_at": "2026-09-16T04:39:30+00:00", "duration_seconds": 1.135, "attempts": 1, "summary": "0 omitted_spans, 6.44 percent_wer", "error": ""}
+{"task_id": "24-109/score/whisper-large-v3", "status": "ok", "finished_at": "2026-09-16T04:39:31+00:00", "duration_seconds": 1.665, "attempts": 1, "summary": "0 omitted_spans, 5.17 percent_wer", "error": ""}
+{"task_id": "69-13/ocr", "status": "ok", "finished_at": "2026-09-16T04:52:58+00:00", "duration_seconds": 692.274, "attempts": 1, "summary": "104 pages, 434 misread_line_numbers", "error": ""}

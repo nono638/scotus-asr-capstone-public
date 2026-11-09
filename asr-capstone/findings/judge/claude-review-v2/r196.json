@@ -1,0 +1,1 @@
+{"case": "r196", "own": {"reason": "The engine turns \"funding recipients are on notice\" into \"aren't going to notice\", which says the opposite of the lawyer's point that recipients know they face contract remedies.", "meaning": "opposite", "severity": 4, "follow_up": "negation added", "reference_doubt": "no"}}
