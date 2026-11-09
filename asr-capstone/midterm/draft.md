@@ -50,10 +50,9 @@ errors that are harder to spot.
 
 I have worked as a court reporter for 15 years, which is how I came to the question. I have
 honestly wondered at times whether I misheard or misunderstood some of what was said on the
-record. I have come to realize that I am fallible, just like everyone (and everything)
-else, and I have learned to balance a healthy scepticism of my own abilities with a
-pragmatic look at the alternatives for transcription, and an awareness that justice delayed
-is justice denied.
+record. I have come to appreciate that I am fallible, just like every other method of
+transcription. I have learned to weigh my own abilities against the alternatives, and this
+research has deepened my understanding of what ASR can and cannot do.
 
 Section 2 reviews the literature, section 3 the data and methods, section 4 the preliminary
 results, and section 5 the limits and the plans for the final paper.
@@ -76,10 +75,7 @@ of those differences were judgment calls over contractions, rapid speech or disf
 The law is built around this. Federal law makes a court reporter's certified transcript
 "prima facie a correct statement" of what was said (28 U.S.C. § 753(b)): a strong
 presumption, not a guarantee. In federal appeals, a dispute over "whether the record truly
-discloses what occurred" is settled by the trial court (Fed. R. App. P. 10(e)). Where part
-of the record is lost, New York courts can hold a reconstruction hearing, at which the judge and the lawyers rebuild
-the missing portion (People v. Parris, 4 N.Y.3d 41, 2004). [CHECK: read the Parris
-opinion; it is cited here from secondary summaries] The Supreme Court itself calls its
+discloses what occurred" is settled by the trial court (Fed. R. App. P. 10(e)). The Supreme Court itself calls its
 same-day transcripts "official but subject to final review" (Supreme Court of the United
 States, n.d.).
 
@@ -292,7 +288,7 @@ came from those joins: one engine sometimes stopped writing partway through a pi
 pieces lost their punctuation, and a few came back empty. Each was fixed, and the affected
 pieces transcribed again, before any result here was computed. The code was written largely
 with Claude Code under my direction (see the AI-use statement), and is in the project's
-repository [repository link].
+repository: https://github.com/nono638/scotus-asr-capstone-public.
 
 ## 4. Preliminary results
 
@@ -442,8 +438,7 @@ against the project's data, and found and checked sources. I chose the questions
 sets, the engines and the framing, and I read and revised the text. Language models also do
 part of the analysis, as section 3.4 describes: Claude Sonnet 5.5 judged the flagged cases,
 and Claude Opus 5.5 agents wrote the answer key it was checked against. I used Google's
-NotebookLM (Gemini) to survey the literature, and read the cited passages directly. [CHECK:
-true once you have done the reading pack; edit any of this to match your own account]
+NotebookLM (Gemini) to survey the literature, and am reading the cited passages directly.
 
 ## References
 
@@ -517,8 +512,6 @@ https://ncra.org/detail-pages/faq-detail/certification---how-are-the-tests-grade
 NCRA. (2026b). *What is an error? Grading guidelines for the RSR, RPR and RMR skills tests*
 (last updated March 2026). National Court Reporters Association.
 https://www.ncra.org/docs/default-source/uploadedfiles/certification/rsr-rpr-rmr-what-is-an-error.pdf
-
-People v. Parris, 4 N.Y.3d 41 (2004).
 
 Radford, A., Kim, J. W., Xu, T., Brockman, G., McLeavey, C., & Sutskever, I. (2023). Robust
 speech recognition via large-scale weak supervision. *Proceedings of the 40th International
